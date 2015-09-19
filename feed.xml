@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+    <channel>
+        <title>New Rustacean</title>
+        <link>http://newrustacean.com</link>
+        <description>A podcast about learning the Rust programming language—from scratch!</description>
+        <generator>Feeder 2.5.12(2294); Mac OS X Version 10.11 (Build 15A282b) http://reinventedsoftware.com/feeder/</generator>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <language>en</language>
+        <copyright>2015 Chris Krycho</copyright>
+        <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
+        <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
+        <pubDate>Sat, 19 Sep 2015 18:34:22 -0400</pubDate>
+        <lastBuildDate>Sat, 19 Sep 2015 18:34:22 -0400</lastBuildDate>
+        <image>
+            <url>http://newrustacean.com/podcast144.png</url>
+            <title>New Rustacean</title>
+            <link>http://newrustacean.com</link>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="http://newrustacean.com/new-rustacean.xml" rel="self" type="application/rss+xml"/>
+        <itunes:author>Chris Krycho</itunes:author>
+        <itunes:subtitle>Let’s try some Rust, shall we?</itunes:subtitle>
+        <itunes:summary><![CDATA[Documenting a journey into a new programming language—with source code, examples, and almost certainly some out-and-out hilarities along the way.]]></itunes:summary>
+        <itunes:keywords>Rust,programming,programming languages,software</itunes:keywords>
+        <itunes:image href="http://newrustacean.com/podcast.png"/>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:owner>
+            <itunes:name>Chris Krycho</itunes:name>
+            <itunes:email>hello@newrustacean.com</itunes:email>
+        </itunes:owner>
+        <itunes:block>no</itunes:block>
+        <itunes:category text="Technology">
+            <itunes:category text="Tech News"/>
+            <itunes:category text="Software How-To"/>
+        </itunes:category>
+        <itunes:category text="Education">
+            <itunes:category text="Training"/>
+        </itunes:category>
+        <item>
+            <title>e00: Why Are We Here?</title>
+            <link>http://newrustacean.com/show_notes/e00/index.html</link>
+            <description><![CDATA[<h1 id="why-are-we-here">Why Are We Here?</h1>
+<ul>
+<li>Date: September 3, 2015</li>
+<li>Subject: The host, the language, and the show!</li>
+<li>Audio:
+<ul>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e00.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e00.mp3">MP3</a></li>
+</ul></li>
+</ul>
+<p>Today’s show is pretty meta. You can skip it if you just want to start with something more technical, but I thought listeners might want to know a little about the origins of the show and my own background, so that’s what you get today. Next time, we’ll be tackling the <code>rustdoc</code> command in some detail.</p>
+<hr />
+<p>This is an almost-empty module: we aren’t doing any fun code samples yet. I included the standard “Hello, world!” example, because how could I not? However, at some point in the future, there will be much more detailed code samples available:</p>
+<ul>
+<li>in the <a href="//github.com/chriskrycho/newrustacean.com">GitHub repository</a> for the show</li>
+<li>in the show notes attached to each episode</li>
+</ul>
+<p>Hopefully, the result will be a pretty helpful bunch of side content along with the audio of the podcast itself.</p>]]></description>
+            <pubDate>Sat, 19 Sep 2015 18:34:07 -0400</pubDate>
+            <enclosure url="http://cdn.newrustacean.com/e00.m4a" length="8364590" type="audio/x-m4a"/>
+            <guid isPermaLink="false">CCE404BC-4B4A-4F28-A687-9BCC66C08CEF</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:subtitle>A little about the host, and a little about the format of the show!</itunes:subtitle>
+            <itunes:summary><![CDATA[Why Are We Here?
+
+* Date: September 3, 2015
+
+* Subject: The host, the language, and the show!
+
+* Audio:
+
+* M4A
+
+* MP3
+
+Today’s show is pretty meta. You can skip it if you just want to start with something more technical, but I thought listeners might want to know a little about the origins of the show and my own background, so that’s what you get today. Next time, we’ll be tackling the rustic command in some detail.
+
+This is an almost-empty module: we aren’t doing any fun code samples yet. I included the standard “Hello, world!” example, because how could I not? However, at some point in the future, there will be much more detailed code samples available:
+
+* in the GitHub repository for the show
+
+* in the show notes attached to each episode
+
+Hopefully, the result will be a pretty helpful bunch of side content along with the audio of the podcast itself.]]></itunes:summary>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:duration>16:59</itunes:duration>
+        </item>
+    </channel>
+</rss>
