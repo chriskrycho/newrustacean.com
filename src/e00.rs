@@ -1,5 +1,4 @@
 //! Why Are We Here?
-//! ================
 //!
 //!   - Date: September 3, 2015
 //!   - Subject: The host, the language, and the show!
