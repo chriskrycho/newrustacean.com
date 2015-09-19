@@ -1,0 +1,9 @@
+# Cargo bits
+target
+Cargo.lock
+
+# Website bits
+*.mp3
+*.m4a
+*.logicx
+recordings

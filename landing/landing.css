@@ -1,0 +1,258 @@
+/**
+ * Copyright 2013 The Rust Project Developers. See the COPYRIGHT
+ * file at the top-level directory of this distribution and at
+ * http://rust-lang.org/COPYRIGHT.
+ *
+ * Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
+ * http://www.apache.org/licenses/LICENSE-2.0> or the MIT license
+ * <LICENSE-MIT or http://opensource.org/licenses/MIT>, at your
+ * option. This file may not be copied, modified, or distributed
+ * except according to those terms.
+ */
+@font-face {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Fira Sans'), url("FiraSans-Regular.woff") format('woff');
+}
+@font-face {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Fira Sans Medium'), url("FiraSans-Medium.woff") format('woff');
+}
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Source Serif Pro'), url("SourceSerifPro-Regular.woff") format('woff');
+}
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-style: italic;
+    font-weight: 400;
+    src: url("Heuristica-Italic.woff") format('woff');
+}
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Source Serif Pro Bold'), url("SourceSerifPro-Bold.woff") format('woff');
+}
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Source Code Pro'), url("SourceCodePro-Regular.woff") format('woff');
+}
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Source Code Pro Semibold'), url("SourceCodePro-Semibold.woff") format('woff');
+}
+
+@import "normalize.css";
+
+/* Landing page styles */
+html {
+    font-family: 'Source Serif Pro';
+    font-weight: 400;
+    background: repeating-linear-gradient(
+        -45deg,
+        RGBA(166, 174, 179, 1),
+        RGBA(166, 174, 179, 1) 40px,
+        RGBA(15, 23, 26, .67) 40px,
+        RGBA(15, 23, 26, .67) 80px
+    );
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Fira Sans';
+    font-weight: normal;
+}
+
+main {
+    padding: 2em 0;
+    width: 100%;
+    height: auto;
+    max-height: 35%;
+}
+
+.card {
+    margin: auto;
+    max-width: 50vh;
+    height: 50vh;
+    position: relative;
+    cursor: pointer;
+}
+
+.pad {
+    padding: 1em;
+}
+
+.card_side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-transform-origin: left 50% -2em;
+       -moz-transform-origin: left 50% -2em;
+        -ms-transform-origin: left 50% -2em;
+            transform-origin: left 50% -2em;
+
+    -webkit-transition: all 0.5s ease;
+
+    box-shadow: 0 0 8px RGBA(15, 23, 26, 1);
+}
+
+.front {
+    background: RGBA(253, 251, 250, 1);
+}
+
+.back {
+    background: RGBA(87, 66, 43, 1);
+    color: RGBA(253, 251, 250, 1);
+    transform: rotateY(180deg);
+}
+
+.back a {
+    color: RGBA(166, 174, 179, 1);
+}
+
+.flipped.card .front {
+    -webkit-transform: rotateY(-180deg);
+       -moz-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+}
+
+.flipped.card .back {
+    -webkit-transform: rotateY(0);
+       -moz-transform: rotateY(0);
+        -ms-transform: rotateY(0);
+            transform: rotateY(0);
+}
+
+.flipped .card_side {
+    -webkit-transform-origin: right 50% -2em;
+       -moz-transform-origin: right 50% -2em;
+        -ms-transform-origin: right 50% -2em;
+            transform-origin: right 50% -2em;
+}
+
+.card:hover .front {
+    -webkit-transform: rotateY(-10deg);
+       -moz-transform: rotateY(-10deg);
+        -ms-transform: rotateY(-10deg);
+            transform: rotateY(-10deg);
+
+    box-shadow: 0 0 20px RGBA(15, 23, 26, 1);
+}
+
+.card:hover .back {
+    -webkit-transform: rotateY(170deg);
+       -moz-transform: rotateY(170deg);
+        -ms-transform: rotateY(170deg);
+            transform: rotateY(170deg);
+}
+
+.flipped.card:hover .front {
+    -webkit-transform: rotateY(-170deg);
+       -moz-transform: rotateY(-170deg);
+        -ms-transform: rotateY(-170deg);
+            transform: rotateY(-170deg);
+}
+
+.flipped.card:hover .back {
+    -webkit-transform: rotateY(10deg);
+       -moz-transform: rotateY(10deg);
+        -ms-transform: rotateY(10deg);
+            transform: rotateY(10deg);
+}
+
+.card_side img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* ----- Common styles ----- */
+.plain_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ----- Navigation styles ----- */
+nav {
+    background: RGBA(166, 142, 116, 1);
+    border-top: 2px solid RGBA(87, 66, 43, 1);
+    font-family: 'Fira Sans';
+}
+
+nav li a {
+    display: block;
+    height: 2em;
+    line-height: 2;
+    padding: 0.5em 0;
+    width: 100%;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid RGBA(87, 66, 43, 1);
+    transition: all 0.5s ease;
+}
+
+nav li a:hover {
+    background: RGBA(87, 66, 43, 1);
+    color: RGBA(253, 251, 250, 1);
+}
+
+nav li a:active {
+    background: RGBA(240, 80, 34, 1);
+    transition: all 0.1s ease-out;
+}
+
+.fa {
+    padding-right: 0.25em;
+}
+
+/* ----- Footer styles ----- */
+footer {
+    background: RGBA(240, 80, 34, 1);
+    color: RGBA(253, 251, 250, 1);
+    padding: 2em 0;
+    margin: 0;
+    text-align: center;
+    border-bottom: 2px solid RGBA(87, 66, 43, 1);
+}
+
+footer a {
+    color: RGBA(253, 251, 250, 1);
+    font-family: 'Source Code Pro';
+    transition: all 0.5s ease;
+}
+
+footer a:hover {
+    color: RGBA(15, 23, 26, 1);
+}
+
+.colophon_list li {
+    line-height: 1.2;
+    padding-bottom: 1em;
+}
