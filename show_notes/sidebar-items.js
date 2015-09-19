@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["e00","What in the world are we doing here, anyway?"]]});
+initSidebarItems({"mod":[["e00","Why Are We Here? ================"]]});
