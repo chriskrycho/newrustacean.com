@@ -2,7 +2,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
     <channel>
         <title>New Rustacean</title>
-        <link>http://newrustacean.com</link>
+        <link>http://www.newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
         <generator>Feeder 2.5.12(2294); Mac OS X Version 10.11 (Build 15A282b) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
@@ -13,18 +13,18 @@
         <pubDate>Sun, 20 Sep 2015 09:24:17 -0400</pubDate>
         <lastBuildDate>Sun, 20 Sep 2015 09:24:17 -0400</lastBuildDate>
         <image>
-            <url>http://newrustacean.com/podcast.png</url>
+            <url>http://www.newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
-            <link>http://newrustacean.com</link>
+            <link>http://www.newrustacean.com</link>
             <width>144</width>
             <height>144</height>
         </image>
-        <atom:link href="http://newrustacean.com/new-rustacean.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="http://www.newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
         <itunes:author>Chris Krycho</itunes:author>
         <itunes:subtitle>Let’s try some Rust, shall we?</itunes:subtitle>
         <itunes:summary><![CDATA[Documenting a journey into a new programming language—with source code, examples, and almost certainly some out-and-out hilarities along the way.]]></itunes:summary>
         <itunes:keywords>Rust,programming,programming languages,software</itunes:keywords>
-        <itunes:image href="http://newrustacean.com/podcast.png"/>
+        <itunes:image href="http://www.newrustacean.com/podcast.png"/>
         <itunes:explicit>no</itunes:explicit>
         <itunes:owner>
             <itunes:name>Chris Krycho</itunes:name>
@@ -40,7 +40,7 @@
         </itunes:category>
         <item>
             <title>e00: Why Are We Here?</title>
-            <link>http://newrustacean.com/show_notes/e00/index.html</link>
+            <link>http://www.newrustacean.com/show_notes/e00/index.html</link>
             <description><![CDATA[<h1 id="why-are-we-here">Why Are We Here?</h1>
 <ul>
 <li>Date: September 3, 2015</li>
