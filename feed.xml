@@ -10,10 +10,10 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 19 Sep 2015 18:34:22 -0400</pubDate>
-        <lastBuildDate>Sat, 19 Sep 2015 18:34:22 -0400</lastBuildDate>
+        <pubDate>Sun, 20 Sep 2015 09:17:39 -0400</pubDate>
+        <lastBuildDate>Sun, 20 Sep 2015 09:17:39 -0400</lastBuildDate>
         <image>
-            <url>http://newrustacean.com/podcast144.png</url>
+            <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
             <link>http://newrustacean.com</link>
             <width>144</width>
@@ -55,7 +55,7 @@
 <hr />
 <p>This is an almost-empty module: we aren’t doing any fun code samples yet. I included the standard “Hello, world!” example, because how could I not? However, at some point in the future, there will be much more detailed code samples available:</p>
 <ul>
-<li>in the <a href="//github.com/chriskrycho/newrustacean.com">GitHub repository</a> for the show</li>
+<li>in the <a href="https://github.com/chriskrycho/newrustacean.com">GitHub repository</a> for the show</li>
 <li>in the show notes attached to each episode</li>
 </ul>
 <p>Hopefully, the result will be a pretty helpful bunch of side content along with the audio of the podcast itself.</p>]]></description>
