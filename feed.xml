@@ -19,7 +19,6 @@
             <width>144</width>
             <height>144</height>
         </image>
-        <atom:link href="http://newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
         <itunes:author>Chris Krycho</itunes:author>
         <itunes:subtitle>Let’s try some Rust, shall we?</itunes:subtitle>
         <itunes:summary><![CDATA[Documenting a journey into a new programming language—with source code, examples, and almost certainly some out-and-out hilarities along the way.]]></itunes:summary>
