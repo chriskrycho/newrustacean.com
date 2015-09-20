@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sun, 20 Sep 2015 09:20:07 -0400</pubDate>
-        <lastBuildDate>Sun, 20 Sep 2015 09:20:07 -0400</lastBuildDate>
+        <pubDate>Sun, 20 Sep 2015 09:24:17 -0400</pubDate>
+        <lastBuildDate>Sun, 20 Sep 2015 09:24:17 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -19,7 +19,7 @@
             <width>144</width>
             <height>144</height>
         </image>
-        <atom:link href="http://newrustacean.com/new-rustacean.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="http://newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
         <itunes:author>Chris Krycho</itunes:author>
         <itunes:subtitle>Let’s try some Rust, shall we?</itunes:subtitle>
         <itunes:summary><![CDATA[Documenting a journey into a new programming language—with source code, examples, and almost certainly some out-and-out hilarities along the way.]]></itunes:summary>
