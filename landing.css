@@ -161,7 +161,7 @@ main {
         -ms-transform: rotateY(-10deg);
             transform: rotateY(-10deg);
 
-    box-shadow: 0 0 20px RGBA(15, 23, 26, 1);
+    box-shadow: 8px 0 20px RGBA(15, 23, 26, 1);
 }
 
 .card:hover .back {
@@ -169,6 +169,8 @@ main {
        -moz-transform: rotateY(170deg);
         -ms-transform: rotateY(170deg);
             transform: rotateY(170deg);
+
+    box-shadow: -8px 0 20px RGBA(15, 23, 26, 1);
 }
 
 .flipped.card:hover .front {
