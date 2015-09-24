@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Thu, 24 Sep 2015 19:20:38 -0400</pubDate>
-        <lastBuildDate>Thu, 24 Sep 2015 19:20:38 -0400</lastBuildDate>
+        <pubDate>Thu, 24 Sep 2015 19:23:19 -0400</pubDate>
+        <lastBuildDate>Thu, 24 Sep 2015 19:23:19 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -39,9 +39,9 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <item>
-            <title>e00: Why Are We Here?</title>
+            <title>e00: Hello, world!</title>
             <link>http://newrustacean.com/show_notes/e00/index.html</link>
-            <description><![CDATA[<h1 id="why-are-we-here">Why Are We Here?</h1>
+            <description><![CDATA[<h1 id="hello-world">Hello, World!</h1>
 <ul>
 <li>Date: September 24, 2015</li>
 <li>Subject: The host, the language, and the show!</li>
@@ -64,7 +64,7 @@
             <guid isPermaLink="false">CCE404BC-4B4A-4F28-A687-9BCC66C08CEF</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:subtitle>A little about the host, and a little about the format of the show!</itunes:subtitle>
-            <itunes:summary><![CDATA[Why Are We Here?
+            <itunes:summary><![CDATA[Hello, world!
 
 * Date: September 24, 2015
 
