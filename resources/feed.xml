@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+    <channel>
+        <title>New Rustacean</title>
+        <link>http://newrustacean.com</link>
+        <description>A podcast about learning the Rust programming language—from scratch!</description>
+        <generator>Feeder 2.5.12(2294); Mac OS X Version 10.11 (Build 15A282b) http://reinventedsoftware.com/feeder/</generator>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <language>en</language>
+        <copyright>2015 Chris Krycho</copyright>
+        <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
+        <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
+        <pubDate>Sat, 03 Oct 2015 16:05:23 -0400</pubDate>
+        <lastBuildDate>Sat, 03 Oct 2015 16:05:23 -0400</lastBuildDate>
+        <image>
+            <url>http://newrustacean.com/podcast.png</url>
+            <title>New Rustacean</title>
+            <link>http://newrustacean.com</link>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="http://newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <itunes:author>Chris Krycho</itunes:author>
+        <itunes:subtitle>Let’s try some Rust, shall we?</itunes:subtitle>
+        <itunes:summary><![CDATA[Documenting a journey into a new programming language—with source code, examples, and almost certainly some out-and-out hilarities along the way.]]></itunes:summary>
+        <itunes:keywords>Rust,programming,programming languages,software</itunes:keywords>
+        <itunes:image href="http://newrustacean.com/podcast.png"/>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:owner>
+            <itunes:name>Chris Krycho</itunes:name>
+            <itunes:email>hello@newrustacean.com</itunes:email>
+        </itunes:owner>
+        <itunes:block>no</itunes:block>
+        <itunes:category text="Technology">
+            <itunes:category text="Tech News"/>
+            <itunes:category text="Software How-To"/>
+        </itunes:category>
+        <itunes:category text="Education">
+            <itunes:category text="Training"/>
+        </itunes:category>
+        <item>
+            <title>e01: Document All the Things</title>
+            <link>http://newrustacean.com/show_notes/e01/index.html</link>
+            <description><![CDATA[<h1 id="document-all-the-things">Document all the things!</h1>
+<ul>
+<li><strong>Date:</strong> October 5, 2015</li>
+<li><strong>Subject:</strong> Documentation in general, and <code>rustdoc</code> and <code>cargo doc</code> in particular.</li>
+<li><strong>Audio:</strong>
+<ul>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e01.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e01.mp3">MP3</a></li>
+</ul></li>
+</ul>
+<h1 id="followsupport">Follow/Support</h1>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <span class="citation">[@newrustacean]</span>(https://www.twitter.com/newrustacean)</li>
+<li>App.net: <span class="citation">[@newrustacean]</span>(https://alpha.app.net/newrustacean)</li>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>Twitter: <span class="citation">[@chriskrycho]</span>(https://www.twitter.com/chriskrycho)</li>
+<li>App.net: <span class="citation">[@chriskrycho]</span>(https://alpha.app.net/chriskrycho)</li>
+</ul></li>
+</ul>
+<h1 id="notes">Notes</h1>
+<p>This is a mostly-empty module, and it is intended as such. Why? Well, because <em>almost</em> all the sample code exists in these comments, which serve as the show notes. If you listen to the episode or take a look at the <a href="/src/show_notes/e01.rs.html">source files</a>, you’ll see how it works!</p>
+<p>The components below are included <em>solely</em> so you can see how the docstrings work with each kind of thing. Make sure to click on the names of the items: there is more documentation there. Again, take a look at the <a href="/src/show_notes/e01.rs.html">source</a> to see how it looks in the context of a file module.</p>
+<p>Note that this module-level docstring uses <code>rather than `///`-style comments. This is because this docstring is documenting the item which contains it, rather than the following item. Per [Rust RFC 505][1], the preferred approach is always to use the &quot;following&quot; form (`///`) rather than the &quot;containing&quot; form (</code>), except for module-level docs like these. (I will be following RFC 505 throughout.)</p>
+<h1 id="links">Links</h1>
+<ul>
+<li><a href="https://github.com/rust-lang/rfcs/issues/1061">Rust and MSVC tracking issue</a></li>
+<li>Other documentation tools:
+<ul>
+<li>Predecessors:
+<ul>
+<li><a href="http://sphinx-doc.org">Python’s Sphinx tool</a></li>
+<li><a href="http://www.stack.nl/~dimitri/doxygen/">Doxygen</a></li>
+<li><a href="http://usejsdoc.org">JSDoc</a></li>
+<li><a href="http://www.oracle.com/technetwork/articles/java/index-jsp-135444.html">JavaDoc</a></li>
+</ul></li>
+<li>Other new languages with Markdown tooling
+<ul>
+<li><a href="http://julialang.org">Julia</a> has a <a href="http://julia.readthedocs.org/en/latest/manual/documentation/">built-in documentation system</a></li>
+<li><a href="http://elixir-lang.org">Elixir</a> has <a href="https://github.com/elixir-lang/ex_doc">ex_doc</a></li>
+</ul></li>
+</ul></li>
+<li><a href="http://blog.rust-lang.org/2015/09/17/Rust-1.3.html">Rust 1.3 release announcement</a></li>
+<li>Rust’s package hosting: <a href="https://crates.io">crates.io</a>
+<ul>
+<li><a href="https://github.com/brson/taskcluster-crater">Crater</a> for testing for backwards compatibility</li>
+</ul></li>
+<li><a href="http://semver.org">Semantic versioning</a>
+<ul>
+<li><a href="http://blog.rust-lang.org/2014/10/30/Stability.html">“Stability as a Deliverable”</a>: Rust official blog post on version stability, backwards compatibility, and release channels.</li>
+</ul></li>
+<li><a href="https://doc.rust-lang.org/book/documentation.html">The Rust book chapter on <code>rustdoc</code></a></li>
+</ul>]]></description>
+            <pubDate>Sat, 03 Oct 2015 16:04:28 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e01.m4a" length="8417950" type="audio/x-m4a"/>
+            <guid isPermaLink="false">9846F954-2459-4E89-BAF6-0DB4DA62E6D3</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:duration>17:06</itunes:duration>
+        </item>
+        <item>
+            <title>e00: Hello, world!</title>
+            <link>http://newrustacean.com/show_notes/e00/index.html</link>
+            <description><![CDATA[<h1 id="hello-world">Hello, World!</h1>
+<ul>
+<li>Date: September 24, 2015</li>
+<li>Subject: The host, the language, and the show!</li>
+<li>Audio:
+<ul>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e00.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e00.mp3">MP3</a></li>
+</ul></li>
+</ul>
+<p>Today’s show is pretty meta. You can skip it if you just want to start with something more technical, but I thought listeners might want to know a little about the origins of the show and my own background, so that’s what you get today. Next time, we’ll be tackling the <code>rustdoc</code> command in some detail.</p>
+<hr />
+<p>This is an almost-empty module: we aren’t doing any fun code samples yet. I included the standard “Hello, world!” example, because how could I not? However, at some point in the future, there will be much more detailed code samples available:</p>
+<ul>
+<li>in the <a href="https://github.com/chriskrycho/newrustacean.com">GitHub repository</a> for the show</li>
+<li>in the show notes attached to each episode</li>
+</ul>
+<p>Hopefully, the result will be a pretty helpful bunch of side content along with the audio of the podcast itself.</p>]]></description>
+            <pubDate>Thu, 24 Sep 2015 19:14:50 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e00.m4a" length="8458507" type="audio/x-m4a"/>
+            <guid isPermaLink="false">CCE404BC-4B4A-4F28-A687-9BCC66C08CEF</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:subtitle>A little about the host, and a little about the format of the show!</itunes:subtitle>
+            <itunes:summary><![CDATA[Hello, world!
+
+* Date: September 24, 2015
+
+* Subject: The host, the language, and the show!
+
+* Audio:
+
+* M4A
+
+* MP3
+
+Today’s show is pretty meta. You can skip it if you just want to start with something more technical, but I thought listeners might want to know a little about the origins of the show and my own background, so that’s what you get today. Next time, we’ll be tackling the rustic command in some detail.
+
+This is an almost-empty module: we aren’t doing any fun code samples yet. I included the standard “Hello, world!” example, because how could I not? However, at some point in the future, there will be much more detailed code samples available:
+
+* in the GitHub repository for the show
+
+* in the show notes attached to each episode
+
+Hopefully, the result will be a pretty helpful bunch of side content along with the audio of the podcast itself.]]></itunes:summary>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:duration>17:11</itunes:duration>
+        </item>
+    </channel>
+</rss>
