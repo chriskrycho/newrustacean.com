@@ -9,6 +9,7 @@
        html_root_url = "http://newrustacean.com/")]
 
 pub mod e00;
+pub mod e01;
 
 #[test]
 fn it_works() {

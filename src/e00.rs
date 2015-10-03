@@ -1,8 +1,8 @@
-//! Why Are We Here?
+//! Hello, world!
 //!
-//!   - Date: September 3, 2015
-//!   - Subject: The host, the language, and the show!
-//!   - Audio:
+//!   - **Date:** September 24, 2015
+//!   - **Subject:** The host, the language, and the show!
+//!   - **Audio:**
 //!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e00.m4a)
 //!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e00.mp3)
 //!
