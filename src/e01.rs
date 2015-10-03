@@ -1,6 +1,6 @@
 //! Document all the things!
 //!
-//!   - **Date:** October 5, 2015
+//!   - **Date:** October 3, 2015
 //!   - **Subject:** Documentation in general, and `rustdoc` and `cargo doc` in
 //!     particular.
 //!   - **Audio:**
