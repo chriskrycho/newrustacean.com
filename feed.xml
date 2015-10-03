@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 03 Oct 2015 16:09:38 -0400</pubDate>
-        <lastBuildDate>Sat, 03 Oct 2015 16:09:38 -0400</lastBuildDate>
+        <pubDate>Sat, 03 Oct 2015 16:15:25 -0400</pubDate>
+        <lastBuildDate>Sat, 03 Oct 2015 16:15:25 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -43,7 +43,7 @@
             <link>http://newrustacean.com/show_notes/e01/index.html</link>
             <description><![CDATA[<h1 id="document-all-the-things">Document all the things!</h1>
 <ul>
-<li><strong>Date:</strong> October 5, 2015</li>
+<li><strong>Date:</strong> October 3, 2015</li>
 <li><strong>Subject:</strong> Documentation in general, and <code>rustdoc</code> and <code>cargo doc</code> in particular.</li>
 <li><strong>Audio:</strong>
 <ul>
@@ -108,7 +108,7 @@
 
 Document all the things!
 
-* Date: October 5, 2015
+* Date: October 3, 2015
 
 * Subject: Documentation in general, and rustic and cargo doc in particular.
 
