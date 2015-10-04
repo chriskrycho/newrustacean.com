@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 03 Oct 2015 16:15:25 -0400</pubDate>
-        <lastBuildDate>Sat, 03 Oct 2015 16:15:25 -0400</lastBuildDate>
+        <pubDate>Sun, 04 Oct 2015 09:26:08 -0400</pubDate>
+        <lastBuildDate>Sun, 04 Oct 2015 09:26:08 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -49,6 +49,7 @@
 <ul>
 <li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e01.m4a">M4A</a></li>
 <li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e01.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e01.ogg">Ogg</a></li>
 </ul></li>
 </ul>
 <h1 id="followsupport">Follow/Support</h1>
@@ -189,6 +190,7 @@ Links
 <ul>
 <li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e00.m4a">M4A</a></li>
 <li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e00.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e00.ogg">Ogg</a></li>
 </ul></li>
 </ul>
 <p>Today’s show is pretty meta. You can skip it if you just want to start with something more technical, but I thought listeners might want to know a little about the origins of the show and my own background, so that’s what you get today. Next time, we’ll be tackling the <code>rustdoc</code> command in some detail.</p>

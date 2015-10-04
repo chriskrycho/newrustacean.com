@@ -6,6 +6,7 @@
 //!   - **Audio:**
 //!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e01.m4a)
 //!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e01.mp3)
+//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e01.ogg)
 //!
 //! # Follow/Support
 //!   - New Rustacean:
