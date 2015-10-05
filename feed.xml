@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sun, 04 Oct 2015 09:26:08 -0400</pubDate>
-        <lastBuildDate>Sun, 04 Oct 2015 09:26:08 -0400</lastBuildDate>
+        <pubDate>Mon, 05 Oct 2015 17:43:54 -0400</pubDate>
+        <lastBuildDate>Mon, 05 Oct 2015 17:43:54 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -32,8 +32,8 @@
         </itunes:owner>
         <itunes:block>no</itunes:block>
         <itunes:category text="Technology">
-            <itunes:category text="Tech News"/>
             <itunes:category text="Software How-To"/>
+            <itunes:category text="Tech News"/>
         </itunes:category>
         <itunes:category text="Education">
             <itunes:category text="Training"/>
