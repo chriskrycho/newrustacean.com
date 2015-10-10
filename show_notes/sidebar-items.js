@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["e00","Hello, world!"],["e01","Document all the things!"]]});
+initSidebarItems({"mod":[["e000","Hello, world!"],["e001","Document all the things!"]]});
