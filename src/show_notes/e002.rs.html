@@ -381,7 +381,7 @@
 
 
 <span class='doccomment'>/// Demonstrates general borrowing of an immutable reference.</span>
-<span class='kw'>fn</span> <span class='ident'>borrow</span>(<span class='ident'>ref_to_circle</span>: <span class='kw-2'>&amp;</span><span class='ident'>Circle</span>) {
+<span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>borrow</span>(<span class='ident'>ref_to_circle</span>: <span class='kw-2'>&amp;</span><span class='ident'>Circle</span>) {
     <span class='comment'>// I can access but not change the values.</span>
     <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;Immutable reference-- origin: {:},{:} | Radius: {:}&quot;</span>,
              <span class='ident'>ref_to_circle</span>.<span class='ident'>x</span>, <span class='ident'>ref_to_circle</span>.<span class='ident'>y</span>, <span class='ident'>ref_to_circle</span>.<span class='ident'>r</span>);
@@ -396,7 +396,7 @@
 
 
 <span class='doccomment'>/// Demonstrates general borrowing of a mutable reference.</span>
-<span class='kw'>fn</span> <span class='ident'>borrow_mut</span>(<span class='ident'>mutable_ref_to_circle</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>Circle</span>) {
+<span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>borrow_mut</span>(<span class='ident'>mutable_ref_to_circle</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>Circle</span>) {
     <span class='comment'>// I can still access these values, of course.</span>
     <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;Mutable reference-- origin: {:},{:} | Radius: {:}&quot;</span>,
              <span class='ident'>mutable_ref_to_circle</span>.<span class='ident'>x</span>, <span class='ident'>mutable_ref_to_circle</span>.<span class='ident'>y</span>, <span class='ident'>mutable_ref_to_circle</span>.<span class='ident'>r</span>);
@@ -406,8 +406,8 @@
 }
 
 
-<span class='doccomment'>/// Demonstrates general moving an instance.</span>
-<span class='kw'>fn</span> <span class='ident'>move_circle</span>(<span class='ident'>moved_circle</span>: <span class='ident'>Circle</span>) {
+<span class='doccomment'>/// Demonstrates general moving of an instance.</span>
+<span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>move_circle</span>(<span class='ident'>moved_circle</span>: <span class='ident'>Circle</span>) {
     <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;Moved a circle: {:?}&quot;</span>, <span class='ident'>moved_circle</span>);
 
     <span class='comment'>// Note that this is an immutable type: this won&#39;t compile.</span>
