@@ -3,9 +3,9 @@
 //!   - **Date:** September 24, 2015
 //!   - **Subject:** The host, the language, and the show!
 //!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e00.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e00.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e00.ogg)
+//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e000.m4a)
+//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e000.mp3)
+//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e000.ogg)
 //!
 //! Today's show is pretty meta. You can skip it if you just want to start with
 //! something more technical, but I thought listeners might want to know a

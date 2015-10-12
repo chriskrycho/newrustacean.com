@@ -4,9 +4,13 @@
 //!   - **Subject:** Documentation in general, and `rustdoc` and `cargo doc` in
 //!     particular.
 //!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e01.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e01.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e01.ogg)
+//!       + [M4A][m4a]
+//!       + [MP3][mp3]
+//!       + [Ogg][ogg]
+//!
+//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e001.m4a
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e001.mp3
+//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e001.ogg
 //!
 //! # Follow/Support
 //!   - New Rustacean:
@@ -24,7 +28,7 @@
 //! as the show notes. If you listen to the episode or take a look at the
 //! [source files][src], you'll see how it works!
 //!
-//! [src]: /src/show_notes/e01.rs.html
+//! [src]: /src/show_notes/e001.rs.html
 //!
 //! The components below are included *solely* so you can see how the
 //! docstrings work with each kind of thing. Make sure to click on the names of
