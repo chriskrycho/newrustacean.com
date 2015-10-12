@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Mon, 05 Oct 2015 17:43:54 -0400</pubDate>
-        <lastBuildDate>Mon, 05 Oct 2015 17:43:54 -0400</lastBuildDate>
+        <pubDate>Sun, 11 Oct 2015 22:30:01 -0400</pubDate>
+        <lastBuildDate>Sun, 11 Oct 2015 22:30:01 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -39,17 +39,17 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <item>
-            <title>e01: Document All the Things</title>
-            <link>http://newrustacean.com/show_notes/e01/index.html</link>
-            <description><![CDATA[<h1 id="document-all-the-things">Document all the things!</h1>
+            <title>e002: Something borrowed, something… moved?</title>
+            <link>http://newrustacean.com/show_notes/e002/</link>
+            <description><![CDATA[<p>Something borrowed, something… moved?</p>
 <ul>
-<li><strong>Date:</strong> October 3, 2015</li>
-<li><strong>Subject:</strong> Documentation in general, and <code>rustdoc</code> and <code>cargo doc</code> in particular.</li>
+<li><strong>Date:</strong> October 12, 2015</li>
+<li><strong>Subject:</strong> The <code>struct</code> data type constructor, and the basics of Rust’s “ownership” concept and “borrowing” and “moving”.</li>
 <li><strong>Audio:</strong>
 <ul>
-<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e01.m4a">M4A</a></li>
-<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e01.mp3">MP3</a></li>
-<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e01.ogg">Ogg</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e002.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e002.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e002.ogg">Ogg</a></li>
 </ul></li>
 </ul>
 <h1 id="followsupport">Follow/Support</h1>
@@ -68,8 +68,117 @@
 </ul></li>
 </ul>
 <h1 id="notes">Notes</h1>
-<p>This is a mostly-empty module, and it is intended as such. Why? Well, because <em>almost</em> all the sample code exists in these comments, which serve as the show notes. If you listen to the episode or take a look at the <a href="/src/show_notes/e01.rs.html">source files</a>, you’ll see how it works!</p>
-<p>The components below are included <em>solely</em> so you can see how the docstrings work with each kind of thing. Make sure to click on the names of the items: there is more documentation there. Again, take a look at the <a href="/src/show_notes/e01.rs.html">source</a> to see how it looks in the context of a file module.</p>
+<p>Today’s episode discusses, and the associated source code demonstrates, a few basic behaviors of structs… including borrowing!</p>
+<p>After taking a short look at one of Rust’s basic approaches to creating new types, we dive into a <em>fairly</em> thorough overview of how borrowing works in fairly run-of-the-mill Rust code. This is a basic introduction, and as such I’m not getting into things like heap-allocated memory (<code>Box</code>) or dealing with <code>move</code> semantics with threads or closures. (I haven’t actually figured those out well enough yet to write something like this for them!)</p>
+<p>As usual, you’ll want to have the <a href="/src/show_notes/e002.rs.html"><code>src</code></a> open to see what I’m doing with the components documented below.</p>
+<h1 id="links">Links</h1>
+<ul>
+<li><code>rustfmt</code> – a tool for formatting Rust code
+<ul>
+<li><a href="https://github.com/nrc/rustfmt">repo</a></li>
+<li><a href="http://www.ncameron.org/blog/rustfmt-ing-rust/">“rustfmt-ing Rust`</a></li>
+<li><a href="https://www.reddit.com/r/rust/comments/3nt2vm/rustfmting_rust_please_help_me_rustfmt_the_rust/">Reddit discussion</a></li>
+</ul></li>
+<li>RFC for incremental compilation
+<ul>
+<li><a href="https://github.com/nikomatsakis/rfcs/blob/incremental-compilation/text/0000-incremental-compilation.md">Text of the RFC</a></li>
+<li><a href="https://github.com/rust-lang/rfcs/pull/1298">GitHub pull request</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Sun, 11 Oct 2015 22:24:16 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e002.m4a" length="8611298" type="audio/x-m4a"/>
+            <guid isPermaLink="false">03DD0BB6-9615-420A-A43B-B6EB0BBCD1C4</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:subtitle>Borrow a `struct` for a while. Then give it back, or keep it for yourself!</itunes:subtitle>
+            <itunes:summary><![CDATA[Something borrowed, something… moved?
+
+* Date: October 12, 2015
+
+* Subject: The struct data type constructor, and the basics of Rust’s “ownership” concept and “borrowing” and “moving”.
+
+* Audio:
+
+* M4A
+
+* MP3
+
+* Ogg
+
+Follow/Support
+
+* New Rustacean:
+
+* Twitter: @newrustacean
+
+* App.net: @newrustacean
+
+* Patreon
+
+* Email: hello@newrustacean.com
+
+* Chris Krycho
+
+* Twitter: @chriskrycho
+
+* App.net: @chriskrycho
+
+Notes
+Today’s episode discusses, and the associated source code demonstrates, a few basic behaviors of structs… including borrowing!
+
+After taking a short look at one of Rust’s basic approaches to creating new types, we dive into a fairly thorough overview of how borrowing works in fairly run-of-the-mill Rust code. This is a basic introduction, and as such I’m not getting into things like heap-allocated memory (Box) or dealing with move semantics with threads or closures. (I haven’t actually figured those out well enough yet to write something like this for them!)
+
+As usual, you’ll want to have the src open to see what I’m doing with the components documented below.
+Links
+
+* rustfmt – a tool for formatting Rust code
+
+* repo
+
+* “rustfmt-ing Rust`
+
+* Reddit discussion
+
+* RFC for incremental compilation
+
+* Text of the RFC
+
+* GitHub pull request]]></itunes:summary>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:duration>17:50</itunes:duration>
+        </item>
+        <item>
+            <title>e001: Document All the Things</title>
+            <link>http://newrustacean.com/show_notes/e001/</link>
+            <description><![CDATA[<h1 id="document-all-the-things">Document all the things!</h1>
+<ul>
+<li><strong>Date:</strong> October 3, 2015</li>
+<li><strong>Subject:</strong> Documentation in general, and <code>rustdoc</code> and <code>cargo doc</code> in particular.</li>
+<li><strong>Audio:</strong>
+<ul>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e001.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e001.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e001.ogg">Ogg</a></li>
+</ul></li>
+</ul>
+<h1 id="followsupport">Follow/Support</h1>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>App.net: <a href="https://alpha.app.net/newrustacean">@newrustacean</a></li>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+<li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+<h1 id="notes">Notes</h1>
+<p>This is a mostly-empty module, and it is intended as such. Why? Well, because <em>almost</em> all the sample code exists in these comments, which serve as the show notes. If you listen to the episode or take a look at the <a href="/src/show_notes/e001.rs.html">source files</a>, you’ll see how it works!</p>
+<p>The components below are included <em>solely</em> so you can see how the docstrings work with each kind of thing. Make sure to click on the names of the items: there is more documentation there. Again, take a look at the <a href="/src/show_notes/e001.rs.html">source</a> to see how it looks in the context of a file module.</p>
 <p>Note that this module-level docstring uses <code>rather than `///`-style comments. This is because this docstring is documenting the item which contains it, rather than the following item. Per [Rust RFC 505][1], the preferred approach is always to use the &quot;following&quot; form (`///`) rather than the &quot;containing&quot; form (</code>), except for module-level docs like these. (I will be following RFC 505 throughout.)</p>
 <h1 id="links">Links</h1>
 <ul>
@@ -101,7 +210,7 @@
 <li><a href="https://doc.rust-lang.org/book/documentation.html">The Rust book chapter on <code>rustdoc</code></a></li>
 </ul>]]></description>
             <pubDate>Sat, 03 Oct 2015 16:04:28 -0400</pubDate>
-            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e01.m4a" length="8417950" type="audio/x-m4a"/>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e001.m4a" length="8417950" type="audio/x-m4a"/>
             <guid isPermaLink="false">9846F954-2459-4E89-BAF6-0DB4DA62E6D3</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:subtitle>Documentation in general, and rustdoc and cargo doc in particular.</itunes:subtitle>
@@ -180,17 +289,17 @@ Links
             <itunes:duration>17:06</itunes:duration>
         </item>
         <item>
-            <title>e00: Hello, world!</title>
-            <link>http://newrustacean.com/show_notes/e00/index.html</link>
+            <title>e000: Hello, world!</title>
+            <link>http://newrustacean.com/show_notes/e000/</link>
             <description><![CDATA[<h1 id="hello-world">Hello, World!</h1>
 <ul>
 <li>Date: September 24, 2015</li>
 <li>Subject: The host, the language, and the show!</li>
 <li>Audio:
 <ul>
-<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e00.m4a">M4A</a></li>
-<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e00.mp3">MP3</a></li>
-<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e00.ogg">Ogg</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e000.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e000.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e000.ogg">Ogg</a></li>
 </ul></li>
 </ul>
 <p>Today’s show is pretty meta. You can skip it if you just want to start with something more technical, but I thought listeners might want to know a little about the origins of the show and my own background, so that’s what you get today. Next time, we’ll be tackling the <code>rustdoc</code> command in some detail.</p>
@@ -202,7 +311,7 @@ Links
 </ul>
 <p>Hopefully, the result will be a pretty helpful bunch of side content along with the audio of the podcast itself.</p>]]></description>
             <pubDate>Thu, 24 Sep 2015 19:14:50 -0400</pubDate>
-            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e00.m4a" length="8458507" type="audio/x-m4a"/>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e000.m4a" length="8458505" type="audio/x-m4a"/>
             <guid isPermaLink="false">CCE404BC-4B4A-4F28-A687-9BCC66C08CEF</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:subtitle>A little about the host, and a little about the format of the show!</itunes:subtitle>
