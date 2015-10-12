@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sun, 11 Oct 2015 22:30:01 -0400</pubDate>
-        <lastBuildDate>Sun, 11 Oct 2015 22:30:01 -0400</lastBuildDate>
+        <pubDate>Mon, 12 Oct 2015 07:04:16 -0400</pubDate>
+        <lastBuildDate>Mon, 12 Oct 2015 07:04:16 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -87,7 +87,7 @@
 </ul>
 ]]></description>
             <pubDate>Sun, 11 Oct 2015 22:24:16 -0400</pubDate>
-            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e002.m4a" length="8611298" type="audio/x-m4a"/>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e002.m4a" length="8322086" type="audio/x-m4a"/>
             <guid isPermaLink="false">03DD0BB6-9615-420A-A43B-B6EB0BBCD1C4</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:subtitle>Borrow a `struct` for a while. Then give it back, or keep it for yourself!</itunes:subtitle>
@@ -145,7 +145,7 @@ Links
 
 * GitHub pull request]]></itunes:summary>
             <itunes:explicit>no</itunes:explicit>
-            <itunes:duration>17:50</itunes:duration>
+            <itunes:duration>17:12</itunes:duration>
         </item>
         <item>
             <title>e001: Document All the Things</title>
