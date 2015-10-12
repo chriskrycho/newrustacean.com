@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["demonstrate_method_ownership","Demonstrates how the same concepts apply when dealing with methods."],["demonstrate_ownership","Demonstrates how borrowing works with plain old functions."]],"struct":[["Circle","This struct is simple but useful to see how borrowing and moving work."]]});
