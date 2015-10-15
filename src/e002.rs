@@ -93,7 +93,7 @@ pub fn demonstrate_ownership() {
 
 
 /// Demonstrates general borrowing of an immutable reference.
-fn borrow(ref_to_circle: &Circle) {
+pub fn borrow(ref_to_circle: &Circle) {
     // I can access but not change the values.
     println!("Immutable reference-- origin: {:},{:} | Radius: {:}",
              ref_to_circle.x, ref_to_circle.y, ref_to_circle.r);
@@ -108,7 +108,7 @@ fn borrow(ref_to_circle: &Circle) {
 
 
 /// Demonstrates general borrowing of a mutable reference.
-fn borrow_mut(mutable_ref_to_circle: &mut Circle) {
+pub fn borrow_mut(mutable_ref_to_circle: &mut Circle) {
     // I can still access these values, of course.
     println!("Mutable reference-- origin: {:},{:} | Radius: {:}",
              mutable_ref_to_circle.x, mutable_ref_to_circle.y, mutable_ref_to_circle.r);
@@ -118,8 +118,8 @@ fn borrow_mut(mutable_ref_to_circle: &mut Circle) {
 }
 
 
-/// Demonstrates general moving an instance.
-fn move_circle(moved_circle: Circle) {
+/// Demonstrates general moving of an instance.
+pub fn move_circle(moved_circle: Circle) {
     println!("Moved a circle: {:?}", moved_circle);
 
     // Note that this is an immutable type: this won't compile.
