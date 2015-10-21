@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Mon, 12 Oct 2015 07:04:16 -0400</pubDate>
-        <lastBuildDate>Mon, 12 Oct 2015 07:04:16 -0400</lastBuildDate>
+        <pubDate>Wed, 21 Oct 2015 13:12:45 -0400</pubDate>
+        <lastBuildDate>Wed, 21 Oct 2015 13:12:45 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,109 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e003: No More Nulls</title>
+            <link>http://newrustacean.com/show_notes/e003/</link>
+            <description><![CDATA[<p>No More Nulls</p>
+<ul>
+<li><strong>Date:</strong> October 21, 2015</li>
+<li><strong>Subject:</strong> The <code>struct</code> data type constructor, and the basics of Rust’s “ownership” concept and “borrowing” and “moving”.</li>
+<li><strong>Audio:</strong>
+<ul>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e003.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e003.ogg">Ogg</a></li>
+</ul></li>
+</ul>
+<h1 id="notes">Notes</h1>
+<p>Today’s episode discusses, in order:</p>
+<ul>
+<li>Enumerated types, with an eye to the difference between structs and enums, and to the differences between <code>enum</code>s in C and in Rust.</li>
+<li>Pattern matching, with a focus on using them with enumerated types and some discussion about how they differ from <code>switch</code> blocks in C-like languages.</li>
+<li>Using the <code>Option</code> and <code>Result</code> enumerated types with pattern matching to provide meaningful returns from functions safely.</li>
+</ul>
+<h2 id="order">Order</h2>
+<p>There is a specific order to the examples below, and it is <em>not</em> the automatically-alphabetized order rendered by <code>rustdoc</code>. Instead, you should work through in the sequence they appear in the <a href="/src/show_notes/e003/e003.rs.html">source</a>:</p>
+<ol type="1">
+<li><a href="/show_notes/e003/enum.RelatedishThings.html">RelatedishThings</a></li>
+<li><a href="/show_notes/e003/fn.demonstrate_basic_enumeration.html">demonstrate_basic_enumeration</a></li>
+<li><a href="/show_notes/e003/fn.demonstrate_match.html">demonstrate_match</a></li>
+<li><a href="/show_notes/e003/fn.get_an_option.html">get_an_option</a></li>
+<li><a href="/show_notes/e003/fn.demonstrate_option.html">demonstrate_option</a></li>
+<li><a href="/show_notes/e003/fn.get_a_result.html">get_a_result</a></li>
+<li><a href="/show_notes/e003/fn.demonstrate_result.html">demonstrate_result</a></li>
+</ol>
+<h2 id="links">Links</h2>
+<ul>
+<li>New Rustacean <a href="https://github.com/chriskrycho/newrustacean.com/pull/1">Pull Request #1</a></li>
+<li>Work on IDE support!
+<ul>
+<li><a href="https://www.rust-lang.org/ides.html">Landing page</a></li>
+<li>My chosen tool: <a href="https://github.com/alexeykudinkin/intellij-rust">JetBrains/IntelliJ</a></li>
+</ul></li>
+<li><a href="https://github.com/carols10cents/rustlings">Rustlings</a></li>
+<li><a href="http://jakegoulding.com/rust-ffi-omnibus/basics/">Rust FFI Omnibus</a></li>
+</ul>
+<h1 id="followsupport">Follow/Support</h1>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>App.net: <a href="https://alpha.app.net/newrustacean">@newrustacean</a></li>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li>Email: <script type="text/javascript">
+<!--
+h='&#110;&#x65;&#x77;&#114;&#x75;&#x73;&#116;&#x61;&#x63;&#x65;&#x61;&#110;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#104;&#x65;&#108;&#108;&#x6f;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#104;&#x65;&#108;&#108;&#x6f;&#32;&#x61;&#116;&#32;&#110;&#x65;&#x77;&#114;&#x75;&#x73;&#116;&#x61;&#x63;&#x65;&#x61;&#110;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+<li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>]]></description>
+            <pubDate>Wed, 21 Oct 2015 13:10:12 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a" length="8178565" type="audio/x-m4a"/>
+            <guid isPermaLink="false">E39A4582-8095-4645-8925-AB2887828F93</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:subtitle>The `struct` data type constructor, and the basics of Rust's "ownership" concept and "borrowing" and "moving".</itunes:subtitle>
+            <itunes:summary><![CDATA[No More Nulls
+
+-   DATE: October 21, 2015
+-   SUBJECT: The struct data type constructor, and the basics of Rust’s
+    “ownership” concept and “borrowing” and “moving”.
+
+NOTES
+
+Today’s episode discusses, in order:
+
+-   Enumerated types, with an eye to the difference between structs and
+    enums, and to the differences between enums in C and in Rust.
+-   Pattern matching, with a focus on using them with enumerated types
+    and some discussion about how they differ from switch blocks in
+    C-like languages.
+-   Using the Option and Result enumerated types with pattern matching
+    to provide meaningful returns from functions safely.
+
+
+Order
+
+There is a specific order to the examples below, and it is _not_ the
+automatically-alphabetized order rendered by rustdoc. Instead, you
+should work through in the sequence they appear in the source:
+
+1.  RelatedishThings
+2.  demonstrate_basic_enumeration
+3.  demonstrate_match
+4.  get_an_option
+5.  demonstrate_option
+6.  get_a_result
+7.  demonstrate_result]]></itunes:summary>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:duration>16:51</itunes:duration>
+        </item>
         <item>
             <title>e002: Something borrowed, something… moved?</title>
             <link>http://newrustacean.com/show_notes/e002/</link>

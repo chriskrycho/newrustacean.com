@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `RelatedishThings` enum in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, RelatedishThings">
+
+    <title>show_notes::e003::RelatedishThings - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        <a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='' width='100'></a>
+        <p class='location'><a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e003</a></p><script>window.sidebarCurrent = {name: 'RelatedishThings', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e003</a>::<wbr><a class='enum' href=''>RelatedishThings</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-982' class='srclink' href='../../src/show_notes/e003.rs.html#100-110' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum RelatedishThings {
+    Unit,
+    SomeName(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    SomeValue(<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>),
+    ComplexData {
+        description: <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+        number: <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    },
+    ReusedStructure(<a class='struct' href='../../show_notes/e003/struct.PreexistingStruct.html' title='show_notes::e003::PreexistingStruct'>PreexistingStruct</a>),
+}</pre><div class='docblock'><p>An enumeration can <em>hold</em> a variety of types. This one shows you a few.</p>
+
+<p>Note: using an <code>enum</code> this way is actually crazy. The types should usually
+have some relationship to each other. Here, they don&#39;t. The <em>only</em> reason I
+have them together like this is to show you that these aren&#39;t just integers.
+Enums in Rust can have members of any other type.</p>
+
+<p>As <a href="http://rustbyexample.com/">Rust by Example</a> <a href="http://rustbyexample.com/custom_types/enum.html">puts it</a>:</p>
+
+<blockquote>
+<p>Any variant which is valid as a <code>struct</code> is also valid as an <code>enum</code>.</p>
+</blockquote>
+
+<p>What&#39;s the difference between an <code>enum</code> and <code>struct</code>? An <code>enum</code> is only ever
+<em>one</em> of the options which comprise it, whereas a <code>struct</code> is always <em>all</em>
+the elements which comprise it.</p>
+
+<p>One enormous benefit of <code>enum</code> types is that, when they are the return value
+of a function (as in the examples below), they <em>must</em> be handled.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.Unit'><code>Unit</code></td><td><div class='docblock'><p>This doesn&#39;t have a value other than being RelatedishThings::a_unit.</p>
+</div></td></tr><tr><td id='variant.SomeName'><code>SomeName</code></td><td><div class='docblock'><p>It could be a tuple struct, with basically any value type embedded.</p>
+</div></td></tr><tr><td id='variant.SomeValue'><code>SomeValue</code></td><td></td></tr><tr><td id='variant.ComplexData'><code>ComplexData</code></td><td><div class='docblock'><p>It can be a full-on struct-type construct.</p>
+</div><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.ComplexData.field.description'><code>description</code></td><td></td></tr><tr><td id='variant.ComplexData.field.number'><code>number</code></td><td></td></tr></table></td></tr><tr><td id='variant.ReusedStructure'><code>ReusedStructure</code></td><td><div class='docblock'><p>And it can use other complex data types within those, of course.</p>
+</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../show_notes/e003/enum.RelatedishThings.html' title='show_notes::e003::RelatedishThings'>RelatedishThings</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div>
+            <div class="shortcuts">
+                <h1>Keyboard Shortcuts</h1>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h1>Search Tricks</h1>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>typedef</code> (or
+                    <code>tdef</code>).
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "show_notes";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>
