@@ -1,8 +1,8 @@
 //! No More Nulls
 //!
 //!   - **Date:** October 21, 2015
-//!   - **Subject:** The `struct` data type constructor, and the basics of
-//!     Rust's "ownership" concept and "borrowing" and "moving".
+//!   - **Subject:** Enumerated (`enum`) types, pattern matching, and meaningful
+//!     return values.
 //!   - **Audio:**
 //!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a)
 //!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e003.mp3)

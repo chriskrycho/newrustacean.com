@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Wed, 21 Oct 2015 13:12:45 -0400</pubDate>
-        <lastBuildDate>Wed, 21 Oct 2015 13:12:45 -0400</lastBuildDate>
+        <pubDate>Wed, 21 Oct 2015 13:34:51 -0400</pubDate>
+        <lastBuildDate>Wed, 21 Oct 2015 13:34:51 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -44,7 +44,7 @@
             <description><![CDATA[<p>No More Nulls</p>
 <ul>
 <li><strong>Date:</strong> October 21, 2015</li>
-<li><strong>Subject:</strong> The <code>struct</code> data type constructor, and the basics of Rust’s “ownership” concept and “borrowing” and “moving”.</li>
+<li><strong>Subject:</strong> Enumerated (<code>enum</code>) types, pattern matching, and meaningful return types.</li>
 <li><strong>Audio:</strong>
 <ul>
 <li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a">M4A</a></li>
@@ -105,14 +105,13 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a" length="8178565" type="audio/x-m4a"/>
             <guid isPermaLink="false">E39A4582-8095-4645-8925-AB2887828F93</guid>
             <itunes:author>Chris Krycho</itunes:author>
-            <itunes:subtitle>The `struct` data type constructor, and the basics of Rust's "ownership" concept and "borrowing" and "moving".</itunes:subtitle>
+            <itunes:subtitle>Enumerated (`enum`) types, pattern matching, and meaningful return values.</itunes:subtitle>
             <itunes:summary><![CDATA[No More Nulls
 
--   DATE: October 21, 2015
--   SUBJECT: The struct data type constructor, and the basics of Rust’s
-    “ownership” concept and “borrowing” and “moving”.
+-   Date: October 21, 2015
+-   Subject: Enumerated (`enum`) types, pattern matching, and meaningful return values.
 
-NOTES
+# Notes
 
 Today’s episode discusses, in order:
 
@@ -125,7 +124,7 @@ Today’s episode discusses, in order:
     to provide meaningful returns from functions safely.
 
 
-Order
+## Order
 
 There is a specific order to the examples below, and it is _not_ the
 automatically-alphabetized order rendered by rustdoc. Instead, you
