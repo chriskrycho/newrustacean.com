@@ -27,6 +27,17 @@
 //!
 //! Hopefully, the result will be a pretty helpful bunch of side content along
 //! with the audio of the podcast itself.
+//!
+//! # Follow/Support
+//!
+//!   - New Rustacean:
+//!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
+//!       + App.net: [@newrustacean](https://alpha.app.net/newrustacean)
+//!       + [Patreon](https://www.patreon.com/newrustacean)
+//!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
+//!   - Chris Krycho
+//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
+//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
 /// Prints "Hello, world!" if you import it somewhere and run it.
 pub fn hello_world() {

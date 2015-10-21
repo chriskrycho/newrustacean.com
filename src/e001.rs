@@ -12,16 +12,6 @@
 //! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e001.mp3
 //! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e001.ogg
 //!
-//! # Follow/Support
-//!   - New Rustacean:
-//!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
-//!       + App.net: [@newrustacean](https://alpha.app.net/newrustacean)
-//!       + [Patreon](https://www.patreon.com/newrustacean)
-//!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
-//!   - Chris Krycho
-//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
-//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
-//!
 //! # Notes
 //! This is a mostly-empty module, and it is intended as such. Why? Well,
 //! because *almost* all the sample code exists in these comments, which serve
@@ -78,6 +68,17 @@
 //! [14]: http://semver.org
 //! [15]: http://blog.rust-lang.org/2014/10/30/Stability.html
 //! [16]: https://doc.rust-lang.org/book/documentation.html
+//!
+//! # Follow/Support
+//!
+//!   - New Rustacean:
+//!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
+//!       + App.net: [@newrustacean](https://alpha.app.net/newrustacean)
+//!       + [Patreon](https://www.patreon.com/newrustacean)
+//!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
+//!   - Chris Krycho
+//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
+//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
 
 /// This is a sample structure, to demonstrate `rustdoc`/`cargo doc`.
