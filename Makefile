@@ -1,5 +1,8 @@
 default: all
 
+publish: all
+	ghp-import -n -p -m "Update with latest changes." target/doc 
+
 all: modules landing resources scripts
 
 modules: src/*.rs

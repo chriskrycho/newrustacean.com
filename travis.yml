@@ -7,3 +7,8 @@ matrix:
   allow_failures:
     - nightly
 script: make all
+branches:
+  only:
+    - master
+install:
+  - pip install ghp-import
