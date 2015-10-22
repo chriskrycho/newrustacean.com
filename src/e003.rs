@@ -50,12 +50,14 @@
 //!       + My chosen tool: [JetBrains/IntelliJ][link-3]
 //!   - [Rustlings][link-4]
 //!   - [Rust FFI Omnibus][link-5]
+//!   - [Exercism][link-6]
 //!
 //! [link-1]: https://github.com/chriskrycho/newrustacean.com/pull/1
 //! [link-2]: https://www.rust-lang.org/ides.html
 //! [link-3]: https://github.com/alexeykudinkin/intellij-rust
 //! [link-4]: https://github.com/carols10cents/rustlings
 //! [link-5]: http://jakegoulding.com/rust-ffi-omnibus/basics/
+//! [link-6]: http://exercism.io/languages/rust
 //!
 //! # Follow/Support
 //!
