@@ -98,7 +98,7 @@ pub struct PreexistingStruct {
 /// [2]: http://rustbyexample.com/custom_types/enum.html
 #[derive(Debug)]
 pub enum RelatedishThings {
-    /// This doesn't have a value other than being RelatedishThings::a_unit.
+    /// This doesn't have a value other than being RelatedishThings::Unit.
     Unit,
     /// It could be a tuple struct, with basically any value type embedded.
     SomeName(String),
