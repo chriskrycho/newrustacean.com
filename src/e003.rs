@@ -109,7 +109,7 @@ pub enum RelatedishThings {
     ReusedStructure(PreexistingStruct),
 }
 
-/// Shows how returning a RelatedishThings::AUnit instance works.
+/// Shows how returning a RelatedishThings::Unit instance works.
 fn get_unit() -> RelatedishThings {
     RelatedishThings::Unit
 }
