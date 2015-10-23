@@ -7,3 +7,6 @@ Cargo.lock
 *.m4a
 *.logicx
 recordings
+
+# Miscellaneous tooling bits
+.python-version
