@@ -4,9 +4,13 @@
 //!   - **Subject:** Enumerated (`enum`) types, pattern matching, and meaningful
 //!     return values.
 //!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e003.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e003.ogg)
+//!       + [M4A][m4a]
+//!       + [MP3][mp3]
+//!       + [Ogg][ogg]
+//!
+//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e003.mp3
+//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e003.ogg
 //!
 //! # Notes
 //!
@@ -73,7 +77,7 @@
 #[derive(Debug)]
 pub struct PreexistingStruct {
     pub some_int: i32,
-    pub some_string: String
+    pub some_string: String,
 }
 
 /// An enumeration can *hold* a variety of types. This one shows you a few.
@@ -104,7 +108,10 @@ pub enum RelatedishThings {
     SomeName(String),
     SomeValue(i32),
     /// It can be a full-on struct-type construct.
-    ComplexData { description: String, number: String },
+    ComplexData {
+        description: String,
+        number: String,
+    },
     /// And it can use other complex data types within those, of course.
     ReusedStructure(PreexistingStruct),
 }
@@ -126,14 +133,19 @@ fn get_value() -> RelatedishThings {
 
 /// Shows how returning a RelatedishThings::ComplexData instance works.
 fn get_complex_data() -> RelatedishThings {
-    RelatedishThings::ComplexData { description: "A fun podcast!".to_string(),
-                                    number: "e003".to_string() }
+    RelatedishThings::ComplexData {
+        description: "A fun podcast!".to_string(),
+        number: "e003".to_string(),
+    }
 }
 
 /// Shows how returning a RelatedishThings::ReusedStructure instance works.
 fn get_reused_structure() -> RelatedishThings {
     // First create a struct from our (silly) PreexistingStruct type.
-    let s = PreexistingStruct {some_int: 42, some_string: "Hey".to_string() };
+    let s = PreexistingStruct {
+        some_int: 42,
+        some_string: "Hey".to_string(),
+    };
 
     // Then bundle that value into the returned enum type.
     RelatedishThings::ReusedStructure(s)
@@ -165,13 +177,13 @@ pub fn demonstrate_basic_enumeration() {
 pub fn demonstrate_match() {
     // You can match on numbers...
     let answer = 42;
-    let question =  match answer {
+    let question = match answer {
         // That includes individual numbers or ranges.
         0 => "What do you get when you divide by this? PROBLEMS.",
         1...41 => "This is all pretty normal, right?",
         42 => "Life, the universe, and everything, eh? (Canadian version)",
         // What about catching *everything else*? Use `_`.
-        _ => "I've got nothing useful to say here."
+        _ => "I've got nothing useful to say here.",
     };
 
     println!("I asked: '{:}'; the answer was: {:}", question, answer);
@@ -182,7 +194,7 @@ pub fn demonstrate_match() {
         'A'...'B' => println!("Nope, not those letters."),
         'C' => println!("Why, yes, my name *does* start with a 'C'"),
         'D'...'z' => println!("None of those either."),
-        _ => println!("That's not even a letter!")
+        _ => println!("That's not even a letter!"),
     }
 
     // or more complex types...
@@ -196,7 +208,7 @@ pub fn demonstrate_match() {
         (_, 2.718) => println!("Got e only."),
         // You can also destructure the elements of the tuple into values to be
         // used in the body of the expression, not just ignore them with `_`.
-        (a, b) => println!("Got weird other stuff: {:}, {:}", a, b)
+        (a, b) => println!("Got weird other stuff: {:}, {:}", a, b),
     }
 }
 
@@ -240,8 +252,7 @@ pub fn demonstrate_option() {
 pub fn get_a_result(succeeds: bool) -> Result<f64, String> {
     if succeeds {
         Ok(2.718_281_828)
-    }
-    else {
+    } else {
         Err("Huh. This didn't go as planned.".to_string())
     }
 }
@@ -257,7 +268,7 @@ pub fn demonstrate_result() {
     // changed the call to `get_a_result(false)` instead?
     match get_a_result(true) {
         Ok(value) => println!("The value was: {:}", value),
-        Err(message) => println!("ERROR: {:}", message)
+        Err(message) => println!("ERROR: {:}", message),
     }
 
     // Note that you can readily convert the `Ok` and `Err` terms in a `Result`
