@@ -96,7 +96,7 @@ pub struct TVShow {
     /// Here is the year the show premiered.
     pub year: i32,
     /// Here is the director---but (s)he's rather shy and private.
-    director: String
+    director: String,
 }
 
 /// You can also document the implementation. This is usually *not* going to be
@@ -116,7 +116,7 @@ impl TVShow {
         TVShow {
             theme: theme.to_string(),
             year: year,
-            director: director.to_string()
+            director: director.to_string(),
         }
     }
 }
@@ -130,5 +130,7 @@ impl TVShow {
 pub fn use_members() {
     let firefly = TVShow::new("You can't take the sky from me!", 2001, "Joss Whedon");
     println!("Firefly (come on, sing along: \"{:?}\"): {:?}/{:?}",
-             firefly.year, firefly.theme, firefly.director);
+             firefly.theme,
+             firefly.year,
+             firefly.director);
 }
