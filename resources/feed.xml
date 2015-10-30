@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 2.5.12(2294); Mac OS X Version 10.11 (Build 15A282b) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 2.5.12(2294); Mac OS X Version 10.11.1 (Build 15B42) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Wed, 21 Oct 2015 13:34:51 -0400</pubDate>
-        <lastBuildDate>Wed, 21 Oct 2015 13:34:51 -0400</lastBuildDate>
+        <pubDate>Thu, 29 Oct 2015 22:39:13 -0400</pubDate>
+        <lastBuildDate>Thu, 29 Oct 2015 22:39:13 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -19,7 +19,7 @@
             <width>144</width>
             <height>144</height>
         </image>
-        <atom:link href="http://newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="http://www.newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
         <itunes:author>Chris Krycho</itunes:author>
         <itunes:subtitle>Let’s try some Rust, shall we?</itunes:subtitle>
         <itunes:summary><![CDATA[Documenting a journey into a new programming language—with source code, examples, and almost certainly some out-and-out hilarities along the way.]]></itunes:summary>
@@ -38,6 +38,97 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e004: Functionalized</title>
+            <link>http://newrustacean.com/show_notes/e004/</link>
+            <description><![CDATA[<li><strong>Date:</strong> October 30, 2015</li>
+<li><strong>Subject:</strong> Functions, methods, closures, and function as arguments!</li>
+<li><strong>Audio:</strong>
+<ul>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e004.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e004.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e004.ogg">Ogg</a></li>
+</ul></li>
+</ul>
+<h1 id="notes">Notes</h1>
+<p>This week’s episode covers the basics of all sorts of functions: normal functions, methods, and closures.</p>
+<h2 id="closures">Closures</h2>
+<ul>
+<li><a href="http://martinfowler.com/bliki/Lambda.html">An explanation (in Ruby) by Martin Fowler</a></li>
+<li><a href="https://doc.rust-lang.org/book/closures.html">Rust book</a></li>
+<li><a href="http://rustbyexample.com/fn/closures.html">Rust by Example</a></li>
+<li><a href="http://programmers.stackexchange.com/questions/40454/what-is-a-closure">“What is a closure?” (Progammers Stack Exchange)</a> – the first answer is the best, but the second answer may be a helpful stepping stone for people just getting their heads around this and coming from OOP languages like C++ or Java (even though I disagree with the explanation in some ways).</li>
+<li><a href="http://stackoverflow.com/questions/36636/what-is-a-closure">“What is a closure?” (Stack Overflow)</a> – careful, thorough answer using JavaScript as an example.</li>
+</ul>
+<h1 id="links">Links</h1>
+<ul>
+<li><a href="http://exercism.io/languages/rust">Exercism</a> (hat tip: <a href="https://github.com/Lechindianer">Lechindanier on GitHub</a>)</li>
+<li><a href="https://github.com/ctjhoa/rust-learning">Rust Learning</a></li>
+<li><a href="http://www.chriskrycho.com/2015/rust-and-swift-viii.html">Rust and Swift (viii)</a></li>
+</ul>
+<h1 id="followsupport">Follow/Support</h1>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>App.net: <a href="https://alpha.app.net/newrustacean">@newrustacean</a></li>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+<li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Fri, 30 Oct 2015 08:30:12 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e004.m4a" length="7007649" type="audio/x-m4a"/>
+            <guid isPermaLink="false">BC4D9C42-0F4C-4497-9059-436A8906657E</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:subtitle>Functions, methods, closures, and function as arguments!</itunes:subtitle>
+            <itunes:summary><![CDATA[Functions, methods, closures, and function as arguments!
+
+NOTES
+
+This week’s episode covers the basics of all sorts of functions: normal
+functions, methods, and closures.
+
+Closures
+
+-   An explanation (in Ruby) by Martin Fowler
+-   Rust book
+-   Rust by Example
+-   “What is a closure?” (Progammers Stack Exchange) ‚Äì the first answer
+    is the best, but the second answer may be a helpful stepping stone
+    for people just getting their heads around this and coming from OOP
+    languages like C++ or Java (even though I disagree with the
+    explanation in some ways).
+-   “What is a closure?” (Stack Overflow) – careful, thorough answer
+    using JavaScript as an example.
+
+LINKS
+
+-   Exercism (hat tip: Lechindanier on GitHub)
+-   Rust Learning
+-   Rust and Swift (viii)
+
+FOLLOW/SUPPORT
+
+-   New Rustacean:
+    -   Twitter: @newrustacean
+    -   App.net: @newrustacean
+    -   Patreon.com/chriskrycho
+    -   Dwolla.com/hub/chriskrycho
+    -   Email: hello@newrustacean.com
+-   Chris Krycho
+    -   Twitter: @chriskrycho
+    -   App.net: @chriskrycho
+]]></itunes:summary>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:duration>17:07</itunes:duration>
+        </item>
         <item>
             <title>e003: No More Nulls</title>
             <link>http://newrustacean.com/show_notes/e003/</link>
