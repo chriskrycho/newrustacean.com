@@ -15,8 +15,4 @@ pub mod e000;
 pub mod e001;
 pub mod e002;
 pub mod e003;
-
-#[test]
-fn it_works() {
-    println!("It really does work! But this isn't much of a unit test...");
-}
+pub mod e004;
