@@ -107,9 +107,7 @@ pub struct TVShow {
 impl TVShow {
     /// This documents a fairly ho-hum structure constructor.
     ///
-    /// # Examples
-    ///
-    /// ```rust
+    /// ```ignore
     /// let a_struct = TVShow::new("The Answer", 42, "Joss Whedon");
     /// ```
     pub fn new(theme: &str, year: i32, director: &str) -> TVShow {
