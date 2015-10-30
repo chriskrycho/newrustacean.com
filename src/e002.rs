@@ -167,7 +167,9 @@ impl Circle {
     ///
     /// Because the reference is immutable, if you tried to do this---
     ///
-    ///     self.x = 10;
+    /// ```ignore
+    /// self.x = 10;
+    /// ```
     ///
     /// ---the compiler would not allow it.
     pub fn x_by_ref(&self) -> f64 {
