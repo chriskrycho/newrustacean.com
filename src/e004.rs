@@ -1,6 +1,6 @@
 //! Functionalized
 //!
-//!   - **Date:** October 30, 2015
+//!   - **Date:** October 29, 2015
 //!   - **Subject:** Functions, methods, closures, and function as arguments!
 //!   - **Audio:**
 //!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e004.m4a)

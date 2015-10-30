@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Thu, 29 Oct 2015 22:39:13 -0400</pubDate>
-        <lastBuildDate>Thu, 29 Oct 2015 22:39:13 -0400</lastBuildDate>
+        <pubDate>Thu, 29 Oct 2015 22:45:19 -0400</pubDate>
+        <lastBuildDate>Thu, 29 Oct 2015 22:45:19 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -41,7 +41,7 @@
         <item>
             <title>e004: Functionalized</title>
             <link>http://newrustacean.com/show_notes/e004/</link>
-            <description><![CDATA[<li><strong>Date:</strong> October 30, 2015</li>
+            <description><![CDATA[<li><strong>Date:</strong> October 29, 2015</li>
 <li><strong>Subject:</strong> Functions, methods, closures, and function as arguments!</li>
 <li><strong>Audio:</strong>
 <ul>
@@ -83,7 +83,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Fri, 30 Oct 2015 08:30:12 -0400</pubDate>
+            <pubDate>Thu, 29 Oct 2015 22:45:12 -0400</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e004.m4a" length="7007649" type="audio/x-m4a"/>
             <guid isPermaLink="false">BC4D9C42-0F4C-4497-9059-436A8906657E</guid>
             <itunes:author>Chris Krycho</itunes:author>
