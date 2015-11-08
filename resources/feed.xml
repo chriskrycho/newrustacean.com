@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Thu, 29 Oct 2015 22:39:13 -0400</pubDate>
-        <lastBuildDate>Thu, 29 Oct 2015 22:39:13 -0400</lastBuildDate>
+        <pubDate>Sun, 08 Nov 2015 15:16:09 -0500</pubDate>
+        <lastBuildDate>Sun, 08 Nov 2015 15:16:09 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,104 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e005: Allocate it where?</title>
+            <link>http://newrustacean.com/show_notes/e005/</link>
+            <description><![CDATA[<p>Allocate it where?</p>
+<ul>
+<li><strong>Date:</strong> November 8, 2015</li>
+<li><strong>Subject:</strong> Returning functions from other functions, and thinking about the stack, the heap, and reference types.</li>
+<li><strong>Audio:</strong>
+<ul>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e005.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e005.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e005.ogg">Ogg</a></li>
+</ul></li>
+</ul>
+<h1 id="notes">Notes</h1>
+<p>This episode, we look at returning functions from other functions, and as part of that discuss some basics about the stack and the heap—and why we need to care about them for returning functions.</p>
+<p>The functions themselves are not especially interesting; they just show you the basic form you use to return functions from other functions, and how to then use them in another function. You’ll want to take a detailed look instead at the documentation for each (or just read the <a href="/src/show_notes/e005.rs.html">source</a>!), because that’s where the meat of the discussion in this week’s code is.</p>
+<h1 id="links">Links</h1>
+<ul>
+<li><a href="http://blog.rust-lang.org/2015/10/29/Rust-1.4.html">Rust 1.4 release announcement</a></li>
+<li><a href="https://github.com/rust-lang/rfcs/blob/master/text/1214-projections-lifetimes-and-wf.md">“Clarify (and improve) rules for projections and well-formedness”</a></li>
+<li><a href="https://github.com/rust-lang/rfcs/issues/1061">MSVC support tracking issue</a></li>
+<li><a href="https://github.com/brson/rust/blob/relnotes/RELEASES.md">Rust 1.4 full release notes</a></li>
+<li><a href="http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap">“What and where are the stack and the heap?”</a></li>
+</ul>
+<h1 id="sponsors">Sponsors</h1>
+<ul>
+<li>reddraggone9</li>
+<li><a href="http://podcastinit.com">Chris Patti</a></li>
+</ul>
+<h2 id="become-a-sponsor">Become a sponsor</h2>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+</ul>
+<h1 id="follow">Follow</h1>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>App.net: <a href="https://alpha.app.net/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+<li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>]]></description>
+            <pubDate>Sun, 08 Nov 2015 15:15:53 -0500</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e005.m4a" length="7466332" type="audio/x-m4a"/>
+            <guid isPermaLink="false">2BA666AD-2288-4599-AC61-7B545FD2C539</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:subtitle>Returning functions from other functions, and thinking about the stack, the heap, and reference types.</itunes:subtitle>
+            <itunes:summary><![CDATA[Returning functions from other functions, and thinking about the stack, the heap, and reference types.
+
+
+NOTES
+
+This episode, we look at returning functions from other functions, and
+as part of that discuss some basics about the stack and the heap—and why
+we need to care about them for returning functions.
+
+The functions themselves are not especially interesting; they just show
+you the basic form you use to return functions from other functions, and
+how to then use them in another function. You’ll want to take a detailed
+look instead at the documentation for each (or just read the source!),
+because that’s where the meat of the discussion in this week’s code is.
+
+
+SPONSORS
+
+-   reddraggone9
+-   Chris Patti
+
+Become a sponsor
+
+-   Patreon.com/newrustacean
+-   Venmo.com/chriskrycho
+-   Dwolla.com/hub/chriskrycho
+-   Cash.me
+
+
+FOLLOW
+
+-   New Rustacean:
+    -   Twitter: @newrustacean
+    -   App.net: @newrustacean
+    -   Email: hello@newrustacean.com
+-   Chris Krycho
+    -   Twitter: @chriskrycho
+    -   App.net: @chriskrycho
+]]></itunes:summary>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:duration>18:30</itunes:duration>
+        </item>
         <item>
             <title>e004: Functionalized</title>
             <link>http://newrustacean.com/show_notes/e004/</link>

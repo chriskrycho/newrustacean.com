@@ -4,7 +4,8 @@ Functionalized
 Intro (30s)
 -----
 Hello, I'm Chris Krycho, and this is the New Rustacean podcast---a 15--20 minute
-show about learning the Rust programming language. This is episode 4: TBD
+show about learning the Rust programming language. This is episode 4:
+Functionalized.
 
 
 News (2m)
