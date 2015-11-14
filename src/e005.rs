@@ -20,7 +20,27 @@
 //! instead at the documentation for each (or just read the [source][notes-1]!),
 //! because that's where the meat of the discussion in this week's code is.
 //!
+//! ## Corrigenda
+//!
+//!   - Steve Klabnik [pointed out][notes-2] that my description of `Vector`
+//!     types as totally heap-allocated was misleading. It's better to say that
+//!     the *contents* of the `Vector` -- its data -- is heap-allocated, while
+//!     the memory for the smart pointer and associated metadata are allocated
+//!     on the stack. I had this in mind, and sort of alluded to it earlier in
+//!     the discussion, but the way I actually said it was misleading at best.
+//!
+//!   - Chad Sharp (@crossroads1112 on GitHub) [clarified][notes-3] that in C99,
+//!     C *does* support dynamic array allocation, though it became optional for
+//!     compilers to implement it as of C11. I forgot about this because I spend
+//!     so much of my time dealing with Visual C++, which does not support
+//!     dynamic array allocation. (Notably, Visual C does; it is Visual C++
+//!     which does not: remember, C and C++ are related but distinct languages.)
+//!
+//! Thanks to Steve and Chad for their helpful feedback!
+//!
 //! [notes-1]: /src/show_notes/e005.rs.html
+//! [notes-2]: https://users.rust-lang.org/t/new-rustacean-podcast-e005-allocate-it-where-2015-11-08/3153/13?u=chriskrycho
+//! [notes-3]: https://github.com/chriskrycho/newrustacean.com/issues/7
 //!
 //! # Links
 //!
