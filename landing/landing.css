@@ -207,6 +207,10 @@ nav {
     font-family: 'Fira Sans';
 }
 
+nav li {
+    border-bottom: 2px solid RGBA(87, 66, 43, 1);
+}
+
 nav li a {
     display: block;
     height: 2em;
@@ -216,7 +220,6 @@ nav li a {
     text-align: center;
     color: inherit;
     text-decoration: none;
-    border-bottom: 2px solid RGBA(87, 66, 43, 1);
     transition: all 0.5s ease;
 }
 
@@ -232,6 +235,26 @@ nav li a:active {
 
 .fa {
     padding-right: 0.25em;
+}
+
+/* Special styles for */
+nav .inner_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav .inner_list li {
+    flex: 0 0 20%;
+    border: none;
+}
+
+.funding .fa { font-size: 80%; }
+
+@media screen and (max-width: 520px) {
+    nav .inner_list { display: block; }
+
+    nav .inner_list li { width: 100%; }
 }
 
 /* ----- Footer styles ----- */
