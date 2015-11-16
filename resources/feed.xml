@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Mon, 16 Nov 2015 10:36:31 -0500</pubDate>
-        <lastBuildDate>Mon, 16 Nov 2015 10:36:31 -0500</lastBuildDate>
+        <pubDate>Mon, 16 Nov 2015 10:42:36 -0500</pubDate>
+        <lastBuildDate>Mon, 16 Nov 2015 10:42:36 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -45,6 +45,7 @@
 <p>Today, we are talking about modules, packages, and APIs in Rust. Taking a bit of a breather after some pretty hard material the last few weeks.</p>
 <p>For reference, the <a href="http://doc.rust-lang.org/book/">Rust book</a> section on <a href="http://doc.rust-lang.org/book/crates-and-modules.html">Crates and Modules</a> will be very helpful.</p>
 <h2 id="corrigenda">Corrigenda</h2>
+<p>I accidentally called this episode 5, instead of episode 6. <em>Whoops.</em></p>
 <p>Just before the 15:00 mark, while discussing libraries, I referred to “e006.md” when I meant to say “e006.rs”. Slips of the tongue inspired by the fact that Rust (delightfully) uses Markdown for its documentation.</p>
 <h1 id="links">Links</h1>
 <ul>
@@ -65,6 +66,8 @@ Today, we are talking about modules, packages, and APIs in Rust. Taking a bit of
 For reference, the Rust book section on Crates and Modules will be very helpful.
 
 Corrigenda
+I accidentally called this episode 5, instead of episode 6. *Whoops.*
+
 Just before the 15:00 mark, while discussing libraries, I referred to “e006.md” when I meant to say “e006.rs”. Slips of the tongue inspired by the fact that Rust (delightfully) uses Markdown for its documentation.]]></itunes:summary>
             <itunes:explicit>no</itunes:explicit>
             <itunes:duration>18:22</itunes:duration>

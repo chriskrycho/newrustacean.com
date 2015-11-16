@@ -26,6 +26,8 @@
 //!
 //! ## Corrigenda
 //!
+//! I accidentally called this episode 5, instead of episode 6. *Whoops.*
+//!
 //! Just before the 15:00 mark, while discussing libraries, I referred to
 //! "e006.md" when I meant to say "e006.rs". Slips of the tongue inspired by the
 //! fact that Rust (delightfully) uses Markdown for its documentation.
