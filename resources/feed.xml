@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sun, 08 Nov 2015 15:16:09 -0500</pubDate>
-        <lastBuildDate>Sun, 08 Nov 2015 15:16:09 -0500</lastBuildDate>
+        <pubDate>Mon, 16 Nov 2015 10:36:31 -0500</pubDate>
+        <lastBuildDate>Mon, 16 Nov 2015 10:36:31 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,37 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e006: Modularize this!</title>
+            <link>http://newrustacean.com/show_notes/e006/</link>
+            <description><![CDATA[<h1 id="notes">Notes</h1>
+<p>Today, we are talking about modules, packages, and APIs in Rust. Taking a bit of a breather after some pretty hard material the last few weeks.</p>
+<p>For reference, the <a href="http://doc.rust-lang.org/book/">Rust book</a> section on <a href="http://doc.rust-lang.org/book/crates-and-modules.html">Crates and Modules</a> will be very helpful.</p>
+<h2 id="corrigenda">Corrigenda</h2>
+<p>Just before the 15:00 mark, while discussing libraries, I referred to “e006.md” when I meant to say “e006.rs”. Slips of the tongue inspired by the fact that Rust (delightfully) uses Markdown for its documentation.</p>
+<h1 id="links">Links</h1>
+<ul>
+<li><a href="http://jaredonline.svbtle.com/roguelike-tutorial-table-of-contents">Roguelike in Rust</a></li>
+<li><a href="https://engineering.intercom.io/yehuda-on-rust-with-ruby/">Yehuda Katz on Ruby FFI</a></li>
+</ul>
+]]></description>
+            <pubDate>Mon, 16 Nov 2015 10:36:26 -0500</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e006.m4a" length="8926372" type="audio/x-m4a"/>
+            <guid isPermaLink="false">6707AF5D-82F4-40D5-9DB5-7003D571EEB6</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:subtitle>Designing APIs, and using packages ("crates") and modules</itunes:subtitle>
+            <itunes:summary><![CDATA[Designing APIs, and using packages (“crates”) and modules
+
+Notes
+Today, we are talking about modules, packages, and APIs in Rust. Taking a bit of a breather after some pretty hard material the last few weeks.
+
+For reference, the Rust book section on Crates and Modules will be very helpful.
+
+Corrigenda
+Just before the 15:00 mark, while discussing libraries, I referred to “e006.md” when I meant to say “e006.rs”. Slips of the tongue inspired by the fact that Rust (delightfully) uses Markdown for its documentation.]]></itunes:summary>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:duration>18:22</itunes:duration>
+        </item>
         <item>
             <title>e005: Allocate it where?</title>
             <link>http://newrustacean.com/show_notes/e005/</link>

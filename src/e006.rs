@@ -1,18 +1,42 @@
-//! Title: Modularize this!
+//! Modularize this!
 //!
+//!   - **Date:** November 16, 2015
+//!   - **Subject:** Designing APIs, and using packages ("crates") and modules
+//!   - **Audio:**
+//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e005.m4a)
+//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e005.mp3)
+//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e005.ogg)
+//!
+//! <audio title="Modularize this!" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e005.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e005.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e005.ogg">
+//! </audio>
 //!
 //! # Notes
 //!
 //! Today, we are talking about modules, packages, and APIs in Rust. Taking a
 //! bit of a breather after some pretty hard material the last few weeks.
 //!
+//! For reference, the [Rust book][notes-1] section on [Crates and
+//! Modules][notes-2] will be very helpful.
+//!
+//! [notes-1]: http://doc.rust-lang.org/book/
+//! [notes-2]: http://doc.rust-lang.org/book/crates-and-modules.html
+//!
+//! ## Corrigenda
+//!
+//! Just before the 15:00 mark, while discussing libraries, I referred to
+//! "e006.md" when I meant to say "e006.rs". Slips of the tongue inspired by the
+//! fact that Rust (delightfully) uses Markdown for its documentation.
 //!
 //! # Links
 //!
 //!   - [Roguelike in Rust][links-1]
+//!   - [Yehuda Katz on Ruby FFI][links-2]
 //!
 //! [links-1]: http://jaredonline.svbtle.com/roguelike-tutorial-table-of-contents
-//!
+//! [links-2]: https://engineering.intercom.io/yehuda-on-rust-with-ruby/
 //!
 //! # Module Docs!
 //!
@@ -116,7 +140,11 @@ pub mod demonstrate_namespacing {
     /// We can `use` other module's contents.
     use e006::public_internal_module::*;
 
-    /// We can also alias other modules.
+    /// We can also alias other modules. Note that though we don't use this
+    /// until `demonstrate_aliased_calls()`, we have to put any `use` statements
+    /// before any other contents of the module (so this can't go between the
+    /// `demonstrate_globbed_calls()` and `demonstrate_aliased_calls()` function
+    /// definitions).
     use e006::internal_module as im;
 
     /// Demonstrates how glob-imported `use`s works.
@@ -145,10 +173,21 @@ pub fn demonstrate_use_inside_function() {
 }
 
 
-/// An example of nested modules.
+/// Give an example of nested modules.
 ///
 /// Of course, *all* the modules in this file are nested: they are part of the
 /// file-level `e006` module. Here, though, we see an explicit example of that.
 pub mod demonstrate_nesting {
+    /// This is just a nested module.
     pub mod a_nested_module {}
+
+    // An example of re-exporting another module's contents publicly.
+    //
+    // Remember, this module was initially part of a private module (but one
+    // within the `e006` parent module, and therefore accessible to us.)
+    // We are re-exporting its `a_nested_module` contents, with a different
+    // name, as a public module. When you look at the docs, you'll see this
+    // function name within the module, with the docs from the definition of the
+    // function in the `internal_module` above!
+    pub use e006::internal_module::a_public_module_fn as now_public_fn;
 }
