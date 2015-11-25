@@ -47,6 +47,30 @@
 //! off by being a file, we *have* to use the `//!` style of documentation
 //! comments to mark them off. However, as you'll see below, if we structure or
 //! declare modules in other ways, we will not have the same restriction.
+//! 
+//! # Sponsors
+//!
+//!   - reddraggone9
+//!   - [Chris Patti][sponsors-1]
+//!
+//! [sponsors-1]: http://podcastinit.com
+//!
+//! ## Become a sponsor
+//!
+//!   - [Patreon](https://www.patreon.com/newrustacean)
+//!   - [Venmo](https://venmo.com/chriskrycho)
+//!   - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
+//!   - [Cash.me](https://cash.me/$chriskrycho)
+//!
+//! # Follow
+//!
+//!   - New Rustacean:
+//!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
+//!       + App.net: [@newrustacean](https://alpha.app.net/newrustacean)
+//!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
+//!   - Chris Krycho
+//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
+//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
 
 /// This is an internal module. Note that it isn't public.
