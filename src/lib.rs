@@ -1,3 +1,5 @@
+//! Show notes
+//!
 //! Read the show notes, as well as fairly detailed comments on all the code
 //! samples referenced in the show.
 //!
@@ -18,3 +20,5 @@ pub mod e003;
 pub mod e004;
 pub mod e005;
 pub mod e006;
+
+pub mod bonus;
