@@ -22,6 +22,16 @@
 ///   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_1.ogg">
 /// </audio>
 ///
+/// # Links
+///
+///   - [Scala][links-1]
+///   - [F♯][links-2]
+///   - [Elixir][links-3]
+///
+/// [links-1]: http://www.scala-lang.org
+/// [links-2]: http://fsharp.org
+/// [links-3]: http://elixir-lang.org
+///
 /// # Sponsors
 ///
 ///   - reddraggone9

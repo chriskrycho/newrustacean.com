@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Tue, 24 Nov 2015 21:44:38 -0500</pubDate>
-        <lastBuildDate>Tue, 24 Nov 2015 21:44:38 -0500</lastBuildDate>
+        <pubDate>Wed, 25 Nov 2015 11:27:15 -0500</pubDate>
+        <lastBuildDate>Wed, 25 Nov 2015 11:27:15 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,52 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>Bonus 1: Polyglot Programming Promises and Perils</title>
+            <link>http://newrustacean.com/show_notes/bonus/_1/</link>
+            <description><![CDATA[<p>Polyglot Programming Promises and Perils</p>
+<p>Sometimes, you’re doing a technical interview, and you just cannot figure out why your JavaScript function isn’t behaving like it should… and then, prompted by the interviewer, you realize that you’re not returning anything. Polyglot programming is beautiful, and wonderful, and sometimes it bites you when you aren’t looking.</p>
+<h1 id="links">Links</h1>
+<ul>
+<li><a href="http://www.scala-lang.org">Scala</a></li>
+<li><a href="http://fsharp.org">F♯</a></li>
+<li><a href="http://elixir-lang.org">Elixir</a></li>
+</ul>
+<h1 id="sponsors">Sponsors</h1>
+<ul>
+<li>reddraggone9</li>
+<li><a href="http://podcastinit.com">Chris Patti</a></li>
+</ul>
+<h2 id="become-a-sponsor">Become a sponsor</h2>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+</ul>
+<h1 id="follow">Follow</h1>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>App.net: <a href="https://alpha.app.net/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+<li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Wed, 25 Nov 2015 11:27:09 -0500</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_1.m4a" length="5353416" type="audio/x-m4a"/>
+            <guid isPermaLink="false">78C8C06F-DEB6-4821-9995-E550FBA87059</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:subtitle>The delights and challenges of knowing (or even just learning) lots of languages.</itunes:subtitle>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:duration>8:28</itunes:duration>
+        </item>
         <item>
             <title>e006: Modularize this!</title>
             <link>http://newrustacean.com/show_notes/e006/</link>
