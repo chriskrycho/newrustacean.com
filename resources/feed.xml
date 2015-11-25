@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Mon, 16 Nov 2015 10:42:36 -0500</pubDate>
-        <lastBuildDate>Mon, 16 Nov 2015 10:42:36 -0500</lastBuildDate>
+        <pubDate>Tue, 24 Nov 2015 21:44:38 -0500</pubDate>
+        <lastBuildDate>Tue, 24 Nov 2015 21:44:38 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -52,7 +52,36 @@
 <li><a href="http://jaredonline.svbtle.com/roguelike-tutorial-table-of-contents">Roguelike in Rust</a></li>
 <li><a href="https://engineering.intercom.io/yehuda-on-rust-with-ruby/">Yehuda Katz on Ruby FFI</a></li>
 </ul>
-]]></description>
+<h1 id="sponsors" class="section-header">Sponsors</h1>
+<ul>
+<li>reddraggone9</li>
+<li><a href="http://podcastinit.com">Chris Patti</a></li>
+</ul>
+
+<h2 id="become-a-sponsor" class="section-header">Become a sponsor</h2>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+</ul>
+
+<h1 id="follow" class="section-header">Follow</h1>
+<ul>
+<li>New Rustacean:
+
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>App.net: <a href="https://alpha.app.net/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+<li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>]]></description>
             <pubDate>Mon, 16 Nov 2015 10:36:26 -0500</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e006.m4a" length="8926372" type="audio/x-m4a"/>
             <guid isPermaLink="false">6707AF5D-82F4-40D5-9DB5-7003D571EEB6</guid>
@@ -68,7 +97,17 @@ For reference, the Rust book section on Crates and Modules will be very helpful.
 Corrigenda
 I accidentally called this episode 5, instead of episode 6. *Whoops.*
 
-Just before the 15:00 mark, while discussing libraries, I referred to “e006.md” when I meant to say “e006.rs”. Slips of the tongue inspired by the fact that Rust (delightfully) uses Markdown for its documentation.]]></itunes:summary>
+Just before the 15:00 mark, while discussing libraries, I referred to “e006.md” when I meant to say “e006.rs”. Slips of the tongue inspired by the fact that Rust (delightfully) uses Markdown for its documentation.
+
+Sponsors
+- reddraggone9
+- Chris Patti (Podcast.__init__)
+
+Become a sponsor
+- https://www.patreon.com/newrustacean
+- https://venmo.com/chriskrycho
+- dwolla.com/hub/chriskrycho
+- ttps://cash.me/$chriskrycho]]></itunes:summary>
             <itunes:explicit>no</itunes:explicit>
             <itunes:duration>18:22</itunes:duration>
         </item>
