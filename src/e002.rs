@@ -41,11 +41,8 @@
 //!
 //! [1]: https://github.com/nrc/rustfmt
 //! [2]: http://www.ncameron.org/blog/rustfmt-ing-rust/
-//! [3]: https://www.reddit.
-//! com/r/rust/comments/3nt2vm/rustfmting_rust_please_help_me_rustfmt_the_rust/
-//! [4]: https://github.
-//! com/nikomatsakis/rfcs/blob/incremental-compilation/text/0000-incremental-com
-//! pilation.md
+//! [3]: https://www.reddit.com/r/rust/comments/3nt2vm/rustfmting_rust_please_help_me_rustfmt_the_rust/
+//! [4]: https://github.com/nikomatsakis/rfcs/blob/incremental-compilation/text/0000-incremental-compilation.md
 //! [5]: https://github.com/rust-lang/rfcs/pull/1298
 //!
 //! # Follow/Support
