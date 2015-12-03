@@ -1,19 +1,37 @@
+# -- Define variables. -- #
+BUILD_DIR = target/doc
+SRC = src/*.rs
+LANDING = landing/index.html landing/landing.css
+RESOURCES = resources/* resources/.nojekyll
+
+# -- Define build rules -- #
+.PHONY: all clean test modules publish
+
 default: all
 
+clean:
+	rm -rf $(BUILD_DIR)
+
 publish: all
-	ghp-import -n -p -m "Update with latest changes." target/doc 
+	ghp-import -n -p -m "Update with latest changes from master." $(BUILD_DIR)
 
-all: modules landing resources scripts
+# Generate everything, but just leave it in the build directory.
+all: test modules landing resources
 
-modules: src/*.rs
+test: $(SRC)
+	cargo test
+
+modules: $(SRC)
 	cargo doc
 
-landing: landing/index.html landing/landing.css
-	cp landing/index.html target/doc
-	cp landing/landing.css target/doc
+# Fancy landing page components.
+landing: $(LANDING) target_dir
+	cp $(LANDING) target/doc
 
-resources: resources/*
-	cp resources/* target/doc
+# GitHub pages settings, favicon, RSS feed, etc. Note: the RSS feed is updated
+# manually, so running `make modules` won't update it.
+resources: $(RESOURCES) target_dir
+	cp $(RESOURCES) target/doc
 
-scripts:
-	@echo "\`scripts\` not yet implemented."
+target_dir:
+	mkdir -p $(BUILD_DIR)
