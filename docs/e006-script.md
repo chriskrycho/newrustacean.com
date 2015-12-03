@@ -4,7 +4,7 @@ Modularize this!
 Intro (30s)
 -----
 Hello, I'm Chris Krycho, and this is the New Rustacean podcast---a 15--20 minute
-show about learning the Rust programming language. This is **Episode 5:
+show about learning the Rust programming language. This is **Episode 7:
 Modularize this!**
 
 
