@@ -1,11 +1,5 @@
 //! Polyglot Programming Promises and Perils
 //!
-//! Sometimes, you're doing a technical interview, and you just cannot figure
-//! out why your JavaScript function isn't behaving like it should... and then,
-//! prompted by the interviewer, you realize that you're not returning anything.
-//! Polyglot programming is beautiful, and wonderful, and sometimes it bites you
-//! when you aren't looking.
-//!
 //!   - **Date:** November 25, 2015
 //!   - **Subject:** The delights and challenges of knowing (or even just
 //!     learning) lots of languages.
@@ -19,6 +13,12 @@
 //!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_1.mp3">
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_1.ogg">
 //! </audio>
+//!
+//! Sometimes, you're doing a technical interview, and you just cannot figure
+//! out why your JavaScript function isn't behaving like it should... and then,
+//! prompted by the interviewer, you realize that you're not returning anything.
+//! Polyglot programming is beautiful, and wonderful, and sometimes it bites you
+//! when you aren't looking.
 //!
 //! # Links
 //!
