@@ -115,7 +115,7 @@ pub fn doubler_closure_factory() -> Box<Fn(i32) -> i32> {
 ///
 /// By contrast, here's a function which simply won't compile:
 ///
-/// ```rust
+/// ```rust,ignore
 /// fn will_not_compile() -> Fn(i32) {
 ///     let a_closure = |n| println!("Seriously. This won't compile. {}", n);
 ///     a_closure
@@ -127,7 +127,7 @@ pub fn doubler_closure_factory() -> Box<Fn(i32) -> i32> {
 /// because after `get_normal_function_with_lifetime` ends, the function goes
 /// out of scope and the reference points to junk value.
 ///
-/// ```rust
+/// ```rust,ignore
 /// fn get_normal_function_with_lifetime() -> &'static (Fn(i32) -> i32) {
 ///     fn multiply_by_3(n: i32) -> i32 {
 ///         n * 3
@@ -141,7 +141,7 @@ pub fn doubler_closure_factory() -> Box<Fn(i32) -> i32> {
 /// past the end of the `get_normal_external_fn_with_lifetime`, the reference
 /// created during that function call *doesn't*.
 ///
-/// ```rust
+/// ```rust,ignore
 /// fn multiply_by_4(n: i32) -> i32 { n * 4 }
 ///
 /// fn get_normal_external_fn_with_lifetime() -> &'static (Fn(i32) -> i32) {
