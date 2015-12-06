@@ -13,7 +13,8 @@ clean:
 	rm -rf $(BUILD_DIR)
 
 publish: all
-	ghp-import -n -p -m "Update with latest changes from master." $(BUILD_DIR)
+	ghp-import -n $(BUILD_DIR) -m "Update with latest changes from master."
+	@git push -fq https://${TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages
 
 # Generate everything, but just leave it in the build directory.
 all: test modules landing resources
