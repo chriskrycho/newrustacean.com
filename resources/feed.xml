@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Wed, 25 Nov 2015 11:27:15 -0500</pubDate>
-        <lastBuildDate>Wed, 25 Nov 2015 11:27:15 -0500</lastBuildDate>
+        <pubDate>Sun, 06 Dec 2015 13:23:59 -0500</pubDate>
+        <lastBuildDate>Sun, 06 Dec 2015 13:23:59 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,84 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>Bonus 2: Legacy Code</title>
+            <link>http://newrustacean.com/show_notes/bonus/_2/</link>
+            <description><![CDATA[<p>Legacy Code</p>
+<p>Software developers spend a large part of our careers dealing with legacy code. But what is the <em>best</em> way to deal with legacy code? When should you rip out the old and rewrite it, and when should you opt for smaller clean-up jobs because, however ugly, what is already present <em>works</em>?</p>
+<h1 id="sponsors">Sponsors</h1>
+<ul>
+<li>Chris Palmer</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li>Ralph Giles (“rillian”)</li>
+<li>reddraggone9</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<h2 id="become-a-sponsor">Become a sponsor</h2>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+</ul>
+<h1 id="follow">Follow</h1>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>App.net: <a href="https://alpha.app.net/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+<li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>]]></description>
+            <pubDate>Sun, 06 Dec 2015 13:23:54 -0500</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_2.m4a" length="6099582" type="audio/x-m4a"/>
+            <guid isPermaLink="false">7FB6C998-E813-4E17-8EFB-CD29135DCD2D</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:subtitle>Paying off technical debt, refactoring, and cleaning up old code.</itunes:subtitle>
+            <itunes:summary><![CDATA[Software developers spend a large part of our careers dealing with
+legacy code. But what is the _best_ way to deal with legacy code? When
+should you rip out the old and rewrite it, and when should you opt for
+smaller clean-up jobs because, however ugly, what is already present
+_works_?
+
+
+SPONSORS
+
+-   Chris Palmer
+-   Derek Morr
+-   Luca Schmid
+-   Micael Bergeron
+-   Ralph Giles (“rillian”)
+-   reddraggone9
+-   William Roe
+
+Become a sponsor
+
+-   Patreon.com/newrustacean
+-   Venmo.com/chriskrycho
+-   Dwolla.com/hub/chriskrycho
+-   Cash.me/$chriskrycho
+
+
+FOLLOW
+
+-   New Rustacean:
+    -   Twitter: @newrustacean
+    -   App.net: @newrustacean
+    -   Email: hello@newrustacean.com
+-   Chris Krycho
+    -   Twitter: @chriskrycho
+    -   App.net: @chriskrycho]]></itunes:summary>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:duration>9:41</itunes:duration>
+        </item>
         <item>
             <title>Bonus 1: Polyglot Programming Promises and Perils</title>
             <link>http://newrustacean.com/show_notes/bonus/_1/</link>
