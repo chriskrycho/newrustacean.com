@@ -1,5 +1,7 @@
 # New Rustacean
 
+[![Build Status](https://travis-ci.org/chriskrycho/newrustacean.com.svg)](https://travis-ci.org/chriskrycho/newrustacean.com)
+
 This is a *slightly crazy* approach to building a podcast hosting setup using
 Rust's documentation tools, for the [New Rustacean] podcast. I'm making the
 site source publicly available so that others can follow along and learn from
