@@ -1,6 +1,6 @@
 language: rust
 rust:
-- stable
+- nightly
 branches:
   only:
   - master
