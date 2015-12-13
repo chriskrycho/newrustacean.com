@@ -135,8 +135,8 @@ mentioned at the beginning of the show for an example.
 Modules (5m)
 -------
 One of the two major ways we break down the functionality of a given library is
-through what are often called *namespaces*. Names are one of the hard problems in
-software, and in particular we need to come up with a way to handle the
+through what are often called *namespaces*. Names are one of the hard problems
+in software, and in particular we need to come up with a way to handle the
 situation where you and I both name a function the same thing. You can imagine,
 for example, a regular expression library, a compiler library, and an HTTP
 request library all implementing a `parse` function. Which one are we referring
