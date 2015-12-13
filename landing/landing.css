@@ -115,7 +115,7 @@ main {
         -ms-transform-origin: left 50% -2em;
             transform-origin: left 50% -2em;
 
-    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 
     box-shadow: 0 0 8px RGBA(15, 23, 26, 1);
 }
