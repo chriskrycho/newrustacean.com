@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sun, 13 Dec 2015 12:38:39 -0500</pubDate>
-        <lastBuildDate>Sun, 13 Dec 2015 12:38:39 -0500</lastBuildDate>
+        <pubDate>Sun, 13 Dec 2015 19:23:11 -0500</pubDate>
+        <lastBuildDate>Sun, 13 Dec 2015 19:23:11 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -61,7 +61,12 @@
 <li><a href="https://doc.rust-lang.org/book/attributes.html">Attributes</a></li>
 <li><a href="https://doc.rust-lang.org/book/benchmark-tests.html">Benchmark tests</a></li>
 </ul></li>
-<li>Rust reference: [Attributes]</li>
+<li>Rust reference: <a href="https://doc.rust-lang.org/reference.html#attributes">Attributes</a></li>
+<li><a href="https://github.com/sgrif/diesel">Diesel (Rust ORM)</a>
+<ul>
+<li><a href="http://bikeshed.fm/31">31: Oxidizing an ORM</a></li>
+<li><a href="http://bikeshed.fm/32">32: Bug for Bug Compatibility</a></li>
+</ul></li>
 </ul>
 <h2 id="sponsors">Sponsors</h2>
 <ul>
