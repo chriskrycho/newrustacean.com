@@ -46,16 +46,22 @@
 //! Links
 //! -----
 //!
-//!   - Rust Book:
-//!       + [Testing][links-1]
-//!       + [Attributes][links-2]
-//!       + [Benchmark tests][links-3]
-//!   - Rust reference: [Attributes]
-//!
+//! - Rust Book:
+//!     + [Testing][links-1]
+//!     + [Attributes][links-2]
+//!     + [Benchmark tests][links-3]
+//! - Rust reference: [Attributes][links-4]
+//! - [Diesel (Rust ORM)][links-5]
+//!     + [31: Oxidizing an ORM][links-6]
+//!     + [32: Bug for Bug Compatibility][links-7]
+//! 
 //! [links-1]: https://doc.rust-lang.org/book/testing.html
 //! [links-2]: https://doc.rust-lang.org/book/attributes.html
 //! [links-3]: https://doc.rust-lang.org/book/benchmark-tests.html
 //! [links-4]: https://doc.rust-lang.org/reference.html#attributes
+//! [links-5]: https://github.com/sgrif/diesel
+//! [links-6]: http://bikeshed.fm/31
+//! [links-7]: http://bikeshed.fm/32
 //!
 //!
 //! Sponsors
