@@ -54,7 +54,7 @@
 //! - [Diesel (Rust ORM)][links-5]
 //!     + [31: Oxidizing an ORM][links-6]
 //!     + [32: Bug for Bug Compatibility][links-7]
-//! 
+//!
 //! [links-1]: https://doc.rust-lang.org/book/testing.html
 //! [links-2]: https://doc.rust-lang.org/book/attributes.html
 //! [links-3]: https://doc.rust-lang.org/book/benchmark-tests.html
@@ -98,9 +98,7 @@
 //!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
 
-/// A trivial function for a trivial test. See the [source][src]!
-///
-/// [src]: /src/show_notes/e007.rs.html
+/// A trivial function for a trivial test. See the [source](/src/show_notes/e007.rs.html)!
 pub fn add(a: f64, b: f64) -> f64 {
     a + b
 }
