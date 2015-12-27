@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 2.5.12(2294); Mac OS X Version 10.11.1 (Build 15B42) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 2.5.12(2294); Mac OS X Version 10.11.2 (Build 15C50) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sun, 13 Dec 2015 19:49:11 -0500</pubDate>
-        <lastBuildDate>Sun, 13 Dec 2015 19:49:11 -0500</lastBuildDate>
+        <pubDate>Sun, 27 Dec 2015 11:20:07 -0500</pubDate>
+        <lastBuildDate>Sun, 27 Dec 2015 11:20:07 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,121 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e008: Just like something else</title>
+            <link>http://newrustacean.com/show_notes/e008/</link>
+            <description><![CDATA[<h2 id="notes">Notes</h2>
+<p>In this episode we cover—at a <em>very</em> high level—two more fundamental concepts in Rust programming: generics and traits.</p>
+<p>Generics gives us the abilitty to write types and functions which can be used with more than one type. Traits give us the ability to specify behavior which can be implemented for more than one type. The combination gives us powerful tools for higher-level programming constructs in Rust.</p>
+<h3 id="comments-on-source-code">Comments on source code</h3>
+<p>Now that we have a handle on <a href="http://www.newrustacean.com/show_notes/e007/">how tests work</a>, we’ll use them to validate the behavior of our code going forward. This is great: we can show that the tests do what we think.</p>
+<p>To today’s point, though: we actually know even apart from whether the tests <em>run</em> successfully that these generic functions and the associated traits are behaving as we want. Failure with generics is a <em>compile</em>-time error, not a runtime error.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li>Rust Book
+<ul>
+<li><a href="https://doc.rust-lang.org/book/generics.html">Generics</a></li>
+<li><a href="https://doc.rust-lang.org/book/traits.html">Traits</a> – includes a discussion of <em>trait bounds</em> and <em>generic </em>traits*</li>
+</ul></li>
+<li>Rust by Example
+<ul>
+<li><a href="http://rustbyexample.com/generics.html">Generics</a></li>
+<li><a href="http://rustbyexample.com/trait.html">Traits</a></li>
+<li><a href="http://rustbyexample.com/generics/gen_trait.html">Generic <em>traits</em></a></li>
+<li><a href="http://rustbyexample.com/generics/bounds.html">Traits <em>bounds</em></a></li>
+</ul></li>
+<li><a href="https://github.com/sgrif/diesel/blob/master/diesel/src/types/mod.rs">Generics and traits in use in Diesel</a></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Chris Palmer</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li>Ralph Giles (“rillian”)</li>
+<li>reddraggone9</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+</ul>
+<h2 id="follow">Follow</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>App.net: <a href="https://alpha.app.net/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+<li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>]]></description>
+            <pubDate>Sun, 27 Dec 2015 11:19:47 -0500</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e008.m4a" length="7215734" type="audio/x-m4a"/>
+            <guid isPermaLink="false">C41DFF97-B4A0-4A50-89AF-4803FD50B547</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:subtitle>Generics, traits, and shared behavior in Rust.</itunes:subtitle>
+            <itunes:summary><![CDATA[
+Notes
+
+In this episode we cover—at a _very_ high level—two more fundamental
+concepts in Rust programming: generics and traits.
+
+Generics gives us the abilitty to write types and functions which can be
+used with more than one type. Traits give us the ability to specify
+behavior which can be implemented for more than one type. The
+combination gives us powerful tools for higher-level programming
+constructs in Rust.
+
+Comments on source code
+
+Now that we have a handle on how tests work, we’ll use them to validate
+the behavior of our code going forward. This is great: we can show that
+the tests do what we think.
+
+To today’s point, though: we actually know even apart from whether the
+tests _run_ successfully that these generic functions and the associated
+traits are behaving as we want. Failure with generics is a
+_compile_-time error, not a runtime error.
+
+
+Sponsors
+
+-   Chris Palmer
+-   Derek Morr
+-   Luca Schmid
+-   Micael Bergeron
+-   Ralph Giles (“rillian”)
+-   reddraggone9
+-   William Roe
+
+Become a sponsor
+
+-   Patreon/newrustacean
+-   Venmo.com/chriskrycho
+-   Dwolla.com/hub/chriskrycho
+-   Cash.me/$chriskrycho
+
+
+Follow
+
+-   New Rustacean:
+    -   Twitter: @newrustacean
+    -   App.net: @newrustacean
+    -   Email: hello@newrustacean.com
+-   Chris Krycho
+    -   Twitter: @chriskrycho
+    -   App.net: @chriskrycho]]></itunes:summary>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:duration>17:37</itunes:duration>
+        </item>
         <item>
             <title>e007: Testify</title>
             <link>http://newrustacean.com/show_notes/e007/</link>
@@ -550,7 +665,7 @@ FOLLOW/SUPPORT
             <itunes:duration>17:07</itunes:duration>
         </item>
         <item>
-            <title>e003: No More Nulls</title>
+            <title>e003: No. more. nulls.</title>
             <link>http://newrustacean.com/show_notes/e003/</link>
             <description><![CDATA[<p>No More Nulls</p>
 <ul>

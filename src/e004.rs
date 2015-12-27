@@ -7,6 +7,12 @@
 //!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e004.mp3)
 //!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e004.ogg)
 //!
+//! <audio title="Functionalized" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e004.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e004.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e004.ogg">
+//! </audio>
+//!
 //! # Notes
 //!
 //! This week's episode covers the basics of all sorts of functions: normal
