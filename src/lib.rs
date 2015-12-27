@@ -30,5 +30,6 @@ pub mod e004;
 pub mod e005;
 pub mod e006;
 pub mod e007;
+pub mod e008;
 
 pub mod bonus;
