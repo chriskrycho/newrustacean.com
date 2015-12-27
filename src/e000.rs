@@ -11,6 +11,12 @@
 //! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e000.mp3
 //! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e000.ogg
 //!
+//! <audio title="Hello, world!" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e000.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e000.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e000.ogg">
+//! </audio>
+//!
 //! Today's show is pretty meta. You can skip it if you just want to start with
 //! something more technical, but I thought listeners might want to know a
 //! little about the origins of the show and my own background, so that's what

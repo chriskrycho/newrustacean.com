@@ -1,4 +1,4 @@
-//! No More Nulls
+//! No. more. nulls.
 //!
 //!   - **Date:** October 21, 2015
 //!   - **Subject:** Enumerated (`enum`) types, pattern matching, and meaningful
@@ -11,6 +11,12 @@
 //! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a
 //! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e003.mp3
 //! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e003.ogg
+//!
+//! <audio title="No. more. nulls." controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e003.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e003.ogg">
+//! </audio>
 //!
 //! # Notes
 //!
@@ -80,6 +86,7 @@ pub struct PreexistingStruct {
     pub some_string: String,
 }
 
+
 /// An enumeration can *hold* a variety of types. This one shows you a few.
 ///
 /// Note: using an `enum` this way is actually crazy. The types should usually
@@ -116,20 +123,24 @@ pub enum RelatedishThings {
     ReusedStructure(PreexistingStruct),
 }
 
+
 /// Shows how returning a RelatedishThings::Unit instance works.
 fn get_unit() -> RelatedishThings {
     RelatedishThings::Unit
 }
+
 
 /// Shows how returning a RelatedishThings::SomeName instance works.
 fn get_name() -> RelatedishThings {
     RelatedishThings::SomeName("New Rustacean".to_string())
 }
 
+
 /// Shows how returning a RelatedishThings::SomeValue instance works.
 fn get_value() -> RelatedishThings {
     RelatedishThings::SomeValue(42)
 }
+
 
 /// Shows how returning a RelatedishThings::ComplexData instance works.
 fn get_complex_data() -> RelatedishThings {
@@ -138,6 +149,7 @@ fn get_complex_data() -> RelatedishThings {
         number: "e003".to_string(),
     }
 }
+
 
 /// Shows how returning a RelatedishThings::ReusedStructure instance works.
 fn get_reused_structure() -> RelatedishThings {
@@ -150,6 +162,7 @@ fn get_reused_structure() -> RelatedishThings {
     // Then bundle that value into the returned enum type.
     RelatedishThings::ReusedStructure(s)
 }
+
 
 /// Shows how the result of an enum comes back as increasingly complex data.
 ///
