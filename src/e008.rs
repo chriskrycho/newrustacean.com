@@ -19,7 +19,7 @@
 //! In this episode we cover---at a *very* high level---two more fundamental
 //! concepts in Rust programming: generics and traits.
 //!
-//! Generics gives us the abilitty to write types and functions which can be
+//! Generics gives us the ability to write types and functions which can be
 //! used with more than one type. Traits give us the ability to specify behavior
 //! which can be implemented for more than one type. The combination gives us
 //! powerful tools for higher-level programming constructs in Rust.
