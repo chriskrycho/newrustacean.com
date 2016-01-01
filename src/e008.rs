@@ -236,7 +236,7 @@ mod tests {
 
     #[test]
     fn test_impl_display() {
-        let simple = SimpleType { a: "some string".to_string(), b: 4096 };
+        let simple = SimpleType { a: "some string", b: 4096 };
         println!("simple is {}", simple);
     }
 }
