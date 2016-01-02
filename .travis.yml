@@ -8,7 +8,7 @@ install:
 - pip install --user ghp-import
 script:
 - make all
-- '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && make publish'
+- test $TRAVIS_PULL_REQUEST != "false" || test $TRAVIS_BRANCH != "gh-pages" || make publish
 env:
   global:
     secure: NC0H37gU0P6aHkiiQmFHOuQjcW9iw17nl4clHr+V35F8BN8RY32iFgOplUd0/pzhAjcRuXtvZRBte06YJOMF7LBkxkO/pmrKjf/hj29MgCuqs+I1bOv53obhbV5XVVbA03oE6MPsugO5wYGjc02pJmWsQKvhb0qS/ek5sYO5Nw/XXlBL6z0hrtpVg61audY0C/Pxd0zdXfsDNNk40CneWQ+xMWrKE26MqWBWfoqFHGRJYStVGQjNPxI/IoqEnUiVZC5c8Vxk0tgQBhjFK71d7/d2+3EZB0CMtbLq8nw2NO8m5avbR69l2d7pa2pY1w8rORV4GTTm+7f6XqNjMtWh5ORc9EfS1xJuChKf94YOj+hjlr4fx3VG0c1D8Ik7LyBBwD0qfUyt4FoAUpTvYE6RfdgElfTKFNFcYgPCv7euiIlhheUqob5PP78TFHewnnkW+dwOMho8X9rF+jva1DiW2aN+Nu+q5kJnokfhbXfrSpYwF9ZnEE4gl6FnTXmoCfeWDeLL8SdHg/8NDHNqDtt0kQONnZbiEEkw0BS7tuukPt99+rXnPsMn8mtMIlzfBG/9jyNaEr2IP4IxrZ1I3DQJnAY5m4sh75zTPaegLw2ua2oHdHliB6nGPQ1/B/TbDocfACvqakDQWrdSY+4WCzQhC0YoEFTXVdUN/c/IdvVxpl4=
