@@ -241,17 +241,18 @@ nav .inner_list {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    text-align: center;
     border-bottom: RGBA(87, 66, 43, 1);
 }
 
 nav .inner_list li {
-    flex: 1 0 auto;
+    flex: 1 0 20%;
     border: none;
 }
 
 .funding .fa { font-size: 80%; }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 580px) {
     nav .inner_list {
         display: block;
         padding: 0;
