@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 2.5.12(2294); Mac OS X Version 10.11.2 (Build 15C50) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.1.5(2620); Mac OS X Version 10.11.3 (Build 15D21) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 09 Jan 2016 17:24:41 -0500</pubDate>
-        <lastBuildDate>Sat, 09 Jan 2016 17:24:41 -0500</lastBuildDate>
+        <pubDate>Sun, 31 Jan 2016 19:08:44 -0500</pubDate>
+        <lastBuildDate>Sun, 31 Jan 2016 19:08:45 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,22 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>Bonus 3: Building as a community</title>
+            <link>http://newrustacean.com/show_notes/bonus/_3/</link>
+            <description><![CDATA[<p>Community is one of the most important parts of a programming language community, or indeed <em>any</em> technical community. In this episode, I talk a bit about what happens when you don't have a good community, how Rust's community has done well so far, and then how to keep building a good community and how to build good things <em>as</em> a community.</p>
+]]></description>
+            <pubDate>Sun, 31 Jan 2016 19:08:36 -0500</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_3.m4a" length="4945501" type="audio/x-m4a"/>
+            <guid isPermaLink="false">E1508C29-D386-4AC2-AACD-10B6C716CDCC</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[The value of a good community, and how you can help Rust today.
+
+Community is one of the most important parts of a programming language community, or indeed *any* technical community. In this episode, I talk a bit about what happens when you don't have a good community, how Rust's community has done well so far, and then how to keep building a good community and how to build good things *as* a community.
+]]></itunes:summary>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:duration>12:03</itunes:duration>
+        </item>
         <item>
             <title>e010: Macros rule!</title>
             <link>http://newrustacean.com/show_notes/e010/</link>
@@ -119,7 +135,7 @@
 ]]></description>
             <pubDate>Mon, 18 Jan 2016 10:25:00 -0500</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a" length="6522635" type="audio/x-m4a"/>
-            <guid>http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a</guid>
+            <guid isPermaLink="false">http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:subtitle>Using Rust's macro system, its limitations, and its future.</itunes:subtitle>
             <itunes:summary><![CDATA[
