@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sun, 27 Dec 2015 11:20:07 -0500</pubDate>
-        <lastBuildDate>Sun, 27 Dec 2015 11:20:07 -0500</lastBuildDate>
+        <pubDate>Sat, 09 Jan 2016 17:24:41 -0500</pubDate>
+        <lastBuildDate>Sat, 09 Jan 2016 17:24:41 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,145 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e009: Composing a Rustic Tune</title>
+            <link>http://newrustacean.com/show_notes/e000/</link>
+            <description><![CDATA[<h2 id="notes">Notes</h2>
+<p>Last time, we looked at generics and traits at a high level. This time, we dig deeper on traits, looking specifically at <code>std::iter::Iterator</code> as an example of a powerful trait that can be composed across types, and then at how we might compose multiple traits on a single type.</p>
+<p>We also talk about the syntax for traits, the use of marker traits, some of the things you <em>can’t</em> presently do with traits, and even just a smidge about the <em>future</em> of traits in Rust. All that in less than 20 minutes!</p>
+<p>You’ll find today’s <a href="/src/show_notes/e009.rs.html">source example</a> fairly interesting, I think: it’s just one type, but it uses almost every concept discussed on the show today!</p>
+<h2 id="links">Links</h2>
+<ul>
+<li>Nick Cameron: <a href="http://www.ncameron.org/blog/my-thoughts-on-rust-in-2016/">“Thoughts on Rust in 2016”</a></li>
+<li><a href="https://users.rust-lang.org/t/upcoming-breakage-starting-in-rust-1-7-from-rfcs-1214-and-136/4207">“Upcoming breakage starting in Rust 1.7, from RFCs 1214 and 136”</a>
+<ul>
+<li><a href="https://github.com/rust-lang/rfcs/blob/master/text/1214-projections-lifetimes-and-wf.md">RFC 1214: Clarify (and improve) rules for projections and well-formedness</a></li>
+<li><a href="https://github.com/rust-lang/rfcs/blob/master/text/0136-no-privates-in-public.md">RFC 136: Ban private items in public APIs</a></li>
+</ul></li>
+<li>The Rust Book:
+<ul>
+<li><a href="https://doc.rust-lang.org/book/traits.html">Traits</a></li>
+<li><a href="https://doc.rust-lang.org/book/trait-objects.html">Trait objects</a> (dynamic dispatch)</li>
+</ul></li>
+<li>The Rust reference:
+<ul>
+<li><a href="https://doc.rust-lang.org/std/iter/index.html"><code>std::iter</code></a> and <a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html"><code>std::iter::Iterator</code></a></li>
+<li><a href="https://doc.rust-lang.org/std/ops/trait.Add.html"><code>Add</code></a></li>
+<li><a href="https://doc.rust-lang.org/std/ops/trait.Drop.html"><code>Drop</code></a></li>
+<li><a href="https://doc.rust-lang.org/std/cmp/trait.PartialEq.html"><code>PartialEq</code></a> and <a href="https://doc.rust-lang.org/std/cmp/trait.Eq.html"><code>Eq</code></a></li>
+<li><a href="https://doc.rust-lang.org/std/cmp/trait.PartialOrd.html"><code>PartialOrd</code></a> and <a href="https://doc.rust-lang.org/std/cmp/trait.Ord.html"><code>Ord</code></a></li>
+<li><a href="https://doc.rust-lang.org/book/traits.html">Special traits</a></li>
+<li><a href="https://doc.rust-lang.org/reference.html#trait-objects">Trait objects</a></li>
+</ul></li>
+<li><a href="https://github.com/rust-lang/rfcs/pull/1210">RFC: impl specialization</a>
+<ul>
+<li>Aaron Turon: <a href="https://aturon.github.io/blog/2015/09/18/reuse/">“Specialize to reuse”</a></li>
+</ul></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li>Chris Palmer</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Hamza Sheikh</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li>Ralph Giles (“rillian”)</li>
+<li>reddraggone9</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+</ul>
+<h2 id="follow">Follow</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>App.net: <a href="https://alpha.app.net/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+<li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Sat, 09 Jan 2016 16:00:11 -0500</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e009.m4a" length="7152387" type="audio/x-m4a"/>
+            <guid isPermaLink="false">505802A1-4F58-4C3C-A268-B1354B5B2F8E</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:subtitle>Getting into the nitty-gritty with Rust's traits.</itunes:subtitle>
+            <itunes:summary><![CDATA[
+Notes
+
+Last time, we looked at generics and traits at a high level. This time, we dig deeper on traits, looking specifically at std::iter::Iterator as an example of a powerful trait that can be composed across types, and then at how we might compose multiple traits on a single type.
+
+We also talk about the syntax for traits, the use of marker traits, some of the things you _can’t_ presently do with traits, and even just a smidge about the _future_ of traits in Rust. All that in less than 20 minutes!
+
+You’ll find today’s source example fairly interesting, I think: it’s just one type, but it uses almost every concept discussed on the show today!
+
+
+Links
+
+-   Nick Cameron: “Thoughts on Rust in 2016”
+-   “Upcoming breakage starting in Rust 1.7, from RFCs 1214 and 136”
+    -   RFC 1214: Clarify (and improve) rules for projections and well-formedness
+    -   RFC 136: Ban private items in public APIs
+-   The Rust Book:
+    -   Traits
+    -   Trait objects (dynamic dispatch)
+-   The Rust reference:
+    -   std::iter and std::iter::Iterator
+    -   Add
+    -   Drop
+    -   PartialEq and Eq
+    -   PartialOrd and Ord
+    -   Special traits
+    -   Trait objects
+-   RFC: impl specialization
+    -   Aaron Turon: “Specialize to reuse”
+
+
+Sponsors
+
+-   Aleksey Pirogov
+-   Chris Palmer
+-   Derek Morr
+-   Hamza Sheikh
+-   Luca Schmid
+-   Micael Bergeron
+-   Ralph Giles (“rillian”)
+-   reddraggone9
+-   William Roe
+
+Become a sponsor
+
+-   Patreon.com/newrustacean
+-   Venmo.com/chriskrycho
+-   Dwolla.com/hub/chriskrycho
+-   Cash.me/$chriskrycho
+
+
+Follow
+
+-   New Rustacean:
+    -   Twitter: @newrustacean
+    -   App.net: @newrustacean
+    -   Email: hello@newrustacean.com
+-   Chris Krycho
+    -   Twitter: @chriskrycho
+    -   App.net: @chriskrycho
+
+]]></itunes:summary>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:duration>17:23</itunes:duration>
+        </item>
         <item>
             <title>e008: Just like something else</title>
             <link>http://newrustacean.com/show_notes/e008/</link>

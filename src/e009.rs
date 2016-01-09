@@ -1,6 +1,6 @@
 //! Composing a Rustic Tune
 //!
-//!   - **Date:** 2016-01-08
+//!   - **Date:** 2016-01-09
 //!   - **Subject:** Getting into the nitty-gritty with Rust's traits.
 //!   - **Audio:**
 //!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e009.m4a)
@@ -83,10 +83,10 @@
 //!   - Micael Bergeron
 //!   - Ralph Giles ("rillian")
 //!   - reddraggone9
-//!   - [William Roe][s8]
+//!   - [William Roe][s9]
 //!
 //! [s3]: https://twitter.com/derekmorr
-//! [s8]: http://willroe.me
+//! [s9]: http://willroe.me
 //!
 //! ### Become a sponsor
 //!
