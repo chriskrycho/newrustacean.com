@@ -40,7 +40,7 @@
         </itunes:category>
         <item>
             <title>e009: Composing a Rustic Tune</title>
-            <link>http://newrustacean.com/show_notes/e000/</link>
+            <link>http://newrustacean.com/show_notes/e009/</link>
             <description><![CDATA[<h2 id="notes">Notes</h2>
 <p>Last time, we looked at generics and traits at a high level. This time, we dig deeper on traits, looking specifically at <code>std::iter::Iterator</code> as an example of a powerful trait that can be composed across types, and then at how we might compose multiple traits on a single type.</p>
 <p>We also talk about the syntax for traits, the use of marker traits, some of the things you <em>can’t</em> presently do with traits, and even just a smidge about the <em>future</em> of traits in Rust. All that in less than 20 minutes!</p>
