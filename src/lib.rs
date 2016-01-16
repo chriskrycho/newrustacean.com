@@ -32,5 +32,9 @@ pub mod e006;
 pub mod e007;
 pub mod e008;
 pub mod e009;
+// We need to include `#[macro_use]` so that the macro will be exported for
+// other crates to use---or, in our case, to be visible in the docs/show notes.
+#[macro_use]
+pub mod e010;
 
 pub mod bonus;
