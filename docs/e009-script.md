@@ -1,11 +1,11 @@
-Composing a Rustic Tune
+Composing a Rustic tune
 =======================
 
 Intro (30s)
 -----
 Hello, I'm Chris Krycho, and this is the New Rustacean podcast---a 15--20 minute
 show about learning the Rust programming language. This is *Episode 9: Composing
-a Rustic Tune*.
+a Rustic tune*.
 
 
 News (2m 30s -> 3m)

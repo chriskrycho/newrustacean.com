@@ -1,11 +1,11 @@
-Just Like Something Else
+Just like something else
 ========================
 
 Intro (15s)
 -----
 Hello, I'm Chris Krycho, and this is the New Rustacean podcast---a 15--20 minute
-show about learning the Rust programming language. This is *Episode 8: Just Like
-Something Else*.
+show about learning the Rust programming language. This is *Episode 8: Just like
+something else*.
 
 
 News (1m 30s -> 1m 45s)

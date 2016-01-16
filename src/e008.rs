@@ -1,4 +1,4 @@
-//! Just Like Something Else
+//! Just like something else
 //!
 //!   - **Date:** 2015-12-27
 //!   - **Subject:** Generics, traits, and shared behavior in Rust.

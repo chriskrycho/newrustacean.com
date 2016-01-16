@@ -1,4 +1,4 @@
-//! Composing a Rustic Tune
+//! Composing a Rustic tune
 //!
 //!   - **Date:** 2016-01-09
 //!   - **Subject:** Getting into the nitty-gritty with Rust's traits.

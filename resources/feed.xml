@@ -39,7 +39,7 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <item>
-            <title>e009: Composing a Rustic Tune</title>
+            <title>e009: Composing a Rustic tune</title>
             <link>http://newrustacean.com/show_notes/e009/</link>
             <description><![CDATA[<h2 id="notes">Notes</h2>
 <p>Last time, we looked at generics and traits at a high level. This time, we dig deeper on traits, looking specifically at <code>std::iter::Iterator</code> as an example of a powerful trait that can be composed across types, and then at how we might compose multiple traits on a single type.</p>
