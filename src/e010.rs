@@ -1,6 +1,6 @@
 //! Macros rule!
 //!
-//!   - **Date:** TODO
+//!   - **Date:** 2016-01-18
 //!   - **Subject:** Using Rust's macro system, its limitations, and its future.
 //!   - **Audio:**
 //!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a)
