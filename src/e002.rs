@@ -99,7 +99,7 @@ pub fn demonstrate_ownership() {
     move_circle(immutable);
     move_circle(mutable);
     // println!("Immutable: {:?}", immutable);
-    // println!("Mutable: {:?}", immutable);
+    // println!("Mutable: {:?}", mutable);
 }
 
 
@@ -181,9 +181,9 @@ impl Circle {
         self.x
     }
 
-    // Returns the value of `Circle.x`, borrowing a mutable reference to the
-    // circle and changing the value (demonstrating a situation in which you
-    // would want to use a mutable rather than immutable reference).
+    /// Returns the value of `Circle.x`, borrowing a mutable reference to the
+    /// circle and changing the value (demonstrating a situation in which you
+    /// would want to use a mutable rather than immutable reference).
     pub fn x_by_mut_ref(&mut self) -> f64 {
         println!("Taking a mutable reference.");
         self.x = self.x + 1.0;
