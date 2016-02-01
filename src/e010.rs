@@ -7,7 +7,7 @@
 //!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e010.mp3)
 //!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e010.ogg)
 //!
-//! <audio title="Just like something else" controls preload=metadata>
+//! <audio title="Macros rule!" controls preload=metadata>
 //!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a">
 //!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e010.mp3">
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e010.ogg">

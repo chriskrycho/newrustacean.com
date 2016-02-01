@@ -1,4 +1,4 @@
-//! Legacy Code
+//! Legacy code
 //!
 //!   - **Date:** December 6, 2015
 //!   - **Subject:** Paying off technical debt, refactoring, and cleaning up old code.
@@ -7,7 +7,7 @@
 //!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_2.mp3)
 //!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_2.ogg)
 //!
-//! <audio title="Modularize this!" controls preload=metadata>
+//! <audio title="Legacy code" controls preload=metadata>
 //!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_2.m4a">
 //!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_2.mp3">
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_2.ogg">
