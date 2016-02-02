@@ -32,44 +32,47 @@
 //!
 //! Links
 //! -----
-//!
-//!   - [Rust book: Macros][l1]
-//!   - [Rust by Example: Macros][l2]
-//!   - [Rust reference: Macros][l3]
-//!   - ["Macro by Example"][l4] (original paper)
+//!   - Julia Evans: ["Why I (Heart) Rust"][l1]
+//!   - Steve Klabnik: ["IntermezzOS"][l2] (a small teaching OS built in Rust)
+//!   - [Rust book: Macros][l3]
+//!   - [Rust by Example: Macros][l4]
+//!   - [Rust reference: Macros][l5]
+//!   - ["Macro by Example"][l6] (original paper)
 //!   - Nick Cameron:
-//!       + [Macros][l5]
+//!       + [Macros][l7]
 //!       + Macros in Rust
-//!           * [Part 1: `macro_rules!`][l6]
-//!           * [Part 2: procedural macros][l7]
-//!           * [Part 3: hygiene][l8]
-//!           * [Part 4: scoping and import/export][l9]
-//!           * [Part 5: current problems and possible solutions][l10]
-//!           * [Part 6: more issues with `macro_rules!`][l11]
-//!       + [`concat_idents` and macros in ident positions][l12]
-//!       + [Macro plans, overview][l13]
-//!       + [Macro hygiene in all its guises and variations][l14]
-//!       + [Sets of scopes macro hygiene][l15]
-//!       + [Macro plans: syntax][l16]
-//!       + [Procedural macros, framework][l17]
+//!           * [Part 1: `macro_rules!`][l8]
+//!           * [Part 2: procedural macros][l9]
+//!           * [Part 3: hygiene][l10]
+//!           * [Part 4: scoping and import/export][l11]
+//!           * [Part 5: current problems and possible solutions][l12]
+//!           * [Part 6: more issues with `macro_rules!`][l13]
+//!       + [`concat_idents` and macros in ident positions][l14]
+//!       + [Macro plans, overview][l15]
+//!       + [Macro hygiene in all its guises and variations][l16]
+//!       + [Sets of scopes macro hygiene][l17]
+//!       + [Macro plans: syntax][l18]
+//!       + [Procedural macros, framework][l19]
 //!
-//! [l1]: https://doc.rust-lang.org/book/macros.html
-//! [l2]: http://rustbyexample.com/macros.html
-//! [l3]: https://doc.rust-lang.org/reference.html#macros
-//! [l4]: https://www.cs.indiana.edu/ftp/techreports/TR206.pdf
-//! [l5]: http://www.ncameron.org/blog/macros/
-//! [l6]: http://ncameron.org/blog/macros-in-rust-pt1/
-//! [l7]: http://www.ncameron.org/blog/macros-in-rust-pt2/
-//! [l8]: http://www.ncameron.org/blog/macros-in-rust-pt3/
-//! [l9]: http://www.ncameron.org/blog/macros-in-rust-pt4/
-//! [l10]: http://www.ncameron.org/blog/macros-in-rust-pt5/
-//! [l11]: http://www.ncameron.org/blog/macros-pt6-more-issues/
-//! [l12]: http://www.ncameron.org/blog/untitledconcat_idents-and-macros-in-ident-position/
-//! [l13]: http://www.ncameron.org/blog/macro-plans-overview/
-//! [l14]: http://www.ncameron.org/blog/macro-hygiene-in-all-its-guises-and-variations/
-//! [l15]: http://www.ncameron.org/blog/sets-of-scopes-macro-hygiene/
-//! [l16]: http://www.ncameron.org/blog/macro-plans-syntax/
-//! [l17]: http://www.ncameron.org/blog/procedural-macros-framework/
+//! [l1]: https://speakerdeck.com/jvns/why-i-rust
+//! [l2]: https://intermezzos.github.io/
+//! [l3]: https://doc.rust-lang.org/book/macros.html
+//! [l4]: http://rustbyexample.com/macros.html
+//! [l5]: https://doc.rust-lang.org/reference.html#macros
+//! [l6]: https://www.cs.indiana.edu/ftp/techreports/TR206.pdf
+//! [l7]: http://www.ncameron.org/blog/macros/
+//! [l8]: http://ncameron.org/blog/macros-in-rust-pt1/
+//! [l9]: http://www.ncameron.org/blog/macros-in-rust-pt2/
+//! [l10]: http://www.ncameron.org/blog/macros-in-rust-pt3/
+//! [l11]: http://www.ncameron.org/blog/macros-in-rust-pt4/
+//! [l12]: http://www.ncameron.org/blog/macros-in-rust-pt5/
+//! [l13]: http://www.ncameron.org/blog/macros-pt6-more-issues/
+//! [l14]: http://www.ncameron.org/blog/untitledconcat_idents-and-macros-in-ident-position/
+//! [l15]: http://www.ncameron.org/blog/macro-plans-overview/
+//! [l16]: http://www.ncameron.org/blog/macro-hygiene-in-all-its-guises-and-variations/
+//! [l17]: http://www.ncameron.org/blog/sets-of-scopes-macro-hygiene/
+//! [l18]: http://www.ncameron.org/blog/macro-plans-syntax/
+//! [l19]: http://www.ncameron.org/blog/procedural-macros-framework/
 //!
 //!
 //! Sponsors
