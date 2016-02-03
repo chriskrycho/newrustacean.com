@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sun, 31 Jan 2016 19:08:44 -0500</pubDate>
-        <lastBuildDate>Sun, 31 Jan 2016 19:08:45 -0500</lastBuildDate>
+        <pubDate>Tue, 02 Feb 2016 19:11:27 -0500</pubDate>
+        <lastBuildDate>Tue, 02 Feb 2016 19:11:28 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -41,8 +41,7 @@
         <item>
             <title>Bonus 3: Building as a community</title>
             <link>http://newrustacean.com/show_notes/bonus/_3/</link>
-            <description><![CDATA[<p>Community is one of the most important parts of a programming language community, or indeed <em>any</em> technical community. In this episode, I talk a bit about what happens when you don't have a good community, how Rust's community has done well so far, and then how to keep building a good community and how to build good things <em>as</em> a community.</p>
-]]></description>
+            <description><![CDATA[Community is one of the most important parts of a programming language community, or indeed <em>any</em> technical community. In this episode, I talk a bit about what happens when you don't have a good community, how Rust's community has done well so far, and then how to keep building a good community and how to build good things <em>as</em> a community.]]></description>
             <pubDate>Sun, 31 Jan 2016 19:08:36 -0500</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_3.m4a" length="4945501" type="audio/x-m4a"/>
             <guid isPermaLink="false">E1508C29-D386-4AC2-AACD-10B6C716CDCC</guid>
@@ -50,7 +49,35 @@
             <itunes:summary><![CDATA[The value of a good community, and how you can help Rust today.
 
 Community is one of the most important parts of a programming language community, or indeed *any* technical community. In this episode, I talk a bit about what happens when you don't have a good community, how Rust's community has done well so far, and then how to keep building a good community and how to build good things *as* a community.
-]]></itunes:summary>
+
+Sponsors
+
+-   Aleksey Pirogov
+-   Chris Palmer
+-   Derek Morr
+-   Hamza Sheikh
+-   Luca Schmid
+-   Micael Bergeron
+-   Ralph Giles (“rillian”)
+-   reddraggone9
+-   William Roe
+
+Become a sponsor
+
+-   Patreon.com/newrustacean
+-   Venmo.com/chriskrycho
+-   Dwolla.com/hub/chriskrycho
+-   Cash.me/$chriskrycho
+
+Follow
+
+-   New Rustacean:
+    -   Twitter: @newrustacean
+    -   App.net: @newrustacean
+    -   Email: hello@newrustacean.com
+-   Chris Krycho
+    -   Twitter: @chriskrycho
+    -   App.net: @chriskrycho]]></itunes:summary>
             <itunes:explicit>no</itunes:explicit>
             <itunes:duration>12:03</itunes:duration>
         </item>
@@ -58,6 +85,7 @@ Community is one of the most important parts of a programming language community
             <title>e010: Macros rule!</title>
             <link>http://newrustacean.com/show_notes/e010/</link>
             <description><![CDATA[<p>Macros rule!</p>
+
 <ul>
 <li><strong>Date:</strong> 2016-01-18</li>
 <li><strong>Subject:</strong> Using Rust’s macro system, its limitations, and its future.</li>
@@ -66,13 +94,12 @@ Community is one of the most important parts of a programming language community
 <li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a">M4A</a></li>
 <li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e010.mp3">MP3</a></li>
 <li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e010.ogg">Ogg</a></li>
-</ul></li>
 </ul>
-<audio title="Just like something else" controls preload="metadata">
-<source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a"> <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e010.mp3"> <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e010.ogg">
-</audio>
-<h2 id="notes">Notes</h2>
-<p>Because of the way macros are exported—before name resolution on crates occurs—the documentation for the macros defined in the source for this episode occurs in the <a href="http://www.newrustacean.com/show_notes/#macros"><strong>Macros</strong> section of the <code>show_notes</code> crate</a> documentation, rather than within the documentation for this module. (See the Rust Book discussion of <a href="http://doc.rust-lang.org/stable/book/documentation.html#documenting-macros">documenting macros</a> for details.) Even so, the <a href="http://www.newrustacean.com/src/show_notes/e009.rs.html">source</a> is still in this module; see the <a href="http://www.newrustacean.com/src/show_notes/e010.rs.html#101">implementations</a> for details.</p>
+</li>
+</ul>
+<audio title="Just like something else" controls preload="metadata"><source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a"> <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e010.mp3"> <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e010.ogg"></audio><h2 id="notes">Notes</h2>
+Because of the way macros are exported—before name resolution on crates occurs—the documentation for the macros defined in the source for this episode occurs in the <a href="http://www.newrustacean.com/show_notes/#macros"><strong>Macros</strong> section of the <code>show_notes</code> crate</a> documentation, rather than within the documentation for this module. (See the Rust Book discussion of <a href="http://doc.rust-lang.org/stable/book/documentation.html#documenting-macros">documenting macros</a> for details.) Even so, the <a href="http://www.newrustacean.com/src/show_notes/e009.rs.html">source</a> is still in this module; see the <a href="http://www.newrustacean.com/src/show_notes/e010.rs.html#101">implementations</a> for details.
+<br />
 <h2 id="links">Links</h2>
 <ul>
 <li><a href="https://doc.rust-lang.org/book/macros.html">Rust book: Macros</a></li>
@@ -90,14 +117,16 @@ Community is one of the most important parts of a programming language community
 <li><a href="http://www.ncameron.org/blog/macros-in-rust-pt4/">Part 4: scoping and import/export</a></li>
 <li><a href="http://www.ncameron.org/blog/macros-in-rust-pt5/">Part 5: current problems and possible solutions</a></li>
 <li><a href="http://www.ncameron.org/blog/macros-pt6-more-issues/">Part 6: more issues with <code>macro_rules!</code></a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="http://www.ncameron.org/blog/untitledconcat_idents-and-macros-in-ident-position/"><code>concat_idents</code> and macros in ident positions</a></li>
 <li><a href="http://www.ncameron.org/blog/macro-plans-overview/">Macro plans, overview</a></li>
 <li><a href="http://www.ncameron.org/blog/macro-hygiene-in-all-its-guises-and-variations/">Macro hygiene in all its guises and variations</a></li>
 <li><a href="http://www.ncameron.org/blog/sets-of-scopes-macro-hygiene/">Sets of scopes macro hygiene</a></li>
 <li><a href="http://www.ncameron.org/blog/macro-plans-syntax/">Macro plans: syntax</a></li>
 <li><a href="http://www.ncameron.org/blog/procedural-macros-framework/">Procedural macros, framework</a></li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <h2 id="sponsors">Sponsors</h2>
 <ul>
@@ -125,14 +154,15 @@ Community is one of the most important parts of a programming language community
 <li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
 <li>App.net: <a href="https://alpha.app.net/newrustacean">@newrustacean</a></li>
 <li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Chris Krycho
 <ul>
 <li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
 <li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
-</ul></li>
 </ul>
-]]></description>
+</li>
+</ul>]]></description>
             <pubDate>Mon, 18 Jan 2016 10:25:00 -0500</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a" length="6522635" type="audio/x-m4a"/>
             <guid isPermaLink="false">http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a</guid>
@@ -157,10 +187,10 @@ Sponsors
 
 Become a sponsor
 
--   Patreon
--   Venmo
--   Dwolla
--   Cash.me
+-   Patreon.com/newrustacean
+-   Venmo.com/chriskrycho
+-   Dwolla.com/hub/chriskrycho
+-   Cash.me/$chriskrycho
 
 Follow
 
