@@ -11,3 +11,7 @@ recordings
 # Miscellaneous tooling bits
 .python-version
 .ruby-version
+
+# IDE
+.idea
+.sublime-*
