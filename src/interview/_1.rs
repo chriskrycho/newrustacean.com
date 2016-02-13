@@ -17,14 +17,16 @@
 //!   - Chris Palmer
 //!   - [Derek Morr][s3]
 //!   - Hamza Sheikh
+//!   - Leif Arne Storset
 //!   - Luca Schmid
 //!   - Micael Bergeron
 //!   - Ralph Giles ("rillian")
 //!   - reddraggone9
-//!   - [William Roe][s9]
+//!   - Ryan Ollos
+//!   - [William Roe][s11]
 //!
 //! [s3]: https://twitter.com/derekmorr
-//! [s9]: http://willroe.me
+//! [s11]: http://willroe.me
 //!
 //! ### Become a sponsor
 //!
