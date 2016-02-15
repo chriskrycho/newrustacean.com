@@ -1,5 +1,5 @@
 [package]
 name = "show-notes"
 # Version will match released show number! Episode 12 will be `0.1.2`.
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Chris Krycho <chris@chriskrycho.com>"]

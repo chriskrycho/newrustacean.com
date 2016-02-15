@@ -36,6 +36,7 @@ pub mod e009;
 // other crates to use---or, in our case, to be visible in the docs/show notes.
 #[macro_use]
 pub mod e010;
+pub mod e011;
 
 pub mod bonus;
 pub mod interview;
