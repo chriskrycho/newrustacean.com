@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Thu, 25 Feb 2016 08:42:05 -0500</pubDate>
-        <lastBuildDate>Thu, 25 Feb 2016 08:42:06 -0500</lastBuildDate>
+        <pubDate>Tue, 08 Mar 2016 10:12:24 -0500</pubDate>
+        <lastBuildDate>Tue, 08 Mar 2016 10:12:25 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,148 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e011: Once Upon a Type</title>
+            <link>http://newrustacean.com/show_notes/e011/</link>
+            <description><![CDATA[<p>Type systems: strong vs. weak, dynamic vs. static, and degrees of expressivity.</p>
+<h2 id="notes">Notes</h2>
+<p>Talking about type systems! A broad and wide-ranging discussion about type systems in general, with specific examples from languages like PHP, JavaScript, Python, C, C++, Java, C♯, Haskell, and Rust!</p>
+<ul>
+<li>What is a type system?</li>
+<li>What are the kinds of things we get out of type systems?</li>
+<li>What are the tradeoffs with different type systems?</li>
+<li>What is Rust’s type system like?</li>
+<li>What is especially attractive about Rust’s type system?</li>
+</ul>
+<p>A comment on the C integer/character string addition example: what’s actually happening there is that the character string is an array “under the covers,” and as such has an address. C silently switches to using the memory address, which is of course just an integer, when you try to add the two together. As I said on the show: the result is nonsense (unless you’re using this as a way of operating on memory addresses), but it’s compileable nonsense. In a stricter and stronger type system, memory addresses and normal numbers shouldn’t be addable!</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="http://blog.rust-lang.org/2016/03/02/Rust-1.7.html">Rust 1.7 released</a>
+<ul>
+<li><a href="http://blog.rust-lang.org/2016/03/02/Rust-1.7.html#library-stabilizations"><code>HashMap</code> changes</a></li>
+</ul></li>
+<li><a href="http://www.cs.ru.nl/~herman/PUBS/IntroTT-improved.pdf">Introduction to Type Theory</a></li>
+<li><a href="https://jadpole.github.io/rust/type-system/">Visualizing Rust’s type-system</a></li>
+<li><a href="http://cglab.ca/~abeinges/blah/rust-reuse-and-recycle/">The Many Kinds of Code Reuse in Rust</a></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li>Chris Palmer</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Hamza Sheikh</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li>Pascal</li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Ralph “FriarTech” Loizzo</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Tue, 08 Mar 2016 10:00:00 -0500</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e011.m4a" length="7267955" type="audio/x-m4a"/>
+            <guid isPermaLink="false">AC4E31F9-5811-4B6E-86E2-5E3ED3CE8DEF</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Type systems: strong vs. weak, dynamic vs. static, and degrees of expressivity.
+
+Notes
+
+Talking about type systems! A broad and wide-ranging discussion about type systems in general, with specific examples from languages like PHP, JavaScript, Python, C, C++, Java, C♯, Haskell, and Rust!
+
+* What is a type system?
+
+* What are the kinds of things we get out of type systems?
+
+* What are the tradeoffs with different type systems?
+
+* What is Rust’s type system like?
+
+* What is especially attractive about Rust’s type system?
+
+A comment on the C integer/character string addition example: what’s actually happening there is that the character string is an array “under the covers,” and as such has an address. C silently switches to using the memory address, which is of course just an integer, when you try to add the two together. As I said on the show: the result is nonsense (unless you’re using this as a way of operating on memory addresses), but it’s compellable nonsense. In a stricter and stronger type system, memory addresses and normal numbers shouldn’t be addable!
+
+
+Sponsors
+
+* Aleksey Pirogue
+
+* Chris Palmer
+
+* Derek Morr
+
+* Hamza Sheikh
+
+* Lachlan Collins
+
+* Leif Arne Storset
+
+* Luca Schmid
+
+* Micael Bergeron
+
+* Pascal
+
+* Ralph Giles (“gillian”)
+
+* Ralph “FriarTech” Loizzo
+
+* reddraggone9
+
+* Ryan Oleos
+
+* William Roe
+
+
+Become a sponsor
+
+* Patreon.com/newrustacean
+
+* Venmo.com/chriskrycho
+
+* Dwolla.com/hub/chriskrycho
+
+* Cash.me/$chriskrycho
+
+
+Contact
+
+* New Rustacean:
+
+- Twitter: @newrustacean
+
+- Email: hello@newrustacean.com
+
+* Chris Krycho
+
+- GitHub: chriskrycho
+
+- Twitter: @chriskrycho]]></itunes:summary>
+            <itunes:duration>17:51</itunes:duration>
+        </item>
         <item>
             <title>Interview 1::Part 2 – Sean Griffin</title>
             <link>http://newrustacean.com/show_notes/interview/_1/part_2/</link>
