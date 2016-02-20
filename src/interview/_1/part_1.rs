@@ -2,7 +2,6 @@
 //!
 //!   - **Date:** February 15, 2016
 //!   - **Subject:** Rust, ORMs, and Web Frameworks
-//!     return values.
 //!   - **Audio:**
 //!       + [M4A][m4a]
 //!       + [MP3][mp3]
