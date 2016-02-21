@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.1.5(2620); Mac OS X Version 10.11.3 (Build 15D21) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.1.6(2632); Mac OS X Version 10.11.3 (Build 15D21) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Mon, 15 Feb 2016 15:01:57 -0500</pubDate>
-        <lastBuildDate>Mon, 15 Feb 2016 15:01:57 -0500</lastBuildDate>
+        <pubDate>Thu, 25 Feb 2016 08:42:05 -0500</pubDate>
+        <lastBuildDate>Thu, 25 Feb 2016 08:42:06 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -25,7 +25,7 @@
         <itunes:summary><![CDATA[Documenting a journey into a new programming language—with source code, examples, and almost certainly some out-and-out hilarities along the way.]]></itunes:summary>
         <itunes:keywords>Rust,programming,programming languages,software</itunes:keywords>
         <itunes:image href="http://newrustacean.com/podcast.png"/>
-        <itunes:explicit>no</itunes:explicit>
+        <itunes:explicit>clean</itunes:explicit>
         <itunes:owner>
             <itunes:name>Chris Krycho</itunes:name>
             <itunes:email>hello@newrustacean.com</itunes:email>
@@ -38,6 +38,151 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>Interview 1::Part 2 – Sean Griffin</title>
+            <link>http://newrustacean.com/show_notes/interview/_1/part_2/</link>
+            <description><![CDATA[<p>Sean Griffin on type systems and hopes for Rust's future</p>
+<h2>Notes</h2>
+<p>Chris chats with Sean Griffin about the tradeoffs between mental overhead and type safety, the expressiveness of different type systems, and some of the places where Rust currently falls down.</p>
+<h3>Corrigenda</h3>
+<p>Sean noted he could be wrong about <code>IEnumerable&lt;T&gt;</code> not having a <code>Sum</code> method in C♯, and post-show research indicated that he was (it's possible it was added after he had stopped doing .NET work, of course). See the <a href="https://msdn.microsoft.com/library/bb919210(v=vs.90).aspx">documentation</a> for details on how <code>IEnumerable&lt;T&gt;.Sum</code> it behaves in C♯ if you're curious.</p>
+<p>As a related note, I (Chris) have done a little bit of digging on C♯ in the interval and it's fair to say that while a lot of the "ceremony" involved in writing C♯ is annoying, it's much more than just a "slightly nicer Java", and indeed is a much nicer language than my previous, limited exposure had led me to believe. It's no Rust or F♯, but its type system is substantially more capable than Java's.</p>
+<table><thead><tr></tr></thead><tbody><tr></tr></tbody></table><h2>Links</h2>
+<ul>
+<li>fmap
+<ul>
+<li><a href="https://robots.thoughtbot.com/functional-swift-for-dealing-with-optional-values">Discussion of <code>fmap</code> with <code>Optional</code> in Swift</a></li>
+<li><a href="http://learnyouahaskell.com/functors-applicative-functors-and-monoids">In Haskell</a></li>
+</ul>
+</li>
+<li>Rust:
+<ul>
+<li><a href="https://doc.rust-lang.org/book/trait-objects.html">Trait objects</a></li>
+<li><a href="https://github.com/rust-lang/rfcs/pull/1210">Specialization RFC</a>
+<ul>
+<li><a href="https://github.com/rust-lang/rust/issues/31844">Implementation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/sgrif/diesel">Diesel</a></li>
+</ul>
+<table><thead><tr></tr></thead><tbody><tr></tr></tbody></table><h2>Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li>Chris Palmer</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Hamza Sheikh</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li>Ralph Giles ("rillian")</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<h3>Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+</ul>
+<h2>Follow</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul>
+</li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul>
+</li>
+</ul>
+]]></description>
+            <pubDate>Thu, 25 Feb 2016 08:30:00 -0500</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_1_part_2.m4a" length="8971891" type="audio/x-m4a"/>
+            <guid isPermaLink="false">EF51E282-74DB-4F9F-8952-DBF70B1F8B2E</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Sean Griffin on type systems and hopes for Rust's future
+
+
+Notes
+-----
+
+Chris chats with Sean Griffin about the tradeoffs between mental overhead and type safety, the expressiveness of different type systems, and some of the places where Rust currently falls down.
+
+### Corrigenda
+
+Sean noted he could be wrong about `IEnumerable<T>` not having a `Sum` method in C♯, and post-show research indicated that he was (it's possible it was added after he had stopped doing .NET work, of course). See the [documentation][c1] for details on how `IEnumerable<T>.Sum` it behaves in C♯ if you're curious.
+
+As a related note, I (Chris) have done a little bit of digging on C♯ in the interval and it's fair to say that while a lot of the "ceremony" involved in writing C♯ is annoying, it's much more than just a "slightly nicer Java", and indeed is a much nicer language than my previous, limited exposure had led me to believe. It's no Rust or F♯, but its type system is substantially more capable than Java's.
+
+[c1]: https://msdn.microsoft.com/library/bb919210(v=vs.90).aspx
+
+
+Links
+-----
+
+  - fmap
+      + [Discussion of `fmap` with `Optional` in Swift][l1]
+      + [In Haskell][l2]
+  - Rust:
+      + [Trait objects][l3]
+      + [Specialization RFC][l4]
+          * [Implementation][l5]
+  - [Diesel][l6]
+
+[l1]: https://robots.thoughtbot.com/functional-swift-for-dealing-with-optional-values
+[l2]: http://learnyouahaskell.com/functors-applicative-functors-and-monoids
+[l3]: https://doc.rust-lang.org/book/trait-objects.html
+[l4]: https://github.com/rust-lang/rfcs/pull/1210
+[l5]: https://github.com/rust-lang/rust/issues/31844
+[l6]: https://github.com/sgrif/diesel
+
+
+Sponsors
+--------
+
+  - Aleksey Pirogov
+  - Chris Palmer
+  - [Derek Morr][s3]
+  - Hamza Sheikh
+  - Leif Arne Storset
+  - Luca Schmid
+  - Micael Bergeron
+  - Ralph Giles ("rillian")
+  - reddraggone9
+  - Ryan Ollos
+  - [William Roe][s11]
+
+[s3]: https://twitter.com/derekmorr
+[s11]: http://willroe.me
+
+### Become a sponsor
+
+  - [Patreon](https://www.patreon.com/newrustacean)
+  - [Venmo](https://venmo.com/chriskrycho)
+  - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
+  - [Cash.me](https://cash.me/$chriskrycho)
+
+
+Follow
+------
+
+  - New Rustacean:
+      + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
+      + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
+  - Chris Krycho
+      + GitHub: [chriskrycho](https://github.com/chriskrycho)
+      + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
+]]></itunes:summary>
+            <itunes:duration>22:14</itunes:duration>
+        </item>
         <item>
             <title>Interview 1::Part 1 – Sean Griffin</title>
             <link>http://newrustacean.com/show_notes/interview/_1/part_1/</link>
@@ -151,7 +296,6 @@ Follow
 -   Chris Krycho
     -   GitHub: chriskrycho
     -   Twitter: @chriskrycho]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>24:50</itunes:duration>
         </item>
         <item>
@@ -229,7 +373,6 @@ Follow
 -   Chris Krycho
     -   Twitter: @chriskrycho
     -   App.net: @chriskrycho]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>12:03</itunes:duration>
         </item>
         <item>
@@ -341,7 +484,6 @@ Follow
     -   Twitter: @chriskrycho
     -   App.net: @chriskrycho
 ]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>16:32</itunes:duration>
         </item>
         <item>
@@ -480,7 +622,6 @@ Follow
     -   App.net: @chriskrycho
 
 ]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>17:23</itunes:duration>
         </item>
         <item>
@@ -595,7 +736,6 @@ Follow
 -   Chris Krycho
     -   Twitter: @chriskrycho
     -   App.net: @chriskrycho]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>17:37</itunes:duration>
         </item>
         <item>
@@ -720,7 +860,6 @@ Follow
 -   Chris Krycho
     -   Twitter: @chriskrycho
     -   App.net: @chriskrycho]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>18:46</itunes:duration>
         </item>
         <item>
@@ -798,7 +937,6 @@ FOLLOW
 -   Chris Krycho
     -   Twitter: @chriskrycho
     -   App.net: @chriskrycho]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>9:41</itunes:duration>
         </item>
         <item>
@@ -844,7 +982,6 @@ FOLLOW
             <guid isPermaLink="false">78C8C06F-DEB6-4821-9995-E550FBA87059</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:subtitle>The delights and challenges of knowing (or even just learning) lots of languages.</itunes:subtitle>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>8:28</itunes:duration>
         </item>
         <item>
@@ -917,7 +1054,6 @@ Become a sponsor
 - https://venmo.com/chriskrycho
 - dwolla.com/hub/chriskrycho
 - ttps://cash.me/$chriskrycho]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>18:22</itunes:duration>
         </item>
         <item>
@@ -1015,7 +1151,6 @@ FOLLOW
     -   Twitter: @chriskrycho
     -   App.net: @chriskrycho
 ]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>18:30</itunes:duration>
         </item>
         <item>
@@ -1106,7 +1241,6 @@ FOLLOW/SUPPORT
     -   Twitter: @chriskrycho
     -   App.net: @chriskrycho
 ]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>17:07</itunes:duration>
         </item>
         <item>
@@ -1208,7 +1342,6 @@ should work through in the sequence they appear in the source:
 5.  demonstrate_option
 6.  get_a_result
 7.  demonstrate_result]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>16:51</itunes:duration>
         </item>
         <item>
@@ -1317,7 +1450,6 @@ Links
 * Text of the RFC
 
 * GitHub pull request]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>17:12</itunes:duration>
         </item>
         <item>
@@ -1458,7 +1590,6 @@ Links
 * “Stability as a Deliverable”: Rust official blog post on version stability, backwards compatibility, and release channels.
 
 * The Rust book chapter on rustc]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>17:06</itunes:duration>
         </item>
         <item>
@@ -1509,7 +1640,6 @@ This is an almost-empty module: we aren’t doing any fun code samples yet. I in
 * in the show notes attached to each episode
 
 Hopefully, the result will be a pretty helpful bunch of side content along with the audio of the podcast itself.]]></itunes:summary>
-            <itunes:explicit>no</itunes:explicit>
             <itunes:duration>17:11</itunes:duration>
         </item>
     </channel>

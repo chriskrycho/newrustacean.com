@@ -13,12 +13,11 @@ Patreon.com/newrustacean, or one-off contributions at Venmo, Dwolla, or cash.me.
 
 ### Follow/support
 
-You can find links to each of those, to other things mentioned on the show, and
-notes and detailed code samples illustrating macros at NewRustacean.com. You can
-also follow the show on Twitter @newrustacean, or follow me there @chriskrycho.
-You can help *others* find the show by rating and reviewing it on iTunes,
-recommending it in another podcast directory, tweeting about it, or just telling
-a friend!
+You can find links to each of those, to the other things Sean and I mentioned on
+the show, and more at NewRustacean.com. You can also follow the show on Twitter
+@newrustacean, or follow me there @chriskrycho. You can help *others* find the
+show by rating and reviewing it on iTunes, recommending it in another podcast
+directory, tweeting about it, or just telling a friend!
 
 Thanks to everyone who's added corrections and fixed typos in the show notes;
 pull requests are great. I also love hearing from you! Definitely say hi on
