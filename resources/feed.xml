@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Tue, 08 Mar 2016 10:12:24 -0500</pubDate>
-        <lastBuildDate>Tue, 08 Mar 2016 10:12:25 -0500</lastBuildDate>
+        <pubDate>Mon, 21 Mar 2016 06:58:36 -0400</pubDate>
+        <lastBuildDate>Mon, 21 Mar 2016 06:58:37 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,130 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e012: I'm not familiar with that expression</title>
+            <link>http://newrustacean.com/show_notes/e012/</link>
+            <description><![CDATA[<p>What it means to be an expression-oriented language, and how that works out in Rust.</p>
+<h2 id="notes">Notes</h2>
+<p>Rust is an <em>expression-oriented</em> language. What does that mean, and how does it play out in Rust? We look at <code>if</code> and <code>match</code> blocks, discuss looping constructs, and examine functions, and then widen out to discuss how having an expression-oriented language can change the way we think about programming.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="http://www.redox-os.org">Redox</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/mozilla.dev.servo/dcrNW6389g4">Servo alpha announcement</a></li>
+<li><a href="https://air.mozilla.org/bay-area-rust-meetup-february-2016/#@25m50s">WebRender</a></li>
+<li><a href="http://www.wired.com/2016/03/epic-story-dropboxs-exodus-amazon-cloud-empire/">Wired article on Dropbox</a></li>
+<li>Rust documentation on expression-oriented-ness:
+<ul>
+<li><a href="https://doc.rust-lang.org/book/functions.html#expressions-vs-statements">Rust Book</a></li>
+<li><a href="http://rustbyexample.com/expression.html">Rust by Example</a></li>
+<li><a href="https://doc.rust-lang.org/reference.html#statements-and-expressions">Rust Reference</a></li>
+</ul></li>
+<li><a href="https://github.com/rust-lang/rust/issues/1698">Removing Rust ternary</a></li>
+<li><a href="http://www.jpl.nasa.gov/edu/news/2016/3/16/how-many-decimals-of-pi-do-we-really-need/">Digits of pi necessary for astronavigation</a></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li>Chris Palmer</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Hamza Sheikh</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li>Pascal</li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Ralph “FriarTech” Loizzo</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>]]></description>
+            <pubDate>Mon, 21 Mar 2016 07:00:00 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e012.m4a" length="6768120" type="audio/x-m4a"/>
+            <guid isPermaLink="false">301B3967-5003-4D65-8ED6-D4594C2832F8</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[What it means to be an expression-oriented language, and how that works out in Rust.
+
+Notes
+
+Rust is an expression-oriented language. What does that mean, and how does it play out in Rust? We look at if and match blocks, discuss looping constructs, and examine functions, and then widen out to discuss how having an expression-oriented language can change the way we think about programming.
+
+Sponsors
+
+* Aleksey Pirogue
+
+* Chris Palmer
+
+* Derek Morr
+
+* Hamza Sheikh
+
+* Lachlan Collins
+
+* Leif Arne Storset
+
+* Luca Schmid
+
+* Micael Bergeron
+
+* Pascal
+
+* Ralph Giles (“gillian”)
+
+* Ralph “FriarTech” Loizzo
+
+* reddraggone9
+
+* Ryan Oleos
+
+* William Roe
+
+Become a sponsor
+
+* Patreon.com/newrustacean
+
+* Venmo.com/chriskrycho
+
+* Dwolla.com/hub/chriskrycho
+
+* Cash.me/$chriskrycho
+
+
+Contact
+
+* New Rustacean:
+
+- Twitter: @newrustacean
+
+- Email: hello@newrustacean.com
+
+* Chris Krycho
+
+- GitHub: chriskrycho
+
+- Twitter: @chriskrycho]]></itunes:summary>
+            <itunes:duration>16:41</itunes:duration>
+        </item>
         <item>
             <title>e011: Once Upon a Type</title>
             <link>http://newrustacean.com/show_notes/e011/</link>

@@ -1,4 +1,4 @@
-//! Once Upon a Type
+//! Once upon a type
 //!
 //!   - **Date:** March 6, 2016
 //!   - **Subject:** Type systems: strong vs. weak, dynamic vs. static, and
@@ -118,7 +118,7 @@ impl fmt::Display for Expressive {
             Expressive::Fairly => "fairly",
             Expressive::SortOf => "sort of",
             Expressive::Barely => "barely",
-            Expressive::NotEvenALittle => "not even a little"
+            Expressive::NotEvenALittle => "not even a little",
         };
 
         write!(f, "{} expressive", description)
@@ -156,7 +156,7 @@ impl fmt::Display for StaticallyKnown {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let description = match *self {
             StaticallyKnown::Yeah => "it's totally known at compile time",
-            StaticallyKnown::Nope => "we don't know anything about it until run time"
+            StaticallyKnown::Nope => "we don't know anything about it until run time",
         };
 
         write!(f, "{}", description)
@@ -177,7 +177,8 @@ impl TypeSystem {
     pub fn builder(name: &str,
                    expressive: Expressive,
                    strong: Strong,
-                   statically_known: StaticallyKnown) -> TypeSystem {
+                   statically_known: StaticallyKnown)
+                   -> TypeSystem {
 
         TypeSystem {
             name: name.to_string(),
@@ -197,23 +198,50 @@ impl TypeSystem {
 /// on the show---pretty much everything but generics makes an appearance in
 /// some way in this module.
 pub fn describe_type_systems() {
-    let js = TypeSystem::builder("ECMAScript", Expressive::Fairly, Strong::NopeNopeNope, StaticallyKnown::Nope);
+    let js = TypeSystem::builder("ECMAScript",
+                                 Expressive::Fairly,
+                                 Strong::NopeNopeNope,
+                                 StaticallyKnown::Nope);
 
-    let php = TypeSystem::builder("PHP", Expressive::Barely, Strong::NopeNopeNope, StaticallyKnown::Nope);
+    let php = TypeSystem::builder("PHP",
+                                  Expressive::Barely,
+                                  Strong::NopeNopeNope,
+                                  StaticallyKnown::Nope);
 
-    let c = TypeSystem::builder("C", Expressive::Barely, Strong::NotEspecially, StaticallyKnown::Yeah);
+    let c = TypeSystem::builder("C",
+                                Expressive::Barely,
+                                Strong::NotEspecially,
+                                StaticallyKnown::Yeah);
 
-    let cpp = TypeSystem::builder("C++", Expressive::SortOf, Strong::ABit, StaticallyKnown::Yeah);
+    let cpp = TypeSystem::builder("C++",
+                                  Expressive::SortOf,
+                                  Strong::ABit,
+                                  StaticallyKnown::Yeah);
 
-    let java = TypeSystem::builder("Java", Expressive::SortOf, Strong::ABit, StaticallyKnown::Yeah);
+    let java = TypeSystem::builder("Java",
+                                   Expressive::SortOf,
+                                   Strong::ABit,
+                                   StaticallyKnown::Yeah);
 
-    let csharp = TypeSystem::builder("C♯", Expressive::Fairly, Strong::Indeed, StaticallyKnown::Yeah);
+    let csharp = TypeSystem::builder("C♯",
+                                     Expressive::Fairly,
+                                     Strong::Indeed,
+                                     StaticallyKnown::Yeah);
 
-    let swift = TypeSystem::builder("Swift", Expressive::PrettyDarn, Strong::Indeed, StaticallyKnown::Yeah);
+    let swift = TypeSystem::builder("Swift",
+                                    Expressive::PrettyDarn,
+                                    Strong::Indeed,
+                                    StaticallyKnown::Yeah);
 
-    let rust = TypeSystem::builder("Rust", Expressive::PrettyDarn, Strong::Indeed, StaticallyKnown::Yeah);
+    let rust = TypeSystem::builder("Rust",
+                                   Expressive::PrettyDarn,
+                                   Strong::Indeed,
+                                   StaticallyKnown::Yeah);
 
-    let haskell = TypeSystem::builder("Haskell", Expressive::Ridiculously, Strong::Indeed, StaticallyKnown::Yeah);
+    let haskell = TypeSystem::builder("Haskell",
+                                      Expressive::Ridiculously,
+                                      Strong::Indeed,
+                                      StaticallyKnown::Yeah);
 
     let langs = vec![js, php, c, cpp, java, csharp, swift, rust, haskell];
     for lang in langs {

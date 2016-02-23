@@ -47,7 +47,7 @@
 //! off by being a file, we *have* to use the `//!` style of documentation
 //! comments to mark them off. However, as you'll see below, if we structure or
 //! declare modules in other ways, we will not have the same restriction.
-//! 
+//!
 //! # Sponsors
 //!
 //!   - reddraggone9

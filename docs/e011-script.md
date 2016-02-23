@@ -1,4 +1,4 @@
-Once Upon a Type
+Once upon a type
 ================
 
 
