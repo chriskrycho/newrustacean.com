@@ -1,6 +1,6 @@
 //! Sean Griffin on type systems and hopes for Rust's future
 //!
-//!   - **Date:** February 21, 2016
+//!   - **Date:** February 25, 2016
 //!   - **Subject:** Type system strengths and weaknesses, and the weird corners
 //!     of Rust (with some hopes for its future)
 //!   - **Audio:**
