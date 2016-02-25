@@ -41,10 +41,10 @@
         <item>
             <title>Interview 1::Part 1 – Sean Griffin</title>
             <link>http://newrustacean.com/show_notes/interview/_1/part_1/</link>
-            <description><![CDATA[<p>Sean Griffin on Rust, Diesel, and ORMs</p>
-<h2 id="notes">Notes</h2>
-<p>Chris chats with Sean Griffin about his programming background and initial experience with Rust, Rust’s appeal, and what he’s doing with Diesel and some of his plans for a new web framework in Rust.</p>
-<h2 id="links">Links</h2>
+            <description><![CDATA[<p>Sean Griffin on Rust, ORMs, and Web Frameworks</p>
+<h2>Notes</h2>
+<p>Chris chats with Sean Griffin about his programming background and initial experience with Rust, Rust's appeal, and what he's doing with Diesel and some of his plans for a new web framework in Rust.</p>
+<h2>Links</h2>
 <ul>
 <li><a href="http://rubyonrails.org">Ruby on Rails</a></li>
 <li><a href="http://guides.rubyonrails.org/active_record_basics.html">Active Record</a></li>
@@ -52,22 +52,25 @@
 <ul>
 <li><a href="https://github.com/sgrif/diesel">GitHub</a></li>
 <li><a href="https://gitter.im/sgrif/diesel">Gitter</a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="http://bikeshed.fm">The Bike Shed</a> episodes which include talk of Rust and Diesel
 <ul>
 <li><a href="http://bikeshed.fm/51">51: Is Sim City Still Running (with Steve Klabnik)</a></li>
 <li><a href="http://bikeshed.fm/49">49: A More Practical Haskell</a></li>
 <li><a href="http://bikeshed.fm/48">48: Is Everyone Trying Their Best?</a></li>
-<li><a href="http://bikeshed.fm/46">46: Don’t Breath, Save the Planet</a></li>
-<li><a href="http://bikeshed.fm/44">44: It Won’t Crash… It Might Crash</a></li>
+<li><a href="http://bikeshed.fm/46">46: Don't Breath, Save the Planet</a></li>
+<li><a href="http://bikeshed.fm/44">44: It Won't Crash... It Might Crash</a></li>
 <li><a href="http://bikeshed.fm/39">39: Okay With Instability</a></li>
 <li><a href="http://bikeshed.fm/32">32: Bug for Bug Compatibility</a></li>
 <li><a href="http://bikeshed.fm/31">31: Oxidizing an ORM</a></li>
-<li><a href="http://bikeshed.fm/27">27: I’ve Got 29.97 Problems (and codecs are some)</a></li>
+<li><a href="http://bikeshed.fm/27">27: I've Got 29.97 Problems (and codecs are some)</a></li>
 <li><a href="http://bikeshed.fm/23">23: Why Did They Call It Rust?</a></li>
-</ul></li>
 </ul>
-<h2 id="sponsors">Sponsors</h2>
+</li>
+<li><a href="https://gumroad.com/l/maybe-haskell"><em>Maybe Haskell</em></a></li>
+</ul>
+<h2>Sponsors</h2>
 <ul>
 <li>Aleksey Pirogov</li>
 <li>Chris Palmer</li>
@@ -76,31 +79,34 @@
 <li>Leif Arne Storset</li>
 <li>Luca Schmid</li>
 <li>Micael Bergeron</li>
-<li>Ralph Giles (“rillian”)</li>
+<li>Ralph Giles ("rillian")</li>
 <li>reddraggone9</li>
 <li>Ryan Ollos</li>
 <li><a href="http://willroe.me">William Roe</a></li>
 </ul>
-<h3 id="become-a-sponsor">Become a sponsor</h3>
+<h3>Become a sponsor</h3>
 <ul>
 <li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
 <li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
 <li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
 <li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
 </ul>
-<h2 id="follow">Follow</h2>
+<h2>Follow</h2>
 <ul>
 <li>New Rustacean:
 <ul>
 <li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
 <li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Chris Krycho
 <ul>
 <li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
 <li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
-</ul></li>
-</ul>]]></description>
+</ul>
+</li>
+</ul>
+]]></description>
             <pubDate>Mon, 15 Feb 2016 15:00:00 -0500</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_1_part_1.m4a" length="10169865" type="audio/x-m4a"/>
             <guid isPermaLink="false">2FDF4C7A-DEC9-4642-A5FB-99D1D6726527</guid>

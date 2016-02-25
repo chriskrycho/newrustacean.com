@@ -45,6 +45,7 @@
 //!       + [31: Oxidizing an ORM][l14]
 //!       + [27: I've Got 29.97 Problems (and codecs are some)][l15]
 //!       + [23: Why Did They Call It Rust?][l16]
+//!   - [_Maybe Haskell_][l17]
 //!
 //! [l1]: http://rubyonrails.org
 //! [l2]: http://guides.rubyonrails.org/active_record_basics.html
@@ -62,6 +63,7 @@
 //! [l14]: http://bikeshed.fm/31
 //! [l15]: http://bikeshed.fm/27
 //! [l16]: http://bikeshed.fm/23
+//! [l17]: https://gumroad.com/l/maybe-haskell
 //!
 //! Sponsors
 //! --------
