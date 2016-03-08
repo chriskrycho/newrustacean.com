@@ -54,7 +54,7 @@
 //! [l1]: http://blog.rust-lang.org/2016/03/02/Rust-1.7.html
 //! [l2]: http://blog.rust-lang.org/2016/03/02/Rust-1.7.html#library-stabilizations
 //! [l3]: http://www.cs.ru.nl/~herman/PUBS/IntroTT-improved.pdf
-//! [l4]: https://jadpole.github.io/rust/type-system/
+//! [l4]: https://jadpole.github.io/rust/type-system
 //! [l5]: http://cglab.ca/~abeinges/blah/rust-reuse-and-recycle/
 //!
 //!
