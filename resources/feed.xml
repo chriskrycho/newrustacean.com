@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.1.6(2632); Mac OS X Version 10.11.3 (Build 15D21) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.1.7(2646); Mac OS X Version 10.11.4 (Build 15E65) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Mon, 21 Mar 2016 06:58:36 -0400</pubDate>
-        <lastBuildDate>Mon, 21 Mar 2016 06:58:37 -0400</lastBuildDate>
+        <pubDate>Mon, 04 Apr 2016 19:52:33 -0400</pubDate>
+        <lastBuildDate>Mon, 04 Apr 2016 19:52:33 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,47 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e013: Staying alive</title>
+            <link>http://newrustacean.com/show_notes/e013/</link>
+            <description><![CDATA[<p>Reasoning about and using lifetimes in Rust (and why we need them)</p>
+<h2>Notes</h2>
+<p>Lifetimes are our way of reasoning about how long a given piece of data is<br />
+available and safe to use in Rust. The reason we don't have the dangling<br />
+pointer problem is that we <em>do</em> have lifetimes instead. They're not magic,<br />
+they're just a bit of semantics and syntax that let us specify the rules for<br />
+how long any given item lives, and how long references to data must be valid.</p>
+<h2>Links</h2>
+<ul>
+<li><a href="http://diesel.rs">Diesel</a>
+<ul>
+<li><a href="http://diesel.rs/guides/getting-started/">Tutorial</a></li>
+<li><a href="http://docs.diesel.rs/diesel/index.html">API docs</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/carllerche/mio">Mio, an I/O library</a>
+<ul>
+<li><a href="https://github.com/carllerche/mio/blob/getting-started/doc/getting-started.md">Getting Started</a></li>
+<li><a href="http://rustdoc.s3-website-us-east-1.amazonaws.com/mio/master/mio/">API Docs</a></li>
+</ul>
+</li>
+</ul>
+]]></description>
+            <pubDate>Mon, 04 Apr 2016 19:52:21 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e013.m4a" length="7121753" type="audio/x-m4a"/>
+            <guid isPermaLink="false">20F0A4EE-7D88-4C90-8BA5-7D28FB8AF0AD</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Reasoning about and using lifetimes in Rust (and why we need them)
+
+Notes
+Lifetimes are our way of reasoning about how long a given piece of data is
+available and safe to use in Rust. The reason we don't have the dangling
+pointer problem is that we do have lifetimes instead. They're not magic,
+they're just a bit of semantics and syntax that let us specify the rules for
+how long any given item lives, and how long references to data must be valid.
+]]></itunes:summary>
+            <itunes:duration>17:40</itunes:duration>
+        </item>
         <item>
             <title>e012: I'm not familiar with that expression</title>
             <link>http://newrustacean.com/show_notes/e012/</link>
