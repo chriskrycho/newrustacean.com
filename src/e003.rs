@@ -166,7 +166,10 @@ fn get_reused_structure() -> RelatedishThings {
 
 /// Shows how the result of an enum comes back as increasingly complex data.
 ///
-/// Note that while we *could* have a value (as in a C/C++ `enum`),
+/// Note that while we *could* have a numeric value associated with each
+/// enumerated value (as in a C/C++ `enum`), we don't *have* to. The value of
+/// an enumeration in Rust is *which enumerated value it is*, and nothing more
+/// unless you specify something more.
 pub fn demonstrate_basic_enumeration() {
     print!("{:?}\n{:?}\n{:?}\n{:?}\n{:?}\n",
            get_unit(),
