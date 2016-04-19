@@ -43,7 +43,7 @@
 //!  6. [get_a_result][note-6]
 //!  7. [demonstrate_result][note-7]
 //!
-//! [note-0]: /src/show_notes/e003.rs.html
+//! [note-0]: /src/show_notes/src/e003.rs.html
 //! [note-1]: /show_notes/e003/enum.RelatedishThings.html
 //! [note-2]: /show_notes/e003/fn.demonstrate_basic_enumeration.html
 //! [note-3]: /show_notes/e003/fn.demonstrate_match.html

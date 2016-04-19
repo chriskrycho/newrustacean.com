@@ -31,7 +31,7 @@
 //! have been in previous episodes.) In particular, the `test` module here is
 //! excluded because of the use of the `#[cfg(test)]` attribute marker on it.
 //!
-//! [reading the source]: /src/show_notes/e007.rs.html
+//! [reading the source]: /src/show_notes/src/e007.rs.html
 //!
 //! Because we are using the feature-gated benchmarking functionality, the
 //! show notes "library" can now only be compiled with the Rust nightly (as of
