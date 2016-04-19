@@ -47,6 +47,34 @@
   [l6]: http://rustdoc.s3-website-us-east-1.amazonaws.com/mio/master/mio/
 
 
+  Sponsors
+  --------
+
+    - Aleksey Pirogov
+    - [Chris Palmer]
+    - [Derek Morr]
+    - Hamza Sheikh
+    - Lachlan Collins
+    - Leif Arne Storset
+    - Luca Schmid
+    - Micael Bergeron
+    - [Pascal Hertleif]
+    - Ralph Giles ("rillian")
+    - Ralph "FriarTech" Loizzo
+    - reddraggone9
+    - Ryan Ollos
+    - Vesa Kaihlavirta
+    - [William Roe]
+
+  [Chris Palmer]: http://home.red-oxide.org/
+  [Derek Morr]: https://twitter.com/derekmorr
+  [Pascal Hertleif]: https://pascalhertleif.de/
+  [William Roe]: http://willroe.me
+
+  (Thanks to the couple people donating who opted out of the reward tier, as
+  well. You know who you are!)
+
+
   Examples
   --------
 
