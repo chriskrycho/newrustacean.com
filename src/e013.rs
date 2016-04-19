@@ -74,6 +74,24 @@
   (Thanks to the couple people donating who opted out of the reward tier, as
   well. You know who you are!)
 
+  ### Become a sponsor
+
+    - [Patreon](https://www.patreon.com/newrustacean)
+    - [Venmo](https://venmo.com/chriskrycho)
+    - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
+    - [Cash.me](https://cash.me/$chriskrycho)
+
+
+  Contact
+  -------
+
+    - New Rustacean:
+        + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
+        + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
+    - Chris Krycho
+        + GitHub: [chriskrycho](https://github.com/chriskrycho)
+        + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
+
 
   Examples
   --------

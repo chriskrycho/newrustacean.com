@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Tue, 19 Apr 2016 07:52:01 -0400</pubDate>
-        <lastBuildDate>Tue, 19 Apr 2016 07:52:01 -0400</lastBuildDate>
+        <pubDate>Tue, 19 Apr 2016 07:55:35 -0400</pubDate>
+        <lastBuildDate>Tue, 19 Apr 2016 07:55:35 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -192,6 +192,48 @@ how long any given item lives, and how long references to data must be valid.</p
 </ul>
 </li>
 </ul>
+<table><thead><tr></tr></thead><tbody><tr></tr></tbody></table><h2>Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Hamza Sheikh</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles ("rillian")</li>
+<li>Ralph "FriarTech" Loizzo</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as<br />
+well. You know who you are!)</p>
+<h3>Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+</ul>
+<h2>Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul>
+</li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul>
+</li>
+</ul>
 ]]></description>
             <pubDate>Mon, 04 Apr 2016 19:52:21 -0400</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e013.m4a" length="7121753" type="audio/x-m4a"/>
@@ -199,13 +241,77 @@ how long any given item lives, and how long references to data must be valid.</p
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary><![CDATA[Reasoning about and using lifetimes in Rust (and why we need them)
 
+
 Notes
+
 Lifetimes are our way of reasoning about how long a given piece of data is
 available and safe to use in Rust. The reason we don't have the dangling
 pointer problem is that we do have lifetimes instead. They're not magic,
 they're just a bit of semantics and syntax that let us specify the rules for
 how long any given item lives, and how long references to data must be valid.
-]]></itunes:summary>
+
+
+Sponsors
+
+* Aleksey Pirogue
+
+* Chris Palmer
+
+* Derek Morr
+
+* Hamza Sheikh
+
+* Lachlan Collins
+
+* Leif Arne Storset
+
+* Luca Schmid
+
+* Micael Bergeron
+
+* Pascal Hertleif
+
+* Ralph Giles ("gillian")
+
+* Ralph "FriarTech" Loizzo
+
+* reddraggone9
+
+* Ryan Oleos
+
+* Vesa Kaihlavirta
+
+* William Roe
+
+(Thanks to the couple people donating who opted out of the reward tier, as
+well. You know who you are!)
+
+
+Become a sponsor
+
+* Patreon.com/newrustacean
+
+* Venmo.com/chriskrycho
+
+* Dwolla.com/hub/chriskrycho
+
+* Cash.me/$chriskrycho
+
+
+Contact
+
+* New Rustacean:
+
+* Twitter: @newrustacean
+
+* Email: hello@newrustacean.com
+
+
+* Chris Krycho
+
+* GitHub: chriskrycho
+
+* Twitter: @chriskrycho]]></itunes:summary>
             <itunes:duration>17:40</itunes:duration>
         </item>
         <item>
