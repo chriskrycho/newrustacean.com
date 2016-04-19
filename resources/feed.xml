@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.1.7(2646); Mac OS X Version 10.11.4 (Build 15E65) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.1.8(2650); Mac OS X Version 10.11.4 (Build 15E65) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Mon, 04 Apr 2016 19:52:33 -0400</pubDate>
-        <lastBuildDate>Mon, 04 Apr 2016 19:52:33 -0400</lastBuildDate>
+        <pubDate>Tue, 19 Apr 2016 07:52:01 -0400</pubDate>
+        <lastBuildDate>Tue, 19 Apr 2016 07:52:01 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,135 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>Bonus 4: We can have nice things</title>
+            <link>http://newrustacean.com/show_notes/bonus/_4/</link>
+            <description><![CDATA[<p>Just how good Rust is, and how you can learn it even if you’re busy.</p>
+<h2 id="notes">Notes</h2>
+<p>Sometimes life goes crazy and I don’t have time to do all the technical writing required for a full episode, but I can’t get Rust off my mind, so I record an episode like this one. Where I talk a bit about how versatile Rust is and suggest some surprising ways you might be able to use it.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="http://blog.rust-lang.org/2016/04/14/Rust-1.8.html">Rust 1.8</a> blog post</li>
+<li><a href="http://fsharp.github.io/FAKE/">Fake</a> build tool in F♯</li>
+<li><a href="https://news.ycombinator.com/item?id=11498426">HackerNews</a> on Rust 1.8
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=11498608">Someone using it for personal projects</a></li>
+<li><a href="https://news.ycombinator.com/item?id=11499747">Using it in place of scripting languages</a></li>
+</ul></li>
+<li><a href="https://twitter.com/jdub/status/720801192884867073">“Feels like Python, runs like C”</a></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Hamza Sheikh</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Ralph “FriarTech” Loizzo</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>]]></description>
+            <pubDate>Tue, 19 Apr 2016 07:50:00 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_4.m4a" length="4195741" type="audio/x-m4a"/>
+            <guid isPermaLink="false">38DF55F2-94FB-4CA0-8212-9C4D2897167F</guid>
+            <itunes:author>Just how good Rust is, and how you can learn it even if you’re busy.</itunes:author>
+            <itunes:summary><![CDATA[Just how good Rust is, and how you can learn it even if you’re busy.
+
+
+Notes
+
+Sometimes life goes crazy and I don’t have time to do all the technical writing required for a full episode, but I can’t get Rust off my mind, so I record an episode like this one. Where I talk a bit about how versatile Rust is and suggest some surprising ways you might be able to use it.
+
+
+Sponsors
+
+* Aleksey Pirogue
+
+* Chris Palmer
+
+* Derek Morr
+
+* Hamza Sheikh
+
+* Lachlan Collins
+
+* Leif Arne Storset
+
+* Luca Schmid
+
+* Micael Bergeron
+
+* Pascal Hertleif
+
+* Ralph Giles (“gillian”)
+
+* Ralph “FriarTech” Loizzo
+
+* reddraggone9
+
+* Ryan Oleos
+
+* Vesa Kaihlavirta
+
+* William Roe
+
+(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)
+
+
+Become a sponsor
+
+* Patreon
+
+* Venom
+
+* Dwolla
+
+* Cash.me
+
+
+Contact
+
+* New Rustacean:
+
+* Twitter: @newrustacean
+
+* Email: hello@newrustacean.com
+
+* Chris Krycho
+
+* GitHub: chriskrycho
+
+* Twitter: @chriskrycho]]></itunes:summary>
+            <itunes:duration>10:17</itunes:duration>
+        </item>
         <item>
             <title>e013: Staying alive</title>
             <link>http://newrustacean.com/show_notes/e013/</link>
