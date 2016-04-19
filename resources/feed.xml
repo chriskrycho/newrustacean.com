@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Tue, 19 Apr 2016 07:55:35 -0400</pubDate>
-        <lastBuildDate>Tue, 19 Apr 2016 07:55:35 -0400</lastBuildDate>
+        <pubDate>Mon, 25 Apr 2016 22:16:09 -0400</pubDate>
+        <lastBuildDate>Mon, 25 Apr 2016 22:16:09 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,142 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e014: Stringing things along</title>
+            <link>http://newrustacean.com/show_notes/e014/</link>
+            <description><![CDATA[<p><code>Strings</code> <code>&amp;str</code>s and <code>Vec</code>s and slices (and Unicode) – oh, my!</p>
+<h2 id="notes">Notes</h2>
+<p>This episode, I take a deep dive on strings in Rust, looking at the differences between <code>String</code> and <code>&amp;str</code>, discussing Unicode a bit, and then expanding the discussion to think about how these types relate to the types they’re built on (like <code>Vec</code>).</p>
+<h2 id="links">Links</h2>
+<ul>
+<li>Strings:
+<ul>
+<li><a href="https://doc.rust-lang.org/book/strings.html">The Rust Book</a></li>
+<li><a href="http://rustbyexample.com/std/str.html">Rust by Example</a></li>
+<li><code>str</code> docs:
+<ul>
+<li><a href="http://doc.rust-lang.org/std/str/">module</a></li>
+<li><a href="http://doc.rust-lang.org/std/primitive.str.html">primitive type</a></li>
+</ul></li>
+<li><code>String</code>
+<ul>
+<li><a href="http://doc.rust-lang.org/std/string/index.html">module</a></li>
+<li><a href="http://doc.rust-lang.org/std/string/struct.String.html">type definition</a></li>
+</ul></li>
+</ul></li>
+<li>Dereferencing
+<ul>
+<li><a href="http://doc.rust-lang.org/book/deref-coercions.html">coercions</a></li>
+<li><a href="http://doc.rust-lang.org/std/ops/trait.Deref.html"><code>std::ops::Deref</code></a></li>
+</ul></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Hamza Sheikh</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Ralph “FriarTech” Loizzo</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>]]></description>
+            <pubDate>Mon, 25 Apr 2016 22:16:03 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e014.m4a" length="7703410" type="audio/x-m4a"/>
+            <guid isPermaLink="false">50D3DAF8-7B5C-4B19-A6DE-E2CFD21F075F</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Strings &strs and Vecs and slices (and Unicode) – oh, my!
+
+
+Notes
+
+This episode, I take a deep dive on strings in Rust, looking at the differences between String and &str, discussing Unicode a bit, and then expanding the discussion to think about how these types relate to the types they’re built on (like Vec).
+
+
+Links
+
+-   Strings:
+    -   The Rust Book
+    -   Rust by Example
+    -   str docs:
+        -   module
+        -   primitive type
+    -   String
+        -   module
+        -   type definition
+-   Dereferencing
+    -   coercions
+    -   std::ops::Deref
+
+
+Sponsors
+
+-   Aleksey Pirogov
+-   Chris Palmer
+-   Derek Morr
+-   Hamza Sheikh
+-   Lachlan Collins
+-   Leif Arne Storset
+-   Luca Schmid
+-   Micael Bergeron
+-   Pascal Hertleif
+-   Ralph Giles (“rillian”)
+-   Ralph “FriarTech” Loizzo
+-   reddraggone9
+-   Ryan Ollos
+-   Vesa Kaihlavirta
+-   William Roe
+
+(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)
+
+Become a sponsor
+
+-   Patreon.com/chriskrycho
+-   Venmo.com/chriskrycho
+-   Dwolla.com/hub/chriskrycho
+-   Cash.me/$chriskrycho
+-   Flattr.com/profile/chriskrycho
+
+
+Contact
+
+-   New Rustacean:
+    -   Twitter: @newrustacean
+    -   Email: hello@newrustacean.com
+-   Chris Krycho
+    -   GitHub: chriskrycho
+    -   Twitter: @chriskrycho]]></itunes:summary>
+            <itunes:duration>18:58</itunes:duration>
+        </item>
         <item>
             <title>Bonus 4: We can have nice things</title>
             <link>http://newrustacean.com/show_notes/bonus/_4/</link>
