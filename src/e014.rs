@@ -27,6 +27,15 @@
 //! expanding the discussion to think about how these types relate to the types
 //! they're built on (like `Vec`).
 //!
+//! ### Corrigenda
+//!
+//! Listener Nev pointed out to me that I got it wrong when describing how
+//! `&str` data is stored. It is *not* stack-allocated, but rather goes in the
+//! [data segment]. I should have said *statically*-allocated, not
+//! *stack*-allocated. Thanks to Nev for the correction!
+//!
+//! [data segment]: https://en.wikipedia.org/wiki/Data_segment
+//!
 //!
 //! Links
 //! -----
