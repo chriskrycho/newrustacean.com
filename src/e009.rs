@@ -28,7 +28,7 @@
 //! You'll find today's [source example][src] fairly interesting, I think: it's
 //! just one type, but it uses almost every concept discussed on the show today!
 //!
-//! [src]: /src/show_notes/e009.rs.html
+//! [src]: /src/show_notes/src/e009.rs.html
 //!
 //!
 //! Links

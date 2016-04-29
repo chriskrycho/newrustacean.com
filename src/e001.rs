@@ -24,7 +24,7 @@
 //! as the show notes. If you listen to the episode or take a look at the
 //! [source files][src], you'll see how it works!
 //!
-//! [src]: /src/show_notes/e001.rs.html
+//! [src]: /src/show_notes/src/e001.rs.html
 //!
 //! The components below are included *solely* so you can see how the
 //! docstrings work with each kind of thing. Make sure to click on the names of
@@ -95,7 +95,7 @@
 /// It's worth taking a look at the [source] for this: you can see how private
 /// and public fields are handled differently in the documentation.
 ///
-/// [source]: /src/NewRustacean/e001/mod.rs.html
+/// [source]: /src/show_notes/src/e001.rs.html
 pub struct TVShow {
     /// Here is a string telling us what the theme song was.
     pub theme: String,

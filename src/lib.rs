@@ -6,7 +6,7 @@
 //! Yes, this is a slightly crazy way of building a show notes site for a
 //! podcast. See [e001: Document all the things!][e001] for more details.
 //!
-//! [e001]: /src/show_notes/e001.rs.html
+//! [e001]: /src/show_notes/src/e001.rs.html
 
 
 // Set the crate-level HTML rendering rules for the documentation.

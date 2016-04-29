@@ -98,7 +98,7 @@
 //!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
 
-/// A trivial function for a trivial test. See the [source](/src/show_notes/e007.rs.html)!
+/// A trivial function for a trivial test. See the [source](/src/show_notes/src/e007.rs.html)!
 pub fn add(a: f64, b: f64) -> f64 {
     a + b
 }
