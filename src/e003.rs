@@ -205,7 +205,7 @@ pub fn demonstrate_match() {
     println!("I asked: '{:}'; the answer was: {:}", question, answer);
 
     // or letters...
-    let character = 'c';
+    let character = 'C';
     match character {
         'A'...'B' => println!("Nope, not those letters."),
         'C' => println!("Why, yes, my name *does* start with a 'C'"),
