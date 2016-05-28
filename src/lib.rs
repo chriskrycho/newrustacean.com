@@ -43,3 +43,4 @@ pub mod e014;
 
 pub mod bonus;
 pub mod interview;
+pub mod news;
