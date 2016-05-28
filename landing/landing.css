@@ -235,7 +235,7 @@ nav li a:active {
     padding-right: 0.25em;
 }
 
-/* Special styles for */
+/* Special styles for navigation */
 nav .inner_list {
     padding: 0 10%;
     display: flex;
@@ -290,4 +290,42 @@ footer a:hover {
 .colophon_list li {
     line-height: 1.2;
     padding-bottom: 1em;
+}
+
+/* ----- Page styles ----- */
+.page-content {
+  width: 100%;
+  background: white;
+  margin: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.page-content > * {
+  max-width: 40em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----- Component styles ----- */
+.sponsors-list {
+  padding-left: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.sponsors-list__sponsor {
+  padding: 0 0 1em;
+  font-size: 1.5em;
+}
+
+.sponsors-list__sponsor-dates {
+  font-style: italic;
+}
+
+.sponsors-list__sponsor::before,
+.sponsors-list__sponsor::after {
+  content: '✨';
+  padding: 0 0.5em;
 }

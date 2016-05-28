@@ -1,7 +1,7 @@
 # -- Define variables. -- #
 BUILD_DIR = target/doc
 SRC = src/*.rs
-LANDING = landing/index.html landing/landing.css
+LANDING = landing/*.html landing/*.css
 RESOURCES = resources/* resources/.nojekyll
 
 # -- Define build rules -- #
