@@ -92,6 +92,7 @@
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
+use std::f64;
 
 /// Functions are expressions, and so are their contents.
 ///
@@ -149,20 +150,28 @@ pub fn if_blocks_are_expressions() -> f64 {
     if a_bool {
         42.0
     } else {
-        3.141592653589793
+        f64::consts::PI
     }
 }
 
+
+#[cfg_attr(feature = "clippy", allow(dead_code))]
+enum ThreeTypes {
+    First,
+    Second,
+    Third,
+}
 
 /// Match blocks are also expressions.
 ///
 /// This particular example demonstrates both local binding and returning a
 /// match expression's value as the return value from the entire function.
 pub fn match_blocks_are_expressions() -> String {
-    let a_bool = true;
-    let x = match a_bool {
-        true => 42.0,
-        false => 3.141592653589793,
+    let a_three_type = ThreeTypes::Second;
+    let x = match a_three_type {
+        ThreeTypes::First => 42.0,
+        ThreeTypes::Second => f64::consts::PI,
+        ThreeTypes::Third => f64::INFINITY
     };
 
     match x {

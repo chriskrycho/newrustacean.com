@@ -44,13 +44,13 @@
 //!   - [Rust and MSVC tracking issue][2]
 //!   - Other documentation tools:
 //!       + Predecessors:
-//!           * [Python's Sphinx tool][3]
-//!           * [Doxygen][4]
-//!           * [JSDoc][5]
-//!           * [JavaDoc][6]
+//!           * [Python's Sphinx tool]
+//!           * [Doxygen]
+//!           * [`JSDoc`]
+//!           * [`JavaDoc`]
 //!       + Other new languages with Markdown tooling
 //!           * [Julia][7] has a [built-in documentation system][8]
-//!           * [Elixir][9] has [ex_doc][10]
+//!           * [Elixir][9] has [`ex_doc`][10]
 //!   - [Rust 1.3 release announcement][11]
 //!   - Rust's package hosting: [crates.io][12]
 //!       + [Crater][13] for testing for backwards compatibility
@@ -60,10 +60,10 @@
 //!   - [The Rust book chapter on `rustdoc`][16]
 //!
 //! [2]: https://github.com/rust-lang/rfcs/issues/1061
-//! [3]: http://sphinx-doc.org
-//! [4]: http://www.stack.nl/~dimitri/doxygen/
-//! [5]: http://usejsdoc.org
-//! [6]: http://www.oracle.com/technetwork/articles/java/index-jsp-135444.html
+//! [Python's Sphinx tool]: http://sphinx-doc.org
+//! [Doxygen]: http://www.stack.nl/~dimitri/doxygen/
+//! [`JSDoc`]: http://usejsdoc.org
+//! [`JavaDoc`]: http://www.oracle.com/technetwork/articles/java/index-jsp-135444.html
 //! [7]: http://julialang.org
 //! [8]: http://julia.readthedocs.org/en/latest/manual/documentation/
 //! [9]: http://elixir-lang.org

@@ -33,24 +33,24 @@
 //! ## Order
 //! There is a specific order to the examples below, and it is *not* the
 //! automatically-alphabetized order rendered by `rustdoc`. Instead, you should
-//! work through in the sequence they appear in the [source][note-0]:
+//! work through in the sequence they appear in the [source]:
 //!
-//!  1. [RelatedishThings][note-1]
-//!  2. [demonstrate_basic_enumeration][note-2]
-//!  3. [demonstrate_match][note-3]
-//!  4. [get_an_option][note-4]
-//!  5. [demonstrate_option][note-5]
-//!  6. [get_a_result][note-6]
-//!  7. [demonstrate_result][note-7]
+//!  1. [`RelatedishThings`]
+//!  2. [`demonstrate_basic_enumeration`]
+//!  3. [`demonstrate_match`]
+//!  4. [`get_an_option`]
+//!  5. [`demonstrate_option`]
+//!  6. [`get_a_result`]
+//!  7. [`demonstrate_result`]
 //!
-//! [note-0]: /src/show_notes/src/e003.rs.html
-//! [note-1]: /show_notes/e003/enum.RelatedishThings.html
-//! [note-2]: /show_notes/e003/fn.demonstrate_basic_enumeration.html
-//! [note-3]: /show_notes/e003/fn.demonstrate_match.html
-//! [note-4]: /show_notes/e003/fn.get_an_option.html
-//! [note-5]: /show_notes/e003/fn.demonstrate_option.html
-//! [note-6]: /show_notes/e003/fn.get_a_result.html
-//! [note-7]: /show_notes/e003/fn.demonstrate_result.html
+//! [source]: /src/show_notes/src/e003.rs.html
+//! [`RelatedishThings`]: /show_notes/e003/enum.RelatedishThings.html
+//! [`demonstrate_basic_enumeration`]: /show_notes/e003/fn.demonstrate_basic_enumeration.html
+//! [`demonstrate_match`]: /show_notes/e003/fn.demonstrate_match.html
+//! [`get_an_option`]: /show_notes/e003/fn.get_an_option.html
+//! [`demonstrate_option`]: /show_notes/e003/fn.demonstrate_option.html
+//! [`get_a_result`]: /show_notes/e003/fn.get_a_result.html
+//! [`demonstrate_result`]: /show_notes/e003/fn.demonstrate_result.html
 //!
 //! ## Links
 //!
@@ -124,25 +124,25 @@ pub enum RelatedishThings {
 }
 
 
-/// Shows how returning a RelatedishThings::Unit instance works.
+/// Shows how returning a `RelatedishThings::Unit` instance works.
 fn get_unit() -> RelatedishThings {
     RelatedishThings::Unit
 }
 
 
-/// Shows how returning a RelatedishThings::SomeName instance works.
+/// Shows how returning a `RelatedishThings::SomeName` instance works.
 fn get_name() -> RelatedishThings {
     RelatedishThings::SomeName("New Rustacean".to_string())
 }
 
 
-/// Shows how returning a RelatedishThings::SomeValue instance works.
+/// Shows how returning a `RelatedishThings::SomeValue` instance works.
 fn get_value() -> RelatedishThings {
     RelatedishThings::SomeValue(42)
 }
 
 
-/// Shows how returning a RelatedishThings::ComplexData instance works.
+/// Shows how returning a `RelatedishThings::ComplexData` instance works.
 fn get_complex_data() -> RelatedishThings {
     RelatedishThings::ComplexData {
         description: "A fun podcast!".to_string(),
@@ -151,7 +151,7 @@ fn get_complex_data() -> RelatedishThings {
 }
 
 
-/// Shows how returning a RelatedishThings::ReusedStructure instance works.
+/// Shows how returning a `RelatedishThings::ReusedStructure` instance works.
 fn get_reused_structure() -> RelatedishThings {
     // First create a struct from our (silly) PreexistingStruct type.
     let s = PreexistingStruct {
@@ -190,6 +190,7 @@ pub fn demonstrate_basic_enumeration() {
 ///     sole component of the match arm.
 ///   - You can destructure complex types into their components. You can ignore
 ///     components of complex types with `_` as well.
+#[cfg_attr(feature = "clippy", allow(approx_constant))]
 pub fn demonstrate_match() {
     // You can match on numbers...
     let answer = 42;
@@ -230,10 +231,11 @@ pub fn demonstrate_match() {
 
 
 /// Shows how this is used in a more meaningful context, with a standard type.
+#[cfg_attr(feature = "clippy", allow(approx_constant))]
 pub fn get_an_option(get_it: bool) -> Option<f64> {
     if get_it {
         // Returns an `Option` enum in the `Some` type.
-        Some(3.14159)
+        Some(3.141)
     } else {
         // Returns an `Option` enum in the `None` type. This might look like the
         // `null` type you'd see elsewhere; it isn't. See below.
@@ -265,6 +267,7 @@ pub fn demonstrate_option() {
 /// in/out arguments so that you can get a normal/error-indicating return code.
 /// Instead, you just return a `Result`, and then `match` on that value to
 /// handle it.
+#[cfg_attr(feature = "clippy", allow(approx_constant))]
 pub fn get_a_result(succeeds: bool) -> Result<f64, String> {
     if succeeds {
         Ok(2.718_281_828)
