@@ -8,6 +8,10 @@
 //!
 //! [e001]: /src/show_notes/src/e001.rs.html
 
+// Allow unstable features so that we can do things you normally wouldn't, like
+// use `strong_count` in e015.
+// #![allow(unstable)]
+#![feature(rc_counts)]
 
 // Set the crate-level HTML rendering rules for the documentation.
 #![doc(html_logo_url = "http://newrustacean.com/podcast.png",
@@ -40,6 +44,7 @@ pub mod e011;
 pub mod e012;
 pub mod e013;
 pub mod e014;
+pub mod e015;
 
 pub mod bonus;
 pub mod interview;

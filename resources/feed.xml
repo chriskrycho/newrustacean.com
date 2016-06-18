@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.2.2(2752); Mac OS X Version 10.11.5 (Build 15F34) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.2.3(2757); Mac OS X Version 10.11.5 (Build 15F34) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Tue, 31 May 2016 14:13:29 -0400</pubDate>
-        <lastBuildDate>Tue, 31 May 2016 14:13:30 -0400</lastBuildDate>
+        <pubDate>Fri, 17 Jun 2016 20:07:35 -0400</pubDate>
+        <lastBuildDate>Fri, 17 Jun 2016 20:07:36 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,128 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e015: Not dumb pointers</title>
+            <link>http://newrustacean.com/show_notes/e015/</link>
+            <description><![CDATA[<p><code>Box</code>, <code>String</code>, <code>Vec</code>, <code>Rc</code>, and <code>Arc</code> have this in common: they’re not dumb.</p>
+<p>This episode, we take a close look at smart pointer types—from a few we’ve already talked about, like <code>Box</code>, <code>Vec</code>, and <code>String</code>, to some new ones, like <code>Rc</code> and <code>Arc</code>.</p>
+<ul>
+<li>What smart pointers are, and what makes them ‘smart’.</li>
+<li>Why we want or need smart pointers.</li>
+<li>A bit about <code>Box</code>.</li>
+<li>A lot more about <code>Rc</code> and <code>Arc</code>.</li>
+</ul>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="http://rustconf.com">RustConf</a></li>
+<li><a href="http://www.rust-belt-rust.com">Rust Belt Rust Conference</a>
+<ul>
+<li><a href="http://www.rust-belt-rust.com/sessions/">sessions</a></li>
+</ul></li>
+<li><a href="https://soundcloud.com/posix4e/sets/rustyradio">Rusty Radio</a>
+<ul>
+<li><a href="http://feeds.soundcloud.com/users/soundcloud:users:1287419/sounds.rss">feed</a></li>
+</ul></li>
+<li><a href="http://exercism.io/languages/rust">Rust Exercism track</a>
+<ul>
+<li><a href="http://exercism.io/languages">All exercism language tracks</a></li>
+</ul></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Doug Reeves</li>
+<li>Hamza Sheikh</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Ralph “FriarTech” Loizzo</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Fri, 17 Jun 2016 20:07:22 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e015.m4a" length="8544080" type="audio/x-m4a"/>
+            <guid isPermaLink="false">DE71BD86-2409-4D8A-8A5A-797751339FC1</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Box, String, Vec, Rc, and Arc have this in common: they’re not dumb.
+
+This episode, we take a close look at smart pointer types—from a few we’ve already talked about, like Box, Vec, and String, to some new ones, like Rc and Arc.
+
+-   What smart pointers are, and what makes them ‘smart’.
+-   Why we want or need smart pointers.
+-   A bit about Box.
+-   A lot more about Rc and Arc.
+
+
+Sponsors
+
+-   Aleksey Pirogov
+-   Chris Palmer
+-   Daniel Collin
+-   Derek Morr
+-   Doug Reeves
+-   Hamza Sheikh
+-   Lachlan Collins
+-   Leif Arne Storset
+-   Luca Schmid
+-   Micael Bergeron
+-   Pascal Hertleif
+-   Ralph Giles (“rillian”)
+-   Ralph “FriarTech” Loizzo
+-   Raph Levien
+-   reddraggone9
+-   Ryan Ollos
+-   Vesa Kaihlavirta
+-   William Roe
+
+(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)
+
+
+Contact
+
+-   New Rustacean:
+    -   Twitter: @newrustacean
+    -   Email: hello@newrustacean.com
+-   Chris Krycho
+    -   GitHub: chriskrycho
+    -   Twitter: @chriskrycho
+
+]]></itunes:summary>
+            <itunes:duration>20:03</itunes:duration>
+        </item>
         <item>
             <title>News 1: One year and counting</title>
             <link>http://newrustacean.com/show_notes/news/_1/</link>
