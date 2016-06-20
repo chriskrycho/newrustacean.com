@@ -36,6 +36,18 @@
 //! will be! I expect to finish them over the course of this weekend, but I
 //! wanted to go ahead and get the episode out!
 //!
+//! ### Further reading
+//!
+//!   - _The Rust Programming Language_:
+//!       + [The Stack and the Heap]
+//!       + [Choosing Your Guarantees] -- see especially the sections on
+//!         `Rc` and `Arc`.
+//!   - Rust by Example: [17.1: Box, stack, and heap][rbe]
+//!   - API docs:
+//!       + [`std::boxed`]
+//!       + [`std::rc`]
+//!       + [`stc::sync::Arc`]
+//!
 //! Links
 //! -----
 //!
@@ -46,6 +58,9 @@
 //!       + [feed]
 //!   - [Rust Exercism track]
 //!       + [All exercism language tracks]
+//!   - [RFC 1636: Require documentation for all new features.][RFC1636] (Note:
+//!     I misspoke on the episode and said this was at rust-lang.org; it's not!
+//!     It's on GitHub, wtih the rest of the RFCs, of course.)
 //!
 //! [RustConf]: http://rustconf.com
 //! [Rust Belt Rust Conference]: http://www.rust-belt-rust.com
@@ -54,6 +69,13 @@
 //! [feed]: http://feeds.soundcloud.com/users/soundcloud:users:1287419/sounds.rss
 //! [Rust Exercism track]: http://exercism.io/languages/rust
 //! [All exercism language tracks]: http://exercism.io/languages
+//! [RFC1636]: https://github.com/rust-lang/rfcs/pull/1636
+//! [The Stack and the Heap]: https://doc.rust-lang.org/book/the-stack-and-the-heap.html
+//! [Choosing Your Guarantees]: https://doc.rust-lang.org/book/choosing-your-guarantees.html
+//! [rbe]: http://rustbyexample.com/std/box.html
+//! [`std::boxed`]: https://doc.rust-lang.org/std/boxed/index.html
+//! [`std::rc`]: https://doc.rust-lang.org/std/rc/index.html
+//! [`stc::sync::Arc`]: https://doc.rust-lang.org/std/sync/struct.Arc.html
 //!
 //!
 //! Sponsors
