@@ -143,17 +143,17 @@
 //!
 //! It's also worth comparing the Rust code above with similar code in C++.
 //! Assume we have a `class` with the same name; using a smart pointer (in this
-//! case, `unique_ptr`) would give us this code:
+//! case, `unique_ptr`, returned from `make_unique`) would give us this code:
 //!
 //! ```cpp
-//! unique_ptr<Foo> someFoo(new Foo("bar"));
+//! const auto someFoo = std::make_unique<const Foo>("bar");
 //! ```
 //!
-//! You can see that these are similar in length (the declaration is actually
-//! the same number of characters). You're gaining *at least* some better
-//! guarantees in Rust; I'd argue you're also making a substantial gain in the
-//! clarity of the code (in that reading left to right as is normal in English,
-//! it's much clearer how the pieces fit together without backtracking).
+//! Both examples declare a smart pointer named `someFoo` that points to an
+//! immutable/constant `Foo` and where the pointer itself is immutable/constant.
+//! However, note that the Rust code is briefer and (at least in my opinion)
+//! substantially clearer than the corresponding C++ code to express the same
+//! semantic content.
 //!
 //! I'm not including further comments on `Box` here in the docs, because we've
 //! covered it before and it's fairly straightforward. The rest of these
