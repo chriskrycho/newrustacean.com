@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.2.3(2757); Mac OS X Version 10.11.5 (Build 15F34) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.2.4(2763); Mac OS X Version 10.11.5 (Build 15F34) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Fri, 17 Jun 2016 20:07:35 -0400</pubDate>
-        <lastBuildDate>Fri, 17 Jun 2016 20:07:36 -0400</lastBuildDate>
+        <pubDate>Fri, 24 Jun 2016 21:27:06 -0400</pubDate>
+        <lastBuildDate>Fri, 24 Jun 2016 21:27:06 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,162 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>Interview 2::Part 1 – Raph Levien</title>
+            <link>http://newrustacean.com/show_notes/interview/_2/part_1/</link>
+            <description><![CDATA[<p>Raph Levien on using Rust to build the Xi editor</p>
+<h2 id="notes">Notes</h2>
+<p>Chris chats with Raph Levien about his background in software development, what attracted him to Rust, and how he’s using Rust to build the Xi Editor, a project which aims to be the fastest text editor out there, with native user interfaces and a Rust text engine.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li>Past work:
+<ul>
+<li><a href="http://www.gimp.org">GIMP</a></li>
+<li><a href="http://gtk.org">GTK</a></li>
+<li><a href="http://www.ghostscript.com">GhostScript</a></li>
+<li><a href="https://fonts.google.com">Google Web Fonts</a></li>
+</ul></li>
+<li>Current projects:
+<ul>
+<li><a href="https://github.com/google/font-rs">font-rs</a></li>
+<li><a href="https://github.com/google/pulldown-cmark">pulldown-cmark</a></li>
+<li><a href="https://github.com/google/xi-editor">Xi Editor</a></li>
+</ul></li>
+<li><a href="https://en.wikipedia.org/wiki/Fuzz_testing">fuzz testing</a></li>
+<li><a href="http://developers.redhat.com/blog/2014/12/02/address-and-thread-sanitizers-gcc/">sanitizers</a></li>
+<li><a href="https://www.freetype.org">FreeType</a></li>
+<li><a href="https://www.freedesktop.org/wiki/Software/HarfBuzz/">HarfBuzz</a></li>
+<li><a href="http://site.icu-project.org">ICU</a></li>
+<li>Ropes
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Rope_%28data_structure%29">Wikipedia summary</a></li>
+<li><a href="http://citeseer.ist.psu.edu/viewdoc/download?doi=10.1.1.14.9450&amp;rep=rep1&amp;type=pdf">original paper</a></li>
+</ul></li>
+<li><a href="http://stackoverflow.com/questions/2307283/what-does-olog-n-mean-exactly">“log n operation”</a>, or <em>O(log n)</em>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Big_O_notation">Big O notation</a></li>
+</ul></li>
+<li>Rust:
+<ul>
+<li>[<code>Arc</code>]</li>
+<li>[<code>RefCell</code>]</li>
+<li>[<code>Borrow</code>]</li>
+<li>[<code>AsRef</code>]</li>
+</ul></li>
+<li>Rust libraries
+<ul>
+<li>[Crossbeam]</li>
+<li>[Rayon]</li>
+</ul></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Unix_philosophy">Unix philosophy</a></p>
+<blockquote>
+<p>The Unix philosophy emphasizes building simple, short, clear, modular, and extensible code that can be easily maintained and repurposed by developers other than its creators. The Unix philosophy favors composability as opposed to monolithic design.</p>
+</blockquote></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Doug Reeves</li>
+<li>Hamza Sheikh</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Ralph “FriarTech” Loizzo</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Fri, 24 Jun 2016 21:26:51 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_2_part_1.m4a" length="10807526" type="audio/x-m4a"/>
+            <guid isPermaLink="false">E585DC9C-567B-4902-B722-AF4D24DCA256</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Raph Levien on using Rust to build the Xi editor
+
+
+Notes
+
+Chris chats with Raph Levien about his background in software
+development, what attracted him to Rust, and how he’s using Rust to
+build the Xi Editor, a project which aims to be the fastest text editor
+out there, with native user interfaces and a Rust text engine.
+
+
+Sponsors
+
+-   Aleksey Pirogov
+-   Chris Palmer
+-   Daniel Collin
+-   Derek Morr
+-   Doug Reeves
+-   Hamza Sheikh
+-   Lachlan Collins
+-   Leif Arne Storset
+-   Luca Schmid
+-   Micael Bergeron
+-   Pascal Hertleif
+-   Ralph Giles (“rillian”)
+-   Ralph “FriarTech” Loizzo
+-   Raph Levien
+-   reddraggone9
+-   Ryan Ollos
+-   Vesa Kaihlavirta
+-   William Roe
+
+(Thanks to the couple people donating who opted out of the reward tier,
+as well. You know who you are!)
+
+Become a sponsor
+
+-   Patreon.com/newrustacean
+-   Venmo.com/chriskrycho
+-   Dwolla.com/hub/chriskrycho
+-   Cash.me/$chriskrycho
+-   Flattr.com/chriskrycho
+-   PayPal.me/chriskrycho
+
+
+Contact
+
+-   New Rustacean:
+    -   Twitter: @newrustacean
+    -   Email: hello@newrustacean.com
+-   Chris Krycho
+    -   GitHub: chriskrycho
+    -   Twitter: @chriskrycho]]></itunes:summary>
+            <itunes:duration>28:17</itunes:duration>
+        </item>
         <item>
             <title>e015: Not dumb pointers</title>
             <link>http://newrustacean.com/show_notes/e015/</link>
