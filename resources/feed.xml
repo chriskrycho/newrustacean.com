@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Fri, 24 Jun 2016 21:27:06 -0400</pubDate>
-        <lastBuildDate>Fri, 24 Jun 2016 21:27:06 -0400</lastBuildDate>
+        <pubDate>Mon, 04 Jul 2016 19:35:47 -0400</pubDate>
+        <lastBuildDate>Mon, 04 Jul 2016 19:35:47 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,134 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>Interview 2::Part 2 – Raph Levien</title>
+            <link>http://newrustacean.com/show_notes/interview/_2/part_2/</link>
+            <description><![CDATA[<p>Raph Levien on Rust’s current strengths and places it can improve</p>
+<h2 id="notes">Notes</h2>
+<p>Chris chats with Raph Levien about what inspired him to build a text editor, as well as about where the rough edges in the Rust development story are today, and how we might improve them going forward.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li>Rust/Ruby bridge: Helix
+<ul>
+<li><a href="http://blog.skylight.io/introducing-helix/">blog post</a></li>
+<li><a href="https://github.com/rustbridge/helix">GitHub</a></li>
+</ul></li>
+<li><a href="https://github.com/rustbridge">Rust Bridge project</a></li>
+<li>Ropes
+<ul>
+<li><a href="https://www.cs.rit.edu/usr/local/pub/jeh/courses/QUARTERS/FP/Labs/CedarRope/rope-paper.pdf">original paper</a></li>
+<li><a href="https://github.com/google/xi-editor/tree/master/rust/rope">Rust implementation</a></li>
+<li><a href="https://github.com/ivmai/bdwgc/">C++ implementation</a></li>
+</ul></li>
+<li>Yehuda Katz on Code Newbie
+<ul>
+<li><a href="http://www.codenewbie.org/podcast/creating-emberjs-part-i">Creating Ember JS - Part I</a></li>
+<li><a href="http://www.codenewbie.org/podcast/creating-emberjs-part-ii">Creating Ember JS - Part II</a></li>
+</ul></li>
+<li><a href="http://www.chriskrycho.com/2016/rust-and-swift-xi.html">Rust and Swift (xi): Hopes for the next generation of systems programming.</a></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Doug Reeves</li>
+<li>Hamza Sheikh</li>
+<li>Keith Gray</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Ralph “FriarTech” Loizzo</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>]]></description>
+            <pubDate>Mon, 04 Jul 2016 19:35:00 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_2_part_2.m4a" length="7563611" type="audio/x-m4a"/>
+            <guid isPermaLink="false">E2C1612A-178F-4AAF-8581-FC589BC3345E</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Raph Levien on Rust’s current strengths and places it can improve
+
+
+Notes
+
+Chris chats with Raph Levien about what inspired him to build a text editor, as well as about where the rough edges in the Rust development story are today, and how we might improve them going forward.
+
+
+Sponsors
+
+-   Aleksey Pirogov
+-   Chris Palmer
+-   Daniel Collin
+-   Derek Morr
+-   Doug Reeves
+-   Hamza Sheikh
+-   Keith Gray
+-   Lachlan Collins
+-   Leif Arne Storset
+-   Luca Schmid
+-   Micael Bergeron
+-   Pascal Hertleif
+-   Ralph Giles (“rillian”)
+-   Ralph “FriarTech” Loizzo
+-   Raph Levien
+-   reddraggone9
+-   Ryan Ollos
+-   Vesa Kaihlavirta
+-   William Roe
+
+(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)
+
+Become a sponsor
+
+-   Patreon.com/newrustacean
+-   Venmo.com/chriskrycho
+-   Dwolla.com/hub/chriskrycho
+-   Cash.me/$chriskrycho
+-   Flattr.com/chriskrycho
+-   PayPal.me/chriskrycho
+
+
+Contact
+
+-   New Rustacean:
+    -   Twitter: @newrustacean
+    -   Email: hello@newrustacean.com
+-   Chris Krycho
+    -   GitHub: chriskrycho
+    -   Twitter: @chriskrycho]]></itunes:summary>
+            <itunes:duration>19:33</itunes:duration>
+        </item>
         <item>
             <title>Interview 2::Part 1 – Raph Levien</title>
             <link>http://newrustacean.com/show_notes/interview/_2/part_1/</link>
