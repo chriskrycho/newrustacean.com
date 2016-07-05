@@ -63,11 +63,13 @@
 //!   - [Derek Morr]
 //!   - Doug Reeves
 //!   - Hamza Sheikh
+//!   - [Jakub "Limeth" Hlusička]
 //!   - Keith Gray
 //!   - Lachlan Collins
 //!   - Leif Arne Storset
 //!   - Luca Schmid
 //!   - Micael Bergeron
+//!   - Michael Clayton
 //!   - [Pascal Hertleif]
 //!   - Ralph Giles ("rillian")
 //!   - Ralph "FriarTech" Loizzo
@@ -80,6 +82,7 @@
 //! [Chris Palmer]: http://home.red-oxide.org/
 //! [Daniel Collin]: twitter.com/daniel_collin
 //! [Derek Morr]: https://twitter.com/derekmorr
+//! [Jakub "Limeth" Hlusička]: https://github.com/Limeth
 //! [Pascal Hertleif]: https://pascalhertleif.de/
 //! [William Roe]: http://willroe.me
 //!
