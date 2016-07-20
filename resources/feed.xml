@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.2.4(2763); Mac OS X Version 10.11.5 (Build 15F34) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.2.6(2774); Mac OS X Version 10.11.6 (Build 15G31) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Mon, 04 Jul 2016 19:35:47 -0400</pubDate>
-        <lastBuildDate>Mon, 04 Jul 2016 19:35:47 -0400</lastBuildDate>
+        <pubDate>Sat, 23 Jul 2016 13:58:52 -0400</pubDate>
+        <lastBuildDate>Sat, 23 Jul 2016 13:58:53 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,158 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e016: RefCells and code smells</title>
+            <link>http://newrustacean.com/show_notes/e016/</link>
+            <description><![CDATA[<p>Digging deeper on smart pointers and mutability with <code>Cell</code> and <code>RefCell</code>.
+<h2 id="notes">Notes</h2>
+<p>What are the <code>Cell</code> and <code>RefCell</code> types, and when should we use them?</p>
+<p>Today, we follow up both the detailed discussion of smart pointers in <a href="http://www.newrustacean.com/show_notes/e015/">e015</a> and the closely related discussion in <a href="http://www.newrustacean.com/show_notes/interview/_2/">Interview 2</a> with Raph Levien, and look at two types you need to have a good idea how to deal with if you want to use these smart pointer types more <em>ergonomically</em>—that is, how to use them without feeling like you’re beating your head against a wall!</p>
+<h2 id="links">Links</h2>
+<ul>
+<li>Rust 1.10
+<ul>
+<li><a href="https://blog.rust-lang.org/2016/07/07/Rust-1.10.html">blog post</a></li>
+<li><a href="https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1100-2016-07-07">full release notes</a></li>
+<li>cdylib
+<ul>
+<li>RFC: <a href="https://github.com/rust-lang/rfcs/blob/master/text/1510-rdylib.md">text</a> | <a href="https://github.com/rust-lang/rfcs/pull/1510">discussion</a></li>
+<li><a href="https://github.com/rust-lang/rust/pull/33553">implementation</a></li>
+</ul></li>
+</ul></li>
+<li><a href="https://internals.rust-lang.org/t/beta-testing-rustup-rs/3316/144">rustup 0.3.0 release</a></li>
+<li><a href="http://www.integer32.com">Integer32</a> (Carol Nichols’ and Jake Goulding’s new Rust consultancy)
+<ul>
+<li><a href="http://www.integer32.com/2016/07/11/why-rust.html">announcement blog post</a></li>
+<li><a href="https://www.reddit.com/r/rust/comments/4sdncw/why_were_starting_a_rust_consultancy/">reddit discussion</a></li>
+</ul></li>
+<li><a href="https://intellij-rust.github.io">IntelliJ Rust</a>
+<ul>
+<li><a href="https://www.reddit.com/r/rust/comments/4sbqaq/intellijrust_has_a_website_now/">reddit discussion</a></li>
+</ul></li>
+<li>Tango: <a href="https://github.com/pnkfelix/tango">source</a> | <a href="https://skillsmatter.com/skillscasts/8372-tango-literate-programming-in-rust">talk</a></li>
+<li><code>Cell</code> and <code>RefCell</code>:
+<ul>
+<li><a href="https://doc.rust-lang.org/book/choosing-your-guarantees.html#cell-types">Cell Types</a> in <em>The Rust Programming Language</em></li>
+<li>Standard library:
+<ul>
+<li><a href="https://doc.rust-lang.org/std/cell/index.html"><code>std::cell</code></a> module docs (detailed explanation, complementary to the book)</li>
+<li><a href="https://doc.rust-lang.org/std/cell/struct.Cell.html"><code>Cell&lt;T&gt;</code></a> docs (at <code>std::cell::Cell</code>)</li>
+<li><a href="https://doc.rust-lang.org/std/cell/struct.RefCell.html"><code>RefCell&lt;T&gt;</code></a> docs (at <code>stc::cell::RefCell</code>)</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Doug Reeves</li>
+<li>Eric Fulmer</li>
+<li>Hamza Sheikh</li>
+<li><a href="https://github.com/Limeth">Jakub “Limeth” Hlusička</a></li>
+<li>Keith Gray</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li>Michael Clayton</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Ralph “FriarTech” Loizzo</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Sat, 23 Jul 2016 13:58:33 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e016.m4a" length="7889277" type="audio/x-m4a"/>
+            <guid isPermaLink="false">391443C9-2019-4843-BEB3-46B5140C6256</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Digging deeper on smart pointers and mutability with `Cell` and `RefCell`.
+
+Notes
+
+What are the Cell and RefCell types, and when should we use them?
+
+Today, we follow up both the detailed discussion of smart pointers in e015 and the closely related discussion in Interview 2 with Raph Levien, and look at two types you need to have a good idea how to deal with if you want to use these smart pointer types more _ergonomically_—that is, how to use them without feeling like you’re beating your head against a wall!
+
+
+Sponsors
+
+-   Aleksey Pirogov
+-   Chris Palmer
+-   Daniel Collin
+-   Derek Morr
+-   Doug Reeves
+-   Eric Fulmer
+-   Hamza Sheikh
+-   Jakub “Limeth” Hlusička
+-   Keith Gray
+-   Lachlan Collins
+-   Leif Arne Storset
+-   Luca Schmid
+-   Micael Bergeron
+-   Michael Clayton
+-   Pascal Hertleif
+-   Ralph Giles (“rillian”)
+-   Ralph “FriarTech” Loizzo
+-   Raph Levien
+-   reddraggone9
+-   Ryan Ollos
+-   Vesa Kaihlavirta
+-   William Roe
+
+(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)
+
+Become a sponsor
+
+-   Patreon.com/newrustacean
+-   Venmo.com/chriskrycho
+-   Dwolla.com/hub/chriskrycho
+-   Cash.me/$chriskrycho
+-   Flattr.com/chriskrycho
+-   PayPal.me/chriskrycho
+
+
+Contact
+
+-   New Rustacean:
+    -   Twitter: @newrustacean
+    -   Email: hello@newrustacean.com
+-   Chris Krycho
+    -   GitHub: chriskrycho
+    -   Twitter: @chriskrycho
+
+]]></itunes:summary>
+            <itunes:duration>18:52</itunes:duration>
+        </item>
         <item>
             <title>Interview 2::Part 2 – Raph Levien</title>
             <link>http://newrustacean.com/show_notes/interview/_2/part_2/</link>
