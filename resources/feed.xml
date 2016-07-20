@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 23 Jul 2016 13:58:52 -0400</pubDate>
-        <lastBuildDate>Sat, 23 Jul 2016 13:58:53 -0400</lastBuildDate>
+        <pubDate>Mon, 08 Aug 2016 16:26:51 -0400</pubDate>
+        <lastBuildDate>Mon, 08 Aug 2016 16:26:51 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,193 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e017: Point me where I need to go</title>
+            <link>http://newrustacean.com/show_notes/e017/</link>
+            <description><![CDATA[<p>A deep dive on references and pointers in Rust.</p>
+<h2 id="notes">Notes</h2>
+<p>By listener request, today we look at the syntax and semantics of referencing and dereferencing and the corresponding <code>&amp;</code> and <code>*</code> operators.</p>
+<p>As was the case with <a href="http://newrustacean.dev/show_notes/e017/index.html">e016</a>, the code samples have little to say in their documentation; <em>reading</em> the code will be necessary for seeing the ideas.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://medium.com/@raphlinus/inside-the-fastest-font-renderer-in-the-world-75ae5270c445#.1opn7gihv">“Inside the Fastest Font Renderer in the World”</a></li>
+<li>The Rust Platform:
+<ul>
+<li><a href="http://aturon.github.io/blog/2016/07/27/rust-platform/">original blog post</a>
+<ul>
+<li><a href="https://internals.rust-lang.org/t/proposal-the-rust-platform/3745">Rust internals discussion</a></li>
+<li><a href="https://www.reddit.com/r/rust/comments/4uxdn8/the_rust_platform_aaron_turon/?">Reddit discussion</a></li>
+<li><a href="https://news.ycombinator.com/item?id=12177002">Hacker News discussion</a></li>
+</ul></li>
+<li><a href="https://internals.rust-lang.org/t/follow-up-the-rust-platform/3782">follow-up</a>
+<ul>
+<li><a href="https://www.reddit.com/r/rust/comments/4v9eo0/follow_up_to_the_rust_platform/?">Reddit discussion</a></li>
+</ul></li>
+</ul></li>
+<li><a href="https://users.rust-lang.org/t/cargo-vendoring-now-on-nightly/6776">Cargo vendoring support in nightly</a></li>
+<li><a href="https://github.com/rust-lang/rust/pull/34096">MIR on by default in nightly</a></li>
+<li>References and dereferencing:
+<ul>
+<li><em>The Rust Programming Language</em>:
+<ul>
+<li><a href="https://doc.rust-lang.org/book/references-and-borrowing.html">References and Borrowing</a></li>
+<li><a href="https://doc.rust-lang.org/book/deref-coercions.html"><code>Deref</code> coercions</a></li>
+</ul></li>
+<li><em>Rust by Example</em>: <a href="http://rustbyexample.com/flow_control/match/destructuring/destructure_pointers.html">Flow Control: pointers/ref</a></li>
+<li>The Rust Reference:
+<ul>
+<li><a href="https://doc.rust-lang.org/reference.html#unary-operator-expressions">Unary Operator Expressions</a></li>
+<li><a href="https://doc.rust-lang.org/reference.html#pointer-types">Pointer Types</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li>Cameron Mochrie</li>
+<li>Cass Costello</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Doug Reeves</li>
+<li>Eric Fulmer</li>
+<li>Hamza Sheikh</li>
+<li><a href="https://github.com/Limeth">Jakub “Limeth” Hlusička</a></li>
+<li><a href="http://twitter.com/jaredthecoder">Jared Smith</a></li>
+<li>Keith Gray</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Ralph “FriarTech” Loizzo</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Steven Murawksi</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Mon, 08 Aug 2016 17:00:00 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e017.mp3" length="7768525" type="audio/mpeg"/>
+            <guid isPermaLink="false">3FD4B9E5-7496-4FCB-AD95-829A6A295274</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[A deep dive on references and pointers in Rust.
+
+
+Notes
+
+By listener request, today we look at the syntax and semantics of referencing and dereferencing and the corresponding `&` and `*` operators.
+
+As was the case with e016, the code samples have little to say in their documentation; reading the code will be necessary for seeing the ideas.
+
+
+Sponsors
+
+* Aleksey Pirogue
+
+* Cameron Mochrie
+
+* Chris Palmer
+
+* Daniel Collin
+
+* Derek Morr
+
+* Doug Reeves
+
+* Eric Fulmer
+
+* Hamza Sheikh
+
+* Jakub “Limeth” Hlusička
+
+* Jared Smith
+
+* Keith Gray
+
+* Lachlan Collins
+
+* Leif Arne Storset
+
+* Luca Schmid
+
+* Micael Bergeron
+
+* Pascal Hertleif
+
+* Ralph Giles (“gillian”)
+
+* Ralph “FriarTech” Loizzo
+
+* Raph Levien
+
+* reddraggone9
+
+* Ryan Oleos
+
+* Steven Murawksi
+
+* Vesa Kaihlavirta
+
+* William Roe
+
+(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)
+
+Become a sponsor
+
+* Patreon.com/newrustacean
+
+* Venmo.com/chriskrycho
+
+* Dwolla.com/hub/chriskrycho
+
+* Cash.me/$chriskrych
+
+* Flattr.com/chriskrycho
+
+* PayPal.me/chriskrycho
+
+Contact
+
+* New Rustacean:
+
+* Twitter: @newrustacean
+
+* Email: hello@newrustacean.com
+
+* Chris Krycho
+
+* GitHub: chriskrycho
+
+* Twitter: @chriskrycho]]></itunes:summary>
+            <itunes:duration>17:06</itunes:duration>
+        </item>
         <item>
             <title>e016: RefCells and code smells</title>
             <link>http://newrustacean.com/show_notes/e016/</link>
