@@ -320,6 +320,10 @@ footer a:hover {
   font-size: 1.5em;
 }
 
+.sponsors-list__sponsor-link {
+  color: RGBA(240, 80, 34, 1);
+}
+
 .sponsors-list__sponsor-dates {
   font-style: italic;
 }
