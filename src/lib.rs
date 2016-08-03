@@ -42,6 +42,7 @@ pub mod e014;
 pub mod e015;
 pub mod e016;
 pub mod e017;
+pub mod e018;
 
 pub mod bonus;
 pub mod crates_you_should_know;
