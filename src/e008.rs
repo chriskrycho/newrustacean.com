@@ -133,10 +133,10 @@ pub struct SimpleType {
 }
 
 
-/// Define the display format for the SimpleType.
+/// Define the display format for the `SimpleType`.
 ///
-/// Note that this works because String and i32 both already have display types
-/// implemented themselves!
+/// Note that this works because `String` and `i32` both already have display
+/// types implemented themselves!
 impl fmt::Display for SimpleType {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "string: {} | integer: {}", self.a, self.b)
