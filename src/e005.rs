@@ -117,7 +117,7 @@ pub fn doubler_closure_factory() -> Box<Fn(i32) -> i32> {
 }
 
 
-/// Uses the doubler_factory to get a function which doubles a number.
+/// Uses the `doubler_factory` to get a function which doubles a number.
 ///
 /// By contrast, here's a function which simply won't compile:
 ///
