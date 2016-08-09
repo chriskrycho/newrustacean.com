@@ -175,7 +175,7 @@ pub fn demonstrate_match() {
     // Here, if we try to reference the contents of `store` directly, we'll find
     // that it doesn't work: we get a type error.
     let store = DataStore::new(ref_to_four);  // type: DataStore
-    let optional_store = Some(store);  // type: Option<&DataStore>
+    let optional_store = Some(store);  // type: Option<DataStore>
     let contents = match optional_store {
         Some(store) => *store.contents,
         None => 0
