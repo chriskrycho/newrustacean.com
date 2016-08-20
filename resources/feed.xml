@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Mon, 08 Aug 2016 16:37:09 -0400</pubDate>
-        <lastBuildDate>Mon, 08 Aug 2016 16:37:10 -0400</lastBuildDate>
+        <pubDate>Sat, 20 Aug 2016 12:18:12 -0400</pubDate>
+        <lastBuildDate>Sat, 20 Aug 2016 12:18:13 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,158 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>Bonus 6: It doesn‘t have to be sexy</title>
+            <link>http://newrustacean.com/show_notes/bonus/_6/</link>
+            <description><![CDATA[<p>Building (and celebrating) all the little, not-so-glorious pieces of the Rust ecosystem.</p>
+<h2 id="notes">Notes</h2>
+<p>We love the Rust compiler team. But there’s more to the Rust community, and more required for Rust to be as great as it can be, than just the language itself. We need to celebrate other libraries, and even the small ones, just as much (and maybe more) than changes to the language. We need to dig in and work on building the <em>whole</em> ecosystem. (The good news is, we are!)</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://github.com/alexcrichton/futures-rs"><code>futures-rs</code></a>
+<ul>
+<li><a href="http://aturon.github.io/blog/2016/08/11/futures/">“Zero-cost futures in Rust”</a></li>
+</ul></li>
+<li><a href="https://github.com/tokio-rs/tokio">Tokio</a>
+<ul>
+<li><a href="https://medium.com/@carllerche/announcing-tokio-df6bb4ddb34#.c9pqf9wyx">“Announcing Tokio”</a> (Carl Lerche on Medium)</li>
+</ul></li>
+<li><a href="http://words.steveklabnik.com/whats-new-with-the-rust-programming-language">“What’s new with ‘The Rust Programming Language’?”</a></li>
+<li><a href="https://www.rust-lang.org/en-US/friends.html">Friends of Rust</a></li>
+<li><a href="https://github.com/briansmith/ring"><code>ring</code></a> – Safe, fast, small crypto using Rust</li>
+<li><a href="https://github.com/neil-lobracco/alexa-rs"><code>alexa-rs</code></a> – Rust library for building Alexa skills</li>
+<li><a href="https://gitlab.com/Arvamer/gilrs"><code>gilrs</code></a> – Game Input Library for Rust</li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li>Cameron Mochrie</li>
+<li>Cass Costello</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Doug Reeves</li>
+<li>Eric Fulmer</li>
+<li>Hamza Sheikh</li>
+<li><a href="https://github.com/Limeth">Jakub “Limeth” Hlusička</a></li>
+<li><a href="http://twitter.com/jaredthecoder">Jared Smith</a></li>
+<li>Keith Gray</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Ralph “FriarTech” Loizzo</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Steven Murawksi</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Sat, 20 Aug 2016 12:15:43 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_6.mp3" length="8275634" type="audio/mpeg"/>
+            <guid isPermaLink="false">2B30AB4B-8971-4576-BAD0-953A078B51A3</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Building (and celebrating) all the little, not-so-glorious pieces of the Rust ecosystem.
+
+
+Notes
+
+We love the Rust compiler team. But there’s more to the Rust community, and more required for Rust to be as great as it can be, than just the language itself. We need to celebrate other libraries, and even the small ones, just as much (and maybe more) than changes to the language. We need to dig in and work on building the _whole_ ecosystem. (The good news is, we are!)
+
+
+Links
+
+-   futures-rs
+    -   “Zero-cost futures in Rust”
+-   Tokio
+    -   “Announcing Tokio” (Carl Lerche on Medium)
+-   “What’s new with ‘The Rust Programming Language’?”
+-   Friends of Rust
+-   ring – Safe, fast, small crypto using Rust
+-   alexa-rs – Rust library for building Alexa skills
+-   gilrs – Game Input Library for Rust
+
+
+Sponsors
+
+-   Aleksey Pirogov
+-   Cameron Mochrie
+-   Cass Costello
+-   Chris Palmer
+-   Daniel Collin
+-   Derek Morr
+-   Doug Reeves
+-   Eric Fulmer
+-   Hamza Sheikh
+-   Jakub “Limeth” Hlusička
+-   Jared Smith
+-   Keith Gray
+-   Lachlan Collins
+-   Leif Arne Storset
+-   Luca Schmid
+-   Micael Bergeron
+-   Pascal Hertleif
+-   Ralph Giles (“rillian”)
+-   Ralph “FriarTech” Loizzo
+-   Raph Levien
+-   reddraggone9
+-   Ryan Ollos
+-   Steven Murawksi
+-   Vesa Kaihlavirta
+-   William Roe
+
+(Thanks to the couple people donating who opted out of the reward tier,
+as well. You know who you are!)
+
+Become a sponsor
+
+-   Patreon.com/newrustacean
+-   Venmo.com/chriskrycho
+-   Dwolla.com/hub/chriskrycho
+-   Cash.me/$chriskrycho
+-   Flattr.com/chriskrycho
+-   PayPal.me/chriskrycho
+
+
+Contact
+
+-   New Rustacean:
+    -   Twitter: @newrustacean
+    -   Email: hello@newrustacean.com
+-   Chris Krycho
+    -   GitHub: chriskrycho
+    -   Twitter: @chriskrycho
+
+]]></itunes:summary>
+            <itunes:duration>11:27</itunes:duration>
+        </item>
         <item>
             <title>e017: Point me where I need to go</title>
             <link>http://newrustacean.com/show_notes/e017/</link>
