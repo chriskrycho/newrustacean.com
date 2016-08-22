@@ -32,7 +32,7 @@
 //!       + ["Zero-cost futures in Rust"][futures-blog]
 //!   - [Tokio]
 //!       + ["Announcing Tokio"][tokio-medium] (Carl Lerche on Medium)
-//!   - [ShaderCat]
+//!   - [ShaderCat]: Graphics Programming with Unity and Rust
 //!   - ["What's new with 'The Rust Programming Language'?"][trpl]
 //!   - [Friends of Rust]
 //!   - [`ring`]: Safe, fast, small crypto using Rust
