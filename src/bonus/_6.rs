@@ -48,7 +48,7 @@
 //! [`ring`]: https://github.com/briansmith/ring
 //! [`alexa-rs`]: https://github.com/neil-lobracco/alexa-rs
 //! [`gilrs`]: https://gitlab.com/Arvamer/gilrs
-//! [ShaderCat]: http://shadercat.com
+//! [ShaderCat]: http://www.shadercat.com
 //!
 //!
 //! Sponsors
