@@ -122,7 +122,7 @@
   the `Person` itself. We'd end up with a pretty weird scenario otherwise!
 
   Note that the lifetimes of the members match the lifetime declared for the
-  type itself, so the references must life *at least as long* as the instance of
+  type itself, so the references must live *at least as long* as the instance of
   the type to which they're attached.
  */
 pub struct Individual<'a> {
