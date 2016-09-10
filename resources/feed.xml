@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
     <channel>
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.2.7(2785); Mac OS X Version 10.11.6 (Build 15G31) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.2.7(2785); Mac OS X Version 10.12 (Build 16A320) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 20 Aug 2016 12:18:12 -0400</pubDate>
-        <lastBuildDate>Sat, 20 Aug 2016 12:18:13 -0400</lastBuildDate>
+        <pubDate>Sat, 10 Sep 2016 13:50:31 -0400</pubDate>
+        <lastBuildDate>Sat, 10 Sep 2016 13:50:32 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -38,6 +38,164 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>Bonus 7: Katas—or: learning by doing</title>
+            <link>http://newrustacean.com/show_notes/bonus/_7/</link>
+            <description><![CDATA[<p>Katas—or: learning by doing</p>
+<h2 id="notes">Notes</h2>
+<p>One of the best ways to learn is to pick a small problem you have already internalized, and to do it again but in a new language or in a new way in a language you already know.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="http://arewegameyet.com">AreWeGameYet</a></li>
+<li><a href="https://areweideyet.com">AreWeIDEYet</a></li>
+<li><a href="http://www.arewewebyet.org">AreWeWebYet</a></li>
+<li><a href="https://internals.rust-lang.org/t/setting-our-vision-for-the-2017-cycle/3958">Setting our vision for the 2017 cycle</a></li>
+<li><a href="https://blog.rust-lang.org/2016/09/08/incremental.html">Incremental Compilation</a></li>
+<li><code>cargo-incremental</code>:
+<ul>
+<li><a href="https://internals.rust-lang.org/t/want-to-help-develop-tool-for-testing-incremental-compilation/3963">internals post</a></li>
+<li><a href="https://github.com/nikomatsakis/cargo-incremental/">repo</a></li>
+</ul></li>
+<li><a href="http://elm-lang.org">Elm</a></li>
+<li>Dave Thomas’ <a href="http://codekata.com">CodeKata</a></li>
+<li>Crates I used in my Rust “kata”:
+<ul>
+<li>Hyper
+<ul>
+<li><a href="https://docs.rs/hyper/">docs</a></li>
+<li><a href="https://crates.io/crates/hyper">crate</a></li>
+<li><a href="https://github.com/hyperium/hyper">repo</a></li>
+</ul></li>
+<li>Serde
+<ul>
+<li><a href="https://docs.rs/serde/">docs</a></li>
+<li><a href="https://crates.io/crates/serde">crate</a></li>
+<li><a href="https://github.com/serde-rs/serde">repo</a></li>
+</ul></li>
+<li>Pencil (inspired by <a href="http://flask.pocoo.org">Flask</a>)
+<ul>
+<li><a href="https://docs.rs/pencil/">docs</a></li>
+<li><a href="https://crates.io/crates/pencil">crate</a></li>
+<li><a href="https://github.com/fengsp/pencil">repo</a></li>
+</ul></li>
+<li><code>handlebars-rust</code>:
+<ul>
+<li><a href="https://docs.rs/handlebars/">docs</a></li>
+<li><a href="https://crates.io/crates/handlebars">crate</a></li>
+<li><a href="https://github.com/sunng87/handlebars-rust">repo</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li>Cameron Mochrie</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Doug Reeves</li>
+<li>Hamza Sheikh</li>
+<li><a href="https://github.com/Limeth">Jakub “Limeth” Hlusička</a></li>
+<li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li>
+<li>Keith Gray</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Matthew Piziak</li>
+<li>Micael Bergeron</li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Ralph “FriarTech” Loizzo</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Steven Murawksi</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Sat, 10 Sep 2016 13:50:19 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_7.mp3" length="7533006" type="audio/mpeg"/>
+            <guid isPermaLink="false">CEFB964C-E0C9-48FD-9EE6-06A0C1284CC8</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Katas—or: learning by doing
+
+One of the best ways to learn is to pick a small problem you have already internalized, and to do it again but in a new language or in a new way in a language you already know.
+
+
+Sponsors
+
+* Aleksey Pirogov
+* Cameron Mochrie
+* Chris Palmer
+* Daniel Collin
+* Derek Morr
+* Doug Reeves
+* Hamza Sheikh
+* Jakub “Limeth” Hlusička
+* Jupp Müller
+* Keith Gray
+* Lachlan Collins
+* Leif Arne Storset
+* Luca Schmid
+* Matthew Piziak
+* Micael Bergeron
+* Ovidiu Curcan
+* Pascal Hertleif
+* Ralph Giles (“rillian”)
+* Ralph “FriarTech” Loizzo
+* Raph Levien
+* reddraggone9
+* Ryan Ollos
+* Steven Murawksi
+* Vesa Kaihlavirta
+* William Roe
+
+(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)
+
+Become a sponsor
+
+* Patreon.com/newrustacean
+* Venmo.com/chriskrycho
+* Dwolla.com/hub/chriskrycho
+* Cash.me/$chriskrych
+* Flattr.com/chriskrycho
+* PayPal.me/chriskrycho
+
+Contact
+
+* New Rustacean:
+* Twitter: @newrustacean
+* Email: hello@newrustacean.com
+* Chris Krycho
+* GitHub: chriskrycho
+* Twitter: @chriskrycho]]></itunes:summary>
+            <itunes:duration>10:19</itunes:duration>
+        </item>
         <item>
             <title>Bonus 6: It doesn‘t have to be sexy</title>
             <link>http://newrustacean.com/show_notes/bonus/_6/</link>
