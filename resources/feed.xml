@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 10 Sep 2016 13:50:31 -0400</pubDate>
-        <lastBuildDate>Sat, 10 Sep 2016 13:50:32 -0400</lastBuildDate>
+        <pubDate>Sat, 10 Sep 2016 14:03:44 -0400</pubDate>
+        <lastBuildDate>Sat, 10 Sep 2016 14:03:45 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -20,6 +20,7 @@
             <height>144</height>
         </image>
         <atom:link href="http://www.newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://flattr.com/submit/auto?user_id=chriskrycho&amp;url=https%3A%2F%2Fflattr.com%2Fprofile%2Fchriskrycho&amp;title=Podcaster%2C%20software%20developer%2C%20writer%2C%20theologian&amp;description=I%20podcast%3A%0A%0A-%20%5BWinning%20Slowly%5D%28%2F%2Fwww.winningslowly.org%29%2C%20with%20Stephen%20Carradini%2C%20on%20technology%2C%20religion%2C%20ethics%2C%20and%20art%0A-%20%5BNew%20Rustacean%5D%28%2F%2Fwww.newrustacean.com%29%20%E2%80%93%20about%20learning%20the%20Rust%20programming%20language%0A-%20%5BSap.py%5D%28%2F%2Fwww.sap-py.com%29%20with%20my%20wife%2C%20Jaimie%20Krycho%0A-%20%5BRun%20With%20Me%5D%28%2F%2Frunwith.chriskrycho.com%29%20%E2%80%93%20a%203%E2%80%935%20minute%20%22microcast%22%20about%20running%2C%20recorded%20while%20running%0A%0AI%20write%20on%20art%2C%20theology%2C%20and%20technology%20at%20%5Bchriskrycho.com%5D%28%2F%2Fwww.chriskrycho.com%29.&amp;language=en_GB&amp;category=audio" rel="payment" type="text/html"/>
         <itunes:author>Chris Krycho</itunes:author>
         <itunes:subtitle>Let’s try some Rust, shall we?</itunes:subtitle>
         <itunes:summary><![CDATA[Documenting a journey into a new programming language—with source code, examples, and almost certainly some out-and-out hilarities along the way.]]></itunes:summary>
@@ -183,7 +184,7 @@ Become a sponsor
 * Venmo.com/chriskrycho
 * Dwolla.com/hub/chriskrycho
 * Cash.me/$chriskrych
-* Flattr.com/chriskrycho
+* flattr.com/profile/chriskrycho
 * PayPal.me/chriskrycho
 
 Contact
@@ -332,7 +333,7 @@ Become a sponsor
 -   Venmo.com/chriskrycho
 -   Dwolla.com/hub/chriskrycho
 -   Cash.me/$chriskrycho
--   Flattr.com/chriskrycho
+-   flattr.com/profile/chriskrycho
 -   PayPal.me/chriskrycho
 
 
@@ -516,7 +517,7 @@ Become a sponsor
 
 * Cash.me/$chriskrych
 
-* Flattr.com/chriskrycho
+* flattr.com/profile/chriskrycho
 
 * PayPal.me/chriskrycho
 
@@ -671,7 +672,7 @@ Become a sponsor
 -   Venmo.com/chriskrycho
 -   Dwolla.com/hub/chriskrycho
 -   Cash.me/$chriskrycho
--   Flattr.com/chriskrycho
+-   flattr.com/profile/chriskrycho
 -   PayPal.me/chriskrycho
 
 
@@ -801,7 +802,7 @@ Become a sponsor
 -   Venmo.com/chriskrycho
 -   Dwolla.com/hub/chriskrycho
 -   Cash.me/$chriskrycho
--   Flattr.com/chriskrycho
+-   flattr.com/profile/chriskrycho
 -   PayPal.me/chriskrycho
 
 
@@ -957,7 +958,7 @@ Become a sponsor
 -   Venmo.com/chriskrycho
 -   Dwolla.com/hub/chriskrycho
 -   Cash.me/$chriskrycho
--   Flattr.com/chriskrycho
+-   flattr.com/profile/chriskrycho
 -   PayPal.me/chriskrycho
 
 
