@@ -94,6 +94,7 @@
 //!   - Luca Schmid
 //!   - Matthew Piziak
 //!   - Micael Bergeron
+//!   - Nils Tekampe
 //!   - Ovidiu Curcan
 //!   - [Pascal Hertleif]
 //!   - Ralph Giles ("rillian")
@@ -101,6 +102,7 @@
 //!   - Raph Levien
 //!   - reddraggone9
 //!   - Ryan Ollos
+//!   - Sean Jensen-Gray
 //!   - Steven Murawksi
 //!   - Vesa Kaihlavirta
 //!   - [William Roe]
