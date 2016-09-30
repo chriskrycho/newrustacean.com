@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 10 Sep 2016 14:03:44 -0400</pubDate>
-        <lastBuildDate>Sat, 10 Sep 2016 14:03:45 -0400</lastBuildDate>
+        <pubDate>Fri, 30 Sep 2016 17:49:09 -0400</pubDate>
+        <lastBuildDate>Fri, 30 Sep 2016 17:49:09 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -39,6 +39,203 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>Interview 3 – Carol Goulding</title>
+            <link>http://newrustacean.com/show_notes/interview/_3/</link>
+            <description><![CDATA[<p>Carol Goulding on learning Rust, teaching Rust, and building community</p>
+<h2 id="notes">Notes</h2>
+<p>Chris talks with Carol Goulding, a Rust community team member, co-author of the first major revision of <em>The Rust Programming Language</em>, and co-founder of the first Rust consultancy.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/XSLT"><abbr>XSLT</abbr> (XML Style Sheet Transformations)</a></li>
+<li><a href="http://rspec.info">Rspec</a></li>
+<li><a href="http://rubyonrails.org">Rails</a></li>
+<li><a href="https://www.thinkthroughmath.com">Think Through Math</a> — remedial math tutoring app built with Rails</li>
+<li><a href="https://github.com/steveklabnik/rust_for_rubyists">Rust for Rubyists</a></li>
+<li><a href="https://doc.rust-lang.org/book/"><em>The Rust Programming Language</em></a></li>
+<li><a href="http://jvns.ca">Julia Evans</a>
+<ul>
+<li><a href="http://jvns.ca/blog/2016/09/11/rustconf-keynote/">RustConf 2016 keynote</a></li>
+</ul></li>
+<li><a href="http://rustbyexample.com"><em>Rust by Example</em></a></li>
+<li><a href="https://github.com/carols10cents/rustlings">Rustlings</a></li>
+<li>SASS
+<ul>
+<li><a href="http://sass-lang.com">language</a></li>
+<li><a href="https://github.com/carols10cents/sassers">Carol’s in-progress implementation</a></li>
+</ul></li>
+<li><a href="https://chat.mibbit.com/?server=irc.mozilla.org&amp;channel=%23rust-community">#rust-community</a> — open meetings at 4pm UTC every Wednesday, with minutes available online</li>
+<li><a href="https://blog.rust-lang.org/2016/06/30/State-of-Rust-Survey-2016.html">first Rust community survey</a></li>
+<li><a href="https://github.com/rust-community">Rust community on GitHub</a></li>
+<li><a href="http://rust-lang.github.io/book/">new version of the book on GitHub</a> — <em>you</em> can help, and especially if you’re new, because Steve and Carol both need input to deal with the “familiarity”/<a href="https://en.wikipedia.org/wiki/Curse_of_knowledge">“curse of knowledge”</a> problem
+<ul>
+<li>ownership and borrowing chapters</li>
+</ul></li>
+<li><a href="http://rustconf.com">RustConf</a></li>
+<li><a href="http://www.rustfest.eu">RustFest</a></li>
+<li><a href="http://www.rust-belt-rust.com">Rust Belt Rust</a> — October 27–28, 2016. <em>Don’t forget to use code <strong>newrustacean</strong> to get 20% off of your registration cost!</em></li>
+<li><a href="http://www.integer32.com">Integer32</a>
+<ul>
+<li>Panoptics – nickel-jwt: <a href="https://crates.io/crates/nickel-jwt-session">crate</a> | <a href="https://docs.rs/nickel-jwt-session/">docs</a> | <a href="https://github.com/kaj/nickel-jwt-session">source</a></li>
+</ul></li>
+<li><a href="http://stackoverflow.com/cv/jakegoulding">Jake Goulding on Stack Overflow</a></li>
+<li><a href="https://github.com/rust-lang/rust-wiki-backup/blob/master/Doc-friends-of-the-tree.md">Friends of the Tree</a></li>
+<li><a href="https://github.com/rust-community/team/issues/51">Friends of the Forest</a></li>
+<li><a href="http://www.alibris.com/booksearch?keyword=working%20effectively%20with%20legacy%20code"><em>Working Effectively With Legacy Code</em></a></li>
+<li>Tilde</li>
+<li><a href="http://www.alibris.com/The-C-Programming-Language-Brian-Kernighan/book/875968"><em>The C Programming Language</em></a> – the book Carol compared <em>The Rust Programming Language</em> to in terms of its responsibilities, and also one of the books from which Chris learned C.</li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li>Cameron Mochrie</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Doug Reeves</li>
+<li>Hamza Sheikh</li>
+<li><a href="https://github.com/Limeth">Jakub “Limeth” Hlusička</a></li>
+<li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li>
+<li>Keith Gray</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Matthew Piziak</li>
+<li>Micael Bergeron</li>
+<li>Nils Tekampe</li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Ralph “FriarTech” Loizzo</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Sean Jensen-Gray</li>
+<li>Steven Murawksi</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Fri, 30 Sep 2016 17:49:02 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_3.mp3" length="39738296" type="audio/mpeg"/>
+            <guid isPermaLink="false">7299496B-086C-450F-94C1-05AB08CDC294</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Carol Goulding on learning Rust, teaching Rust, and building community
+
+Chris talks with Carol Goulding, a Rust community team member, co-author of the first major revision of The Rust Programming Language, and co-founder of the first Rust consultancy.
+
+
+Sponsors
+
+* Aleksey Pirogov
+
+* Cameron Mochrie
+
+* Chris Palmer
+
+* Daniel Collin
+
+* Derek Morr
+
+* Doug Reeves
+
+* Hamza Sheikh
+
+* Jakub “Limeth” Hlusička
+
+* Jupp Müller
+
+* Keith Gray
+
+* Lachlan Collins
+
+* Leif Arne Storset
+
+* Luca Schmid
+
+* Matthew Piziak
+
+* Micael Bergeron
+
+* Nils Tekampe
+
+* Ovidiu Curcan
+
+* Pascal Hertleif
+
+* Ralph Giles (“rillian”)
+
+* Ralph “FriarTech” Loizzo
+
+* Raph Levien
+
+* reddraggone9
+
+* Ryan Ollos
+
+* Sean Jensen-Gray
+
+* Steven Murawksi
+
+* Vesa Kaihlavirta
+
+* William Roe
+
+(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)
+
+
+Become a sponsor
+
+* Patreon.com/newrustacean
+
+* Venmo.com/newrustacean
+
+* Dwolla.com/hub/chriskrycho
+
+* Cash.me/$chriskrycho
+
+* Flattr.com/profile/chriskrycho
+
+* PayPal.me/chriskrycho
+
+Contact
+
+* New Rustacean:
+
+* Twitter: @newrustacean
+
+* Email: hello@newrustacean.com
+
+* Chris Krycho
+
+* GitHub: chriskrycho
+
+* Twitter: @chriskrycho]]></itunes:summary>
+            <itunes:duration>47:11</itunes:duration>
+        </item>
         <item>
             <title>Bonus 7: Katas—or: learning by doing</title>
             <link>http://newrustacean.com/show_notes/bonus/_7/</link>
