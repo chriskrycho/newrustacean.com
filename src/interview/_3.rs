@@ -1,4 +1,4 @@
-//! Carol Goulding
+//! Carol (Nichols || Goulding)
 //!
 //!   - **Date:** September 30, 2016
 //!   - **Subject:** Learning Rust, teaching Rust, and building community
@@ -11,7 +11,7 @@
 //! [MP3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_3.mp3
 //! [Ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_3.ogg
 //!
-//! <audio title="Interview 3 – Carol Goulding" controls preload=metadata>
+//! <audio title="Interview 3 – Carol (Nichols || Goulding)" controls preload=metadata>
 //!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_3.m4a">
 //!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_3.mp3">
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_3.ogg">
@@ -21,7 +21,7 @@
 //! Notes
 //! -----
 //!
-//! Chris talks with Carol Goulding, a Rust community team member, co-author of
+//! Chris talks with Carol (Nichols || Goulding), a Rust community team member, co-author of
 //! the first major revision of _The Rust Programming Language_, and co-founder
 //! of the first Rust consultancy.
 //!
@@ -38,11 +38,11 @@
 //!     + [RustConf 2016 keynote][keynote]
 //! - [_Rust by Example_][RBE]
 //! - [Rustlings]
-//! - SASS
+//! - Sass
 //!     + [language][sass-lang]
 //!     + [Carol's in-progress implementation][sass-impl]
 //! - [#rust-community][IRC] — open meetings at 4pm UTC every Wednesday, with
-//!   minutes available online
+//!   [minutes available online][minutes]
 //! - [first Rust community survey][survey]
 //! - [Rust community on GitHub][community]
 //! - [new version of the book on GitHub][TRPL update] — *you* can help, and
@@ -54,7 +54,7 @@
 //! - [Rust Belt Rust] — October 27–28, 2016. _Don't forget to use code
 //!   **newrustacean** to get 20% off of your registration cost!_
 //! - [Integer32]
-//!     - Panoptics – nickel-jwt: [crate] | [docs] | [source]
+//!     - [Panoptix] – nickel-jwt-session: [crate] | [docs] | [source]
 //! - [Jake Goulding on Stack Overflow][so]
 //! - [Friends of the Tree]
 //! - [Friends of the Forest]
@@ -77,6 +77,7 @@
 //! [sass-lang]: http://sass-lang.com
 //! [sass-impl]: https://github.com/carols10cents/sassers
 //! [IRC]: https://chat.mibbit.com/?server=irc.mozilla.org&channel=%23rust-community
+//! [minutes]: https://github.com/rust-community/team/tree/master/meeting-minutes
 //! [survey]: https://blog.rust-lang.org/2016/06/30/State-of-Rust-Survey-2016.html
 //! [community]: https://github.com/rust-community
 //! [TRPL update]: http://rust-lang.github.io/book/
@@ -85,6 +86,7 @@
 //! [RustFest]: http://www.rustfest.eu
 //! [Rust Belt Rust]: http://www.rust-belt-rust.com
 //! [Integer32]: http://www.integer32.com
+//! [Panoptix]: http://www.panoptix.co.za/
 //! [crate]: https://crates.io/crates/nickel-jwt-session
 //! [docs]: https://docs.rs/nickel-jwt-session/
 //! [source]: https://github.com/kaj/nickel-jwt-session
