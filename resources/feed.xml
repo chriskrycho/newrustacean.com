@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Fri, 30 Sep 2016 17:49:09 -0400</pubDate>
-        <lastBuildDate>Fri, 30 Sep 2016 17:49:09 -0400</lastBuildDate>
+        <pubDate>Sat, 01 Oct 2016 14:06:13 -0400</pubDate>
+        <lastBuildDate>Sat, 01 Oct 2016 14:06:14 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -20,7 +20,7 @@
             <height>144</height>
         </image>
         <atom:link href="http://www.newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
-        <atom:link href="https://flattr.com/submit/auto?user_id=chriskrycho&amp;url=https%3A%2F%2Fflattr.com%2Fprofile%2Fchriskrycho&amp;title=Podcaster%2C%20software%20developer%2C%20writer%2C%20theologian&amp;description=I%20podcast%3A%0A%0A-%20%5BWinning%20Slowly%5D%28%2F%2Fwww.winningslowly.org%29%2C%20with%20Stephen%20Carradini%2C%20on%20technology%2C%20religion%2C%20ethics%2C%20and%20art%0A-%20%5BNew%20Rustacean%5D%28%2F%2Fwww.newrustacean.com%29%20%E2%80%93%20about%20learning%20the%20Rust%20programming%20language%0A-%20%5BSap.py%5D%28%2F%2Fwww.sap-py.com%29%20with%20my%20wife%2C%20Jaimie%20Krycho%0A-%20%5BRun%20With%20Me%5D%28%2F%2Frunwith.chriskrycho.com%29%20%E2%80%93%20a%203%E2%80%935%20minute%20%22microcast%22%20about%20running%2C%20recorded%20while%20running%0A%0AI%20write%20on%20art%2C%20theology%2C%20and%20technology%20at%20%5Bchriskrycho.com%5D%28%2F%2Fwww.chriskrycho.com%29.&amp;language=en_GB&amp;category=audio" rel="payment" type="text/html"/>
+        <atom:link href="https://flattr.com/submit/auto?user_id=chriskrycho&amp;url=https://flattr.com/profile/chriskrycho&amp;title=Podcaster,%20software%20developer,%20writer,%20theologian&amp;description=I%20podcast:%0A%0A-%20%5BWinning%20Slowly%5D(//www.winningslowly.org),%20with%20Stephen%20Carradini,%20on%20technology,%20religion,%20ethics,%20and%20art%0A-%20%5BNew%20Rustacean%5D(//www.newrustacean.com)%20%E2%80%93%20about%20learning%20the%20Rust%20programming%20language%0A-%20%5BSap.py%5D(//www.sap-py.com)%20with%20my%20wife,%20Jaimie%20Krycho%0A-%20%5BRun%20With%20Me%5D(//runwith.chriskrycho.com)%20%E2%80%93%20a%203%E2%80%935%20minute%20%22microcast%22%20about%20running,%20recorded%20while%20running%0A%0AI%20write%20on%20art,%20theology,%20and%20technology%20at%20%5Bchriskrycho.com%5D(//www.chriskrycho.com).&amp;language=en_GB&amp;category=audio" rel="payment" type="text/html"/>
         <itunes:author>Chris Krycho</itunes:author>
         <itunes:subtitle>Let’s try some Rust, shall we?</itunes:subtitle>
         <itunes:summary><![CDATA[Documenting a journey into a new programming language—with source code, examples, and almost certainly some out-and-out hilarities along the way.]]></itunes:summary>
@@ -40,11 +40,13 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <item>
-            <title>Interview 3 – Carol Goulding</title>
+            <title>Interview 3 – Carol (Nichols || Goulding)</title>
             <link>http://newrustacean.com/show_notes/interview/_3/</link>
-            <description><![CDATA[<p>Carol Goulding on learning Rust, teaching Rust, and building community</p>
+            <description><![CDATA[Carol (Nichols || Goulding) on learning Rust, teaching Rust, and building community
+<br />
 <h2 id="notes">Notes</h2>
-<p>Chris talks with Carol Goulding, a Rust community team member, co-author of the first major revision of <em>The Rust Programming Language</em>, and co-founder of the first Rust consultancy.</p>
+Chris talks with Carol (Nichols || Goulding), a Rust community team member, co-author of the first major revision of <em>The Rust Programming Language</em>, and co-founder of the first Rust consultancy.
+<br />
 <h2 id="links">Links</h2>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/XSLT"><abbr>XSLT</abbr> (XML Style Sheet Transformations)</a></li>
@@ -56,29 +58,33 @@
 <li><a href="http://jvns.ca">Julia Evans</a>
 <ul>
 <li><a href="http://jvns.ca/blog/2016/09/11/rustconf-keynote/">RustConf 2016 keynote</a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="http://rustbyexample.com"><em>Rust by Example</em></a></li>
 <li><a href="https://github.com/carols10cents/rustlings">Rustlings</a></li>
 <li>SASS
 <ul>
 <li><a href="http://sass-lang.com">language</a></li>
 <li><a href="https://github.com/carols10cents/sassers">Carol’s in-progress implementation</a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="https://chat.mibbit.com/?server=irc.mozilla.org&amp;channel=%23rust-community">#rust-community</a> — open meetings at 4pm UTC every Wednesday, with minutes available online</li>
 <li><a href="https://blog.rust-lang.org/2016/06/30/State-of-Rust-Survey-2016.html">first Rust community survey</a></li>
 <li><a href="https://github.com/rust-community">Rust community on GitHub</a></li>
 <li><a href="http://rust-lang.github.io/book/">new version of the book on GitHub</a> — <em>you</em> can help, and especially if you’re new, because Steve and Carol both need input to deal with the “familiarity”/<a href="https://en.wikipedia.org/wiki/Curse_of_knowledge">“curse of knowledge”</a> problem
 <ul>
 <li>ownership and borrowing chapters</li>
-</ul></li>
+</ul>
+</li>
 <li><a href="http://rustconf.com">RustConf</a></li>
 <li><a href="http://www.rustfest.eu">RustFest</a></li>
 <li><a href="http://www.rust-belt-rust.com">Rust Belt Rust</a> — October 27–28, 2016. <em>Don’t forget to use code <strong>newrustacean</strong> to get 20% off of your registration cost!</em></li>
 <li><a href="http://www.integer32.com">Integer32</a>
 <ul>
 <li>Panoptics – nickel-jwt: <a href="https://crates.io/crates/nickel-jwt-session">crate</a> | <a href="https://docs.rs/nickel-jwt-session/">docs</a> | <a href="https://github.com/kaj/nickel-jwt-session">source</a></li>
-</ul></li>
-<li><a href="http://stackoverflow.com/cv/jakegoulding">Jake Goulding on Stack Overflow</a></li>
+</ul>
+</li>
+<li><a href="http://stackoverflow.com/cv/jake(Nichols || Goulding)">Jake (Nichols || Goulding) on Stack Overflow</a></li>
 <li><a href="https://github.com/rust-lang/rust-wiki-backup/blob/master/Doc-friends-of-the-tree.md">Friends of the Tree</a></li>
 <li><a href="https://github.com/rust-community/team/issues/51">Friends of the Forest</a></li>
 <li><a href="http://www.alibris.com/booksearch?keyword=working%20effectively%20with%20legacy%20code"><em>Working Effectively With Legacy Code</em></a></li>
@@ -115,7 +121,9 @@
 <li>Vesa Kaihlavirta</li>
 <li><a href="http://willroe.me">William Roe</a></li>
 </ul>
-<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+
+(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)
+<br />
 <h3 id="become-a-sponsor">Become a sponsor</h3>
 <ul>
 <li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
@@ -131,21 +139,22 @@
 <ul>
 <li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
 <li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Chris Krycho
 <ul>
 <li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
 <li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
-</ul></li>
 </ul>
-]]></description>
+</li>
+</ul>]]></description>
             <pubDate>Fri, 30 Sep 2016 17:49:02 -0400</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_3.mp3" length="39738296" type="audio/mpeg"/>
             <guid isPermaLink="false">7299496B-086C-450F-94C1-05AB08CDC294</guid>
             <itunes:author>Chris Krycho</itunes:author>
-            <itunes:summary><![CDATA[Carol Goulding on learning Rust, teaching Rust, and building community
+            <itunes:summary><![CDATA[Carol (Nichols || Goulding) on learning Rust, teaching Rust, and building community
 
-Chris talks with Carol Goulding, a Rust community team member, co-author of the first major revision of The Rust Programming Language, and co-founder of the first Rust consultancy.
+Chris talks with Carol (Nichols || Goulding), a Rust community team member, co-author of the first major revision of The Rust Programming Language, and co-founder of the first Rust consultancy.
 
 
 Sponsors
