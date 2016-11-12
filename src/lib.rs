@@ -50,4 +50,5 @@ pub mod e017;
 
 pub mod bonus;
 pub mod interview;
+pub mod meta;
 pub mod news;

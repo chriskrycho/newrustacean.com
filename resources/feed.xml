@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.2.7(2785); Mac OS X Version 10.12 (Build 16A320) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.3.2(2842); Mac OS X Version 10.12.1 (Build 16B2555) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 01 Oct 2016 14:06:13 -0400</pubDate>
-        <lastBuildDate>Sat, 01 Oct 2016 14:06:14 -0400</lastBuildDate>
+        <pubDate>Sat, 12 Nov 2016 13:30:11 -0500</pubDate>
+        <lastBuildDate>Sat, 12 Nov 2016 13:30:12 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -20,7 +20,7 @@
             <height>144</height>
         </image>
         <atom:link href="http://www.newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
-        <atom:link href="https://flattr.com/submit/auto?user_id=chriskrycho&amp;url=https://flattr.com/profile/chriskrycho&amp;title=Podcaster,%20software%20developer,%20writer,%20theologian&amp;description=I%20podcast:%0A%0A-%20%5BWinning%20Slowly%5D(//www.winningslowly.org),%20with%20Stephen%20Carradini,%20on%20technology,%20religion,%20ethics,%20and%20art%0A-%20%5BNew%20Rustacean%5D(//www.newrustacean.com)%20%E2%80%93%20about%20learning%20the%20Rust%20programming%20language%0A-%20%5BSap.py%5D(//www.sap-py.com)%20with%20my%20wife,%20Jaimie%20Krycho%0A-%20%5BRun%20With%20Me%5D(//runwith.chriskrycho.com)%20%E2%80%93%20a%203%E2%80%935%20minute%20%22microcast%22%20about%20running,%20recorded%20while%20running%0A%0AI%20write%20on%20art,%20theology,%20and%20technology%20at%20%5Bchriskrycho.com%5D(//www.chriskrycho.com).&amp;language=en_GB&amp;category=audio" rel="payment" type="text/html"/>
+        <atom:link href="https://flattr.com/submit/auto?user_id=chriskrycho&amp;url=https%3A%2F%2Fflattr.com%2Fprofile%2Fchriskrycho&amp;title=Podcaster%2C%20software%20developer%2C%20writer%2C%20theologian&amp;description=I%20podcast%3A%0A%0A-%20%5BWinning%20Slowly%5D%28%2F%2Fwww.winningslowly.org%29%2C%20with%20Stephen%20Carradini%2C%20on%20technology%2C%20religion%2C%20ethics%2C%20and%20art%0A-%20%5BNew%20Rustacean%5D%28%2F%2Fwww.newrustacean.com%29%20%E2%80%93%20about%20learning%20the%20Rust%20programming%20language%0A-%20%5BSap.py%5D%28%2F%2Fwww.sap-py.com%29%20with%20my%20wife%2C%20Jaimie%20Krycho%0A-%20%5BRun%20With%20Me%5D%28%2F%2Frunwith.chriskrycho.com%29%20%E2%80%93%20a%203%E2%80%935%20minute%20%22microcast%22%20about%20running%2C%20recorded%20while%20running%0A%0AI%20write%20on%20art%2C%20theology%2C%20and%20technology%20at%20%5Bchriskrycho.com%5D%28%2F%2Fwww.chriskrycho.com%29.&amp;language=en_GB&amp;category=audio" rel="payment" type="text/html"/>
         <itunes:author>Chris Krycho</itunes:author>
         <itunes:subtitle>Let’s try some Rust, shall we?</itunes:subtitle>
         <itunes:summary><![CDATA[Documenting a journey into a new programming language—with source code, examples, and almost certainly some out-and-out hilarities along the way.]]></itunes:summary>
@@ -40,12 +40,87 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <item>
+            <title>Meta 1 – Slowing Down</title>
+            <link>http://newrustacean.com/show_notes/meta/_1/</link>
+            <description><![CDATA[<p>Avoiding burnout by taking it a little easier.</p>
+<p>Sometimes, the way a podcast stays in existence is by coming out less often. That’s what’s happening here.</p>
+<h1 id="links">Links</h1>
+<ul>
+<li><a href="https://github.com/chriskrycho/lightning-rs">lightning-rs</a></li>
+<li><a href="http://getpelican.com">Pelican</a></li>
+<li><a href="https://gohugo.io">Hugo</a></li>
+<li><a href="https://jekyllrb.com">Jekyll</a></li>
+<li><a href="https://staticsitegenerators.net">Static Site Generators</a>: The definitive listing of Static Site Generators — all 445 of them!</li>
+</ul>
+<h2 id="become-a-sponsor">Become a sponsor</h2>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h1 id="follow">Follow</h1>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>App.net: <a href="https://alpha.app.net/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Sat, 12 Nov 2016 13:26:56 -0500</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/meta_1.mp3" length="6494113" type="audio/mpeg"/>
+            <guid isPermaLink="false">40FB0537-15C7-475A-94ED-090F9887A358</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Avoiding burnout by taking it a little easier.
+
+Sometimes, the way a podcast stays in existence is by coming out less often. That's what's happening here.
+
+# Links
+  
+  - [lightning-rs]
+  - [Pelican]
+  - [Hugo]
+  - [Jekyll]
+  - [Static Site Generators]\: The definitive listing of Static Site Generators — all 445 of them!
+
+[lightning-rs]: https://github.com/chriskrycho/lightning-rs
+[Pelican]: http://getpelican.com
+[Hugo]: https://gohugo.io
+[Jekyll]: https://jekyllrb.com
+[Static Site Generators]: https://staticsitegenerators.net
+
+# Become a sponsor
+
+  - [Patreon](https://www.patreon.com/newrustacean)
+  - [Venmo](https://venmo.com/chriskrycho)
+  - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
+  - [Cash.me](https://cash.me/$chriskrycho)
+
+# Follow
+
+  - New Rustacean:
+      + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
+      + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
+  - Chris Krycho
+      + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
+
+]]></itunes:summary>
+            <itunes:duration>7:42</itunes:duration>
+        </item>
+        <item>
             <title>Interview 3 – Carol (Nichols || Goulding)</title>
             <link>http://newrustacean.com/show_notes/interview/_3/</link>
             <description><![CDATA[Carol (Nichols || Goulding) on learning Rust, teaching Rust, and building community
 <br />
-<h2 id="notes">Notes</h2>
-Chris talks with Carol (Nichols || Goulding), a Rust community team member, co-author of the first major revision of <em>The Rust Programming Language</em>, and co-founder of the first Rust consultancy.
+<h2 id="notes">Notes</h2>Chris talks with Carol (Nichols || Goulding), a Rust community team member, co-author of the first major revision of <em>The Rust Programming Language</em>, and co-founder of the first Rust consultancy.
 <br />
 <h2 id="links">Links</h2>
 <ul>
@@ -121,7 +196,6 @@ Chris talks with Carol (Nichols || Goulding), a Rust community team member, co-a
 <li>Vesa Kaihlavirta</li>
 <li><a href="http://willroe.me">William Roe</a></li>
 </ul>
-
 (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)
 <br />
 <h3 id="become-a-sponsor">Become a sponsor</h3>
@@ -148,7 +222,7 @@ Chris talks with Carol (Nichols || Goulding), a Rust community team member, co-a
 </ul>
 </li>
 </ul>]]></description>
-            <pubDate>Fri, 30 Sep 2016 17:49:02 -0400</pubDate>
+            <pubDate>Fri, 30 Sep 2016 08:00:00 -0400</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_3.mp3" length="39738296" type="audio/mpeg"/>
             <guid isPermaLink="false">7299496B-086C-450F-94C1-05AB08CDC294</guid>
             <itunes:author>Chris Krycho</itunes:author>
