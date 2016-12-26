@@ -8,11 +8,6 @@
 //!
 //! [e001]: /src/show_notes/src/e001.rs.html
 
-// Allow unstable features so that we can do things you normally wouldn't, like
-// use `strong_count` in e015.
-// #![allow(unstable)]
-#![feature(rc_counts)]
-
 // Set the crate-level HTML rendering rules for the documentation.
 #![doc(html_logo_url = "http://newrustacean.com/podcast.png",
        html_favicon_url = "http://newrustacean.com/favicon.ico",

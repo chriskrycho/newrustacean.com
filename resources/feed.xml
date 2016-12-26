@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.3.2(2842); Mac OS X Version 10.12.1 (Build 16B2555) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.3.6(2864); Mac OS X Version 10.12.2 (Build 16C67) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 12 Nov 2016 13:30:11 -0500</pubDate>
-        <lastBuildDate>Sat, 12 Nov 2016 13:30:12 -0500</lastBuildDate>
+        <pubDate>Thu, 29 Dec 2016 14:06:33 -0500</pubDate>
+        <lastBuildDate>Thu, 29 Dec 2016 14:06:33 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -39,6 +39,213 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>News 2: Let's talk roadmap!</title>
+            <link>http://newrustacean.com/show_notes/news/_2/</link>
+            <description><![CDATA[<p>Rust’s achievements in 2016 and goals for 2017</p>
+<h2 id="links">Links</h2>
+<ul>
+<li>Rust releases:
+<ul>
+<li>1.10: <a href="https://blog.rust-lang.org/2016/07/07/Rust-1.10.html">blog post</a> | <a href="https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1100-2016-07-07">release notes</a></li>
+<li>1.11: <a href="https://blog.rust-lang.org/2016/08/18/Rust-1.11.html">blog post</a> | <a href="https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1110-2016-08-18">release notes</a></li>
+<li>1.12: <a href="https://blog.rust-lang.org/2016/09/29/Rust-1.12.html">blog post</a> | <a href="https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1120-2016-09-29">release notes</a></li>
+<li>1.12.1: <a href="https://blog.rust-lang.org/2016/10/20/Rust-1.12.1.html">blog post</a></li>
+<li>1.13: <a href="https://blog.rust-lang.org/2016/11/10/Rust-1.13.html">blog post</a> | <a href="https://github.com/rust-lang/rust/blob/stable/RELEASES.md#version-1130-2016-11-10">release notes</a></li>
+<li>1.14: <a href="https://blog.rust-lang.org/2016/12/22/Rust-1.14.html">blog post</a> | <a href="https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1140-2016-12-22">release notes</a></li>
+</ul></li>
+<li>Rust 2017 roadmap
+<ul>
+<li><a href="https://github.com/aturon/rfcs/blob/4f40ba07f2a0730c188cb5db6b0b9c5887ae1801/text/0000-roadmap-2017.md">RFC text</a></li>
+<li><a href="https://github.com/rust-lang/rfcs/pull/1774">RFC discussion</a></li>
+</ul></li>
+<li>Other official Rust blog posts:
+<ul>
+<li><a href="https://blog.rust-lang.org/2016/08/10/Shape-of-errors-to-come.html">Shape of errors to come</a></li>
+<li><a href="https://blog.rust-lang.org/2016/09/08/incremental.html">Incremental compilation</a>
+<ul>
+<li>Milestone: <a href="https://github.com/rust-lang/rust/milestone/30">beta</a></li>
+<li>Milestone: <a href="https://github.com/rust-lang/rust/milestone/31">across crates</a></li>
+<li>Milestone: <a href="https://github.com/rust-lang/rust/milestone/32">in typechecking</a></li>
+</ul></li>
+</ul></li>
+<li>Cargo workspaces:
+<ul>
+<li><a href="https://github.com/rust-lang/rfcs/blob/master/text/1525-cargo-workspace.md">Original RFC</a> and <a href="https://github.com/rust-lang/rfcs/pull/1525">discussion</a></li>
+<li><a href="http://doc.crates.io/manifest.html#the-workspace-section">Documentation</a></li>
+</ul></li>
+<li>Rust Language Service:
+<ul>
+<li><a href="https://internals.rust-lang.org/t/introducing-rust-language-server-source-release/4209">Announcement post</a> on internals.rust-lang.org</li>
+<li><a href="https://www.youtube.com/watch?time_continue=2405&amp;v=pTQxHIzGqFI">Demo</a></li>
+</ul></li>
+<li>Non-core projects mentioned on the show:
+<ul>
+<li><a href="https://github.com/alexcrichton/futures-rs">Futures</a></li>
+<li><a href="https://github.com/tokio-rs/tokio">Tokio</a></li>
+<li><a href="https://rocket.rs">Rocket</a></li>
+</ul></li>
+<li>My projects
+<ul>
+<li><a href="https://github.com/chriskrycho/lightning-rs">Lightning</a></li>
+<li>RFC #1636:
+<ul>
+<li><a href="https://github.com/rust-lang/rfcs/blob/master/text/1636-document_all_features.md">text</a></li>
+<li><a href="https://github.com/rust-lang/rfcs/pull/1636">discussion</a></li>
+<li><a href="https://github.com/rust-lang/rust/issues/38643">tracking issue</a> (where you can contribute!)</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li>Andreas Fischer</li>
+<li>Ben Whitley</li>
+<li>Cameron Mochrie</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li><a href="https://github.com/Limeth">Jakub “Limeth” Hlusička</a></li>
+<li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li>
+<li>Keith Gray</li>
+<li>Lachlan Collins</li>
+<li>Luca Schmid</li>
+<li>Matt Rudder</li>
+<li>Matthew Piziak</li>
+<li>Micael Bergeron</li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Peter Tillemans</li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Steven Murawksi</li>
+<li>Vesa Kaihlavirta</li>
+<li>Vlad Bezden</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Thu, 29 Dec 2016 14:00:00 -0500</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_2.mp3" length="17697400" type="audio/mpeg"/>
+            <guid isPermaLink="false">7AAC0E06-6A11-4707-BD9A-AB5AD95F7CBB</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Rust’s achievements in 2016 and goals for 2017
+
+
+Sponsors
+
+* Aleksey Pirogov
+
+* Andreas Fischer
+
+* Ben Whitley
+
+* Cameron Mochrie
+
+* Chris Palmer
+
+* Daniel Collin
+
+* Derek Morr
+
+* Jakub “Limeth” Hlusička
+
+* Jupp Müller
+
+* Keith Gray
+
+* Lachlan Collins
+
+* Luca Schmid
+
+* Matt Rudder
+
+* Matthew Piziak
+
+* Micael Bergeron
+
+* Ovidiu Curcan
+
+* Pascal Hertleif
+
+* Peter Tillemans
+
+* Ralph Giles (“rillian”)
+
+* Raph Levien
+
+* reddraggone9
+
+* Ryan Ollos
+
+* Steven Murawksi
+
+* Vesa Kaihlavirta
+
+* Vlad Bezden
+
+* William Roe
+
+* Zaki
+
+(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)
+
+
+Become a sponsor
+
+* Patreon.com/chriskrycho
+
+* Venmo.com/chriskrycho
+
+* Dwolla.com/hub/chriskrycho
+
+* Cash.me/$chriskrycho
+
+* Flattr.com/chriskrycho
+
+* PayPal.me/chriskrycho
+
+
+Contact
+
+* New Rustacean:
+
+* Twitter: @newrustacean
+
+* Email: hello@newrustacean.com
+
+* Chris Krycho
+
+* GitHub: chriskrycho
+
+* Twitter: @chriskrycho]]></itunes:summary>
+            <itunes:duration>21:02</itunes:duration>
+        </item>
         <item>
             <title>Meta 1 – Slowing Down</title>
             <link>http://newrustacean.com/show_notes/meta/_1/</link>
