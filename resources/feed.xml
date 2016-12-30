@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Thu, 29 Dec 2016 14:06:33 -0500</pubDate>
-        <lastBuildDate>Thu, 29 Dec 2016 14:06:33 -0500</lastBuildDate>
+        <pubDate>Thu, 29 Dec 2016 22:19:30 -0500</pubDate>
+        <lastBuildDate>Thu, 29 Dec 2016 22:19:30 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -116,6 +116,7 @@
 <li>Ovidiu Curcan</li>
 <li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
 <li>Peter Tillemans</li>
+<li><a href="https://twitter.com/hansapla">Philipp Keller</a></li>
 <li>Ralph Giles (“rillian”)</li>
 <li>Raph Levien</li>
 <li>reddraggone9</li>
@@ -151,7 +152,7 @@
 </ul>
 ]]></description>
             <pubDate>Thu, 29 Dec 2016 14:00:00 -0500</pubDate>
-            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_2.mp3" length="17697400" type="audio/mpeg"/>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_2.mp3" length="17777740" type="audio/mpeg"/>
             <guid isPermaLink="false">7AAC0E06-6A11-4707-BD9A-AB5AD95F7CBB</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary><![CDATA[Rust’s achievements in 2016 and goals for 2017
@@ -194,6 +195,8 @@ Sponsors
 * Pascal Hertleif
 
 * Peter Tillemans
+
+* Philipp Keller
 
 * Ralph Giles (“rillian”)
 
@@ -244,7 +247,7 @@ Contact
 * GitHub: chriskrycho
 
 * Twitter: @chriskrycho]]></itunes:summary>
-            <itunes:duration>21:02</itunes:duration>
+            <itunes:duration>21:08</itunes:duration>
         </item>
         <item>
             <title>Meta 1 – Slowing Down</title>

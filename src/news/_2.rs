@@ -102,6 +102,7 @@
 //!   - Ovidiu Curcan
 //!   - [Pascal Hertleif]
 //!   - Peter Tillemans
+//!   - Philipp Keller
 //!   - Ralph Giles ("rillian")
 //!   - Raph Levien
 //!   - reddraggone9
@@ -118,6 +119,7 @@
 //! [Jakub "Limeth" Hlusička]: https://github.com/Limeth
 //! [Jupp Müller]: https://de.linkedin.com/in/juppm
 //! [Pascal Hertleif]: https://pascalhertleif.de/
+//! [Philipp Keller]: https://twitter.com/hansapla
 //! [William Roe]: http://willroe.me
 //!
 //! (Thanks to the couple people donating who opted out of the reward tier, as
