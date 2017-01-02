@@ -36,7 +36,7 @@
 //! The descriptions of the code below are minimal; see the inline comments in
 //! [the source][src] for the actual informative discussion.
 //!
-//! [src]: /src/show_notes/src/e016.rs.html
+//! [src]: /src/show_notes/e016.rs.html
 //!
 //!
 //! ### A comment on the code samples

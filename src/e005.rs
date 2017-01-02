@@ -44,7 +44,7 @@
 //!
 //! Thanks to Steve and Chad for their helpful feedback!
 //!
-//! [notes-1]: /src/show_notes/src/e005.rs.html
+//! [notes-1]: /src/show_notes/e005.rs.html
 //! [notes-2]: https://users.rust-lang.org/t/new-rustacean-podcast-e005-allocate-it-where-2015-11-08/3153/13?u=chriskrycho
 //! [notes-3]: https://github.com/chriskrycho/newrustacean.com/issues/7
 //!
