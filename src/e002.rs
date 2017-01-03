@@ -33,7 +33,7 @@
 //! As usual, you'll want to have the [`src`] open to see what I'm doing with
 //! the components documented below.
 //!
-//! [`src`]: /src/show_notes/src/e002.rs.html
+//! [`src`]: /src/show_notes/e002.rs.html
 //!
 //! # Links
 //!

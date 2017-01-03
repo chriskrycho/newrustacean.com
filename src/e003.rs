@@ -43,7 +43,7 @@
 //!  6. [`get_a_result`]
 //!  7. [`demonstrate_result`]
 //!
-//! [source]: /src/show_notes/src/e003.rs.html
+//! [source]: /src/show_notes/e003.rs.html
 //! [`RelatedishThings`]: /show_notes/e003/enum.RelatedishThings.html
 //! [`demonstrate_basic_enumeration`]: /show_notes/e003/fn.demonstrate_basic_enumeration.html
 //! [`demonstrate_match`]: /show_notes/e003/fn.demonstrate_match.html
