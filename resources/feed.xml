@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sun, 08 Jan 2017 22:41:14 -0500</pubDate>
-        <lastBuildDate>Sun, 08 Jan 2017 22:41:15 -0500</lastBuildDate>
+        <pubDate>Mon, 09 Jan 2017 09:03:29 -0500</pubDate>
+        <lastBuildDate>Mon, 09 Jan 2017 09:03:29 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -41,20 +41,17 @@
         </itunes:category>
         <item>
             <title>CYSK: quick-xml</title>
-            <link>http://newrustacean.com/show_notes/crates_you_should_know/_2/</link>
-            <description><![CDATA[<p>A pull-parser for reading and writing XML.</p>
-
+            <link>http://newrustacean.com/show_notes/crates_you_should_know/_1/</link>
+            <description><![CDATA[A pull-parser for reading and writing XML.
+<br />
 <h2 id="links">Links</h2>
-
 <ul>
 <li><a href="https://crates.io/crates/quick-xml">crates.io</a></li>
 <li><a href="https://docs.rs/quick-xml/0.4.2/quick_xml/">docs.rs</a></li>
 <li><a href="https://github.com/tafia/quick-xml">GitHub</a></li>
 <li><a href="https://github.com/chriskrycho/lightning-rs/blob/a1fcd0af2435c5f2fd4d7c4ef3a5a88f89bdd9f5/src/syntax_highlighting.rs">syntax highlighting</a> &#8211; example from <a href="https://github.com/chriskrycho/lightning-rs">lightning-rs</a></li>
 </ul>
-
 <h2 id="sponsors">Sponsors</h2>
-
 <ul>
 <li>Aleksey Pirogov</li>
 <li>Andreas Fischer</li>
@@ -87,11 +84,10 @@
 <li>Zaki</li>
 </ul>
 
-<p>(Thanks to the couple people donating who opted out of the reward tier, as<br/>
-well. You know who you are!)</p>
-
+(Thanks to the couple people donating who opted out of the reward tier, as
+<br />well. You know who you are!)
+<br />
 <h3 id="becomeasponsor">Become a sponsor</h3>
-
 <ul>
 <li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
 <li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
@@ -100,24 +96,26 @@ well. You know who you are!)</p>
 <li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
 <li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
 </ul>
-
 <h2 id="contact">Contact</h2>
-
 <ul>
+
 <p><li>New Rustacean:</p>
 
 <ul>
 <li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
 <li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
-</ul></li>
+</ul>
+</li>
+
 <p><li>Chris Krycho</p>
 
 <ul>
 <li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
 <li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
-</ul></li>
+</ul>
+</li>
 </ul>]]></description>
-            <pubDate>Sun, 08 Jan 2017 22:38:08 -0500</pubDate>
+            <pubDate>Mon, 09 Jan 2017 09:03:21 -0500</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/csyk_1.mp3" length="7287954" type="audio/mpeg"/>
             <guid isPermaLink="false">1CF4B00D-9AEC-442B-BD06-A986602D2A56</guid>
             <itunes:author>Chris Krycho</itunes:author>
