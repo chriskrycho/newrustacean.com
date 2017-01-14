@@ -39,6 +39,7 @@
 //!   - [Daniel Collin]
 //!   - [Derek Morr]
 //!   - [Jakub "Limeth" Hlusička]
+//!   - Jordan Henderson
 //!   - [Jupp Müller]
 //!   - Keith Gray
 //!   - Lachlan Collins
