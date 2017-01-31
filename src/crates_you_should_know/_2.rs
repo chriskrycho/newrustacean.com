@@ -46,6 +46,7 @@
 //!   - Aleksey Pirogov
 //!   - Andreas Fischer
 //!   - Andrew Thompson
+//!   - Austin LeSure
 //!   - Ben Whitley
 //!   - [Charlie Egan]
 //!   - [Chris Palmer]
@@ -70,6 +71,7 @@
 //!   - Raph Levien
 //!   - reddraggone9
 //!   - Steven Murawksi
+//!   - Stuart Hinson
 //!   - Tyler Harper
 //!   - Vesa Kaihlavirta
 //!   - Vlad Bezden
