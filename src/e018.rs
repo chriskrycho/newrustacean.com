@@ -51,6 +51,74 @@
 //! [e009]: http://www.newrustacean.com/show_notes/e009/
 //! [e017]: http://www.newrustacean.com/show_notes/e017/
 //! [interview 2]: http://www.newrustacean.com/show_notes/interview/_2/index.html
+//! 
+//! 
+//! Sponsors
+//! --------
+//!
+//!   - Aleksey Pirogov
+//!   - Andreas Fischer
+//!   - Ben Whitley
+//!   - Cameron Mochrie
+//!   - [Chris Palmer]
+//!   - [Christopher Giffard]
+//!   - [Daniel Collin]
+//!   - [Derek Morr]
+//!   - [Jakub "Limeth" Hlusička]
+//!   - Jordan Henderson
+//!   - [Jupp Müller]
+//!   - Keith Gray
+//!   - Lachlan Collins
+//!   - Luca Schmid
+//!   - Matt Rudder
+//!   - Matthew Piziak
+//!   - Micael Bergeron
+//!   - Ovidiu Curcan
+//!   - [Pascal Hertleif]
+//!   - Peter Tillemans
+//!   - Philipp Keller
+//!   - Ralph Giles ("rillian")
+//!   - Raph Levien
+//!   - reddraggone9
+//!   - Ryan Ollos
+//!   - Steven Murawksi
+//!   - Vesa Kaihlavirta
+//!   - Vlad Bezden
+//!   - [William Roe]
+//!   - Zaki
+//!
+//! [Chris Palmer]: http://home.red-oxide.org/
+//! [Christopher Giffard]: http://blog.cgiffard.com
+//! [Daniel Collin]: https://twitter.com/daniel_collin
+//! [Derek Morr]: https://twitter.com/derekmorr
+//! [Jakub "Limeth" Hlusička]: https://github.com/Limeth
+//! [Jupp Müller]: https://de.linkedin.com/in/juppm
+//! [Pascal Hertleif]: https://pascalhertleif.de/
+//! [Philipp Keller]: https://twitter.com/hansapla
+//! [William Roe]: http://willroe.me
+//!
+//! (Thanks to the couple people donating who opted out of the reward tier, as
+//! well. You know who you are!)
+//!
+//! ### Become a sponsor
+//!
+//!   - [Patreon](https://www.patreon.com/newrustacean)
+//!   - [Venmo](https://venmo.com/chriskrycho)
+//!   - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
+//!   - [Cash.me](https://cash.me/$chriskrycho)
+//!   - [Flattr](https://flattr.com/profile/chriskrycho)
+//!   - [PayPal.me](https://paypal.me/chriskrycho)
+//!
+//! 
+//! Contact
+//! -------
+//!
+//!   - New Rustacean:
+//!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
+//!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
+//!   - Chris Krycho
+//!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
+//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
 
 
