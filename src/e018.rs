@@ -58,6 +58,7 @@
 //!
 //!   - Aleksey Pirogov
 //!   - Andreas Fischer
+//!   - Andrew Thompson
 //!   - Ben Whitley
 //!   - Cameron Mochrie
 //!   - [Chris Palmer]

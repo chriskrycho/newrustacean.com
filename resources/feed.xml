@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Tue, 31 Jan 2017 18:24:57 -0500</pubDate>
-        <lastBuildDate>Tue, 31 Jan 2017 18:24:57 -0500</lastBuildDate>
+        <pubDate>Tue, 31 Jan 2017 18:32:30 -0500</pubDate>
+        <lastBuildDate>Tue, 31 Jan 2017 18:32:31 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -42,9 +42,11 @@
         <item>
             <title>e018: `Borrow`, `AsRef`, `Deref`: my head hurts now</title>
             <link>http://newrustacean.com/show_notes/e018/</link>
-            <description><![CDATA[<p>Three traits which are essential for designing good, Rustic APIs.</p>
+            <description><![CDATA[Three traits which are essential for designing good, Rustic APIs.
+<br />
 <h2 id="notes">Notes</h2>
-<p><code>Borrow</code>, <code>AsRef</code>, and <code>Deref</code> are a little complicated, but they're well-worth understanding. Together, they give you tools for dealing with everything from <code>HashMap</code> and friends to conversions involving smart pointer types to easily using <code>String</code> and <code>str</code> or <code>Vec</code> and slice together.</p>
+<code>Borrow</code>, <code>AsRef</code>, and <code>Deref</code> are a little complicated, but they're well-worth understanding. Together, they give you tools for dealing with everything from <code>HashMap</code> and friends to conversions involving smart pointer types to easily using <code>String</code> and <code>str</code> or <code>Vec</code> and slice together.
+<br />
 <h2 id="links">Links</h2>
 <ul>
 <li><code>AsRef</code>, <code>Borrow</code>, and <code>Deref</code>:
@@ -53,7 +55,8 @@
 <li><a href="https://doc.rust-lang.org/stable/collections/borrow/trait.Borrow.html"><code>collections::borrow::Borrow</code></a></li>
 <li><a href="https://doc.rust-lang.org/stable/std/convert/trait.AsRef.html"><code>std::convert::AsRef</code></a></li>
 <li><a href="https://doc.rust-lang.org/stable/std/ops/trait.Deref.html"><code>std::ops::Deref</code></a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="https://en.wikipedia.org/wiki/Persistent_data_structure">persistent data structures</a></li>
 <li><a href="http://lucumr.pocoo.org/2016/7/10/rust-rest/">&quot;Rust and Rest&quot;</a> – Arnin Roacher</li>
 <li><a href="https://github.com/getsentry/sentry-cli/">sentry-cli</a></li>
@@ -63,12 +66,14 @@
 <li><a href="http://www.newrustacean.com/show_notes/e009/">e009: Composing a Rustic tune</a></li>
 <li><a href="http://www.newrustacean.com/show_notes/e017/">e017: Point me where I need to go</a></li>
 <li><a href="http://www.newrustacean.com/show_notes/interview/_2/index.html">interview::2: Raph Levien</a></li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <h2 id="sponsors">Sponsors</h2>
 <ul>
 <li>Aleksey Pirogov</li>
 <li>Andreas Fischer</li>
+<li>Andrew Thompson</li>
 <li>Ben Whitley</li>
 <li>Cameron Mochrie</li>
 <li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
@@ -98,7 +103,9 @@
 <li><a href="http://willroe.me">William Roe</a></li>
 <li>Zaki</li>
 </ul>
-<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+
+(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)
+<br />
 <h3 id="become-a-sponsor">Become a sponsor</h3>
 <ul>
 <li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
@@ -114,15 +121,16 @@
 <ul>
 <li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
 <li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Chris Krycho
 <ul>
 <li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
 <li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
-</ul></li>
 </ul>
-]]></description>
-            <pubDate>Tue, 31 Jan 2017 18:25:00 -0500</pubDate>
+</li>
+</ul>]]></description>
+            <pubDate>Tue, 31 Jan 2017 18:32:23 -0500</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e018.mp3" length="14709559" type="audio/mpeg"/>
             <guid isPermaLink="false">8E739043-E105-4E84-BA22-3835BBB845FC</guid>
             <itunes:author>Chris Krycho</itunes:author>
