@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Tue, 31 Jan 2017 18:32:30 -0500</pubDate>
-        <lastBuildDate>Tue, 31 Jan 2017 18:32:31 -0500</lastBuildDate>
+        <pubDate>Tue, 14 Feb 2017 21:33:38 -0500</pubDate>
+        <lastBuildDate>Tue, 14 Feb 2017 21:33:39 -0500</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -39,6 +39,158 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>CYSK: clap</title>
+            <link>http://newrustacean.com/show_notes/crates_you_should_know/_2/</link>
+            <description><![CDATA[<p>A Command-Line Argument Parser.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://crates.io/crates/clap">crates.io</a></li>
+<li><a href="https://docs.rs/clap/2.20.3/clap/">docs.rs</a></li>
+<li><a href="https://github.com/kbknapp/clap-rs">GitHub</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLza5oFLQGTl2Z5T8g1pRkIynR3E0_pc7U">videos</a></li>
+<li><a href="https://book.clap.rs">book</a></li>
+<li>YAML:
+<ul>
+<li>example from clap
+<ul>
+<li><a href="https://github.com/kbknapp/clap-rs/blob/master/examples/17_yaml.yml">YAML</a></li>
+<li><a href="https://github.com/kbknapp/clap-rs/blob/master/examples/17_yaml.rs">associated Rust implementation</a></li>
+</ul></li>
+<li>example from <a href="https://github.com/chriskrycho/lightning-rs">lightning-rs</a>:
+<ul>
+<li><a href="https://github.com/chriskrycho/lightning-rs/blob/a1fcd0af2435c5f2fd4d7c4ef3a5a88f89bdd9f5/src/cli.yml">YAML</a></li>
+<li><a href="https://github.com/chriskrycho/lightning-rs/blob/a1fcd0af2435c5f2fd4d7c4ef3a5a88f89bdd9f5/src/cli.rs">associated Rust implementation</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li>Andreas Fischer</li>
+<li>Andrew Thompson</li>
+<li>Ben Whitley</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="http://blog.cgiffard.com">Christopher Giffard</a></li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li>
+<li>Jordan Henderson</li>
+<li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li>
+<li>Keith Gray</li>
+<li>Lachlan Collins</li>
+<li>Luca Schmid</li>
+<li>Matt Rudder</li>
+<li>Matthew Piziak</li>
+<li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li>
+<li>Micael Bergeron</li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Peter Tillemans</li>
+<li>Philipp Keller</li>
+<li>Ralph Giles (&quot;rillian&quot;)</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Steven Murawksi</li>
+<li>Tyler Harper</li>
+<li>Vesa Kaihlavirta</li>
+<li>Vlad Bezden</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Tue, 14 Feb 2017 21:33:31 -0500</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_2.mp3" length="9013843" type="audio/mpeg"/>
+            <guid isPermaLink="false">3666B4E8-5D29-4253-A56D-4145C7372F95</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[A Command-Line Argument Parser.
+
+
+Sponsors
+--------
+
+  - Aleksey Pirogov
+  - Andreas Fischer
+  - Andrew Thompson
+  - Ben Whitley
+  - [Charlie Egan]
+  - [Chris Palmer]
+  - [Christopher Giffard]
+  - [Daniel Collin]
+  - [Derek Morr]
+  - [Jakub "Limeth" Hlusička]
+  - Jordan Henderson
+  - [Jupp Müller]
+  - Keith Gray
+  - Lachlan Collins
+  - Luca Schmid
+  - Matt Rudder
+  - Matthew Piziak
+  - [Max Jacobson]
+  - Micael Bergeron
+  - Ovidiu Curcan
+  - [Pascal Hertleif]
+  - Peter Tillemans
+  - Philipp Keller
+  - Ralph Giles ("rillian")
+  - Raph Levien
+  - reddraggone9
+  - Steven Murawksi
+  - Tyler Harper
+  - Vesa Kaihlavirta
+  - Vlad Bezden
+  - [William Roe]
+  - Zaki
+
+(Thanks to the couple people donating who opted out of the reward tier, as
+well. You know who you are!)
+
+### Become a sponsor
+
+  - [Patreon](https://www.patreon.com/newrustacean)
+  - [Venmo](https://venmo.com/chriskrycho)
+  - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
+  - [Cash.me](https://cash.me/$chriskrycho)
+  - [Flattr](https://flattr.com/profile/chriskrycho)
+  - [PayPal.me](https://paypal.me/chriskrycho)
+
+
+Contact
+-------
+
+  - New Rustacean:
+      + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
+      + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
+  - Chris Krycho
+      + GitHub: [chriskrycho](https://github.com/chriskrycho)
+      + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
+]]></itunes:summary>
+            <itunes:duration>10:42</itunes:duration>
+        </item>
         <item>
             <title>e018: `Borrow`, `AsRef`, `Deref`: my head hurts now</title>
             <link>http://newrustacean.com/show_notes/e018/</link>
