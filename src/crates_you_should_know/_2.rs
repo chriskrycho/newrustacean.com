@@ -3,14 +3,14 @@
 //!   - **Date:** Feburary 14, 2017
 //!   - **Subject:** A Command-Line Argument Parser.
 //!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/csyk_2.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/csyk_2.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/csyk_2.ogg)
+//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_2.m4a)
+//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_2.mp3)
+//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_2.ogg)
 //!
 //! <audio title="clap" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/csyk_2.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/csyk_2.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/csyk_2.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_2.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_2.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_2.ogg">
 //! </audio>
 //!
 //! Links
