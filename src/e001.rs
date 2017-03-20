@@ -12,7 +12,7 @@
 //! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e001.mp3
 //! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e001.ogg
 //!
-//! <audio title="Document all the things!" controls preload=metadata>
+//! <audio style="width: 100%" title="Document all the things!" controls preload=metadata>
 //!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e001.m4a">
 //!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e001.mp3">
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e001.ogg">

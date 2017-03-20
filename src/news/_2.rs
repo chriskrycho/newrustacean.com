@@ -7,7 +7,7 @@
 //!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_2.mp3)
 //!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news_2.ogg)
 //!
-//! <audio title="Rust's achievements in 2016 and goals for 2017" controls preload=metadata>
+//! <audio style="width: 100%" style="width: 100%" title="Rust's achievements in 2016 and goals for 2017" controls preload=metadata>
 //!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news_2.m4a">
 //!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_2.mp3">
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news_2.ogg">

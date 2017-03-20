@@ -7,7 +7,7 @@
 //!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_1.mp3)
 //!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news_1.ogg)
 //!
-//! <audio title="Polyglot programming promises and perils" controls preload=metadata>
+//! <audio style="width: 100%" style="width: 100%" title="Polyglot programming promises and perils" controls preload=metadata>
 //!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news_1.m4a">
 //!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_1.mp3">
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news_1.ogg">

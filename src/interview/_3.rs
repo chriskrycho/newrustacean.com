@@ -11,7 +11,7 @@
 //! [MP3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_3.mp3
 //! [Ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_3.ogg
 //!
-//! <audio title="Interview 3 – Carol (Nichols || Goulding)" controls preload=metadata>
+//! <audio style="width: 100%" style="width: 100%" title="Interview 3 – Carol (Nichols || Goulding)" controls preload=metadata>
 //!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_3.m4a">
 //!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_3.mp3">
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_3.ogg">

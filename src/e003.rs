@@ -12,7 +12,7 @@
 //! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e003.mp3
 //! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e003.ogg
 //!
-//! <audio title="No. more. nulls." controls preload=metadata>
+//! <audio style="width: 100%" title="No. more. nulls." controls preload=metadata>
 //!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a">
 //!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e003.mp3">
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e003.ogg">
