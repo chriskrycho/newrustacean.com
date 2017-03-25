@@ -73,7 +73,7 @@
 //!   - Raph Levien
 //!   - reddraggone9
 //!   - Steven Murawksi
-//!   - Stuart Hinson
+//!   - [Stuart Hinson]
 //!   - Tyler Harper
 //!   - Vesa Kaihlavirta
 //!   - Vlad Bezden
@@ -93,6 +93,7 @@
 //! [Pascal Hertleif]: https://pascalhertleif.de/
 //! [Patrick O'Doherty]: https://twitter.com/patrickod
 //! [Philipp Keller]: https://twitter.com/hansapla
+//! [Stuart Hinson]: http://stuarth.github.io/
 //! [William Roe]: http://willroe.me
 //!
 //! (Thanks to the couple people donating who opted out of the reward tier, as
