@@ -56,7 +56,7 @@
 //!   - Jordan Henderson
 //!   - [Jupp Müller]
 //!   - Justin Ossevoort
-//!   - Karl Hobley
+//!   - [Karl Hobley]
 //!   - Keith Gray
 //!   - Lachlan Collins
 //!   - Luca Schmid
@@ -66,7 +66,7 @@
 //!   - Micael Bergeron
 //!   - Ovidiu Curcan
 //!   - [Pascal Hertleif]
-//!   - Patrick O'Doherty
+//!   - [Patrick O'Doherty]
 //!   - Peter Tillemans
 //!   - Philipp Keller
 //!   - Ralph Giles ("rillian")
@@ -88,8 +88,10 @@
 //! [Derek Morr]: https://twitter.com/derekmorr
 //! [Jakub "Limeth" Hlusička]: https://github.com/Limeth
 //! [Jupp Müller]: https://de.linkedin.com/in/juppm
+//! [Karl Hobley]: https://github.com/kaedroho/
 //! [Max Jacobson]: https://twitter.com/maxjacobson
 //! [Pascal Hertleif]: https://pascalhertleif.de/
+//! [Patrick O'Doherty]: https://twitter.com/patrickod
 //! [Philipp Keller]: https://twitter.com/hansapla
 //! [William Roe]: http://willroe.me
 //!
