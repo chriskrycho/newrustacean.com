@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 01 Apr 2017 14:38:44 -0400</pubDate>
-        <lastBuildDate>Sat, 01 Apr 2017 14:38:44 -0400</lastBuildDate>
+        <pubDate>Sat, 01 Apr 2017 14:49:55 -0400</pubDate>
+        <lastBuildDate>Sat, 01 Apr 2017 14:49:55 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -40,10 +40,9 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <item>
-            <title>e020: </title>
+            <title>e020: Putting code in its place</title>
             <link>http://newrustacean.com/show_notes/e020/</link>
-            <description><![CDATA[<p>Putting code in its place</p>
-<p>How do we organize code in Rust? Where do we break it apart into modules or crates, and why?</p>
+            <description><![CDATA[<p>How do we organize code in Rust? Where do we break it apart into modules or crates, and why?</p>
 <h2 id="notes">Notes</h2>
 <p>Structuring code in a language like Rust can seem a bit more ambiguous than doing the same in a language with classes to attach all our functionality to, but in practice, the concerns are much the same: modules are namespaces, and we group by <em>responsibility</em>. In today's episode, I talk through that philosophy (and give some comparisons to other languages), and then look at what it looks like in practice!</p>
 <h2 id="links">Links</h2>
