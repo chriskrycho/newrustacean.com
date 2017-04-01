@@ -4,14 +4,14 @@
 //!   - **Subject:** How do we organize code in Rust? Where do we break it apart
 //!     into modules or crates, and why?
 //!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/020.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/020.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/020.ogg)
+//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e020.m4a)
+//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e020.mp3)
+//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e020.ogg)
 //!
 //! <audio style="width: 100%" title="Putting code in its place" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/020.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/020.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/020.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e020.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e020.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e020.ogg">
 //! </audio>
 //! 
 //! 
