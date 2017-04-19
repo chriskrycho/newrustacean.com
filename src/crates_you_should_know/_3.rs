@@ -1,46 +1,58 @@
-//! Putting code in its place
+//! Rust Language Service
 //!
-//!   - **Date:** April 1, 2017
-//!   - **Subject:** How do we organize code in Rust? Where do we break it apart
-//!     into modules or crates, and why?
+//!   - **Date:** April 18, 2017
+//!   - **Subject:** Where the RLS came from, what it can do, and how you can
+//!     start using it today!
 //!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e020.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e020.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e020.ogg)
+//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_3.m4a)
+//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_3.mp3)
+//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_3.ogg)
 //!
-//! <audio style="width: 100%" title="Putting code in its place" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e020.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e020.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e020.ogg">
+//! <audio style="width: 100%" title="Rust language service" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_3.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_3.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_3.ogg">
 //! </audio>
 //! 
 //! 
 //! Notes
 //! -----
 //! 
-//! Structuring code in a language like Rust can seem a bit more ambiguous than
-//! doing the same in a language with classes to attach all our functionality
-//! to, but in practice, the concerns are much the same: modules are namespaces,
-//! and we group by *responsibility*. In today's episode, I talk through that
-//! philosophy (and give some comparisons to other languages), and then look at
-//! what it looks like in practice!
+//! One major ergonomic improvement to developing in Rust in 2017 is coming via
+//! the *Rust Language Service*: an initiative that lets us share a common core
+//! of functionality between every editor – from Vim to VS Code and everything
+//! in between. In today's episode, I give some background on it and talk about
+//! how you can start using it today!
 //!
 //!
 //! Links
 //! -----
 //!
-//!   - [Learning Rust Modules], by Jeff Walker, has a nice comparison of C#
-//!     namespaces and Rust modules.
-//!   - [The commit on Lightning inspired by this episode][lightning].
+//! - Rust Language Service
+//!     + [repo]
+//!     + blog posts
+//!         - [announcement]
+//!         - [alpha 2 release]
+//!         - [first `rustup` release]
+//!     + [vscode-rust]
+//! - Language Server Protocol
+//!     + [repo][lsp-repo]
+//!     + [VS Code blog post]
+//!     + [implementations]
 //!
-//! [Learning Rust Modules]: http://walkercoderanger.com/blog/2015/08/learning-rust-modules/
-//! [lightning]: https://github.com/chriskrycho/lightning-rs/commit/fac341d1c1b4872d62ec05253ee33f056e67d6ce
-//!
+//! [repo]: https://github.com/rust-lang-nursery/rls
+//! [announcement]: http://www.jonathanturner.org/2017/01/rls-alpha-release.html
+//! [alpha 2 release]: http://www.jonathanturner.org/2017/03/rls-alpha-2.html
+//! [first `rustup` release]: http://www.jonathanturner.org/2017/04/rls-now-in-nightly.md.html
+//! [lsp-repo]: https://github.com/Microsoft/language-server-protocol
+//! [VS Code blog post]: https://code.visualstudio.com/blogs/2016/06/27/common-language-protocol
+//! [implementations]: https://github.com/Microsoft/language-server-protocol/wiki/Protocol-Implementations
+//! [vscode-rust]: https://github.com/editor-rs/vscode-rust
 //!
 //! Sponsors
 //! --------
 //! 
-//!
+//!   - [Anthony Deschamps]
 //!   - Aleksey Pirogov
 //!   - Andreas Fischer
 //!   - Andrew Thompson
@@ -78,11 +90,11 @@
 //!   - [Stuart Hinson]
 //!   - Tyler Harper
 //!   - Vesa Kaihlavirta
-//!   - Vlad Bezden
 //!   - Warren Harper
 //!   - [William Roe]
 //!   - Zaki
 //!
+//! [Anthony Deschamps]: https://github.com/adeschamps
 //! [Charlie Egan]: https://charlieegan3.com
 //! [Chris Palmer]: http://home.red-oxide.org/
 //! [Christopher Giffard]: http://blog.cgiffard.com
