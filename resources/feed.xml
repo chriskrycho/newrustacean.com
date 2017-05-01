@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Tue, 18 Apr 2017 21:25:08 -0400</pubDate>
-        <lastBuildDate>Tue, 18 Apr 2017 21:25:08 -0400</lastBuildDate>
+        <pubDate>Sun, 30 Apr 2017 22:13:20 -0400</pubDate>
+        <lastBuildDate>Sun, 30 Apr 2017 22:13:20 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -39,6 +39,120 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>Interview 4 – Jonathan Turner: Part 1</title>
+            <link>http://newrustacean.com/show_notes/interview/_4/part_1/</link>
+            <description><![CDATA[<h1>Getting to Rust</h1>
+<p>Background, TypeScript, coming to Rust, and how helpful the Rust community can be.</p>
+<h2 id="show-notes">Show Notes</h2>
+<p>On Jonathan's programming backstory:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Texas_Instruments_TI-99/4A">TI-99/4A</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Commodore_64">Commodore 64</a></li>
+<li><a href="http://www.cray.com">Cray</a>
+<ul>
+<li><a href="http://chapel.cray.com">Chapel</a></li>
+</ul></li>
+<li><a href="http://www.typescriptlang.org">TypeScript</a></li>
+<li><a href="http://yehudakatz.com">Yehuda Katz</a></li>
+<li><a href="https://www.ecma-international.org/memento/TC39.htm">ECMAScript Language Committee</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Locality_of_reference">Data locality</a></li>
+<li><a href="http://cppcast.com">CPPCast</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BASIC">BASIC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pascal_(programming_language)">Pascal</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ultima_%28series%29">Ultima</a></li>
+</ul>
+<p>After the transition to working on Rust full-time:</p>
+<ul>
+<li>Improving the error messages—
+<ul>
+<li><a href="https://github.com/rust-lang/rust/issues/33240">design issue</a></li>
+<li>Jonathan's personal blog post <a href="http://www.jonathanturner.org/2016/08/helping-out-with-rust-errors.html">&quot;Helping with the Rust Errors&quot;</a></li>
+<li>Official Rust blog post announcing and describing the feature, <a href="https://blog.rust-lang.org/2016/08/10/Shape-of-errors-to-come.html">&quot;Shape of Errors to Come&quot;</a></li>
+<li><a href="http://elm-lang.org">Elm</a></li>
+<li><a href="https://github.com/rust-lang/rust/issues/35233">error list issue</a></li>
+</ul></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
+<li>Anthony Scotti</li>
+<li>Aleksey Pirogov</li>
+<li>Andreas Fischer</li>
+<li>Andrew Thompson</li>
+<li>Austin LeSure</li>
+<li>Ben Whitley</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li>Chris Jones</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="http://blog.cgiffard.com">Christopher Giffard</a></li>
+<li>Dan Abrams</li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Eugene Bulkin</li>
+<li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
+<li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li>
+<li>Jonathan Turner</li>
+<li>Jordan Henderson</li>
+<li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li>
+<li>Justin Ossevoort</li>
+<li><a href="https://github.com/kaedroho/">Karl Hobley</a></li>
+<li>Keith Gray</li>
+<li>Kilian Rault</li>
+<li>Lachlan Collins</li>
+<li>Luca Schmid</li>
+<li>Matt Rudder</li>
+<li>Matthew Piziak</li>
+<li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li>
+<li>Micael Bergeron</li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li>
+<li>Peter Tillemans</li>
+<li>Philipp Keller</li>
+<li>Ralph Giles (&quot;rillian&quot;)</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Steven Murawksi</li>
+<li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
+<li>Ty Overby</li>
+<li>Tyler Harper</li>
+<li>Vesa Kaihlavirta</li>
+<li>Warren Harper</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Sun, 30 Apr 2017 22:13:06 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_4_part_1.mp3" length="21955165" type="audio/mpeg"/>
+            <guid isPermaLink="false">D287B357-E8CB-402A-A19B-767E819BEA14</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Background, TypeScript, coming to Rust, and how helpful the Rust community can be.]]></itunes:summary>
+            <itunes:duration>22:50</itunes:duration>
+        </item>
         <item>
             <title>CYSK: RLS</title>
             <link>http://newrustacean.com/show_notes/crates_you_should_know/_3/</link>
