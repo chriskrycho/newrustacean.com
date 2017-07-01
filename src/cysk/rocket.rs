@@ -25,7 +25,7 @@
 //! - [Hyper]
 //! - [Iron]
 //! - [Django]
-//! - [Railse]
+//! - [Rails]
 //! - [ASP.NET MVC]
 //! - Procedural macros
 //!     + in the Rust book
@@ -43,7 +43,7 @@
 //! [Rails]: http://rubyonrails.org
 //! [ASP.NET MVC]: https://www.asp.net/mvc
 //! [first edition]: https://doc.rust-lang.org/book/first-edition/procedural-macros.html
-//! [RFC #1556]: https://github.com/rust-lang/rfcs/pull/1566
+//! [RFC #1566]: https://github.com/rust-lang/rfcs/pull/1566
 //! [implementation tracking issue]: https://github.com/rust-lang/rust/issues/38356
 //! [metaprogramming]: https://en.wikipedia.org/wiki/Metaprogramming
 //! [Lisp]: https://en.wikipedia.org/wiki/Lisp_(programming_language)
