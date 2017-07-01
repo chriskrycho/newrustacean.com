@@ -47,7 +47,7 @@ pub mod e019;
 pub mod e020;
 
 pub mod bonus;
-pub mod crates_you_should_know;
+pub mod cysk;
 pub mod interview;
 pub mod meta;
 pub mod news;
