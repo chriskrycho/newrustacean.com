@@ -16,3 +16,7 @@ recordings
 .idea
 .sublime-*
 *.iml
+
+# Writing tools
+.Ulysses-*
+
