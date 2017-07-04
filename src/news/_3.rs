@@ -1,52 +1,31 @@
-//! Rocket
+//! Increasing Rust's Reach
 //! 
-//!   - **Date:** June 30, 2017
-//!   - **Subject:** An accessible, well-designed web framework in Rust!
+//!   - **Date:** July 3, 2017
+//!   - **Subject:** Growing Rust's diversity to help Rust grow.
 //!   - **Audio:**
 //!       + [M4A][m4a]
 //!       + [MP3][mp3]
 //!       + [Ogg][ogg]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_rocket.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_rocket.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_rocket.ogg
+//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news_3.m4a
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_3.mp3
+//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news_3.ogg
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Crates You Should Know: Rocket" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_rocket.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_rocket.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_rocket.ogg">
+//! <audio style="width: 100%" style="width: 100%" title="News 3: Increasing Rust's Reach" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news_3.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_3.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news_3.ogg">
 //! </audio>
 //!
 //!
 //! Links and Notes
 //! ---------------
 //! 
-//! - [Rocket]
-//! - [Hyper]
-//! - [Iron]
-//! - [Django]
-//! - [Rails]
-//! - [ASP.NET MVC]
-//! - Procedural macros
-//!     + in the Rust book
-//!         * [first edition]
-//!         * second edition – still in progress at time of publication
-//!     + [RFC #1566]
-//!         * [implementation tracking issue]
-//! - [metaprogramming]
-//! - [Lisp]
+//! - [Initiative blog post]
+//! - [Initiative submission form]
 //! 
-//! [Rocket]: https://rocket.rs
-//! [Hyper]: https://hyper.rs
-//! [Iron]: http://ironframework.io
-//! [Django]: https://www.djangoproject.com
-//! [Rails]: http://rubyonrails.org
-//! [ASP.NET MVC]: https://www.asp.net/mvc
-//! [first edition]: https://doc.rust-lang.org/book/first-edition/procedural-macros.html
-//! [RFC #1566]: https://github.com/rust-lang/rfcs/pull/1566
-//! [implementation tracking issue]: https://github.com/rust-lang/rust/issues/38356
-//! [metaprogramming]: https://en.wikipedia.org/wiki/Metaprogramming
-//! [Lisp]: https://en.wikipedia.org/wiki/Lisp_(programming_language)
+//! [Initiative blog post]: https://blog.rust-lang.org/2017/06/27/Increasing-Rusts-Reach.html
+//! [Initiative submission form]: https://docs.google.com/forms/d/e/1FAIpQLSfbSGuoyZE9dctdEoC_XEZ7j2ox7jQT1zghAOF4iGds2PfBCA/viewform
 //! 
 //! 
 //! Sponsors
@@ -58,7 +37,6 @@
 //!   - Andreas Fischer
 //!   - Andrew Thompson
 //!   - Austin LeSure
-//!   - Ben Whitley
 //!   - Benham Esfabod
 //!   - Benjamin Wasty
 //!   - [Charlie Egan]
@@ -71,6 +49,7 @@
 //!   - Eugene Bulkin
 //!   - [Henri Sivonen]
 //!   - [Jakub "Limeth" Hlusička]
+//!   - James Cooper
 //!   - Jonathan Turner
 //!   - Jordan Henderson
 //!   - [Jupp Müller]
@@ -78,11 +57,11 @@
 //!   - [Karl Hobley]
 //!   - Keith Gray
 //!   - Kilian Rault
-//!   - Lachlan Collins
 //!   - Luca Schmid
 //!   - Matt Rudder
 //!   - Matthew Piziak
 //!   - [Max Jacobson]
+//!   - [Messense Lv]
 //!   - Micael Bergeron
 //!   - Ovidiu Curcan
 //!   - [Pascal Hertleif]
@@ -93,6 +72,7 @@
 //!   - Randy MacLeod
 //!   - Raph Levien
 //!   - reddraggone9
+//!   - Sebastián Ramírez Magrí
 //!   - Steven Murawksi
 //!   - [Stuart Hinson]
 //!   - Tim Brooks
@@ -115,6 +95,7 @@
 //! [Jupp Müller]: https://de.linkedin.com/in/juppm
 //! [Karl Hobley]: https://github.com/kaedroho/
 //! [Max Jacobson]: https://twitter.com/maxjacobson
+//! [Messense Lv]: https://github.com/messense
 //! [Pascal Hertleif]: https://pascalhertleif.de/
 //! [Patrick O'Doherty]: https://twitter.com/patrickod
 //! [Philipp Keller]: https://twitter.com/hansapla
