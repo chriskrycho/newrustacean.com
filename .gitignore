@@ -20,3 +20,5 @@ recordings
 # Writing tools
 .Ulysses-*
 
+# Vim nonsense
+*.swp

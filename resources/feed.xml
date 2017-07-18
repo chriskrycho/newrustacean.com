@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Tue, 04 Jul 2017 15:57:53 -0400</pubDate>
-        <lastBuildDate>Tue, 04 Jul 2017 15:57:53 -0400</lastBuildDate>
+        <pubDate>Mon, 17 Jul 2017 20:33:32 -0400</pubDate>
+        <lastBuildDate>Mon, 17 Jul 2017 20:33:32 -0400</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -39,6 +39,103 @@
         <itunes:category text="Education">
             <itunes:category text="Training"/>
         </itunes:category>
+        <item>
+            <title>e021: Keeping your types under cover</title>
+            <link>http://newrustacean.com/show_notes/e021/</link>
+            <description><![CDATA[<p>Using type aliases and creating custom type wrappers for more expressive and safer code.</p>
+<h2 id="links-and-notes">Links and Notes</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/stable/std/ops/trait.Deref.html"><code>Deref</code></a></li>
+<li><a href="https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html"><code>Iterator</code></a></li>
+<li><a href="https://doc.rust-lang.org/stable/std/io/type.Result.html"><code>std::io::Result</code></a></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
+<li>Anthony Scotti</li>
+<li>Aleksey Pirogov</li>
+<li>Andreas Fischer</li>
+<li>Andrew Thompson</li>
+<li>Austin LeSure</li>
+<li>Benham Esfabod</li>
+<li>Benjamin Wasty</li>
+<li>Brent Vatne</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li>Chris Jones</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li>Dan Abrams</li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li>David W. Allen</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Eugene Bulkin</li>
+<li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
+<li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li>
+<li>James Cooper</li>
+<li>Jonathan Turner</li>
+<li>Jordan Henderson</li>
+<li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li>
+<li>Justin Ossevoort</li>
+<li><a href="https://github.com/kaedroho/">Karl Hobley</a></li>
+<li>Keith Gray</li>
+<li>Kilian Rault</li>
+<li>Luca Schmid</li>
+<li>Matt Rudder</li>
+<li>Matthew Piziak</li>
+<li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li>
+<li><a href="https://github.com/messense">Messense Lv</a></li>
+<li>Micael Bergeron</li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li>
+<li>Peter Tillemans</li>
+<li>Philipp Keller</li>
+<li>Ralph Giles (&quot;rillian&quot;)</li>
+<li>Randy MacLeod</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
+<li>Steven Murawksi</li>
+<li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
+<li>Tim Brooks</li>
+<li>Tom Prince</li>
+<li>Ty Overby</li>
+<li>Tyler Harper</li>
+<li>Vesa Kaihlavirta</li>
+<li>Warren Harper</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Mon, 17 Jul 2017 20:35:00 -0400</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e021.mp3" length="16854580" type="audio/mpeg"/>
+            <guid isPermaLink="false">963488ED-45D6-41FD-A47D-0A9798A7DF65</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary><![CDATA[Using type aliases and creating custom type wrappers for more expressive and safer code.]]></itunes:summary>
+            <itunes:duration>17:28</itunes:duration>
+        </item>
         <item>
             <title>News 3: Increasing Rust's Reach</title>
             <link>http://newrustacean.com/show_notes/news/_3/</link>
