@@ -84,7 +84,7 @@ Hopefully that gives you some idea of how you’d tackle writing a simple applic
 Thanks to:
 
 - Anthony Deschamps
-- Benham Esfabod
+- Behnam Esfahbod
 - Christopher Giffard
 - Chris Palmer
 - Dan Abrams

@@ -37,7 +37,7 @@
 //!   - Andreas Fischer
 //!   - Andrew Thompson
 //!   - Austin LeSure
-//!   - Benham Esfabod
+//!   - [Behnam Esfahbod]
 //!   - Benjamin Wasty
 //!   - [Charlie Egan]
 //!   - Chris Jones
@@ -85,6 +85,7 @@
 //!   - Zaki
 //!
 //! [Anthony Deschamps]: https://github.com/adeschamps
+//! [Behnam Esfahbod]: https://github.com/behnam
 //! [Charlie Egan]: https://charlieegan3.com
 //! [Chris Palmer]: http://home.red-oxide.org/
 //! [Christopher Giffard]: http://blog.cgiffard.com
