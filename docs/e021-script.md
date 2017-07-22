@@ -130,7 +130,7 @@ Thanks to this month's $10-or-more sponsors:
 
 - Anthony Deschamps
 - Chris Palmer
-- Benham Esfabod
+- Behnam Esfahbod
 - Dan Abrams
 - Daniel Collin
 - David W. Allen

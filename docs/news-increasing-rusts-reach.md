@@ -52,7 +52,7 @@ If you're noticing a theme there – lots of focus on documentation, and *some* 
 Thanks, as always, to the show's sponsors!
 
 - Anthony Deschamps
-- Benham Esfabod
+- Behnam Esfahbod
 - Christopher Giffard
 - Chris Palmer
 - Dan Abrams
