@@ -48,7 +48,7 @@
 //!   - [Chris Palmer]
 //!   - Dan Abrams
 //!   - [Daniel Collin]
-//!   - David W. Allen
+//!   - [David W. Allen]
 //!   - [Derek Morr]
 //!   - Eugene Bulkin
 //!   - [Henri Sivonen]
@@ -93,6 +93,7 @@
 //! [Charlie Egan]: https://charlieegan3.com
 //! [Chris Palmer]: http://home.red-oxide.org/
 //! [Daniel Collin]: https://twitter.com/daniel_collin
+//! [David Allen]: http://GitHub.com/DataRiot
 //! [Derek Morr]: https://twitter.com/derekmorr
 //! [Henri Sivonen]: https://hsivonen.fi/
 //! [Jakub "Limeth" Hlusička]: https://github.com/Limeth
