@@ -1,5 +1,5 @@
 //! Open source is mostly just normal people
-//! 
+//!
 //!   - **Date:** August 14, 2017
 //!   - **Subject:** My experience with ember-cli-typescript as an example:
 //!     we're all just people muddling along and doing our best.
@@ -8,20 +8,20 @@
 //!       + [M4A][m4a]
 //!       + [Ogg][ogg]
 //!
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/_9.mp3
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/_9.m4a
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/_9.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_9.mp3
+//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_9.m4a
+//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_9.ogg
 //!
 //! <audio style="width: 100%" style="width: 100%" title="Bonus 9: Open source is just normal people" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/_9.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/_9.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/_9.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_9.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_9.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_9.ogg">
 //! </audio>
 //!
 //!
 //! Links and Notes
 //! ---------------
-//! 
+//!
 //! - [ember-cli-typescript]
 //! - [The Bike Shed #118: Nonsense In, Nonsense Out][bike shed]
 //! - Sean's appearance on New Rustacean: [Interview 1]
@@ -29,11 +29,11 @@
 //! [ember-cli-typescript]: https://github.com/typed-ember/ember-cli-typescript
 //! [bike shed]: http://bikeshed.fm/118
 //! [Interview 1]: http://www.newrustacean.com/show_notes/interview/_1/index.html
-//! 
-//! 
+//!
+//!
 //! Sponsors
 //! --------
-//! 
+//!
 //!   - [Anthony Deschamps]
 //!   - Anthony Scotti
 //!   - Aleksey Pirogov
