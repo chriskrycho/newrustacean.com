@@ -65,6 +65,7 @@
 //!   - Keith Gray
 //!   - Kilian Rault
 //!   - Luca Schmid
+//!   - Masashi Fujita
 //!   - Matt Rudder
 //!   - Matthew Piziak
 //!   - [Max Jacobson]
