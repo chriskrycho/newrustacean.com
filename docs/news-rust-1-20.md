@@ -71,6 +71,7 @@ Thanks to this month's $10-or-more sponsors:
 - Nick Stevens
 - Peter Tillemans
 - Philipp Keller
+- Olaf Leidinger
 - Raph Levien
 - and Vesa Khailavirta
 
