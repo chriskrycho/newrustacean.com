@@ -1,25 +1,27 @@
 //! Rayon
 //! 
-//!   - **Date:** August 26, 2017
+//!   - **Date:** September 16, 2017
 //!   - **Subject:** Safe, threaded, parallel code in Rust!
 //!   - **Audio:**
 //!       + [mp3]
 //!       + [m4a]
 //!       + [ogg]
 //!
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_rayon.mp3
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_rayon.m4a
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_rayon.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk/rayon.mp3
+//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk/rayon.m4a
+//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk/rayon.ogg
 //!
 //! <audio style="width: 100%" style="width: 100%" title="Crates You Should Know: Rayon" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_rayon.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_rayon.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_rayon.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk/rayon.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk/rayon.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk/rayon.ogg">
 //! </audio>
 //!
 //!
 //! Links and Notes
 //! ---------------
+//! 
+//! ### Rayon
 //! 
 //! - [Source]
 //! - [Crate]
@@ -33,6 +35,15 @@
 //! [README]: https://github.com/nikomatsakis/rayon/blob/master/README.md
 //! [blog post]: http://smallcultfollowing.com/babysteps/blog/2015/12/18/rayon-data-parallelism-in-rust/
 //! 
+//! ### Other things referenced on the show
+//! 
+//! - [Request for Explanation #10]
+//! - [e016: `RefCell`s and code smells] – on mutability
+//! - ["embarassingly parallel"]
+//! 
+//! [Request for Explanation #10]: https://request-for-explanation.github.io/podcast/ep10-two-paths-diverged-in-a-yellow-wood/index.html
+//! http://www.newrustacean.com/show_notes/e016/index.html
+//! ["embarassingly parallel"]: https://en.wikipedia.org/wiki/Embarrassingly_parallel
 //! 
 //! Sponsors
 //! --------
@@ -57,8 +68,8 @@
 //!   - [Henri Sivonen]
 //!   - [Jakub "Limeth" Hlusička]
 //!   - James Cooper
+//!   - Jerome Froelich
 //!   - Jonathan Turner
-//!   - Jordan Henderson
 //!   - [Jupp Müller]
 //!   - Justin Ossevoort
 //!   - [Karl Hobley]
@@ -68,6 +79,7 @@
 //!   - Masashi Fujita
 //!   - Matt Rudder
 //!   - Matthew Piziak
+//!   - Matthias Ruszala
 //!   - [Max Jacobson]
 //!   - [Messense Lv]
 //!   - Micael Bergeron
