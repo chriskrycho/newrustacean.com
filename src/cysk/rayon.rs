@@ -38,11 +38,11 @@
 //! ### Other things referenced on the show
 //! 
 //! - [Request for Explanation #10]
-//! - [e016: `RefCell`s and code smells] – on mutability
+//! - [e016: `RefCell`s and code smells][e016] – on mutability
 //! - ["embarassingly parallel"]
 //! 
 //! [Request for Explanation #10]: https://request-for-explanation.github.io/podcast/ep10-two-paths-diverged-in-a-yellow-wood/index.html
-//! http://www.newrustacean.com/show_notes/e016/index.html
+//! [e016]: http://www.newrustacean.com/show_notes/e016/index.html
 //! ["embarassingly parallel"]: https://en.wikipedia.org/wiki/Embarrassingly_parallel
 //! 
 //! Sponsors
