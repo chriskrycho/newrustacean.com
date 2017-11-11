@@ -1,8 +1,5 @@
 //! Micro-interviews from Rust Belt Rust 2017
 //!
-//! Links
-//! -----
-//!
 //!
 //! Sponsors
 //! --------
@@ -125,8 +122,4 @@
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-#[doc(include = "../docs/rbr_2017/andrew-hobden.md")]
-pub mod andrew_hobden {}
-
-#[doc(include = "../docs/rbr_2017/anthony-deschamps.md")]
-pub mod anthony_deschamps {}
+pub mod colin_dean;
