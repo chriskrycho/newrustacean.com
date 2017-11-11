@@ -4,26 +4,27 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.5(3004); Mac OS X Version 10.12.6 (Build 16G29) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.5.2(3016); Mac OS X Version 10.13.1 (Build 17B48) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Mon, 25 Sep 2017 09:22:42 -0400</pubDate>
-        <lastBuildDate>Mon, 25 Sep 2017 09:22:42 -0400</lastBuildDate>
+        <pubDate>Sat, 11 Nov 2017 13:22:56 -0700</pubDate>
+        <lastBuildDate>Sat, 11 Nov 2017 13:22:57 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
             <link>http://newrustacean.com</link>
             <width>144</width>
             <height>144</height>
+            <description>A podcast about learning the Rust programming language—from scratch!</description>
         </image>
         <atom:link href="http://www.newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
         <atom:link href="https://flattr.com/submit/auto?user_id=chriskrycho&amp;url=https://flattr.com/profile/chriskrycho&amp;title=Podcaster,%20software%20developer,%20writer,%20theologian&amp;description=I%20podcast:%0A%0A-%20%5BWinning%20Slowly%5D(//www.winningslowly.org),%20with%20Stephen%20Carradini,%20on%20technology,%20religion,%20ethics,%20and%20art%0A-%20%5BNew%20Rustacean%5D(//www.newrustacean.com)%20%E2%80%93%20about%20learning%20the%20Rust%20programming%20language%0A-%20%5BSap.py%5D(//www.sap-py.com)%20with%20my%20wife,%20Jaimie%20Krycho%0A-%20%5BRun%20With%20Me%5D(//runwith.chriskrycho.com)%20%E2%80%93%20a%203%E2%80%935%20minute%20%22microcast%22%20about%20running,%20recorded%20while%20running%0A%0AI%20write%20on%20art,%20theology,%20and%20technology%20at%20%5Bchriskrycho.com%5D(//www.chriskrycho.com).&amp;language=en_GB&amp;category=audio" rel="payment" type="text/html"/>
         <itunes:author>Chris Krycho</itunes:author>
         <itunes:subtitle>Let’s try some Rust, shall we?</itunes:subtitle>
-        <itunes:summary>Documenting a journey into a new programming language—with source code, examples, and almost certainly some out-and-out hilarities along the way.</itunes:summary>
+        <itunes:summary>A podcast about learning the Rust programming language—from scratch!</itunes:summary>
         <itunes:keywords>Rust,programming,programming languages,software</itunes:keywords>
         <itunes:image href="http://newrustacean.com/podcast.png"/>
         <itunes:explicit>clean</itunes:explicit>
@@ -40,6 +41,18 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>RBR 2017: Colin Dean</title>
+            <link>http://newrustacean.com/show_notes/interview/rbr_2017/colin_dean/</link>
+            <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
+            <pubDate>Sat, 11 Nov 2017 13:22:48 -0700</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/rbr_2017/colin_dean.mp3" length="7000792" type="audio/mpeg"/>
+            <guid isPermaLink="false">6FD0CDF5-183D-4D03-A686-C7F4646DBE5C</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
+            <itunes:duration>7:16</itunes:duration>
+            <content:encoded><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></content:encoded>
+        </item>
         <item>
             <title>Meta 2: Two milestones</title>
             <link>http://newrustacean.com/show_notes/meta/_2/</link>
@@ -144,7 +157,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Mon, 25 Sep 2017 09:20:35 -0400</pubDate>
+            <pubDate>Mon, 25 Sep 2017 07:20:35 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/meta/_2.mp3" length="11577228" type="audio/mpeg"/>
             <guid isPermaLink="false">930E60FE-6493-4E5A-B373-2091DABAF8CC</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -241,7 +254,7 @@
 <li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
 </ul></li>
 </ul>]]></description>
-            <pubDate>Sat, 16 Sep 2017 14:25:00 -0400</pubDate>
+            <pubDate>Sat, 16 Sep 2017 12:25:00 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk/rayon.mp3" length="13642249" type="audio/mpeg"/>
             <guid isPermaLink="false">2DC73B1F-BAC9-4466-8C50-3D65F2A43DFE</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -254,7 +267,7 @@
             <description><![CDATA[<p>Associated constants, conference season, meetups, and more!</p>
 <h2 id="links-and-notes">Links and Notes</h2><ul><li>Rust 1.20<ul><li><a href="https://blog.rust-lang.org/2017/08/31/Rust-1.20.html">blog post</a></li><li><a href="https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1200-2017-08-31">changelog</a></li><li><a href="https://github.com/rust-lang/rfcs/blob/master/text/0195-associated-items.md">Associated items RFC</a> – and see the code for today's show for examples of the variants I described on the show!</li></ul></li><li><a href="http://rustconf.com">RustConf 2017</a></li><li><a href="http://zurich.rustfest.eu">RustFest 2017</a><ul><li><a href="https://ti.to/asquera-event-ug/rustfest-zurich/">registration</a></li></ul></li><li><a href="http://www.rust-belt-rust.com">Rust Belt Rust 2017</a><ul><li><a href="https://www.eventbrite.com/e/rust-belt-rust-conference-2017-registration-36237335847">registration</a> (and don't forget to use code <code>newrustacean</code> for 20% off!)</li></ul></li><li><a href="http://rustrations.club">rustrations.club</a></li></ul><h2 id="sponsors">Sponsors</h2><ul><li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li><li>Anthony Scotti</li><li>Aleksey Pirogov</li><li>Andreas Fischer</li><li>Andrew Thompson</li><li>Austin LeSure</li><li><a href="https://github.com/behnam">Behnam Esfahbod</a></li><li>Benjamin Wasty</li><li>Brent Vatne</li><li><a href="https://charlieegan3.com">Charlie Egan</a></li><li>Chris Jones</li><li><a href="http://home.red-oxide.org/">Chris Palmer</a></li><li>Dan Abrams</li><li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li><li>[David W. Allen]</li><li><a href="https://twitter.com/derekmorr">Derek Morr</a></li><li>Eugene Bulkin</li><li><a href="https://hsivonen.fi/">Henri Sivonen</a></li><li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li><li>James Cooper</li><li>Jonathan Turner</li><li>Jordan Henderson</li><li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li><li>Justin Ossevoort</li><li><a href="https://github.com/kaedroho/">Karl Hobley</a></li><li>Keith Gray</li><li>Kilian Rault</li><li>Luca Schmid</li><li>Masashi Fujita</li><li>Matt Rudder</li><li>Matthew Piziak</li><li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li><li><a href="https://github.com/messense">Messense Lv</a></li><li>Micael Bergeron</li><li><a href="http://influential.co/">Nathan Sculli</a></li><li><a href="https://github.com/nastevens">Nick Stevens</a></li><li>Ovidiu Curcan</li><li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li><li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li><li>Peter Tillemans</li><li>Philipp Keller</li><li>Ralph Giles (&quot;rillian&quot;)</li><li>Randy MacLeod</li><li>Raph Levien</li><li>reddraggone9</li><li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li><li>Simon G.</li><li>Steven Murawksi</li><li><a href="http://stuarth.github.io/">Stuart Hinson</a></li><li>Tim Brooks</li><li>Tom Prince</li><li>Ty Overby</li><li>Tyler Harper</li><li>Vesa Kaihlavirta</li><li>Warren Harper</li><li><a href="http://willroe.me">William Roe</a></li><li>Zaki</li></ul><p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p><h3 id="become-a-sponsor">Become a sponsor</h3><ul><li><a href="https://www.patreon.com/newrustacean">Patreon</a></li><li><a href="https://venmo.com/chriskrycho">Venmo</a></li><li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li><li><a href="https://cash.me/$chriskrycho">Cash.me</a></li><li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li><li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li></ul><h2 id="contact">Contact</h2><ul><li>New Rustacean:<ul><li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li><li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li></ul></li><li>Chris Krycho<ul><li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li><li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li></ul></li></ul>
 ]]></description>
-            <pubDate>Thu, 31 Aug 2017 22:30:00 -0400</pubDate>
+            <pubDate>Thu, 31 Aug 2017 20:30:00 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_20.mp3" length="12748258" type="audio/mpeg"/>
             <guid isPermaLink="false">C3F7B727-EAE8-40AB-95B0-6D5F5A308921</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -265,7 +278,7 @@
             <title>Bonus 9: Open source is mostly just normal people</title>
             <link>http://newrustacean.com/show_notes/bonus/_9/</link>
             <description><![CDATA[<p>My experience with ember-cli-typescript as an example: we're all just people muddling along and doing our best.</p><h2 id="links-and-notes">Links and Notes</h2><ul><li><a href="https://github.com/typed-ember/ember-cli-typescript">ember-cli-typescript</a></li><li><a href="http://bikeshed.fm/118">The Bike Shed #118: Nonsense In, Nonsense Out</a></li><li>Sean's appearance on New Rustacean: <a href="http://www.newrustacean.com/show_notes/interview/_1/index.html">Interview 1</a></li></ul><h2 id="sponsors">Sponsors</h2><ul><li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li><li>Anthony Scotti</li><li>Aleksey Pirogov</li><li>Andreas Fischer</li><li>Andrew Thompson</li><li><a href="https://github.com/behnam">Behnam Esfahbod</a></li><li>Benjamin Wasty</li><li>Brent Vatne</li><li><a href="https://charlieegan3.com">Charlie Egan</a></li><li>Chris Jones</li><li><a href="http://home.red-oxide.org/">Chris Palmer</a></li><li><a href="http://blog.cgiffard.com">Christopher Giffard</a></li><li>Dan Abrams</li><li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li><li>[David W. Allen]</li><li><a href="https://twitter.com/derekmorr">Derek Morr</a></li><li>Eugene Bulkin</li><li><a href="https://hsivonen.fi/">Henri Sivonen</a></li><li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li><li>James Cooper</li><li>Jonathan Turner</li><li>Jordan Henderson</li><li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li><li>Justin Ossevoort</li><li><a href="https://github.com/kaedroho/">Karl Hobley</a></li><li>Keith Gray</li><li>Kilian Rault</li><li>Luca Schmid</li><li>Matt Rudder</li><li>Matthew Piziak</li><li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li><li><a href="https://github.com/messense">Messense Lv</a></li><li>Micael Bergeron</li><li>Oliver Uvman - see the <a href="https://www.patreon.com/tomaka/">Tomaka Patreon</a> and <a href="http://arewegameyet.com/">arewegameyet.com</a></li><li>Ovidiu Curcan</li><li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li><li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li><li>Peter Tillemans</li><li>Philipp Keller</li><li>Ralph Giles (&quot;rillian&quot;)</li><li>Randy MacLeod</li><li>Raph Levien</li><li>Raphael</li><li><a href="https://github.com/rtsuk">Rob Tsuk</a></li><li>reddraggone9</li><li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li><li>Steven Murawksi</li><li><a href="http://stuarth.github.io/">Stuart Hinson</a></li><li>Tim Brooks</li><li>Tom Prince</li><li>Ty Overby</li><li>Tyler Harper</li><li>Vesa Kaihlavirta</li><li>Warren Harper</li><li><a href="http://willroe.me">William Roe</a></li><li>Zaki</li></ul><p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p><h3 id="become-a-sponsor">Become a sponsor</h3><ul><li><a href="https://www.patreon.com/newrustacean">Patreon</a></li><li><a href="https://venmo.com/chriskrycho">Venmo</a></li><li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li><li><a href="https://cash.me/$chriskrycho">Cash.me</a></li><li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li><li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li></ul><h2 id="contact">Contact</h2><ul><li>New Rustacean:<ul><li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li><li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li></ul></li><li>Chris Krycho<ul><li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li><li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li></ul></li></ul>]]></description>
-            <pubDate>Mon, 14 Aug 2017 09:00:00 -0400</pubDate>
+            <pubDate>Mon, 14 Aug 2017 07:00:00 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_9.mp3" length="10284163" type="audio/mpeg"/>
             <guid isPermaLink="false">CC87FE1E-0E80-4B8F-B022-892E25C3E260</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -361,7 +374,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Mon, 17 Jul 2017 20:35:00 -0400</pubDate>
+            <pubDate>Mon, 17 Jul 2017 18:35:00 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e021.mp3" length="16854580" type="audio/mpeg"/>
             <guid isPermaLink="false">963488ED-45D6-41FD-A47D-0A9798A7DF65</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -457,7 +470,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Tue, 04 Jul 2017 16:00:00 -0400</pubDate>
+            <pubDate>Tue, 04 Jul 2017 14:00:00 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_3.mp3" length="12550966" type="audio/mpeg"/>
             <guid isPermaLink="false">EA9A1109-0E35-42ED-8B96-C91BCD123502</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -574,7 +587,7 @@
 </ul>
 </li>
 </ul>]]></description>
-            <pubDate>Fri, 30 Jun 2017 22:00:00 -0400</pubDate>
+            <pubDate>Fri, 30 Jun 2017 20:00:00 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_rocket.mp3" length="16860563" type="audio/mpeg"/>
             <guid isPermaLink="false">12EDC178-7E71-463E-9331-91462826BB0C</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -705,7 +718,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Sat, 17 Jun 2017 15:47:30 -0400</pubDate>
+            <pubDate>Sat, 17 Jun 2017 13:47:30 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_4_part_3.mp3" length="21227823" type="audio/mpeg"/>
             <guid isPermaLink="false">4676FF77-2A28-4F02-BE7F-6586774C42BA</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -824,7 +837,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Tue, 30 May 2017 16:36:28 -0400</pubDate>
+            <pubDate>Tue, 30 May 2017 14:36:28 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_4_part_2.mp3" length="24208184" type="audio/mpeg"/>
             <guid isPermaLink="false">E78DADCB-274E-4CCA-8876-2C467190F003</guid>
             <itunes:summary>Making Rust Better: Rust as the fusion of systems and high-level programming languages, and the RLS.</itunes:summary>
@@ -937,7 +950,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Sun, 30 Apr 2017 22:13:06 -0400</pubDate>
+            <pubDate>Sun, 30 Apr 2017 20:13:06 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_4_part_1.mp3" length="21955165" type="audio/mpeg"/>
             <guid isPermaLink="false">D287B357-E8CB-402A-A19B-767E819BEA14</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -1038,7 +1051,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Tue, 18 Apr 2017 14:17:37 -0400</pubDate>
+            <pubDate>Tue, 18 Apr 2017 12:17:37 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_3.mp3" length="11068971" type="audio/mpeg"/>
             <guid isPermaLink="false">B9EC7CFA-C988-4EF8-A2F8-299CFE94726F</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -1124,7 +1137,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Sat, 01 Apr 2017 14:38:33 -0400</pubDate>
+            <pubDate>Sat, 01 Apr 2017 12:38:33 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e020.mp3" length="19593587" type="audio/mpeg"/>
             <guid isPermaLink="false">44A092E9-78BE-4760-87E2-E94A15DCF5C4</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -1210,7 +1223,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Sun, 19 Mar 2017 11:00:00 -0400</pubDate>
+            <pubDate>Sun, 19 Mar 2017 09:00:00 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_8.mp3" length="12987872" type="audio/mpeg"/>
             <guid isPermaLink="false">5DED2D2B-E06E-44E6-BECC-2A401B40E78A</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -1342,7 +1355,7 @@
 </body>
 </html>
 ]]></description>
-            <pubDate>Tue, 28 Feb 2017 17:20:00 -0500</pubDate>
+            <pubDate>Tue, 28 Feb 2017 15:20:00 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e019.mp3" length="15359091" type="audio/mpeg"/>
             <guid isPermaLink="false">A39AA3AC-EF1B-41B4-A0A1-F76676A74B1F</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -1437,7 +1450,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Tue, 14 Feb 2017 21:33:31 -0500</pubDate>
+            <pubDate>Tue, 14 Feb 2017 19:33:31 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_2.mp3" length="9013843" type="audio/mpeg"/>
             <guid isPermaLink="false">3666B4E8-5D29-4253-A56D-4145C7372F95</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -1535,7 +1548,7 @@
 </ul>
 </li>
 </ul>]]></description>
-            <pubDate>Tue, 31 Jan 2017 18:32:23 -0500</pubDate>
+            <pubDate>Tue, 31 Jan 2017 16:32:23 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e018.mp3" length="14709559" type="audio/mpeg"/>
             <guid isPermaLink="false">8E739043-E105-4E84-BA22-3835BBB845FC</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -1617,7 +1630,7 @@
 </ul>
 </li>
 </ul>]]></description>
-            <pubDate>Mon, 09 Jan 2017 09:03:21 -0500</pubDate>
+            <pubDate>Mon, 09 Jan 2017 07:03:21 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/csyk_1.mp3" length="7287954" type="audio/mpeg"/>
             <guid isPermaLink="false">1CF4B00D-9AEC-442B-BD06-A986602D2A56</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -1736,7 +1749,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Thu, 29 Dec 2016 14:00:00 -0500</pubDate>
+            <pubDate>Thu, 29 Dec 2016 12:00:00 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_2.mp3" length="17777740" type="audio/mpeg"/>
             <guid isPermaLink="false">7AAC0E06-6A11-4707-BD9A-AB5AD95F7CBB</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -1779,7 +1792,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Sat, 12 Nov 2016 13:26:56 -0500</pubDate>
+            <pubDate>Sat, 12 Nov 2016 11:26:56 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/meta_1.mp3" length="6494113" type="audio/mpeg"/>
             <guid isPermaLink="false">40FB0537-15C7-475A-94ED-090F9887A358</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -1893,7 +1906,7 @@
 </ul>
 </li>
 </ul>]]></description>
-            <pubDate>Fri, 30 Sep 2016 08:00:00 -0400</pubDate>
+            <pubDate>Fri, 30 Sep 2016 06:00:00 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_3.mp3" length="39738296" type="audio/mpeg"/>
             <guid isPermaLink="false">7299496B-086C-450F-94C1-05AB08CDC294</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -2000,7 +2013,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Sat, 10 Sep 2016 13:50:19 -0400</pubDate>
+            <pubDate>Sat, 10 Sep 2016 11:50:19 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_7.mp3" length="7533006" type="audio/mpeg"/>
             <guid isPermaLink="false">CEFB964C-E0C9-48FD-9EE6-06A0C1284CC8</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -2081,7 +2094,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Sat, 20 Aug 2016 12:15:43 -0400</pubDate>
+            <pubDate>Sat, 20 Aug 2016 10:15:43 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_6.mp3" length="8275634" type="audio/mpeg"/>
             <guid isPermaLink="false">2B30AB4B-8971-4576-BAD0-953A078B51A3</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -2180,7 +2193,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Mon, 08 Aug 2016 16:35:00 -0400</pubDate>
+            <pubDate>Mon, 08 Aug 2016 14:35:00 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e017.mp3" length="7768525" type="audio/mpeg"/>
             <guid isPermaLink="false">3FD4B9E5-7496-4FCB-AD95-829A6A295274</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -2277,7 +2290,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Sat, 23 Jul 2016 13:58:33 -0400</pubDate>
+            <pubDate>Sat, 23 Jul 2016 11:58:33 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e016.m4a" length="7889277" type="audio/x-m4a"/>
             <guid isPermaLink="false">391443C9-2019-4843-BEB3-46B5140C6256</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -2356,7 +2369,7 @@
 <li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
 </ul></li>
 </ul>]]></description>
-            <pubDate>Mon, 04 Jul 2016 19:35:00 -0400</pubDate>
+            <pubDate>Mon, 04 Jul 2016 17:35:00 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_2_part_2.m4a" length="7563611" type="audio/x-m4a"/>
             <guid isPermaLink="false">E2C1612A-178F-4AAF-8581-FC589BC3345E</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -2460,7 +2473,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Fri, 24 Jun 2016 21:26:51 -0400</pubDate>
+            <pubDate>Fri, 24 Jun 2016 19:26:51 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_2_part_1.m4a" length="10807526" type="audio/x-m4a"/>
             <guid isPermaLink="false">E585DC9C-567B-4902-B722-AF4D24DCA256</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -2539,7 +2552,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Fri, 17 Jun 2016 20:07:22 -0400</pubDate>
+            <pubDate>Fri, 17 Jun 2016 18:07:22 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e015.m4a" length="8544080" type="audio/x-m4a"/>
             <guid isPermaLink="false">DE71BD86-2409-4D8A-8A5A-797751339FC1</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -2626,7 +2639,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Tue, 31 May 2016 14:13:25 -0400</pubDate>
+            <pubDate>Tue, 31 May 2016 12:13:25 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news_1.m4a" length="10373097" type="audio/x-m4a"/>
             <guid isPermaLink="false">A8D6E44A-007D-4D36-9442-AA30722DF454</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -2697,7 +2710,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
 </ul>
 </li>
 </ul>]]></description>
-            <pubDate>Mon, 09 May 2016 21:47:24 -0400</pubDate>
+            <pubDate>Mon, 09 May 2016 19:47:24 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_5.m4a" length="4559498" type="audio/x-m4a"/>
             <guid isPermaLink="false">B75ECD4A-1A69-4BF1-A5D0-8F860A3DDFF4</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -2773,7 +2786,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
 <li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
 </ul></li>
 </ul>]]></description>
-            <pubDate>Mon, 25 Apr 2016 22:16:03 -0400</pubDate>
+            <pubDate>Mon, 25 Apr 2016 20:16:03 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e014.m4a" length="7703410" type="audio/x-m4a"/>
             <guid isPermaLink="false">50D3DAF8-7B5C-4B19-A6DE-E2CFD21F075F</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -2836,7 +2849,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
 <li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
 </ul></li>
 </ul>]]></description>
-            <pubDate>Tue, 19 Apr 2016 07:50:00 -0400</pubDate>
+            <pubDate>Tue, 19 Apr 2016 05:50:00 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_4.m4a" length="4195741" type="audio/x-m4a"/>
             <guid isPermaLink="false">38DF55F2-94FB-4CA0-8212-9C4D2897167F</guid>
             <itunes:author>Just how good Rust is, and how you can learn it even if you’re busy.</itunes:author>
@@ -2911,7 +2924,7 @@ well. You know who you are!)</p>
 </li>
 </ul>
 ]]></description>
-            <pubDate>Mon, 04 Apr 2016 19:52:21 -0400</pubDate>
+            <pubDate>Mon, 04 Apr 2016 17:52:21 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e013.m4a" length="7121753" type="audio/x-m4a"/>
             <guid isPermaLink="false">20F0A4EE-7D88-4C90-8BA5-7D28FB8AF0AD</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -2976,7 +2989,7 @@ well. You know who you are!)</p>
 <li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
 </ul></li>
 </ul>]]></description>
-            <pubDate>Mon, 21 Mar 2016 07:00:00 -0400</pubDate>
+            <pubDate>Mon, 21 Mar 2016 05:00:00 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e012.m4a" length="6768120" type="audio/x-m4a"/>
             <guid isPermaLink="false">301B3967-5003-4D65-8ED6-D4594C2832F8</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3045,7 +3058,7 @@ well. You know who you are!)</p>
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Tue, 08 Mar 2016 10:00:00 -0500</pubDate>
+            <pubDate>Tue, 08 Mar 2016 08:00:00 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e011.m4a" length="7267955" type="audio/x-m4a"/>
             <guid isPermaLink="false">AC4E31F9-5811-4B6E-86E2-5E3ED3CE8DEF</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3118,7 +3131,7 @@ well. You know who you are!)</p>
 </li>
 </ul>
 ]]></description>
-            <pubDate>Thu, 25 Feb 2016 08:30:00 -0500</pubDate>
+            <pubDate>Thu, 25 Feb 2016 06:30:00 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_1_part_2.m4a" length="8971891" type="audio/x-m4a"/>
             <guid isPermaLink="false">EF51E282-74DB-4F9F-8952-DBF70B1F8B2E</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3194,7 +3207,7 @@ well. You know who you are!)</p>
 </li>
 </ul>
 ]]></description>
-            <pubDate>Mon, 15 Feb 2016 15:00:00 -0500</pubDate>
+            <pubDate>Mon, 15 Feb 2016 13:00:00 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_1_part_1.m4a" length="10169865" type="audio/x-m4a"/>
             <guid isPermaLink="false">2FDF4C7A-DEC9-4642-A5FB-99D1D6726527</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3240,7 +3253,7 @@ well. You know who you are!)</p>
 </ul>
 </li>
 </ul>]]></description>
-            <pubDate>Sun, 31 Jan 2016 19:08:36 -0500</pubDate>
+            <pubDate>Sun, 31 Jan 2016 17:08:36 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_3.m4a" length="4945501" type="audio/x-m4a"/>
             <guid isPermaLink="false">E1508C29-D386-4AC2-AACD-10B6C716CDCC</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3317,7 +3330,7 @@ well. You know who you are!)</p>
 </ul>
 </li>
 </ul>]]></description>
-            <pubDate>Mon, 18 Jan 2016 10:25:00 -0500</pubDate>
+            <pubDate>Mon, 18 Jan 2016 08:25:00 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a" length="6522635" type="audio/x-m4a"/>
             <guid isPermaLink="false">http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3394,7 +3407,7 @@ well. You know who you are!)</p>
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Sat, 09 Jan 2016 16:00:11 -0500</pubDate>
+            <pubDate>Sat, 09 Jan 2016 14:00:11 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e009.m4a" length="7152387" type="audio/x-m4a"/>
             <guid isPermaLink="false">505802A1-4F58-4C3C-A268-B1354B5B2F8E</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3458,7 +3471,7 @@ well. You know who you are!)</p>
 <li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
 </ul></li>
 </ul>]]></description>
-            <pubDate>Sun, 27 Dec 2015 11:19:47 -0500</pubDate>
+            <pubDate>Sun, 27 Dec 2015 09:19:47 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e008.m4a" length="7215734" type="audio/x-m4a"/>
             <guid isPermaLink="false">C41DFF97-B4A0-4A50-89AF-4803FD50B547</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3527,7 +3540,7 @@ well. You know who you are!)</p>
 <li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
 </ul></li>
 </ul>]]></description>
-            <pubDate>Sun, 13 Dec 2015 12:38:36 -0500</pubDate>
+            <pubDate>Sun, 13 Dec 2015 10:38:36 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e007.m4a" length="7669142" type="audio/x-m4a"/>
             <guid isPermaLink="false">9B3A138D-FE96-4A8A-A708-BDCBF1F63A3F</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3571,7 +3584,7 @@ well. You know who you are!)</p>
 <li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
 </ul></li>
 </ul>]]></description>
-            <pubDate>Sun, 06 Dec 2015 13:23:54 -0500</pubDate>
+            <pubDate>Sun, 06 Dec 2015 11:23:54 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_2.m4a" length="6099582" type="audio/x-m4a"/>
             <guid isPermaLink="false">7FB6C998-E813-4E17-8EFB-CD29135DCD2D</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3617,7 +3630,7 @@ well. You know who you are!)</p>
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Wed, 25 Nov 2015 11:27:09 -0500</pubDate>
+            <pubDate>Wed, 25 Nov 2015 09:27:09 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_1.m4a" length="5353416" type="audio/x-m4a"/>
             <guid isPermaLink="false">78C8C06F-DEB6-4821-9995-E550FBA87059</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3668,7 +3681,7 @@ well. You know who you are!)</p>
 <li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
 </ul></li>
 </ul>]]></description>
-            <pubDate>Mon, 16 Nov 2015 10:36:26 -0500</pubDate>
+            <pubDate>Mon, 16 Nov 2015 08:36:26 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e006.m4a" length="8926372" type="audio/x-m4a"/>
             <guid isPermaLink="false">6707AF5D-82F4-40D5-9DB5-7003D571EEB6</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3727,7 +3740,7 @@ well. You know who you are!)</p>
 <li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
 </ul></li>
 </ul>]]></description>
-            <pubDate>Sun, 08 Nov 2015 15:15:53 -0500</pubDate>
+            <pubDate>Sun, 08 Nov 2015 13:15:53 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e005.m4a" length="7466332" type="audio/x-m4a"/>
             <guid isPermaLink="false">2BA666AD-2288-4599-AC61-7B545FD2C539</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3780,7 +3793,7 @@ well. You know who you are!)</p>
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Thu, 29 Oct 2015 22:45:12 -0400</pubDate>
+            <pubDate>Thu, 29 Oct 2015 20:45:12 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e004.m4a" length="7007649" type="audio/x-m4a"/>
             <guid isPermaLink="false">BC4D9C42-0F4C-4497-9059-436A8906657E</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3851,7 +3864,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
 <li>App.net: <a href="https://alpha.app.net/chriskrycho">@chriskrycho</a></li>
 </ul></li>
 </ul>]]></description>
-            <pubDate>Wed, 21 Oct 2015 13:10:12 -0400</pubDate>
+            <pubDate>Wed, 21 Oct 2015 11:10:12 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a" length="8178565" type="audio/x-m4a"/>
             <guid isPermaLink="false">E39A4582-8095-4645-8925-AB2887828F93</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3907,7 +3920,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Sun, 11 Oct 2015 22:24:16 -0400</pubDate>
+            <pubDate>Sun, 11 Oct 2015 20:24:16 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e002.m4a" length="8322086" type="audio/x-m4a"/>
             <guid isPermaLink="false">03DD0BB6-9615-420A-A43B-B6EB0BBCD1C4</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -3977,7 +3990,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
 </ul></li>
 <li><a href="https://doc.rust-lang.org/book/documentation.html">The Rust book chapter on <code>rustdoc</code></a></li>
 </ul>]]></description>
-            <pubDate>Sat, 03 Oct 2015 16:04:28 -0400</pubDate>
+            <pubDate>Sat, 03 Oct 2015 14:04:28 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e001.m4a" length="8417950" type="audio/x-m4a"/>
             <guid isPermaLink="false">9846F954-2459-4E89-BAF6-0DB4DA62E6D3</guid>
             <itunes:author>Chris Krycho</itunes:author>
@@ -4007,7 +4020,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
 <li>in the show notes attached to each episode</li>
 </ul>
 <p>Hopefully, the result will be a pretty helpful bunch of side content along with the audio of the podcast itself.</p>]]></description>
-            <pubDate>Thu, 24 Sep 2015 19:14:50 -0400</pubDate>
+            <pubDate>Thu, 24 Sep 2015 17:14:50 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e000.m4a" length="8458505" type="audio/x-m4a"/>
             <guid isPermaLink="false">CCE404BC-4B4A-4F28-A687-9BCC66C08CEF</guid>
             <itunes:author>Chris Krycho</itunes:author>
