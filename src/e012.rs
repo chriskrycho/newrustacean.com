@@ -157,9 +157,9 @@ pub fn if_blocks_are_expressions() -> f64 {
 
 #[cfg_attr(feature = "clippy", allow(dead_code))]
 enum ThreeTypes {
-    First,
+    _First,
     Second,
-    Third,
+    _Third,
 }
 
 /// Match blocks are also expressions.
@@ -169,13 +169,13 @@ enum ThreeTypes {
 pub fn match_blocks_are_expressions() -> String {
     let a_three_type = ThreeTypes::Second;
     let x = match a_three_type {
-        ThreeTypes::First => 42.0,
-        ThreeTypes::Second => f64::consts::PI,
-        ThreeTypes::Third => f64::INFINITY
+        ThreeTypes::_First => 42,
+        ThreeTypes::Second => i64::min_value(),
+        ThreeTypes::_Third => i64::max_value(),
     };
 
     match x {
-        0.0...100.0 => "Less than 100".to_string(),
+        0...100 => "Less than 100".to_string(),
         _ => "Less than 0, or more than 100".to_string(),
     }
 }

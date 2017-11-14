@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.5.2(3016); Mac OS X Version 10.13.1 (Build 17B48) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.5.3(3021); Mac OS X Version 10.13.1 (Build 17B48) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 11 Nov 2017 13:22:56 -0700</pubDate>
-        <lastBuildDate>Sat, 11 Nov 2017 13:22:57 -0700</lastBuildDate>
+        <pubDate>Mon, 13 Nov 2017 21:02:42 -0700</pubDate>
+        <lastBuildDate>Mon, 13 Nov 2017 21:02:42 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -41,6 +41,69 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>RBR 2017: Anthony Deschamps</title>
+            <link>http://newrustacean.com/show_notes/interview/rbr_2017/anthony_deschamps/</link>
+            <description><![CDATA[<p>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</p>
+
+<p>## Transcript</p>
+
+<p>**Chris:** hello! Can you tell me your name and a little bit about yourself?</p>
+
+<p>**Anthony:** My name is Anthony Deschamps, I, um, I’m a software developer, I work in Automotive.</p>
+
+<p>**Chris:** Oh!  Very interesting. Long-time listeners will recognize Anthony’s name as a sponsor of the show; thank you for sponsoring the show!</p>
+
+<p>**Anthony:** You’re welcome!</p>
+
+<p>**Chris:** So, what got you into Rust?</p>
+
+<p>**Anthony:** I’ve talked about this earlier; I actually can’t remember how I first came across it. Um, I remember my friends being excited about it and looking at it at some point, um, but what really hooked me is that I have a huge amount of respect for C+ +, uh, it was one of my first languages, and to me, Rust feels like C+ + with decades of learned lessons. If we have a clean slate, and what you can do with a fresh start.</p>
+
+<p>**Chris:** Yeah. How long - do you remember roughly, obviously you don’t remember exactly when, but - do you remember roughly how long...pre 1.0, post 1.0?</p>
+
+<p>**Anthony:** Uh, probably about a year ago, so, somewhere after 1.10 or roundabouts.</p>
+
+<p>**Chris:** Okay. Very good. What has your experience of learning Rust been like? Good, bad, ugly?</p>
+
+<p>**Anthony:** Um, it’s made my C+ + better.</p>
+
+<p>**Chris:** Yeah.</p>
+
+<p>**Anthony:** Everything thing that I struggled with in Rust was really just a lesson for what I could be doing better in other places.</p>
+
+<p>**Chris:** What are you using Rust for presently? Are you able to use it at work at all, or is it side projects entirely, still?</p>
+
+<p>**Anthony:** So, a combination of hobby projects, uh, when I have time. And, a little bit at work. It’s one of those things where it is a little bit of a risk, a newer thing, so it’s been nice to try it out on some small things, see how it goes, and realize that I do like it and get excited about hoping to use it more.</p>
+
+<p>**Chris:** Yeah. What kind of side projects have you been able to do?</p>
+
+<p>**Anthony:** Um, when I get around to strapping a Raspberry Pi to a balloon and sending it up to the stratosphere to take some photos, that’ll be in Rust. </p>
+
+<p>**Chris:** That’s awesome.</p>
+
+<p>**Anthony:** I also like to play around with arduinos, and LEDs are fun, and I’m using a little bit of Rust there.</p>
+
+<p>**Chris:** Cool. Is there anything in particular that’s caught your attention either with this conference or with the Rust community in general?</p>
+
+<p>**Anthony:** The most exciting thing to me is meeting the people who are making the things that I enjoy using. Uh, it seems obvious when you really think about it, but, um, the things that you use are not made by some...cloud, or void, or they don’t just come out of nowhere, they’re made from real people, who really enjoy working on what they’re doing, and are really excited to talk to you about it.</p>
+
+<p>**Chris:** I share that sentiment deeply. Thank you for your time!</p>
+
+<p>**Anthony:** Well, thank you so much for the podcast. I really enjoy it.</p>
+
+<p>**Chris:** My pleasure, and absolutely awesome, speaking of meeting people in person, it’s great to meet you in person!</p>
+
+<p>**Anthony:** I agree. Thank you so much.</p>
+
+<p>**Chris:** Thank you!</p>]]></description>
+            <pubDate>Mon, 13 Nov 2017 21:02:36 -0700</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/rbr_2017/anthony_deschamps.mp3" length="5261272" type="audio/mpeg"/>
+            <guid isPermaLink="false">308765C1-9026-4AF4-9C34-36A337DC0BA3</guid>
+            <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
+            <itunes:duration>5:27</itunes:duration>
+            <content:encoded><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></content:encoded>
+        </item>
         <item>
             <title>RBR 2017: Colin Dean</title>
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/colin_dean/</link>
