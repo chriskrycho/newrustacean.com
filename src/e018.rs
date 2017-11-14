@@ -131,12 +131,12 @@ use std::ops::Deref;
 
 /// A struct for showing that you cannot use `Borrow`, `AsRef`
 pub struct NoImplsAtAll {
-    contents: [u8; 8],
+    _contents: [u8; 8],
 }
 
 impl NoImplsAtAll {
     pub fn new(contents: &[u8; 8]) -> NoImplsAtAll {
-        NoImplsAtAll { contents: contents.clone() }
+        NoImplsAtAll { _contents: contents.clone() }
     }
 }
 

@@ -215,14 +215,16 @@ pub fn demonstrate_match() {
     }
 
     // or more complex types...
-    let some_tuple = (3.141, 2.718);
+    const THREE: u8 = 3;
+    const TWO: u8 = 2;
+    let some_tuple = (THREE, TWO);
     match some_tuple {
         // You can match on the full tuple with specific values.
-        (3.141, 2.718) => println!("Got both!"),
+        (THREE, TWO) => println!("Got both!"),
         // You can match on only part of it; note that these match the cases where both are *not*
         // filled with the value specified in the first arm.
-        (3.141, _) => println!("Got pi only."),
-        (_, 2.718) => println!("Got e only."),
+        (THREE, _) => println!("Got three only."),
+        (_, TWO) => println!("Got two only."),
         // You can also destructure the elements of the tuple into values to be
         // used in the body of the expression, not just ignore them with `_`.
         (a, b) => println!("Got weird other stuff: {:}, {:}", a, b),

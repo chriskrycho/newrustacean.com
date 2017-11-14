@@ -154,21 +154,21 @@ trait Foo {
   const FOO: u32 = 0;
 }
 
-struct Bar {}
+struct _Bar {}
 
-impl Bar {
-  const BAR: u32 = 50;
+impl _Bar {
+  const _BAR: u32 = 50;
 }
 
-impl Foo for Bar {}
+impl Foo for _Bar {}
 
-enum Baz {}
+enum _Baz {}
 
-impl Baz {
-  const BAZ: u32 = 100;
+impl _Baz {
+  const _BAZ: u32 = 100;
 }
 
-impl Foo for Baz {}
+impl Foo for _Baz {}
 
 #[cfg(test)]
 mod tests {
@@ -177,9 +177,9 @@ mod tests {
     #[test]
     fn it_works() {
         // assert_eq!(Foo::FOO, 0);
-        assert_eq!(Bar::BAR, 50);
-        assert_eq!(Bar::FOO, 0);
-        assert_eq!(Baz::BAZ, 100);
-        assert_eq!(Baz::FOO, 0); 
+        assert_eq!(_Bar::_BAR, 50);
+        assert_eq!(_Bar::FOO, 0);
+        assert_eq!(_Baz::_BAZ, 100);
+        assert_eq!(_Baz::FOO, 0); 
     }
 }
