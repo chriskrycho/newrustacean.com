@@ -17,8 +17,9 @@
 // we require using nightly Rust (as of 1.5).
 #![feature(test)]
 
+// TODO:
 // Enable `#[doc(include = "<path>")]
-#![feature(external_doc)]
+// #![feature(external_doc)]
 
 // This statement gives us access to the `test` crate for benchmarking.
 extern crate test;

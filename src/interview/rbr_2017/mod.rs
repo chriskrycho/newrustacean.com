@@ -123,6 +123,4 @@
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
 pub mod colin_dean;
-
-#[doc(include = "../docs/rbr_2017/anthony_deschamps.md")]
 pub mod anthony_deschamps;
