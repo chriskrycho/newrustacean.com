@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Tue, 14 Nov 2017 20:02:56 -0700</pubDate>
-        <lastBuildDate>Tue, 14 Nov 2017 20:02:57 -0700</lastBuildDate>
+        <pubDate>Tue, 14 Nov 2017 20:07:55 -0700</pubDate>
+        <lastBuildDate>Tue, 14 Nov 2017 20:07:56 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -42,11 +42,11 @@
         </itunes:category>
         <itunes:type>episodic</itunes:type>
         <item>
-            <title>RBR 2017: Arun Kolsheshthra</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/arun_kolshreshthra/</link>
+            <title>RBR 2017: Arun Kulsheshthra</title>
+            <link>http://newrustacean.com/show_notes/interview/rbr_2017/arun_kulshreshthra/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Tue, 14 Nov 2017 20:02:51 -0700</pubDate>
-            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/rbr_2017/arun_kolshreshthra.mp3" length="5261272" type="audio/mpeg"/>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/rbr_2017/arun_kulshreshthra.mp3" length="5261272" type="audio/mpeg"/>
             <guid isPermaLink="false">3BCC7FC9-B335-45A3-BE58-1B2DE224958B</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.
