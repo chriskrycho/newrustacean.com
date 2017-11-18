@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 18 Nov 2017 13:55:09 -0700</pubDate>
-        <lastBuildDate>Sat, 18 Nov 2017 13:55:09 -0700</lastBuildDate>
+        <pubDate>Sat, 18 Nov 2017 14:17:51 -0700</pubDate>
+        <lastBuildDate>Sat, 18 Nov 2017 14:17:52 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -41,6 +41,17 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>RBR 2017: Jess Saxeter</title>
+            <link>http://newrustacean.com/show_notes/interview/rbr_2017/jess_saxeter/</link>
+            <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
+            <pubDate>Sun, 19 Nov 2017 13:00:00 -0700</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/rbr_2017/jess_saxeter.mp3" length="5110379" type="audio/mpeg"/>
+            <guid isPermaLink="false">E2E9A3A8-7B9F-4379-82DD-B021EC9F5A28</guid>
+            <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
+            <itunes:duration>5:17</itunes:duration>
+            <content:encoded><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></content:encoded>
+        </item>
         <item>
             <title>RBR 2017: Pete Lyons</title>
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/pete_lyons/</link>
