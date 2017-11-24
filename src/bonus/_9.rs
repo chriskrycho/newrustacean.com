@@ -98,7 +98,7 @@
 //! [Chris Palmer]: http://home.red-oxide.org/
 //! [Christopher Giffard]: http://blog.cgiffard.com
 //! [Daniel Collin]: https://twitter.com/daniel_collin
-//! [David Allen]: http://GitHub.com/DataRiot
+//! [David W. Allen]: http://GitHub.com/DataRiot
 //! [Derek Morr]: https://twitter.com/derekmorr
 //! [Henri Sivonen]: https://hsivonen.fi/
 //! [Jakub "Limeth" Hlusička]: https://github.com/Limeth

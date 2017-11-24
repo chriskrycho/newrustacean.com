@@ -110,7 +110,7 @@
 //! [Charlie Egan]: https://charlieegan3.com
 //! [Chris Palmer]: http://home.red-oxide.org/
 //! [Daniel Collin]: https://twitter.com/daniel_collin
-//! [David Allen]: http://GitHub.com/DataRiot
+//! [David W. Allen]: http://GitHub.com/DataRiot
 //! [Derek Morr]: https://twitter.com/derekmorr
 //! [Henri Sivonen]: https://hsivonen.fi/
 //! [Jakub "Limeth" Hlusička]: https://github.com/Limeth
