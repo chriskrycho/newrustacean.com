@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Fri, 24 Nov 2017 14:33:11 -0700</pubDate>
-        <lastBuildDate>Fri, 24 Nov 2017 14:33:11 -0700</lastBuildDate>
+        <pubDate>Fri, 24 Nov 2017 14:38:13 -0700</pubDate>
+        <lastBuildDate>Fri, 24 Nov 2017 14:38:14 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -44,7 +44,7 @@
         <item>
             <title>News: Rust 1.21 and 1.22</title>
             <link>http://newrustacean.com/show_notes/news/rust_1_20_1_22/</link>
-            <description><![CDATA[<p>Quality of life improvements, `Failure`, wasm, and rustdoc fun.</p>
+            <description><![CDATA[<p>Quality of life improvements, <code>Failure</code>, wasm, and rustdoc fun.</p>
 <h2 id="links-and-notes">Links and Notes</h2>
 <ul>
 <li>Rust 1.21
@@ -167,14 +167,13 @@
 <li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
 <li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
 </ul></li>
-</ul>]]></description>
+</ul>
+]]></description>
             <pubDate>Fri, 24 Nov 2017 13:47:24 -0700</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_21_1_22.mp3" length="15281535" type="audio/mpeg"/>
             <guid isPermaLink="false">CCCABE57-4293-427B-A655-0368884A23EC</guid>
-            <itunes:summary>Quality of life improvements, Failure, wasm, and rustdoc fun.</itunes:summary>
             <itunes:duration>15:53</itunes:duration>
             <itunes:episodeType>full</itunes:episodeType>
-            <content:encoded><![CDATA[Quality of life improvements, Failure, wasm, and rustdoc fun.]]></content:encoded>
         </item>
         <item>
             <title>RBR 2017: Jess Saxeter</title>
