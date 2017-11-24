@@ -43,7 +43,7 @@
         <itunes:type>episodic</itunes:type>
         <item>
             <title>News: Rust 1.21 and 1.22</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_20_1_22/</link>
+            <link>http://newrustacean.com/show_notes/news/rust_1_21_1_22/</link>
             <description><![CDATA[<p>Quality of life improvements, <code>Failure</code>, wasm, and rustdoc fun.</p>
 <h2 id="links-and-notes">Links and Notes</h2>
 <ul>
