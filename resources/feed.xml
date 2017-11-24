@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
     <channel>
-        <title>New Rustacean</title>
+        <title>New Rustacean – learning the Rust programming language</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
         <generator>Feeder 3 3.5.4(3032); Mac OS X Version 10.13.1 (Build 17B48) http://reinventedsoftware.com/feeder/</generator>
@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Fri, 24 Nov 2017 14:29:59 -0700</pubDate>
-        <lastBuildDate>Fri, 24 Nov 2017 14:30:00 -0700</lastBuildDate>
+        <pubDate>Fri, 24 Nov 2017 14:33:11 -0700</pubDate>
+        <lastBuildDate>Fri, 24 Nov 2017 14:33:11 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -23,7 +23,7 @@
         <atom:link href="http://www.newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
         <atom:link href="https://flattr.com/submit/auto?user_id=chriskrycho&amp;url=https://flattr.com/profile/chriskrycho&amp;title=Podcaster,%20software%20developer,%20writer,%20theologian&amp;description=I%20podcast:%0A%0A-%20%5BWinning%20Slowly%5D(//www.winningslowly.org),%20with%20Stephen%20Carradini,%20on%20technology,%20religion,%20ethics,%20and%20art%0A-%20%5BNew%20Rustacean%5D(//www.newrustacean.com)%20%E2%80%93%20about%20learning%20the%20Rust%20programming%20language%0A-%20%5BSap.py%5D(//www.sap-py.com)%20with%20my%20wife,%20Jaimie%20Krycho%0A-%20%5BRun%20With%20Me%5D(//runwith.chriskrycho.com)%20%E2%80%93%20a%203%E2%80%935%20minute%20%22microcast%22%20about%20running,%20recorded%20while%20running%0A%0AI%20write%20on%20art,%20theology,%20and%20technology%20at%20%5Bchriskrycho.com%5D(//www.chriskrycho.com).&amp;language=en_GB&amp;category=audio" rel="payment" type="text/html"/>
         <itunes:author>Chris Krycho</itunes:author>
-        <itunes:subtitle>Let’s try some Rust, shall we?</itunes:subtitle>
+        <itunes:subtitle>Learning the Rust programming language</itunes:subtitle>
         <itunes:summary>A podcast about learning the Rust programming language—from scratch!</itunes:summary>
         <itunes:keywords>Rust,programming,programming languages,software</itunes:keywords>
         <itunes:image href="http://newrustacean.com/podcast.png"/>
