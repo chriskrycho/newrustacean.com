@@ -12,14 +12,11 @@
 #![doc(html_logo_url = "http://newrustacean.com/podcast.png",
        html_favicon_url = "http://newrustacean.com/favicon.ico",
        html_root_url = "http://newrustacean.com/")]
-
 // Enable access to the benchmarking functionality. Note that with this present,
 // we require using nightly Rust (as of 1.5).
 #![feature(test)]
-
-// TODO:
 // Enable `#[doc(include = "<path>")]
-// #![feature(external_doc)]
+#![feature(external_doc)]
 
 // This statement gives us access to the `test` crate for benchmarking.
 extern crate test;

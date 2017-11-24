@@ -16,5 +16,5 @@
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/rbr_2017/jess_saxeter.ogg">
 //! </audio>
 
-/// Transcript TBD
+#[doc(include="../docs/rbr_2017/jess-saxeter.md")]
 pub struct Transcript;
