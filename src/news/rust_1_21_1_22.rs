@@ -25,6 +25,7 @@
 //!     + [blog post][1.21]
 //!     + ["When Will the RLS be Released?"][rls]
 //! - [Rust 1.22][1.22]
+//! - [Rusty Spike]
 //! - [Rust Fest]
 //! - [Rust Belt Rust]
 //!     + [YouTube channel]
@@ -39,6 +40,7 @@
 //! [1.21]: https://blog.rust-lang.org/2017/10/12/Rust-1.21.html
 //! [rls]: https://www.ncameron.org/blog/when-will-the-rls-be-released/
 //! [1.22]: https://blog.rust-lang.org/2017/11/22/Rust-1.22.html
+//! [Rusty Spike]: https://rusty-spike.blubrry.net
 //! [Rust Fest]: http://www.rustfest.eu
 //! [Rust Belt Rust]: http://rust-belt-rust.com
 //! [YouTube Channel]: https://www.youtube.com/channel/UCptxtVyJkQAJZcFwBbIDZcg

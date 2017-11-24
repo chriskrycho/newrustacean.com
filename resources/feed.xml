@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.5.3(3021); Mac OS X Version 10.13.1 (Build 17B48) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.5.4(3032); Mac OS X Version 10.13.1 (Build 17B48) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Fri, 24 Nov 2017 13:47:30 -0700</pubDate>
-        <lastBuildDate>Fri, 24 Nov 2017 13:47:31 -0700</lastBuildDate>
+        <pubDate>Fri, 24 Nov 2017 14:29:59 -0700</pubDate>
+        <lastBuildDate>Fri, 24 Nov 2017 14:30:00 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -44,7 +44,8 @@
         <item>
             <title>News: Rust 1.21 and 1.22</title>
             <link>http://newrustacean.com/show_notes/news/rust_1_20_1_22/</link>
-            <description><![CDATA[<h2 id="links-and-notes">Links and Notes</h2>
+            <description><![CDATA[<p>Quality of life improvements, `Failure`, wasm, and rustdoc fun.</p>
+<h2 id="links-and-notes">Links and Notes</h2>
 <ul>
 <li>Rust 1.21
 <ul>
@@ -52,24 +53,24 @@
 <li><a href="https://www.ncameron.org/blog/when-will-the-rls-be-released/">“When Will the RLS be Released?”</a></li>
 </ul></li>
 <li><a href="https://blog.rust-lang.org/2017/11/22/Rust-1.22.html">Rust 1.22</a></li>
-<li>[Rust Fest]</li>
-<li>[Rust Belt Rust]
+<li><a href="https://rusty-spike.blubrry.net">Rusty Spike</a></li>
+<li><a href="http://www.rustfest.eu">Rust Fest</a></li>
+<li><a href="http://rust-belt-rust.com">Rust Belt Rust</a>
 <ul>
-<li>[YouTube channel]</li>
-<li>my talk: [script] and [slides]</li>
+<li><a href="https://www.youtube.com/channel/UCptxtVyJkQAJZcFwBbIDZcg">YouTube channel</a></li>
+<li>my talk: <a href="http://www.chriskrycho.com/2017/becoming-a-contributor.html">script</a> and <a href="http://www.chriskrycho.com/talks/rust-belt-rust/">slides</a></li>
 </ul></li>
-<li>[the <code>Failure</code> crate]
+<li><a href="https://github.com/withoutboats/failure">the <code>Failure</code> crate</a>
 <ul>
-<li>prior art: [error-chain]</li>
+<li>prior art: <a href="https://github.com/rust-lang-nursery/error-chain">error-chain</a></li>
 </ul></li>
-<li>[wasm support in Rust itself][wasm]</li>
+<li><a href="https://github.com/rust-lang/rust/pull/45905">wasm support in Rust itself</a></li>
 <li>external Markdown files for docs
 <ul>
-<li>[the RFC]</li>
-<li>[the implementation]</li>
+<li><a href="https://github.com/rust-lang/rfcs/pull/1990">the RFC</a></li>
+<li><a href="https://github.com/rust-lang/rust/pull/44781">the implementation</a></li>
 </ul></li>
 </ul>
-<p>[Rust Fest] [Rust Belt Rust] [YouTube Channel] [script]: http://www.chriskrycho.com/2017/becoming-a-contributor.html [slides]: http://www.chriskrycho.com/talks/rust-belt-rust/ [the <code>Failure</code> crate]: https://github.com/withoutboats/failure [error-chain]: https://github.com/rust-lang-nursery/error-chain [wasm]: https://github.com/rust-lang/rust/pull/45905 [the RFC]: https://github.com/rust-lang/rfcs/pull/1990 [the implementation]: https://github.com/rust-lang/rust/pull/44781</p>
 <h2 id="sponsors">Sponsors</h2>
 <ul>
 <li>Aaron Turon</li>
@@ -172,6 +173,7 @@
             <guid isPermaLink="false">CCCABE57-4293-427B-A655-0368884A23EC</guid>
             <itunes:summary>Quality of life improvements, Failure, wasm, and rustdoc fun.</itunes:summary>
             <itunes:duration>15:53</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
             <content:encoded><![CDATA[Quality of life improvements, Failure, wasm, and rustdoc fun.]]></content:encoded>
         </item>
         <item>
@@ -183,6 +185,7 @@
             <guid isPermaLink="false">E2E9A3A8-7B9F-4379-82DD-B021EC9F5A28</guid>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
             <itunes:duration>5:17</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
             <content:encoded><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></content:encoded>
         </item>
         <item>
@@ -198,6 +201,7 @@
 
 </itunes:summary>
             <itunes:duration>4:54</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
             <content:encoded><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></content:encoded>
         </item>
         <item>
@@ -211,6 +215,7 @@
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.
 </itunes:summary>
             <itunes:duration>5:27</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
             <content:encoded><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></content:encoded>
         </item>
         <item>
@@ -274,6 +279,7 @@
             <guid isPermaLink="false">308765C1-9026-4AF4-9C34-36A337DC0BA3</guid>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
             <itunes:duration>5:27</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
             <content:encoded><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></content:encoded>
         </item>
         <item>
@@ -286,6 +292,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
             <itunes:duration>7:16</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
             <content:encoded><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></content:encoded>
         </item>
         <item>
@@ -397,6 +404,7 @@
             <guid isPermaLink="false">930E60FE-6493-4E5A-B373-2091DABAF8CC</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:duration>12:02</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>CYSK: Rayon</title>
@@ -495,6 +503,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Safe, threaded, parallel code in Rust!</itunes:summary>
             <itunes:duration>14:11</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>News: Rust 1.20</title>
@@ -508,6 +517,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Associated constants, conference season, meetups, and more!</itunes:summary>
             <itunes:duration>13:15</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Bonus 9: Open source is mostly just normal people</title>
@@ -518,6 +528,7 @@
             <guid isPermaLink="false">CC87FE1E-0E80-4B8F-B022-892E25C3E260</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>My experience with ember-cli-typescript as an example: we're all just people muddling along and doing our best.</itunes:summary>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e021: Keeping your types under cover</title>
@@ -615,6 +626,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Using type aliases and creating custom type wrappers for more expressive and safer code.</itunes:summary>
             <itunes:duration>17:28</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>News 3: Increasing Rust's Reach</title>
@@ -711,6 +723,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Growing Rust's diversity to help Rust grow.</itunes:summary>
             <itunes:duration>13:02</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>CYSK: Rocket</title>
@@ -828,6 +841,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>An accessible, well-designed web framework in Rust!</itunes:summary>
             <itunes:duration>17:32</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Interview 4 – Jonathan Turner: Part 3</title>
@@ -959,6 +973,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Smoothing the Rust dev story: future work on the RLS, in Rust itself, and in Servo.</itunes:summary>
             <itunes:duration>22:05</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Interview 4 – Jonathan Turner: Part 2</title>
@@ -1077,6 +1092,7 @@
             <guid isPermaLink="false">E78DADCB-274E-4CCA-8876-2C467190F003</guid>
             <itunes:summary>Making Rust Better: Rust as the fusion of systems and high-level programming languages, and the RLS.</itunes:summary>
             <itunes:duration>25:09</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Interview 4 – Jonathan Turner: Part 1</title>
@@ -1191,6 +1207,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Background, TypeScript, coming to Rust, and how helpful the Rust community can be.</itunes:summary>
             <itunes:duration>22:50</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>CYSK: RLS</title>
@@ -1292,6 +1309,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Where the RLS came from, what it can do, and how you can start using it today!</itunes:summary>
             <itunes:duration>11:30</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e020: Putting code in its place</title>
@@ -1378,6 +1396,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>How do we organize code in Rust? Where do we break it apart into modules or crates, and why? Structuring code in a language like Rust can seem a bit more ambiguous than doing the same in a language with classes to attach all our functionality to, but in practice, the concerns are much the same: modules are namespaces, and we group by *responsibility*. In today's episode, I talk through that philosophy (and give some comparisons to other languages), and then look at what it looks like in practice!</itunes:summary>
             <itunes:duration>20:20</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Bonus 8: Giving back (by teaching)</title>
@@ -1464,6 +1483,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>On the responsibilities and opportunities we have to help others with our knowledge and abilities. Many of us have been very blessed with opportunities and support as we learn software. We should go out of our way to share with others in kind. Today, my focus is on teaching, but there are lots of ways to "give back." And I'd love to hear *your* thoughts and things *you're* doing in that vein!</itunes:summary>
             <itunes:duration>13:30</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e019: Let's `Clone` a `Cow`</title>
@@ -1596,6 +1616,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>The final pieces of the story for (single-threaded) memory management in Rust. Notes ----- Sometimes, we actually do need to copy types. Wouldn't it be nice if Rust gave us a convenient way to do that when it's convenient, or when the cost is low enough that the ergonomic tradeoffs are worth it? Well, perhaps unsurprisingly, it does! The Copy and Clone traits, plus the Cow type, give us everything we need! Sponsors -------- - Aleksey Pirogov - Andreas Fischer - Andrew Thompson - Austin LeSure - Ben Whitley - Charlie Egan - Chris Palmer - Christopher Giffard - Daniel Collin - Derek Morr - Jakub "Limeth" Hlusička - Jordan Henderson - Jupp Müller - Keith Gray - Lachlan Collins - Luca Schmid - Matt Rudder - Matthew Piziak - [Max Jacobson] - Micael Bergeron - Ovidiu Curcan - Pascal Hertleif - Peter Tillemans - Philipp Keller - Ralph Giles ("rillian") - Raph Levien - reddraggone9 - Steven Murawksi - Stuart Hinson - Tyler Harper - Vesa Kaihlavirta - Vlad Bezden - William Roe - Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) ### Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla](https://www.dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho - Flattr.com/profile/chriskrycho - PayPal.me/chriskrycho Contact ------- - New Rustacean: + Twitter: @newrustacean + Email: hello@newrustacean.com - Chris Krycho + GitHub: chriskrycho + Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>18:11</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>CYSK: clap</title>
@@ -1691,6 +1712,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A Command-Line Argument Parser. Sponsors -------- - Aleksey Pirogov - Andreas Fischer - Andrew Thompson - Austin LeSure - Ben Whitley - Charlie Egan - Chris Palmer - Christopher Giffard - Daniel Collin - Derek Morr - Jakub "Limeth" Hlusička - Jordan Henderson - Jupp Müller - Keith Gray - Lachlan Collins - Luca Schmid - Matt Rudder - Matthew Piziak - [Max Jacobson] - Micael Bergeron - Ovidiu Curcan - Pascal Hertleif - Peter Tillemans - Philipp Keller - Ralph Giles ("rillian") - Raph Levien - reddraggone9 - Steven Murawksi - Stuart Hinson - Tyler Harper - Vesa Kaihlavirta - Vlad Bezden - William Roe - Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) ### Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla](https://www.dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho - Flattr.com/profile/chriskrycho - PayPal.me/chriskrycho Contact ------- - New Rustacean: + Twitter: @newrustacean + Email: hello@newrustacean.com - Chris Krycho + GitHub: chriskrycho + Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>10:42</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e018: `Borrow`, `AsRef`, `Deref`: my head hurts now</title>
@@ -1789,6 +1811,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Three traits which are essential for designing good, Rustic APIs. Notes Borrow, AsRef, and Deref are a little complicated, but they're well-worth understanding. Together, they give you tools for dealing with everything from HashMap and friends to conversions involving smart pointer types to easily using String and str or Vec and slice together. Sponsors * Aleksey Pirogov * Andreas Fischer * Ben Whitley * Cameron Mochrie * Chris Palmer * Christopher Giffard * Daniel Collin * Derek Morr * Jakub &amp;quot;Limeth&amp;quot; Hlusička * Jordan Henderson * Jupp Müller * Keith Gray * Lachlan Collins * Luca Schmid * Matt Rudder * Matthew Piziak * Micael Bergeron * Ovidiu Curcan * Pascal Hertleif * Peter Tillemans * Philipp Keller * Ralph Giles (&amp;quot;rillian&amp;quot;) * Raph Levien * reddraggone9 * Ryan Ollos * Steven Murawksi * Vesa Kaihlavirta * Vlad Bezden * William Roe * Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon * Venmo * Dwolla * Cash.me * Flattr * PayPal.me Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>17:25</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>CYSK: quick-xml</title>
@@ -1871,6 +1894,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A pull-parser for reading and writing XML. Sponsors * Aleksey Pirogov * Andreas Fischer * Ben Whitley * Cameron Mochrie * Chris Palmer * Christopher Giffard * Daniel Collin * Derek Morr * Jakub “Limeth” Hlusička * Jupp Müller * Keith Gray * Lachlan Collins * Luca Schmid * Matt Rudder * Matthew Piziak * Micael Bergeron * Ovidiu Curcan * Pascal Hertleif * Peter Tillemans * Philipp Keller * Ralph Giles (“rillian”) * Raph Levien * reddraggone9 * Ryan Ollos * Steven Murawksi * Vesa Kaihlavirta * Vlad Bezden * William Roe * Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho * Flattr.com/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>8:38</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>News 2: Let's talk roadmap!</title>
@@ -1990,6 +2014,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Rust’s achievements in 2016 and goals for 2017 Sponsors * Aleksey Pirogov * Andreas Fischer * Ben Whitley * Cameron Mochrie * Chris Palmer * Daniel Collin * Derek Morr * Jakub “Limeth” Hlusička * Jupp Müller * Keith Gray * Lachlan Collins * Luca Schmid * Matt Rudder * Matthew Piziak * Micael Bergeron * Ovidiu Curcan * Pascal Hertleif * Peter Tillemans * Philipp Keller * Ralph Giles (“rillian”) * Raph Levien * reddraggone9 * Ryan Ollos * Steven Murawksi * Vesa Kaihlavirta * Vlad Bezden * William Roe * Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/chriskrycho * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho * Flattr.com/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>21:08</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Meta 1 – Slowing Down</title>
@@ -2033,6 +2058,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Avoiding burnout by taking it a little easier. Sometimes, the way a podcast stays in existence is by coming out less often. That's what's happening here. # Links - [lightning-rs] - [Pelican] - [Hugo] - [Jekyll] - [Static Site Generators]\: The definitive listing of Static Site Generators — all 445 of them! [lightning-rs]: https://github.com/chriskrycho/lightning-rs [Pelican]: http://getpelican.com [Hugo]: https://gohugo.io [Jekyll]: https://jekyllrb.com [Static Site Generators]: https://staticsitegenerators.net # Become a sponsor - [Patreon](https://www.patreon.com/newrustacean) - [Venmo](https://venmo.com/chriskrycho) - [Dwolla](https://www.dwolla.com/hub/chriskrycho) - [Cash.me](https://cash.me/$chriskrycho) # Follow - New Rustacean: + Twitter: [@newrustacean](https://www.twitter.com/newrustacean) + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com) - Chris Krycho + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</itunes:summary>
             <itunes:duration>7:42</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Interview 3 – Carol (Nichols || Goulding)</title>
@@ -2147,6 +2173,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Carol (Nichols || Goulding) on learning Rust, teaching Rust, and building community Chris talks with Carol (Nichols || Goulding), a Rust community team member, co-author of the first major revision of The Rust Programming Language, and co-founder of the first Rust consultancy. Sponsors * Aleksey Pirogov * Cameron Mochrie * Chris Palmer * Daniel Collin * Derek Morr * Doug Reeves * Hamza Sheikh * Jakub “Limeth” Hlusička * Jupp Müller * Keith Gray * Lachlan Collins * Leif Arne Storset * Luca Schmid * Matthew Piziak * Micael Bergeron * Nils Tekampe * Ovidiu Curcan * Pascal Hertleif * Ralph Giles (“rillian”) * Ralph “FriarTech” Loizzo * Raph Levien * reddraggone9 * Ryan Ollos * Sean Jensen-Gray * Steven Murawksi * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/newrustacean * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho * Flattr.com/profile/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>47:11</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Bonus 7: Katas—or: learning by doing</title>
@@ -2254,6 +2281,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Katas—or: learning by doing One of the best ways to learn is to pick a small problem you have already internalized, and to do it again but in a new language or in a new way in a language you already know. Sponsors * Aleksey Pirogov * Cameron Mochrie * Chris Palmer * Daniel Collin * Derek Morr * Doug Reeves * Hamza Sheikh * Jakub “Limeth” Hlusička * Jupp Müller * Keith Gray * Lachlan Collins * Leif Arne Storset * Luca Schmid * Matthew Piziak * Micael Bergeron * Ovidiu Curcan * Pascal Hertleif * Ralph Giles (“rillian”) * Ralph “FriarTech” Loizzo * Raph Levien * reddraggone9 * Ryan Ollos * Steven Murawksi * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrych * flattr.com/profile/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>10:19</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Bonus 6: It doesn‘t have to be sexy</title>
@@ -2335,6 +2363,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Building (and celebrating) all the little, not-so-glorious pieces of the Rust ecosystem. Notes We love the Rust compiler team. But there’s more to the Rust community, and more required for Rust to be as great as it can be, than just the language itself. We need to celebrate other libraries, and even the small ones, just as much (and maybe more) than changes to the language. We need to dig in and work on building the _whole_ ecosystem. (The good news is, we are!) Links - futures-rs - “Zero-cost futures in Rust” - Tokio - “Announcing Tokio” (Carl Lerche on Medium) - “What’s new with ‘The Rust Programming Language’?” - Friends of Rust - ring – Safe, fast, small crypto using Rust - alexa-rs – Rust library for building Alexa skills - gilrs – Game Input Library for Rust Sponsors - Aleksey Pirogov - Cameron Mochrie - Cass Costello - Chris Palmer - Daniel Collin - Derek Morr - Doug Reeves - Eric Fulmer - Hamza Sheikh - Jakub “Limeth” Hlusička - Jared Smith - Keith Gray - Lachlan Collins - Leif Arne Storset - Luca Schmid - Micael Bergeron - Pascal Hertleif - Ralph Giles (“rillian”) - Ralph “FriarTech” Loizzo - Raph Levien - reddraggone9 - Ryan Ollos - Steven Murawksi - Vesa Kaihlavirta - William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho - flattr.com/profile/chriskrycho - PayPal.me/chriskrycho Contact - New Rustacean: - Twitter: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - GitHub: chriskrycho - Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>11:27</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e017: Point me where I need to go</title>
@@ -2434,6 +2463,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A deep dive on references and pointers in Rust. Notes By listener request, today we look at the syntax and semantics of referencing and dereferencing and the corresponding `&amp;` and `*` operators. As was the case with e016, the code samples have little to say in their documentation; reading the code will be necessary for seeing the ideas. Sponsors * Aleksey Pirogue * Cameron Mochrie * Chris Palmer * Daniel Collin * Derek Morr * Doug Reeves * Eric Fulmer * Hamza Sheikh * Jakub “Limeth” Hlusička * Jared Smith * Keith Gray * Lachlan Collins * Leif Arne Storset * Luca Schmid * Micael Bergeron * Pascal Hertleif * Ralph Giles (“gillian”) * Ralph “FriarTech” Loizzo * Raph Levien * reddraggone9 * Ryan Oleos * Steven Murawksi * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrych * flattr.com/profile/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>17:06</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e016: RefCells and code smells</title>
@@ -2531,6 +2561,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Digging deeper on smart pointers and mutability with `Cell` and `RefCell`. Notes What are the Cell and RefCell types, and when should we use them? Today, we follow up both the detailed discussion of smart pointers in e015 and the closely related discussion in Interview 2 with Raph Levien, and look at two types you need to have a good idea how to deal with if you want to use these smart pointer types more _ergonomically_—that is, how to use them without feeling like you’re beating your head against a wall! Sponsors - Aleksey Pirogov - Chris Palmer - Daniel Collin - Derek Morr - Doug Reeves - Eric Fulmer - Hamza Sheikh - Jakub “Limeth” Hlusička - Keith Gray - Lachlan Collins - Leif Arne Storset - Luca Schmid - Micael Bergeron - Michael Clayton - Pascal Hertleif - Ralph Giles (“rillian”) - Ralph “FriarTech” Loizzo - Raph Levien - reddraggone9 - Ryan Ollos - Vesa Kaihlavirta - William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho - flattr.com/profile/chriskrycho - PayPal.me/chriskrycho Contact - New Rustacean: - Twitter: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - GitHub: chriskrycho - Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>18:52</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Interview 2::Part 2 – Raph Levien</title>
@@ -2610,6 +2641,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Raph Levien on Rust’s current strengths and places it can improve Notes Chris chats with Raph Levien about what inspired him to build a text editor, as well as about where the rough edges in the Rust development story are today, and how we might improve them going forward. Sponsors - Aleksey Pirogov - Chris Palmer - Daniel Collin - Derek Morr - Doug Reeves - Hamza Sheikh - Keith Gray - Lachlan Collins - Leif Arne Storset - Luca Schmid - Micael Bergeron - Pascal Hertleif - Ralph Giles (“rillian”) - Ralph “FriarTech” Loizzo - Raph Levien - reddraggone9 - Ryan Ollos - Vesa Kaihlavirta - William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho - flattr.com/profile/chriskrycho - PayPal.me/chriskrycho Contact - New Rustacean: - Twitter: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - GitHub: chriskrycho - Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>19:33</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Interview 2::Part 1 – Raph Levien</title>
@@ -2714,6 +2746,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Raph Levien on using Rust to build the Xi editor Notes Chris chats with Raph Levien about his background in software development, what attracted him to Rust, and how he’s using Rust to build the Xi Editor, a project which aims to be the fastest text editor out there, with native user interfaces and a Rust text engine. Sponsors - Aleksey Pirogov - Chris Palmer - Daniel Collin - Derek Morr - Doug Reeves - Hamza Sheikh - Lachlan Collins - Leif Arne Storset - Luca Schmid - Micael Bergeron - Pascal Hertleif - Ralph Giles (“rillian”) - Ralph “FriarTech” Loizzo - Raph Levien - reddraggone9 - Ryan Ollos - Vesa Kaihlavirta - William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho - flattr.com/profile/chriskrycho - PayPal.me/chriskrycho Contact - New Rustacean: - Twitter: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - GitHub: chriskrycho - Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>28:17</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e015: Not dumb pointers</title>
@@ -2793,6 +2826,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Box, String, Vec, Rc, and Arc have this in common: they’re not dumb. This episode, we take a close look at smart pointer types—from a few we’ve already talked about, like Box, Vec, and String, to some new ones, like Rc and Arc. - What smart pointers are, and what makes them ‘smart’. - Why we want or need smart pointers. - A bit about Box. - A lot more about Rc and Arc. Sponsors - Aleksey Pirogov - Chris Palmer - Daniel Collin - Derek Morr - Doug Reeves - Hamza Sheikh - Lachlan Collins - Leif Arne Storset - Luca Schmid - Micael Bergeron - Pascal Hertleif - Ralph Giles (“rillian”) - Ralph “FriarTech” Loizzo - Raph Levien - reddraggone9 - Ryan Ollos - Vesa Kaihlavirta - William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Contact - New Rustacean: - Twitter: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - GitHub: chriskrycho - Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>20:03</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>News 1: One year and counting</title>
@@ -2880,6 +2914,7 @@
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A year in, Rust is changing fast but still stable. Sponsors * Aleksey Pirogue * Chris Palmer * Daniel Collin * Derek Morr * Hamza Sheikh * Lachlan Collins * Leif Arne Storset * Luca Schmid * Micael Bergeron * Pascal Hertleif * Ralph Giles (“gillian”) * Ralph “FriarTech” Loizzo * reddraggone9 * Ryan Oleos * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho * Flattr.com/profile/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>26:16</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Bonus 5: Better than open-source contributions</title>
@@ -2951,6 +2986,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Some things matter more than contributing to open-source software in your free time. A lot more. It’s trendy to ask for open-source work as evidence of your interest in tech and commitment to software development. Trendy and completely wrong. Companies should not demand open-source contributions from their employees, and beyond that, should learn to recognize that profit is not the most valuable thing in the world. People are. Sponsors * Aleksey Pirogue * Chris Palmer * Daniel Collin * Derek Morr * Hamza Sheikh * Lachlan Collins * Leif Arne Storset * Luca Schmid * Micael Bergeron * Pascal Hertleif * Ralph Giles (‚Äúrillian‚Äù) * Ralph ‚ÄúFriarTech‚Äù Loizzo * reddraggone9 * Ryan Oleos * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho * Flattr.com/profile/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: @newrustacean or hello@newrustacean.com * Chris Krycho: github.com/chriskrycho, @chriskrycho</itunes:summary>
             <itunes:duration>11:07</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e014: Stringing things along</title>
@@ -3027,6 +3063,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Strings &amp;strs and Vecs and slices (and Unicode) – oh, my! Notes This episode, I take a deep dive on strings in Rust, looking at the differences between String and &amp;str, discussing Unicode a bit, and then expanding the discussion to think about how these types relate to the types they’re built on (like Vec). Links - Strings: - The Rust Book - Rust by Example - str docs: - module - primitive type - String - module - type definition - Dereferencing - coercions - std::ops::Deref Sponsors - Aleksey Pirogov - Chris Palmer - Derek Morr - Hamza Sheikh - Lachlan Collins - Leif Arne Storset - Luca Schmid - Micael Bergeron - Pascal Hertleif - Ralph Giles (“rillian”) - Ralph “FriarTech” Loizzo - reddraggone9 - Ryan Ollos - Vesa Kaihlavirta - William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor - Patreon.com/chriskrycho - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho - Flattr.com/profile/chriskrycho Contact - New Rustacean: - Twitter: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - GitHub: chriskrycho - Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>18:58</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Bonus 4: We can have nice things</title>
@@ -3090,6 +3127,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
             <itunes:author>Just how good Rust is, and how you can learn it even if you’re busy.</itunes:author>
             <itunes:summary>Just how good Rust is, and how you can learn it even if you’re busy. Notes Sometimes life goes crazy and I don’t have time to do all the technical writing required for a full episode, but I can’t get Rust off my mind, so I record an episode like this one. Where I talk a bit about how versatile Rust is and suggest some surprising ways you might be able to use it. Sponsors * Aleksey Pirogue * Chris Palmer * Derek Morr * Hamza Sheikh * Lachlan Collins * Leif Arne Storset * Luca Schmid * Micael Bergeron * Pascal Hertleif * Ralph Giles (“gillian”) * Ralph “FriarTech” Loizzo * reddraggone9 * Ryan Oleos * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon * Venom * Dwolla * Cash.me Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>10:17</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e013: Staying alive</title>
@@ -3165,6 +3203,7 @@ well. You know who you are!)</p>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Reasoning about and using lifetimes in Rust (and why we need them) Notes Lifetimes are our way of reasoning about how long a given piece of data is available and safe to use in Rust. The reason we don't have the dangling pointer problem is that we do have lifetimes instead. They're not magic, they're just a bit of semantics and syntax that let us specify the rules for how long any given item lives, and how long references to data must be valid. Sponsors * Aleksey Pirogue * Chris Palmer * Derek Morr * Hamza Sheikh * Lachlan Collins * Leif Arne Storset * Luca Schmid * Micael Bergeron * Pascal Hertleif * Ralph Giles ("gillian") * Ralph "FriarTech" Loizzo * reddraggone9 * Ryan Oleos * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>17:40</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e012: I'm not familiar with that expression</title>
@@ -3230,6 +3269,7 @@ well. You know who you are!)</p>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>What it means to be an expression-oriented language, and how that works out in Rust. Notes Rust is an expression-oriented language. What does that mean, and how does it play out in Rust? We look at if and match blocks, discuss looping constructs, and examine functions, and then widen out to discuss how having an expression-oriented language can change the way we think about programming. Sponsors * Aleksey Pirogue * Chris Palmer * Derek Morr * Hamza Sheikh * Lachlan Collins * Leif Arne Storset * Luca Schmid * Micael Bergeron * Pascal * Ralph Giles (“gillian”) * Ralph “FriarTech” Loizzo * reddraggone9 * Ryan Oleos * William Roe Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho Contact * New Rustacean: - Twitter: @newrustacean - Email: hello@newrustacean.com * Chris Krycho - GitHub: chriskrycho - Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>16:41</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e011: Once Upon a Type</title>
@@ -3299,6 +3339,7 @@ well. You know who you are!)</p>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Type systems: strong vs. weak, dynamic vs. static, and degrees of expressivity. Notes Talking about type systems! A broad and wide-ranging discussion about type systems in general, with specific examples from languages like PHP, JavaScript, Python, C, C++, Java, C♯, Haskell, and Rust! * What is a type system? * What are the kinds of things we get out of type systems? * What are the tradeoffs with different type systems? * What is Rust’s type system like? * What is especially attractive about Rust’s type system? A comment on the C integer/character string addition example: what’s actually happening there is that the character string is an array “under the covers,” and as such has an address. C silently switches to using the memory address, which is of course just an integer, when you try to add the two together. As I said on the show: the result is nonsense (unless you’re using this as a way of operating on memory addresses), but it’s compellable nonsense. In a stricter and stronger type system, memory addresses and normal numbers shouldn’t be addable! Sponsors * Aleksey Pirogue * Chris Palmer * Derek Morr * Hamza Sheikh * Lachlan Collins * Leif Arne Storset * Luca Schmid * Micael Bergeron * Pascal * Ralph Giles (“gillian”) * Ralph “FriarTech” Loizzo * reddraggone9 * Ryan Oleos * William Roe Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho Contact * New Rustacean: - Twitter: @newrustacean - Email: hello@newrustacean.com * Chris Krycho - GitHub: chriskrycho - Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>17:51</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Interview 1::Part 2 – Sean Griffin</title>
@@ -3372,6 +3413,7 @@ well. You know who you are!)</p>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Sean Griffin on type systems and hopes for Rust's future Notes ----- Chris chats with Sean Griffin about the tradeoffs between mental overhead and type safety, the expressiveness of different type systems, and some of the places where Rust currently falls down. ### Corrigenda Sean noted he could be wrong about `IEnumerable&lt;T&gt;` not having a `Sum` method in C♯, and post-show research indicated that he was (it's possible it was added after he had stopped doing .NET work, of course). See the [documentation][c1] for details on how `IEnumerable&lt;T&gt;.Sum` it behaves in C♯ if you're curious. As a related note, I (Chris) have done a little bit of digging on C♯ in the interval and it's fair to say that while a lot of the "ceremony" involved in writing C♯ is annoying, it's much more than just a "slightly nicer Java", and indeed is a much nicer language than my previous, limited exposure had led me to believe. It's no Rust or F♯, but its type system is substantially more capable than Java's. [c1]: https://msdn.microsoft.com/library/bb919210(v=vs.90).aspx Links ----- - fmap + [Discussion of `fmap` with `Optional` in Swift][l1] + [In Haskell][l2] - Rust: + [Trait objects][l3] + [Specialization RFC][l4] * [Implementation][l5] - [Diesel][l6] [l1]: https://robots.thoughtbot.com/functional-swift-for-dealing-with-optional-values [l2]: http://learnyouahaskell.com/functors-applicative-functors-and-monoids [l3]: https://doc.rust-lang.org/book/trait-objects.html [l4]: https://github.com/rust-lang/rfcs/pull/1210 [l5]: https://github.com/rust-lang/rust/issues/31844 [l6]: https://github.com/sgrif/diesel Sponsors -------- - Aleksey Pirogov - Chris Palmer - [Derek Morr][s3] - Hamza Sheikh - Leif Arne Storset - Luca Schmid - Micael Bergeron - Ralph Giles ("rillian") - reddraggone9 - Ryan Ollos - [William Roe][s11] [s3]: https://twitter.com/derekmorr [s11]: http://willroe.me ### Become a sponsor - [Patreon](https://www.patreon.com/newrustacean) - [Venmo](https://venmo.com/chriskrycho) - [Dwolla](https://www.dwolla.com/hub/chriskrycho) - [Cash.me](https://cash.me/$chriskrycho) Follow ------ - New Rustacean: + Twitter: [@newrustacean](https://www.twitter.com/newrustacean) + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com) - Chris Krycho + GitHub: [chriskrycho](https://github.com/chriskrycho) + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</itunes:summary>
             <itunes:duration>22:14</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Interview 1::Part 1 – Sean Griffin</title>
@@ -3448,6 +3490,7 @@ well. You know who you are!)</p>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Sean Griffin on Rust, Diesel, and ORMs Notes Chris chats with Sean Griffin about his programming background and initial experience with Rust, Rust’s appeal, and what he’s doing with Diesel and some of his plans for a new web framework in Rust. Sponsors - Aleksey Pirogov - Chris Palmer - Derek Morr - Hamza Sheikh - Leif Arne Storset - Luca Schmid - Micael Bergeron - Ralph Giles (“rillian”) - reddraggone9 - Ryan Ollos - William Roe Become a sponsor - Patreon - Venmo - Dwolla - Cash.me Follow - New Rustacean: - Twitter: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - GitHub: chriskrycho - Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>24:50</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Bonus 3: Building as a community</title>
@@ -3494,6 +3537,7 @@ well. You know who you are!)</p>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>The value of a good community, and how you can help Rust today. Community is one of the most important parts of a programming language community, or indeed *any* technical community. In this episode, I talk a bit about what happens when you don't have a good community, how Rust's community has done well so far, and then how to keep building a good community and how to build good things *as* a community. Sponsors - Aleksey Pirogov - Chris Palmer - Derek Morr - Hamza Sheikh - Luca Schmid - Micael Bergeron - Ralph Giles (“rillian”) - reddraggone9 - William Roe Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho Follow - New Rustacean: - Twitter: @newrustacean - App.net: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - Twitter: @chriskrycho - App.net: @chriskrycho</itunes:summary>
             <itunes:duration>12:03</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e010: Macros rule!</title>
@@ -3572,6 +3616,7 @@ well. You know who you are!)</p>
             <itunes:subtitle>Using Rust's macro system, its limitations, and its future.</itunes:subtitle>
             <itunes:summary>Using Rust's macro system, its limitations, and its future. Because of the way macros are exported—before name resolution on crates occurs—the documentation for the macros defined in the source for this episode occurs in the MACROS section of the show_notes crate documentation, rather than within the documentation for this module. (See the Rust Book discussion of documenting macros for details.) Even so, the source is still in this module; see the implementations for details. Sponsors - Aleksey Pirogov - Chris Palmer - Derek Morr - Hamza Sheikh - Luca Schmid - Micael Bergeron - Ralph Giles (“rillian”) - reddraggone9 - William Roe Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho Follow - New Rustacean: - Twitter: @newrustacean - App.net: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - Twitter: @chriskrycho - App.net: @chriskrycho</itunes:summary>
             <itunes:duration>16:32</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e009: Composing a Rustic tune</title>
@@ -3649,6 +3694,7 @@ well. You know who you are!)</p>
             <itunes:subtitle>Getting into the nitty-gritty with Rust's traits.</itunes:subtitle>
             <itunes:summary>Notes Last time, we looked at generics and traits at a high level. This time, we dig deeper on traits, looking specifically at std::iter::Iterator as an example of a powerful trait that can be composed across types, and then at how we might compose multiple traits on a single type. We also talk about the syntax for traits, the use of marker traits, some of the things you _can’t_ presently do with traits, and even just a smidge about the _future_ of traits in Rust. All that in less than 20 minutes! You’ll find today’s source example fairly interesting, I think: it’s just one type, but it uses almost every concept discussed on the show today! Links - Nick Cameron: “Thoughts on Rust in 2016” - “Upcoming breakage starting in Rust 1.7, from RFCs 1214 and 136” - RFC 1214: Clarify (and improve) rules for projections and well-formedness - RFC 136: Ban private items in public APIs - The Rust Book: - Traits - Trait objects (dynamic dispatch) - The Rust reference: - std::iter and std::iter::Iterator - Add - Drop - PartialEq and Eq - PartialOrd and Ord - Special traits - Trait objects - RFC: impl specialization - Aaron Turon: “Specialize to reuse” Sponsors - Aleksey Pirogov - Chris Palmer - Derek Morr - Hamza Sheikh - Luca Schmid - Micael Bergeron - Ralph Giles (“rillian”) - reddraggone9 - William Roe Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho Follow - New Rustacean: - Twitter: @newrustacean - App.net: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - Twitter: @chriskrycho - App.net: @chriskrycho</itunes:summary>
             <itunes:duration>17:23</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e008: Just like something else</title>
@@ -3713,6 +3759,7 @@ well. You know who you are!)</p>
             <itunes:subtitle>Generics, traits, and shared behavior in Rust.</itunes:subtitle>
             <itunes:summary>Notes In this episode we cover—at a _very_ high level—two more fundamental concepts in Rust programming: generics and traits. Generics gives us the abilitty to write types and functions which can be used with more than one type. Traits give us the ability to specify behavior which can be implemented for more than one type. The combination gives us powerful tools for higher-level programming constructs in Rust. Comments on source code Now that we have a handle on how tests work, we’ll use them to validate the behavior of our code going forward. This is great: we can show that the tests do what we think. To today’s point, though: we actually know even apart from whether the tests _run_ successfully that these generic functions and the associated traits are behaving as we want. Failure with generics is a _compile_-time error, not a runtime error. Sponsors - Chris Palmer - Derek Morr - Luca Schmid - Micael Bergeron - Ralph Giles (“rillian”) - reddraggone9 - William Roe Become a sponsor - Patreon/newrustacean - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho Follow - New Rustacean: - Twitter: @newrustacean - App.net: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - Twitter: @chriskrycho - App.net: @chriskrycho</itunes:summary>
             <itunes:duration>17:37</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e007: Testify</title>
@@ -3782,6 +3829,7 @@ well. You know who you are!)</p>
             <itunes:subtitle>Testing and benchmarking, and compiler attributes.</itunes:subtitle>
             <itunes:summary>Notes All about testing in Rust! In order, we take a look at: - Why you need tests. - Unit tests in other (dynamically-typed) languages vs. in Rust. - How to write unit tests in Rust. - How and why to write integration tests in Rust. - How and why to use benchmarks in Rust. The detailed code samples for this episode are heavy on showing; because of the nature of test functions, you will be best off just reading the source rather than leaning heavily on the descriptions generated by RUSTDOC. (The descriptions are still _there_, but they’re much less useful than they have been in previous episodes.) In particular, the test module here is excluded because of the use of the #[cfg(test)] attribute marker on it. Because we are using the feature-gated benchmarking functionality, the show notes “library” can now only be compiled with the Rust nightly (as of 1.5, the version current as this episode is produced). One thing that isn’t necessarily obvious from reading the test documentation in the Rust book and Rust reference: the extern crate test statement needs to be not in this module, but at the module (lib.rs) which defines the library/crate; in this case, show_notes/lib.rs. Sponsors - Chris Palmer - Derek Morr - Luca Schmid - Micael Bergeron - Ralph Giles (“rillian”) - reddraggone9 - William Roe Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho Follow - New Rustacean: - Twitter: @newrustacean - App.net: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - Twitter: @chriskrycho - App.net: @chriskrycho</itunes:summary>
             <itunes:duration>18:46</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Bonus 2: Legacy Code</title>
@@ -3826,6 +3874,7 @@ well. You know who you are!)</p>
             <itunes:subtitle>Paying off technical debt, refactoring, and cleaning up old code.</itunes:subtitle>
             <itunes:summary>Software developers spend a large part of our careers dealing with legacy code. But what is the _best_ way to deal with legacy code? When should you rip out the old and rewrite it, and when should you opt for smaller clean-up jobs because, however ugly, what is already present _works_? SPONSORS - Chris Palmer - Derek Morr - Luca Schmid - Micael Bergeron - Ralph Giles (“rillian”) - reddraggone9 - William Roe Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho FOLLOW - New Rustacean: - Twitter: @newrustacean - App.net: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - Twitter: @chriskrycho - App.net: @chriskrycho</itunes:summary>
             <itunes:duration>9:41</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>Bonus 1: Polyglot Programming Promises and Perils</title>
@@ -3871,6 +3920,7 @@ well. You know who you are!)</p>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:subtitle>The delights and challenges of knowing (or even just learning) lots of languages.</itunes:subtitle>
             <itunes:duration>8:28</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e006: Modularize this!</title>
@@ -3923,6 +3973,7 @@ well. You know who you are!)</p>
             <itunes:subtitle>Designing APIs, and using packages ("crates") and modules</itunes:subtitle>
             <itunes:summary>Designing APIs, and using packages (“crates”) and modules Notes Today, we are talking about modules, packages, and APIs in Rust. Taking a bit of a breather after some pretty hard material the last few weeks. For reference, the Rust book section on Crates and Modules will be very helpful. Corrigenda I accidentally called this episode 5, instead of episode 6. *Whoops.* Just before the 15:00 mark, while discussing libraries, I referred to “e006.md” when I meant to say “e006.rs”. Slips of the tongue inspired by the fact that Rust (delightfully) uses Markdown for its documentation. Sponsors - reddraggone9 - Chris Patti (Podcast.__init__) Become a sponsor - https://www.patreon.com/newrustacean - https://venmo.com/chriskrycho - dwolla.com/hub/chriskrycho - ttps://cash.me/$chriskrycho</itunes:summary>
             <itunes:duration>18:22</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e005: Allocate it where?</title>
@@ -3982,6 +4033,7 @@ well. You know who you are!)</p>
             <itunes:subtitle>Returning functions from other functions, and thinking about the stack, the heap, and reference types.</itunes:subtitle>
             <itunes:summary>Returning functions from other functions, and thinking about the stack, the heap, and reference types. NOTES This episode, we look at returning functions from other functions, and as part of that discuss some basics about the stack and the heap—and why we need to care about them for returning functions. The functions themselves are not especially interesting; they just show you the basic form you use to return functions from other functions, and how to then use them in another function. You’ll want to take a detailed look instead at the documentation for each (or just read the source!), because that’s where the meat of the discussion in this week’s code is. SPONSORS - reddraggone9 - Chris Patti Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me FOLLOW - New Rustacean: - Twitter: @newrustacean - App.net: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - Twitter: @chriskrycho - App.net: @chriskrycho</itunes:summary>
             <itunes:duration>18:30</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e004: Functionalized</title>
@@ -4035,6 +4087,7 @@ well. You know who you are!)</p>
             <itunes:subtitle>Functions, methods, closures, and function as arguments!</itunes:subtitle>
             <itunes:summary>Functions, methods, closures, and function as arguments! NOTES This week’s episode covers the basics of all sorts of functions: normal functions, methods, and closures. Closures - An explanation (in Ruby) by Martin Fowler - Rust book - Rust by Example - “What is a closure?” (Progammers Stack Exchange) ‚Äì the first answer is the best, but the second answer may be a helpful stepping stone for people just getting their heads around this and coming from OOP languages like C++ or Java (even though I disagree with the explanation in some ways). - “What is a closure?” (Stack Overflow) – careful, thorough answer using JavaScript as an example. LINKS - Exercism (hat tip: Lechindanier on GitHub) - Rust Learning - Rust and Swift (viii) FOLLOW/SUPPORT - New Rustacean: - Twitter: @newrustacean - App.net: @newrustacean - Patreon.com/chriskrycho - Dwolla.com/hub/chriskrycho - Email: hello@newrustacean.com - Chris Krycho - Twitter: @chriskrycho - App.net: @chriskrycho</itunes:summary>
             <itunes:duration>17:07</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e003: No. more. nulls.</title>
@@ -4106,6 +4159,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
             <itunes:subtitle>Enumerated (`enum`) types, pattern matching, and meaningful return values.</itunes:subtitle>
             <itunes:summary>No More Nulls - Date: October 21, 2015 - Subject: Enumerated (`enum`) types, pattern matching, and meaningful return values. # Notes Today’s episode discusses, in order: - Enumerated types, with an eye to the difference between structs and enums, and to the differences between enums in C and in Rust. - Pattern matching, with a focus on using them with enumerated types and some discussion about how they differ from switch blocks in C-like languages. - Using the Option and Result enumerated types with pattern matching to provide meaningful returns from functions safely. ## Order There is a specific order to the examples below, and it is _not_ the automatically-alphabetized order rendered by rustdoc. Instead, you should work through in the sequence they appear in the source: 1. RelatedishThings 2. demonstrate_basic_enumeration 3. demonstrate_match 4. get_an_option 5. demonstrate_option 6. get_a_result 7. demonstrate_result</itunes:summary>
             <itunes:duration>16:51</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e002: Something borrowed, something… moved?</title>
@@ -4162,6 +4216,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
             <itunes:subtitle>Borrow a `struct` for a while. Then give it back, or keep it for yourself!</itunes:subtitle>
             <itunes:summary>Something borrowed, something… moved? * Date: October 12, 2015 * Subject: The struct data type constructor, and the basics of Rust’s “ownership” concept and “borrowing” and “moving”. * Audio: * M4A * MP3 * Ogg Follow/Support * New Rustacean: * Twitter: @newrustacean * App.net: @newrustacean * Patreon * Email: hello@newrustacean.com * Chris Krycho * Twitter: @chriskrycho * App.net: @chriskrycho Notes Today’s episode discusses, and the associated source code demonstrates, a few basic behaviors of structs… including borrowing! After taking a short look at one of Rust’s basic approaches to creating new types, we dive into a fairly thorough overview of how borrowing works in fairly run-of-the-mill Rust code. This is a basic introduction, and as such I’m not getting into things like heap-allocated memory (Box) or dealing with move semantics with threads or closures. (I haven’t actually figured those out well enough yet to write something like this for them!) As usual, you’ll want to have the src open to see what I’m doing with the components documented below. Links * rustfmt – a tool for formatting Rust code * repo * “rustfmt-ing Rust` * Reddit discussion * RFC for incremental compilation * Text of the RFC * GitHub pull request</itunes:summary>
             <itunes:duration>17:12</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e001: Document All the Things</title>
@@ -4232,6 +4287,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
             <itunes:subtitle>Documentation in general, and rustdoc and cargo doc in particular.</itunes:subtitle>
             <itunes:summary>Documentation in general, and rustdoc and cargo doc in particular. Document all the things! * Date: October 3, 2015 * Subject: Documentation in general, and rustic and cargo doc in particular. * Audio: * M4A * MP3 Follow/Support * New Rustacean: * Twitter: @newrustacean * App.net: @newrustacean * Patreon * Email: hello@newrustacean.com * Chris Krycho * Twitter: @chriskrycho * App.net: @chriskrycho Notes This is a mostly-empty module, and it is intended as such. Why? Well, because almost all the sample code exists in these comments, which serve as the show notes. If you listen to the episode or take a look at the source files, you’ll see how it works! The components below are included solely so you can see how the docstrings work with each kind of thing. Make sure to click on the names of the items: there is more documentation there. Again, take a look at the source to see how it looks in the context of a file module. Note that this module-level docstring uses rather than `///`-style comments. This is because this docstring is documenting the item which contains it, rather than the following item. Per [Rust RFC 505][1], the preferred approach is always to use the &amp;quot;following&amp;quot; form (`///`) rather than the &amp;quot;containing&amp;quot; form (), except for module-level docs like these. (I will be following RFC 505 throughout.) Links * Rust and MSVC tracking issue * Other documentation tools: * Predecessors: * Python’s Sphinx tool * Oxygen * JSDoc * JavaDoc * Other new languages with Markdown tooling * Julia has a built-in documentation system * Elixir has ex_doc * Rust 1.3 release announcement * Rust’s package hosting: crates.io * Crater for testing for backwards compatibility * Semantic versioning * “Stability as a Deliverable”: Rust official blog post on version stability, backwards compatibility, and release channels. * The Rust book chapter on rustc</itunes:summary>
             <itunes:duration>17:06</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>
             <title>e000: Hello, world!</title>
@@ -4262,6 +4318,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
             <itunes:subtitle>A little about the host, and a little about the format of the show!</itunes:subtitle>
             <itunes:summary>Hello, world! * Date: September 24, 2015 * Subject: The host, the language, and the show! * Audio: * M4A * MP3 Today’s show is pretty meta. You can skip it if you just want to start with something more technical, but I thought listeners might want to know a little about the origins of the show and my own background, so that’s what you get today. Next time, we’ll be tackling the rustic command in some detail. This is an almost-empty module: we aren’t doing any fun code samples yet. I included the standard “Hello, world!” example, because how could I not? However, at some point in the future, there will be much more detailed code samples available: * in the GitHub repository for the show * in the show notes attached to each episode Hopefully, the result will be a pretty helpful bunch of side content along with the audio of the podcast itself.</itunes:summary>
             <itunes:duration>17:11</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
         </item>
     </channel>
 </rss>
