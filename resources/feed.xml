@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Fri, 24 Nov 2017 15:00:28 -0700</pubDate>
-        <lastBuildDate>Fri, 24 Nov 2017 15:00:28 -0700</lastBuildDate>
+        <pubDate>Sun, 26 Nov 2017 16:15:08 -0700</pubDate>
+        <lastBuildDate>Sun, 26 Nov 2017 16:15:09 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -34,7 +34,6 @@
         </itunes:owner>
         <itunes:block>no</itunes:block>
         <itunes:category text="Technology">
-            <itunes:category text="Software How-To"/>
             <itunes:category text="Tech News"/>
         </itunes:category>
         <itunes:category text="Education">
@@ -42,8 +41,21 @@
         </itunes:category>
         <itunes:type>episodic</itunes:type>
         <item>
+            <title>RBR 2017: Tom Kriezkowski</title>
+            <link>http://newrustacean.com/show_notes/interview/rbr_2017/tom_kriezkowski/</link>
+            <description><![CDATA[<p>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</p>
+]]></description>
+            <pubDate>Sun, 26 Nov 2017 16:14:25 -0700</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/rbr_2017/tom_kriezkowski.mp3" length="4824919" type="audio/mpeg"/>
+            <guid isPermaLink="false">C59826B3-E6E7-47EE-8077-B14A49FA23DA</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
+            <itunes:duration>5:00</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
+        </item>
+        <item>
             <title>News: Rust 1.21 and 1.22</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_20_1_22/</link>
+            <link>http://newrustacean.com/show_notes/news/rust_1_21_1_22/</link>
             <description><![CDATA[<p>Quality of life improvements, <code>Failure</code>, wasm, and rustdoc fun.</p>
 <h2 id="links-and-notes">Links and Notes</h2>
 <ul>
