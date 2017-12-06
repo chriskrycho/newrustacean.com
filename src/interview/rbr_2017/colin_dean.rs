@@ -16,5 +16,5 @@
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/rbr_2017/colin_dean.ogg">
 //! </audio>
 
-/// Transcript: coming soon!
+#[doc(include="../docs/rbr_2017/colin-dean.md")]
 pub struct Transcript;

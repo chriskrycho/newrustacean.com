@@ -4,14 +4,14 @@
         <title>New Rustacean – learning the Rust programming language</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.5.4(3032); Mac OS X Version 10.13.1 (Build 17B48) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.5.5(3036); Mac OS X Version 10.13.1 (Build 17B1003) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sun, 26 Nov 2017 16:43:19 -0700</pubDate>
-        <lastBuildDate>Sun, 26 Nov 2017 16:43:19 -0700</lastBuildDate>
+        <pubDate>Wed, 06 Dec 2017 16:25:40 -0700</pubDate>
+        <lastBuildDate>Wed, 06 Dec 2017 16:25:40 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -40,6 +40,20 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>RBR 2017: Thomas Gideon</title>
+            <link>http://newrustacean.com/show_notes/interview/rbr_2017/thomas_gideon/</link>
+            <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
+            <pubDate>Wed, 06 Dec 2017 16:30:00 -0700</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/rbr_2017/thomas_gideon.mp3" length="5386652" type="audio/mpeg"/>
+            <guid isPermaLink="false">539362B6-B68B-428E-A3BE-493B0EBFC784</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.
+
+</itunes:summary>
+            <itunes:duration>5:35</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
+        </item>
         <item>
             <title>RBR 2017: Tom Kriezkowski</title>
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/tom_kriezkowski/</link>
