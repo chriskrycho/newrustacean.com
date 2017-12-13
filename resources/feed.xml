@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Tue, 12 Dec 2017 07:05:33 -0700</pubDate>
-        <lastBuildDate>Tue, 12 Dec 2017 07:05:34 -0700</lastBuildDate>
+        <pubDate>Wed, 13 Dec 2017 16:17:30 -0700</pubDate>
+        <lastBuildDate>Wed, 13 Dec 2017 16:17:31 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -40,6 +40,18 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>RBR 2017: Andrew Hobden</title>
+            <link>http://newrustacean.com/show_notes/interview/rbr_2017/andrew_hobden/</link>
+            <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
+            <pubDate>Wed, 13 Dec 2017 16:20:00 -0700</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/rbr_2017/andrew_hobden.mp3" length="5785896" type="audio/mpeg"/>
+            <guid isPermaLink="false">38546A70-AF33-4779-8C51-460BBB9639DC</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
+            <itunes:duration>6:00</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
+        </item>
         <item>
             <title>RBR 2017: Parry Wilcox</title>
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/parry_wilcox/</link>
