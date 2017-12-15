@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Wed, 13 Dec 2017 16:17:30 -0700</pubDate>
-        <lastBuildDate>Wed, 13 Dec 2017 16:17:31 -0700</lastBuildDate>
+        <pubDate>Thu, 14 Dec 2017 18:26:30 -0700</pubDate>
+        <lastBuildDate>Thu, 14 Dec 2017 18:26:31 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -40,6 +40,18 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>RBR 2017: Ben Beckwith</title>
+            <link>http://newrustacean.com/show_notes/interview/rbr_2017/ben_beckwith/</link>
+            <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
+            <pubDate>Thu, 14 Dec 2017 18:26:20 -0700</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/rbr_2017/ben_beckwith.mp3" length="5512125" type="audio/mpeg"/>
+            <guid isPermaLink="false">DB1645B8-3609-4D0A-9799-5FA13093C42F</guid>
+            <itunes:author>Chris Krycho</itunes:author>
+            <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
+            <itunes:duration>5:42</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
+        </item>
         <item>
             <title>RBR 2017: Andrew Hobden</title>
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/andrew_hobden/</link>
