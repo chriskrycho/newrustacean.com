@@ -1,21 +1,20 @@
-//! Anna Liao
+//! Lee Baillie
 //!
-//!   - **Date:** December 20, 2017
-//!   - **Subject:** Anna's experience learning Rust while porting a Raspberry Pi
-//!     Python project as part of the Increasing Rust’s Reach 2017 program.
+//!   - **Date:** December 26, 2017
+//!   - **Subject:** Lee's experience designing a new website for Rust.
 //!   - **Audio:**
 //!       + [M4A][m4a]
 //!       + [MP3][mp3]
 //!       + [Ogg][ogg]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/irr_2017/anna_liao.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/irr_2017/anna_liao.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/irr_2017/anna_liao.ogg
+//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/irr_2017/lee_baillie.m4a
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/irr_2017/lee_baillie.mp3
+//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/irr_2017/lee_baillie.ogg
 //!
 //! <audio style="width: 100%" style="width: 100%" title="Jonathan Turner::Part 3" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/irr_2017/anna_liao.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/irr_2017/anna_liao.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/irr_2017/anna_liao.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/irr_2017/lee_baillie.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/irr_2017/lee_baillie.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/irr_2017/lee_baillie.ogg">
 //! </audio>
 //!
 //!
@@ -23,30 +22,25 @@
 //! ----------
 //! 
 //! - [Increasing Rust's Reach]
-//! - [Go]
-//! - [This Week In Rust]
-//! - [PyCon]
-//! - [Raspberry Pi]
-//! - [Sense HAT]
-//! - [PyCascades]
-//! - [Andrew Gallant (`burntsushi`)]
-//!     + [ripgrep]
-//! - [RustBridge]
-//! - [exercism.io]
-//! - [the other Sense HAT Rust conversion]
+//! - [Ember]
+//! - [Rails]
+//! - Talks
+//!     + [at RustConf] \(as Liz Baillie)
+//!     + [at RustFest Kyiv] \(as Liz Baillie)
+//!     + [comparing Rust and Ruby at a meetup][meetup]
+//! - [Sinatra]
+//! - [Helix]
+//! - [the Slackbot framework]
 //! 
 //! [Increasing Rust's Reach]: https://blog.rust-lang.org/2017/06/27/Increasing-Rusts-Reach.html
-//! [Go]: https://golang.org
-//! [This Week In Rust]: https://this-week-in-rust.org
-//! [PyCon]: http://www.pycon.org
-//! [Raspberry Pi]: https://www.raspberrypi.org
-//! [Sense HAT]: https://www.raspberrypi.org/products/sense-hat/
-//! [PyCascades]: https://www.pycascades.com
-//! [Andrew Gallant (`burntsushi`)]: https://github.com/BurntSushi
-//! [ripgrep]: https://github.com/BurntSushi/ripgrep
-//! [RustBridge]: https://github.com/rust-community/rustbridge
-//! [exercism.io]: https://exercism.io
-//! [the other Sense HAT Rust conversion]: https://github.com/thejpster/pi-workshop-rs
+//! [Ember]: https://emberjs.com
+//! [Rails]: http://rubyonrails.org
+//! [at RustConf]: https://www.youtube.com/watch?v=Ce6ppwgF4SA
+//! [at RustFest Kyiv]: https://www.youtube.com/watch?v=iF-FgJvDl6w&list=PL85XCvVPmGQhvs1Rnet_24B-AI3YSM2YG&index=2
+//! [meetup]: https://www.youtube.com/watch?v=vDMZQzNQlXE&list=PLclEcT4yxER5GtZMe7feRdAwv-DLynsZt&index=1
+//! [Sinatra]: http://sinatrarb.com
+//! [Helix]: http://usehelix.com
+//! [the Slackbot framework]: https://github.com/tildeio/slackathon
 //! 
 //!
 //! Sponsors
