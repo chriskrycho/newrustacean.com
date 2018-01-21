@@ -13,7 +13,7 @@
 //! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/diesel_1_0/part_2.mp3
 //! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/diesel_1_0/part_2.ogg
 //!
-//! <audio style="width: 100%" style="width: 100%" title="News: Rust 1.20" controls preload=metadata>
+//! <audio style="width: 100%" style="width: 100%" title="Interview: Diesel 1.0, with Sean Griffin, Part 2" controls preload=metadata>
 //!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/diesel_1_0/part_2.m4a">
 //!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/diesel_1_0/part_2.mp3">
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/diesel_1_0/part_2.ogg">
