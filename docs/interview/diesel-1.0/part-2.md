@@ -1,4 +1,4 @@
-# News: Rust 1.23
+# Interview: Diesel 1.0, with Sean Griffin, Part 2
 
 Hello, I’m Chris Krycho and this is New Rustacean: a show about the Rust programming language and the people who use it. This is part two of an interview with Sean Griffin, on the development and release of Diesel 1.0.
 
