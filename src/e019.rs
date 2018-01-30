@@ -184,8 +184,8 @@
 /// # Examples
 ///
 /// ```rust,ignore
-/// # use show_notes::e019::A_NoCopyOrClonePoint;
-/// let a_point = A_NoCopyOrClonePoint::origin();
+/// # use show_notes::e019::ANoCopyOrClonePoint;
+/// let a_point = ANoCopyOrClonePoint::origin();
 /// let moved_point = a_point;  // <- moves the value
 /// println!("{:?}", a_point);  // <- so this is a problem!
 /// println!("{:?}", moved_point)
@@ -202,14 +202,14 @@
 /// 6 | println!("{:?}", a_point);  // <- so this is a problem!
 /// |                  ^^^^^^^ value used here after move
 /// |
-/// = note: move occurs because `a_point` has type `show_notes::e019::A_NoCopyOrClonePoint`, which does not implement the `Copy` trait
+/// = note: move occurs because `a_point` has type `show_notes::e019::ANoCopyOrClonePoint`, which does not implement the `Copy` trait
 /// ```
 ///
 /// If we comment the offending line out, however, it compiles just fine.
 ///
 /// ```rust
-/// # use show_notes::e019::A_NoCopyOrClonePoint;
-/// let a_point = A_NoCopyOrClonePoint::origin();
+/// # use show_notes::e019::ANoCopyOrClonePoint;
+/// let a_point = ANoCopyOrClonePoint::origin();
 /// let moved_point = a_point;
 /// // println!("{:?}", a_point);
 /// println!("{:?}", moved_point);  // <- not a problem!
@@ -219,16 +219,16 @@
 ///
 /// [playground]: https://is.gd/PZBWw0
 #[derive(Debug)]
-pub struct A_NoCopyOrClonePoint {
+pub struct ANoCopyOrClonePoint {
     x: f64,
     y: f64,
     z: f64,
 }
 
-impl A_NoCopyOrClonePoint {
+impl ANoCopyOrClonePoint {
     /// Generate a point at 0, 0, 0
-    pub fn origin() -> A_NoCopyOrClonePoint {
-        A_NoCopyOrClonePoint { x: 0.0, y: 0.0, z: 0.0 }
+    pub fn origin() -> ANoCopyOrClonePoint {
+        ANoCopyOrClonePoint { x: 0.0, y: 0.0, z: 0.0 }
     }
 }
 
@@ -240,8 +240,8 @@ impl A_NoCopyOrClonePoint {
 /// If you don't do anything, the item will be moved on assignment:
 ///
 /// ```rust,ignore
-/// # use show_notes::e019::B_JustClonePoint;
-/// let a_point = B_JustClonePoint::origin();
+/// # use show_notes::e019::BJustClonePoint;
+/// let a_point = BJustClonePoint::origin();
 /// let cloned_point = a_point;  // <- moves the value
 /// println!("{:?}", a_point);  // <- compile error!
 /// println!("{:?}", cloned_point);
@@ -258,64 +258,64 @@ impl A_NoCopyOrClonePoint {
 /// 6 | println!("{:?}", a_point);  // <- compile error!
 /// |                  ^^^^^^^ value used here after move
 /// |
-/// = note: move occurs because `a_point` has type `show_notes::e019::B_JustClonePoint`, which does not implement the `Copy` trait
+/// = note: move occurs because `a_point` has type `show_notes::e019::BJustClonePoint`, which does not implement the `Copy` trait
 /// ```
 ///
 ///
 /// But you can manually call the `clone` method, and it will work:
 ///
 /// ```rust
-/// # use show_notes::e019::B_JustClonePoint;
-/// let a_point = B_JustClonePoint::origin();
+/// # use show_notes::e019::BJustClonePoint;
+/// let a_point = BJustClonePoint::origin();
 /// let cloned_point = a_point.clone();
 /// println!("{:?}", a_point);  // <- not a problem
 /// println!("{:?}", cloned_point);
 /// ```
 #[derive(Clone,Debug)]
-pub struct B_JustClonePoint {
+pub struct BJustClonePoint {
     x: f64,
     y: f64,
     z: f64,
 }
 
-impl B_JustClonePoint {
-    pub fn origin() -> B_JustClonePoint {
-        B_JustClonePoint { x: 0.0, y: 0.0, z: 0.0 }
+impl BJustClonePoint {
+    pub fn origin() -> BJustClonePoint {
+        BJustClonePoint { x: 0.0, y: 0.0, z: 0.0 }
     }
 }
 
 
-/// A struct with identical behavior to `A_NoCopyOrClonePoint`, except with `Copy`.
+/// A struct with identical behavior to `ANoCopyOrClonePoint`, except with `Copy`.
 ///
 /// Note that we have `Clone` as well as `Copy` here---we have to, since
 /// `Clone` is a supertrait for `Copy`.
 ///
 /// # Examples
 ///
-/// Note that this is just like the non-compiling example in [`A_NoCopyOrClonePoint`], but because
-/// `C_CopyPoint` implements `Copy`, the line which previously caused a compile
+/// Note that this is just like the non-compiling example in [`ANoCopyOrClonePoint`], but because
+/// `CCopyPoint` implements `Copy`, the line which previously caused a compile
 /// error now works without any issue.
 ///
 /// ```rust
-/// # use show_notes::e019::C_CopyPoint;
-/// let a_point = C_CopyPoint::origin();
+/// # use show_notes::e019::CCopyPoint;
+/// let a_point = CCopyPoint::origin();
 /// let copied_point = a_point;
 /// println!("{:?}", a_point);  // <- not a problem
 /// println!("{:?}", copied_point)
 /// ```
 ///
-/// [`A_NoCopyOrClonePoint`]: /show_notes/e019/struct.A_NoCopyOrClonePoint.html
+/// [`ANoCopyOrClonePoint`]: /show_notes/e019/struct.ANoCopyOrClonePoint.html
 #[derive(Clone,Copy,Debug)]
-pub struct C_CopyPoint {
+pub struct CCopyPoint {
     x: f64,
     y: f64,
     z: f64,
 }
 
-impl C_CopyPoint {
+impl CCopyPoint {
     /// Generate a point at 0, 0, 0
-    pub fn origin() -> C_CopyPoint {
-        C_CopyPoint { x: 0.0, y: 0.0, z: 0.0 }
+    pub fn origin() -> CCopyPoint {
+        CCopyPoint { x: 0.0, y: 0.0, z: 0.0 }
     }
 }
 
@@ -326,20 +326,20 @@ impl C_CopyPoint {
 /// 
 /// # Examples
 /// 
-/// We'll reuse the `B_JustClonePoint` since `Cow::Owned` requires that the
+/// We'll reuse the `BJustClonePoint` since `Cow::Owned` requires that the
 /// underlying type implement `Clone`.
 /// 
 /// ```rust
 /// # use std::borrow::Cow;
-/// # use show_notes::e019::{B_JustClonePoint,demonstrate_cow};
-/// let a_point = Cow::Owned(B_JustClonePoint::origin());
+/// # use show_notes::e019::{BJustClonePoint,demonstrate_cow};
+/// let a_point = Cow::Owned(BJustClonePoint::origin());
 /// demonstrate_cow(&a_point);
 /// ```
 /// 
 /// Note that even though `demonstrate_cow` takes a reference to
-/// `B_JustClonePoint`, we can pass it the `Cow` instance; this is where the
+/// `BJustClonePoint`, we can pass it the `Cow` instance; this is where the
 /// `Deref` implementation on `Cow` comes in handy.
-pub fn demonstrate_cow(_point: &B_JustClonePoint) {}
+pub fn demonstrate_cow(_point: &BJustClonePoint) {}
 
 
 /// What if we need a mutable reference to the wrapped type?
@@ -353,8 +353,8 @@ pub fn demonstrate_cow(_point: &B_JustClonePoint) {}
 /// 
 /// ```rust
 /// # use std::borrow::Cow;
-/// # use show_notes::e019::{B_JustClonePoint,demonstrate_mut_cow};
-/// let mut a_point: Cow<B_JustClonePoint> = Cow::Owned(B_JustClonePoint::origin());
+/// # use show_notes::e019::{BJustClonePoint,demonstrate_mut_cow};
+/// let mut a_point: Cow<BJustClonePoint> = Cow::Owned(BJustClonePoint::origin());
 /// demonstrate_mut_cow(a_point.to_mut());
 /// ```
-pub fn demonstrate_mut_cow(_point: &mut B_JustClonePoint) {}
+pub fn demonstrate_mut_cow(_point: &mut BJustClonePoint) {}

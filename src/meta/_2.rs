@@ -1,51 +1,85 @@
-//! Rust 1.20
+//! Two Milestones
 //! 
-//!   - **Date:** August 31, 2017
-//!   - **Subject:** Associated constants, conference season, meetups, and more!
+//!   - **Date:** September 25, 2017
+//!   - **Subject:** Two years and fifty episodes of New Rustacean—time to
+//!     celebrate with stickers and shirts!
 //!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!       + [mp3]
+//!       + [m4a]
+//!       + [ogg]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_20.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_20.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_20.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/meta/_2.mp3
+//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/meta/_2.m4a
+//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/meta/_2.ogg
 //!
-//! <audio style="width: 100%" style="width: 100%" title="News: Rust 1.20" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_20.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_20.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_20.ogg">
+//! <audio style="width: 100%" style="width: 100%" title="Crates You Should Know: Rayon" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/meta/_2.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/meta/_2.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/meta/_2.ogg">
 //! </audio>
 //!
 //!
-//! Links and Notes
-//! ---------------
+//! Links
+//! -----
 //! 
-//! - Rust 1.20
-//!     + [blog post]
-//!     + [changelog]
-//!     + [Associated items RFC] – and see the code for today's show for
-//!       examples of the variants I described on the show!
-//! - [RustConf 2017]
-//! - [RustFest 2017]
-//!     + [registration][rf-reg]
-//! - [Rust Belt Rust 2017]
-//!     + [registration][rbr-reg] (and don't forget to use code `newrustacean` for 20% off!)
-//! - [rustrations.club]
+//! - [JavaScript to Elm]
+//! - [Idris]
+//! - [Elixir]
 //! 
-//! [blog post]: https://blog.rust-lang.org/2017/08/31/Rust-1.20.html
-//! [changelog]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1200-2017-08-31
-//! [Associated items RFC]: https://github.com/rust-lang/rfcs/blob/master/text/0195-associated-items.md
-//! [RustConf 2017]: http://rustconf.com
-//! [RustFest 2017]: http://zurich.rustfest.eu
-//! [rf-reg]: https://ti.to/asquera-event-ug/rustfest-zurich/
-//! [Rust Belt Rust 2017]: http://www.rust-belt-rust.com
-//! [rbr-reg]: https://www.eventbrite.com/e/rust-belt-rust-conference-2017-registration-36237335847
-//! [rustrations.club]: http://rustrations.club
+//! [JavaScript to Elm]: http://jstoelm.com
+//! [Idris]: http://www.idris-lang.org
+//! [Elixir]: http://www.elixir-lang.org
+//! 
+//! ### Shirts
+//! 
+//! [**Get them here!**][shirts] – available till Oct 9, 2017 at 8:00 PM EDT.
+//! 
+//! [shirts]: https://cottonbureau.com/products/new-rustacean-2017
+//! 
+//! <table>
+//!   <thead>
+//!     <tr>
+//!       <th>item/style</th>
+//!       <th style="text-align:center">Women's</th>
+//!       <th style="text-align:center">Men's</th>
+//!     </tr>
+//!   </thead>
+//!   <tr style="text-align: center">
+//!     <td>hoodie</td>
+//!     <td colspan="2" ><img style="max-width: 50%" src="http://cdn.newrustacean.com/images/hoodie.jpg"></td>
+//!   </tr>
+//!   <tr>
+//!     <td>"heavy metal" shirt</td>
+//!     <td><img src="http://cdn.newrustacean.com/images/heavy-metal-women.jpg"></td>
+//!     <td><img src="http://cdn.newrustacean.com/images/heavy-metal-men.jpg"></td>
+//!   </tr>
+//!   <tr>
+//!     <td>"heather white" t-shirt</td>
+//!     <td><img src="http://cdn.newrustacean.com/images/heather-white-women.jpg"></td>
+//!     <td><img src="http://cdn.newrustacean.com/images/heather-white-men.jpg"></td>
+//!   </tr>
+//! </table>
+//! 
+//! ### Stickers
+//! 
+//! <table>
+//!   <thead>
+//!     <tr>
+//!       <th style="text-align:center">Die-cut</th>
+//!       <th style="text-align:center">Circular</th>
+//!     </tr>
+//!   </thead>
+//!   <tr>
+//!     <td><img src="http://cdn.newrustacean.com/images/sticker-die-cut.png"></td>
+//!     <td><img src="http://cdn.newrustacean.com/images/sticker-circular.png"></td>
+//!   </tr>
+//! </table>
 //! 
 //! Sponsors
 //! --------
 //! 
+//!   - Aaron Turon
+//!   - Alexander Payne
 //!   - [Anthony Deschamps]
 //!   - Anthony Scotti
 //!   - Aleksey Pirogov
@@ -61,13 +95,15 @@
 //!   - Dan Abrams
 //!   - [Daniel Collin]
 //!   - [David W. Allen]
+//!   - David Hewson
 //!   - [Derek Morr]
 //!   - Eugene Bulkin
 //!   - [Henri Sivonen]
+//!   - [Ian Jones]
 //!   - [Jakub "Limeth" Hlusička]
 //!   - James Cooper
+//!   - Jerome Froelich
 //!   - Jonathan Turner
-//!   - Jordan Henderson
 //!   - [Jupp Müller]
 //!   - Justin Ossevoort
 //!   - [Karl Hobley]
@@ -76,7 +112,9 @@
 //!   - Luca Schmid
 //!   - Masashi Fujita
 //!   - Matt Rudder
+//!   - Matthew Brenner
 //!   - Matthew Piziak
+//!   - Matthias Ruszala
 //!   - [Max Jacobson]
 //!   - [Messense Lv]
 //!   - Micael Bergeron
@@ -91,6 +129,7 @@
 //!   - Randy MacLeod
 //!   - Raph Levien
 //!   - reddraggone9
+//!   - [Ryan Blecher]
 //!   - [Sebastián Ramírez Magrí]
 //!   - Simon G.
 //!   - Steven Murawksi
@@ -102,6 +141,7 @@
 //!   - Vesa Kaihlavirta
 //!   - Warren Harper
 //!   - [William Roe]
+//!   - Zachary Snyder
 //!   - Zaki
 //!
 //! [Anthony Deschamps]: https://github.com/adeschamps
@@ -113,6 +153,7 @@
 //! [David W. Allen]: http://GitHub.com/DataRiot
 //! [Derek Morr]: https://twitter.com/derekmorr
 //! [Henri Sivonen]: https://hsivonen.fi/
+//! [Ian Jones]: https://www.ianmjones.com/
 //! [Jakub "Limeth" Hlusička]: https://github.com/Limeth
 //! [Jupp Müller]: https://de.linkedin.com/in/juppm
 //! [Karl Hobley]: https://github.com/kaedroho/
@@ -123,6 +164,7 @@
 //! [Pascal Hertleif]: https://pascalhertleif.de/
 //! [Patrick O'Doherty]: https://twitter.com/patrickod
 //! [Philipp Keller]: https://twitter.com/hansapla
+//! [Ryan Blecher]: http://notryanb.github.io/
 //! [Sebastián Ramírez Magrí]: https://www.twitter.com/sebasmagri
 //! [Stuart Hinson]: http://stuarth.github.io/
 //! [William Roe]: http://willroe.me
@@ -149,37 +191,3 @@
 //!   - Chris Krycho
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
-
-trait Foo {
-  const FOO: u32 = 0;
-}
-
-struct _Bar {}
-
-impl _Bar {
-  const _BAR: u32 = 50;
-}
-
-impl Foo for _Bar {}
-
-enum _Baz {}
-
-impl _Baz {
-  const _BAZ: u32 = 100;
-}
-
-impl Foo for _Baz {}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        // assert_eq!(Foo::FOO, 0);
-        assert_eq!(_Bar::_BAR, 50);
-        assert_eq!(_Bar::FOO, 0);
-        assert_eq!(_Baz::_BAZ, 100);
-        assert_eq!(_Baz::FOO, 0); 
-    }
-}

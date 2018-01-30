@@ -1,47 +1,49 @@
-//! Rust 1.20
+//! Rayon
 //! 
-//!   - **Date:** August 31, 2017
-//!   - **Subject:** Associated constants, conference season, meetups, and more!
+//!   - **Date:** September 16, 2017
+//!   - **Subject:** Safe, threaded, parallel code in Rust!
 //!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!       + [mp3]
+//!       + [m4a]
+//!       + [ogg]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_20.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_20.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_20.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk/rayon.mp3
+//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk/rayon.m4a
+//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk/rayon.ogg
 //!
-//! <audio style="width: 100%" style="width: 100%" title="News: Rust 1.20" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_20.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_20.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_20.ogg">
+//! <audio style="width: 100%" style="width: 100%" title="Crates You Should Know: Rayon" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk/rayon.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk/rayon.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk/rayon.ogg">
 //! </audio>
 //!
 //!
 //! Links and Notes
 //! ---------------
 //! 
-//! - Rust 1.20
-//!     + [blog post]
-//!     + [changelog]
-//!     + [Associated items RFC] – and see the code for today's show for
-//!       examples of the variants I described on the show!
-//! - [RustConf 2017]
-//! - [RustFest 2017]
-//!     + [registration][rf-reg]
-//! - [Rust Belt Rust 2017]
-//!     + [registration][rbr-reg] (and don't forget to use code `newrustacean` for 20% off!)
-//! - [rustrations.club]
+//! ### Rayon
 //! 
-//! [blog post]: https://blog.rust-lang.org/2017/08/31/Rust-1.20.html
-//! [changelog]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1200-2017-08-31
-//! [Associated items RFC]: https://github.com/rust-lang/rfcs/blob/master/text/0195-associated-items.md
-//! [RustConf 2017]: http://rustconf.com
-//! [RustFest 2017]: http://zurich.rustfest.eu
-//! [rf-reg]: https://ti.to/asquera-event-ug/rustfest-zurich/
-//! [Rust Belt Rust 2017]: http://www.rust-belt-rust.com
-//! [rbr-reg]: https://www.eventbrite.com/e/rust-belt-rust-conference-2017-registration-36237335847
-//! [rustrations.club]: http://rustrations.club
+//! - [Source]
+//! - [Crate]
+//! - [Docs]
+//! - [README]
+//! - [blog post]
+//!
+//! [Source]: https://github.com/nikomatsakis/rayon
+//! [Crate]: https://crates.io/crates/rayon
+//! [Docs]: https://docs.rs/rayon/
+//! [README]: https://github.com/nikomatsakis/rayon/blob/master/README.md
+//! [blog post]: http://smallcultfollowing.com/babysteps/blog/2015/12/18/rayon-data-parallelism-in-rust/
+//! 
+//! ### Other things referenced on the show
+//! 
+//! - [Request for Explanation #10]
+//! - [e016: `RefCell`s and code smells][e016] – on mutability
+//! - ["embarassingly parallel"]
+//! 
+//! [Request for Explanation #10]: https://request-for-explanation.github.io/podcast/ep10-two-paths-diverged-in-a-yellow-wood/index.html
+//! [e016]: http://www.newrustacean.com/show_notes/e016/index.html
+//! ["embarassingly parallel"]: https://en.wikipedia.org/wiki/Embarrassingly_parallel
 //! 
 //! Sponsors
 //! --------
@@ -66,8 +68,8 @@
 //!   - [Henri Sivonen]
 //!   - [Jakub "Limeth" Hlusička]
 //!   - James Cooper
+//!   - Jerome Froelich
 //!   - Jonathan Turner
-//!   - Jordan Henderson
 //!   - [Jupp Müller]
 //!   - Justin Ossevoort
 //!   - [Karl Hobley]
@@ -77,6 +79,7 @@
 //!   - Masashi Fujita
 //!   - Matt Rudder
 //!   - Matthew Piziak
+//!   - Matthias Ruszala
 //!   - [Max Jacobson]
 //!   - [Messense Lv]
 //!   - Micael Bergeron
@@ -149,37 +152,3 @@
 //!   - Chris Krycho
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
-
-trait Foo {
-  const FOO: u32 = 0;
-}
-
-struct _Bar {}
-
-impl _Bar {
-  const _BAR: u32 = 50;
-}
-
-impl Foo for _Bar {}
-
-enum _Baz {}
-
-impl _Baz {
-  const _BAZ: u32 = 100;
-}
-
-impl Foo for _Baz {}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        // assert_eq!(Foo::FOO, 0);
-        assert_eq!(_Bar::_BAR, 50);
-        assert_eq!(_Bar::FOO, 0);
-        assert_eq!(_Baz::_BAZ, 100);
-        assert_eq!(_Baz::FOO, 0); 
-    }
-}

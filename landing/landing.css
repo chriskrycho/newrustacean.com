@@ -324,12 +324,20 @@ footer a:hover {
   color: RGBA(240, 80, 34, 1);
 }
 
-.sponsors-list__sponsor-dates {
-  font-style: italic;
+.sponsors-list__sponsor-name {
+  display: inline-block;
+  width: 100%;
 }
 
-.sponsors-list__sponsor::before,
-.sponsors-list__sponsor::after {
+.sponsors-list__sponsor-name::before,
+.sponsors-list__sponsor-name::after {
   content: '✨';
   padding: 0 0.5em;
 }
+
+.sponsors-list__sponsor-dates {
+  font-style: italic;
+  display: inline-block;
+  width: 100%;
+}
+    

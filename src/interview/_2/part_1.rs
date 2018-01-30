@@ -32,38 +32,52 @@
 //! -----
 //!
 //!   - Past work:
+//!   
 //!       + [GIMP]
 //!       + [GTK]
 //!       + [GhostScript]
 //!       + [Google Web Fonts]
 //!       + [font-rs]
+//!       
 //!   - Current projects:
+//!   
 //!       + [pulldown-cmark]
 //!       + [Xi Editor]
+//!       
 //!   - [fuzz testing]
+//!   
 //!   - [sanitizers]
+//!   
 //!   - [FreeType]
+//!   
 //!   - [HarfBuzz]
+//!   
 //!   - [ICU]
+//!   
 //!   - Ropes
+//!   
 //!       + [Wikipedia summary]
 //!       + [original paper]
 //!   - ["log n operation"], or *O(log n)*
+//!   
 //!       + [Big O notation]
 //!   - Rust:
+//!   
 //!       + [`Arc`]
 //!       + [`RefCell`]
 //!       + [`Borrow`]
 //!       + [`AsRef`]
-//!    - Rust libraries
+//!   - Rust libraries
+//!   
 //!       + Crossbeam: [source][Crossbeam source] | [docs][Crossbeam docs]
 //!       + Rayon: [source][Rayon source] | [docs][Rayon docs]
-//!    - [Unix philosophy]
+//!       
+//!   - [Unix philosophy]
 //!
-//!      > The Unix philosophy emphasizes building simple, short, clear,
-//!      > modular, and extensible code that can be easily maintained and
-//!      > repurposed by developers other than its creators. The Unix philosophy
-//!      > favors composability as opposed to monolithic design.
+//!     > The Unix philosophy emphasizes building simple, short, clear,
+//!     > modular, and extensible code that can be easily maintained and
+//!     > repurposed by developers other than its creators. The Unix philosophy
+//!     > favors composability as opposed to monolithic design.
 //!
 //! [GIMP]: http://www.gimp.org
 //! [GTK]: http://gtk.org
