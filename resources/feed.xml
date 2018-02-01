@@ -4,14 +4,14 @@
         <title>New Rustacean – learning the Rust programming language</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.5.7(3052); Mac OS X Version 10.13.3 (Build 17D47) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.5.8(3057); Mac OS X Version 10.13.3 (Build 17D47) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Wed, 31 Jan 2018 20:37:49 -0700</pubDate>
-        <lastBuildDate>Wed, 31 Jan 2018 20:37:50 -0700</lastBuildDate>
+        <pubDate>Thu, 01 Feb 2018 07:51:47 -0700</pubDate>
+        <lastBuildDate>Thu, 01 Feb 2018 07:51:48 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -147,11 +147,11 @@
 </ul>
 ]]></description>
             <pubDate>Wed, 31 Jan 2018 20:45:00 -0700</pubDate>
-            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e022.mp3" length="19013632" type="audio/mpeg"/>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e022.mp3" length="19863552" type="audio/mpeg"/>
             <guid isPermaLink="false">8F9D3A8C-9236-4FCD-ADAB-5AACEA0EAA8E</guid>
             <itunes:subtitle>The “marker traits” that Rust uses for safe concurrency.</itunes:subtitle>
             <itunes:summary>The “marker traits” that Rust uses for safe concurrency.</itunes:summary>
-            <itunes:duration>19:43</itunes:duration>
+            <itunes:duration>20:36</itunes:duration>
             <itunes:episodeType>full</itunes:episodeType>
         </item>
         <item>

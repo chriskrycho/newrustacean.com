@@ -2,6 +2,8 @@ Full script for the episode.
 
 # e022: `Send` and `Sync`
 
+**Note:** In the original (recorded) version of the episode, I said "deadlock" everywhere I meant "data race." Throughout the transcript, I've made the substitution accordingly, but if you're listening to the episode, you'll have to do it mentally. Sorry about that!
+
 ## Intro
 
 Hello, I'm Chris Krycho and this is New Rustacean: a show about the Rust Programming Language and the people who use it. This is episode 22: TODO
@@ -31,7 +33,7 @@ In the standard library, though, there are four of these market traits: `Copy`, 
 There are two fundamental things you need to understanding about `Send` and `Sync`.
 
 1. They are automatically implemented for every type they can be by the compiler—they have default implementations, and you have to explicitly opt _out_ of those if you’re somehow doing unsafe behavior yourself. For example, the `Rc` type expressly indicates in its own type definition that it is _not_ `Send` or `Sync`.
-2. Closely related to that first point: `Send` and `Sync` are _unsafe traits_. This means that you cannot implement them “safely” – and that’s fine because your safe types will basically get them for free. You need to write the `unsafe` implementations of any `unsafe` type machinery you intend to be `Send` and `Sync` _very_ carefully, to guarantee that the relevant invariants hold (i.e. that you can’t get deadlocks etc.).
+2. Closely related to that first point: `Send` and `Sync` are _unsafe traits_. This means that you cannot implement them “safely” – and that’s fine because your safe types will basically get them for free. You need to write the `unsafe` implementations of any `unsafe` type machinery you intend to be `Send` and `Sync` _very_ carefully, to guarantee that the relevant invariants hold (i.e. that you can’t get data races etc.).
 
 We’re not going to dig further into the details of _how_ you set up those invariants on your types today—it really only matters when you’re building your own implementations which are necessarily in the “trust me, I know what I’m doing category” of `unsafe` code, because they’re _unsafe traits_. Instead, we’re just going to talk about what the two traits are and then look at how we can put them to use together. However, you should note that if you _do_ need to implement a new, low-level type which is `Send` or `Sync`, the responsibility is all on you to get the implementation right, as it is with `unsafe` code in general. (We’ll cover `unsafe` probably in early April.)
 
@@ -83,7 +85,7 @@ We’d do the same with the others, and push them into some other container to l
 
 What’s interesting here isn’t so much the `std::thread` APIs – though it’s nice to have at least mentioned them explicitly on the show now! – as it is the fact that all of this can be _guaranteed_ to be thread-safe by the compiler. If we tried to hand over a mutable reference to, say, the `Vec` itself on each pass through, we’d get the usual Rust complaints about there being more than one mutable reference at the same time – no different than any other context!
 
-But if for some reason (and there are lots of times this might come up!) you were wrapping each Markdown buffer with a type which was thread-unsafe – say, a `Cell` or `RefCell`, with their _non-atomic interior mutability_ – the Rust compiler would say, “NOPE. You can and will end up surprising yourself in a painful way with those via deadlocks or overwriting mutable data or something like that, so you’re not allowed to do it.” When that circumstance comes up, you just have to switch to another strategy – if you need interior mutability, to something like `Mutex` or `RWLock` or one of the `Atomic` types if you’re getting really down into the nitty-gritty.
+But if for some reason (and there are lots of times this might come up!) you were wrapping each Markdown buffer with a type which was thread-unsafe – say, a `Cell` or `RefCell`, with their _non-atomic interior mutability_ – the Rust compiler would say, “NOPE. You can and will end up surprising yourself in a painful way with those via data races or overwriting mutable data or something like that, so you’re not allowed to do it.” When that circumstance comes up, you just have to switch to another strategy – if you need interior mutability, to something like `Mutex` or `RWLock` or one of the `Atomic` types if you’re getting really down into the nitty-gritty.
 
 ## Outro
 
