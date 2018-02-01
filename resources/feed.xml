@@ -4,14 +4,14 @@
         <title>New Rustacean – learning the Rust programming language</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.5.7(3052); Mac OS X Version 10.13.2 (Build 17C205) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.5.7(3052); Mac OS X Version 10.13.3 (Build 17D47) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sun, 21 Jan 2018 16:25:34 -0700</pubDate>
-        <lastBuildDate>Sun, 21 Jan 2018 16:25:34 -0700</lastBuildDate>
+        <pubDate>Wed, 31 Jan 2018 20:37:49 -0700</pubDate>
+        <lastBuildDate>Wed, 31 Jan 2018 20:37:50 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -40,6 +40,120 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>e023: Send and Sync</title>
+            <link>http://newrustacean.com/show_notes/e022/</link>
+            <description><![CDATA[<p>The “marker traits” that Rust uses for safe concurrency.</p>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aaron Turon</li>
+<li>Alexander Payne</li>
+<li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
+<li>Anthony Scotti</li>
+<li>Aleksey Pirogov</li>
+<li>Andreas Fischer</li>
+<li>Andrew Thompson</li>
+<li>Austin LeSure</li>
+<li><a href="https://github.com/behnam">Behnam Esfahbod</a></li>
+<li>Benjamin Wasty</li>
+<li>Brent Vatne</li>
+<li>Chap Lovejoy</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li>Chris Jones</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="http://github.com/anxiousmodernman">Coleman McFarland</a></li>
+<li>Dan Abrams</li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://6ftdan.com/">Daniel P. Clark</a></li>
+<li><a href="http://GitHub.com/DataRiot">David W. Allen</a></li>
+<li>David Hewson</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Eugene Bulkin</li>
+<li>Guido Hoermann</li>
+<li>[Hans Fjällemark]</li>
+<li>Hendrik Sollich</li>
+<li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
+<li><a href="https://www.ianmjones.com/">Ian Jones</a></li>
+<li><a href="https://github.com/Limeth">Jakub “Limeth” Hlusička</a></li>
+<li>James Cooper</li>
+<li>Jerome Froelich</li>
+<li><a href="http://www.cindur.com/">John Rudnick</a></li>
+<li>Jonathan Turner</li>
+<li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li>
+<li>Justin Ossevoort</li>
+<li><a href="https://github.com/kaedroho/">Karl Hobley</a></li>
+<li>Keith Gray</li>
+<li>Kilian Rault</li>
+<li>Luca Schmid</li>
+<li>Masashi Fujita</li>
+<li>Matt Rudder</li>
+<li>Matthew Brenner</li>
+<li>Matthias Ruszala</li>
+<li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li>
+<li><a href="https://github.com/messense">Messense Lv</a></li>
+<li>Micael Bergeron</li>
+<li><a href="http://influential.co/">Nathan Sculli</a></li>
+<li><a href="https://github.com/nastevens">Nick Stevens</a></li>
+<li><a href="http://oluseyi.info/">Oluseyi Sonaiya</a></li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li><a href="https://twitter.com/patrickod">Patrick O’Doherty</a></li>
+<li>[Paul Naranja]</li>
+<li>Peter Tillemans</li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Randy MacLeod</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
+<li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
+<li>Shane Utt</li>
+<li>Simon G.</li>
+<li>Steven Murawksi</li>
+<li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
+<li>Tim Brooks</li>
+<li>Tom Prince</li>
+<li>Ty Overby</li>
+<li>Tyler Harper</li>
+<li>Vesa Kaihlavirta</li>
+<li>Victor Kruger</li>
+<li>Will Greenberg</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+<li>Yaacov Finkelman</li>
+<li>Zachary Snyder</li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Wed, 31 Jan 2018 20:45:00 -0700</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e022.mp3" length="19013632" type="audio/mpeg"/>
+            <guid isPermaLink="false">8F9D3A8C-9236-4FCD-ADAB-5AACEA0EAA8E</guid>
+            <itunes:subtitle>The “marker traits” that Rust uses for safe concurrency.</itunes:subtitle>
+            <itunes:summary>The “marker traits” that Rust uses for safe concurrency.</itunes:summary>
+            <itunes:duration>19:43</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
+        </item>
         <item>
             <title>Interview – Diesel 1.0, with Sean Griffin – Part 2</title>
             <link>http://newrustacean.com/show_notes/interview/diesel_1_0/part_2/</link>
