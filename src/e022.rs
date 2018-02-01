@@ -1,4 +1,4 @@
-//! `Sync` and `Send`
+//! `Send` and `Sync`
 //!
 //!   - **Date:** January 31, 2018
 //!   - **Subject:** The “marker traits” that Rust uses for safe concurrency.
@@ -11,14 +11,11 @@
 //! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e022.mp3
 //! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e022.ogg
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Interview: Diesel 1.0, with Sean Griffin, Part 2" controls preload=metadata>
+//! <audio style="width: 100%" style="width: 100%" title="e022: Send and Sync" controls preload=metadata>
 //!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e022.m4a">
 //!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e022.mp3">
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e022.ogg">
 //! </audio>
-//!
-//!
-//! ## Show notes
 //!
 //!
 //! Sponsors
