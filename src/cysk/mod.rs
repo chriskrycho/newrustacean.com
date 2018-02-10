@@ -5,3 +5,4 @@ pub mod _2;
 pub mod _3;
 pub mod rocket;
 pub mod rayon;
+pub mod serde;
