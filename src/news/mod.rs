@@ -8,3 +8,4 @@ pub mod _3;
 pub mod rust_1_20;
 pub mod rust_1_21_1_22;
 pub mod rust_1_23;
+pub mod rust_1_24;
