@@ -42,7 +42,7 @@
 //! - ["embarassingly parallel"]
 //! 
 //! [Request for Explanation #10]: https://request-for-explanation.github.io/podcast/ep10-two-paths-diverged-in-a-yellow-wood/index.html
-//! [e016]: http://www.newrustacean.com/show_notes/e016/index.html
+//! [e016]: https://www.newrustacean.com/show_notes/e016/index.html
 //! ["embarassingly parallel"]: https://en.wikipedia.org/wiki/Embarrassingly_parallel
 //! 
 //! Sponsors

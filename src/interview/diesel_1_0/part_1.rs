@@ -42,7 +42,7 @@
 //! - [Custom derive and procedural macros]
 //!
 //!
-//! [sean-1]: http://www.newrustacean.com/show_notes/interview/_1/index.html
+//! [sean-1]: https://www.newrustacean.com/show_notes/interview/_1/index.html
 //! [IRC]: https://en.wikipedia.org/wiki/Internet_Relay_Chat
 //! [Slack]: https://slack.com
 //! [Gitter]: https://gitter.im

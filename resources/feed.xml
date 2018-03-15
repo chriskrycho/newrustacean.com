@@ -20,7 +20,7 @@
             <height>144</height>
             <description>A podcast about learning the Rust programming language—from scratch!</description>
         </image>
-        <atom:link href="http://www.newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://www.newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
         <atom:link href="https://flattr.com/submit/auto?user_id=chriskrycho&amp;url=https://flattr.com/profile/chriskrycho&amp;title=Podcaster,%20software%20developer,%20writer,%20theologian&amp;description=I%20podcast:%0A%0A-%20%5BWinning%20Slowly%5D(//www.winningslowly.org),%20with%20Stephen%20Carradini,%20on%20technology,%20religion,%20ethics,%20and%20art%0A-%20%5BNew%20Rustacean%5D(//www.newrustacean.com)%20%E2%80%93%20about%20learning%20the%20Rust%20programming%20language%0A-%20%5BSap.py%5D(//www.sap-py.com)%20with%20my%20wife,%20Jaimie%20Krycho%0A-%20%5BRun%20With%20Me%5D(//runwith.chriskrycho.com)%20%E2%80%93%20a%203%E2%80%935%20minute%20%22microcast%22%20about%20running,%20recorded%20while%20running%0A%0AI%20write%20on%20art,%20theology,%20and%20technology%20at%20%5Bchriskrycho.com%5D(//www.chriskrycho.com).&amp;language=en_GB&amp;category=audio" rel="payment" type="text/html"/>
         <itunes:author>Chris Krycho</itunes:author>
         <itunes:subtitle>Learning the Rust programming language</itunes:subtitle>
@@ -528,7 +528,7 @@
             <description><![CDATA[<p>Growing Diesel's community, self-imposed technical challenges, and some of the ways Diesel has contributed to the Rust ecosystem.</p>
 <h2 id="show-notes">Show notes</h2>
 <ul>
-<li><a href="http://www.newrustacean.com/show_notes/interview/_1/index.html">Sean’s previous appearance on the show</a></li>
+<li><a href="https://www.newrustacean.com/show_notes/interview/_1/index.html">Sean’s previous appearance on the show</a></li>
 <li>Chat app options:
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC</a></li>
@@ -673,7 +673,7 @@
 <li><a href="https://github.com/rust-lang/rust/issues/44229">rustdoc tracking issue</a></li>
 <li><a href="https://blog.guillaume-gomez.fr/articles/2017-09-18+New+rustdoc+rendering+common+errors">rustdoc blog post</a></li>
 <li><a href="https://github.com/rust-lang/rust/pull/45380)">not copying function arguments</a></li>
-<li><a href="http://www.newrustacean.com/show_notes/news/_1/index.html">the first news episode</a></li>
+<li><a href="https://www.newrustacean.com/show_notes/news/_1/index.html">the first news episode</a></li>
 </ul></li>
 <li>the <code>impl</code> period
 <ul>
@@ -684,7 +684,7 @@
 <li><a href="https://www.mozilla.org/en-US/firefox/quantum/">Firefox Quantum</a>
 <ul>
 <li><a href="https://blog.rust-lang.org/2017/11/14/Fearless-Concurrency-In-Firefox-Quantum.html">“Fearless Concurrency in Firefox Quantum”</a></li>
-<li><a href="http://www.newrustacean.com/show_notes/e015/index.html" title="Not dumb pointers">e015: Not dumb pointers.</a></li>
+<li><a href="https://www.newrustacean.com/show_notes/e015/index.html" title="Not dumb pointers">e015: Not dumb pointers.</a></li>
 </ul></li>
 <li>WebAssembly
 <ul>
@@ -1683,7 +1683,7 @@
 <li><a href="https://request-for-explanation.github.io/podcast/ep10-two-paths-diverged-in-a-yellow-wood/index.html">Request for Explanation #10</a></li>
 <li>[e016: <code>RefCell</code>s and code smells] – on mutability</li>
 <li>[&quot;embarassingly parallel&quot;]</li>
-</ul><p>http://www.newrustacean.com/show_notes/e016/index.html [&quot;embarassingly parallel&quot;]: https://en.wikipedia.org/wiki/Embarrassingly_parallel</p><h2 id="sponsors">Sponsors</h2><ul>
+</ul><p>https://www.newrustacean.com/show_notes/e016/index.html [&quot;embarassingly parallel&quot;]: https://en.wikipedia.org/wiki/Embarrassingly_parallel</p><h2 id="sponsors">Sponsors</h2><ul>
 <li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
 <li>Anthony Scotti</li>
 <li>Aleksey Pirogov</li>
@@ -1786,7 +1786,7 @@
         <item>
             <title>Bonus 9: Open source is mostly just normal people</title>
             <link>http://newrustacean.com/show_notes/bonus/_9/</link>
-            <description><![CDATA[<p>My experience with ember-cli-typescript as an example: we're all just people muddling along and doing our best.</p><h2 id="links-and-notes">Links and Notes</h2><ul><li><a href="https://github.com/typed-ember/ember-cli-typescript">ember-cli-typescript</a></li><li><a href="http://bikeshed.fm/118">The Bike Shed #118: Nonsense In, Nonsense Out</a></li><li>Sean's appearance on New Rustacean: <a href="http://www.newrustacean.com/show_notes/interview/_1/index.html">Interview 1</a></li></ul><h2 id="sponsors">Sponsors</h2><ul><li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li><li>Anthony Scotti</li><li>Aleksey Pirogov</li><li>Andreas Fischer</li><li>Andrew Thompson</li><li><a href="https://github.com/behnam">Behnam Esfahbod</a></li><li>Benjamin Wasty</li><li>Brent Vatne</li><li><a href="https://charlieegan3.com">Charlie Egan</a></li><li>Chris Jones</li><li><a href="http://home.red-oxide.org/">Chris Palmer</a></li><li><a href="http://blog.cgiffard.com">Christopher Giffard</a></li><li>Dan Abrams</li><li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li><li>[David W. Allen]</li><li><a href="https://twitter.com/derekmorr">Derek Morr</a></li><li>Eugene Bulkin</li><li><a href="https://hsivonen.fi/">Henri Sivonen</a></li><li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li><li>James Cooper</li><li>Jonathan Turner</li><li>Jordan Henderson</li><li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li><li>Justin Ossevoort</li><li><a href="https://github.com/kaedroho/">Karl Hobley</a></li><li>Keith Gray</li><li>Kilian Rault</li><li>Luca Schmid</li><li>Matt Rudder</li><li>Matthew Piziak</li><li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li><li><a href="https://github.com/messense">Messense Lv</a></li><li>Micael Bergeron</li><li>Oliver Uvman - see the <a href="https://www.patreon.com/tomaka/">Tomaka Patreon</a> and <a href="http://arewegameyet.com/">arewegameyet.com</a></li><li>Ovidiu Curcan</li><li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li><li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li><li>Peter Tillemans</li><li>Philipp Keller</li><li>Ralph Giles (&quot;rillian&quot;)</li><li>Randy MacLeod</li><li>Raph Levien</li><li>Raphael</li><li><a href="https://github.com/rtsuk">Rob Tsuk</a></li><li>reddraggone9</li><li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li><li>Steven Murawksi</li><li><a href="http://stuarth.github.io/">Stuart Hinson</a></li><li>Tim Brooks</li><li>Tom Prince</li><li>Ty Overby</li><li>Tyler Harper</li><li>Vesa Kaihlavirta</li><li>Warren Harper</li><li><a href="http://willroe.me">William Roe</a></li><li>Zaki</li></ul><p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p><h3 id="become-a-sponsor">Become a sponsor</h3><ul><li><a href="https://www.patreon.com/newrustacean">Patreon</a></li><li><a href="https://venmo.com/chriskrycho">Venmo</a></li><li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li><li><a href="https://cash.me/$chriskrycho">Cash.me</a></li><li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li><li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li></ul><h2 id="contact">Contact</h2><ul><li>New Rustacean:<ul><li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li><li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li></ul></li><li>Chris Krycho<ul><li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li><li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li></ul></li></ul>]]></description>
+            <description><![CDATA[<p>My experience with ember-cli-typescript as an example: we're all just people muddling along and doing our best.</p><h2 id="links-and-notes">Links and Notes</h2><ul><li><a href="https://github.com/typed-ember/ember-cli-typescript">ember-cli-typescript</a></li><li><a href="http://bikeshed.fm/118">The Bike Shed #118: Nonsense In, Nonsense Out</a></li><li>Sean's appearance on New Rustacean: <a href="https://www.newrustacean.com/show_notes/interview/_1/index.html">Interview 1</a></li></ul><h2 id="sponsors">Sponsors</h2><ul><li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li><li>Anthony Scotti</li><li>Aleksey Pirogov</li><li>Andreas Fischer</li><li>Andrew Thompson</li><li><a href="https://github.com/behnam">Behnam Esfahbod</a></li><li>Benjamin Wasty</li><li>Brent Vatne</li><li><a href="https://charlieegan3.com">Charlie Egan</a></li><li>Chris Jones</li><li><a href="http://home.red-oxide.org/">Chris Palmer</a></li><li><a href="http://blog.cgiffard.com">Christopher Giffard</a></li><li>Dan Abrams</li><li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li><li>[David W. Allen]</li><li><a href="https://twitter.com/derekmorr">Derek Morr</a></li><li>Eugene Bulkin</li><li><a href="https://hsivonen.fi/">Henri Sivonen</a></li><li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li><li>James Cooper</li><li>Jonathan Turner</li><li>Jordan Henderson</li><li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li><li>Justin Ossevoort</li><li><a href="https://github.com/kaedroho/">Karl Hobley</a></li><li>Keith Gray</li><li>Kilian Rault</li><li>Luca Schmid</li><li>Matt Rudder</li><li>Matthew Piziak</li><li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li><li><a href="https://github.com/messense">Messense Lv</a></li><li>Micael Bergeron</li><li>Oliver Uvman - see the <a href="https://www.patreon.com/tomaka/">Tomaka Patreon</a> and <a href="http://arewegameyet.com/">arewegameyet.com</a></li><li>Ovidiu Curcan</li><li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li><li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li><li>Peter Tillemans</li><li>Philipp Keller</li><li>Ralph Giles (&quot;rillian&quot;)</li><li>Randy MacLeod</li><li>Raph Levien</li><li>Raphael</li><li><a href="https://github.com/rtsuk">Rob Tsuk</a></li><li>reddraggone9</li><li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li><li>Steven Murawksi</li><li><a href="http://stuarth.github.io/">Stuart Hinson</a></li><li>Tim Brooks</li><li>Tom Prince</li><li>Ty Overby</li><li>Tyler Harper</li><li>Vesa Kaihlavirta</li><li>Warren Harper</li><li><a href="http://willroe.me">William Roe</a></li><li>Zaki</li></ul><p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p><h3 id="become-a-sponsor">Become a sponsor</h3><ul><li><a href="https://www.patreon.com/newrustacean">Patreon</a></li><li><a href="https://venmo.com/chriskrycho">Venmo</a></li><li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li><li><a href="https://cash.me/$chriskrycho">Cash.me</a></li><li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li><li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li></ul><h2 id="contact">Contact</h2><ul><li>New Rustacean:<ul><li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li><li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li></ul></li><li>Chris Krycho<ul><li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li><li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li></ul></li></ul>]]></description>
             <pubDate>Mon, 14 Aug 2017 07:00:00 -0600</pubDate>
             <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_9.mp3" length="10284163" type="audio/mpeg"/>
             <guid isPermaLink="false">CC87FE1E-0E80-4B8F-B022-892E25C3E260</guid>
@@ -2807,8 +2807,8 @@
 </ul></li>
 <li><p>Previous episodes on traits:</p>
 <ul>
-<li><p><a href="http://www.newrustacean.com/show_notes/e008/">e008: Just like something else</a></p></li>
-<li><p><a href="http://www.newrustacean.com/show_notes/e009/">e009: Composing a Rustic tune</a></p></li>
+<li><p><a href="https://www.newrustacean.com/show_notes/e008/">e008: Just like something else</a></p></li>
+<li><p><a href="https://www.newrustacean.com/show_notes/e009/">e009: Composing a Rustic tune</a></p></li>
 </ul></li>
 </ul>
 <h2 id="sponsors">Sponsors</h2>
@@ -3001,10 +3001,10 @@
 <li><a href="https://github.com/getsentry/sentry-cli/">sentry-cli</a></li>
 <li>Particularly relevant previous episodes:
 <ul>
-<li><a href="http://www.newrustacean.com/show_notes/e008/">e008: Just like something else</a></li>
-<li><a href="http://www.newrustacean.com/show_notes/e009/">e009: Composing a Rustic tune</a></li>
-<li><a href="http://www.newrustacean.com/show_notes/e017/">e017: Point me where I need to go</a></li>
-<li><a href="http://www.newrustacean.com/show_notes/interview/_2/index.html">interview::2: Raph Levien</a></li>
+<li><a href="https://www.newrustacean.com/show_notes/e008/">e008: Just like something else</a></li>
+<li><a href="https://www.newrustacean.com/show_notes/e009/">e009: Composing a Rustic tune</a></li>
+<li><a href="https://www.newrustacean.com/show_notes/e017/">e017: Point me where I need to go</a></li>
+<li><a href="https://www.newrustacean.com/show_notes/interview/_2/index.html">interview::2: Raph Levien</a></li>
 </ul>
 </li>
 </ul>
@@ -3735,7 +3735,7 @@
             <description><![CDATA[<p>Digging deeper on smart pointers and mutability with <code>Cell</code> and <code>RefCell</code>.
 <h2 id="notes">Notes</h2>
 <p>What are the <code>Cell</code> and <code>RefCell</code> types, and when should we use them?</p>
-<p>Today, we follow up both the detailed discussion of smart pointers in <a href="http://www.newrustacean.com/show_notes/e015/">e015</a> and the closely related discussion in <a href="http://www.newrustacean.com/show_notes/interview/_2/">Interview 2</a> with Raph Levien, and look at two types you need to have a good idea how to deal with if you want to use these smart pointer types more <em>ergonomically</em>—that is, how to use them without feeling like you’re beating your head against a wall!</p>
+<p>Today, we follow up both the detailed discussion of smart pointers in <a href="https://www.newrustacean.com/show_notes/e015/">e015</a> and the closely related discussion in <a href="https://www.newrustacean.com/show_notes/interview/_2/">Interview 2</a> with Raph Levien, and look at two types you need to have a good idea how to deal with if you want to use these smart pointer types more <em>ergonomically</em>—that is, how to use them without feeling like you’re beating your head against a wall!</p>
 <h2 id="links">Links</h2>
 <ul>
 <li>Rust 1.10
@@ -4808,7 +4808,7 @@ well. You know who you are!)</p>
             <link>http://newrustacean.com/show_notes/e010/</link>
             <description><![CDATA[<p>Macros rule!</p>
 
-<h2 id="notes">Notes</h2>Because of the way macros are exported—before name resolution on crates occurs—the documentation for the macros defined in the source for this episode occurs in the <a href="http://www.newrustacean.com/show_notes/#macros"><strong>Macros</strong> section of the <code>show_notes</code> crate</a> documentation, rather than within the documentation for this module. (See the Rust Book discussion of <a href="http://doc.rust-lang.org/stable/book/documentation.html#documenting-macros">documenting macros</a> for details.) Even so, the <a href="http://www.newrustacean.com/src/show_notes/e009.rs.html">source</a> is still in this module; see the <a href="http://www.newrustacean.com/src/show_notes/e010.rs.html#101">implementations</a> for details.
+<h2 id="notes">Notes</h2>Because of the way macros are exported—before name resolution on crates occurs—the documentation for the macros defined in the source for this episode occurs in the <a href="https://www.newrustacean.com/show_notes/#macros"><strong>Macros</strong> section of the <code>show_notes</code> crate</a> documentation, rather than within the documentation for this module. (See the Rust Book discussion of <a href="http://doc.rust-lang.org/stable/book/documentation.html#documenting-macros">documenting macros</a> for details.) Even so, the <a href="https://www.newrustacean.com/src/show_notes/e009.rs.html">source</a> is still in this module; see the <a href="https://www.newrustacean.com/src/show_notes/e010.rs.html#101">implementations</a> for details.
 <br />
 <h2 id="links">Links</h2>
 <ul>
@@ -4967,7 +4967,7 @@ well. You know who you are!)</p>
 <p>In this episode we cover—at a <em>very</em> high level—two more fundamental concepts in Rust programming: generics and traits.</p>
 <p>Generics gives us the abilitty to write types and functions which can be used with more than one type. Traits give us the ability to specify behavior which can be implemented for more than one type. The combination gives us powerful tools for higher-level programming constructs in Rust.</p>
 <h3 id="comments-on-source-code">Comments on source code</h3>
-<p>Now that we have a handle on <a href="http://www.newrustacean.com/show_notes/e007/">how tests work</a>, we’ll use them to validate the behavior of our code going forward. This is great: we can show that the tests do what we think.</p>
+<p>Now that we have a handle on <a href="https://www.newrustacean.com/show_notes/e007/">how tests work</a>, we’ll use them to validate the behavior of our code going forward. This is great: we can show that the tests do what we think.</p>
 <p>To today’s point, though: we actually know even apart from whether the tests <em>run</em> successfully that these generic functions and the associated traits are behaving as we want. Failure with generics is a <em>compile</em>-time error, not a runtime error.</p>
 <h2 id="links">Links</h2>
 <ul>

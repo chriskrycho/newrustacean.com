@@ -35,7 +35,7 @@
 //! are behaving as we want. Failure with generics is a *compile*-time error,
 //! not a runtime error.
 //!
-//! [e007]: http://www.newrustacean.com/show_notes/e007/
+//! [e007]: https://www.newrustacean.com/show_notes/e007/
 //!
 //!
 //! Links

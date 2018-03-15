@@ -30,8 +30,8 @@
 //! want to use these smart pointer types more *ergonomically*---that is, how to
 //! use them without feeling like you're beating your head against a wall!
 //!
-//! [e015]: http://www.newrustacean.com/show_notes/e015/
-//! [Interview 2]: http://www.newrustacean.com/show_notes/interview/_2/
+//! [e015]: https://www.newrustacean.com/show_notes/e015/
+//! [Interview 2]: https://www.newrustacean.com/show_notes/interview/_2/
 //!
 //! The descriptions of the code below are minimal; see the inline comments in
 //! [the source][src] for the actual informative discussion.

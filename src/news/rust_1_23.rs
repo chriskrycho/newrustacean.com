@@ -48,13 +48,13 @@
 //! [rustdoc tracking issue]: https://github.com/rust-lang/rust/issues/44229
 //! [rustdoc blog post]: https://blog.guillaume-gomez.fr/articles/2017-09-18+New+rustdoc+rendering+common+errors
 //! [not copying function arguments]: https://github.com/rust-lang/rust/pull/45380)
-//! [the first news episode]: http://www.newrustacean.com/show_notes/news/_1/index.html
+//! [the first news episode]: https://www.newrustacean.com/show_notes/news/_1/index.html
 //! [`impl` period announcement]: https://blog.rust-lang.org/2017/09/18/impl-future-for-rust.html
 //! [final newsletter]: https://internals.rust-lang.org/t/the-final-impl-period-newsletter/6408
 //! [diesel orm]: http://diesel.rs/
 //! [firefox quantum]: https://www.mozilla.org/en-US/firefox/quantum/
 //! ["fearless concurrency in firefox quantum"]: https://blog.rust-lang.org/2017/11/14/Fearless-Concurrency-In-Firefox-Quantum.html
-//! [e015: not dumb pointers.]: http://www.newrustacean.com/show_notes/e015/index.html "Not dumb pointers"
+//! [e015: not dumb pointers.]: https://www.newrustacean.com/show_notes/e015/index.html "Not dumb pointers"
 //! [classic asteroids game]: https://aochagavia.github.io/blog/rocket---a-rust-game-running-on-wasm/
 //! [a password generator]: https://arkada38.github.io/2017/12/22/a-rust-password-generator-on-wasm/
 //! [yew]: https://github.com/DenisKolodin/yew

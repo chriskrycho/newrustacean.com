@@ -28,7 +28,7 @@
 //!
 //! [ember-cli-typescript]: https://github.com/typed-ember/ember-cli-typescript
 //! [bike shed]: http://bikeshed.fm/118
-//! [Interview 1]: http://www.newrustacean.com/show_notes/interview/_1/index.html
+//! [Interview 1]: https://www.newrustacean.com/show_notes/interview/_1/index.html
 //!
 //!
 //! Sponsors

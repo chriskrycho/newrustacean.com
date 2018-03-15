@@ -47,10 +47,10 @@
 //! [pds]: https://en.wikipedia.org/wiki/Persistent_data_structure
 //! ["Rust and Rest"]: http://lucumr.pocoo.org/2016/7/10/rust-rest/
 //! [sentry-cli]: https://github.com/getsentry/sentry-cli/
-//! [e008]: http://www.newrustacean.com/show_notes/e008/
-//! [e009]: http://www.newrustacean.com/show_notes/e009/
-//! [e017]: http://www.newrustacean.com/show_notes/e017/
-//! [interview 2]: http://www.newrustacean.com/show_notes/interview/_2/index.html
+//! [e008]: https://www.newrustacean.com/show_notes/e008/
+//! [e009]: https://www.newrustacean.com/show_notes/e009/
+//! [e017]: https://www.newrustacean.com/show_notes/e017/
+//! [interview 2]: https://www.newrustacean.com/show_notes/interview/_2/index.html
 //! 
 //! 
 //! Sponsors

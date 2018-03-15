@@ -99,8 +99,8 @@
 //! [trait-inheritance-new-book]: http://rust-lang.github.io/book/ch19-00-advanced-features.html
 //! [`std::marker`]: https://doc.rust-lang.org/stable/std/marker/
 //! [9 Special Traits]: https://doc.rust-lang.org/reference.html#special-traits
-//! [e008]: http://www.newrustacean.com/show_notes/e008/
-//! [e009]: http://www.newrustacean.com/show_notes/e009/
+//! [e008]: https://www.newrustacean.com/show_notes/e008/
+//! [e009]: https://www.newrustacean.com/show_notes/e009/
 //!
 //!
 //! Sponsors

@@ -25,10 +25,10 @@
 //! the [source][n3] is still in this module; see the [implementations][n4] for
 //! details.
 //!
-//! [n1]: http://www.newrustacean.com/show_notes/#macros
+//! [n1]: https://www.newrustacean.com/show_notes/#macros
 //! [n2]: http://doc.rust-lang.org/stable/book/documentation.html#documenting-macros
-//! [n3]: http://www.newrustacean.com/src/show_notes/e009.rs.html
-//! [n4]: http://www.newrustacean.com/src/show_notes/e010.rs.html#101
+//! [n3]: https://www.newrustacean.com/src/show_notes/e009.rs.html
+//! [n4]: https://www.newrustacean.com/src/show_notes/e010.rs.html#101
 //!
 //! Links
 //! -----
