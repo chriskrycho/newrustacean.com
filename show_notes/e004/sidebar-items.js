@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["apply_function_to_i64","Shows how to take a function as an argument."],["demonstrate_closure_environment","Shows how closures can act on elements within their environment."],["demonstrate_function_arguments","Show how to call a function with a function as an argument."],["demonstrate_methods","Shows how to use both struct and instance methods."]]});

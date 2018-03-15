@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `e014` mod in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, e014">
+
+    <title>show_notes::e014 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css" id="themeStyle">
+    <script src="../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Module e014</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#modules">Modules</a></li><li><a href="#functions">Functions</a></li></ul></div><p class='location'><a href='../index.html'>show_notes</a></p><script>window.sidebarCurrent = {name: 'e014', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>show_notes</a>::<wbr><a class="mod" href=''>e014</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/show_notes/e014.rs.html#1-201' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Stringing things along</p>
+<ul>
+<li><strong>Date:</strong> April 24, 2016</li>
+<li><strong>Subject:</strong> <code>Strings</code> <code>&amp;str</code>s and <code>Vec</code>s and slices (and Unicode) --
+oh, my!</li>
+<li><strong>Audio:</strong>
+<ul>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e014.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e014.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e014.ogg">Ogg</a></li>
+</ul>
+</li>
+</ul>
+<p><audio style="width: 100%" title="e014: Stringing things along" controls preload=metadata>
+<source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e014.m4a">
+<source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e014.mp3">
+<source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e014.ogg">
+</audio></p>
+<h2 id="notes" class="section-header"><a href="#notes">Notes</a></h2>
+<p>This episode, I take a deep dive on strings in Rust, looking at the
+differences between <code>String</code> and <code>&amp;str</code>, discussing Unicode a bit, and then
+expanding the discussion to think about how these types relate to the types
+they're built on (like <code>Vec</code>).</p>
+<h3 id="corrigenda" class="section-header"><a href="#corrigenda">Corrigenda</a></h3>
+<p>Listener Nev pointed out to me that I got it wrong when describing how
+<code>&amp;str</code> data is stored. It is <em>not</em> stack-allocated, but rather goes in the
+<a href="https://en.wikipedia.org/wiki/Data_segment">data segment</a>. I should have said <em>statically</em>-allocated, not
+<em>stack</em>-allocated. Thanks to Nev for the correction!</p>
+<h2 id="links" class="section-header"><a href="#links">Links</a></h2>
+<ul>
+<li>Strings:
+<ul>
+<li><a href="https://doc.rust-lang.org/book/strings.html">The Rust Book</a></li>
+<li><a href="http://rustbyexample.com/std/str.html">Rust by Example</a></li>
+<li><code>str</code> docs:
+<ul>
+<li><a href="http://doc.rust-lang.org/std/str/">module</a></li>
+<li><a href="http://doc.rust-lang.org/std/primitive.str.html">primitive type</a></li>
+</ul>
+</li>
+<li><code>String</code>
+<ul>
+<li><a href="http://doc.rust-lang.org/std/string/index.html">module</a></li>
+<li><a href="http://doc.rust-lang.org/std/string/struct.String.html">type definition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Dereferencing
+<ul>
+<li><a href="http://doc.rust-lang.org/book/deref-coercions.html">coercions</a></li>
+<li><a href="http://doc.rust-lang.org/std/ops/trait.Deref.html"><code>std::ops::Deref</code></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="sponsors" class="section-header"><a href="#sponsors">Sponsors</a></h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Hamza Sheikh</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (&quot;rillian&quot;)</li>
+<li>Ralph &quot;FriarTech&quot; Loizzo</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as
+well. You know who you are!)</p>
+<h3 id="become-a-sponsor" class="section-header"><a href="#become-a-sponsor">Become a sponsor</a></h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+</ul>
+<h2 id="contact" class="section-header"><a href="#contact">Contact</a></h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul>
+</li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul>
+</li>
+</ul>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="demo_deref/index.html"
+                                  title='mod show_notes::e014::demo_deref'>demo_deref</a></td>
+                           <td class='docblock-short'>
+                                <p>Demonstrate dereferencing. (You'll want to read this example carefully.)</p>
+
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.demonstrate_unicode.html"
+                                  title='fn show_notes::e014::demonstrate_unicode'>demonstrate_unicode</a></td>
+                           <td class='docblock-short'>
+                                <p>Print a 🚀, just because we can.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.get_a_slice.html"
+                                  title='fn show_notes::e014::get_a_slice'>get_a_slice</a></td>
+                           <td class='docblock-short'>
+                                <p>Get a string <em>slice</em>. Note the required lifetime specifier on the type!</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.get_a_string.html"
+                                  title='fn show_notes::e014::get_a_string'>get_a_string</a></td>
+                           <td class='docblock-short'>
+                                <p>Get a <code>String</code> instance. Note there's no lifetime.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.get_a_string_with_capacity.html"
+                                  title='fn show_notes::e014::get_a_string_with_capacity'>get_a_string_with_capacity</a></td>
+                           <td class='docblock-short'>
+                                <p>Get a <code>String</code> with a specified capacity.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.get_back_some_unicode.html"
+                                  title='fn show_notes::e014::get_back_some_unicode'>get_back_some_unicode</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.show_from_behavior.html"
+                                  title='fn show_notes::e014::show_from_behavior'>show_from_behavior</a></td>
+                           <td class='docblock-short'>
+                                <p>It's easy enough to get a <code>String</code> from a <code>str</code>.</p>
+
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

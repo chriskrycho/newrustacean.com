@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="Source to the Rust file `src/e000.rs`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang">
+
+    <title>e000.rs.html -- source</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css" id="themeStyle">
+    <script src="../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc source">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content"><pre class="line-numbers"><span id="1"> 1</span>
+<span id="2"> 2</span>
+<span id="3"> 3</span>
+<span id="4"> 4</span>
+<span id="5"> 5</span>
+<span id="6"> 6</span>
+<span id="7"> 7</span>
+<span id="8"> 8</span>
+<span id="9"> 9</span>
+<span id="10">10</span>
+<span id="11">11</span>
+<span id="12">12</span>
+<span id="13">13</span>
+<span id="14">14</span>
+<span id="15">15</span>
+<span id="16">16</span>
+<span id="17">17</span>
+<span id="18">18</span>
+<span id="19">19</span>
+<span id="20">20</span>
+<span id="21">21</span>
+<span id="22">22</span>
+<span id="23">23</span>
+<span id="24">24</span>
+<span id="25">25</span>
+<span id="26">26</span>
+<span id="27">27</span>
+<span id="28">28</span>
+<span id="29">29</span>
+<span id="30">30</span>
+<span id="31">31</span>
+<span id="32">32</span>
+<span id="33">33</span>
+<span id="34">34</span>
+<span id="35">35</span>
+<span id="36">36</span>
+<span id="37">37</span>
+<span id="38">38</span>
+<span id="39">39</span>
+<span id="40">40</span>
+<span id="41">41</span>
+<span id="42">42</span>
+<span id="43">43</span>
+<span id="44">44</span>
+<span id="45">45</span>
+<span id="46">46</span>
+<span id="47">47</span>
+<span id="48">48</span>
+<span id="49">49</span>
+<span id="50">50</span>
+<span id="51">51</span>
+<span id="52">52</span>
+<span id="53">53</span>
+<span id="54">54</span>
+<span id="55">55</span>
+</pre><pre class="rust ">
+<span class="doccomment">//! Hello, world!</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!   - **Date:** September 24, 2015</span>
+<span class="doccomment">//!   - **Subject:** The host, the language, and the show!</span>
+<span class="doccomment">//!   - **Audio:**</span>
+<span class="doccomment">//!       + [M4A][m4a]</span>
+<span class="doccomment">//!       + [MP3][mp3]</span>
+<span class="doccomment">//!       + [Ogg][ogg]</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e000.m4a</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e000.mp3</span>
+<span class="doccomment">//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e000.ogg</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Hello, world!&quot; controls preload=metadata&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e000.m4a&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e000.mp3&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e000.ogg&quot;&gt;</span>
+<span class="doccomment">//! &lt;/audio&gt;</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Today&#39;s show is pretty meta. You can skip it if you just want to start with</span>
+<span class="doccomment">//! something more technical, but I thought listeners might want to know a</span>
+<span class="doccomment">//! little about the origins of the show and my own background, so that&#39;s what</span>
+<span class="doccomment">//! you get today. Next time, we&#39;ll be tackling the `rustdoc` command in some</span>
+<span class="doccomment">//! detail.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ---</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! This is an almost-empty module: we aren&#39;t doing any fun code samples yet.</span>
+<span class="doccomment">//! I included the standard &quot;Hello, world!&quot; example, because how could I not?</span>
+<span class="doccomment">//! However, at some point in the future, there will be much more detailed code</span>
+<span class="doccomment">//! samples available:</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!   - in the [GitHub repository] for the show</span>
+<span class="doccomment">//!   - in the show notes attached to each episode</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [GitHub repository]: //github.com/chriskrycho/newrustacean.com</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Hopefully, the result will be a pretty helpful bunch of side content along</span>
+<span class="doccomment">//! with the audio of the podcast itself.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! # Follow/Support</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!   - New Rustacean:</span>
+<span class="doccomment">//!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)</span>
+<span class="doccomment">//!       + App.net: [@newrustacean](https://alpha.app.net/newrustacean)</span>
+<span class="doccomment">//!       + [Patreon](https://www.patreon.com/newrustacean)</span>
+<span class="doccomment">//!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)</span>
+<span class="doccomment">//!   - Chris Krycho</span>
+<span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
+<span class="doccomment">//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)</span>
+
+<span class="doccomment">/// Prints &quot;Hello, world!&quot; if you import it somewhere and run it.</span>
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">hello_world</span>() {
+    <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Hello, world!&quot;</span>);
+}
+</pre>
+</section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

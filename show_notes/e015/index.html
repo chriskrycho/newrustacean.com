@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `e015` mod in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, e015">
+
+    <title>show_notes::e015 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css" id="themeStyle">
+    <script src="../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Module e015</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#functions">Functions</a></li></ul></div><p class='location'><a href='../index.html'>show_notes</a></p><script>window.sidebarCurrent = {name: 'e015', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>show_notes</a>::<wbr><a class="mod" href=''>e015</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/show_notes/e015.rs.html#1-246' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Not dumb pointers.</p>
+<ul>
+<li><strong>Date:</strong> June 17, 2016</li>
+<li><strong>Subject:</strong> <code>Box</code>, <code>String</code>, <code>Vec</code>, <code>Rc</code>, and <code>Arc</code> have this in
+common: they're not dumb.</li>
+<li><strong>Audio:</strong>
+<ul>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e015.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e015.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e015.ogg">Ogg</a></li>
+</ul>
+</li>
+</ul>
+<p><audio style="width: 100%" title="e014: Stringing things along" controls preload=metadata>
+<source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e015.m4a">
+<source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e015.mp3">
+<source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e015.ogg">
+</audio></p>
+<h2 id="notes" class="section-header"><a href="#notes">Notes</a></h2>
+<p>This episode, we take a close look at smart pointer types---from a few we've
+already talked about, like <code>Box</code>, <code>Vec</code>, and <code>String</code>, to some new ones,
+like <code>Rc</code> and <code>Arc</code>.</p>
+<ul>
+<li>What smart pointers are, and what makes them 'smart'.</li>
+<li>Why we want or need smart pointers.</li>
+<li>A bit about <code>Box</code>.</li>
+<li>A lot more about <code>Rc</code> and <code>Arc</code>.</li>
+</ul>
+<p><strong><em>Note:</em></strong> The examples below are in-progress: the <code>Rc</code> example is complete
+but not fully documented, and there's no examples yet for <code>Arc</code>---but there
+will be! I expect to finish them over the course of this weekend, but I
+wanted to go ahead and get the episode out!</p>
+<h3 id="further-reading" class="section-header"><a href="#further-reading">Further reading</a></h3>
+<ul>
+<li><em>The Rust Programming Language</em>:
+<ul>
+<li><a href="https://doc.rust-lang.org/book/the-stack-and-the-heap.html">The Stack and the Heap</a></li>
+<li><a href="https://doc.rust-lang.org/book/choosing-your-guarantees.html">Choosing Your Guarantees</a> -- see especially the sections on
+<code>Rc</code> and <code>Arc</code>.</li>
+</ul>
+</li>
+<li>Rust by Example: <a href="http://rustbyexample.com/std/box.html">17.1: Box, stack, and heap</a></li>
+<li>API docs:
+<ul>
+<li><a href="https://doc.rust-lang.org/std/boxed/index.html"><code>std::boxed</code></a></li>
+<li><a href="https://doc.rust-lang.org/std/rc/index.html"><code>std::rc</code></a></li>
+<li><a href="https://doc.rust-lang.org/std/sync/struct.Arc.html"><code>stc::sync::Arc</code></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="links" class="section-header"><a href="#links">Links</a></h2>
+<ul>
+<li><a href="http://rustconf.com">RustConf</a></li>
+<li><a href="http://www.rust-belt-rust.com">Rust Belt Rust Conference</a>
+<ul>
+<li><a href="http://www.rust-belt-rust.com/sessions/">sessions</a></li>
+</ul>
+</li>
+<li><a href="https://soundcloud.com/posix4e/sets/rustyradio">Rusty Radio</a>
+<ul>
+<li><a href="http://feeds.soundcloud.com/users/soundcloud:users:1287419/sounds.rss">feed</a></li>
+</ul>
+</li>
+<li><a href="http://exercism.io/languages/rust">Rust Exercism track</a>
+<ul>
+<li><a href="http://exercism.io/languages">All exercism language tracks</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/rust-lang/rfcs/pull/1636">RFC 1636: Require documentation for all new features.</a> (Note:
+I misspoke on the episode and said this was at rust-lang.org; it's not!
+It's on GitHub, wtih the rest of the RFCs, of course.)</li>
+</ul>
+<h2 id="sponsors" class="section-header"><a href="#sponsors">Sponsors</a></h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Doug Reeves</li>
+<li>Hamza Sheikh</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (&quot;rillian&quot;)</li>
+<li>Ralph &quot;FriarTech&quot; Loizzo</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as
+well. You know who you are!)</p>
+<h3 id="become-a-sponsor" class="section-header"><a href="#become-a-sponsor">Become a sponsor</a></h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact" class="section-header"><a href="#contact">Contact</a></h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul>
+</li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="examples" class="section-header"><a href="#examples">Examples</a></h2>
+<p>The most basic examples of smart pointers involve the <code>Box</code> type, which
+we've talked about before. Assume we had a type <code>Foo</code> which took a string in
+its constructor, and that we wanted to box it up. We would just write:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">let</span> <span class="ident">someFoo</span> <span class="op">=</span> <span class="ident">Box</span>::<span class="ident">new</span>(<span class="ident">Foo</span>::<span class="ident">new</span>(<span class="string">&quot;bar&quot;</span>));</pre>
+<p>It's also worth comparing the Rust code above with similar code in C++.
+Assume we have a <code>class</code> with the same name; using a smart pointer (in this
+case, <code>unique_ptr</code>, returned from <code>make_unique</code>) would give us this code:</p>
+<pre><code class="language-cpp">const auto someFoo = std::make_unique&lt;const Foo&gt;(&quot;bar&quot;);
+</code></pre>
+<p>Both examples declare a smart pointer named <code>someFoo</code> that points to an
+immutable/constant <code>Foo</code> and where the pointer itself is immutable/constant.
+However, note that the Rust code is briefer and (at least in my opinion)
+substantially clearer than the corresponding C++ code to express the same
+semantic content.</p>
+<p>I'm not including further comments on <code>Box</code> here in the docs, because we've
+covered it before and it's fairly straightforward. The rest of these
+materials focus entirely on <code>Rc</code> and <code>Arc</code>, as those are the most
+interesting bits from today's episode.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ASendableType.html"
+                                  title='struct show_notes::e015::ASendableType'>ASendableType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FileData.html"
+                                  title='struct show_notes::e015::FileData'>FileData</a></td>
+                           <td class='docblock-short'>
+                                <p>A trivial (and frankly rather silly) example for use with <code>Rc</code>.</p>
+
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.demonstrate_rc.html"
+                                  title='fn show_notes::e015::demonstrate_rc'>demonstrate_rc</a></td>
+                           <td class='docblock-short'>
+                                <p>Demonstrate the basics of reference-counted types. (Read the source, Luke!)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.get_empty_weak.html"
+                                  title='fn show_notes::e015::get_empty_weak'>get_empty_weak</a></td>
+                           <td class='docblock-short'>
+                                <p>Note that this takes ownership of the data.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.get_wrapped_file_data.html"
+                                  title='fn show_notes::e015::get_wrapped_file_data'>get_wrapped_file_data</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.print_rc_count.html"
+                                  title='fn show_notes::e015::print_rc_count'>print_rc_count</a></td>
+                           <td class='docblock-short'>
+                                <p>Note that this function is <em>generic</em>: it will work for any type.</p>
+
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

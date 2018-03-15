@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["demonstrate_deref","A simple example of using the dereference operator."],["demonstrate_match","A simple demonstration of matching against a reference type."],["demonstrate_ref","Give a basic example of how the reference operator works."]],"struct":[["DataStore","A dummy container for use with references."]]});

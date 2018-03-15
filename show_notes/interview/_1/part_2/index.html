@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `part_2` mod in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, part_2">
+
+    <title>show_notes::interview::_1::part_2 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css" id="themeStyle">
+    <script src="../../../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Module part_2</p><div class="sidebar-elems"><p class='location'><a href='../../../index.html'>show_notes</a>::<wbr><a href='../../index.html'>interview</a>::<wbr><a href='../index.html'>_1</a></p><script>window.sidebarCurrent = {name: 'part_2', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Module <a href='../../../index.html'>show_notes</a>::<wbr><a href='../../index.html'>interview</a>::<wbr><a href='../index.html'>_1</a>::<wbr><a class="mod" href=''>part_2</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/show_notes/interview/_1/part_2.rs.html#1-102' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Sean Griffin on type systems and hopes for Rust's future</p>
+<ul>
+<li><strong>Date:</strong> February 25, 2016</li>
+<li><strong>Subject:</strong> Type system strengths and weaknesses, and the weird corners
+of Rust (with some hopes for its future)</li>
+<li><strong>Audio:</strong>
+<ul>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_1_part_2.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_1_part_2.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_1_part_2.ogg">Ogg</a></li>
+</ul>
+</li>
+</ul>
+<p><audio style="width: 100%" style="width: 100%" title="Interview 1::Part 1" controls preload=metadata>
+<source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_1_part_2.m4a">
+<source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_1_part_2.mp3">
+<source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_1_part_2.ogg">
+</audio></p>
+<h2 id="notes" class="section-header"><a href="#notes">Notes</a></h2>
+<p>Chris chats with Sean Griffin about the tradeoffs between mental overhead
+and type safety, the expressiveness of different type systems, and some of
+the places where Rust currently falls down.</p>
+<h3 id="corrigenda" class="section-header"><a href="#corrigenda">Corrigenda</a></h3>
+<p>Sean noted he could be wrong about <code>IEnumerable&lt;T&gt;</code> not having a <code>Sum</code>
+method in C♯, and post-show research indicated that he was (it's possible it
+was added after he had stopped doing .NET work, of course). See the
+<a href="https://msdn.microsoft.com/library/bb919210(v=vs.90).aspx">documentation</a> for details on how <code>IEnumerable&lt;T&gt;.Sum</code> it behaves in C♯
+if you're curious.</p>
+<p>As a related note, I (Chris) have done a little bit of digging on C♯ in the
+interval and it's fair to say that while a lot of the &quot;ceremony&quot; involved in
+writing C♯ is annoying, it's much more than just a &quot;slightly nicer Java&quot;,
+and indeed is a much nicer language than my previous, limited exposure had
+led me to believe. It's no Rust or F♯, but its type system is substantially
+more capable than Java's.</p>
+<h2 id="links" class="section-header"><a href="#links">Links</a></h2>
+<ul>
+<li>fmap
+<ul>
+<li><a href="https://robots.thoughtbot.com/functional-swift-for-dealing-with-optional-values">Discussion of <code>fmap</code> with <code>Optional</code> in Swift</a></li>
+<li><a href="http://learnyouahaskell.com/functors-applicative-functors-and-monoids">In Haskell</a></li>
+</ul>
+</li>
+<li>Rust:
+<ul>
+<li><a href="https://doc.rust-lang.org/book/trait-objects.html">Trait objects</a></li>
+<li><a href="https://github.com/rust-lang/rfcs/pull/1210">Specialization RFC</a>
+<ul>
+<li><a href="https://github.com/rust-lang/rust/issues/31844">Implementation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/sgrif/diesel">Diesel</a></li>
+</ul>
+<h2 id="sponsors" class="section-header"><a href="#sponsors">Sponsors</a></h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li>Chris Palmer</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Hamza Sheikh</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li>Ralph Giles (&quot;rillian&quot;)</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<h3 id="become-a-sponsor" class="section-header"><a href="#become-a-sponsor">Become a sponsor</a></h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+</ul>
+<h2 id="follow" class="section-header"><a href="#follow">Follow</a></h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul>
+</li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul>
+</li>
+</ul>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

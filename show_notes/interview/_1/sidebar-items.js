@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["part_1","Sean Griffin on Rust, ORMs, and Web Frameworks"],["part_2","Sean Griffin on type systems and hopes for Rust's future"]]});

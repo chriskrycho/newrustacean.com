@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Script` struct in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Script">
+
+    <title>show_notes::news::rust_1_23::Script - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css" id="themeStyle">
+    <script src="../../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Struct Script</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">Sync</a></div></div><p class='location'><a href='../../index.html'>show_notes</a>::<wbr><a href='../index.html'>news</a>::<wbr><a href='index.html'>rust_1_23</a></p><script>window.sidebarCurrent = {name: 'Script', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../index.html'>show_notes</a>::<wbr><a href='../index.html'>news</a>::<wbr><a href='index.html'>rust_1_23</a>::<wbr><a class="struct" href=''>Script</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../src/show_notes/news/rust_1_23.rs.html#196' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Script;</pre><div class='docblock'><h1 id="news-rust-123" class="section-header"><a href="#news-rust-123">News: Rust 1.23</a></h1>
+<p>Hello, I’m Chris Krycho and this is New Rustacean: a show about the Rust programming language and the people who use it. This is a news episode for the Rust 1.23 release.</p>
+<h2 id="rust" class="section-header"><a href="#rust">Rust</a></h2><h3 id="rust-123" class="section-header"><a href="#rust-123">Rust 1.23</a></h3>
+<p>As with most Rust releases, there aren’t any huge features landing today! The highlights of the features that <em>are</em> landing, though, are nice improvements. (I say almost the exact same thing every time I talk about upgrades—and that’s the way it should be. It’s <em>good</em> that it’s rare for big features like MIR to land; that’s part of the stability story.)</p>
+<p>The most notable feature change here is to do with rustdoc: for most of 2017, the docs team has been working to move rustdoc over to use the <code>pulldown-cmark</code> crate, which tracks the CommonMark spec, instead of the prior hoedown C bindings crate. For the last many months, rustdoc on nightly has built both the <code>pulldown-cmark</code> version and the Hoedown-based version, compared them, and spit out the differences. Now, stable does the same—in preparation for the final switchover in some future release.</p>
+<p>A couple other little niceties in this release:</p>
+<ul>
+<li>
+<p>Two places where things unexpectedly didn’t work, or didn’t work the way you’d expect – <code>auto</code> traits in trait objects, and type-checking for some binary operations not playing out the way you might expect – now <em>do</em> work.</p>
+</li>
+<li>
+<p>The compiler now suggests you rename an import if it clashes with other imports. So if you import <code>MyModule::MyItem</code> and also import <code>SomeOtherModule::MyItem</code>, Rust will now helpfully suggest for the second that you do <code>import SomeOtherModule::MyItem as OtherMyItem</code> so that not only do you know what went wrong, you have some idea how to fix it. This is an especially nice change for <em>new</em> Rustaceans: it’s compiler-as-teacher instead of compiler-as-antagonist.</p>
+</li>
+<li>
+<p>Rust also displays errors correctly when there are either wide characters or zero-width characters in them. Yes, you heard that right: if you’re not familiar with either, suffice it to say there are printing characters which have <em>no</em> width—modifiers for other characters, usually—and also printing characters with <em>extra</em> width. In either of those circumstances, the beautiful error messages that get printed used to end up misaligned. Now they don’t! (Typography on computers is <em>really</em> hard to consistently get right, it turns out.)</p>
+</li>
+</ul>
+<p>There is also one nice optimization win in this release: the compiler <a href="https://github.com/rust-lang/rust/pull/45380">learned</a> not to copy some function arguments when they’re rebound to local variables. This can decrease the memory usage in your code by 5–10%, which is no joke! And it turns out this optimization is one of the many wins that we’ve gotten out of the MIR feature—if you need a refresher on what that is, you can go back and take a look at <a href="https://www.newrustacean.com/show_notes/news/_1/index.html">the first news episode</a>, where I covered it in detail.</p>
+<p>The standard library saw a bunch of new <code>impl</code>s stabilized, as well as a few performance bumps. The <a href="https://github.com/rust-lang/rust/blob/50989cd98dbef60b0b6f5baa0ce4203ce778adaa/RELEASES.md#version-1230-2018-01-04">release notes</a> have the details; most are sufficiently niche that you’ll be really happy if they do affect you but many of them won’t directly affect the <em>average</em> you, as it were.</p>
+<h3 id="the-end-of-the-first-impl-period" class="section-header"><a href="#the-end-of-the-first-impl-period">The end of the first impl period</a></h3>
+<p>That set of release notes was relatively quiet, which is unsurprising given the end-of-year holidays. But it also doesn’t capture just how much <em>was</em> happening in that period, because a ton of it was features initially landing on nightly or even <em>starting</em> the march toward stabilization, as the first impl period wrapped up!</p>
+<p>If you didn’t hear about the <code>impl</code> period, it was a concerned effort over the last quarter of 2017 to focus on <em>implementing</em> all the ideas raised throughout the rest of the year. And it was a big success! Contributors all over the ecosystem collaborated to make <em>huge</em> progress on the RFCs opened throughout the rest of the year and to help push a bunch libraries all the way forward to their 1.0 releases.</p>
+<p>(One of the most interesting things this included was the beginning of the marker for the next <em>epoch</em> in Rust. If the idea of an “epoch” isn’t something you haven’t heard of, don’t worry: as we get closer to to 2019, when it will become much more important to understand, I’ll dedicate an episode to it.)</p>
+<p>Some of the highlights from the work in the language and compiler which caught my eye include:</p>
+<ul>
+<li>
+<p>the “non-lexical lifetimes” project, which will get rid of several pain points around the borrow-checker today, while also laying the foundation for more sophistication in the lifetime analysis in Rust in general</p>
+</li>
+<li>
+<p>incremental compilation, which went through a number of design interations but is now on nightly and tracking toward stable! I’ll be talking about in a <em>lot</em> of detail in the Rust 1.24 episode next month.</p>
+</li>
+<li>
+<p>Getting support for the <code>?</code> short-circuit return operator in the <code>main</code> function (where you haven’t been able to use it historically because it didn’t match with the normal <code>main</code> return type).</p>
+</li>
+</ul>
+<p>Besides that, there was a massive amount of effort that went into improving both Rust itself and the surrounding ecosystem. The “libs blitz” involved helping a <em>ton</em> of Rust libraries get to 1.0 quality and indeed to ship their 1.0 versions, as part of the 2017 goal to improve the stability (actual and perceived) the library ecosystem. One of those is the <a href="http://diesel.rs/">Diesel ORM</a>, and you can look forward to hearing an interview about that with Sean Griffin in the next two weeks!</p>
+<p>In general, the first <code>impl</code> period seems to have been a rousing success, and I’m excited by all the progress the community made. I can’t wait to see how it goes in the next few years as we get better and better at it.</p>
+<h2 id="other-goings-on-in-the-community" class="section-header"><a href="#other-goings-on-in-the-community">Other goings-on in the community</a></h2>
+<p>Since the last news episode, there have also been some big happenings in the Rust community at large.</p>
+<h3 id="firefox-quantum" class="section-header"><a href="#firefox-quantum">Firefox Quantum</a></h3>
+<p>Perhaps the most interesting and “big” pieces of news since late November is that Firefox Quantum shipped. Quantum was a project to replace the entire style rendering engine in Firefox with the highly parallelized implementation built in Rust for Servo. This was a huge effort, but it seems to have paid off: Firefox’s performance got way better—and it really couldn’t have happened without Rust.</p>
+<p>As we’ll talk about in the upcoming Episode 22 on <code>Send</code> and <code>Sync</code>, and as I alluded to when we talked about the <code>Arc</code> type back in <a href="https://www.newrustacean.com/show_notes/e015/index.html" title="Not dumb pointers">episode 15</a> Rust affords the ability to <em>know</em> that you’re managing multithreaded tasks safely, and that’s something that’s essentially impossible to do in C++: even if you get it all right on the first pass in C++—which you might be able to do if you’re very skilled and a little lucky—<em>maintaining</em> it will be nearly impossible. Mozilla had made two previous attempts at parallelizing the style rendering process, both in C++. They abandoned both, because they couldn’t do it safely and reliably enough. With Rust, they managed it successfully, and pretty quickly. It’s a huge success story, and is one of the first places for Mozilla itself that its bet on Rust over the last decade is paying off. As we say on <a href="http://www.winningslowly.org" title="Winning Slowly">my <em>other</em> podcast</a>: doing good work takes time! So props to Mozilla for doing good work with Rust, making a decade-long bet here that is now yielding dividends both for Mozilla and for a host of other people and companies.</p>
+<h3 id="webassembly" class="section-header"><a href="#webassembly">WebAssembly</a></h3>
+<p>WebAssembly continues to gain traction in both small and big ways. On the small-and-fun side, I’ve seen several small but quite functional apps making their way around the internet written using Rust and WebAssembly—from an implementation of the <a href="https://aochagavia.github.io/blog/rocket---a-rust-game-running-on-wasm/">classic asteroids game</a> to <a href="https://arkada38.github.io/2017/12/22/a-rust-password-generator-on-wasm/">a password generator</a>. At a slightly larger scale, there’s a <em>client-side</em> web framework written in Rust, <a href="https://github.com/DenisKolodin/yew">Yew</a>, which leans heavily on ideas from Elm and React—you get the equivalent of <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a>, just by using Rust’s macro system—and compiles to WebAssembly, using the <a href="https://github.com/koute/stdweb">stdweb</a> crate to do the small amount of DOM interaction required. It’s young, of course, but it’s quite impressive and I’m really excited for what it heralds.</p>
+<p>There’s also—and this is <em>super</em> exciting to me personally because of my day job—a <a href="https://github.com/glimmerjs/glimmer-vm/pull/752">spike</a> of the Glimmer rendering engine used in Ember.js implemented in Rust and WebAssembly. There’s a very good chance that I’ll be shipping Rust to production in 2018 as a result: not because <em>I’ll</em> be writing Rust myself for work (though boy do I want to!) but because our app will be shipping it as part of the framework code. And that’s really the perfect place for WebAssembly—though in a tech talk I gave at work a few weeks ago, I noted a few other places we might conceivably use it in the future. Here’s hoping, right?</p>
+<p>Summing all of that up, there’s a great blog post by Michael Gatozzi called <a href="https://mgattozzi.com/rust-wasm">Rust and the Case for WebAssembly in 2018</a>, where he makes the case that Rust is well-positioned to become the primary language for targeting WebAssembly, because of the same combination of safety and approachability that makes it so attractive to people who were formerly put off by systems programming more generally. I’ve linked that post; you should definitely give it a read!</p>
+<h3 id="2018" class="section-header"><a href="#2018">2018</a></h3>
+<p>In 2017, the Rust core team used the RFC process to establish goals for the year, and they paid off pretty handsomely. So for 2018, they’re repeating that same approach, but with a new wrinkle: in addition to the RFCs defining the roadmap for the year, they’re soliciting input via blog posts. You can <a href="https://blog.rust-lang.org/2018/01/03/new-years-rust-a-call-for-community-blogposts.html" title="New Year’s Rust: A Call for Community Blogposts">check out the announcement at blog.rust-lang.org</a>, but the short version is: the core team recognizes that writing RFCs is <em>hard</em>; writing a blog post has a lower bar for entry, and may also be more accessible to other readers in some ways. To quote:</p>
+<blockquote>
+<p>These can take many forms:</p>
+<ul>
+<li>A post on your personal or company blog</li>
+<li>A Medium post</li>
+<li>A GitHub gist</li>
+<li>Or any other online writing platform you prefer.</li>
+</ul>
+<p>We’re looking for posts on many topics:</p>
+<ul>
+<li>Ideas for community programs</li>
+<li>Language features</li>
+<li>Documentation improvements</li>
+<li>Ecosystem needs</li>
+<li>Tooling enhancements</li>
+<li>Or anything else Rust related you hope for in 2018</li>
+</ul>
+</blockquote>
+<p>They point to several example posts out there, one of which was Michael Gatozzi’s post on WebAssembly I mentioned just a minute ago! If you have ideas or vision, write it up and link to it on the relevant threads—you can help shape the direction Rust goes in the year ahead!</p>
+<h2 id="outro" class="section-header"><a href="#outro">Outro</a></h2>
+<p>And that’s a wrap—but that’s plenty!</p>
+<ul>
+<li>Aaron Turon</li>
+<li>Alexander Payne</li>
+<li>Anthony Deschamps</li>
+<li>Chris Palmer</li>
+<li>Christopher Giffard</li>
+<li>Behnam Esfahbod</li>
+<li>Dan Abrams</li>
+<li>Daniel Collin</li>
+<li>David W. Allen</li>
+<li>John Rudnick</li>
+<li>Matt Rudder</li>
+<li>Nathan Sculli</li>
+<li>Nick Stevens</li>
+<li>Peter Tillemans</li>
+<li>Olaf Leidinger</li>
+<li>Oluseyi Sonaiya</li>
+<li>Raph Levien</li>
+<li>and Vesa Khailavirta</li>
+</ul>
+<p>If you're enjoying the show, please let others know about it in person or on social media, rate and review in your favorite podcast directory, or, if you're feeling extra generous, by sending some financial support for the show my way at Patreon.com/newrustacean or as a one-off via any of a number of other services I've listed on the show website: newrustacean.com.</p>
+<p>NewRustacean.com also has scripts and code samples for most of the teaching episodes as well as transcripts for many of the interviews, along with full show notes for every episode.</p>
+<p>The show is on Twitter @newrustacean, or you can follow me there @chriskrycho. Tweet me with news, topic ideas, etc! You can also respond in the threads on the Rust user forums, Reddit, or Hacker News, or—and this will always be my favorite—just send me an email at hello@newrustacean.com.</p>
+<p>Until next time, happy coding!</p>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+            <div id='implementations-list'>
+        </div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../../show_notes/news/rust_1_23/struct.Script.html" title="struct show_notes::news::rust_1_23::Script">Script</a></code><a href='#impl-Send' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../../show_notes/news/rust_1_23/struct.Script.html" title="struct show_notes::news::rust_1_23::Script">Script</a></code><a href='#impl-Sync' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

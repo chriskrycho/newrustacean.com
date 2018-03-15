@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Script` struct in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Script">
+
+    <title>show_notes::cysk::serde::Script - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css" id="themeStyle">
+    <script src="../../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Struct Script</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">Sync</a></div></div><p class='location'><a href='../../index.html'>show_notes</a>::<wbr><a href='../index.html'>cysk</a>::<wbr><a href='index.html'>serde</a></p><script>window.sidebarCurrent = {name: 'Script', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../index.html'>show_notes</a>::<wbr><a href='../index.html'>cysk</a>::<wbr><a href='index.html'>serde</a>::<wbr><a class="struct" href=''>Script</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../src/show_notes/cysk/serde.rs.html#167' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Script;</pre><div class='docblock'><h1 id="crates-you-should-know-serde" class="section-header"><a href="#crates-you-should-know-serde">Crates You Should Know: Serde</a></h1>
+<p>Hello, I’m Chris Krycho, and this is New Rustacean: a show about the Rust programming language and the people who use it. This is <strong>Crates You Should Know: Serde.</strong></p>
+<h2 id="intro" class="section-header"><a href="#intro">Intro</a></h2>
+<p>It’s actually kind of amazing to me that we’re two and a half years into the show before I finally get around to talking about Serde. It’s been mentioned on the show repeatedly, and it’s one of the absolute core building blocks of the Rust ecosystem, and it’s frankly just a really impressive piece of software in its own right – inside the Rust ecosystem <em>or</em> outside. So now we’re going to do a solid dive into the library’s purpose, approach, and (at a high level) APIs!</p>
+<h2 id="serde" class="section-header"><a href="#serde">Serde</a></h2>
+<p>Serde is a library for <em>serialization</em> and <em>deserialization</em> of data – data of all sorts. The name is just a mashup of the first syllable of <em>serialization</em> and <em>deserialization</em> - ‘s’ ‘e’ ‘r’ from serialization and ‘d’ ‘e’ from deserialization.</p>
+<p>One thing that distinguishes Serde from e.g. the JSON-to-data-structure implementation in your other favorite language is that <em>most</em> of the time, the serialization and deserialization that happens, and really the data layer transformations of any sort (including for ORMs) are done at <em>runtime</em>, by mapping over the supplied data structure. Serde and Rust obviously still have to do some work at runtime, but that work is a lot narrower in scope, because they use Rust’s types and Serde’s traits to avoid any runtime attribute tagging or reflection. As is often the case with this kind of trait-driven programming, the compiler can often optimize it down to the same kind of performance you’d get by hand-writing a serializer... but as we’ll cover in a moment, you pretty much never have to hand-write serializers!</p>
+<p>The current list of supported formats for serialization and deserialization is pretty long! Among others, you can serialize and/or deserialize to JSON, YAML, MessagePack, TOML, Pickle (from Python), URL, and XML. (And there are more!)</p>
+<h3 id="using-serde-as-a-consumer" class="section-header"><a href="#using-serde-as-a-consumer">Using Serde as a consumer</a></h3>
+<p>Serde, as you might expect, leans heavily on a few core traits: <code>Serialize</code> and <code>Deserialize</code>. And, happily, these are traits you’ll only <em>very</em> rarely need to implement yourself. Courtesy of Rust’s support for <em>custom derives</em>—which Sean Griffin and I talked about a bit in <a href="https://www.newrustacean.com/show_notes/interview/diesel_1_0/part_1/index.html" title="Diesel 1.0, Part 1">our discussion of Diesel 1.0</a>. For Serde, you can take <em>essentially</em> any data type you can define in Rust and simply use the <code>derive</code> attribute by writing <code>#[derive(Serialize, Deserializer)]</code> in front of any type you define. In a few rare occasions, you’ll need to write the implementations yourself (and the really excellent docs have you covered in that case), but usually you’ll just derive these traits automatically.</p>
+<p>To make that work, you’ll need to make a couple tweaks to your project besides adding Serde itself to the dependency list.</p>
+<ol>
+<li>
+<p>Add <code>serde_derive</code> to your Cargo.toml. It’s an <em>optional</em> dependency of Serde—and it’s probably safe to say it’s <em>usually</em> installed alongside it! But if you happen to be in a scenario where you’re not going to be using the derives, you don’t have to install it.</p>
+</li>
+<li>
+<p>Add the dependencies for the target format you want to use—again, Serde breaks out its support for each format into its own crate. This keeps your build size down: there’s no reason to include, say, <code>serde_yaml</code> if you’re only targeting JSON.</p>
+</li>
+<li>
+<p>In your <code>main.rs</code> or <code>lib.rs</code> file—depending on whether you’re building an application or a library—add the top-level attribute to include the custom derive macro: <code>#[macro_use] extern crate serde_derive</code>.</p>
+</li>
+</ol>
+<p>And that’s it! You can now derive <code>Serialize</code>, <code>Deserialize</code>, or both on any <code>struct</code> or <code>enum</code> you need to serializer or deserialize.</p>
+<p>Once you’ve set up a data type with the relevant attributes, you can serialize and deserialize them by using the main functions a Serde target library supplies. The most common ones are:</p>
+<ul>
+<li><code>ser::to_string</code>: the function for serializing a given Rust item into a string of a given format</li>
+<li><code>de::from_string</code>: the function for deserializing a string of a given format into a Rust item</li>
+</ul>
+<p>For other target formats, you’d see different names—if the Serde library you were using targeted binary buffers, for example, it would be <code>ser::to_bytes</code> and <code>de::from_bytes</code>.</p>
+<p>Once you have the basic configuration all set up, you can start <em>using</em> those functions with your types.</p>
+<p>You can also further customize the way a data type is serialized and deserialized by using other <em>attributes</em>. Serde has attributes for customizing the container (the struct or enum itself); customizing enum variants; and customizing struct fields. For example, you can rename a struct field or enum variant. These kinds of things might come in handy when you’re translating between the expectations from different data layers in other languages, for example. In JavaScript, it’s normal for payloads to be formatted in <code>camelCase</code>—lowercase first letter, capitalized first letter of all words following in a name—but since it’s normal for Rust fields to be <code>snake_case</code>—all lowercase, separating words in a name with underscores—you can use Serde’s <code>rename_all</code> container attribute. You can also skip fields and variants entirely, or define custom functions to serialize and deserialize them.</p>
+<p>In short, Serde has <em>really</em> good defaults but also the flexibility to do most of what you need via attributes if the defaults don’t match your specific scenario... and the ability to just write your own specific <code>Serialize</code> and <code>Deserialize</code> implementation yourself if even <em>those</em> don’t get you far enough.</p>
+<h3 id="using-serde-as-a-producer" class="section-header"><a href="#using-serde-as-a-producer">Using Serde as a producer</a></h3>
+<p>The other use case for Serde is creating support for a new source for deserialization and target for serialization. As I noted earlier, Serde already supports a wide array of target formats. However, there are cases where you might need to write your own format for a given data representation type, or for a given protocol for transmission. In that case, you can implement your own serializer and deserializer plugin library, just like the existing libraries like <code>serde_json</code>.</p>
+<p>Serde—as its docs emphasize!—is not a <em>parsing</em> library. Its functionality is <em>specifically</em> for converting data to or from a given, <em>already-parsed</em> format and Rust data structures. So, for example, <code>serde_json</code> <a href="https://github.com/serde-rs/json/blob/master/src/de.rs#L110">parses the JSON itself</a>, iterating through a buffer of bytes, and likewise actually <a href="https://github.com/serde-rs/json/blob/master/src/ser.rs#L72">generates the JSON itself</a> (including supplying a variety of options for how you print the JSON).</p>
+<p>The API you have to implement is not <em>large</em>, and it is <em>well-documented</em>. For any given data type, you have to implement the <code>Serialize</code> and/or <code>Deserialize</code> traits (depending on what you’re doing), and conventionally you should also supply <code>to_</code> and/or <code>from_</code> functions, like <code>to_str</code> and <code>from_str</code> for serializing and deserializing <code>&amp;str</code> string buffers, or <code>to_bytes</code> and <code>from_bytes</code> for serializing and deserializing directly to <code>&amp;[u8]</code> bytes buffers.</p>
+<p>I’m not going to try to talk through everything involved in writing your own implementation; that would quickly involve far too much trying to describe code aloud, and I do enough of that in this podcast! Instead, if you’re interested in seeing a really quite straightforward and relatively easy to understand example, I recommend blocking out a couple hours and reading through the <code>serde_json</code> implementation. You’ll probably learn a lot!</p>
+<h2 id="outro" class="section-header"><a href="#outro">Outro</a></h2>
+<p>So that’s Serde! If you need to serialize or deserialize stuff in Rust… this is where it’s at!</p>
+<h3 id="sponsors" class="section-header"><a href="#sponsors">Sponsors</a></h3>
+<p>Thanks, as always, to all of this month's sponsors. Contributors who gave at least $10 included:</p>
+<ul>
+<li>Aaron Turon</li>
+<li>Alexander Payne</li>
+<li>Anthony Deschamps</li>
+<li>Chris Palmer</li>
+<li>Behnam Esfahbod</li>
+<li>Dan Abrams</li>
+<li>Daniel Collin</li>
+<li>David W. Allen</li>
+<li>Hans Fjällemark</li>
+<li>John Rudnick</li>
+<li>Matt Rudder</li>
+<li>Nathan Sculli</li>
+<li>Nick Stevens</li>
+<li>Peter Tillemans</li>
+<li>Olaf Leidinger</li>
+<li>Oluseyi Sonaiya</li>
+<li>Raph Levien</li>
+<li>and Vesa Khailavirta</li>
+</ul>
+<p>If you’d like to sponsor the show, you set up ongoing support at patreon.com/newrustacean, or send a one-off at any of a number of other services listed at newrustacean.com. The website also has scripts and code samples for most of the teaching episodes as well as transcripts for many of the interviews, along with full show notes for every episode. You can find the notes for <em>this</em> episode at &lt;newrustacean.com/show_notes/cysk/serde/&gt;.</p>
+<p>If you're enjoying New Rustacean, please help others find it – by telling them about it in person, by sharing it on social media, or by rating and reviewing the show in your favorite podcast directory.</p>
+<p>The show is on Twitter @newrustacean, or you can follow me there @chriskrycho. Tweet me with news, topic ideas, etc! You can also respond in the threads on the Rust user forums, Reddit, or Hacker News, or—and this will always be my favorite—just send me an email at hello@newrustacean.com.</p>
+<p>Until next time, happy coding!</p>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+            <div id='implementations-list'>
+        </div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../../show_notes/cysk/serde/struct.Script.html" title="struct show_notes::cysk::serde::Script">Script</a></code><a href='#impl-Send' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../../show_notes/cysk/serde/struct.Script.html" title="struct show_notes::cysk::serde::Script">Script</a></code><a href='#impl-Sync' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

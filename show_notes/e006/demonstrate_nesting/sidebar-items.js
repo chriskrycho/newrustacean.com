@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["now_public_fn","A module function, demonstrating module-public function status."]],"mod":[["a_nested_module","This is just a nested module."]]});

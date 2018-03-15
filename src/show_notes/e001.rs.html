@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="Source to the Rust file `src/e001.rs`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang">
+
+    <title>e001.rs.html -- source</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css" id="themeStyle">
+    <script src="../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc source">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content"><pre class="line-numbers"><span id="1">  1</span>
+<span id="2">  2</span>
+<span id="3">  3</span>
+<span id="4">  4</span>
+<span id="5">  5</span>
+<span id="6">  6</span>
+<span id="7">  7</span>
+<span id="8">  8</span>
+<span id="9">  9</span>
+<span id="10"> 10</span>
+<span id="11"> 11</span>
+<span id="12"> 12</span>
+<span id="13"> 13</span>
+<span id="14"> 14</span>
+<span id="15"> 15</span>
+<span id="16"> 16</span>
+<span id="17"> 17</span>
+<span id="18"> 18</span>
+<span id="19"> 19</span>
+<span id="20"> 20</span>
+<span id="21"> 21</span>
+<span id="22"> 22</span>
+<span id="23"> 23</span>
+<span id="24"> 24</span>
+<span id="25"> 25</span>
+<span id="26"> 26</span>
+<span id="27"> 27</span>
+<span id="28"> 28</span>
+<span id="29"> 29</span>
+<span id="30"> 30</span>
+<span id="31"> 31</span>
+<span id="32"> 32</span>
+<span id="33"> 33</span>
+<span id="34"> 34</span>
+<span id="35"> 35</span>
+<span id="36"> 36</span>
+<span id="37"> 37</span>
+<span id="38"> 38</span>
+<span id="39"> 39</span>
+<span id="40"> 40</span>
+<span id="41"> 41</span>
+<span id="42"> 42</span>
+<span id="43"> 43</span>
+<span id="44"> 44</span>
+<span id="45"> 45</span>
+<span id="46"> 46</span>
+<span id="47"> 47</span>
+<span id="48"> 48</span>
+<span id="49"> 49</span>
+<span id="50"> 50</span>
+<span id="51"> 51</span>
+<span id="52"> 52</span>
+<span id="53"> 53</span>
+<span id="54"> 54</span>
+<span id="55"> 55</span>
+<span id="56"> 56</span>
+<span id="57"> 57</span>
+<span id="58"> 58</span>
+<span id="59"> 59</span>
+<span id="60"> 60</span>
+<span id="61"> 61</span>
+<span id="62"> 62</span>
+<span id="63"> 63</span>
+<span id="64"> 64</span>
+<span id="65"> 65</span>
+<span id="66"> 66</span>
+<span id="67"> 67</span>
+<span id="68"> 68</span>
+<span id="69"> 69</span>
+<span id="70"> 70</span>
+<span id="71"> 71</span>
+<span id="72"> 72</span>
+<span id="73"> 73</span>
+<span id="74"> 74</span>
+<span id="75"> 75</span>
+<span id="76"> 76</span>
+<span id="77"> 77</span>
+<span id="78"> 78</span>
+<span id="79"> 79</span>
+<span id="80"> 80</span>
+<span id="81"> 81</span>
+<span id="82"> 82</span>
+<span id="83"> 83</span>
+<span id="84"> 84</span>
+<span id="85"> 85</span>
+<span id="86"> 86</span>
+<span id="87"> 87</span>
+<span id="88"> 88</span>
+<span id="89"> 89</span>
+<span id="90"> 90</span>
+<span id="91"> 91</span>
+<span id="92"> 92</span>
+<span id="93"> 93</span>
+<span id="94"> 94</span>
+<span id="95"> 95</span>
+<span id="96"> 96</span>
+<span id="97"> 97</span>
+<span id="98"> 98</span>
+<span id="99"> 99</span>
+<span id="100">100</span>
+<span id="101">101</span>
+<span id="102">102</span>
+<span id="103">103</span>
+<span id="104">104</span>
+<span id="105">105</span>
+<span id="106">106</span>
+<span id="107">107</span>
+<span id="108">108</span>
+<span id="109">109</span>
+<span id="110">110</span>
+<span id="111">111</span>
+<span id="112">112</span>
+<span id="113">113</span>
+<span id="114">114</span>
+<span id="115">115</span>
+<span id="116">116</span>
+<span id="117">117</span>
+<span id="118">118</span>
+<span id="119">119</span>
+<span id="120">120</span>
+<span id="121">121</span>
+<span id="122">122</span>
+<span id="123">123</span>
+<span id="124">124</span>
+<span id="125">125</span>
+<span id="126">126</span>
+<span id="127">127</span>
+<span id="128">128</span>
+<span id="129">129</span>
+<span id="130">130</span>
+<span id="131">131</span>
+<span id="132">132</span>
+<span id="133">133</span>
+<span id="134">134</span>
+<span id="135">135</span>
+<span id="136">136</span>
+<span id="137">137</span>
+<span id="138">138</span>
+<span id="139">139</span>
+<span id="140">140</span>
+</pre><pre class="rust ">
+<span class="doccomment">//! Document all the things!</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!   - **Date:** October 3, 2015</span>
+<span class="doccomment">//!   - **Subject:** Documentation in general, and `rustdoc` and `cargo doc` in</span>
+<span class="doccomment">//!     particular.</span>
+<span class="doccomment">//!   - **Audio:**</span>
+<span class="doccomment">//!       + [M4A][m4a]</span>
+<span class="doccomment">//!       + [MP3][mp3]</span>
+<span class="doccomment">//!       + [Ogg][ogg]</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e001.m4a</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e001.mp3</span>
+<span class="doccomment">//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e001.ogg</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Document all the things!&quot; controls preload=metadata&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e001.m4a&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e001.mp3&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e001.ogg&quot;&gt;</span>
+<span class="doccomment">//! &lt;/audio&gt;</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! # Notes</span>
+<span class="doccomment">//! This is a mostly-empty module, and it is intended as such. Why? Well,</span>
+<span class="doccomment">//! because *almost* all the sample code exists in these comments, which serve</span>
+<span class="doccomment">//! as the show notes. If you listen to the episode or take a look at the</span>
+<span class="doccomment">//! [source files][src], you&#39;ll see how it works!</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [src]: /src/show_notes/e001.rs.html</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! The components below are included *solely* so you can see how the</span>
+<span class="doccomment">//! docstrings work with each kind of thing. Make sure to click on the names of</span>
+<span class="doccomment">//! the items: there is more documentation there. Again, take a look at the</span>
+<span class="doccomment">//! [source][src] to see how it looks in the context of a file module.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Note that this module-level docstring uses `//!` rather than `///`-style</span>
+<span class="doccomment">//! comments. This is because this docstring is documenting the item which</span>
+<span class="doccomment">//! contains it, rather than the following item. Per [Rust RFC 505][1], the</span>
+<span class="doccomment">//! preferred approach is always to use the &quot;following&quot; form (`///`) rather than</span>
+<span class="doccomment">//! the &quot;containing&quot; form (`//!`), except for module-level docs like these.</span>
+<span class="doccomment">//! (I will be following RFC 505 throughout.)</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [1]: https://github.com/rust-lang/rfcs/blob/master/text/0505-api-comment-conventions.md</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! # Links</span>
+<span class="doccomment">//!   - [Rust and MSVC tracking issue][2]</span>
+<span class="doccomment">//!   - Other documentation tools:</span>
+<span class="doccomment">//!       + Predecessors:</span>
+<span class="doccomment">//!           * [Python&#39;s Sphinx tool]</span>
+<span class="doccomment">//!           * [Doxygen]</span>
+<span class="doccomment">//!           * [`JSDoc`]</span>
+<span class="doccomment">//!           * [`JavaDoc`]</span>
+<span class="doccomment">//!       + Other new languages with Markdown tooling</span>
+<span class="doccomment">//!           * [Julia][7] has a [built-in documentation system][8]</span>
+<span class="doccomment">//!           * [Elixir][9] has [`ex_doc`][10]</span>
+<span class="doccomment">//!   - [Rust 1.3 release announcement][11]</span>
+<span class="doccomment">//!   - Rust&#39;s package hosting: [crates.io][12]</span>
+<span class="doccomment">//!       + [Crater][13] for testing for backwards compatibility</span>
+<span class="doccomment">//!   - [Semantic versioning][14]</span>
+<span class="doccomment">//!       + [&quot;Stability as a Deliverable&quot;][15]: Rust official blog post on</span>
+<span class="doccomment">//!         version stability, backwards compatibility, and release channels.</span>
+<span class="doccomment">//!   - [The Rust book chapter on `rustdoc`][16]</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [2]: https://github.com/rust-lang/rfcs/issues/1061</span>
+<span class="doccomment">//! [Python&#39;s Sphinx tool]: http://sphinx-doc.org</span>
+<span class="doccomment">//! [Doxygen]: http://www.stack.nl/~dimitri/doxygen/</span>
+<span class="doccomment">//! [`JSDoc`]: http://usejsdoc.org</span>
+<span class="doccomment">//! [`JavaDoc`]: http://www.oracle.com/technetwork/articles/java/index-jsp-135444.html</span>
+<span class="doccomment">//! [7]: http://julialang.org</span>
+<span class="doccomment">//! [8]: http://julia.readthedocs.org/en/latest/manual/documentation/</span>
+<span class="doccomment">//! [9]: http://elixir-lang.org</span>
+<span class="doccomment">//! [10]: https://github.com/elixir-lang/ex_doc</span>
+<span class="doccomment">//! [11]: http://blog.rust-lang.org/2015/09/17/Rust-1.3.html</span>
+<span class="doccomment">//! [12]: https://crates.io</span>
+<span class="doccomment">//! [13]: https://github.com/brson/taskcluster-crater</span>
+<span class="doccomment">//! [14]: http://semver.org</span>
+<span class="doccomment">//! [15]: http://blog.rust-lang.org/2014/10/30/Stability.html</span>
+<span class="doccomment">//! [16]: https://doc.rust-lang.org/book/documentation.html</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! # Follow/Support</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!   - New Rustacean:</span>
+<span class="doccomment">//!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)</span>
+<span class="doccomment">//!       + App.net: [@newrustacean](https://alpha.app.net/newrustacean)</span>
+<span class="doccomment">//!       + [Patreon](https://www.patreon.com/newrustacean)</span>
+<span class="doccomment">//!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)</span>
+<span class="doccomment">//!   - Chris Krycho</span>
+<span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
+<span class="doccomment">//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)</span>
+
+
+<span class="doccomment">/// This is a sample structure, to demonstrate `rustdoc`/`cargo doc`.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// All of this will be attached to the structure definition when you see it</span>
+<span class="doccomment">/// live on the site. If you need to document members, you can do it inline!</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// It&#39;s worth taking a look at the [source] for this: you can see how private</span>
+<span class="doccomment">/// and public fields are handled differently in the documentation.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// [source]: /src/show_notes/e001.rs.html</span>
+<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">TVShow</span> {
+    <span class="doccomment">/// Here is a string telling us what the theme song was.</span>
+    <span class="kw">pub</span> <span class="ident">theme</span>: <span class="ident">String</span>,
+    <span class="doccomment">/// Here is the year the show premiered.</span>
+    <span class="kw">pub</span> <span class="ident">year</span>: <span class="ident">i32</span>,
+    <span class="doccomment">/// Here is the director---but (s)he&#39;s rather shy and private.</span>
+    <span class="ident">director</span>: <span class="ident">String</span>,
+}
+
+<span class="doccomment">/// You can also document the implementation. This is usually *not* going to be</span>
+<span class="doccomment">/// something you particularly need with a `struct`, because you can just</span>
+<span class="doccomment">/// attach the documentation to the `struct` itself. However, it *is* the kind</span>
+<span class="doccomment">/// of thing that could be useful if you are implementing a `trait`. (More on</span>
+<span class="doccomment">/// that in a later episode!)</span>
+<span class="kw">impl</span> <span class="ident">TVShow</span> {
+    <span class="doccomment">/// This documents a fairly ho-hum structure constructor.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// ```ignore</span>
+    <span class="doccomment">/// let a_struct = TVShow::new(&quot;The Answer&quot;, 42, &quot;Joss Whedon&quot;);</span>
+    <span class="doccomment">/// ```</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">new</span>(<span class="ident">theme</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>, <span class="ident">year</span>: <span class="ident">i32</span>, <span class="ident">director</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>) <span class="op">-&gt;</span> <span class="ident">TVShow</span> {
+        <span class="ident">TVShow</span> {
+            <span class="ident">theme</span>: <span class="ident">theme</span>.<span class="ident">to_string</span>(),
+            <span class="ident">year</span>: <span class="ident">year</span>,
+            <span class="ident">director</span>: <span class="ident">director</span>.<span class="ident">to_string</span>(),
+        }
+    }
+}
+
+
+<span class="doccomment">/// This documents a plain-old function.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// The same basic rules apply as with functions bound to structs; the only</span>
+<span class="doccomment">/// real difference is that the docs for this won&#39;t be attached to a `struct`</span>
+<span class="doccomment">/// but to the module.</span>
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">use_members</span>() {
+    <span class="kw">let</span> <span class="ident">firefly</span> <span class="op">=</span> <span class="ident">TVShow</span>::<span class="ident">new</span>(<span class="string">&quot;You can&#39;t take the sky from me!&quot;</span>, <span class="number">2001</span>, <span class="string">&quot;Joss Whedon&quot;</span>);
+    <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Firefly (come on, sing along: \&quot;{:?}\&quot;): {:?}/{:?}&quot;</span>,
+             <span class="ident">firefly</span>.<span class="ident">theme</span>,
+             <span class="ident">firefly</span>.<span class="ident">year</span>,
+             <span class="ident">firefly</span>.<span class="ident">director</span>);
+}
+</pre>
+</section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Script` struct in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Script">
+
+    <title>show_notes::e022::Script - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css" id="themeStyle">
+    <script src="../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Struct Script</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">Sync</a></div></div><p class='location'><a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e022</a></p><script>window.sidebarCurrent = {name: 'Script', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e022</a>::<wbr><a class="struct" href=''>Script</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/show_notes/e022.rs.html#156' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Script;</pre><div class='docblock'><p>Full script for the episode.</p>
+<h1 id="e022-send-and-sync" class="section-header"><a href="#e022-send-and-sync">e022: <code>Send</code> and <code>Sync</code></a></h1>
+<p><strong>Note:</strong> In the original (recorded) version of the episode, I said &quot;deadlock&quot; everywhere I meant &quot;data race.&quot; Throughout the transcript, I've made the substitution accordingly, but if you're listening to the episode, you'll have to do it mentally. Sorry about that!</p>
+<h2 id="intro" class="section-header"><a href="#intro">Intro</a></h2>
+<p>Hello, I'm Chris Krycho and this is New Rustacean: a show about the Rust Programming Language and the people who use it. This is episode 22: TODO</p>
+<p>There are a few major parts of Rust we haven't covered yet, including one of the most important <em>parts</em> of Rust's promise: safe concurrency. So today we're going to dive in and talk about the two traits that are the most important part of Rust's story for enabling safe concurrency: <code>Send</code> and <code>Sync</code>.</p>
+<h2 id="background" class="section-header"><a href="#background">Background</a></h2>
+<p>Multithreaded processing has become increasingly important over the last couple decades, as our ability to speed up single-threaded processing has effectively hit a wall. We <em>can</em> make things go faster, but it takes a lot of power and it generates a lot of heat, and that makes it hard to speed up our programs just by running the processor faster. Starting in the early 2000s, the computer industry began adapting to that by allowing for multi-threaded and multi-processor approaches, which at least in principle lets us parallelize parts of whatever we're working on. But there's a problem: parallelizing things effectively is <em>hard</em>. And it's hard in at least two ways—one of which Rust really <em>can’t</em> help us with, but one of which it really can.</p>
+<ul>
+<li>
+<p>Rust <em>cannot</em> help us with designing algorithms well for parallelization, or even with identifying which specific problems are amenable to parallelization. We still need good old computer science reasoning for that side of things.</p>
+</li>
+<li>
+<p>On the other hand, Rust <em>can</em> hep us make sure the design we implement is safe once we <em>have</em> identified candidates for parallelization. In fact, it can do more than help. Rust can actually just eliminate whole classes of parallelization bugs common in other languages, and do so at compile time.</p>
+</li>
+</ul>
+<p>This is basically true of <em>all</em> the ways Rust helps us, to be fair: it doesn’t tell you how to write an algorithm that performs linearly instead of quadratically. It makes it easier to not shoot yourself in the foot with memory errors while you write your algorithm. The same thing goes for parallelism.</p>
+<p>So now we know <em>why</em> we care about <code>Send</code> and <code>Sync</code>—what are they and how do they work?</p>
+<h3 id="marker-traits" class="section-header"><a href="#marker-traits">Marker traits</a></h3>
+<p>The first thing we need to understand is that both <code>Send</code> and <code>Sync</code> are <em>marker traits.</em> This is one of several things I passed over in my previous discussion of traits back in episode 8; we’ll be coming back to many of them in the next few months.</p>
+<p>A <em>marker trait</em> is a trait which does not have behavior of its own; it simply specifies that certain kinds of invariants are enforced, which the compiler can then require types to implement before it will allow certain kinds of behavior. These are not <em>special</em> in that they’re not restricted to language built-ins or anything like that. You can implement your own and define what makes that trait hold or not in your own code, and get the same kinds of guarantees. (For an example tied to a recent episode, Diesel actually uses marker traits internally – for example, to <a href="http://docs.diesel.rs/diesel/expression/trait.NonAggregate.html" title="NonAggregate">segregate certain kinds of SQL expressions</a> from each other.)</p>
+<p>In the standard library, though, there are four of these market traits: <code>Copy</code>, <code>Send</code>, <code>Sized</code>, and <code>Sync</code>. There’s also the <code>PhantomData</code> struct type. We’ve already seen <code>Copy</code>, in episode 14’s discussion of strings, and we’ll come back to <code>Sized</code> and <code>PhantomData</code> in the future. For today, we’re just sticking with <code>Send</code> and <code>Sync</code>.</p>
+<p>There are two fundamental things you need to understanding about <code>Send</code> and <code>Sync</code>.</p>
+<ol>
+<li>They are automatically implemented for every type they can be by the compiler—they have default implementations, and you have to explicitly opt <em>out</em> of those if you’re somehow doing unsafe behavior yourself. For example, the <code>Rc</code> type expressly indicates in its own type definition that it is <em>not</em> <code>Send</code> or <code>Sync</code>.</li>
+<li>Closely related to that first point: <code>Send</code> and <code>Sync</code> are <em>unsafe traits</em>. This means that you cannot implement them “safely” – and that’s fine because your safe types will basically get them for free. You need to write the <code>unsafe</code> implementations of any <code>unsafe</code> type machinery you intend to be <code>Send</code> and <code>Sync</code> <em>very</em> carefully, to guarantee that the relevant invariants hold (i.e. that you can’t get data races etc.).</li>
+</ol>
+<p>We’re not going to dig further into the details of <em>how</em> you set up those invariants on your types today—it really only matters when you’re building your own implementations which are necessarily in the “trust me, I know what I’m doing category” of <code>unsafe</code> code, because they’re <em>unsafe traits</em>. Instead, we’re just going to talk about what the two traits are and then look at how we can put them to use together. However, you should note that if you <em>do</em> need to implement a new, low-level type which is <code>Send</code> or <code>Sync</code>, the responsibility is all on you to get the implementation right, as it is with <code>unsafe</code> code in general. (We’ll cover <code>unsafe</code> probably in early April.)</p>
+<h3 id="send-and-sync" class="section-header"><a href="#send-and-sync"><code>Send</code> and <code>Sync</code></a></h3>
+<p><code>Send</code> is the trait that indicates it’s safe to <em>move</em> data across threads.</p>
+<p><code>Sync</code> is the trait that indicates it’s safe to <em>share</em> data across threads.</p>
+<p>Put another way: <code>Send</code> is about <em>cross-thread ownership</em>, and <code>Sync</code> is about <em>cross-thread borrows</em>. A type <code>T</code> needs to be <code>Send</code> to be handed to a cross-thread function with a signature like <code>fn do_something(with_a_t: T)</code>. A type <code>T</code> needs to be <code>Sync</code> to be handed to a cross-thread function with a signature like <code>fn do_something(with_a_t_ref: &amp;T)</code>.</p>
+<p>Once that distinction is in place, the normal rules about mutability and access apply, just as they would in a single-threaded context.</p>
+<p>So what makes a type <code>Send</code>-able and <code>Sync</code>-able?</p>
+<h4 id="send-rules" class="section-header"><a href="#send-rules"><code>Send</code> rules</a></h4>
+<p>For a thread to be <code>Send</code>, it has to be</p>
+<p>For more complex types – structs, enums, and smart pointer wrappers around them – as long as all the pieces that make up the type are <em>also</em> <code>Send</code>, the type is automatically <code>Send</code>. If any of the struct members or enum variants are <em>not</em> send, the type as a whole not <code>Send</code> either.</p>
+<h4 id="sync-rules" class="section-header"><a href="#sync-rules"><code>Sync</code> rules</a></h4>
+<p>The briefest definition of <code>Sync</code> – and here I’m stealing straight from the standard library docs, because they’re really good! is that a type <code>T</code> is <code>Sync</code> when the type of a <em>reference</em> to <code>T</code>, <code>&amp;T</code>, is <code>Send</code>. (This is why we’re talking about the two in the same episode: not only are they closely related conceptually, they’re closely related in terms of their implementation.)</p>
+<p>To expand that out a bit, let’s thing about <code>String</code>. Remember that a <code>String</code> is a smart pointer, which is ultimately just a <code>Vec</code> of bytes which has some guarantees in construction so you can be sure that it’s always valid UTF-8. (If you need to brush up on strings, you can go back and listen to <a href="https://www.newrustacean.com/show_notes/e014/index.html" title="e014: Stringing things along">episode 14</a>, where I talked about them in some detail.) When you take a reference to a <code>String</code>, you get an <code>&amp;String</code>, but most of the time you actually get a reference to an <code>&amp;str</code> slice type. If <code>&amp;str</code> or the under-the-hood <code>&amp;Vec</code> which <code>&amp;String</code> is a special case of were <em>not</em> safe for <code>Send</code>, then <code>String</code> would not be <code>Sync</code>. But since string slices and references to <code>Vec</code>s are carefully implemented by the standard library to make sure they <em>are</em> thread-safe, you can use them this way.</p>
+<p>As a result, the exact same rule applies for <code>Sync</code> types as for <code>Send</code> types: as long as all components of the type are <code>Sync</code>-safe, so is the type itself, no matter how complex; but if any of the parts of the type are <em>not</em> <code>Sync</code>-safe, neither is the type itself.</p>
+<h4 id="other-data-structures" class="section-header"><a href="#other-data-structures">Other data structures</a></h4>
+<p>Of course, this isn’t all there is to say. We can also combine these with other data structures and traits we’ve talked about in the past, when we need other kinds of behavior. The strategy is to build up our abstractions from the specific, lower-level combinations of types we need. For example, we might need a reference-counted piece of data that’s shared across threads, and which needs to be possibly owned by more than one thread. With today’s context in mind, we now know that we can take a piece of data that’s both <code>Send</code> and <code>Sync</code> and put it in an <code>Arc</code>—an atomically reference-counted smart pointer type, which we talked about briefly in an earlier episode.</p>
+<p>Part of what makes <code>Arc</code> especially useful is the guarantee we talked about above: any type whose contents are all <code>Send</code> or <code>Sync</code> are themselves automatically <code>Send</code> or <code>Sync</code>. That means that any <code>Arc</code> which wraps a <code>Send</code> and <code>Sync</code> type is automatically safe to use across thread boundaries. And the fact that that’s <em>not</em> true for <code>Rc</code>—because it’s not an atomic type and doesn’t maintain the right invariants for thread safety itself—is what makes <code>Arc</code> appropriate for cross-thread work and <code>Rc</code> inappropriate for it. Put in the terms I used earlier in the episode: <code>Arc</code>’s (internal, <code>unsafe</code>) implementation maintains all the invariants we need; <code>Rc</code>’s implementation <em>doesn’t</em>.</p>
+<h3 id="using-send-and-sync-data" class="section-header"><a href="#using-send-and-sync-data">Using <code>Send</code> and <code>Sync</code> data</a></h3>
+<p>Once you have a piece of data that is <code>Send</code> (and <code>Sync</code>) you can use them in contexts where you’re doing multi-threaded work. For a fairly easy-to-understand example, let’s imagine processing hundreds or thousands of Markdown files. Since each file is independent of the others, we decide this problem is ripe for parallelization.</p>
+<p>Now, I want to say up front: what I’m about to desscribe is definitely a naïve approach, and in anything remotely approaching a real-world scenario we’d want something like a thread pool to avoid totally hammering our machine. There’s a great discussion of this in ch. 20 of the second edition of the Rust book, so if you want to see how to do this <em>right</em>! Props to Steve Klabnik and Carol Nichols-or-Goulding for their write-up there. Listeners who have followed along with previous episodes will note that we could also sort of cheat and just use Rayon for multi-threading parallelism, but that wouldn’t help us see how <code>Send</code> and <code>Sync</code> come into play more manually.</p>
+<p>In this case, we might have a function <code>markdown_to_html</code>, which just takes a string buffer – an <code>&amp;str</code> – as its argument. We could just iterate over a <code>Vec</code> of <code>String</code>s representing the Markdown files and pass them to <code>markdown_to_html</code> in sequence. But we want to parallelize them, so instead we’d chunk up the vector into something like the number of processor cores on our machine, and then iterate over those chunks. With each of them, we’d then use the <code>std::thread::spawn</code> function to spin up a new thread, and pass it a closure to execute. That would read <em>something</em> like this, if we had a current Markdown item named <code>md</code>:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">let</span> <span class="ident">first</span> <span class="op">=</span> <span class="ident">std</span>::<span class="ident">thread</span>::<span class="ident">spawn</span>(<span class="op">||</span> <span class="ident">markdown_to_html</span>(<span class="kw-2">&amp;</span><span class="ident">md</span>));</pre>
+<p>We’d do the same with the others, and push them into some other container to look them up later, and once we finished iterating through everything, we’d call <code>join</code> on the thread references we saved, and every time we did we’d get back</p>
+<p>What’s interesting here isn’t so much the <code>std::thread</code> APIs – though it’s nice to have at least mentioned them explicitly on the show now! – as it is the fact that all of this can be <em>guaranteed</em> to be thread-safe by the compiler. If we tried to hand over a mutable reference to, say, the <code>Vec</code> itself on each pass through, we’d get the usual Rust complaints about there being more than one mutable reference at the same time – no different than any other context!</p>
+<p>But if for some reason (and there are lots of times this might come up!) you were wrapping each Markdown buffer with a type which was thread-unsafe – say, a <code>Cell</code> or <code>RefCell</code>, with their <em>non-atomic interior mutability</em> – the Rust compiler would say, “NOPE. You can and will end up surprising yourself in a painful way with those via data races or overwriting mutable data or something like that, so you’re not allowed to do it.” When that circumstance comes up, you just have to switch to another strategy – if you need interior mutability, to something like <code>Mutex</code> or <code>RWLock</code> or one of the <code>Atomic</code> types if you’re getting really down into the nitty-gritty.</p>
+<h2 id="outro" class="section-header"><a href="#outro">Outro</a></h2>
+<p>So now we have a pretty good starting idea how to deal with multi-threading and parallelism in Rust. Again, most of the time unless you’re implementing your own abstractions you’re actually better using one of the existing community libraries for parallelism – Rayon, which we’ve talked about in the past, or Futures and Tokio for async I/O, which we’ll talk about in the future – being the big ones. But now you know the machinery those use “under the hood,” and that’s an important part of understanding how they work and what their performance characteristics will be, and therefore when each is appropriate!</p>
+<h3 id="sponsors" class="section-header"><a href="#sponsors">Sponsors</a></h3>
+<p>Thanks, as always, to all of this month's sponsors. Contributors who gave at least $10 included:</p>
+<ul>
+<li>Aaron Turon</li>
+<li>Alexander Payne</li>
+<li>Anthony Deschamps</li>
+<li>Chris Palmer</li>
+<li>Christopher Giffard</li>
+<li>Behnam Esfahbod</li>
+<li>Dan Abrams</li>
+<li>Daniel Collin</li>
+<li>David W. Allen</li>
+<li>Guido Hoermann</li>
+<li>Hans Fjällemark</li>
+<li>Hendrik Sollich</li>
+<li>John Rudnick</li>
+<li>Matt Rudder</li>
+<li>Nathan Sculli</li>
+<li>Nick Stevens</li>
+<li>Peter Tillemans</li>
+<li>Olaf Leidinger</li>
+<li>Oluseyi Sonaiya</li>
+<li>Raph Levien</li>
+<li>Shane Utt</li>
+<li>and Vesa Khailavirta</li>
+</ul>
+<p>If you're enjoying the show, please let others know about it in person or on social media, rate and review in your favorite podcast directory, or, if you're feeling extra generous, by sending some financial support for the show my way at Patreon.com/newrustacean or as a one-off via any of a number of other services I've listed on the show website: newrustacean.com.</p>
+<p>NewRustacean.com also has scripts and code samples for most of the teaching episodes as well as transcripts for many of the interviews, along with full show notes for every episode.</p>
+<p>The show is on Twitter @newrustacean, or you can follow me there @chriskrycho. Tweet me with news, topic ideas, etc! You can also respond in the threads on the Rust user forums, Reddit, or Hacker News, or—and this will always be my favorite—just send me an email at hello@newrustacean.com.</p>
+<p>Until next time, happy coding!</p>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+            <div id='implementations-list'>
+        </div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../show_notes/e022/struct.Script.html" title="struct show_notes::e022::Script">Script</a></code><a href='#impl-Send' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../show_notes/e022/struct.Script.html" title="struct show_notes::e022::Script">Script</a></code><a href='#impl-Sync' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

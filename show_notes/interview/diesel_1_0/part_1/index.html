@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `part_1` mod in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, part_1">
+
+    <title>show_notes::interview::diesel_1_0::part_1 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css" id="themeStyle">
+    <script src="../../../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Module part_1</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li></ul></div><p class='location'><a href='../../../index.html'>show_notes</a>::<wbr><a href='../../index.html'>interview</a>::<wbr><a href='../index.html'>diesel_1_0</a></p><script>window.sidebarCurrent = {name: 'part_1', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Module <a href='../../../index.html'>show_notes</a>::<wbr><a href='../../index.html'>interview</a>::<wbr><a href='../index.html'>diesel_1_0</a>::<wbr><a class="mod" href=''>part_1</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/show_notes/interview/diesel_1_0/part_1.rs.html#1-194' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Part 1: The past and present of Diesel</p>
+<ul>
+<li><strong>Date:</strong> January 13, 2018</li>
+<li><strong>Subject:</strong> Growing Diesel's community, self-imposed technical
+challenges, and some of the ways Diesel has contributed to the Rust
+ecosystem.</li>
+<li><strong>Audio:</strong>
+<ul>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/diesel_1_0/part_1.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/diesel_1_0/part_1.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/diesel_1_0/part_1.ogg">Ogg</a></li>
+</ul>
+</li>
+</ul>
+<p><audio style="width: 100%" style="width: 100%" title="Interview: Diesel 1.0, with Sean Griffin, Part 1" controls preload=metadata>
+<source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/diesel_1_0/part_1.m4a">
+<source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/diesel_1_0/part_1.mp3">
+<source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/diesel_1_0/part_1.ogg">
+</audio></p>
+<h2 id="show-notes" class="section-header"><a href="#show-notes">Show notes</a></h2>
+<ul>
+<li><a href="https://www.newrustacean.com/show_notes/interview/_1/index.html">Sean's previous appearance on the show</a></li>
+<li>Chat app options:
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC</a></li>
+<li><a href="https://slack.com">Slack</a></li>
+<li><a href="https://gitter.im">Gitter</a>
+<ul>
+<li><a href="https://gitter.im/diesel-rs/diesel">The Diesel Gitter room</a></li>
+</ul>
+</li>
+<li><a href="https://discordapp.com">Discord</a></li>
+</ul>
+</li>
+<li>SQL back ends
+<ul>
+<li><a href="https://www.postgresql.org">PostgreSQL</a></li>
+<li><a href="http://sqlite.org">SQLite</a></li>
+<li><a href="http://mysql.com">MySQL</a></li>
+</ul>
+</li>
+<li><a href="http://beej.us/guide/bgnet/html/multi/ipstructsdata.html#byteorder">endianness</a></li>
+<li><a href="https://crates.io/crates/byteorder"><code>byteorder</code> crate</a></li>
+<li><a href="https://huonw.github.io/blog/2015/01/object-safety/">object safety</a></li>
+<li><a href="https://doc.rust-lang.org/book/first-edition/trait-objects.html">trait object</a></li>
+<li><a href="https://www.youtube.com/watch?v=wxPehGkoNOw">Sean's RustConf talk</a>
+<ul>
+<li><a href="http://cglab.ca/%7Eabeinges/blah/rust-reuse-and-recycle/#monomorphization">monomorphization</a></li>
+</ul>
+</li>
+<li><a href="https://doc.rust-lang.org/book/first-edition/procedural-macros.html">Custom derive and procedural macros</a></li>
+</ul>
+<h2 id="sponsors" class="section-header"><a href="#sponsors">Sponsors</a></h2>
+<ul>
+<li>Aaron Turon</li>
+<li>Alexander Payne</li>
+<li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
+<li>Anthony Scotti</li>
+<li>Aleksey Pirogov</li>
+<li>Andreas Fischer</li>
+<li>Andrew Thompson</li>
+<li>Austin LeSure</li>
+<li><a href="https://github.com/behnam">Behnam Esfahbod</a></li>
+<li>Benjamin Wasty</li>
+<li>Brent Vatne</li>
+<li>Chap Lovejoy</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li>Chris Jones</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="http://github.com/anxiousmodernman">Coleman McFarland</a></li>
+<li>Dan Abrams</li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://6ftdan.com/">Daniel P. Clark</a></li>
+<li><a href="http://GitHub.com/DataRiot">David W. Allen</a></li>
+<li>David Hewson</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Eugene Bulkin</li>
+<li>Guido Hoermann</li>
+<li>[Hans Fjällemark]</li>
+<li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
+<li><a href="https://www.ianmjones.com/">Ian Jones</a></li>
+<li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li>
+<li>James Cooper</li>
+<li>Jerome Froelich</li>
+<li><a href="http://www.cindur.com/">John Rudnick</a></li>
+<li>Jonathan Turner</li>
+<li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li>
+<li>Justin Ossevoort</li>
+<li><a href="https://github.com/kaedroho/">Karl Hobley</a></li>
+<li>Keith Gray</li>
+<li>Kilian Rault</li>
+<li>Luca Schmid</li>
+<li>Masashi Fujita</li>
+<li>Matt Rudder</li>
+<li>Matthew Brenner</li>
+<li>Matthias Ruszala</li>
+<li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li>
+<li><a href="https://github.com/messense">Messense Lv</a></li>
+<li>Micael Bergeron</li>
+<li><a href="http://influential.co/">Nathan Sculli</a></li>
+<li><a href="https://github.com/nastevens">Nick Stevens</a></li>
+<li><a href="http://oluseyi.info/">Oluseyi Sonaiya</a></li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li>
+<li>[Paul Naranja]</li>
+<li>Peter Tillemans</li>
+<li>Ralph Giles (&quot;rillian&quot;)</li>
+<li>Randy MacLeod</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
+<li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
+<li>Simon G.</li>
+<li>Steven Murawksi</li>
+<li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
+<li>Tim Brooks</li>
+<li>Tom Prince</li>
+<li>Ty Overby</li>
+<li>Tyler Harper</li>
+<li>Vesa Kaihlavirta</li>
+<li>Victor Kruger</li>
+<li>Will Greenberg</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+<li>Yaacov Finkelman</li>
+<li>Zachary Snyder</li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as
+well. You know who you are!)</p>
+<h3 id="become-a-sponsor" class="section-header"><a href="#become-a-sponsor">Become a sponsor</a></h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact" class="section-header"><a href="#contact">Contact</a></h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul>
+</li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul>
+</li>
+</ul>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Script.html"
+                                  title='struct show_notes::interview::diesel_1_0::part_1::Script'>Script</a></td>
+                           <td class='docblock-short'>
+                                <p>Transcript – coming at some point!</p>
+
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Transcript","Anthony Deschamps"]]});

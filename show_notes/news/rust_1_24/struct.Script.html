@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Script` struct in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Script">
+
+    <title>show_notes::news::rust_1_24::Script - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css" id="themeStyle">
+    <script src="../../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Struct Script</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">Sync</a></div></div><p class='location'><a href='../../index.html'>show_notes</a>::<wbr><a href='../index.html'>news</a>::<wbr><a href='index.html'>rust_1_24</a></p><script>window.sidebarCurrent = {name: 'Script', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../index.html'>show_notes</a>::<wbr><a href='../index.html'>news</a>::<wbr><a href='index.html'>rust_1_24</a>::<wbr><a class="struct" href=''>Script</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../src/show_notes/news/rust_1_24.rs.html#165' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Script;</pre><div class='docblock'><h1 id="rust-124" class="section-header"><a href="#rust-124">Rust 1.24</a></h1>
+<p>Hello, I’m Chris Krycho and this is New Rustacean: a show about the Rust programming language and the people who use it. This is a news episode for Rust 1.24.</p>
+<h2 id="rust-release" class="section-header"><a href="#rust-release">Rust Release</a></h2>
+<p>With apologies for this being over a week late—I’ve been first sick and then swamped by work!—let’s dive right in!</p>
+<p>It’s mostly the usual with this release: lots of small changes and wins. There’s one <em>really</em> big win landing, but first, a few highlights from the smaller pieces:</p>
+<ul>
+<li>
+<p>The Rust compiler now defaults to doing builds with 16 parallel codegen units for release builds. This means that it splits up the LLVM code generation process into 16 pieces and runs them in parallel to whatever extent it can. The upside of this is that build times can be significantly faster, because the LLVM code generation is something like <em>half</em> of the work that the Rust compiler does. The downside is that the compiled executable can be slightly slower, because LLVM doesn’t have quite as much insight into the whole codebase and therefore into some of the optimizations that might be available.</p>
+<p>Since there’s a tradeoff here, this is also a configurable option: you can set the number of codegen units to 1 when doing a build and wait the extra time for the build to finish in exchange for the absolute fastest executable on the other end… or you can trade a little bit of runtime performance for faster rebuild cycles.</p>
+</li>
+<li>
+<p>Speaking of performance: the <code>str::find::&lt;char&gt;</code> function got an improvement under the hood that should speed up any use of it by a factor of 10 in most scenarios. Yes, 10x faster!</p>
+</li>
+</ul>
+<p>Now, about that <em>big win</em>: as of this release, Cargo defaults to using incremental compilation by default for all non-release builds. <em>Incremental compilation</em> means that Rust no longer needs to rebuild every part of your crate just because you added a <code>println!()</code> in one module: it only recompiles the things it actually <em>needs</em> to. It does this by storing the results of its previous builds in a <em>cache</em>, and then leaning on that wherever possible. Work on this is far from done, but this is a huge step in improving the experience of working with Rust on a day-to-day basis.</p>
+<p>In terms of the real-world impact: when you’re using incremental compilation, your <em>first</em> build will as often as not be slower, because it has to create those cache artifacts for use in later builds. However, <em>after</em> that, you can expect to see fairly dramatic decreases in compile times compared to a non-incremental rebuild (a.k.a. what we’ve all had for years now)—compiles might take anywhere from half as long all the way down to a tenth or a fifth as long. And this remains a big focus, so you can expect to see this continue to improve!</p>
+<p>Note, again, that this is only enabled for <em>development</em>, i.e. non-release builds. For release builds, you want to throw everything at it in the smartest way possible, and that means turning off incremental compilation to give LLVM all those passes it needs with the whole compile artifact together.</p>
+<p>The net of all of these changes but <em>especially</em> incremental compilation is that stable Rust should just be dramatically nicer to work with in terms of compile times now.</p>
+<h2 id="2018-roadmap-rfc" class="section-header"><a href="#2018-roadmap-rfc">2018 Roadmap RFC</a></h2>
+<p>The weeks since the last Rust release have also seen a concerted effort to sort out the game plan for this year’s development cycle. As I noted in the previous news episode, the core team took a different tack this year than previous years, soliciting input not only via the normal RFC process but through blog posts. That proved to be a <em>smashing</em> success: there were something like a hundred blog posts that were part of the conversation! Aaron Turon did the work to read through <em>all</em> of them and synthesized them into a draft of the RFC for the 2018 Roadmap, and then got further input on the text of that. The result is a nice, tight story that particularly picks up on a theme from a bunch of the different blog posts that circulated: basically, making 2018 a continuation of the late-2017 <code>impl</code> period, and <em>finishing</em> a lot of the things we already have in flight.</p>
+<p>The major <em>goals</em> for 2018 are going to be:</p>
+<ul>
+<li>Ship an epoch release: Rust 2018</li>
+<li>Build resources for intermediate Rustaceans</li>
+<li>Connect and empower Rust’s global community</li>
+<li>Grow Rust’s teams and new leaders within them</li>
+</ul>
+<p>Those are pretty high-level, so at the more on-the-ground level, the Rust community is going after these by targeting specific domains:</p>
+<ul>
+<li>Web services</li>
+<li>WebAssembly</li>
+<li>CLI apps</li>
+<li>Embedded devices</li>
+</ul>
+<p>These are not the <em>only</em> things going, of course, but they represent the <em>core</em> of the work for this year. Others, including further work on language features that are already in nightly, tooling improvements like continuing to push <em>hard</em> on build times, and so on, are also part of this overall roadmap. So much so that compile times are explicitly called out in the full text of the RFC, for example, even though they’re not one of those areas-of-focus!</p>
+<h2 id="rust-2018" class="section-header"><a href="#rust-2018">“Rust 2018”</a></h2>
+<p>Now, one other major point discussed by the RFC, and which we should talk about in some detail, is the concept of a Rust “epoch.” This is part of Rust’s still-developing strategy for <em>stability without stagnation.</em> We’ve gone through almost 3 years of completely backwards-compatible releases now – 25 releases since 1.0! – and the language has evolved an astounding amount over that time.</p>
+<p>Rust 2018 marks not a departure but a thoughtful continuation of this theme. It’s an <em>epoch</em> – ‘e’ ‘p’ ‘o’ ‘c’ ‘h’, an era in history – and marks the start of the next chapter for Rust. And Rust 2018 really represents two distinct (though related) things: a <em>technical</em> step, and a <em>marketing</em> step (and the two go together). Let’s talk through what the epoch means in that order: technical, then marketing.</p>
+<h3 id="technical" class="section-header"><a href="#technical">Technical</a></h3>
+<p>Technically-speaking, a Rust epoch has two major things going for it:</p>
+<ol>
+<li>The possibility for a backwards-compatible breaking change. Yes, you heard that right, and I’ll explain in a moment.</li>
+<li>The ability to bring together the whole ecosystem into a kind of “technical coherence.”</li>
+</ol>
+<h4 id="backwards-compatible-breaking-changes" class="section-header"><a href="#backwards-compatible-breaking-changes">Backwards-compatible breaking changes</a></h4>
+<p>So: backwards-compatible breaking changes. That sounds… impossible. Let’s start with the motivation, though. One thing that everyone generally recognizes is desirable is the ability to use the lessons learned as you develop a language to continue to improve language design.</p>
+<p>There are significant problems with permanent backwards-compatibility: ask C or JavaScript! There are parts of the language that (a) effectively no one uses and (b) effectively everyone wishes no longer existed. However, neither language (and especially JavaScript) wants to introduce breaking changes, and for good reason. Code written decades ago still needs to work! On the web, especially, that’s one of the fundamental commitments that all the standards bodies and browser vendors <em>mostly</em> share (at least as concerns JavaScript): <em>don’t break backwards compatibility.</em> Over time, though, this leaves you painted into corners by language design decisions made many years ago that you cannot undo—even when a decade of using those features leaves you convinced they were a bad idea!</p>
+<p>But there are also <em>really</em> serious potential problems for making breaking changes to a language. Just ask Python: it’s been a decade since Python 3 came out and the community-wide transition from Python 2 <em>still</em> isn’t over. The transition path, for a huge amount of that time, simply wasn’t smooth enough. It was enormously costly for anyone to convert their library to Python 3, and it was very difficult (especially early on) to ship python libraries that worked with both versions.</p>
+<p>So we’re caught on the horns of a dilemma, it seems. Maintain backwards compatibility, even when you see opportunities for really significant improvement, so as not to break your users or split the community—or make a breaking change, which most people agree <em>does</em> improve the language but which imposes major costs for transition and effectively splits the community.</p>
+<p>We <em>think</em>, as a Rust community, that we have a third way. We can introduce an <em>epoch</em>, which is a marker for a set of <em>parsing-level</em> breaking changes, and set a flag on a per-project basis that tells the Rust compiler “Parse and compile this crate with <em>these</em> rules.” At the same time, the Rust compiler will maintain support for all <em>previous</em> epoch’s parse modes. And the compiled output between all epochs will remain compatible with each other.</p>
+<p>In practical terms, that means that we can introduce new keywords, stop treating certain old keywords as keywords, and even make tweaks to make certain kinds of other declarations valid which weren’t before and vice versa. But the compiled output of whatever tweaks we make for Rust 2018 will work alongside compiled output from what we might retroactively call the Rust 2015 epoch. So Rust you wrote in a crate that you felt was “finished” back in 2015, on Rust 1.2 or something, can be a dependency of Rust 2018 code. Even more interestingly, if you wanted to go back and update that—perhaps because it was using a long pre-1.0 version of the Serde serialization and deserialization crate—you could continue to write Rust 2015-style code, while updating to use a version of Serde that was written in Rust 2018.</p>
+<p>In other words, we get to make small, carefully considered, breaking changes to the surface syntax of the language <em>without breaking backwards compatibility</em>. This is Rust’s “stability without stagnation” mantra taken to a whole new level.</p>
+<p>This doesn’t cover <em>every</em> kind of backwards-incompatible change you ever might want to make to a language, of course. Deep changes to semantics still aren’t viable. If Rust (for some unfathomable reason) wanted to throw away its core notion of ownership and the borrow-checker and everything else, well… that would be the kind of breakage this kind of thing would not and could not solve. But for the kinds of ergonomic improvements and tweaks that are now fairly obviously desirable based on the community-wide developments that have happened since Rust 1.0 came out… we can solve those!</p>
+<h4 id="synchronizing-the-ecosystem" class="section-header"><a href="#synchronizing-the-ecosystem">Synchronizing the ecosystem</a></h4>
+<p>The other piece of this is the opportunity to bring the ecosystem back into a degree of synchrony. The last three years have seen enormous exploration and growth in both the broader Rust ecosystem and in Rust itself. There has been nearly constant change in the language – and while that’s amazing, it also means that it’s easy for different pieces of the ecosystem to be moving at different speeds. Keeping all of the documentation in sync with the language and standard library, for example, is the kind of thing that’s hard to manage just in terms of technical accuracy. It’s even harder to make sure that everything stays up to date in terms of what is idiomatic.</p>
+<p>An epoch gives us a chance to <em>focus</em> on that kind of whole-ecosystem coherence. The push up to Rust 1.0 had a lot of that kind of focus: it was important to present a unified and interesting story about what Rust had to offer now that it had reached a point of <em>stability</em>, and to make it as easy as possible for someone coming in to check it out now that it had hit 1.0 to say “Oh, here are how the pieces fit together.”</p>
+<p>The goal is something of a repeating process of <em>intentional</em> fragmentation and experimentation followed by coming back together with the shared solutions and results of that fragmentation and experimentation into a coherent whole. That dynamic can be incredibly powerful. We’ve already seen some of the fruit of that in the 2017 <code>impl</code> period, and 2018 is shaping up to be a whole year of focus that way. I think it’s going to yield huge dividends.</p>
+<p>Among other things, it means landing all those efforts the Rust 2018 Roadmap RFC outlined. It also means polishing up a new version of Rust’s documentation tooling, and landing solid 1.0 versions of rustfmt, improving the reliability and usefulness of the Rust Language Server, and bringing all the documentation up to date (hopefully including the reference!).</p>
+<h3 id="marketing" class="section-header"><a href="#marketing">Marketing</a></h3>
+<p>The idea of an “epoch” also lets us <em>use</em> all that technical-and-ecosystem coherence to help “sell” Rust. There are lots of people out there who’ve looked at Rust and decided it was too immature for—and in many cases that was a perfectly reasonable decision! But Rust has changed a <em>lot</em> in the last few years—from the availability of stable libraries in the ecosystem at large, to the ease of using learning and using the language itself, to the quality and usability of tooling in editors, and so on. It’s useful in driving adoption to <em>let people know about that</em>!</p>
+<p>So the other thing Rust 2018 does is give us a place to showcase all those improvements, across a bunch of different fronts. That goes for all sorts of things. One of those I’ve been looking forward to the longest is bringing a unified and coherent design language to all the Rust web properties, and using that design language for a revamped and more useful Rust landing page with better explanations of how to use Rust, how to get involved in the community, and so on. And as we land the Rust 2018 epoch—probably with Rust 1.29, in early fall—we will have a coherent story to tell people about the value proposition of Rust and why they might look at it again if they looked at it once before.</p>
+<h2 id="outro" class="section-header"><a href="#outro">Outro</a></h2>
+<p>So that’s a look at what’s coming in Rust in 2018! Thanks as always to this month’s sponsors—you’re all awesome, and I appreciate you. The sponsors who contributed at least $10 were:</p>
+<h3 id="sponsors" class="section-header"><a href="#sponsors">Sponsors</a></h3>
+<p>Thanks, as always, to all of this month's sponsors. Contributors who gave at least $10 included:</p>
+<ul>
+<li>Aaron Turon</li>
+<li>Alexander Payne</li>
+<li>Anthony Deschamps</li>
+<li>Chris Palmer</li>
+<li>Behnam Esfahbod</li>
+<li>Dan Abrams</li>
+<li>Daniel Collin</li>
+<li>David W. Allen</li>
+<li>Hans Fjällemark</li>
+<li>John Rudnick</li>
+<li>Matt Rudder</li>
+<li>Nathan Sculli</li>
+<li>Nick Stevens</li>
+<li>Peter Tillemans</li>
+<li>Olaf Leidinger</li>
+<li>Oluseyi Sonaiya</li>
+<li>Raph Levien</li>
+<li>Vesa Khailavirta</li>
+<li>and Zachary Snyder</li>
+</ul>
+<p>If you’d like to sponsor the show, you set up ongoing support at patreon.com/newrustacean, or send a one-off at any of a number of other services listed at newrustacean.com. The website also has scripts and code samples for most of the teaching episodes as well as transcripts for many of the interviews, along with full show notes for every episode. You can find the notes for <em>this</em> episode at &lt;newrustacean.com/show_notes/cysk/serde/&gt;.</p>
+<p>If you're enjoying New Rustacean, please help others find it – by telling them about it in person, by sharing it on social media, or by rating and reviewing the show in your favorite podcast directory.</p>
+<p>The show is on Twitter @newrustacean, or you can follow me there @chriskrycho. Tweet me with news, topic ideas, etc! You can also respond in the threads on the Rust user forums, Reddit, or Hacker News, or—and this will always be my favorite—just send me an email at hello@newrustacean.com.</p>
+<p>Until next time, happy coding!</p>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+            <div id='implementations-list'>
+        </div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../../show_notes/news/rust_1_24/struct.Script.html" title="struct show_notes::news::rust_1_24::Script">Script</a></code><a href='#impl-Send' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../../show_notes/news/rust_1_24/struct.Script.html" title="struct show_notes::news::rust_1_24::Script">Script</a></code><a href='#impl-Sync' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

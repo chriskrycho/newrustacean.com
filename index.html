@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>New Rustacean: A Podcast About Learning Rust</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <link href="/favicon.png" type="image/png" rel="icon">
+  <link href="/favicon.ico" type="image/ico" rel="icon">
+
+  <link rel="stylesheet" href="/landing.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <main class="clearfix">
+    <div class="card">
+      <div class="card_side front">
+        <div class="pad">
+          <img src="podcast.png" alt="New Rustacean logo image" />
+        </div>
+      </div>
+      <div class="card_side back">
+        <div class="pad">
+          <h1>About</h1>
+          <p>
+            Hello! This is a podcast about learning the programming language
+            Rust—from scratch! Apart from this spiffy landing page, all the site
+            content is built with Rust's own documentation tools. You can hear
+            more about why I'm doing this in <b>e000: Why Am I Here?</b> And
+            there's much more to come!
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <nav>
+    <ul class="plain_list">
+      <li>
+        <ul class="inner_list plain_list">
+          <li><a title="Show 'About'" href="#" id=about><i class="fa fa-fw fa-user"></i>About</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul class="inner_list plain_list">
+          <li><a title="Go to the show notes" href="/show_notes/"><i class="fa fa-fw fa-list-ol"></i>Show Notes</a></li>
+          <li><a title="Subscribe to the show" href="/feed.xml"><i class="fa fa-fw fa-rss"></i>Feed</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul class="inner_list plain_list">
+          <li><a title="See the show in iTunes" href="https://itunes.apple.com/us/podcast/new-rustacean/id1041815075"><i class="fa fa-fw fa-music"></i>iTunes</a></li>
+          <li><a title="Subscribe in Overcast" href="https://overcast.fm/itunes1041815075/new-rustacean"><i class="fa fa-fw fa-play-circle"></i>Overcast</a></li>
+          <li><a title="Subscribe in Pocket Casts" href="http://pca.st/DG0A"><i class="fa fa-fw fa-play-circle-o"></i>Pocket Casts</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul class="plain_list inner_list">
+          <li><a title="High-level sponsors" href="/sponsors.html">✨ Sponsors ✨</a></li>
+          <li><a title="Fund via Patreon" href="https://www.patreon.com/newrustacean" class=funding><i class="fa fa-fw fa-usd"></i>Patreon</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul class="plain_list inner_list">
+          <li><a title="Fund via cash.me" href="https://cash.me/$chriskrycho" class=funding><i class="fa fa-fw fa-usd"></i>Cash.me</a></li>
+          <li><a title="Fund via Dwolla" href="https://www.dwolla.com/hub/chriskrycho" class=funding><i class="fa fa-fw fa-usd"></i>Dwolla</a></li>
+          <li><a title="Fund via Venmo" href="https://www.venmo.com/chriskrycho" class=funding><i class="fa fa-fw fa-usd"></i>Venmo</a></li>
+          <li><a title="Fund via Flattr" href="https://flattr.com/profile/chriskrycho" class="funding"><i class="fa fa-fw fa-usd"></i>Flattr</a></li>
+          <li><a title="Fund via PayPal.me" href="https://paypal.me/chriskrycho" class="funding"><i class="fa fa-fw fa-usd"></i>PayPal.me</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <footer>
+    <ul class="plain_list colophon_list">
+      <li>
+        Landing page design by <a href="//www.chriskrycho.com">Chris Krycho</a>.
+      </li>
+      <li>
+        All content licensed under a Creative Commons Attribution license: do
+        whatever you like with this; just credit me!
+      </li>
+      <li>
+        Rust documentation design belongs to the Rust language team, not me!
+      </li>
+    </ul>
+  </footer>
+  <script type="text/javascript">
+    (function() {
+      // Get all the "cards" (really, sides of the cards)
+      var card = document.querySelector('.card');
+      var about = document.querySelector('#about');
+
+      card.addEventListener("click", flipper(card));
+      about.addEventListener("click", flipper(card));
+
+      // Return an event handler, flipping the card passed as an argument.
+      function flipper(_card) {
+        return function(event) {
+          event.preventDefault();
+          if (_card.classList.contains("flipped")) {
+            _card.classList.remove("flipped");
+          }
+          else {
+            _card.classList.add("flipped");
+          }
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

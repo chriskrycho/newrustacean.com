@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `_7` mod in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, _7">
+
+    <title>show_notes::bonus::_7 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css" id="themeStyle">
+    <script src="../../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Module _7</p><div class="sidebar-elems"><p class='location'><a href='../../index.html'>show_notes</a>::<wbr><a href='../index.html'>bonus</a></p><script>window.sidebarCurrent = {name: '_7', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Module <a href='../../index.html'>show_notes</a>::<wbr><a href='../index.html'>bonus</a>::<wbr><a class="mod" href=''>_7</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../src/show_notes/bonus/_7.rs.html#1-139' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Katas---or: learning by doing</p>
+<ul>
+<li><strong>Date:</strong> September 10, 2016</li>
+<li><strong>Subject:</strong> Building (and celebrating) all the little, not-so-glorious
+pieces of the Rust ecosystem.</li>
+<li><strong>Audio:</strong>
+<ul>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_7.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_7.ogg">Ogg</a></li>
+</ul>
+</li>
+</ul>
+<p><audio style="width: 100%" style="width: 100%" title="Katas---or: learning by doing" controls preload=metadata>
+<source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_7.mp3">
+<source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_7.ogg">
+</audio></p>
+<h2 id="notes" class="section-header"><a href="#notes">Notes</a></h2>
+<p>One of the best ways to learn is to pick a small problem you have already
+internalized, and to do it again but in a new language or in a new way in a
+language you already know.</p>
+<h2 id="links" class="section-header"><a href="#links">Links</a></h2>
+<ul>
+<li><a href="http://arewegameyet.com">AreWeGameYet</a></li>
+<li><a href="https://areweideyet.com">AreWeIDEYet</a></li>
+<li><a href="http://www.arewewebyet.org">AreWeWebYet</a></li>
+<li><a href="https://internals.rust-lang.org/t/setting-our-vision-for-the-2017-cycle/3958">Setting our vision for the 2017 cycle</a></li>
+<li><a href="https://blog.rust-lang.org/2016/09/08/incremental.html">Incremental Compilation</a></li>
+<li><code>cargo-incremental</code>:
+<ul>
+<li><a href="https://internals.rust-lang.org/t/want-to-help-develop-tool-for-testing-incremental-compilation/3963">internals post</a></li>
+<li><a href="https://github.com/nikomatsakis/cargo-incremental/">repo</a></li>
+</ul>
+</li>
+<li><a href="http://elm-lang.org">Elm</a></li>
+<li>Dave Thomas' <a href="http://codekata.com">CodeKata</a></li>
+<li>Crates I used in my Rust &quot;kata&quot;:
+<ul>
+<li>Hyper
+<ul>
+<li><a href="https://docs.rs/hyper/">docs</a></li>
+<li><a href="https://crates.io/crates/hyper">crate</a></li>
+<li><a href="https://github.com/hyperium/hyper">repo</a></li>
+</ul>
+</li>
+<li>Serde
+<ul>
+<li><a href="https://docs.rs/serde/">docs</a></li>
+<li><a href="https://crates.io/crates/serde">crate</a></li>
+<li><a href="https://github.com/serde-rs/serde">repo</a></li>
+</ul>
+</li>
+<li>Pencil (inspired by <a href="http://flask.pocoo.org">Flask</a>)
+<ul>
+<li><a href="https://docs.rs/pencil/">docs</a></li>
+<li><a href="https://crates.io/crates/pencil">crate</a></li>
+<li><a href="https://github.com/fengsp/pencil">repo</a></li>
+</ul>
+</li>
+<li><code>handlebars-rust</code>:
+<ul>
+<li><a href="https://docs.rs/handlebars/">docs</a></li>
+<li><a href="https://crates.io/crates/handlebars">crate</a></li>
+<li><a href="https://github.com/sunng87/handlebars-rust">repo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="sponsors" class="section-header"><a href="#sponsors">Sponsors</a></h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li>Cameron Mochrie</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Doug Reeves</li>
+<li>Hamza Sheikh</li>
+<li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li>
+<li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li>
+<li>Keith Gray</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Matthew Piziak</li>
+<li>Micael Bergeron</li>
+<li>Nils Tekampe</li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (&quot;rillian&quot;)</li>
+<li>Ralph &quot;FriarTech&quot; Loizzo</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Sean Jensen-Gray</li>
+<li>Steven Murawksi</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as
+well. You know who you are!)</p>
+<h3 id="become-a-sponsor" class="section-header"><a href="#become-a-sponsor">Become a sponsor</a></h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact" class="section-header"><a href="#contact">Contact</a></h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul>
+</li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul>
+</li>
+</ul>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

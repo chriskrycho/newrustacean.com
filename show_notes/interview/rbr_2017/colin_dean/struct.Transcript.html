@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Transcript` struct in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Transcript">
+
+    <title>show_notes::interview::rbr_2017::colin_dean::Transcript - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css" id="themeStyle">
+    <script src="../../../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Struct Transcript</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">Sync</a></div></div><p class='location'><a href='../../../index.html'>show_notes</a>::<wbr><a href='../../index.html'>interview</a>::<wbr><a href='../index.html'>rbr_2017</a>::<wbr><a href='index.html'>colin_dean</a></p><script>window.sidebarCurrent = {name: 'Transcript', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../../index.html'>show_notes</a>::<wbr><a href='../../index.html'>interview</a>::<wbr><a href='../index.html'>rbr_2017</a>::<wbr><a href='index.html'>colin_dean</a>::<wbr><a class="struct" href=''>Transcript</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/show_notes/interview/rbr_2017/colin_dean.rs.html#20' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Transcript;</pre><div class='docblock'><p>Read the episode transcript!</p>
+<h1 id="colin-dean" class="section-header"><a href="#colin-dean">Colin Dean</a></h1>
+<p><strong>Chris:</strong> Can you tell me your name?</p>
+<p><strong>Colin:</strong> I am Colin Dean.</p>
+<p><strong>Chris:</strong> Hi, Colin. Thanks for sitting down with me. How did you get into Rust?</p>
+<p><strong>Colin:</strong> Uh, so, I used to work with Carol Nichols-Goulding who is one of the - I think she’s now on the Rust core team. She introduced me to Rust a few years ago, I’ve held several meet-ups with Rust, and I, just in the last year or so, started using Rust at work.</p>
+<p><strong>Chris:</strong> Awesome. Can you tell me where you work?</p>
+<p><strong>Colin:</strong> Arcadia Healthcare Solutions, where I’m director of software engineering.</p>
+<p><strong>Chris:</strong> Awesome. What kind of cool things are you getting up to with Rust at this point?</p>
+<p><strong>Colin:</strong> So our first big project is actually a very small Rust program that we’re using to act as a supervisor for a much larger system. We needed something that was really reliable, could do concurrent code, and most importantly it was going to be native binary. So we eliminated a lot of contenders for that, kind of arrived at C or C+ +, and then I was like, “Oh, hell no, we’re gonna use Rust.”</p>
+<p><strong>Chris:</strong> Hahaha! I can understand. What are you excited about in the next - I don’t know - six months, a year...what kind of things do you have on your radar for Rust work?</p>
+<p><strong>Colin:</strong> Probably the two big ones are shipping this product that will soon be responsible for supervising petabytes worth of transfer of health record data, and, um, contributing a whole lot to the Rust ecosystem. I’ve hired somebody who works on crates and she’ll be doing a lot of Rust stuff and kind of owning it. It’s her first big job, well, her first job, period - at least her first programming job - and she’ll be in charge of this little Rust component and, so shipping that’s really important, and then figuring out how we want to do all the continuous integration, how we want to support it when things go wrong...those are skills that I’ll be learning, she’ll be learning, and contributing back to the Rust ecosystem, where we’ll be shipping on Windows, so Rust is not necessarily Windows-super-friendly yet, and where we find gaps, we’re going to be contributing the code back to the community.</p>
+<p><strong>Chris:</strong> That sounds awesome, doubly so because you’re hiring, or you’ve hired, one person and you guys are actually using Rust. What have been big wins, and what are perhaps any pain points so far with Rust?</p>
+<p><strong>Colin:</strong> So, um, we haven’t had any big wins yet; the system is still very new, it’s still less than five hundred lines of code. Our probably biggest pain point right now is how to do CI on Windows. Um, I’m kind of used to a development world where I’ve got containers that have the entire build everything, and I kind of push it up, and it just works. Think, like, Travis, or Jenkins on steroids, and I don’t have that where we are right now. Our Jenkins installation has ten jobs in it, and, uh, they all do stuff with Gradle for a Java app that another team uses, so I’m kind of starting from nothing and trying to figure out how do I do this. There are some other...I think Appveyor does, like, Windows builds, so we’re looking at that, but we have some requirements that might need to keep that in-house, and so we’ll have to sort through that, see what exactly we want to do. Um, but the CI story is probably the hard part. I’m also finding some interesting problems with kind of an immaturity of documentation, like the Rust docs are great, but there’s some parts of it that are - especially on crates, because so much of the library is crates - that they’re just not very well documented. So, I’m finding myself contributing a little bit here and there to documentation. I put up a couple of pull requests just today, fixing some docs. So, I think that’s gonna continue to be a thing, and I know that they - the Rust team - is doing a lot to try to push people to improve how they document their code, because the Rust team knows how much of the Rust ecosystem is external libraries. It’s not, you know, there’s no...there’s a standard library in Rust, but it’s not a standard library in, like, in the sense of like a Java standard library where I’m kind of coming from, where there’s just everything.</p>
+<p><strong>Chris:</strong> Absolutely. Thank you for talking with me. I look forward to seeing and hearing more of what Arcadia gets up to and what you get up to!</p>
+<p><strong>Colin:</strong> Cool, thank you very much!</p>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+            <div id='implementations-list'>
+        </div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../../../show_notes/interview/rbr_2017/colin_dean/struct.Transcript.html" title="struct show_notes::interview::rbr_2017::colin_dean::Transcript">Transcript</a></code><a href='#impl-Send' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../../../show_notes/interview/rbr_2017/colin_dean/struct.Transcript.html" title="struct show_notes::interview::rbr_2017::colin_dean::Transcript">Transcript</a></code><a href='#impl-Sync' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

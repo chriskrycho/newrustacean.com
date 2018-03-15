@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Script` struct in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Script">
+
+    <title>show_notes::news::rust_1_21_1_22::Script - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css" id="themeStyle">
+    <script src="../../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Struct Script</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">Sync</a></div></div><p class='location'><a href='../../index.html'>show_notes</a>::<wbr><a href='../index.html'>news</a>::<wbr><a href='index.html'>rust_1_21_1_22</a></p><script>window.sidebarCurrent = {name: 'Script', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../index.html'>show_notes</a>::<wbr><a href='../index.html'>news</a>::<wbr><a href='index.html'>rust_1_21_1_22</a>::<wbr><a class="struct" href=''>Script</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../src/show_notes/news/rust_1_21_1_22.rs.html#181' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Script;</pre><div class='docblock'><h1 id="news-rust-121-and-122" class="section-header"><a href="#news-rust-121-and-122">News: Rust 1.21 and 1.22</a></h1>
+<p>Hello, I'm Chris Krycho, and this is New Rustacean, a show about the Rust programming language and the people who use it. This is a news episode about Rust 1.21 and 1.22.</p>
+<p>Listeners will notice that this has two releases in it and that I missed the 1.21 release. There's a good reason for that! I was moving across the country <em>and</em> prepping for Rust Belt Rust, which was a <em>fabulous</em> conference. If it happens again next year, you should definitely go: it was a really nice event, large enough to be interesting but small enough that you could meet many of the people there. And the micro-interviews I recorded there, which this will come out right in the middle of, were a blast---it was neat to see just how wide the range of attendees were, from one person I interviewed who had done no Rust at all before showing up to others who had been there since well before 1.0.</p>
+<p>And now, let's talk about news that has happened through the interval while Rust 1.21 and 1.22 came out!</p>
+<h2 id="121" class="section-header"><a href="#121">1.21</a></h2>
+<p>Rust 1.21 came out on October 12, 2017. As is often the case, it wasn't an especially large release, and as usual that's no bad thing! 1.21 was essentially a &quot;quality-of-life&quot; improvement in a couple areas:</p>
+<ul>
+<li>
+<p>There are some places where locally-declared variables could be treated as <code>static</code> and <em>just work</em> instead of being stack-allocated and therefore having local scope lifetimes... well, now they are treated as static and just work. This is one of the many small things that the Rust compiler team has done as part of this year's ergonomics initiatives that take things that intuitively seem like they <em>should</em> be fine, and smarten up the language so they <em>are</em> fine.</p>
+</li>
+<li>
+<p>The standard library now includes the <code>for_each</code> method on the <code>Iterator</code> trait. For a long while, you've been able to do this via a crate, but it's super handy to have it present in the standard library. Often you just use a <code>for</code> loop, but sometimes, when you've chained a bunch of iterator calls together, and you want to do some effectual operation at the end of them, having a <code>.for_each</code> call at the end of that chain is <em>super</em> handy.</p>
+</li>
+<li>
+<p>1.21 was the first release to support shipping the preview of the Rust Language Server via <code>rustup</code>. And the RLS is coming <em>soon</em> to stable – Nick Cameron wrote <a href="https://www.ncameron.org/blog/when-will-the-rls-be-released/">a blog post titled &quot;When will the RLS be released?&quot;</a> between the 1.21 and 1.22 releases indicating it should be in a non-preview, stable state by early 2018. I've linked that blog post in the show notes so you can get the details!</p>
+</li>
+<li>
+<p>One other neat little library stabilization: you can now use the function <code>std::mem::discriminant</code> to be able to check the specific <em>discriminant</em> of an <code>enum</code> type, which lets you compare whether two items are the same variant of enum, without bothering with the equality of the underlying data, and without needing to do a match expression. This isn't a <em>super</em> common need, but even in my still relatively limited experience, it's something I've wanted!</p>
+</li>
+<li>
+<p>Finally, Cargo got a nice little feature for supporting a pretty common use case: where you need to patch a particular feature, and it hasn't gotten upstreamed yet. You can just use the <code>[patch]</code> key in your Cargo.toml to override where to look up a given dependency.</p>
+</li>
+</ul>
+<h2 id="122" class="section-header"><a href="#122">1.22</a></h2>
+<p>Rust 1.22 was a nice Thanksgiving present, for those of us in the United States: it came out November 22 (<em>not</em> on a Thursday, like normal, since that was the holiday). Like 1.21, this is a relatively small release, but the main quality-of-life feature in this one will make a pretty big difference in a <em>lot</em> of the code we write.</p>
+<p>That feature is the first stable implementation of the <code>Try</code> trait for something besides <code>Result</code>. You might better know the <code>Try</code> trait as the trait which makes the <code>?</code> operator work as a quick-return for functions when you have a bunch of different <code>Result</code>s and want to quickly return <code>Err</code> cases and proceed only if you have an <code>Ok</code> case. Rust 1.22 stabilizes <code>impl Try for Option</code>, so you can now use <code>?</code> to do the same kind of immediate-return if you have a <code>None</code> and continue through the body of your function only if you have a <code>Some</code>. This bit of trait-based syntactic sugar helps a <em>ton</em> when you have a function with an <code>Option</code> return type, and which has a number of places where it might return <code>None</code>.</p>
+<p>In the future, you'll actually be able to freely use it with a mix of both <code>Option</code> and <code>Result</code> return types, since <code>Result</code> and <code>Option</code> both implement the <code>Into</code> and <code>From</code> traits for each other. That's not there with 1.22... but it <em>is</em> there on nightly! Coming Soon™️.</p>
+<p>One other important note about 1.22: you'll just get this automatically if you're using <code>rustup</code> (and for the most part, you should just be using <code>rustup</code>!), but there are <em>two</em> 1.22 releases: 1.22.0, the normal release, and 1.22.1, which fixed a problem in Cargo with the latest version of macOS. <code>rustup update stable</code> will give you 1.22.1 automatically.</p>
+<h2 id="other-news" class="section-header"><a href="#other-news">Other news</a></h2>
+<p>So that's Rust proper! But there are some other neat things going on around the ecosystem since Rust 1.20 came out, too.</p>
+<p>One fun thing I wanted to mention again after mentioning it in my special 50th episode is Rusty Spike: Jonathan Turner's weekly Rust news podcast. The episodes are roughly 3–7 minutes long, and Jonathan has settled into a really nice rhythm and routine with the episodes. It's a great show, and it covers things at a much more granular level than these New Rustacean news episodes do, so I think they end up being nicely complementary. I strongly encourage you to check it out!</p>
+<h3 id="rust-conferences" class="section-header"><a href="#rust-conferences">Rust conferences</a></h3>
+<p>We've seen the end of the Rust conference season for the year, with the fall RustFest event in Zurich back at the end of September and, as I mentioned at the start of the episode, Rust Belt Rust at the end of October. The videos from RustFest are already up, so you can check those out. Videos from Rust Belt Rust are <em>not</em> out yet, but keep your eyes on their YouTube channel – last year they came out a couple months after the conference, and that seems pretty common. In the meantime, if you want to see the content for <em>my</em> talk at Rust Belt Rust, both the slides and the script are on my personal website.</p>
+<h3 id="the-failure-crate" class="section-header"><a href="#the-failure-crate">The <code>Failure</code> crate</a></h3>
+<p>Since Rust came out, people have been iterating on the best ways to do error-handling in large projects. The <code>Result</code> type is really nice for making sure you have type-level control over the ways your errors are handled, but there are two downsides to using <code>Result</code>s throughout your codebase:</p>
+<ol>
+<li>You can end up with a <code>Result</code> wrapping a <em>huge</em> variety of error types as their own enum, to account for all the different types of errors that can crop up in your library or application while still having a single <code>Result</code> type you can use throughout.</li>
+<li>Or you can end up with a bunch of different, much more specific <code>Result</code> error types, and then write a bunch of conversions between those error types for transitions between different parts of your library or application.</li>
+</ol>
+<p>Both of those involve a <em>lot</em> of boilerplate. They work, and for all the reasons we've talked about before on the show they're very much preferable to exceptions. But it'd be nice to <em>not</em> have to write so much of that boilerplate while still getting those benefits.</p>
+<p>For the first couple years of Rust 1.x, the go-to solution has been the Error Chain crate. As people used it in practice, a number of limitations and frustrations reared their heads—and so Rust contributor withoutboats recently released <a href="https://github.com/withoutboats/failure">the Failure crate</a>, which aims to improve on the design of Error Chain. I plan to dedicate a Crates You Should Know episode to <code>Failure</code> at some point relatively soon. It's an exciting development in the ergonomics initiative this year, and even if the crate is still pretty early in its development, it looks really nice.</p>
+<h3 id="wasm" class="section-header"><a href="#wasm">Wasm!</a></h3>
+<p>Next up: WebAssembly! WebAssembly, or wasm, is a format for targeting <em>browsers</em> with compiled code. Just last week, Alex Crichton <a href="https://github.com/rust-lang/rust/pull/45905">added early support</a> for compiling to wasm directly from the Rust compiler. While you've been able to compile to wasm with Rust for a while, it's been a hairy process involving a tool called emscriptem, which was really designed for C and C++ toolchains, and specifically for things like porting games to the browser. Many (perhaps even most) places we'd want to use Rust don't <em>need</em> all the extra runtime pieces that emscriptem supplied, so now we can ship zero-runtime Rust code straight into browsers using the Rust compiler itself. For someone like me, who writes TypeScript all day every day and would <em>love</em> to be able to add Rust to my client-side toolbox, this is just incredibly exciting. I'll <em>definitely</em> have a whole episode on this in the next few months. Note that this is very much <em>early</em> support, and lots of things probably won't work. But it's a very important step.</p>
+<h3 id="some-inbound-changes-with-rustdoc" class="section-header"><a href="#some-inbound-changes-with-rustdoc">Some inbound changes with Rustdoc</a></h3>
+<p>Last but not least, is something contributed by the community <a href="https://github.com/rust-lang/rfcs/pull/1990">via the RFC process</a>: <a href="https://github.com/rust-lang/rust/pull/44781">support for pulling in external Markdown documents as documentation for any given item</a>. The single most obvious win from this is reusing your README as the source for the docs for the crate itself. Up to now, if you wanted your README and your main crate docs to be the same, you had to manually copy it back and forth between the two. Now, on nightly (and hopefully it’ll land on stable in the next few releases), you can just mark any item with a doc include attribute pointing to the file location relative to the <code>src</code> directory, and it’ll pull that text in for you as documentation. So, for your README, you might add this line to the <code>lib.rs</code> item in the root of your crate:</p>
+<pre><code class="language-rs">#![doc(include=&quot;../README.md&quot;)]
+</code></pre>
+<p>In other words, it's just a normal attribute with an argument! (If you need a refresher on attributes, you can go back and listen to episode 7, where I introduced them.)</p>
+<p>This is something I have wanted for <em>ages</em>, and I’m incredibly excited about it. Not least, because as a result, the script for this show and all future shows (and, soon, previous episodes too) <em>is attached</em> to the show notes for the episode, on the <code>Transcript</code> struct! So to see it in practice, all you need to do is look at the source for this episode. I’ve had scripts for most episodes, but attaching them was a fair bit of manual work, and I just hadn’t made the time to do it—now I don’t have to!</p>
+<h2 id="outro" class="section-header"><a href="#outro">Outro</a></h2>
+<p>And that's a wrap on <em>this</em> news episode. The next news episode <em>should</em> come out in about six weeks when Rust 1.23 comes out! In the meantime, I hope you enjoy the remaining Rust Belt Rust micro-interviews, and you can also look forward to three interviews with participants in the Increasing Rust's Reach program, which will be released throughout December.</p>
+<p>Thanks as always to this month's $10-or-more sponsors:</p>
+<ul>
+<li>Aaron Turon</li>
+<li>Alexander Payne</li>
+<li>Anthony Deschamps</li>
+<li>Chris Palmer</li>
+<li>Behnam Esfahbod</li>
+<li>Dan Abrams</li>
+<li>Daniel Collin</li>
+<li>David W. Allen</li>
+<li>John Chandler</li>
+<li>Matt Rudder</li>
+<li>Nathan Sculli</li>
+<li>Nick Stevens</li>
+<li>Oluseyi Sonaiya</li>
+<li>Peter Tillemans</li>
+<li>Olaf Leidinger</li>
+<li>Raph Levien</li>
+<li>and Vesa Khailavirta</li>
+</ul>
+<p>If you're enjoying the show, please tell others about it so <em>they</em> can learn about Rust. You can also support the show by recommending it in podcast directories like iTunes, or by sharing it on social media.</p>
+<p>You can find show notes for this episode, including the episode script, at newrustacean.com/show_notes/news/rust_1_21_1_22/. I'm on Twitter and GitHub @chriskrycho, and the show is @newrustacean on Twitter. You can also email me at hello@newrustacean.com. I've got a good stockpile of show ideas from people sending me requests that way; please keep it up.</p>
+<p>Until next time, happy coding!</p>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+            <div id='implementations-list'>
+        </div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../../show_notes/news/rust_1_21_1_22/struct.Script.html" title="struct show_notes::news::rust_1_21_1_22::Script">Script</a></code><a href='#impl-Send' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../../show_notes/news/rust_1_21_1_22/struct.Script.html" title="struct show_notes::news::rust_1_21_1_22::Script">Script</a></code><a href='#impl-Sync' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

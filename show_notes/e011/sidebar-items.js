@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Expressive","Is the thing \"expressive\", whatever that means?"],["StaticallyKnown","Is the thing statically known?"],["Strong","Is the thing strong?"]],"fn":[["describe_type_systems","An incredibly contrived function which just shows enums at work."]],"struct":[["TypeSystem","Look, we composed those enums into another type. How... droll."]]});

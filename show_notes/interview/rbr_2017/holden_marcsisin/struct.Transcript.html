@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Transcript` struct in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Transcript">
+
+    <title>show_notes::interview::rbr_2017::holden_marcsisin::Transcript - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css" id="themeStyle">
+    <script src="../../../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Struct Transcript</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">Sync</a></div></div><p class='location'><a href='../../../index.html'>show_notes</a>::<wbr><a href='../../index.html'>interview</a>::<wbr><a href='../index.html'>rbr_2017</a>::<wbr><a href='index.html'>holden_marcsisin</a></p><script>window.sidebarCurrent = {name: 'Transcript', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../../index.html'>show_notes</a>::<wbr><a href='../../index.html'>interview</a>::<wbr><a href='../index.html'>rbr_2017</a>::<wbr><a href='index.html'>holden_marcsisin</a>::<wbr><a class="struct" href=''>Transcript</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/show_notes/interview/rbr_2017/holden_marcsisin.rs.html#20' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Transcript;</pre><div class='docblock'><h1 id="holden-marcsisin" class="section-header"><a href="#holden-marcsisin">Holden Marcsisin</a></h1>
+<p>C: Hello! Can you tell us your name and a little bit about yourself?</p>
+<p>H: Um, I’m Holden, I’m a student from Pittsburgh, and I go by Ospiel (sp?) on the forums and the reddit, and uh, yeah, I’ve been programming in Rust for about two years now.</p>
+<p>C: Awesome. How did you discover Rust?</p>
+<p>H: One of my friends - shortly after I had stopped programming in Java and Python just from school - I was interested in doing lower-level programming, in doing just more advanced stuff and I wasn’t aware of any other languages, so a friend of mine pointed me as just a (unintelligible)...in a chat room, one of my friends there, she pointed me towards Rust...so I started using it, I really liked it, I liked what it was doing with the language and I just kept using it for the past two years.</p>
+<p>C: Awesome. What kinds of things have you built with it or are you building with it at this point?</p>
+<p>H: For the most part I’ve done, uh, like, graphical stuff and user interface stuff, because I feel like the Rust current user interface story is pretty lacking, and it’s missing a lot of stuff...there are libraries that exist in Rust right now, but I don’t feel like they really take advantage of the features that Rust has, and they are mostly like libraries that exist in C and C+ +, which makes sense, because, like, the biggest one - GTK - it is bindings to uh, I don’t want to say just bindings to the language, because they put a lot of work into that library, and it’s in a pretty impressive state, but I think there’s only so far you can go by binding to another language and using the existing API, so I’d like to make something in Rust that takes advantage of Rust features like traits and uh, procedural macros to make something that is really pleasant to use and couldn’t be made in another language.</p>
+<p>C: That’s a really cool ambition. What - actually, do you have a lot of background in that kind of stuff, or did picking up Rust inspire you to do that?</p>
+<p>H: Um, I don’t have a lot of background. I am interested in doing stuff with video games, and I’d like to make tooling for those games in Rust, but one of the requirements to do that is to have a user interface library to actually make the tools, so I...that’s not currently available, so I’ve just been working on that for about the past year now. I’ve been trying out various different solutions, and not all of them have worked. Right now, I’m currently about on the third iteration through and I think this is like - what I have now is something that I think I will able to get out there and publish as something I am happy with.</p>
+<p>C: That’s awesome. Are there any particular things you’d call out as successes or failures for Rust itself, or for the community, that are worth note?</p>
+<p>H: Something that I would say that is going well with Rust is - the community is super nice and welcoming - and something that I really like is that, because it’s such a new language, people are encouraging experimentation in topics and this is facilitated by stuff like crates.io which lets you easily create the new packages and publish them, and quickly swap between packages and try them out, I think that’s really important...and because this is a new language and there aren’t established solutions that’s also helping it, because people can try out new ideas and create new solutions to problems that have already existed, and actually have a chance to succeed in that, because the community is so small that people can work together...they can create something that actually has a chance at making an impact. That’s not the case with say, from what I’ve seen with JavaScript, which has a bunch of people creating libraries, but the space there is super crowded, but C and C+ + there are already established solutions that are the go-to to use and you don’t have very much reason to use anything else besides those.</p>
+<p>C: That’s a great perspective. Thanks so much for your time.</p>
+<p>H: Mm-hm. Thanks for talking to me.</p>
+<p>C: My pleasure.</p>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+            <div id='implementations-list'>
+        </div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../../../show_notes/interview/rbr_2017/holden_marcsisin/struct.Transcript.html" title="struct show_notes::interview::rbr_2017::holden_marcsisin::Transcript">Transcript</a></code><a href='#impl-Send' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../../../show_notes/interview/rbr_2017/holden_marcsisin/struct.Transcript.html" title="struct show_notes::interview::rbr_2017::holden_marcsisin::Transcript">Transcript</a></code><a href='#impl-Sync' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `part_1` mod in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, part_1">
+
+    <title>show_notes::interview::_2::part_1 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css" id="themeStyle">
+    <script src="../../../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Module part_1</p><div class="sidebar-elems"><p class='location'><a href='../../../index.html'>show_notes</a>::<wbr><a href='../../index.html'>interview</a>::<wbr><a href='../index.html'>_2</a></p><script>window.sidebarCurrent = {name: 'part_1', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Module <a href='../../../index.html'>show_notes</a>::<wbr><a href='../../index.html'>interview</a>::<wbr><a href='../index.html'>_2</a>::<wbr><a class="mod" href=''>part_1</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/show_notes/interview/_2/part_1.rs.html#1-158' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Raph Levien on using Rust to build the Xi editor</p>
+<ul>
+<li><strong>Date:</strong> June 24, 2016</li>
+<li><strong>Subject:</strong> The Xi Editor project as a window into complex data
+structures, memory management, and the Unix philosophy.</li>
+<li><strong>Audio:</strong>
+<ul>
+<li><a href="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_2_part_1.m4a">M4A</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_2_part_1.mp3">MP3</a></li>
+<li><a href="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_2_part_1.ogg">Ogg</a></li>
+</ul>
+</li>
+</ul>
+<p><audio style="width: 100%" style="width: 100%" title="Interview 2::Part 1 – Raph Levien" controls preload=metadata>
+<source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_2_part_1.m4a">
+<source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_2_part_1.mp3">
+<source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_2_part_1.ogg">
+</audio></p>
+<h2 id="notes" class="section-header"><a href="#notes">Notes</a></h2>
+<p>Chris chats with Raph Levien about his background in software development,
+what attracted him to Rust, and how he's using Rust to build the Xi Editor,
+a project which aims to be the fastest text editor out there, with native
+user interfaces and a Rust text engine.</p>
+<h2 id="links" class="section-header"><a href="#links">Links</a></h2>
+<ul>
+<li>
+<p>Past work:</p>
+<ul>
+<li><a href="http://www.gimp.org">GIMP</a></li>
+<li><a href="http://gtk.org">GTK</a></li>
+<li><a href="http://www.ghostscript.com">GhostScript</a></li>
+<li><a href="https://fonts.google.com">Google Web Fonts</a></li>
+<li><a href="https://github.com/google/font-rs">font-rs</a></li>
+</ul>
+</li>
+<li>
+<p>Current projects:</p>
+<ul>
+<li><a href="https://github.com/google/pulldown-cmark">pulldown-cmark</a></li>
+<li><a href="https://github.com/google/xi-editor">Xi Editor</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Fuzz_testing">fuzz testing</a></p>
+</li>
+<li>
+<p><a href="http://developers.redhat.com/blog/2014/12/02/address-and-thread-sanitizers-gcc/">sanitizers</a></p>
+</li>
+<li>
+<p><a href="https://www.freetype.org">FreeType</a></p>
+</li>
+<li>
+<p><a href="https://www.freedesktop.org/wiki/Software/HarfBuzz/">HarfBuzz</a></p>
+</li>
+<li>
+<p><a href="http://site.icu-project.org">ICU</a></p>
+</li>
+<li>
+<p>Ropes</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Rope_%28data_structure%29">Wikipedia summary</a></li>
+<li><a href="http://citeseer.ist.psu.edu/viewdoc/download?doi=10.1.1.14.9450&amp;rep=rep1&amp;type=pdf">original paper</a></li>
+</ul>
+</li>
+<li>
+<p><a href="http://stackoverflow.com/questions/2307283/what-does-olog-n-mean-exactly">&quot;log n operation&quot;</a>, or <em>O(log n)</em></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Big_O_notation">Big O notation</a></li>
+</ul>
+</li>
+<li>
+<p>Rust:</p>
+<ul>
+<li><a href="http://doc.rust-lang.org/std/sync/struct.Arc.html"><code>Arc</code></a></li>
+<li><a href="http://doc.rust-lang.org/std/cell/struct.RefCell.html"><code>RefCell</code></a></li>
+<li><a href="http://doc.rust-lang.org/std/borrow/trait.Borrow.html"><code>Borrow</code></a></li>
+<li><a href="http://doc.rust-lang.org/std/convert/trait.AsRef.html"><code>AsRef</code></a></li>
+</ul>
+</li>
+<li>
+<p>Rust libraries</p>
+<ul>
+<li>Crossbeam: <a href="https://github.com/aturon/crossbeam">source</a> | <a href="http://aturon.github.io/crossbeam-doc/crossbeam/">docs</a></li>
+<li>Rayon: <a href="https://github.com/nikomatsakis/rayon">source</a> | <a href="http://nikomatsakis.github.io/rayon/rayon/">docs</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Unix_philosophy">Unix philosophy</a></p>
+<blockquote>
+<p>The Unix philosophy emphasizes building simple, short, clear,
+modular, and extensible code that can be easily maintained and
+repurposed by developers other than its creators. The Unix philosophy
+favors composability as opposed to monolithic design.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="sponsors" class="section-header"><a href="#sponsors">Sponsors</a></h2>
+<ul>
+<li>Aleksey Pirogov</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Doug Reeves</li>
+<li>Hamza Sheikh</li>
+<li>Lachlan Collins</li>
+<li>Leif Arne Storset</li>
+<li>Luca Schmid</li>
+<li>Micael Bergeron</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li>Ralph Giles (&quot;rillian&quot;)</li>
+<li>Ralph &quot;FriarTech&quot; Loizzo</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Ryan Ollos</li>
+<li>Vesa Kaihlavirta</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as
+well. You know who you are!)</p>
+<h3 id="become-a-sponsor" class="section-header"><a href="#become-a-sponsor">Become a sponsor</a></h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact" class="section-header"><a href="#contact">Contact</a></h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul>
+</li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul>
+</li>
+</ul>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

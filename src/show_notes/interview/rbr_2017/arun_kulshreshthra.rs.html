@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="Source to the Rust file `src/interview/rbr_2017/arun_kulshreshthra.rs`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang">
+
+    <title>arun_kulshreshthra.rs.html -- source</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc source">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <a href='../../../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content"><pre class="line-numbers"><span id="1"> 1</span>
+<span id="2"> 2</span>
+<span id="3"> 3</span>
+<span id="4"> 4</span>
+<span id="5"> 5</span>
+<span id="6"> 6</span>
+<span id="7"> 7</span>
+<span id="8"> 8</span>
+<span id="9"> 9</span>
+<span id="10">10</span>
+<span id="11">11</span>
+<span id="12">12</span>
+<span id="13">13</span>
+<span id="14">14</span>
+<span id="15">15</span>
+<span id="16">16</span>
+<span id="17">17</span>
+<span id="18">18</span>
+<span id="19">19</span>
+<span id="20">20</span>
+<span id="21">21</span>
+<span id="22">22</span>
+<span id="23">23</span>
+<span id="24">24</span>
+<span id="25">25</span>
+<span id="26">26</span>
+<span id="27">27</span>
+<span id="28">28</span>
+<span id="29">29</span>
+<span id="30">30</span>
+<span id="31">31</span>
+<span id="32">32</span>
+<span id="33">33</span>
+<span id="34">34</span>
+<span id="35">35</span>
+<span id="36">36</span>
+<span id="37">37</span>
+<span id="38">38</span>
+<span id="39">39</span>
+<span id="40">40</span>
+<span id="41">41</span>
+<span id="42">42</span>
+<span id="43">43</span>
+<span id="44">44</span>
+<span id="45">45</span>
+<span id="46">46</span>
+<span id="47">47</span>
+<span id="48">48</span>
+<span id="49">49</span>
+<span id="50">50</span>
+<span id="51">51</span>
+<span id="52">52</span>
+<span id="53">53</span>
+<span id="54">54</span>
+<span id="55">55</span>
+<span id="56">56</span>
+<span id="57">57</span>
+<span id="58">58</span>
+<span id="59">59</span>
+<span id="60">60</span>
+<span id="61">61</span>
+<span id="62">62</span>
+<span id="63">63</span>
+<span id="64">64</span>
+<span id="65">65</span>
+<span id="66">66</span>
+<span id="67">67</span>
+<span id="68">68</span>
+<span id="69">69</span>
+<span id="70">70</span>
+<span id="71">71</span>
+<span id="72">72</span>
+<span id="73">73</span>
+<span id="74">74</span>
+<span id="75">75</span>
+<span id="76">76</span>
+<span id="77">77</span>
+<span id="78">78</span>
+<span id="79">79</span>
+<span id="80">80</span>
+<span id="81">81</span>
+<span id="82">82</span>
+<span id="83">83</span>
+<span id="84">84</span>
+<span id="85">85</span>
+<span id="86">86</span>
+<span id="87">87</span>
+<span id="88">88</span>
+<span id="89">89</span>
+<span id="90">90</span>
+<span id="91">91</span>
+<span id="92">92</span>
+<span id="93">93</span>
+<span id="94">94</span>
+</pre><pre class="rust ">
+<span class="doccomment">//! Arun Kolsheshthra</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!   - **Date:** November 14, 2017 (recorded October 27, 2017)</span>
+<span class="doccomment">//!   - **Audio:**</span>
+<span class="doccomment">//!       + [M4A]</span>
+<span class="doccomment">//!       + [MP3]</span>
+<span class="doccomment">//!       + [Ogg]</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [M4A]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/rbr_2017/arun_kulshreshthra.m4a</span>
+<span class="doccomment">//! [MP3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/rbr_2017/arun_kulshreshthra.mp3</span>
+<span class="doccomment">//! [Ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/rbr_2017/arun_kulshreshthra.ogg</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; style=&quot;width: 100%&quot; title=&quot;Rust Belt Rust 2017: Arun Kolsheshthra&quot; controls preload=metadata&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/rbr_2017/arun_kulshreshthra.m4a&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/rbr_2017/arun_kulshreshthra.mp3&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/rbr_2017/arun_kulshreshthra.ogg&quot;&gt;</span>
+<span class="doccomment">//! &lt;/audio&gt;</span>
+
+
+<span class="doccomment">/// Read the interview!</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// **C:** Hi, can you tell us your name and where you work and how you got into</span>
+<span class="doccomment">/// Rust?</span>
+<span class="doccomment">/// </span>
+<span class="doccomment">/// **A:** Sure. My name is Arun Kolshreshthra. I’m a software engineer at</span>
+<span class="doccomment">/// Facebook, and that’s actually how I got into Rust. Um, when I joined</span>
+<span class="doccomment">/// Facebook, fresh out of college, um, there was a new Rust project - a new</span>
+<span class="doccomment">/// Mercurial server being written in Rust there. I joined Facebook’s source</span>
+<span class="doccomment">/// control team and have been working on that server ever since the middle of</span>
+<span class="doccomment">/// last year. It’s been really fun, and I’ve been learning a lot about the</span>
+<span class="doccomment">/// language.</span>
+<span class="doccomment">/// </span>
+<span class="doccomment">/// **C:** Sweet! Mercurial. No one knows this, probably, other than close</span>
+<span class="doccomment">/// friends of mine, but I really wish Mercurial had won instead of Git. So, I</span>
+<span class="doccomment">/// was really excited to see people pushing on that. Uh, how long - you said</span>
+<span class="doccomment">/// about a year and a half that you’ve been writing Rust?</span>
+<span class="doccomment">/// </span>
+<span class="doccomment">/// **A:** Yeah, that’s about right.</span>
+<span class="doccomment">/// </span>
+<span class="doccomment">/// **C:** What has been the best or most enjoyable part of that so far?</span>
+<span class="doccomment">/// </span>
+<span class="doccomment">/// **A:** Well, what I’ve really enjoyed is being able to write systems</span>
+<span class="doccomment">/// programming, like, just doing systems programming, in a language that has</span>
+<span class="doccomment">/// things like algebraic data types and other features from the functional</span>
+<span class="doccomment">/// programming world. I myself am coming from  a mixed background where I both</span>
+<span class="doccomment">/// did a lot of systems programming and a lot of functional programming in</span>
+<span class="doccomment">/// languages like Haskell in college, and the functional programming stuff</span>
+<span class="doccomment">/// really appealed to me, and I always wish C and C+ + had those features, so</span>
+<span class="doccomment">/// it’s really great getting to use them every day in my systems work.</span>
+<span class="doccomment">/// </span>
+<span class="doccomment">/// **C:** That’s awesome. So, I know that’s an open source code base - how big</span>
+<span class="doccomment">/// is it now?</span>
+<span class="doccomment">/// </span>
+<span class="doccomment">/// **A:** How big is the Mononoke project, which is the uh, source control</span>
+<span class="doccomment">/// server? I’m not actually sure what the actual lines of code are because I</span>
+<span class="doccomment">/// don’t keep up with our git hub repo from day to day, um, not everything is</span>
+<span class="doccomment">/// open source unfortunately, but a good chunk of it - the majority of it - is</span>
+<span class="doccomment">/// on Github. I’d say, you know, definitely several thousand lines, probably</span>
+<span class="doccomment">/// tens of thousands of lines, but don’t quote me on that, because I don’t</span>
+<span class="doccomment">/// actually know. But if you search on Github you’ll find the repo and you can</span>
+<span class="doccomment">/// find out.</span>
+<span class="doccomment">/// </span>
+<span class="doccomment">/// **C:** What, if any, have been pain points for you along the way with Rust?</span>
+<span class="doccomment">/// </span>
+<span class="doccomment">/// **A:** So the biggest pain point has probably been, like, Facebook is</span>
+<span class="doccomment">/// definitely a C+ + shop, as far as the back end is concerned, so all of the</span>
+<span class="doccomment">/// existing libraries and APIs are all designed with C+ + in mind. One of my</span>
+<span class="doccomment">/// jobs has been to write bindings to those libraries from Rust, and</span>
+<span class="doccomment">/// unfortunately, while the binding situation in Rust is actually not bad, with</span>
+<span class="doccomment">/// tools like bindgen to help automatically generate those bindings, it turns</span>
+<span class="doccomment">/// out when you’re using really advanced C+ + features, like C+ + 14, and maybe</span>
+<span class="doccomment">/// even C++ 17 features - because Facebook always has to be on the bleeding</span>
+<span class="doccomment">/// edge after all - bindgen falls over, and you find yourself writing all these</span>
+<span class="doccomment">/// wrappers and shims to get everything to work, and that is a bit of a pain. I</span>
+<span class="doccomment">/// wish I didn’t have to do that on a near daily basis, but that is my life</span>
+<span class="doccomment">/// right now. But, the pain’s worth it to get to use Rust.</span>
+<span class="doccomment">/// </span>
+<span class="doccomment">/// **C:** That’s, that’s fair, I think! Uh, is there anything else - any</span>
+<span class="doccomment">/// particular standouts - of your time so far here at Rust Belt Rust, or that</span>
+<span class="doccomment">/// you’re looking forward to?</span>
+<span class="doccomment">/// </span>
+<span class="doccomment">/// **A:** Just interacting with the community members here at Rust Belt Rust</span>
+<span class="doccomment">/// has been amazing. Uh, I was also at Rust Conf for earlier this year, and I</span>
+<span class="doccomment">/// found that the community is extremely approachable and welcoming. I was</span>
+<span class="doccomment">/// really worried, like, I’m a new grad; I barely have any industry experience.</span>
+<span class="doccomment">/// Hell, I don’t even know what I’m talking about some of the time. Like, will</span>
+<span class="doccomment">/// I fit in? But, like, I can talk to, like, some of the maintainers of, like,</span>
+<span class="doccomment">/// key crates, you know? They’ll have a technical conversation with me and,</span>
+<span class="doccomment">/// like, give me pointers and stuff, and that’s really awesome.</span>
+<span class="doccomment">/// </span>
+<span class="doccomment">/// **C:** Awesome. Thanks so much for your time, Arun.</span>
+<span class="doccomment">/// </span>
+<span class="doccomment">/// **A:** Yeah, thank you!</span>
+<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Transcript</span>;</pre>
+</section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>
