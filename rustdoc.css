@@ -183,7 +183,7 @@ nav.sub {
 }
 
 .sidebar .block > ul > li {
-	margin-right: -10px;
+	margin-right: -20px;
 }
 
 .content, nav {
@@ -527,9 +527,6 @@ a {
 }
 .anchor.field {
 	left: -5px;
-}
-.small-section-header > .anchor {
-	left: -28px;
 }
 .anchor:before {
 	content: '\2002\00a7\2002';

@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["Transcript","Read the interview!"]]});
