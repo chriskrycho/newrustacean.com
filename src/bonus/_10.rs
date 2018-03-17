@@ -7,14 +7,14 @@
 //!       + [MP3][mp3]
 //!       + [Ogg][ogg]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/bonus/10.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/bonus/10.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/bonus/10.ogg
+//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus/10.m4a
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus/10.mp3
+//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus/10.ogg
 //!
 //! <audio style="width: 100%" style="width: 100%" title="Crates You Should Know: Serde" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/bonus/10.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/bonus/10.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/bonus/10.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus/10.m4a">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus/10.mp3">
+//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus/10.ogg">
 //! </audio>
 //!
 //!
