@@ -75,7 +75,7 @@
 //!   - Keith Gray
 //!   - Kilian Rault
 //!   - Luca Schmid
-//!   - Luiz Irber
+//!   - [Luiz Irber]
 //!   - Mark LeMoine
 //!   - Masashi Fujita
 //!   - Matt Rudder
@@ -93,7 +93,7 @@
 //!   - [Paul Naranja]
 //!   - Peter Tillemans
 //!   - Ralph Giles ("rillian")
-//!   - Ramon Buckley
+//!   - [Ramon Buckley]
 //!   - Randy MacLeod
 //!   - Raph Levien
 //!   - reddraggone9
@@ -135,6 +135,7 @@
 //! [John Rudnick]: http://www.cindur.com/
 //! [Jupp Müller]: https://de.linkedin.com/in/juppm
 //! [Karl Hobley]: https://github.com/kaedroho/
+//! [Luiz Irber]: http://luizirber.org/
 //! [Max Jacobson]: https://twitter.com/maxjacobson
 //! [Messense Lv]: https://github.com/messense
 //! [Nathan Sculli]: http://influential.co/
@@ -143,6 +144,7 @@
 //! [Pascal Hertleif]: https://pascalhertleif.de/
 //! [Patrick O'Doherty]: https://twitter.com/patrickod
 //! [Philipp Keller]: https://twitter.com/hansapla
+//! [Ramon Buckley]: http://www.inosion.com
 //! [Ryan Blecher]: http://notryanb.github.io/
 //! [Sebastián Ramírez Magrí]: https://www.twitter.com/sebasmagri
 //! [Stuart Hinson]: http://stuarth.github.io/
