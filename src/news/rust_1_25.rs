@@ -179,5 +179,19 @@
 #[allow(unused_imports)]
 use std::{fs::{File, FileType}, path::Path};
 
+/// An example of the new match style.
+pub fn demo_match(s: &str) {
+    match s {
+        | "some really long string so that rustfmt does not split this up"
+        | "some other really long string, for the same reason"
+        | "yet another string" => 10,
+        | "and of course we can wrap even more stuff the same way"
+        | "and because the match arms don't have any differentiation"
+        | "this actually is *unhelpful* in my view..."
+        | "but you can use it if you want" => 20,
+        _ => 0,
+    };
+}
+
 #[doc(include = "../docs/news/rust-1-25.md")]
 pub struct Script;
