@@ -176,5 +176,8 @@
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
+#[allow(unused_imports)]
+use std::{fs::{File, FileType}, path::Path};
+
 #[doc(include = "../docs/news/rust-1-25.md")]
 pub struct Script;
