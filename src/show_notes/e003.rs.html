@@ -10,7 +10,8 @@
     <title>e003.rs.html -- source</title>
 
     <link rel="stylesheet" type="text/css" href="../../normalize.css">
-    <link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css"
+          id="mainThemeStyle">
     
     <link rel="stylesheet" type="text/css" href="../../dark.css">
     <link rel="stylesheet" type="text/css" href="../../main.css" id="themeStyle">
@@ -564,7 +565,7 @@
         <span class="number">1</span>...<span class="number">41</span> <span class="op">=&gt;</span> <span class="string">&quot;This is all pretty normal, right?&quot;</span>,
         <span class="number">42</span> <span class="op">=&gt;</span> <span class="string">&quot;Life, the universe, and everything, eh? (Canadian version)&quot;</span>,
         <span class="comment">// What about catching *everything else*? Use `_`.</span>
-        _ <span class="op">=&gt;</span> <span class="string">&quot;I&#39;ve got nothing useful to say here.&quot;</span>,
+        <span class="kw">_</span> <span class="op">=&gt;</span> <span class="string">&quot;I&#39;ve got nothing useful to say here.&quot;</span>,
     };
 
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;I asked: &#39;{:}&#39;; the answer was: {:}&quot;</span>, <span class="ident">question</span>, <span class="ident">answer</span>);
@@ -575,7 +576,7 @@
         <span class="string">&#39;A&#39;</span>...<span class="string">&#39;B&#39;</span> <span class="op">=&gt;</span> <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Nope, not those letters.&quot;</span>),
         <span class="string">&#39;C&#39;</span> <span class="op">=&gt;</span> <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Why, yes, my name *does* start with a &#39;C&#39;&quot;</span>),
         <span class="string">&#39;D&#39;</span>...<span class="string">&#39;z&#39;</span> <span class="op">=&gt;</span> <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;None of those either.&quot;</span>),
-        _ <span class="op">=&gt;</span> <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;That&#39;s not even a letter!&quot;</span>),
+        <span class="kw">_</span> <span class="op">=&gt;</span> <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;That&#39;s not even a letter!&quot;</span>),
     }
 
     <span class="comment">// or more complex types...</span>
@@ -587,8 +588,8 @@
         (<span class="ident">THREE</span>, <span class="ident">TWO</span>) <span class="op">=&gt;</span> <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Got both!&quot;</span>),
         <span class="comment">// You can match on only part of it; note that these match the cases where both are *not*</span>
         <span class="comment">// filled with the value specified in the first arm.</span>
-        (<span class="ident">THREE</span>, _) <span class="op">=&gt;</span> <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Got three only.&quot;</span>),
-        (_, <span class="ident">TWO</span>) <span class="op">=&gt;</span> <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Got two only.&quot;</span>),
+        (<span class="ident">THREE</span>, <span class="kw">_</span>) <span class="op">=&gt;</span> <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Got three only.&quot;</span>),
+        (<span class="kw">_</span>, <span class="ident">TWO</span>) <span class="op">=&gt;</span> <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Got two only.&quot;</span>),
         <span class="comment">// You can also destructure the elements of the tuple into values to be</span>
         <span class="comment">// used in the body of the expression, not just ignore them with `_`.</span>
         (<span class="ident">a</span>, <span class="ident">b</span>) <span class="op">=&gt;</span> <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Got weird other stuff: {:}, {:}&quot;</span>, <span class="ident">a</span>, <span class="ident">b</span>),
