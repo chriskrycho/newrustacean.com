@@ -1,7 +1,8 @@
-//! Rust 1.24
+//! Rust 1.25
 //!
-//!   - **Date:** March 29, 2018
-//!   - **Subject:**
+//!   - **Date:** March 31, 2018
+//!   - **Subject:** Paths and matches and SIMD, cargo new changes, and tons of
+//!     community-driven learning materials!
 //!   - **Audio:**
 //!       + [M4A][m4a]
 //!       + [MP3][mp3]
