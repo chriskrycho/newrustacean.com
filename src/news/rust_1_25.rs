@@ -29,7 +29,7 @@
 //! - [Hello Rust]
 //! - [“Functional and Concurrent Programming in Rust”][book]
 //!
-//! [1.25.0]: https://blog.rust-lang.org/2018/02/15/Rust-1.25.html
+//! [1.25.0]: https://blog.rust-lang.org/2018/03/29/Rust-1.25.html
 //! [RFC #1358]: https://github.com/rust-lang/rfcs/pull/1358
 //! [RFC #2325]: https://github.com/rust-lang/rfcs/pull/2325
 //! [RustConf CFP]: https://cfp.rustconf.com
