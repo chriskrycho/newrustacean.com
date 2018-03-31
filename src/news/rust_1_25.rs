@@ -77,6 +77,7 @@
 //!   - [Karl Hobley]
 //!   - Keith Gray
 //!   - Kilian Rault
+//!   - Laurie Hedge
 //!   - Luca Schmid
 //!   - [Luiz Irber]
 //!   - Mark LeMoine
@@ -96,6 +97,7 @@
 //!   - [Paul Naranja]
 //!   - Peter Tillemans
 //!   - Ralph Giles ("rillian")
+//!   - Raj Venkalil
 //!   - [Ramon Buckley]
 //!   - Randy MacLeod
 //!   - Raph Levien
