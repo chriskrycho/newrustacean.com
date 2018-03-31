@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["demo_match","An example of the new match style."]],"struct":[["Script","News: Rust 1.25"]]});
