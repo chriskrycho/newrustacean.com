@@ -1,0 +1,12 @@
+.playback-rate-controls ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.playback-rate-controls li {
+    display: inline;
+}
+.playback-rate-controls li:not(:last-of-type)::after {
+    content: " | ";
+}
