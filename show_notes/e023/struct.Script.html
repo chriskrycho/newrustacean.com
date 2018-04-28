@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Script` struct in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Script">
+
+    <title>show_notes::e023::Script - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css" id="themeStyle">
+    <script src="../../storage.js"></script>
+    
+
+    <link rel="shortcut icon" href="http://newrustacean.com/favicon.ico">
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        <a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a>
+        <p class='location'>Struct Script</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">Sync</a></div></div><p class='location'><a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e023</a></p><script>window.sidebarCurrent = {name: 'Script', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e023</a>::<wbr><a class="struct" href=''>Script</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/show_notes/e023.rs.html#191' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Script;</pre><div class='docblock'><h1 id="e023-traits-deep-dive-part-i" class="section-header"><a href="#e023-traits-deep-dive-part-i">e023: Traits Deep Dive, Part I</a></h1><h2 id="intro" class="section-header"><a href="#intro">Intro</a></h2>
+<p>Hello, I’m Chris Krycho and this is New Rustacean: a show about the Rust programming language and the people who use it. This is episode 23:  – the first of two deep-dive episodes on traits. Much earlier in the show (all the way back in episodes 8 and 9), I talked about interfaces at a high level: what they’re for, and how you can implement existing traits. Today, we’re going to dig into some of the mechanics of actually using traits – the nitty-gritty of building your own traits and the concrete limitations on where and how you can implement them, and what you have to do to use traits defined elsewhere. In the next episode, we’ll take a look at the use of traits in place of either concrete types or generics, including a look at the <code>impl trait</code> feature that will be landing in Rust 1.26!</p>
+<h2 id="traits-deep-dive-part-i" class="section-header"><a href="#traits-deep-dive-part-i">Traits: Deep Dive, Part I</a></h2>
+<p>For a quick refresher, let’s review what traits are <em>for</em>. Traits are Rust’s primary mechanism for <em>shared behavior</em> between objects. Some languages solve this problem with inheritance, or with interfaces that must be applied to an object at the time of definition. Rust has no conventional notion of inheritance, and its traits are quite unlike, say, interfaces in C♯.</p>
+<p>A Rust trait defines <em>shared behavior</em> only; it cannot define the required <em>shape</em> of an object which implements it (e.g. required class fields in traditional OOP language’s interfaces). And a trait can be applied to a type totally independent of the normal definition of that type – you can apply anyone else’s traits to your own types, and your types to anyone else’s traits.</p>
+<p>And the only place that Rust <em>does</em> get something kind of like inheritance in the normal sense is in traits themselves: a trait can declare that implementing it requires that you implement some <em>other</em> trait as well.</p>
+<p>So if you’re coming from the perspective of a Java or C♯ or even TypeScript, traits are sort of like method-only interfaces which can be implemented <em>whenever</em>, not just at class definition time. Importantly, as we’ll cover in a minute, they can also be applied to any old type – an <code>enum</code> is equally valid for a trait implementation as a <code>struct</code>.</p>
+<p>Traits are <em>everywhere</em> in Rust programming, as you can imagine, and the things you can do with them are pretty amazing. So… how do we use them?</p>
+<h3 id="defining-and-implementing-traits" class="section-header"><a href="#defining-and-implementing-traits">Defining and implementing traits</a></h3>
+<p>Let’s start by looking at how you actually define and use your own traits. A trait is always defined using the trait keyword and a block that defines the <em>items</em> associated with that trait. (This idea of “associated items” is actually pretty large, and it’s also very important, so we’ll come back to it in a later episode. For now, we’ll leave aside some of those details and just focus on creating and implementing traits.)</p>
+<h4 id="the-basics" class="section-header"><a href="#the-basics">The basics</a></h4>
+<p>Let’s define a slightly silly trait as the basic example we’ll build on for the rest of this episode: <code>Eatable</code>, to represent things we can eat. (Apparently I’m writing this episode too close to dinner time!) Anything which implements <code>Eatable</code> must have an <code>eat</code> method, which returns a description of the act of eating that particular thing. We’d write that like this:</p>
+
+<pre class="rust rust-example-rendered">
+<span class="kw">trait</span> <span class="ident">Eatable</span> {
+    <span class="kw">fn</span> <span class="ident">eat</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">String</span>;
+}</pre>
+<p>A couple things to notice about this:</p>
+<ol>
+<li>
+<p>The function type isn’t explicitly declared as <code>pub</code> or any other privacy modifier. And it’s not allowed to. The trait itself can be declared with whatever privacy you like, but items <em>on</em> the trait are always public to whatever implements them. This makes sense when you consider that the whole point of a trait is to define what behavior is available for things <em>outside</em> a struct or enum to do. Private details of a type don’t belong on a <code>trait</code>; they belong in the <code>impl</code> block for the type itself, with whatever privacy is appropriate.</p>
+</li>
+<li>
+<p>We have not defined any implementation. We’ve simply written out the type of the function which any implementor has to provide. However, we could have written a basic implementation – albeit, one that doesn’t know anything at all about the type where it’s implemented, and so it can’t say anything that depends on the internals of those types.</p>
+</li>
+</ol>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">trait</span> <span class="ident">Eatable</span> {
+    <span class="kw">fn</span> <span class="ident">eat</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">String</span> {
+    <span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;Open mouth, insert food!&quot;</span>)
+    }
+}</pre>
+<p>Now, implementors can just write <code>impl Eatable for MyFood {}</code> and then they can call <code>MyFood.eat()</code>, and we’ll get back the string <code>&quot;Open mouth, insert food!&quot;</code>. However, it’s often preferable <em>not</em> to use a default implementation for a trait, even when it’s defined. In that case, we can supply our own implementation.</p>
+<p>Implementing a trait simply means doing <code>impl TheTrait for TheType</code> and supplying all required (and any desired optional) elements of the trait. Let’s say we wanted to make a <code>Breakfast</code> type – that sounds nice and “eatable.” One thing that’s worth noting, and which I did not realize immediately when I first started learning Rust a few years ago is that you can implement a trait for <em>any</em> kind of type – in other words, for enums as well as for structs. So let’s make a <code>Breakfast</code> enum with only the sugariest foods:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">enum</span> <span class="ident">Breakfast</span> {
+    <span class="ident">Waffles</span>,
+    <span class="ident">Cereal</span>,
+    <span class="ident">Pancakes</span>,
+}</pre>
+<p>Then we can implement <code>Eatable</code> with some special behavior for this type:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">impl</span> <span class="ident">Eatable</span> <span class="kw">for</span> <span class="ident">Breakfast</span> {
+    <span class="kw">fn</span> <span class="ident">eat</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">String</span> {
+        <span class="kw">match</span> <span class="kw-2">*</span><span class="self">self</span> {
+            <span class="ident">Breakfast</span>::<span class="ident">Waffles</span> <span class="op">|</span> <span class="ident">Breakfast</span>::<span class="ident">Pancakes</span> <span class="op">=&gt;</span> <span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;Pour syrup, consume&quot;</span>),
+            <span class="ident">Breakfast</span>::<span class="ident">Cereal</span> <span class="op">=&gt;</span> <span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;Add milk, then enjoy the crunch&quot;</span>),
+        }
+    }
+}</pre>
+<p>This is what is called <em>specialization</em>: instead of just accepting the default implementation of a trait, we’re specializing it for just this one specific object. And we can see even from this silly example why we would want to do that. Remember: the default implementation of the trait didn’t know anything about the actual types that would implement it. And even though we can supply <em>some</em> more information about the implementing type with further details in a trait’s definition—we’ll see that in a minute—it’s often the case that a specific concrete implementation will know more about the best way to handle a given trait than the trait itself ever could.</p>
+<p>A common example of this that you’ll see often is with the <code>Iterator</code> trait: although there are default implementations for most of the methods on the trait, you will sometimes see more specific implementations associated with particular data types. In that case, it’s often for <em>performance</em> reasons. Because you implemented the data structure, you may have more insight than <code>Iterator</code> does about the best way to implement some of the methods. For example, the <code>skip</code> method might naïvely be implemented as just calling the <code>next</code> method the number of times you pass to it. However, if you have a data structure where every item is of a known size, and laid out in contiguous blocks of memory—like a C-style array, for example—you could write a <code>skip</code> implementation that simply jumps to the appropriate memory offset from the current position in the structure.</p>
+<h4 id="other-methods" class="section-header"><a href="#other-methods">Other methods</a></h4>
+<p>Now, I just implied something very important there: any trait method can call any <em>other</em> method defined on the same trait. So let’s say our <code>Eatable</code> trait should also describe how the food needs to be prepared. And this one we <em>cannot</em> have a default implementation for – some foods are meant to be eaten raw, for example, while others might actually be poisonous if you don’t cook them! So we’ll add a corresponding function to the trait, <code>prepare</code>, and we’ll also go ahead and update our default implementation to include preparing.</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">trait</span> <span class="ident">Eatable</span> {
+    <span class="kw">fn</span> <span class="ident">prepare</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">String</span>;
+    <span class="kw">fn</span> <span class="ident">eat</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">String</span> {
+        <span class="self">self</span>.<span class="ident">prepare</span>();
+        <span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;Open mouth, insert food!&quot;</span>)
+    }
+}</pre>
+<p>Now we’ve required that every implementor supply an implementation of <code>prepare</code>. It’s totally fine for the trait to do this, because it <em>knows</em> that no implementor can exist which <em>doesn’t</em> have the <code>prepare</code> method defined.</p>
+<p>This is how a the default implementations for the <code>Iterator</code> example can work: they know there is a <code>next</code> method defined, and they can define their own default behavior in terms of that <code>next</code> method (and one other piece of information we’ll talk about in just a second) – and that’s all they actually <em>need</em>.</p>
+<h4 id="other-items-on-the-trait" class="section-header"><a href="#other-items-on-the-trait">Other items on the trait</a></h4>
+<p>Now, about other pieces of information… I’m not going to take a <em>lot</em> of time on this, because it really deserves its own whole episode, but traits can also define <em>associated items</em>. In the case of the <code>Iterator</code> trait, besides all its methods, the trait defines the existence of an <code>Item</code> type, which implementors have to define – an <code>Item</code> is the kind of thing an <code>Iterator</code> iterates over, and which the various methods handle and return. It’s not a struct field or anything like that; it’s <em>purely</em> a type-level detail. You can think of it as kind of being like a generic, except that these associated items can themselves be generic. And having them as these (quote-unquote) “associated items” means that we don’t have to specify the type of the generic for every place we call the trait method; we can just say at the place we implement <code>Iterator</code> that its <code>Item</code> is a <code>String</code>, or a <code>u32</code> or a <code>MyStruct</code>, and then whenever we call it it will <em>always</em> be that type, rather than needing its generic parameter specified.</p>
+<p>If that flew past you, don’t worry. As I said: we’ll spend a whole episode on associated types in the future: there’s a lot there! For now, it’s sufficient to know that you can require implementors of a trait to say “Hey, the things you’ll operate on in this method are these specific types.” That’s what associated types gives you!</p>
+<h4 id="trait-inheritance" class="section-header"><a href="#trait-inheritance">Trait inheritance</a></h4>
+<p>As I suggested a few minutes ago, traits can also specify that they depend on other traits. So if you’re writing a trait that requires a type also implement <code>Iterator</code> – perhaps so you can <code>map</code> over it – you write that with your trait name, followed by a colon, followed by the “super-trait” name:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">trait</span> <span class="ident">AwesomeMappable</span> : <span class="ident">Iterator</span> {
+    <span class="ident">awesome_map</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
+    <span class="comment">// do something awesome</span>
+    }
+}</pre>
+<p>Anything which implements <code>AwesomeMappable</code> now also has to implement <code>Iterator</code>. This is handy both for extending the behavior of existing traits, and also for <em>relying</em> on the behavior of existing traits, as you define your own.</p>
+<h3 id="implementing-other-crates-traits-on-your-own-types" class="section-header"><a href="#implementing-other-crates-traits-on-your-own-types">Implementing other crates’ traits on your own types</a></h3>
+<p>You can also implement other crates’ traits on your own types. So, thinking back to a recent Crates You Should Know episode, you often do just this with the <code>Serialize</code> and <code>Deserialize</code> traits from <code>Serde</code>. As you may recall, in that specific case, you <em>usually</em> implement those traits for your types using the custom derive macro: <code>#[derive(Serialize)]</code>. But of course you don’t have to: you can write the implementation yourself: <code>impl Serialize for MyStruct { ... }</code>. And this goes for <em>any</em> trait defined outside your crate and types you want to define inside your crate: <code>Iterator</code> is another common example, from the standard library.</p>
+<h3 id="implementing-your-own-traits-for-other-crates-types" class="section-header"><a href="#implementing-your-own-traits-for-other-crates-types">Implementing your own traits for other crates’ types</a></h3>
+<p>Now, as I mentioned at the top of the show, one of the things that makes Rust’s traits fairly unique among programming languages in wide use is that you can implement a trait on a type that already exists. The only other examples <em>I’m</em> familiar with for doing this are <em>extension methods</em> in C♯, extensions in Objective-C and Swift, and type classes in Haskell. Perhaps the biggest difference with C♯ extension methods is that it’s actually extremely <em>common</em> to do this in Rust. You <em>can</em> do it in C♯, you almost certainly <em>will</em> do it in Rust.</p>
+<p>Let’s take our <code>Eatable</code> trait again, but let’s do something truly absurd and apply it to the regex crate’s <code>Regex</code> struct. “But Chris,” you say, “You can’t eat regular expressions.” To which I say: Rust gives us super powers! It even lets us eat regular expressions! We just have to write the <code>Eatable</code> implementation!</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">impl</span> <span class="ident">Eatable</span> <span class="kw">for</span> <span class="ident">regex</span>::<span class="ident">Regex</span> {
+    <span class="kw">fn</span> <span class="ident">prepare</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">String</span> {
+        <span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;This is truly absurd.&quot;</span>)
+    }
+
+    <span class="kw">fn</span> <span class="ident">eat</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">String</span> {
+        <span class="macro">format</span><span class="macro">!</span>(<span class="string">&quot;{} But we can do it anyway!&quot;</span>, <span class="self">self</span>.<span class="ident">prepare</span>())
+    }
+}</pre>
+<p>Then we can take <em>any</em> instance of <code>Regex</code> in our crate and call <code>that_regex.eat()</code> and we’ll get back “This is truly absurd. But we can do it anyway!” And it is indeed absurd in this case. However, you can imagine many cases where this kind of thing would be handy: anywhere you want to be able to use the behavior you’ve defined on a struct defined outside your own crate. This is handy even just when using crates as strong API boundaries within your <em>own</em> codebase, but it’s also handy for dealing with types from <em>outside</em> your code.</p>
+<h3 id="the-orphan-rule" class="section-header"><a href="#the-orphan-rule">The orphan rule</a></h3>
+<p>Now, there’s one thing you <em>cannot</em> do here: you cannot define an implementation of a trait from outside your crate for a type from outside your crate. The reason is simple: if <em>you</em> define an implementation for a trait from crate A for a type from crate B in your crate, and then I define a different implementation for the same trait from crate A on the same type from crate B that you did, and then someone uses both your crate and my crate… which implementation of the trait wins? Rust doesn’t have any good way to resolve it!</p>
+<p>The rule is: you can implement a trait for a type as long as <em>either</em> the trait <em>or</em> the type is local to your crate; you cannot implement external traits on external types. This is sometimes called the <em>orphan</em> rule – from the idea that one of the <em>parent types</em> (either the concrete type or the trait type) is missing – so hopefully you won’t be confused if you hear that in the future.</p>
+<h3 id="using-trait-methods" class="section-header"><a href="#using-trait-methods">Using trait methods</a></h3>
+<p>One other thing that’s worth note here is a little detail that often trips up newcomers to the language: that when you want to use a <em>trait method</em> on a given item which implements that trait, you have to import the trait itself. So, for example, when you want to call a Serde serialization or deserialization method on a type which implements those, you <em>must</em> reference the appropriate Serde trait with a <code>use</code> keyword. The reason for this is that you need to tell Rust <em>which method</em> of that name to use. There’s no reason a given <code>struct</code> or <code>enum</code> cannot have multiple traits which define the same method name, and accordingly Rust needs a way to disambiguate between the options. Requiring the desired trait to be in scope is Rust’s normal way of solving this problem. You don’t <em>usually</em> import multiple traits that have the same method on them. (We’ll talk in a minute about how to solve it if you do.)</p>
+<p>So, for an easy-to-understand example: quite a few different traits out there in the world may define a <code>from_str</code>. And you might want implementations of more than one of them for any given type. You can imagine a <code>Printable</code> trait (somewhat analogous to the real <code>Display</code> trait in the standard library), and a <code>Convertable</code> trait that takes strings and turns them into an appropriate type (somewhat analogous to deserialization) – both of which define <code>from_str</code> definitions as appropriate to what they do. If you had a <code>struct MyThing</code> which had implementations of both, and both traits were in scope, how would Rust know which one you meant?</p>
+<p>This leads to the last detail we need to understand, which is how to <em>disambiguate manually</em>. After all, perhaps in some function you end up wanting to use <em>both</em> the <code>Printable</code> and the <code>Convertable</code> trait’s versions of the method. How can we do that?</p>
+<p>Here it’s worth remembering that a <em>method</em> is syntactical sugar for calling the function with the first argument explicitly. This is true for <em>all</em> methods, not just trait methods. (This will be familiar to listeners who’ve spent time working deeply with Python.) In this case, we can call the trait method we want to use directly: <code>Convertable::from_str(&quot;some string literal&quot;)</code>. There’s an example in the show notes showing this exactly with our <code>Eatable</code> trait and an even sillier trait called <code>Nomable</code>, as in “nom nom nom.”</p>
+<p>Your other option is to change the scope for importing a given trait. <em>Any</em> block is a possible location for a <code>use</code> statement. So you can import the traits you need to use which happen to have the same method name in different blocks – whether that’s different function bodies, or just standalone blocks within a function body –instead of at the top level of the module like you normally would.</p>
+<h2 id="closing" class="section-header"><a href="#closing">Closing</a></h2>
+<p>And that particular detail does it for the <em>first</em> half of our deep dive on traits! In the next episode, we’ll dig deep on <em>trait objects</em>, including the <code>impl trait</code> and <code>dyn trait</code> features which are about to land on stable Rust!</p>
+<p>Thanks to this month’s $10-or-more sponsors:</p>
+<ul>
+<li>Aaron Turon</li>
+<li>Alexander Payne</li>
+<li>Anthony Deschamps</li>
+<li>Chris Palmer</li>
+<li>Behnam Esfahbod</li>
+<li>Dan Abrams</li>
+<li>Daniel Collin</li>
+<li>David W. Allen</li>
+<li>Derek Buckley</li>
+<li>Fábio Botelho</li>
+<li>Hans Fjällemark</li>
+<li>John Rudnick</li>
+<li>Matt Rudder</li>
+<li>Nathan Sculli</li>
+<li>Nick Stevens</li>
+<li>Peter Tillemans</li>
+<li>Paul Naranja</li>
+<li>Olaf Leidinger</li>
+<li>Oluseyi Sonaiya</li>
+<li>Ramon Buckland</li>
+<li>Raph Levien</li>
+<li>Vesa Khailavirta</li>
+<li>and Zachary Snyder</li>
+</ul>
+<p>If you’d like to sponsor the show, you set up ongoing support at patreon.com/newrustacean, or send a one-off at any of a number of other services listed at newrustacean.com. The website also has scripts and code samples for most of the teaching episodes as well as transcripts for many of the interviews, along with full show notes for every episode. You can find the notes for _this_ episode at &lt;newrustacean.com/show_notes/e023/&gt;.</p>
+<p>If you're enjoying New Rustacean, please help others find it – by telling them about it in person, by sharing it on social media, or by rating and reviewing the show in your favorite podcast directory.</p>
+<p>The show is on Twitter @newrustacean, or you can follow me there @chriskrycho. Tweet me with news, topic ideas, etc! You can also respond in the threads on the Rust user forums, Reddit, or Hacker News, or—and this will always be my favorite—just send me an email at hello@newrustacean.com.</p>
+<p>Until next time, happy coding!</p>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+            <div id='implementations-list'>
+        </div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../show_notes/e023/struct.Script.html" title="struct show_notes::e023::Script">Script</a></code><a href='#impl-Send' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../show_notes/e023/struct.Script.html" title="struct show_notes::e023::Script">Script</a></code><a href='#impl-Sync' class='anchor'></a></span><span class='out-of-band'></span></h3>
+<div class='impl-items'></div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    <link rel="stylesheet" href="/media-playback.css">
+<script type="text/javascript" src="/media-playback.js" defer></script>
+
+
+
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "show_notes";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
