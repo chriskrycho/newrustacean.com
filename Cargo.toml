@@ -1,5 +1,8 @@
 [package]
 name = "show-notes"
 # Version will match released show number! Episode 12 will be `0.1.2`.
-version = "0.2.2"
+version = "0.2.3"
 authors = ["Chris Krycho <chris@chriskrycho.com>"]
+
+[dependencies]
+regex = "0.2"

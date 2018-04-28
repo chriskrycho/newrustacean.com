@@ -23,7 +23,7 @@ test: $(SRC)
 	cargo test
 
 modules: $(SRC)
-	env RUSTDOCFLAGS="--html-after-content src/includes/media-playback-speed.html" cargo doc
+	env RUSTDOCFLAGS="--html-after-content src/includes/media-playback-speed.html" cargo doc --no-deps
 
 # Fancy landing page components.
 landing: $(LANDING) target_dir
