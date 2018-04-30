@@ -10,7 +10,7 @@ function setPlaybackSpeed(speed) {
     controls.className = "playback-rate-controls";
 
     const controlsList = document.createElement("ul");
-    const constrolsHTML = [0.5, 1, 1.25, 1, 1.75, 2]
+    const constrolsHTML = [0.5, 1, 1.25, 1.5, 1.75, 2]
       .map(
         s => `<li><a href="#" onclick="setPlaybackSpeed(${s})">${s}⨉</a></li>`
       )
