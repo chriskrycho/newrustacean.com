@@ -1,6 +1,7 @@
-# Cargo bits
+# Rust/Cargo bits
 target
 Cargo.lock
+rls
 
 # Website bits
 *.mp3
