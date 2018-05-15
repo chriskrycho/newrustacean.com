@@ -4,14 +4,14 @@
         <title>New Rustacean – learning the Rust programming language</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.5.9(3061); Mac OS X Version 10.13.4 (Build 17E202) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.5.10(3072); Mac OS X Version 10.13.4 (Build 17E202) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Mon, 14 May 2018 20:44:22 -0600</pubDate>
-        <lastBuildDate>Mon, 14 May 2018 20:44:22 -0600</lastBuildDate>
+        <pubDate>Tue, 15 May 2018 07:39:01 -0600</pubDate>
+        <lastBuildDate>Tue, 15 May 2018 07:39:01 -0600</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -46,7 +46,7 @@
             <description><![CDATA[<p><code>impl trait</code>, <code>match</code> on references, <code>Result</code>s from <code>main</code>, and more. A good way to mark three years since Rust 1.0!</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
-<li>Rust 1.25:
+<li>Rust 1.26:
 <ul>
 <li><a href="https://blog.rust-lang.org/2018/05/10/Rust-1.26.html">blog post</a></li>
 <li><a href="https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1260-2018-05-10">release notes</a></li>
