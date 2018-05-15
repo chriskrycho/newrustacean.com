@@ -35,7 +35,7 @@
 //! - [Library patterns: multiple levels of abstraction][lib] – Tomas Petricek
 //!   on designing library abstractions with a 80%/14%/5%/1% structure.
 //! - [blanket implementations], [specialization], [coherence], and [the
-//!   lattice rule][lattice]
+//!   lattice rule]
 //!
 //!
 //! [Macros 2.0]: https://github.com/nrc/rfcs/blob/7dcb7374aee3281c261510ca5af53399a3df60f5/text/0000-macros.md
