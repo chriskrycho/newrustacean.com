@@ -22,7 +22,7 @@
 //! Show Notes
 //! ----------
 //!
-//! - Rust 1.25:
+//! - Rust 1.26:
 //!     - [blog post]
 //!     - [release notes]
 //! - [RFC #2115]
