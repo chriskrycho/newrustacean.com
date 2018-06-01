@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Tue, 15 May 2018 07:39:01 -0600</pubDate>
-        <lastBuildDate>Tue, 15 May 2018 07:39:01 -0600</lastBuildDate>
+        <pubDate>Thu, 31 May 2018 21:54:22 -0600</pubDate>
+        <lastBuildDate>Thu, 31 May 2018 21:54:23 -0600</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -40,6 +40,133 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>CYSK: The wasm tools</title>
+            <link>http://newrustacean.com/show_notes/cysk/wasm/</link>
+            <description><![CDATA[<p>wasm intro, <code>wasm-bindgen</code>, and <code>wasm-pack</code></p>
+<h2 id="show-notes">Show Notes</h2>
+<ul>
+<li><a href="https://webassembly.org">WebAssembly</a>
+<ul>
+<li><a href="http://asmjs.org">asm.js</a></li>
+</ul></li>
+<li><a href="https://github.com/alexcrichton/wasm-bindgen">wasm-bindgen</a></li>
+<li><a href="https://github.com/ashleygwilliams/wasm-pack">wasm-pack</a></li>
+<li>Rust wasm working group
+<ul>
+<li><a href="https://github.com/rust-lang-nursery/rust-wasm">GitHub org</a></li>
+<li><a href="https://twitter.com/rustwasm">Twitter</a></li>
+<li><a href="https://rustwasm.github.io">This week in Rust and WebAssembly</a></li>
+</ul></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aaron Turon</li>
+<li>Alexander Payne</li>
+<li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
+<li>Anthony Scotti</li>
+<li>Aleksey Pirogov</li>
+<li>Andreas Fischer</li>
+<li>Andrew Thompson</li>
+<li>Austin LeSure</li>
+<li><a href="https://github.com/behnam">Behnam Esfahbod</a></li>
+<li>Benjamin Wasty</li>
+<li>Brent Vatne</li>
+<li>Chap Lovejoy</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li>Chris Jones</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="http://github.com/anxiousmodernman">Coleman McFarland</a></li>
+<li>Dan Abrams</li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://6ftdan.com/">Daniel P. Clark</a></li>
+<li><a href="http://GitHub.com/DataRiot">David W. Allen</a></li>
+<li>David Hewson</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Eugene Bulkin</li>
+<li>[Hans Fjällemark]</li>
+<li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
+<li><a href="https://www.ianmjones.com/">Ian Jones</a></li>
+<li><a href="https://github.com/Limeth">Jakub “Limeth” Hlusička</a></li>
+<li>James Cooper</li>
+<li>Jerome Froelich</li>
+<li><a href="http://www.cindur.com/">John Rudnick</a></li>
+<li>Jonathan Turner</li>
+<li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li>
+<li>Justin Ossevoort</li>
+<li><a href="https://github.com/kaedroho/">Karl Hobley</a></li>
+<li>Keith Gray</li>
+<li>Kilian Rault</li>
+<li>Luca Schmid</li>
+<li>Masashi Fujita</li>
+<li>Matt Rudder</li>
+<li>Matthew Brenner</li>
+<li>Matthias Ruszala</li>
+<li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li>
+<li><a href="https://github.com/messense">Messense Lv</a></li>
+<li>Micael Bergeron</li>
+<li><a href="http://influential.co/">Nathan Sculli</a></li>
+<li><a href="https://github.com/nastevens">Nick Stevens</a></li>
+<li><a href="http://oluseyi.info/">Oluseyi Sonaiya</a></li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li><a href="https://twitter.com/patrickod">Patrick O’Doherty</a></li>
+<li>[Paul Naranja]</li>
+<li>Peter Tillemans</li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Randy MacLeod</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
+<li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
+<li>Shane Utt</li>
+<li>Simon G.</li>
+<li>Steven Murawksi</li>
+<li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
+<li>Tim Brooks</li>
+<li>Tom Prince</li>
+<li>Ty Overby</li>
+<li>Tyler Harper</li>
+<li>Vesa Kaihlavirta</li>
+<li>Victor Kruger</li>
+<li>Will Greenberg</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+<li>Yaacov Finkelman</li>
+<li>Zachary Snyder</li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Thu, 31 May 2018 21:53:47 -0600</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk/wasm.mp3" length="15169536" type="audio/mpeg"/>
+            <guid isPermaLink="false">96AE12E7-AC4D-40F6-89A7-BE01791C5163</guid>
+            <itunes:subtitle>wasm intro, `wasm-bindgen`, and `wasm-pack`</itunes:subtitle>
+            <itunes:summary>wasm intro, `wasm-bindgen`, and `wasm-pack`</itunes:summary>
+            <itunes:duration>15:46</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
+        </item>
         <item>
             <title>News: Rust 1.26</title>
             <link>http://newrustacean.com/show_notes/news/rust_1_26/</link>

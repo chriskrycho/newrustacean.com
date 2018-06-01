@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["_1","quick-xml"],["_2","clap"],["_3","Rust Language Service"],["rayon","Rayon"],["rocket","Rocket"],["serde","Serde"]]});
+initSidebarItems({"mod":[["_1","quick-xml"],["_2","clap"],["_3","Rust Language Service"],["rayon","Rayon"],["rocket","Rocket"],["serde","Serde"],["wasm","The wasm tools"]]});
