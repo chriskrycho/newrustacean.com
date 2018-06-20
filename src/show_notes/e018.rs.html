@@ -237,17 +237,6 @@
 <span id="237">237</span>
 <span id="238">238</span>
 <span id="239">239</span>
-<span id="240">240</span>
-<span id="241">241</span>
-<span id="242">242</span>
-<span id="243">243</span>
-<span id="244">244</span>
-<span id="245">245</span>
-<span id="246">246</span>
-<span id="247">247</span>
-<span id="248">248</span>
-<span id="249">249</span>
-<span id="250">250</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! `Borrow`, `AsRef`, `Deref`: my head hurts now</span>
 <span class="doccomment">//!</span>
@@ -263,17 +252,17 @@
 <span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e018.mp3&quot;&gt;</span>
 <span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e018.ogg&quot;&gt;</span>
 <span class="doccomment">//! &lt;/audio&gt;</span>
-<span class="doccomment">//! </span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//! Notes</span>
 <span class="doccomment">//! -----</span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//! `Borrow`, `AsRef`, and `Deref` are a little complicated, but they&#39;re</span>
 <span class="doccomment">//! well-worth understanding. Together, they give you tools for dealing with</span>
 <span class="doccomment">//! everything from `HashMap` and friends to conversions involving smart pointer</span>
 <span class="doccomment">//! types to easily using `String` and `str` or `Vec` and slice together.</span>
-<span class="doccomment">//! </span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//! Links</span>
 <span class="doccomment">//! -----</span>
 <span class="doccomment">//!</span>
@@ -302,8 +291,8 @@
 <span class="doccomment">//! [e009]: https://www.newrustacean.com/show_notes/e009/</span>
 <span class="doccomment">//! [e017]: https://www.newrustacean.com/show_notes/e017/</span>
 <span class="doccomment">//! [interview 2]: https://www.newrustacean.com/show_notes/interview/_2/index.html</span>
-<span class="doccomment">//! </span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//! Sponsors</span>
 <span class="doccomment">//! --------</span>
 <span class="doccomment">//!</span>
@@ -361,7 +350,7 @@
 <span class="doccomment">//!   - [Flattr](https://flattr.com/profile/chriskrycho)</span>
 <span class="doccomment">//!   - [PayPal.me](https://paypal.me/chriskrycho)</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//! Contact</span>
 <span class="doccomment">//! -------</span>
 <span class="doccomment">//!</span>
@@ -372,13 +361,9 @@
 <span class="doccomment">//!       + GitHub: [chriskrycho](https://github.com/chriskrycho)</span>
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 
-
-
-
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">borrow</span>::<span class="ident">Borrow</span>;
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">convert</span>::<span class="ident">AsRef</span>;
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">ops</span>::<span class="ident">Deref</span>;
-
 
 <span class="doccomment">/// A struct for showing that you cannot use `Borrow`, `AsRef`</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">NoImplsAtAll</span> {
@@ -387,10 +372,11 @@
 
 <span class="kw">impl</span> <span class="ident">NoImplsAtAll</span> {
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">new</span>(<span class="ident">contents</span>: <span class="kw-2">&amp;</span>[<span class="ident">u8</span>; <span class="number">8</span>]) <span class="op">-&gt;</span> <span class="ident">NoImplsAtAll</span> {
-        <span class="ident">NoImplsAtAll</span> { <span class="ident">_contents</span>: <span class="ident">contents</span>.<span class="ident">clone</span>() }
+        <span class="ident">NoImplsAtAll</span> {
+            <span class="ident">_contents</span>: <span class="ident">contents</span>.<span class="ident">clone</span>(),
+        }
     }
 }
-
 
 <span class="doccomment">/// Demonstrate borrowing the internal contents of the item.</span>
 <span class="doccomment">///</span>
@@ -402,13 +388,13 @@
     <span class="ident">contents</span>: [<span class="ident">u8</span>; <span class="number">8</span>],
 }
 
-
 <span class="kw">impl</span> <span class="ident">HasAllTheImpls</span> {
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">new</span>(<span class="ident">contents</span>: <span class="kw-2">&amp;</span>[<span class="ident">u8</span>; <span class="number">8</span>]) <span class="op">-&gt;</span> <span class="ident">HasAllTheImpls</span> {
-        <span class="ident">HasAllTheImpls</span> { <span class="ident">contents</span>: <span class="ident">contents</span>.<span class="ident">clone</span>() }
+        <span class="ident">HasAllTheImpls</span> {
+            <span class="ident">contents</span>: <span class="ident">contents</span>.<span class="ident">clone</span>(),
+        }
     }
 }
-
 
 <span class="kw">impl</span> <span class="ident">Borrow</span><span class="op">&lt;</span>[<span class="ident">u8</span>]<span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">HasAllTheImpls</span> {
     <span class="kw">fn</span> <span class="ident">borrow</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="kw-2">&amp;</span>[<span class="ident">u8</span>] {
@@ -416,22 +402,19 @@
     }
 }
 
-
 <span class="kw">impl</span> <span class="ident">AsRef</span><span class="op">&lt;</span>[<span class="ident">u8</span>]<span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">HasAllTheImpls</span> {
     <span class="kw">fn</span> <span class="ident">as_ref</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="kw-2">&amp;</span>[<span class="ident">u8</span>] {
         <span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">contents</span>
     }
 }
 
-
 <span class="kw">impl</span> <span class="ident">Deref</span> <span class="kw">for</span> <span class="ident">HasAllTheImpls</span> {
     <span class="kw">type</span> <span class="ident">Target</span> <span class="op">=</span> [<span class="ident">u8</span>];
-    
+
     <span class="kw">fn</span> <span class="ident">deref</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="kw-2">&amp;</span>[<span class="ident">u8</span>] {
         <span class="kw-2">&amp;</span><span class="self">self</span>.<span class="ident">contents</span>
     }
 }
-
 
 <span class="doccomment">/// Take it implementing `Borrow&lt;[u8]&gt;`.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">takes_a_borrowable</span><span class="op">&lt;</span><span class="ident">B</span>: <span class="ident">Borrow</span><span class="op">&lt;</span>[<span class="ident">u8</span>]<span class="op">&gt;&gt;</span>(<span class="ident">b</span>: <span class="ident">B</span>) <span class="op">-&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span>(), ()<span class="op">&gt;</span> {
@@ -442,26 +425,23 @@
     <span class="prelude-val">Ok</span>(())
 }
 
-
 <span class="doccomment">/// Take it implementing `AsRef&lt;[u8]&gt;`. Note similarity to `takes_a_borrowable`.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">takes_a_reference</span><span class="op">&lt;</span><span class="ident">A</span>: <span class="ident">AsRef</span><span class="op">&lt;</span>[<span class="ident">u8</span>]<span class="op">&gt;&gt;</span>(<span class="ident">a</span>: <span class="ident">A</span>) <span class="op">-&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span>(), ()<span class="op">&gt;</span> {
     <span class="kw">for</span> <span class="ident">el</span> <span class="kw">in</span> <span class="ident">a</span>.<span class="ident">as_ref</span>() {
         <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;look ma, a reference! {}&quot;</span>, <span class="ident">el</span>);
     }
-    
+
     <span class="prelude-val">Ok</span>(())
 }
-
 
 <span class="doccomment">/// Take the same type by `Deref` coercion at the call site.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">coerces_via_deref</span>(<span class="ident">coerced</span>: <span class="kw-2">&amp;</span>[<span class="ident">u8</span>]) <span class="op">-&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span>(), ()<span class="op">&gt;</span> {
     <span class="kw">for</span> <span class="ident">el</span> <span class="kw">in</span> <span class="ident">coerced</span> {
         <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;we borrowed it as a straight-up reference: {}&quot;</span>, <span class="ident">el</span>);
     }
-    
+
     <span class="prelude-val">Ok</span>(())
 }
-
 
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">test</span>)]</span>
 <span class="kw">mod</span> <span class="ident">tests</span> {
@@ -473,7 +453,7 @@
         <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="prelude-val">Ok</span>(()), <span class="ident">takes_a_borrowable</span>(<span class="ident">to_borrow</span>));
         <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="prelude-val">Ok</span>(()), <span class="ident">takes_a_borrowable</span>(<span class="ident">to_borrow</span>.<span class="ident">to_vec</span>()));
 
-        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">borrow_this_too</span>: [<span class="ident">u8</span>; <span class="number">8</span>] <span class="op">=</span> [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>];
+        <span class="kw">let</span> <span class="ident">borrow_this_too</span>: [<span class="ident">u8</span>; <span class="number">8</span>] <span class="op">=</span> [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>];
         <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="prelude-val">Ok</span>(()), <span class="ident">takes_a_borrowable</span>(<span class="ident">borrow_this_too</span>));
 
         <span class="kw">let</span> <span class="ident">_contents_not_borrowable</span> <span class="op">=</span> <span class="ident">NoImplsAtAll</span>::<span class="ident">new</span>(<span class="kw-2">&amp;</span><span class="ident">to_borrow</span>);
@@ -486,15 +466,13 @@
     }
 
     <span class="attribute">#[<span class="ident">test</span>]</span>
-    <span class="kw">fn</span> <span class="ident">e018_demonstrate_as_ref</span>() {
-
-    }
+    <span class="kw">fn</span> <span class="ident">e018_demonstrate_as_ref</span>() {}
 
     <span class="attribute">#[<span class="ident">test</span>]</span>
     <span class="kw">fn</span> <span class="ident">e018_demonstrate_deref</span>() {
         <span class="kw">let</span> <span class="ident">basic</span>: [<span class="ident">u8</span>; <span class="number">8</span>] <span class="op">=</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>];
         <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="prelude-val">Ok</span>(()), <span class="ident">coerces_via_deref</span>(<span class="kw-2">&amp;</span><span class="ident">basic</span>));
-        
+
         <span class="kw">let</span> <span class="ident">to_coerce</span> <span class="op">=</span> <span class="ident">HasAllTheImpls</span>::<span class="ident">new</span>(<span class="kw-2">&amp;</span><span class="ident">basic</span>);
         <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="prelude-val">Ok</span>(()), <span class="ident">coerces_via_deref</span>(<span class="kw-2">&amp;</span><span class="ident">to_coerce</span>));
     }

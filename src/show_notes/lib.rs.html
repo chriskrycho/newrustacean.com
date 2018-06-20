@@ -57,6 +57,9 @@
 <span id="57">57</span>
 <span id="58">58</span>
 <span id="59">59</span>
+<span id="60">60</span>
+<span id="61">61</span>
+<span id="62">62</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Show notes</span>
 <span class="doccomment">//!</span>
@@ -69,9 +72,11 @@
 <span class="doccomment">//! [e001]: /src/show_notes/e001.rs.html</span>
 
 <span class="comment">// Set the crate-level HTML rendering rules for the documentation.</span>
-<span class="attribute">#![<span class="ident">doc</span>(<span class="ident">html_logo_url</span> <span class="op">=</span> <span class="string">&quot;http://newrustacean.com/podcast.png&quot;</span>,
-       <span class="ident">html_favicon_url</span> <span class="op">=</span> <span class="string">&quot;http://newrustacean.com/favicon.ico&quot;</span>,
-       <span class="ident">html_root_url</span> <span class="op">=</span> <span class="string">&quot;http://newrustacean.com/&quot;</span>)]</span>
+<span class="attribute">#![<span class="ident">doc</span>(
+    <span class="ident">html_logo_url</span> <span class="op">=</span> <span class="string">&quot;http://newrustacean.com/podcast.png&quot;</span>,
+    <span class="ident">html_favicon_url</span> <span class="op">=</span> <span class="string">&quot;http://newrustacean.com/favicon.ico&quot;</span>,
+    <span class="ident">html_root_url</span> <span class="op">=</span> <span class="string">&quot;http://newrustacean.com/&quot;</span>
+)]</span>
 <span class="comment">// Enable access to the benchmarking functionality. Note that with this present,</span>
 <span class="comment">// we require using nightly Rust (as of 1.5).</span>
 <span class="attribute">#![<span class="ident">feature</span>(<span class="ident">test</span>)]</span>
@@ -111,6 +116,7 @@
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">e021</span>;
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">e022</span>;
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">e023</span>;
+<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">e024</span>;
 
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">bonus</span>;
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">cysk</span>;
