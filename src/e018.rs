@@ -12,17 +12,17 @@
 //!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e018.mp3">
 //!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e018.ogg">
 //! </audio>
-//! 
-//! 
+//!
+//!
 //! Notes
 //! -----
-//! 
+//!
 //! `Borrow`, `AsRef`, and `Deref` are a little complicated, but they're
 //! well-worth understanding. Together, they give you tools for dealing with
 //! everything from `HashMap` and friends to conversions involving smart pointer
 //! types to easily using `String` and `str` or `Vec` and slice together.
-//! 
-//! 
+//!
+//!
 //! Links
 //! -----
 //!
@@ -51,8 +51,8 @@
 //! [e009]: https://www.newrustacean.com/show_notes/e009/
 //! [e017]: https://www.newrustacean.com/show_notes/e017/
 //! [interview 2]: https://www.newrustacean.com/show_notes/interview/_2/index.html
-//! 
-//! 
+//!
+//!
 //! Sponsors
 //! --------
 //!
@@ -110,7 +110,7 @@
 //!   - [Flattr](https://flattr.com/profile/chriskrycho)
 //!   - [PayPal.me](https://paypal.me/chriskrycho)
 //!
-//! 
+//!
 //! Contact
 //! -------
 //!
@@ -121,13 +121,9 @@
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-
-
-
 use std::borrow::Borrow;
 use std::convert::AsRef;
 use std::ops::Deref;
-
 
 /// A struct for showing that you cannot use `Borrow`, `AsRef`
 pub struct NoImplsAtAll {
@@ -136,10 +132,11 @@ pub struct NoImplsAtAll {
 
 impl NoImplsAtAll {
     pub fn new(contents: &[u8; 8]) -> NoImplsAtAll {
-        NoImplsAtAll { _contents: contents.clone() }
+        NoImplsAtAll {
+            _contents: contents.clone(),
+        }
     }
 }
-
 
 /// Demonstrate borrowing the internal contents of the item.
 ///
@@ -151,13 +148,13 @@ pub struct HasAllTheImpls {
     contents: [u8; 8],
 }
 
-
 impl HasAllTheImpls {
     pub fn new(contents: &[u8; 8]) -> HasAllTheImpls {
-        HasAllTheImpls { contents: contents.clone() }
+        HasAllTheImpls {
+            contents: contents.clone(),
+        }
     }
 }
-
 
 impl Borrow<[u8]> for HasAllTheImpls {
     fn borrow(&self) -> &[u8] {
@@ -165,22 +162,19 @@ impl Borrow<[u8]> for HasAllTheImpls {
     }
 }
 
-
 impl AsRef<[u8]> for HasAllTheImpls {
     fn as_ref(&self) -> &[u8] {
         &self.contents
     }
 }
 
-
 impl Deref for HasAllTheImpls {
     type Target = [u8];
-    
+
     fn deref(&self) -> &[u8] {
         &self.contents
     }
 }
-
 
 /// Take it implementing `Borrow<[u8]>`.
 pub fn takes_a_borrowable<B: Borrow<[u8]>>(b: B) -> Result<(), ()> {
@@ -191,26 +185,23 @@ pub fn takes_a_borrowable<B: Borrow<[u8]>>(b: B) -> Result<(), ()> {
     Ok(())
 }
 
-
 /// Take it implementing `AsRef<[u8]>`. Note similarity to `takes_a_borrowable`.
 pub fn takes_a_reference<A: AsRef<[u8]>>(a: A) -> Result<(), ()> {
     for el in a.as_ref() {
         println!("look ma, a reference! {}", el);
     }
-    
+
     Ok(())
 }
-
 
 /// Take the same type by `Deref` coercion at the call site.
 pub fn coerces_via_deref(coerced: &[u8]) -> Result<(), ()> {
     for el in coerced {
         println!("we borrowed it as a straight-up reference: {}", el);
     }
-    
+
     Ok(())
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -222,7 +213,7 @@ mod tests {
         assert_eq!(Ok(()), takes_a_borrowable(to_borrow));
         assert_eq!(Ok(()), takes_a_borrowable(to_borrow.to_vec()));
 
-        let mut borrow_this_too: [u8; 8] = [0, 1, 2, 3, 4, 5, 6, 7];
+        let borrow_this_too: [u8; 8] = [0, 1, 2, 3, 4, 5, 6, 7];
         assert_eq!(Ok(()), takes_a_borrowable(borrow_this_too));
 
         let _contents_not_borrowable = NoImplsAtAll::new(&to_borrow);
@@ -235,15 +226,13 @@ mod tests {
     }
 
     #[test]
-    fn e018_demonstrate_as_ref() {
-
-    }
+    fn e018_demonstrate_as_ref() {}
 
     #[test]
     fn e018_demonstrate_deref() {
         let basic: [u8; 8] = [1, 2, 3, 4, 5, 6, 7, 8];
         assert_eq!(Ok(()), coerces_via_deref(&basic));
-        
+
         let to_coerce = HasAllTheImpls::new(&basic);
         assert_eq!(Ok(()), coerces_via_deref(&to_coerce));
     }

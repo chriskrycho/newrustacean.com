@@ -9,9 +9,11 @@
 //! [e001]: /src/show_notes/e001.rs.html
 
 // Set the crate-level HTML rendering rules for the documentation.
-#![doc(html_logo_url = "http://newrustacean.com/podcast.png",
-       html_favicon_url = "http://newrustacean.com/favicon.ico",
-       html_root_url = "http://newrustacean.com/")]
+#![doc(
+    html_logo_url = "http://newrustacean.com/podcast.png",
+    html_favicon_url = "http://newrustacean.com/favicon.ico",
+    html_root_url = "http://newrustacean.com/"
+)]
 // Enable access to the benchmarking functionality. Note that with this present,
 // we require using nightly Rust (as of 1.5).
 #![feature(test)]
@@ -51,6 +53,7 @@ pub mod e020;
 pub mod e021;
 pub mod e022;
 pub mod e023;
+pub mod e024;
 
 pub mod bonus;
 pub mod cysk;
