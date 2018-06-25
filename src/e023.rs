@@ -1,4 +1,4 @@
-//! e023: Traits Deep Dive, Part 1
+//! Traits Deep Dive, Part 1
 //!
 //!   - **Date:** April 28, 2018
 //!   - **Subject:** Defining and using your own traits, using other crates' traits, and the orphan rule.

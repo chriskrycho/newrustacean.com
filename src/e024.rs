@@ -1,4 +1,4 @@
-//! e024: Traits Deep Dive, Part 2
+//! Traits Deep Dive, Part 2
 //!
 //!   - **Date:** June 19, 2018
 //!   - **Subject:** Operators as sugar for traits, traits as generic
