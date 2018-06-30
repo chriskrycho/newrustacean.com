@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source to the Rust file `src/e024.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>e024.rs.html -- source</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script><link rel="shortcut icon" href="http://newrustacean.com/favicon.ico"></head><body class="rustdoc source"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><pre class="line-numbers"><span id="1">  1</span>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source to the Rust file `src/news/rust_1_27.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>rust_1_27.rs.html -- source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css"><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script src="../../../storage.js"></script><link rel="shortcut icon" href="http://newrustacean.com/favicon.ico"></head><body class="rustdoc source"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../../settings.html"><img src="../../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -193,90 +193,44 @@
 <span id="193">193</span>
 <span id="194">194</span>
 <span id="195">195</span>
-<span id="196">196</span>
-<span id="197">197</span>
-<span id="198">198</span>
-<span id="199">199</span>
-<span id="200">200</span>
-<span id="201">201</span>
-<span id="202">202</span>
-<span id="203">203</span>
-<span id="204">204</span>
-<span id="205">205</span>
-<span id="206">206</span>
-<span id="207">207</span>
-<span id="208">208</span>
-<span id="209">209</span>
-<span id="210">210</span>
-<span id="211">211</span>
-<span id="212">212</span>
-<span id="213">213</span>
-<span id="214">214</span>
-<span id="215">215</span>
-<span id="216">216</span>
-<span id="217">217</span>
-<span id="218">218</span>
-<span id="219">219</span>
-<span id="220">220</span>
-<span id="221">221</span>
-<span id="222">222</span>
-<span id="223">223</span>
-<span id="224">224</span>
-<span id="225">225</span>
-<span id="226">226</span>
-<span id="227">227</span>
-<span id="228">228</span>
-<span id="229">229</span>
-<span id="230">230</span>
-<span id="231">231</span>
-<span id="232">232</span>
-<span id="233">233</span>
-<span id="234">234</span>
-<span id="235">235</span>
-<span id="236">236</span>
-<span id="237">237</span>
-<span id="238">238</span>
-<span id="239">239</span>
-<span id="240">240</span>
-<span id="241">241</span>
-<span id="242">242</span>
-<span id="243">243</span>
-<span id="244">244</span>
-<span id="245">245</span>
-<span id="246">246</span>
-<span id="247">247</span>
-<span id="248">248</span>
-<span id="249">249</span>
 </pre><pre class="rust ">
-<span class="doccomment">//! Traits Deep Dive, Part 2</span>
+<span class="doccomment">//! Rust 1.27</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//!   - **Date:** June 19, 2018</span>
-<span class="doccomment">//!   - **Subject:** Operators as sugar for traits, traits as generic</span>
-<span class="doccomment">//!     constraints, monomorphization, and universal and existential types.</span>
+<span class="doccomment">//!   - **Date:** June 30, 2018</span>
+<span class="doccomment">//!   - **Subject:** Stable SIMD, `dyn trait`, `rustfix` and the alpha release</span>
+<span class="doccomment">//!     of the Rust 2018 Edition Preview!</span>
 <span class="doccomment">//!   - **Audio:**</span>
 <span class="doccomment">//!       + [M4A][m4a]</span>
 <span class="doccomment">//!       + [MP3][mp3]</span>
 <span class="doccomment">//!       + [Ogg][ogg]</span>
+<span class="doccomment">//!   - [**Script**](https://newrustacean.com/show_notes/news/rust_1_27/struct.script)</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e024.m4a</span>
-<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e024.mp3</span>
-<span class="doccomment">//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e024.ogg</span>
+<span class="doccomment">//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_27.m4a</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_27.mp3</span>
+<span class="doccomment">//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_27.ogg</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; style=&quot;width: 100%&quot; title=&quot;&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e024.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e024.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e024.ogg&quot;&gt;</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; style=&quot;width: 100%&quot; title=&quot;Crates You Should Know: Serde&quot; controls preload=metadata&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_27.m4a&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_27.mp3&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_27.ogg&quot;&gt;</span>
 <span class="doccomment">//! &lt;/audio&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! Show Notes</span>
 <span class="doccomment">//! ----------</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! - on monomorphization, see also [Sean Griffin&#39;s RustConf 2017 talk][sgrc2017]</span>
-<span class="doccomment">//! - [zero-cost abstractions]</span>
+<span class="doccomment">//! - Rust 1.27:</span>
+<span class="doccomment">//!     - [blog post]</span>
+<span class="doccomment">//!     - [release notes]</span>
+<span class="doccomment">//! - [This Week in Rust]</span>
+<span class="doccomment">//! - [The Rusty Spike]</span>
+<span class="doccomment">//! - [Hello Rust]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [sgrc2017]: https://www.youtube.com/watch?v=wxPehGkoNOw</span>
-<span class="doccomment">//! [zero-cost abstractions]: https://blog.rust-lang.org/2015/05/11/traits.html</span>
+<span class="doccomment">//! [blog post]: https://blog.rust-lang.org/2018/06/21/Rust-1.27.html</span>
+<span class="doccomment">//! [release notes]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1270-2018-06-21</span>
+<span class="doccomment">//! [This Week in Rust]: https://this-week-in-rust.org</span>
+<span class="doccomment">//! [The Rusty Spike]: https://rusty-spike.blubrry.net/</span>
+<span class="doccomment">//! [Hello Rust]: https://m.youtube.com/channel/UCZ_EWaQZCZuGGfnuqUoHujw</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! Sponsors</span>
 <span class="doccomment">//! --------</span>
@@ -299,10 +253,10 @@
 <span class="doccomment">//!   - Chris Jones</span>
 <span class="doccomment">//!   - [Chris Palmer]</span>
 <span class="doccomment">//!   - [Coleman McFarland]</span>
-<span class="doccomment">//!   - Damien Stanton</span>
+<span class="doccomment">//!   - [Damien Stanton]</span>
 <span class="doccomment">//!   - Dan Abrams</span>
 <span class="doccomment">//!   - [Daniel Collin]</span>
-<span class="doccomment">//!   - Daniel Mason</span>
+<span class="doccomment">//!   - [Daniel Mason]</span>
 <span class="doccomment">//!   - [Daniel P. Clark]</span>
 <span class="doccomment">//!   - [David W. Allen]</span>
 <span class="doccomment">//!   - David Hewson</span>
@@ -328,7 +282,7 @@
 <span class="doccomment">//!   - Luca Schmid</span>
 <span class="doccomment">//!   - [Luiz Irber]</span>
 <span class="doccomment">//!   - Mark LeMoine</span>
-<span class="doccomment">//!   - Martin Heuschober</span>
+<span class="doccomment">//!   - [Martin Heuschober]:</span>
 <span class="doccomment">//!   - Masashi Fujita</span>
 <span class="doccomment">//!   - Matt Rudder</span>
 <span class="doccomment">//!   - Matthew Brenner</span>
@@ -350,8 +304,10 @@
 <span class="doccomment">//!   - Randy MacLeod</span>
 <span class="doccomment">//!   - Raph Levien</span>
 <span class="doccomment">//!   - reddraggone9</span>
+<span class="doccomment">//!   - Robert Chrzanowski</span>
 <span class="doccomment">//!   - [Ryan Blecher]</span>
-<span class="doccomment">//!   - Ryan Osial</span>
+<span class="doccomment">//!   - [Ryan Osial]</span>
+<span class="doccomment">//!   - Sascha Grunert</span>
 <span class="doccomment">//!   - [Sebastián Ramírez Magrí]</span>
 <span class="doccomment">//!   - Shane Utt</span>
 <span class="doccomment">//!   - Simon G.</span>
@@ -378,7 +334,9 @@
 <span class="doccomment">//! [Charlie Egan]: https://charlieegan3.com</span>
 <span class="doccomment">//! [Chris Palmer]: http://home.red-oxide.org/</span>
 <span class="doccomment">//! [Coleman McFarland]: http://github.com/anxiousmodernman</span>
+<span class="doccomment">//! [Damien Stanton]: https://github.com/damienstanton</span>
 <span class="doccomment">//! [Daniel Collin]: https://twitter.com/daniel_collin</span>
+<span class="doccomment">//! [Daniel Mason]: https://github.com/gisleburt</span>
 <span class="doccomment">//! [Daniel P. Clark]: https://6ftdan.com/</span>
 <span class="doccomment">//! [David W. Allen]: http://GitHub.com/DataRiot</span>
 <span class="doccomment">//! [Derek Morr]: https://twitter.com/derekmorr</span>
@@ -390,6 +348,7 @@
 <span class="doccomment">//! [Jupp Müller]: https://de.linkedin.com/in/juppm</span>
 <span class="doccomment">//! [Karl Hobley]: https://github.com/kaedroho/</span>
 <span class="doccomment">//! [Luiz Irber]: http://luizirber.org/</span>
+<span class="doccomment">//! [Martin Heuschober]: https://github.com/epsilonhalbe</span>
 <span class="doccomment">//! [Max Jacobson]: https://twitter.com/maxjacobson</span>
 <span class="doccomment">//! [Messense Lv]: https://github.com/messense</span>
 <span class="doccomment">//! [Nathan Sculli]: http://influential.co/</span>
@@ -400,6 +359,7 @@
 <span class="doccomment">//! [Philipp Keller]: https://twitter.com/hansapla</span>
 <span class="doccomment">//! [Ramon Buckley]: http://www.inosion.com</span>
 <span class="doccomment">//! [Ryan Blecher]: http://notryanb.github.io/</span>
+<span class="doccomment">//! [Ryan Osial]: https://github.com/osialr</span>
 <span class="doccomment">//! [Sebastián Ramírez Magrí]: https://www.twitter.com/sebasmagri</span>
 <span class="doccomment">//! [Stuart Hinson]: http://stuarth.github.io/</span>
 <span class="doccomment">//! [William Roe]: http://willroe.me</span>
@@ -427,79 +387,11 @@
 <span class="doccomment">//!       + GitHub: [chriskrycho](https://github.com/chriskrycho)</span>
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 
-<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">fmt</span>::<span class="ident">Display</span>;
-<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">ops</span>::<span class="ident">Add</span>;
-
-<span class="attribute">#[<span class="ident">doc</span>(<span class="ident">include</span> <span class="op">=</span> <span class="string">&quot;../docs/e024-script.md&quot;</span>)]</span>
+<span class="attribute">#[<span class="ident">doc</span>(<span class="ident">include</span> <span class="op">=</span> <span class="string">&quot;../docs/news/rust-1-27.md&quot;</span>)]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Script</span>;
-
-<span class="doccomment">/// A data structure which will implement `std::ops::Add`.</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// With the implementation in place, we can do this:</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// ```rust</span>
-<span class="doccomment">/// # use show_notes::e024::*;</span>
-<span class="doccomment">/// # fn main() {</span>
-<span class="doccomment">/// let a = Point {</span>
-<span class="doccomment">///     x: 123,</span>
-<span class="doccomment">///     y: 234,</span>
-<span class="doccomment">///     z: 345,</span>
-<span class="doccomment">/// };</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// let b = Point {</span>
-<span class="doccomment">///     x: 456,</span>
-<span class="doccomment">///     y: 567,</span>
-<span class="doccomment">///     z: 678,</span>
-<span class="doccomment">/// };</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// let c = a + b;</span>
-<span class="doccomment">/// # }</span>
-<span class="doccomment">/// ```</span>
-<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Point</span> {
-    <span class="kw">pub</span> <span class="ident">x</span>: <span class="ident">i32</span>,
-    <span class="kw">pub</span> <span class="ident">y</span>: <span class="ident">i32</span>,
-    <span class="kw">pub</span> <span class="ident">z</span>: <span class="ident">i32</span>,
-}
-
-<span class="kw">impl</span> <span class="ident">Add</span> <span class="kw">for</span> <span class="ident">Point</span> {
-    <span class="kw">type</span> <span class="ident">Output</span> <span class="op">=</span> <span class="ident">Point</span>;
-
-    <span class="kw">fn</span> <span class="ident">add</span>(<span class="self">self</span>, <span class="ident">other</span>: <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">Point</span> {
-        <span class="ident">Point</span> {
-            <span class="ident">x</span>: <span class="self">self</span>.<span class="ident">x</span> <span class="op">+</span> <span class="ident">other</span>.<span class="ident">x</span>,
-            <span class="ident">y</span>: <span class="self">self</span>.<span class="ident">y</span> <span class="op">+</span> <span class="ident">other</span>.<span class="ident">y</span>,
-            <span class="ident">z</span>: <span class="self">self</span>.<span class="ident">z</span> <span class="op">+</span> <span class="ident">other</span>.<span class="ident">z</span>,
-        }
-    }
-}
-
-<span class="doccomment">/// Demonstrate a generic trait.</span>
-<span class="kw">pub</span> <span class="kw">trait</span> <span class="ident">Eatable</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
-    <span class="kw">fn</span> <span class="ident">eat</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">T</span>;
-}
-
-<span class="kw">impl</span> <span class="ident">Eatable</span><span class="op">&lt;</span><span class="ident">String</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">i32</span> {
-    <span class="kw">fn</span> <span class="ident">eat</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">String</span> {
-        <span class="self">self</span>.<span class="ident">to_string</span>()
-    }
-}
-
-<span class="doccomment">/// Demonstrate the ability to take a trait constraint on a generic inline.</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">to_string_inline</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">Display</span><span class="op">&gt;</span>(<span class="ident">t</span>: <span class="ident">T</span>) <span class="op">-&gt;</span> <span class="ident">String</span> {
-    <span class="macro">format</span><span class="macro">!</span>(<span class="string">&quot;{}&quot;</span>, <span class="ident">t</span>)
-}
-
-<span class="doccomment">/// Demonstrate the ability to take a trait constraint on a generic with a</span>
-<span class="doccomment">/// `where` clause.</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">to_string_with_where</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span>(<span class="ident">t</span>: <span class="ident">T</span>) <span class="op">-&gt;</span> <span class="ident">String</span>
-<span class="kw">where</span>
-    <span class="ident">T</span>: <span class="ident">Display</span>,
-{
-    <span class="macro">format</span><span class="macro">!</span>(<span class="string">&quot;{}&quot;</span>, <span class="ident">t</span>)
-}
 </pre>
 </section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><link rel="stylesheet" href="/media-playback.css">
 <script type="text/javascript" src="/media-playback.js" defer></script>
 
 
-<script>window.rootPath = "../../";window.currentCrate = "show_notes";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>
+<script>window.rootPath = "../../../";window.currentCrate = "show_notes";</script><script src="../../../aliases.js"></script><script src="../../../main.js"></script><script defer src="../../../search-index.js"></script></body></html>
