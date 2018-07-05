@@ -1,0 +1,541 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source to the Rust file `src/e025.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>e025.rs.html -- source</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script><link rel="shortcut icon" href="http://newrustacean.com/favicon.ico"></head><body class="rustdoc source"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><pre class="line-numbers"><span id="1">  1</span>
+<span id="2">  2</span>
+<span id="3">  3</span>
+<span id="4">  4</span>
+<span id="5">  5</span>
+<span id="6">  6</span>
+<span id="7">  7</span>
+<span id="8">  8</span>
+<span id="9">  9</span>
+<span id="10"> 10</span>
+<span id="11"> 11</span>
+<span id="12"> 12</span>
+<span id="13"> 13</span>
+<span id="14"> 14</span>
+<span id="15"> 15</span>
+<span id="16"> 16</span>
+<span id="17"> 17</span>
+<span id="18"> 18</span>
+<span id="19"> 19</span>
+<span id="20"> 20</span>
+<span id="21"> 21</span>
+<span id="22"> 22</span>
+<span id="23"> 23</span>
+<span id="24"> 24</span>
+<span id="25"> 25</span>
+<span id="26"> 26</span>
+<span id="27"> 27</span>
+<span id="28"> 28</span>
+<span id="29"> 29</span>
+<span id="30"> 30</span>
+<span id="31"> 31</span>
+<span id="32"> 32</span>
+<span id="33"> 33</span>
+<span id="34"> 34</span>
+<span id="35"> 35</span>
+<span id="36"> 36</span>
+<span id="37"> 37</span>
+<span id="38"> 38</span>
+<span id="39"> 39</span>
+<span id="40"> 40</span>
+<span id="41"> 41</span>
+<span id="42"> 42</span>
+<span id="43"> 43</span>
+<span id="44"> 44</span>
+<span id="45"> 45</span>
+<span id="46"> 46</span>
+<span id="47"> 47</span>
+<span id="48"> 48</span>
+<span id="49"> 49</span>
+<span id="50"> 50</span>
+<span id="51"> 51</span>
+<span id="52"> 52</span>
+<span id="53"> 53</span>
+<span id="54"> 54</span>
+<span id="55"> 55</span>
+<span id="56"> 56</span>
+<span id="57"> 57</span>
+<span id="58"> 58</span>
+<span id="59"> 59</span>
+<span id="60"> 60</span>
+<span id="61"> 61</span>
+<span id="62"> 62</span>
+<span id="63"> 63</span>
+<span id="64"> 64</span>
+<span id="65"> 65</span>
+<span id="66"> 66</span>
+<span id="67"> 67</span>
+<span id="68"> 68</span>
+<span id="69"> 69</span>
+<span id="70"> 70</span>
+<span id="71"> 71</span>
+<span id="72"> 72</span>
+<span id="73"> 73</span>
+<span id="74"> 74</span>
+<span id="75"> 75</span>
+<span id="76"> 76</span>
+<span id="77"> 77</span>
+<span id="78"> 78</span>
+<span id="79"> 79</span>
+<span id="80"> 80</span>
+<span id="81"> 81</span>
+<span id="82"> 82</span>
+<span id="83"> 83</span>
+<span id="84"> 84</span>
+<span id="85"> 85</span>
+<span id="86"> 86</span>
+<span id="87"> 87</span>
+<span id="88"> 88</span>
+<span id="89"> 89</span>
+<span id="90"> 90</span>
+<span id="91"> 91</span>
+<span id="92"> 92</span>
+<span id="93"> 93</span>
+<span id="94"> 94</span>
+<span id="95"> 95</span>
+<span id="96"> 96</span>
+<span id="97"> 97</span>
+<span id="98"> 98</span>
+<span id="99"> 99</span>
+<span id="100">100</span>
+<span id="101">101</span>
+<span id="102">102</span>
+<span id="103">103</span>
+<span id="104">104</span>
+<span id="105">105</span>
+<span id="106">106</span>
+<span id="107">107</span>
+<span id="108">108</span>
+<span id="109">109</span>
+<span id="110">110</span>
+<span id="111">111</span>
+<span id="112">112</span>
+<span id="113">113</span>
+<span id="114">114</span>
+<span id="115">115</span>
+<span id="116">116</span>
+<span id="117">117</span>
+<span id="118">118</span>
+<span id="119">119</span>
+<span id="120">120</span>
+<span id="121">121</span>
+<span id="122">122</span>
+<span id="123">123</span>
+<span id="124">124</span>
+<span id="125">125</span>
+<span id="126">126</span>
+<span id="127">127</span>
+<span id="128">128</span>
+<span id="129">129</span>
+<span id="130">130</span>
+<span id="131">131</span>
+<span id="132">132</span>
+<span id="133">133</span>
+<span id="134">134</span>
+<span id="135">135</span>
+<span id="136">136</span>
+<span id="137">137</span>
+<span id="138">138</span>
+<span id="139">139</span>
+<span id="140">140</span>
+<span id="141">141</span>
+<span id="142">142</span>
+<span id="143">143</span>
+<span id="144">144</span>
+<span id="145">145</span>
+<span id="146">146</span>
+<span id="147">147</span>
+<span id="148">148</span>
+<span id="149">149</span>
+<span id="150">150</span>
+<span id="151">151</span>
+<span id="152">152</span>
+<span id="153">153</span>
+<span id="154">154</span>
+<span id="155">155</span>
+<span id="156">156</span>
+<span id="157">157</span>
+<span id="158">158</span>
+<span id="159">159</span>
+<span id="160">160</span>
+<span id="161">161</span>
+<span id="162">162</span>
+<span id="163">163</span>
+<span id="164">164</span>
+<span id="165">165</span>
+<span id="166">166</span>
+<span id="167">167</span>
+<span id="168">168</span>
+<span id="169">169</span>
+<span id="170">170</span>
+<span id="171">171</span>
+<span id="172">172</span>
+<span id="173">173</span>
+<span id="174">174</span>
+<span id="175">175</span>
+<span id="176">176</span>
+<span id="177">177</span>
+<span id="178">178</span>
+<span id="179">179</span>
+<span id="180">180</span>
+<span id="181">181</span>
+<span id="182">182</span>
+<span id="183">183</span>
+<span id="184">184</span>
+<span id="185">185</span>
+<span id="186">186</span>
+<span id="187">187</span>
+<span id="188">188</span>
+<span id="189">189</span>
+<span id="190">190</span>
+<span id="191">191</span>
+<span id="192">192</span>
+<span id="193">193</span>
+<span id="194">194</span>
+<span id="195">195</span>
+<span id="196">196</span>
+<span id="197">197</span>
+<span id="198">198</span>
+<span id="199">199</span>
+<span id="200">200</span>
+<span id="201">201</span>
+<span id="202">202</span>
+<span id="203">203</span>
+<span id="204">204</span>
+<span id="205">205</span>
+<span id="206">206</span>
+<span id="207">207</span>
+<span id="208">208</span>
+<span id="209">209</span>
+<span id="210">210</span>
+<span id="211">211</span>
+<span id="212">212</span>
+<span id="213">213</span>
+<span id="214">214</span>
+<span id="215">215</span>
+<span id="216">216</span>
+<span id="217">217</span>
+<span id="218">218</span>
+<span id="219">219</span>
+<span id="220">220</span>
+<span id="221">221</span>
+<span id="222">222</span>
+<span id="223">223</span>
+<span id="224">224</span>
+<span id="225">225</span>
+<span id="226">226</span>
+<span id="227">227</span>
+<span id="228">228</span>
+<span id="229">229</span>
+<span id="230">230</span>
+<span id="231">231</span>
+<span id="232">232</span>
+<span id="233">233</span>
+<span id="234">234</span>
+<span id="235">235</span>
+<span id="236">236</span>
+<span id="237">237</span>
+<span id="238">238</span>
+<span id="239">239</span>
+<span id="240">240</span>
+<span id="241">241</span>
+<span id="242">242</span>
+<span id="243">243</span>
+<span id="244">244</span>
+<span id="245">245</span>
+<span id="246">246</span>
+<span id="247">247</span>
+<span id="248">248</span>
+<span id="249">249</span>
+<span id="250">250</span>
+<span id="251">251</span>
+<span id="252">252</span>
+<span id="253">253</span>
+<span id="254">254</span>
+<span id="255">255</span>
+<span id="256">256</span>
+<span id="257">257</span>
+<span id="258">258</span>
+<span id="259">259</span>
+<span id="260">260</span>
+<span id="261">261</span>
+<span id="262">262</span>
+<span id="263">263</span>
+<span id="264">264</span>
+<span id="265">265</span>
+<span id="266">266</span>
+<span id="267">267</span>
+</pre><pre class="rust ">
+<span class="doccomment">//! Traits Deep Dive, Part 3</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!   - **Date:** July 4, 2018</span>
+<span class="doccomment">//!   - **Subject:** Closure traits, `impl trait`, `dyn trait`, and object safety!</span>
+<span class="doccomment">//!   - **Script:**</span>
+<span class="doccomment">//!   - **Audio:**</span>
+<span class="doccomment">//!       + [M4A][m4a]</span>
+<span class="doccomment">//!       + [MP3][mp3]</span>
+<span class="doccomment">//!       + [Ogg][ogg]</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e025.m4a</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e025.mp3</span>
+<span class="doccomment">//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e025.ogg</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; style=&quot;width: 100%&quot; title=&quot;&quot; controls preload=metadata&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e025.m4a&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e025.mp3&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e025.ogg&quot;&gt;</span>
+<span class="doccomment">//! &lt;/audio&gt;</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Show Notes</span>
+<span class="doccomment">//! ----------</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Sponsored by [Parity Technologies][parity]! Parity is hiring Rust developers</span>
+<span class="doccomment">//! so if you&#39;re interested, you should check out their [job listings][jobs]!</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [parity]: https://paritytech.io</span>
+<span class="doccomment">//! [jobs]: https://paritytech.io/jobs/</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ### Links</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! - [RFC #1733: Trait Aliases][1733]</span>
+<span class="doccomment">//! - [RFC #255: Object Safety][255]</span>
+<span class="doccomment">//! - [Ch. 17 in the Second Edition of *The Rust Programming Language*][trpl]</span>
+<span class="doccomment">//! - [Huon Wilson&#39;s post][huon]</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [1733]: https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md</span>
+<span class="doccomment">//! [255]: https://github.com/rust-lang/rfcs/blob/master/text/0255-object-safety.md</span>
+<span class="doccomment">//! [trpl]: https://doc.rust-lang.org/book/second-edition/ch17-02-trait-objects.html</span>
+<span class="doccomment">//! [huon]: https://huonw.github.io/blog/2015/05/where-self-meets-sized-revisiting-object-safety/ &quot;Where Self Meets Sized: Revisiting Object Safety&quot;</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ### Example</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! You can see all of the pieces of the final example described in the show</span>
+<span class="doccomment">//! here (and the module has the required definitions for `Point`).</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ```rust</span>
+<span class="doccomment">//! # use show_notes::e025::*;</span>
+<span class="doccomment">//! # fn main() {</span>
+<span class="doccomment">//! let points = vec![</span>
+<span class="doccomment">//!     Point { x: 1.0, y: 2.0 },</span>
+<span class="doccomment">//!     Point { x: 12.0, y: 4.3 },</span>
+<span class="doccomment">//!     Point { x: -5.4, y: 18.7 },</span>
+<span class="doccomment">//! ];</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! let origin = Point::default();</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! // This is the version we start with. It works fine, but it&#39;s not elegant.</span>
+<span class="doccomment">//! let distances_inline: Vec&lt;f32&gt; = points</span>
+<span class="doccomment">//!     .iter()</span>
+<span class="doccomment">//!     .map(|point| {</span>
+<span class="doccomment">//!         let change = point - &amp;origin;</span>
+<span class="doccomment">//!         (change.x.powi(2) + change.y.powi(2)).sqrt()</span>
+<span class="doccomment">//!     })</span>
+<span class="doccomment">//!     .collect();</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! // This version is *much* cleaner!</span>
+<span class="doccomment">//! let distances_impl: Vec&lt;f32&gt; = points.iter().map(distance_from_impl(&amp;origin)).collect();</span>
+<span class="doccomment">//! # }</span>
+<span class="doccomment">//! ```</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Sponsors</span>
+<span class="doccomment">//! --------</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!   - Aaron Turon</span>
+<span class="doccomment">//!   - Alexander Kryvomaz</span>
+<span class="doccomment">//!   - Alexander Payne</span>
+<span class="doccomment">//!   - [Anthony Deschamps]</span>
+<span class="doccomment">//!   - Anthony Scotti</span>
+<span class="doccomment">//!   - Antonin Carette</span>
+<span class="doccomment">//!   - Aleksey Pirogov</span>
+<span class="doccomment">//!   - Andreas Fischer</span>
+<span class="doccomment">//!   - Andrew Thompson</span>
+<span class="doccomment">//!   - Austin LeSure</span>
+<span class="doccomment">//!   - [Behnam Esfahbod]</span>
+<span class="doccomment">//!   - Benjamin Wasty</span>
+<span class="doccomment">//!   - Brent Vatne</span>
+<span class="doccomment">//!   - Brian Casiello</span>
+<span class="doccomment">//!   - Chap Lovejoy</span>
+<span class="doccomment">//!   - [Charlie Egan]</span>
+<span class="doccomment">//!   - Chris Jones</span>
+<span class="doccomment">//!   - [Chris Palmer]</span>
+<span class="doccomment">//!   - [Coleman McFarland]</span>
+<span class="doccomment">//!   - Damien Stanton</span>
+<span class="doccomment">//!   - Dan Abrams</span>
+<span class="doccomment">//!   - [Daniel Collin]</span>
+<span class="doccomment">//!   - Daniel Mason</span>
+<span class="doccomment">//!   - [Daniel P. Clark]</span>
+<span class="doccomment">//!   - [David W. Allen]</span>
+<span class="doccomment">//!   - David Hewson</span>
+<span class="doccomment">//!   - Derek Buckley</span>
+<span class="doccomment">//!   - [Derek Morr]</span>
+<span class="doccomment">//!   - Eugene Bulkin</span>
+<span class="doccomment">//!   - [Hans Fjällemark]</span>
+<span class="doccomment">//!   - [Henri Sivonen]</span>
+<span class="doccomment">//!   - [Ian Jones]</span>
+<span class="doccomment">//!   - [Jakub &quot;Limeth&quot; Hlusička]</span>
+<span class="doccomment">//!   - James Cooper</span>
+<span class="doccomment">//!   - Jerome Froelich</span>
+<span class="doccomment">//!   - [John Rudnick]</span>
+<span class="doccomment">//!   - Jon</span>
+<span class="doccomment">//!   - Jonathan Turner</span>
+<span class="doccomment">//!   - Joseph Hain</span>
+<span class="doccomment">//!   - [Jupp Müller]</span>
+<span class="doccomment">//!   - Justin Ossevoort</span>
+<span class="doccomment">//!   - [Karl Hobley]</span>
+<span class="doccomment">//!   - Keith Gray</span>
+<span class="doccomment">//!   - Kilian Rault</span>
+<span class="doccomment">//!   - Laurie Hedge</span>
+<span class="doccomment">//!   - Luca Schmid</span>
+<span class="doccomment">//!   - [Luiz Irber]</span>
+<span class="doccomment">//!   - Mark LeMoine</span>
+<span class="doccomment">//!   - Martin Heuschober</span>
+<span class="doccomment">//!   - Masashi Fujita</span>
+<span class="doccomment">//!   - Matt Rudder</span>
+<span class="doccomment">//!   - Matthew Brenner</span>
+<span class="doccomment">//!   - Matthias Ruszala</span>
+<span class="doccomment">//!   - [Max Jacobson]</span>
+<span class="doccomment">//!   - [Messense Lv]</span>
+<span class="doccomment">//!   - Micael Bergeron</span>
+<span class="doccomment">//!   - [Nathan Sculli]</span>
+<span class="doccomment">//!   - [Nick Stevens]</span>
+<span class="doccomment">//!   - [Oluseyi Sonaiya]</span>
+<span class="doccomment">//!   - Ovidiu Curcan</span>
+<span class="doccomment">//!   - [Pascal Hertleif]</span>
+<span class="doccomment">//!   - [Patrick O&#39;Doherty]</span>
+<span class="doccomment">//!   - [Paul Naranja]</span>
+<span class="doccomment">//!   - Peter Tillemans</span>
+<span class="doccomment">//!   - Ralph Giles (&quot;rillian&quot;)</span>
+<span class="doccomment">//!   - Raj Venkalil</span>
+<span class="doccomment">//!   - [Ramon Buckland]</span>
+<span class="doccomment">//!   - Randy MacLeod</span>
+<span class="doccomment">//!   - Raph Levien</span>
+<span class="doccomment">//!   - reddraggone9</span>
+<span class="doccomment">//!   - [Robert Chrzanowski]</span>
+<span class="doccomment">//!   - [Ryan Blecher]</span>
+<span class="doccomment">//!   - Ryan Osial</span>
+<span class="doccomment">//!   - [Sebastián Ramírez Magrí]</span>
+<span class="doccomment">//!   - Shane Utt</span>
+<span class="doccomment">//!   - Simon G.</span>
+<span class="doccomment">//!   - Steve Jenson</span>
+<span class="doccomment">//!   - Steven Knight</span>
+<span class="doccomment">//!   - Steven Murawksi</span>
+<span class="doccomment">//!   - [Stuart Hinson]</span>
+<span class="doccomment">//!   - Tim Brooks</span>
+<span class="doccomment">//!   - Tom Prince</span>
+<span class="doccomment">//!   - Ty Overby</span>
+<span class="doccomment">//!   - Tyler Harper</span>
+<span class="doccomment">//!   - Vesa Kaihlavirta</span>
+<span class="doccomment">//!   - Victor Kruger</span>
+<span class="doccomment">//!   - Will Greenberg</span>
+<span class="doccomment">//!   - [William Roe]</span>
+<span class="doccomment">//!   - Yaacov Finkelman</span>
+<span class="doccomment">//!   - Zachary Snyder</span>
+<span class="doccomment">//!   - Zaki</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [Anthony Deschamps]: https://github.com/adeschamps</span>
+<span class="doccomment">//! [Behnam Esfahbod]: https://github.com/behnam</span>
+<span class="doccomment">//! [Brent Vatne]: https://github.com/brentvatne</span>
+<span class="doccomment">//! [Charlie Egan]: https://charlieegan3.com</span>
+<span class="doccomment">//! [Chris Palmer]: http://home.red-oxide.org/</span>
+<span class="doccomment">//! [Coleman McFarland]: http://github.com/anxiousmodernman</span>
+<span class="doccomment">//! [Daniel Collin]: https://twitter.com/daniel_collin</span>
+<span class="doccomment">//! [Daniel P. Clark]: https://6ftdan.com/</span>
+<span class="doccomment">//! [David W. Allen]: http://GitHub.com/DataRiot</span>
+<span class="doccomment">//! [Derek Morr]: https://twitter.com/derekmorr</span>
+<span class="doccomment">//! [Fjällemark]: https://fjallemark.com/</span>
+<span class="doccomment">//! [Henri Sivonen]: https://hsivonen.fi/</span>
+<span class="doccomment">//! [Ian Jones]: https://www.ianmjones.com/</span>
+<span class="doccomment">//! [Jakub &quot;Limeth&quot; Hlusička]: https://github.com/Limeth</span>
+<span class="doccomment">//! [John Rudnick]: http://www.cindur.com/</span>
+<span class="doccomment">//! [Jupp Müller]: https://de.linkedin.com/in/juppm</span>
+<span class="doccomment">//! [Karl Hobley]: https://github.com/kaedroho/</span>
+<span class="doccomment">//! [Luiz Irber]: http://luizirber.org/</span>
+<span class="doccomment">//! [Max Jacobson]: https://twitter.com/maxjacobson</span>
+<span class="doccomment">//! [Messense Lv]: https://github.com/messense</span>
+<span class="doccomment">//! [Nathan Sculli]: http://influential.co/</span>
+<span class="doccomment">//! [Nick Stevens]: https://github.com/nastevens</span>
+<span class="doccomment">//! [Oluseyi Sonaiya]: http://oluseyi.info/</span>
+<span class="doccomment">//! [Pascal Hertleif]: https://pascalhertleif.de/</span>
+<span class="doccomment">//! [Patrick O&#39;Doherty]: https://twitter.com/patrickod</span>
+<span class="doccomment">//! [Philipp Keller]: https://twitter.com/hansapla</span>
+<span class="doccomment">//! [Ramon Buckland]: http://www.inosion.com</span>
+<span class="doccomment">//! [Robert Chrzanowski]: https://github.com/zirman</span>
+<span class="doccomment">//! [Ryan Blecher]: http://notryanb.github.io/</span>
+<span class="doccomment">//! [Sebastián Ramírez Magrí]: https://www.twitter.com/sebasmagri</span>
+<span class="doccomment">//! [Stuart Hinson]: http://stuarth.github.io/</span>
+<span class="doccomment">//! [William Roe]: http://willroe.me</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! (Thanks to the couple people donating who opted out of the reward tier, as</span>
+<span class="doccomment">//! well. You know who you are!)</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ### Become a sponsor</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!   - [Patreon](https://www.patreon.com/newrustacean)</span>
+<span class="doccomment">//!   - [Venmo](https://venmo.com/chriskrycho)</span>
+<span class="doccomment">//!   - [Dwolla](https://www.dwolla.com/hub/chriskrycho)</span>
+<span class="doccomment">//!   - [Cash.me](https://cash.me/$chriskrycho)</span>
+<span class="doccomment">//!   - [Flattr](https://flattr.com/profile/chriskrycho)</span>
+<span class="doccomment">//!   - [PayPal.me](https://paypal.me/chriskrycho)</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Contact</span>
+<span class="doccomment">//! -------</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!   - New Rustacean:</span>
+<span class="doccomment">//!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)</span>
+<span class="doccomment">//!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)</span>
+<span class="doccomment">//!   - Chris Krycho</span>
+<span class="doccomment">//!       + GitHub: [chriskrycho](https://github.com/chriskrycho)</span>
+<span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
+
+<span class="kw">use</span> <span class="ident">std</span>::{<span class="ident">f32</span>, <span class="ident">ops</span>::<span class="ident">Sub</span>};
+
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Default</span>)]</span>
+<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Point</span> {
+    <span class="kw">pub</span> <span class="ident">x</span>: <span class="ident">f32</span>,
+    <span class="kw">pub</span> <span class="ident">y</span>: <span class="ident">f32</span>,
+}
+
+<span class="kw">impl</span><span class="op">&lt;</span><span class="lifetime">&#39;p</span><span class="op">&gt;</span> <span class="ident">Sub</span> <span class="kw">for</span> <span class="kw-2">&amp;</span><span class="lifetime">&#39;p</span> <span class="ident">Point</span> {
+    <span class="kw">type</span> <span class="ident">Output</span> <span class="op">=</span> <span class="ident">Point</span>;
+
+    <span class="kw">fn</span> <span class="ident">sub</span>(<span class="self">self</span>, <span class="ident">other</span>: <span class="kw-2">&amp;</span><span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">Point</span> {
+        <span class="ident">Point</span> {
+            <span class="ident">x</span>: <span class="self">self</span>.<span class="ident">x</span> <span class="op">-</span> <span class="ident">other</span>.<span class="ident">x</span>,
+            <span class="ident">y</span>: <span class="self">self</span>.<span class="ident">y</span> <span class="op">-</span> <span class="ident">other</span>.<span class="ident">y</span>,
+        }
+    }
+}
+
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">distance_from_boxed</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="lifetime">&#39;b</span>: <span class="lifetime">&#39;a</span><span class="op">&gt;</span>(<span class="ident">offset</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;b</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">FnMut</span>(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">f32</span> <span class="op">+</span> <span class="lifetime">&#39;a</span><span class="op">&gt;</span> {
+    <span class="ident">Box</span>::<span class="ident">new</span>(<span class="kw">move</span> <span class="op">|</span><span class="ident">point</span><span class="op">|</span> {
+        <span class="kw">let</span> <span class="ident">change</span> <span class="op">=</span> <span class="ident">point</span> <span class="op">-</span> <span class="ident">offset</span>;
+        (<span class="ident">change</span>.<span class="ident">x</span>.<span class="ident">powi</span>(<span class="number">2</span>) <span class="op">+</span> <span class="ident">change</span>.<span class="ident">y</span>.<span class="ident">powi</span>(<span class="number">2</span>)).<span class="ident">sqrt</span>()
+    })
+}
+
+<span class="kw">pub</span> <span class="kw">type</span> <span class="ident">DistanceFrom</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">FnMut</span>(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">f32</span> <span class="op">+</span> <span class="lifetime">&#39;a</span><span class="op">&gt;</span>;
+
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">distance_from_alias</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="lifetime">&#39;b</span>: <span class="lifetime">&#39;a</span><span class="op">&gt;</span>(<span class="ident">offset</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;b</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">DistanceFrom</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> {
+    <span class="ident">Box</span>::<span class="ident">new</span>(<span class="kw">move</span> <span class="op">|</span><span class="ident">point</span><span class="op">|</span> {
+        <span class="kw">let</span> <span class="ident">change</span> <span class="op">=</span> <span class="ident">point</span> <span class="op">-</span> <span class="ident">offset</span>;
+        (<span class="ident">change</span>.<span class="ident">x</span>.<span class="ident">powi</span>(<span class="number">2</span>) <span class="op">+</span> <span class="ident">change</span>.<span class="ident">y</span>.<span class="ident">powi</span>(<span class="number">2</span>)).<span class="ident">sqrt</span>()
+    })
+}
+
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">distance_from_impl</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="lifetime">&#39;b</span>: <span class="lifetime">&#39;a</span><span class="op">&gt;</span>(<span class="ident">offset</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;b</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="kw">impl</span> <span class="ident">FnMut</span>(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">f32</span> {
+    <span class="kw">move</span> <span class="op">|</span><span class="ident">point</span><span class="op">|</span> {
+        <span class="kw">let</span> <span class="ident">change</span> <span class="op">=</span> <span class="ident">point</span> <span class="op">-</span> <span class="ident">offset</span>;
+        (<span class="ident">change</span>.<span class="ident">x</span>.<span class="ident">powi</span>(<span class="number">2</span>) <span class="op">+</span> <span class="ident">change</span>.<span class="ident">y</span>.<span class="ident">powi</span>(<span class="number">2</span>)).<span class="ident">sqrt</span>()
+    }
+}
+
+<span class="attribute">#[<span class="ident">doc</span>(<span class="ident">include</span> <span class="op">=</span> <span class="string">&quot;../docs/e025-script.md&quot;</span>)]</span>
+<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Script</span>;
+</pre>
+</section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><link rel="stylesheet" href="/media-playback.css">
+<script type="text/javascript" src="/media-playback.js" defer></script>
+
+
+<script>window.rootPath = "../../";window.currentCrate = "show_notes";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

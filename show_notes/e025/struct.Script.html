@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `Script` struct in crate `show_notes`."><meta name="keywords" content="rust, rustlang, rust-lang, Script"><title>show_notes::e025::Script - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script><link rel="shortcut icon" href="http://newrustacean.com/favicon.ico"></head><body class="rustdoc struct"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a><p class='location'>Struct Script</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">Sync</a></div></div><p class='location'><a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e025</a></p><script>window.sidebarCurrent = {name: 'Script', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e025</a>::<wbr><a class="struct" href=''>Script</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/show_notes/e025.rs.html#267' title='goto source code'>[src]</a></span></h1><div class="docblock type-decl"><pre class='rust struct'>pub struct Script;</pre></div><div class='docblock'><h1 id="e025-traits-deep-dive-part-iii" class="section-header"><a href="#e025-traits-deep-dive-part-iii">e025: Traits Deep Dive, Part III</a></h1><h2 id="sponsor-parity-technologies" class="section-header"><a href="#sponsor-parity-technologies">Sponsor: <a href="https://paritytech.io">Parity Technologies</a></a></h2>
+<p>Hello, everyone! Over the last few years, I’ve had a number of opportunities for company sponsorships of the podcast; none of them were a good fit. Today, I have one that <em>is</em> – and it’s a <em>great</em> fit.</p>
+<p><a href="https://paritytech.io">Parity Technologies</a> is advancing the state of the art in decentralized technology. Their flagship software is the Parity Ethereum client, but they're also building cutting-edge tech in areas like WebAssembly and peer-to-peer networking. Their next big project is Polkadot, a platform leveraging blockchain tech for scaling and interop in decentralized systems. And Parity uses Rust for its trifecta of safety, speed, and correctness!</p>
+<p>And they’re hiring Rust developers! So if you’d like to work on any of these projects, check out their jobs at <a href="https://paritytech.io/jobs">paritytech.io/jobs</a>.</p>
+<p>Thanks to Parity for sponsoring the show!</p>
+<h2 id="intro" class="section-header"><a href="#intro">Intro</a></h2>
+<p>Hello, I’m Chris Krycho and this is New Rustacean: a show about the Rust programming language and the people who use it. This is episode 24: Traits Deep Dive, Part III. In the first part of this deep dive series, we talked about how to write and implement traits. In the second part, we talked about using traits as bounds on generic types. In this third and hopefully final part, we’re going to look at using traits directly in argument and return position, including the new <code>impl Trait</code> syntax and the important concept of object safety. If that sounds like a lot to cover to you, it sounds like it to me too, so let’s jump in!</p>
+<p>First, though, a quick correction from the <em>last</em> traits deep dive episode: thoughtful commenters on both Reddit and Hacker News correctly pointed out that I was mistaken in my discussion of universal and existential types! I said that in the case of <em>generics with trait bounds</em>, arguments are always “universal” and return values are always “existential” – but this isn’t true with generics – the <code>Iterator::collect</code> method example I discussed on the show is a prime case where the caller is in control of and specifies a specific return type, after all! Thanks for that correction!</p>
+<h2 id="plain-traits-as-arguments-and-return-values" class="section-header"><a href="#plain-traits-as-arguments-and-return-values">Plain traits as arguments and return values</a></h2>
+<p>There are several ways you’ve been able to use traits <em>without</em> generics since Rust 1.0. However, they have historically had some gotchas, many of which just got resolved with Rust 1.26 and 1.27, and one of which <em>will</em> be resolved in the future. So let’s dig in!</p>
+<h3 id="motivation" class="section-header"><a href="#motivation">Motivation</a></h3>
+<p>I’ve spent quite a while thinking about how to explore this particular idea, and had gotten stuck repeatedly. Happily, a couple weeks ago while I was on vacation, a reader of my <a href="https://www.chriskrycho.com/exploring-four-languages.html">Exploring 4 Languages</a> series had a question from the most recent post there, on <a href="https://www.chriskrycho.com/2018/exploring-4-languages-starting-to-model-the-domain.html">Starting to Model the Domain</a>. In that post, I noted that Rust lets us write out function types as type aliases if we want—though I noted that writing out type aliases for functions isn’t <em>usually</em> something we’d see.</p>
+<p>The reader who emailed me asked:</p>
+<blockquote>
+<p>Could you give a small code example of how to use a function type alias like this Rust? It is very hard to find an example of this usage (probably because it is unconventional in Rust).</p>
+</blockquote>
+<p>And as it turns out, this is a perfect setup for the rest of this episode!</p>
+<p>One time when it’s convenient to write out an alias for a <em>function</em> – not just for “narrowing” a generic or something like that – is when you have some complex or nested transformation you want to apply to a data structure in the context of a <a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.map"><code>std::iter::Iterator::map</code></a> invocation. You might want it to be testable, and you might want it to be passed into some other function for the sake of  abstraction (maybe there are multiple valid kinds of transformations from input type to output type that you’re interested in).</p>
+<p>For example, let’s say we want to write a function which lets us get the distances of a set of points from some other point. Let’s assume some basic machinery:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">use</span> <span class="ident">std</span>::{
+    <span class="ident">f32</span>,
+    <span class="ident">ops</span>::<span class="ident">Sub</span>
+};
+
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Default</span>)]</span>
+<span class="kw">struct</span> <span class="ident">Point</span> {
+    <span class="ident">x</span>: <span class="ident">f32</span>,
+    <span class="ident">y</span>: <span class="ident">f32</span>,
+}
+
+<span class="kw">impl</span><span class="op">&lt;</span><span class="lifetime">&#39;p</span><span class="op">&gt;</span> <span class="ident">Sub</span> <span class="kw">for</span> <span class="kw-2">&amp;</span><span class="lifetime">&#39;p</span> <span class="ident">Point</span> {
+    <span class="kw">type</span> <span class="ident">Output</span> <span class="op">=</span> <span class="ident">Point</span>;
+
+    <span class="kw">fn</span> <span class="ident">sub</span>(<span class="self">self</span>, <span class="ident">other</span>: <span class="kw-2">&amp;</span><span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">Point</span> {
+        <span class="ident">Point</span> {
+            <span class="ident">x</span>: <span class="self">self</span>.<span class="ident">x</span> <span class="op">-</span> <span class="ident">other</span>.<span class="ident">x</span>,
+            <span class="ident">y</span>: <span class="self">self</span>.<span class="ident">y</span> <span class="op">-</span> <span class="ident">other</span>.<span class="ident">y</span>,
+        }
+    }
+}</pre>
+<p>Now, if we wanted to get the distances between one of those points and another, we could do that inline, using the Pythagorean theorem:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">fn</span> <span class="ident">main</span>() {
+    <span class="kw">let</span> <span class="ident">a</span> <span class="op">=</span> <span class="ident">Point</span> { <span class="ident">x</span>: <span class="number">1.0</span>, <span class="ident">y</span>: <span class="number">2.0</span> };
+    <span class="kw">let</span> <span class="ident">b</span> <span class="op">=</span> <span class="ident">Point</span> { <span class="ident">x</span>: <span class="op">-</span><span class="number">4.5</span>, <span class="ident">y</span>: <span class="number">12.2</span> };
+    <span class="kw">let</span> <span class="ident">change</span> <span class="op">=</span> <span class="ident">a</span> <span class="op">-</span> <span class="ident">b</span>;
+    <span class="kw">let</span> <span class="ident">distance</span> <span class="op">=</span> (<span class="ident">change</span>.<span class="ident">x</span>.<span class="ident">powi</span>(<span class="number">2</span>) <span class="op">+</span> <span class="ident">change</span>.<span class="ident">y</span>.<span class="ident">powi</span>(<span class="number">2</span>)).<span class="ident">sqrt</span>();
+}</pre>
+<p>So far so good, but what if we had a <em>bunch</em> of these points – say, a <code>Vec</code> of them – and wanted to get their distance from some other point? Well, then it makes sense to iterate over them and use the <code>std::iter::Iterator::map</code> method. To do <em>that</em> we need a closure:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">fn</span> <span class="ident">main</span>() {
+    <span class="kw">let</span> <span class="ident">points</span> <span class="op">=</span> <span class="macro">vec</span><span class="macro">!</span>[
+        <span class="ident">Point</span> { <span class="ident">x</span>: <span class="number">1.0</span>, <span class="ident">y</span>: <span class="number">2.0</span> },
+        <span class="ident">Point</span> { <span class="ident">x</span>: <span class="number">12.0</span>, <span class="ident">y</span>: <span class="number">4.3</span> },
+        <span class="ident">Point</span> { <span class="ident">x</span>: <span class="op">-</span><span class="number">5.4</span>, <span class="ident">y</span>: <span class="number">18.7</span> },
+    ];
+
+    <span class="kw">let</span> <span class="ident">origin</span> <span class="op">=</span> <span class="ident">Point</span>::<span class="ident">default</span>();
+    <span class="kw">let</span> <span class="ident">distances</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">f32</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">points</span>
+        .<span class="ident">iter</span>()
+        .<span class="ident">map</span>(<span class="op">|</span><span class="kw-2">&amp;</span><span class="ident">point</span><span class="op">|</span> {
+            <span class="kw">let</span> <span class="ident">change</span> <span class="op">=</span> <span class="ident">point</span> <span class="op">-</span> <span class="ident">origin</span>;
+            <span class="kw">let</span> <span class="ident">distance</span> <span class="op">=</span> (<span class="ident">change</span>.<span class="ident">x</span>.<span class="ident">powi</span>(<span class="number">2</span>) <span class="op">+</span> <span class="ident">change</span>.<span class="ident">y</span>.<span class="ident">powi</span>(<span class="number">2</span>)).<span class="ident">sqrt</span>();
+        })
+        .<span class="ident">collect</span>();
+}</pre>
+<p>Now, what if we find this “get the distance between two points” function useful and wanted to extract it? Well, we could do that by extracting a function which takes two points by reference and returns the distance between them:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">fn</span> <span class="ident">distance_between</span>(<span class="ident">a</span>: <span class="kw-2">&amp;</span><span class="ident">Point</span>, <span class="ident">b</span>: <span class="kw-2">&amp;</span><span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">f32</span> {
+    <span class="kw">let</span> <span class="ident">change</span> <span class="op">=</span> <span class="ident">point</span> <span class="op">-</span> <span class="ident">origin</span>;
+    (<span class="ident">change</span>.<span class="ident">x</span>.<span class="ident">powi</span>(<span class="number">2</span>) <span class="op">+</span> <span class="ident">change</span>.<span class="ident">y</span>.<span class="ident">powi</span>(<span class="number">2</span>)).<span class="ident">sqrt</span>();
+}</pre>
+<p>And this is <em>fine</em> – when we want to use it in the context we laid about above, we’d just have <code>|point| distance_between(&amp;point, &amp;origin)</code> in our <code>map</code> invocation. However, we could actually go one step further here and let ourselves create a function which we can “preload” with the desired comparison point: a function <code>distance_from</code> which takes a <code>Point</code> as its argument and returns a <em>function</em> which takes <em>another</em> <code>Point</code> as its argument and then returns the distance between the two. Then you could just write the invocation like this:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+    <span class="kw">let</span> <span class="ident">origin</span> <span class="op">=</span> <span class="ident">Point</span>::<span class="ident">default</span>();
+    <span class="kw">let</span> <span class="ident">distances</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">f32</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">points</span>
+        .<span class="ident">iter</span>()
+        .<span class="ident">map</span>(<span class="ident">distance_from</span>(<span class="kw-2">&amp;</span><span class="ident">origin</span>))
+        .<span class="ident">collect</span>();</pre>
+<p>That’s much clearer to read (at least to me). Unfortunately, though, writing out the signature for that function has been a pretty complicated thing, historically. For one thing, you had to wrap that up behind a heap allocated pointer, like: <code>Box&lt;Fn(Point) -&gt; f32&gt;</code>, and it’s actually <em>really</em> hard to write this type and get the lifetimes all lining up correctly if you want to use references instead of moving all the <code>Point</code> instances:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">fn</span> <span class="ident">distance_from</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="lifetime">&#39;b</span>: <span class="lifetime">&#39;a</span><span class="op">&gt;</span>(<span class="ident">offset</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;b</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">f32</span> <span class="op">+</span> <span class="lifetime">&#39;a</span><span class="op">&gt;</span> {
+    <span class="ident">Box</span>::<span class="ident">new</span>(<span class="kw">move</span> <span class="op">|</span><span class="ident">point</span><span class="op">|</span> {
+        <span class="kw">let</span> <span class="ident">change</span> <span class="op">=</span> <span class="ident">point</span> <span class="op">-</span> <span class="ident">offset</span>;
+        (<span class="ident">change</span>.<span class="ident">x</span>.<span class="ident">powi</span>(<span class="number">2</span>) <span class="op">+</span> <span class="ident">change</span>.<span class="ident">y</span>.<span class="ident">powi</span>(<span class="number">2</span>)).<span class="ident">sqrt</span>()
+    })
+}</pre>
+<p>Now, to get back to my reader’s question, it would be really nice, since <code>Fn</code> is a trait, if we could write a type alias for this! Something like:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">type</span> <span class="ident">DistanceFrom</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">f32</span>;</pre>
+<p>Then we could use that in our definition:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">fn</span> <span class="ident">distance_from</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="lifetime">&#39;b</span>: <span class="lifetime">&#39;a</span><span class="op">&gt;</span>(<span class="ident">offset</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;b</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">DistanceFrom</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> {
+    <span class="comment">// ...</span>
+}</pre>
+<p>Unfortunately, that specific definition isn’t quite valid – remember, we had a box around it before. So the correct definition using a <code>Box</code> would be to wrap that in a box at the call site:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">fn</span> <span class="ident">distance_from</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="lifetime">&#39;b</span>: <span class="lifetime">&#39;a</span><span class="op">&gt;</span>(<span class="ident">offset</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;b</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">DistanceFrom</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;&gt;</span> {
+    <span class="comment">// ...</span>
+}</pre>
+<p>Now that’s an improvement in a number of ways. But with Rust 1.26, we got <code>impl Trait</code>, so can’t we use <em>that</em> here? It would be really nice to write something like this:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">type</span> <span class="ident">DistanceFrom</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">f32</span>;</pre>
+<p>and then use <code>impl Trait</code> with it:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">fn</span> <span class="ident">distance_from</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="lifetime">&#39;b</span>: <span class="ident">a</span><span class="op">&gt;</span>(<span class="ident">offset</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;b</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="kw">impl</span> <span class="ident">DistanceFrom</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> {
+    <span class="comment">// ...</span>
+}</pre>
+<p>Unfortunately, we can’t do this… yet. Type aliases can’t be used for traits types like this. However, I’m definitely not the first one to think it’d be useful to be able to write trait aliases! <a href="https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md"><abbr title="Request for Comments">RFC</abbr> #1733: Trait aliases</a> will give us just that. The syntax would be:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">trait</span> <span class="ident">DistanceFrom</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">f32</span> <span class="op">+</span> <span class="lifetime">&#39;a</span>;</pre>
+<p>Someday! In the meantime, though, we can still use <code>impl Trait</code> – we just can’t use it with the nice convenient name.</p>
+<h3 id="traits-in-return-position" class="section-header"><a href="#traits-in-return-position">Traits in return position</a></h3>
+<p>So… on to a topic we’ve been waiting for for quite a few episodes now. Why <em>would</em> we want to use <code>impl Trait</code> instead of a box here?</p>
+<p>Most obviously, it simplifies our (non-aliased) function signature and implementation a bit. Now it reads like this:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">fn</span> <span class="ident">distance_from</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="lifetime">&#39;b</span>: <span class="lifetime">&#39;a</span><span class="op">&gt;</span>(<span class="ident">offset</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;b</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="kw">impl</span> <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Point</span>) <span class="op">-&gt;</span> <span class="ident">f32</span> {
+    <span class="kw">move</span> <span class="op">|</span><span class="ident">point</span><span class="op">|</span> {
+        <span class="kw">let</span> <span class="ident">change</span> <span class="op">=</span> <span class="ident">point</span> <span class="op">-</span> <span class="ident">offset</span>;
+        (<span class="ident">change</span>.<span class="ident">x</span>.<span class="ident">powi</span>(<span class="number">2</span>) <span class="op">+</span> <span class="ident">change</span>.<span class="ident">y</span>.<span class="ident">powi</span>(<span class="number">2</span>)).<span class="ident">sqrt</span>()
+    }
+}</pre>
+<p>The major change here is that the <code>Box</code> is gone – both in the signature and in the body of the function. Historically, we always had to return any <em>trait object</em> – that is, a piece of data where <em>all we care about</em> is that it implements a specific trait – behind a pointer. Why? Well, because that trait object could be pointing to all sorts of different sizes of things. A two-variant enum and a 40-field struct can implement the same trait – but the Rust compiler requires that every output from a function be the same size.</p>
+<p>The only candidate – at least historically – has been a heap-allocated pointer! A <code>Box</code> is always the same size. (A regular reference is, too, but then we’d need a lifetime to tie it to, and... there isn’t one available.) Whatever item we could define in the body of this function actually has to be <em>moved</em> out of it, or it’ll get dropped at the end of the function. So our only option here historically was a heap-allocated pointer.</p>
+<p>This had a couple important consequences:</p>
+<ol>
+<li>
+<p>We had to pay the price of that heap allocation.</p>
+</li>
+<li>
+<p>More importantly, it also requires dynamic dispatch—looking up the specific function to execute at runtime instead of at compile time. One of the main reasons for the monomorphization we talked about earlier is to get <em>rid</em> of this runtime overhead.</p>
+</li>
+</ol>
+<p>Those costs are small, and they’re often trivial—the kinds of things you don’t need to worry about. But they are <em>real</em> costs, and in the contexts where Rust is <em>most</em> useful, it does matter. So those were important limitations.</p>
+<h3 id="traits-in-bare-argument-position" class="section-header"><a href="#traits-in-bare-argument-position">Traits in bare argument position</a></h3>
+<p>Many of those limitations also applied to the other place you might have been tempted to use a trait by itself, as the type of an argument. For example, you might think you could write</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">fn</span> <span class="ident">foo</span>(<span class="ident">thing</span>: <span class="ident">SomeTrait</span>) {}</pre>
+<p>But the same basic issue is at play as in the return type context. Rust needs an item with a constant size to be able to do this correctly. So we take a reference to the trait type; using a pointer means we have a type with a known size again:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">fn</span> <span class="ident">foo</span>(<span class="ident">thing</span>: <span class="kw-2">&amp;</span><span class="ident">SomeTrait</span>) {}</pre>
+<p>We can also accept a heap-allocated pointer here, but in general we don’t actually <em>have</em> to: we can just write <code>&amp;SomeTrait</code> and both regular references and also any type which implements the <code>Borrow</code> trait will work. (For a refresher on <code>Borrow</code> you can go back and listen to e018!)</p>
+<p>In any case, we have to put the trait type behind a reference, and as such we have dynamic dispatch with its small runtime cost – though in this case we do <em>not</em> (necessarily) have a heap-allocated pointer backing the trait object.</p>
+<p>This is extremely handy any time we don’t have a single specific type we’re going to be returning from or dealing with in a given function. For example: anywhere that we might be returning different specific iterator subtypes (<code>Map</code> and <code>Filter</code>, for example), or where we’re operating over a heterogeneous collection, where the only thing we care about in the collection is that every item in it implements some trait.</p>
+<h3 id="impl-trait-and-dyn-trait" class="section-header"><a href="#impl-trait-and-dyn-trait"><code>impl Trait</code> and <code>dyn Trait</code></a></h3>
+<p>We know enough now to see that at least in principle, the Rust compiler should often be able to figure out exactly what type we’re talking about when we want to return a trait type or take a trait type as an argument. After all, it already does exactly that with generics! And generic types with trait bounds notably do <em>not</em> require a heap allocation or dynamic dispatch. The compiler statically figures out the specific types they’re invoked with and return, and monomorphizes them—makes a version for each. So why can’t it do that for trait types too?</p>
+<p>As of Rust 1.26, it can. The new <code>impl Trait</code> feature lets us monomorphize the type here. From our perspective writing the code, the type of a closure – that we can’t name concretely, because it’s anonymous and Rust makes up a name at compile time – is just “something which implements the <code>Fn</code> trait with these argument and return types. But Rust compiles it down to the actual single function with that anonymous type. And now, it has a specific return type <em>size</em>, so we can get rid of the pointer. No more heap allocation, and no more runtime lookup cost. That goes for both argument position and return position.</p>
+<p>To return to my correction at the beginning of the episode: <em>this</em> is where universal and existential types come into play! (And I got mixed up with them because of how I split this episode into two parts.) <code>impl Trait</code> in argument position is a <em>universal</em> type, an “any” type specified by the caller; and <code>impl Trait</code> in return position is an <em>existential</em> type, a “some specific” type specific by the callee.</p>
+<p>The limitation of <code>impl Trait</code> is all those times we still need dynamic allocation and a heap allocated pointer. For those, we have another slight change landing for the Rust 2018 edition, which just reached stable Rust in 1.27: the <code>dyn Trait</code> syntax. Where before, we were allowed to simply write <code>Box&lt;Trait&gt;</code> or <code>Rc&lt;Trait&gt;</code> or even <code>&amp;Trait</code>, now those invocations should be <code>Box&lt;dyn Trait&gt;</code> or <code>Rc&lt;dyn Trait&gt;</code> or <code>&amp;dyn Trait</code>. The reason is to make <em>explicit</em> that there’s a trait object in play, not just a regular <code>struct</code> or <code>enum</code> type. That’s really important for making sure you have the right mental model in place – and, as I noted in my discussion of the feature in the recent Rust 1.27 news episode, it also makes for a nice symmetry between trait objects with <code>dyn Trait</code> and existential and universal types with <code>impl Trait</code>.</p>
+<h3 id="trait-objects-and-object-safety" class="section-header"><a href="#trait-objects-and-object-safety">Trait objects and object safety</a></h3>
+<p>I’ve used the phrase “trait object” often throughout the episode – and for good reason; this idea is important. Any time we’re talking about dealing with some item <em>as a trait behind a pointer</em> rather than as a generic or concrete type, we’re talking about this idea of “trait objects.” Trait objects let us deal with heterogeneous types dynamically at runtime, but <em>safely</em>, much as interfaces do in tradition object oriented languages.</p>
+<p>But there is a very important set of rules which govern “trait objects” and allow us to use them safely in Rust, called “object safety.” This set of rules comes up any time you’re trying to use traits for this kind of abstraction in your programming; and since traits are Rust’s primary tool for abstraction, well… it’s going to come up pretty regularly.</p>
+<p>A few minutes ago, I noted that the compiler requires a constant size for return values from functions. The compiler captures this with <code>Sized</code>: a marker trait which tells the compiler that the item in question has a constant size known at compile time. (For a review on marker traits, you can go back and listen to episode 22, on the <code>Send</code> and <code>Sync</code> marker traits).</p>
+<p>This marker trait has two rules attached to it for object safety.</p>
+<ol>
+<li>The trait itself <em>cannot</em> require that the special <code>Self</code> type be <code>Sized</code>. Instead, <em>trait methods</em> can set that requirement when needed—but only when needed!—with a <code>where</code> clause.</li>
+<li>All of a trait’s methods must themselves be object safe. There are also two rules for object safety  for trait methods:
+<ol>
+<li>They cannot have any type parameters, that is, they cannot be generic.</li>
+<li>They must not use the <code>Self</code> type themselves.</li>
+</ol>
+</li>
+</ol>
+<p>These rules come down to the reality that when you’re dealing with a trait object, Rust essentially “throws away” the concrete type or types you’re dealing with – as it has to, since it needs to treat every different concrete implementation behind the trait object the same way. But if you reference <code>Self</code>, Rust needs to be able to get back to the concrete type. These things are clearly at odds! So mostly, if you need a trait to be object safe, just avoid referencing <code>Self</code>.</p>
+<p>For further reading on object safety, I’ve linked a few important things in the show notes:</p>
+<ul>
+<li><a href="https://github.com/rust-lang/rfcs/blob/master/text/0255-object-safety.md">RFC #255: Object Safety</a>, which is the formal definition of object safety in the language</li>
+<li><a href="https://doc.rust-lang.org/book/second-edition/ch17-02-trait-objects.html">Ch. 17 in the Second Edition of <em>The Rust Programming Language</em> </a></li>
+<li><a href="https://huonw.github.io/blog/2015/05/where-self-meets-sized-revisiting-object-safety/" title="Where Self Meets Sized: Revisiting Object Safety">A detailed explanation</a> of these ideas by Huon Wilson from around the Rust 1.0 release</li>
+</ul>
+<h2 id="closing" class="section-header"><a href="#closing">Closing</a></h2>
+<p>That’s a wrap on our our deep dive on traits! The next main teaching episode will be a look at <code>unsafe</code> and the escape hatches it does and doesn’t allow. Also coming up are a look at functional programming ideas in Rust and a pair of Crates You Should Know episodes focused on Futures and Tokio!</p>
+<p>Thanks to everyone who sponsors the show! This month’s $10-or-more sponsors included:</p>
+<ul>
+<li>Behnam Esfahbod</li>
+<li>Anthony Deschamps</li>
+<li>Chris Palmer</li>
+<li>Ramon Buckland</li>
+<li>Alexander Payne</li>
+<li>Daniel Collin</li>
+<li>Paul Naranja</li>
+<li>John Rudnick</li>
+<li>Marshall Clyburn</li>
+<li>Martin Heuschober</li>
+<li>Oluseyi Sonaiya</li>
+<li>Hans Fjällemark</li>
+<li>Vesa Khailavirta</li>
+<li>Ryan Osial</li>
+<li>Daniel Mason</li>
+<li>Chip</li>
+<li>Raph Levien</li>
+<li>Derek Buckley</li>
+<li>Damien Stanton</li>
+<li>Aaron Turon</li>
+<li>Nick Stevens</li>
+<li>Peter Tillemans</li>
+<li>Dan Abrams</li>
+<li>Nathan Sculli</li>
+<li>Zachary Snyder</li>
+<li>Matt Rudder</li>
+<li>Sascha Grunert</li>
+<li>David W. Allen</li>
+</ul>
+<p>You can sponsor the show at <a href="https://patreon.com/newrustacean">https://patreon.com/newrustacean</a>, or send a one-off at any of a number of other services listed at the website. Even more importantly, please let others know about the show – by telling them about it at a meetup, sharing it around in whatever media you use, or reviewing or recommending it in your podcast directory of choice.</p>
+<p>You can find the notes for <em>this</em> episode at &lt;newrustacean.com/show_notes/e025/&gt;. The website also has scripts and code samples for most of the teaching episodes and transcripts for many of the interviews.</p>
+<p>The show is on Twitter @newrustacean, or you can follow me there @chriskrycho. Tweet me with news, topic ideas, etc! You can also respond in the threads on the Rust user forums, Reddit, or Hacker News, or—and this will always be my favorite—just send me an email at hello@newrustacean.com.</p>
+<p>Until next time, happy coding!</p>
+</div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../show_notes/e025/struct.Script.html" title="struct show_notes::e025::Script">Script</a></code><a href='#impl-Send' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../show_notes/e025/struct.Script.html" title="struct show_notes::e025::Script">Script</a></code><a href='#impl-Sync' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div></div></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><link rel="stylesheet" href="/media-playback.css">
+<script type="text/javascript" src="/media-playback.js" defer></script>
+
+
+<script>window.rootPath = "../../";window.currentCrate = "show_notes";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

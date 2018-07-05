@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["distance_from_alias",""],["distance_from_boxed",""],["distance_from_impl",""]],"struct":[["Point",""],["Script","e025: Traits Deep Dive, Part III"]],"type":[["DistanceFrom",""]]});
