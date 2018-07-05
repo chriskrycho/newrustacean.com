@@ -10,8 +10,8 @@
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 30 Jun 2018 13:57:35 -0600</pubDate>
-        <lastBuildDate>Sat, 30 Jun 2018 13:57:35 -0600</lastBuildDate>
+        <pubDate>Wed, 04 Jul 2018 19:28:07 -0600</pubDate>
+        <lastBuildDate>Wed, 04 Jul 2018 19:28:08 -0600</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -40,6 +40,166 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>e025: Traits Deep Dive, Part III</title>
+            <link>http://newrustacean.com/show_notes/e025/</link>
+            <description><![CDATA[<p>Closure traits, `impl trait`, `dyn trait`, and object safety!</p>
+<h2 id="show-notes">Show Notes</h2>
+<p>Sponsored by <a href="https://paritytech.io">Parity Technologies</a>! Parity is hiring Rust developers so if you’re interested, you should check out their <a href="https://paritytech.io/jobs/">job listings</a>!</p>
+<h3 id="links">Links</h3>
+<ul>
+<li><a href="https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md">RFC #1733: Trait Aliases</a></li>
+<li><a href="https://github.com/rust-lang/rfcs/blob/master/text/0255-object-safety.md">RFC #255: Object Safety</a></li>
+<li><a href="https://doc.rust-lang.org/book/second-edition/ch17-02-trait-objects.html">Ch. 17 in the Second Edition of <em>The Rust Programming Language</em></a></li>
+<li><a href="https://huonw.github.io/blog/2015/05/where-self-meets-sized-revisiting-object-safety/" title="Where Self Meets Sized: Revisiting Object Safety">Huon Wilson’s post</a></li>
+</ul>
+<h3 id="example">Example</h3>
+<p>You can see all of the pieces of the final example described in the show here (and the module has the required definitions for <code>Point</code>).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode rust"><code class="sourceCode rust"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">let</span> points = <span class="pp">vec!</span><span class="op">[</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">    Point <span class="op">{</span> x: <span class="dv">1.0</span>, y: <span class="dv">2.0</span> <span class="op">}</span>,</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">    Point <span class="op">{</span> x: <span class="dv">12.0</span>, y: <span class="dv">4.3</span> <span class="op">}</span>,</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">    Point <span class="op">{</span> x: -<span class="dv">5.4</span>, y: <span class="dv">18.7</span> <span class="op">}</span>,</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="op">]</span>;</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="kw">let</span> origin = Point::default();</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">// This is the version we start with. It works fine, but it&#39;s not elegant.</span></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="kw">let</span> distances_inline: <span class="dt">Vec</span>&lt;<span class="dt">f32</span>&gt; = points</a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">    .iter()</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">    .map(|point| <span class="op">{</span></a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">        <span class="kw">let</span> change = point - &amp;origin;</a>
+<a class="sourceLine" id="cb1-14" data-line-number="14">        (change.x.powi(<span class="dv">2</span>) + change.y.powi(<span class="dv">2</span>)).sqrt()</a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">    <span class="op">}</span>)</a>
+<a class="sourceLine" id="cb1-16" data-line-number="16">    .collect();</a>
+<a class="sourceLine" id="cb1-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb1-18" data-line-number="18"><span class="co">// This version is *much* cleaner!</span></a>
+<a class="sourceLine" id="cb1-19" data-line-number="19"><span class="kw">let</span> distances_impl: <span class="dt">Vec</span>&lt;<span class="dt">f32</span>&gt; = points.iter().map(distance_from_impl(&amp;origin)).collect();</a></code></pre></div>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aaron Turon</li>
+<li>Alexander Kryvomaz</li>
+<li>Alexander Payne</li>
+<li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
+<li>Anthony Scotti</li>
+<li>Antonin Carette</li>
+<li>Aleksey Pirogov</li>
+<li>Andreas Fischer</li>
+<li>Andrew Thompson</li>
+<li>Austin LeSure</li>
+<li><a href="https://github.com/behnam">Behnam Esfahbod</a></li>
+<li>Benjamin Wasty</li>
+<li>Brent Vatne</li>
+<li>Brian Casiello</li>
+<li>Chap Lovejoy</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li>Chris Jones</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="http://github.com/anxiousmodernman">Coleman McFarland</a></li>
+<li>Damien Stanton</li>
+<li>Dan Abrams</li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li>Daniel Mason</li>
+<li><a href="https://6ftdan.com/">Daniel P. Clark</a></li>
+<li><a href="http://GitHub.com/DataRiot">David W. Allen</a></li>
+<li>David Hewson</li>
+<li>Derek Buckley</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Eugene Bulkin</li>
+<li>[Hans Fjällemark]</li>
+<li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
+<li><a href="https://www.ianmjones.com/">Ian Jones</a></li>
+<li><a href="https://github.com/Limeth">Jakub “Limeth” Hlusička</a></li>
+<li>James Cooper</li>
+<li>Jerome Froelich</li>
+<li><a href="http://www.cindur.com/">John Rudnick</a></li>
+<li>Jon</li>
+<li>Jonathan Turner</li>
+<li>Joseph Hain</li>
+<li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li>
+<li>Justin Ossevoort</li>
+<li><a href="https://github.com/kaedroho/">Karl Hobley</a></li>
+<li>Keith Gray</li>
+<li>Kilian Rault</li>
+<li>Laurie Hedge</li>
+<li>Luca Schmid</li>
+<li><a href="http://luizirber.org/">Luiz Irber</a></li>
+<li>Mark LeMoine</li>
+<li>Martin Heuschober</li>
+<li>Masashi Fujita</li>
+<li>Matt Rudder</li>
+<li>Matthew Brenner</li>
+<li>Matthias Ruszala</li>
+<li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li>
+<li><a href="https://github.com/messense">Messense Lv</a></li>
+<li>Micael Bergeron</li>
+<li><a href="http://influential.co/">Nathan Sculli</a></li>
+<li><a href="https://github.com/nastevens">Nick Stevens</a></li>
+<li><a href="http://oluseyi.info/">Oluseyi Sonaiya</a></li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li><a href="https://twitter.com/patrickod">Patrick O’Doherty</a></li>
+<li>[Paul Naranja]</li>
+<li>Peter Tillemans</li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Raj Venkalil</li>
+<li><a href="http://www.inosion.com">Ramon Buckland</a></li>
+<li>Randy MacLeod</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li><a href="https://github.com/zirman">Robert Chrzanowski</a></li>
+<li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
+<li>Ryan Osial</li>
+<li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
+<li>Shane Utt</li>
+<li>Simon G.</li>
+<li>Steve Jenson</li>
+<li>Steven Knight</li>
+<li>Steven Murawksi</li>
+<li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
+<li>Tim Brooks</li>
+<li>Tom Prince</li>
+<li>Ty Overby</li>
+<li>Tyler Harper</li>
+<li>Vesa Kaihlavirta</li>
+<li>Victor Kruger</li>
+<li>Will Greenberg</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+<li>Yaacov Finkelman</li>
+<li>Zachary Snyder</li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Wed, 04 Jul 2018 19:27:56 -0600</pubDate>
+            <enclosure url="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e025.mp3" length="19861504" type="audio/mpeg"/>
+            <guid isPermaLink="false">7D91156A-9084-4737-A872-E50FCF7ED72A</guid>
+            <itunes:subtitle>Closure traits, `impl trait`, `dyn trait`, and object safety!</itunes:subtitle>
+            <itunes:summary>Closure traits, `impl trait`, `dyn trait`, and object safety!</itunes:summary>
+            <itunes:duration>20:36</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
+        </item>
         <item>
             <title>News: Rust 1.27</title>
             <link>http://newrustacean.com/show_notes/news/rust_1_27/</link>
