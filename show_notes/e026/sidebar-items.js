@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Script","e026: Functional Programming Ideas in Rust"]]});
