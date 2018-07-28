@@ -155,28 +155,17 @@
 <span id="155">155</span>
 <span id="156">156</span>
 <span id="157">157</span>
-<span id="158">158</span>
-<span id="159">159</span>
-<span id="160">160</span>
-<span id="161">161</span>
-<span id="162">162</span>
-<span id="163">163</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Allocate it where?</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** November 8, 2015</span>
 <span class="doccomment">//!   - **Subject:** Returning functions from other functions, and thinking</span>
 <span class="doccomment">//!     about the stack, the heap, and reference types.</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e005.m4a)</span>
-<span class="doccomment">//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e005.mp3)</span>
-<span class="doccomment">//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e005.ogg)</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
+<span class="doccomment">//! </span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e005.mp3</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Allocate it where?&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e005.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e005.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e005.ogg&quot;&gt;</span>
-<span class="doccomment">//! &lt;/audio&gt;</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Allocate it where?&quot; controls preload=metadata src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e005.mp3&quot; /&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! # Notes</span>
 <span class="doccomment">//!</span>
@@ -250,7 +239,6 @@
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 <span class="doccomment">//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)</span>
 
-
 <span class="doccomment">/// Creates a function which doubles an integer.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// Note that it doesn&#39;t have `Fn(i32) -&gt; i32` as its return type, but rather</span>
@@ -260,10 +248,11 @@
 <span class="doccomment">/// here, or a closure as in `doubler_closure_factory`).</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">doubler_factory</span>() <span class="op">-&gt;</span> <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">Fn</span>(<span class="ident">i32</span>) <span class="op">-&gt;</span> <span class="ident">i32</span><span class="op">&gt;</span> {
     <span class="doccomment">/// The doubler function we will return.</span>
-    <span class="kw">fn</span> <span class="ident">double</span>(<span class="ident">n</span>: <span class="ident">i32</span>) <span class="op">-&gt;</span> <span class="ident">i32</span> { <span class="ident">n</span> <span class="op">*</span> <span class="number">2</span> };
+    <span class="kw">fn</span> <span class="ident">double</span>(<span class="ident">n</span>: <span class="ident">i32</span>) <span class="op">-&gt;</span> <span class="ident">i32</span> {
+        <span class="ident">n</span> <span class="op">*</span> <span class="number">2</span>
+    };
     <span class="ident">Box</span>::<span class="ident">new</span>(<span class="ident">double</span>)
 }
-
 
 <span class="doccomment">/// Creates a closure which doubles an integer.</span>
 <span class="doccomment">///</span>
@@ -279,7 +268,6 @@
     <span class="kw">let</span> <span class="ident">doubler</span> <span class="op">=</span> <span class="op">|</span><span class="ident">n</span><span class="op">|</span> <span class="ident">n</span> <span class="op">*</span> <span class="number">2</span>;
     <span class="ident">Box</span>::<span class="ident">new</span>(<span class="ident">doubler</span>)
 }
-
 
 <span class="doccomment">/// Uses the `doubler_factory` to get a function which doubles a number.</span>
 <span class="doccomment">///</span>

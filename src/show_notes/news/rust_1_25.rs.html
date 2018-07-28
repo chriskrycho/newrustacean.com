@@ -194,29 +194,18 @@
 <span id="194">194</span>
 <span id="195">195</span>
 <span id="196">196</span>
-<span id="197">197</span>
-<span id="198">198</span>
-<span id="199">199</span>
-<span id="200">200</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Rust 1.25</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** March 31, 2018</span>
 <span class="doccomment">//!   - **Subject:** Paths and matches and SIMD, cargo new changes, and tons of</span>
 <span class="doccomment">//!     community-driven learning materials!</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A][m4a]</span>
-<span class="doccomment">//!       + [MP3][mp3]</span>
-<span class="doccomment">//!       + [Ogg][ogg]</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_25.m4a</span>
-<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_25.mp3</span>
-<span class="doccomment">//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_25.ogg</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_25.mp3</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; style=&quot;width: 100%&quot; title=&quot;Crates You Should Know: Serde&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_25.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_25.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_25.ogg&quot;&gt;</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Crates You Should Know: Serde&quot; controls preload=metadata&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_25.mp3&quot;&gt;</span>
 <span class="doccomment">//! &lt;/audio&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!</span>
@@ -381,7 +370,10 @@
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">unused_imports</span>)]</span>
-<span class="kw">use</span> <span class="ident">std</span>::{<span class="ident">fs</span>::{<span class="ident">File</span>, <span class="ident">FileType</span>}, <span class="ident">path</span>::<span class="ident">Path</span>};
+<span class="kw">use</span> <span class="ident">std</span>::{
+    <span class="ident">fs</span>::{<span class="ident">File</span>, <span class="ident">FileType</span>},
+    <span class="ident">path</span>::<span class="ident">Path</span>,
+};
 
 <span class="doccomment">/// An example of the new match style.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demo_match</span>(<span class="ident">s</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>) {

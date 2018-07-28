@@ -150,40 +150,26 @@
 <span id="150">150</span>
 <span id="151">151</span>
 <span id="152">152</span>
-<span id="153">153</span>
-<span id="154">154</span>
-<span id="155">155</span>
-<span id="156">156</span>
-<span id="157">157</span>
-<span id="158">158</span>
-<span id="159">159</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Part 1: Getting to Rust</span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** April 30, 2017</span>
 <span class="doccomment">//!   - **Subject:** Background, TypeScript, coming to Rust, and how helpful the</span>
 <span class="doccomment">//!     Rust community can be.</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A][m4a]</span>
-<span class="doccomment">//!       + [MP3][mp3]</span>
-<span class="doccomment">//!       + [Ogg][ogg]</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_4_part_1.m4a</span>
-<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_4_part_1.mp3</span>
-<span class="doccomment">//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_4_part_1.ogg</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/4/part_1.mp3</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; style=&quot;width: 100%&quot; title=&quot;Jonathan Turner::Part 1&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_4_part_1.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_4_part_1.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_4_part_1.ogg&quot;&gt;</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Jonathan Turner::Part 1&quot; controls preload=metadata&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/4/part_1.mp3&quot;&gt;</span>
 <span class="doccomment">//! &lt;/audio&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! Show Notes</span>
 <span class="doccomment">//! ----------</span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//! On Jonathan&#39;s programming backstory:</span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//!   - [TI-99/4A]</span>
 <span class="doccomment">//!   - [Commodore 64]</span>
 <span class="doccomment">//!   - [Cray]</span>
@@ -196,7 +182,7 @@
 <span class="doccomment">//!   - [BASIC]</span>
 <span class="doccomment">//!   - [Pascal]</span>
 <span class="doccomment">//!   - [Ultima]</span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//! [TI-99/4A]: https://en.wikipedia.org/wiki/Texas_Instruments_TI-99/4A</span>
 <span class="doccomment">//! [Commodore 64]: https://en.wikipedia.org/wiki/Commodore_64</span>
 <span class="doccomment">//! [Cray]: http://www.cray.com</span>
@@ -209,10 +195,10 @@
 <span class="doccomment">//! [BASIC]: https://en.wikipedia.org/wiki/BASIC</span>
 <span class="doccomment">//! [Pascal]: https://en.wikipedia.org/wiki/Pascal_(programming_language)</span>
 <span class="doccomment">//! [Ultima]: https://en.wikipedia.org/wiki/Ultima_%28series%29</span>
-<span class="doccomment">//! </span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//! After the transition to working on Rust full-time:</span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//!   - Improving the error messages—</span>
 <span class="doccomment">//!       + [design issue]</span>
 <span class="doccomment">//!       + Jonathan&#39;s personal blog post [&quot;Helping with the Rust Errors&quot;]</span>
@@ -220,17 +206,17 @@
 <span class="doccomment">//!         [&quot;Shape of Errors to Come&quot;]</span>
 <span class="doccomment">//!       + [Elm]</span>
 <span class="doccomment">//!       + [error list issue]</span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//! [design issue]: https://github.com/rust-lang/rust/issues/33240</span>
 <span class="doccomment">//! [&quot;Helping with the Rust Errors&quot;]: http://www.jonathanturner.org/2016/08/helping-out-with-rust-errors.html</span>
 <span class="doccomment">//! [&quot;Shape of Errors to Come&quot;]: https://blog.rust-lang.org/2016/08/10/Shape-of-errors-to-come.html</span>
 <span class="doccomment">//! [Elm]: http://elm-lang.org</span>
 <span class="doccomment">//! [error list issue]: https://github.com/rust-lang/rust/issues/35233</span>
-<span class="doccomment">//! </span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//! Sponsors</span>
 <span class="doccomment">//! --------</span>
-<span class="doccomment">//! </span>
+<span class="doccomment">//!</span>
 <span class="doccomment">//!   - [Anthony Deschamps]</span>
 <span class="doccomment">//!   - Anthony Scotti</span>
 <span class="doccomment">//!   - Aleksey Pirogov</span>

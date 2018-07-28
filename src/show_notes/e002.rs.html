@@ -259,37 +259,17 @@
 <span id="259">259</span>
 <span id="260">260</span>
 <span id="261">261</span>
-<span id="262">262</span>
-<span id="263">263</span>
-<span id="264">264</span>
-<span id="265">265</span>
-<span id="266">266</span>
-<span id="267">267</span>
-<span id="268">268</span>
-<span id="269">269</span>
-<span id="270">270</span>
-<span id="271">271</span>
-<span id="272">272</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Something borrowed, something... moved?</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** October 12, 2015</span>
 <span class="doccomment">//!   - **Subject:** The `struct` data type constructor, and the basics of</span>
 <span class="doccomment">//!     Rust&#39;s &quot;ownership&quot; concept and &quot;borrowing&quot; and &quot;moving&quot;.</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A][m4a]</span>
-<span class="doccomment">//!       + [MP3][mp3]</span>
-<span class="doccomment">//!       + [Ogg][ogg]</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e002.m4a</span>
-<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e002.mp3</span>
-<span class="doccomment">//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e002.ogg</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e002.mp3</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Something borrowed, something... moved?&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e002.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e002.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e002.ogg&quot;&gt;</span>
-<span class="doccomment">//! &lt;/audio&gt;</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Something borrowed, something... moved?&quot; controls preload=metadata src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e002.mp3&quot; /&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! # Notes</span>
 <span class="doccomment">//!</span>
@@ -361,8 +341,10 @@
     <span class="comment">// You can borrow a mutable type immutably, *or* mutably.</span>
     <span class="ident">borrow</span>(<span class="kw-2">&amp;</span><span class="ident">mutable</span>);
     <span class="ident">borrow_mut</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">mutable</span>);
-    <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Updated the radius of the mutable reference: {:}&quot;</span>,
-             <span class="ident">mutable</span>.<span class="ident">r</span>);
+    <span class="macro">println</span><span class="macro">!</span>(
+        <span class="string">&quot;Updated the radius of the mutable reference: {:}&quot;</span>,
+        <span class="ident">mutable</span>.<span class="ident">r</span>
+    );
 
     <span class="comment">// If I move an object, I can no longer access it afterward. If you</span>
     <span class="comment">// uncomment the following line, you&#39;ll see that the Circle instances are</span>
@@ -375,14 +357,13 @@
     <span class="comment">// println!(&quot;Mutable: {:?}&quot;, mutable);</span>
 }
 
-
 <span class="doccomment">/// Demonstrates general borrowing of an immutable reference.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">borrow</span>(<span class="ident">ref_to_circle</span>: <span class="kw-2">&amp;</span><span class="ident">Circle</span>) {
     <span class="comment">// I can access but not change the values.</span>
-    <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Immutable reference-- origin: {:},{:} | Radius: {:}&quot;</span>,
-             <span class="ident">ref_to_circle</span>.<span class="ident">x</span>,
-             <span class="ident">ref_to_circle</span>.<span class="ident">y</span>,
-             <span class="ident">ref_to_circle</span>.<span class="ident">r</span>);
+    <span class="macro">println</span><span class="macro">!</span>(
+        <span class="string">&quot;Immutable reference-- origin: {:},{:} | Radius: {:}&quot;</span>,
+        <span class="ident">ref_to_circle</span>.<span class="ident">x</span>, <span class="ident">ref_to_circle</span>.<span class="ident">y</span>, <span class="ident">ref_to_circle</span>.<span class="ident">r</span>
+    );
 
     <span class="comment">// You can uncomment this to see the compiler error if you try to *change*</span>
     <span class="comment">// the contents.</span>
@@ -392,19 +373,17 @@
     <span class="comment">// *ref_to_circle = Circle::new()</span>
 }
 
-
 <span class="doccomment">/// Demonstrates general borrowing of a mutable reference.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">borrow_mut</span>(<span class="ident">mutable_ref_to_circle</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">Circle</span>) {
     <span class="comment">// I can still access these values, of course.</span>
-    <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Mutable reference-- origin: {:},{:} | Radius: {:}&quot;</span>,
-             <span class="ident">mutable_ref_to_circle</span>.<span class="ident">x</span>,
-             <span class="ident">mutable_ref_to_circle</span>.<span class="ident">y</span>,
-             <span class="ident">mutable_ref_to_circle</span>.<span class="ident">r</span>);
+    <span class="macro">println</span><span class="macro">!</span>(
+        <span class="string">&quot;Mutable reference-- origin: {:},{:} | Radius: {:}&quot;</span>,
+        <span class="ident">mutable_ref_to_circle</span>.<span class="ident">x</span>, <span class="ident">mutable_ref_to_circle</span>.<span class="ident">y</span>, <span class="ident">mutable_ref_to_circle</span>.<span class="ident">r</span>
+    );
 
     <span class="comment">// But I can also update the values.</span>
     <span class="ident">mutable_ref_to_circle</span>.<span class="ident">r</span> <span class="op">*=</span> <span class="number">2.0</span>;
 }
-
 
 <span class="doccomment">/// Demonstrates general moving of an instance.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">move_circle</span>(<span class="ident">moved_circle</span>: <span class="ident">Circle</span>) {
@@ -417,7 +396,6 @@
     <span class="comment">// name as we like.</span>
     <span class="comment">// moved_circle = Circle::new(4.5, 9.0, 18.0);</span>
 }
-
 
 <span class="doccomment">/// Implement some methods on the `Circle`.</span>
 <span class="doccomment">///</span>
@@ -483,7 +461,6 @@
     }
 }
 
-
 <span class="doccomment">/// Demonstrates how the same concepts apply when dealing with methods.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_method_ownership</span>() {
     <span class="comment">// There are several ways to construct struct types. The first is a plain</span>
@@ -517,9 +494,10 @@
 
     <span class="comment">// Note that both of these struct instances are still available for `main`</span>
     <span class="comment">// to use once they return from the method call:</span>
-    <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;immutable&#39;s y: {} | mutable&#39;s r: {}&quot;</span>,
-             <span class="ident">immutable</span>.<span class="ident">y</span>,
-             <span class="ident">mutable</span>.<span class="ident">r</span>);
+    <span class="macro">println</span><span class="macro">!</span>(
+        <span class="string">&quot;immutable&#39;s y: {} | mutable&#39;s r: {}&quot;</span>,
+        <span class="ident">immutable</span>.<span class="ident">y</span>, <span class="ident">mutable</span>.<span class="ident">r</span>
+    );
 
     <span class="comment">// A method that takes ownership can still return a value. However, it has</span>
     <span class="comment">// a very different behavior in terms of the struct instance, in a way that</span>

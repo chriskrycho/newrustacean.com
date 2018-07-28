@@ -247,29 +247,18 @@
 <span id="247">247</span>
 <span id="248">248</span>
 <span id="249">249</span>
-<span id="250">250</span>
-<span id="251">251</span>
-<span id="252">252</span>
-<span id="253">253</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! `RefCell`s and code smells</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** July 23, 2016</span>
 <span class="doccomment">//!   - **Subject:** Digging deeper on smart pointers and mutability with</span>
 <span class="doccomment">//!     `Cell` and `RefCell`.</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A]</span>
-<span class="doccomment">//!       + [MP3]</span>
-<span class="doccomment">//!       + [Ogg]</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [M4A]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e016.m4a</span>
-<span class="doccomment">//! [MP3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e016.mp3</span>
-<span class="doccomment">//! [Ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e016.ogg</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e016.mp3</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Borrow a Cell or Clone a Cow&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e016.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e016.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e016.ogg&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e016.mp3&quot;&gt;</span>
 <span class="doccomment">//! &lt;/audio&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!</span>
@@ -406,14 +395,12 @@
 <span class="doccomment">//!       + GitHub: [chriskrycho](https://github.com/chriskrycho)</span>
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 
-
-<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">cell</span>::{<span class="ident">Cell</span>,<span class="ident">RefCell</span>};
-
+<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">cell</span>::{<span class="ident">Cell</span>, <span class="ident">RefCell</span>};
 
 <span class="doccomment">/// A container showing a type where `Cell&lt;T&gt;` works with `Vec&lt;T&gt;`.</span>
-<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Copy</span>,<span class="ident">Clone</span>)]</span>
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Copy</span>, <span class="ident">Clone</span>)]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">SimpleContainer</span> {
-    <span class="ident">contents</span>: <span class="ident">i32</span>
+    <span class="ident">contents</span>: <span class="ident">i32</span>,
 }
 
 <span class="doccomment">/// Demonstrate how you need `Cell&lt;T&gt;` even just with a `Vec&lt;T&gt;`;</span>
@@ -431,7 +418,6 @@
     <span class="macro">vec</span><span class="macro">!</span>[<span class="ident">Cell</span>::<span class="ident">new</span>(<span class="ident">a_simple_container</span>), <span class="ident">Cell</span>::<span class="ident">new</span>(<span class="ident">another_one</span>)]
 }
 
-
 <span class="doccomment">/// Operate mutably on the contenets of an immutable reference to a `Vec`.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">double_cell</span>(<span class="ident">containers</span>: <span class="kw-2">&amp;</span>[<span class="ident">Cell</span><span class="op">&lt;</span><span class="ident">SimpleContainer</span><span class="op">&gt;</span>]) {
     <span class="kw">for</span> <span class="ident">container_cell</span> <span class="kw">in</span> <span class="ident">containers</span> {
@@ -441,25 +427,18 @@
     }
 }
 
-
 <span class="doccomment">/// A container showing where `Cell&lt;T&gt;` doesn&#39;t work and `RefCell&lt;T&gt;` does.</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">SimpleNonCopyable</span> {
-    <span class="ident">contents</span>: <span class="ident">String</span>
+    <span class="ident">contents</span>: <span class="ident">String</span>,
 }
 
-
 <span class="doccomment">/// Demonstrate interior mutability with `Rc` and `RefCell`.</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">add_to_each_string</span>(
-        <span class="ident">list_contained_strings</span>: <span class="kw-2">&amp;</span>[<span class="ident">RefCell</span><span class="op">&lt;</span><span class="ident">SimpleNonCopyable</span><span class="op">&gt;</span>],
-        <span class="ident">to_push</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>) {
-
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">add_to_each_string</span>(<span class="ident">list_contained_strings</span>: <span class="kw-2">&amp;</span>[<span class="ident">RefCell</span><span class="op">&lt;</span><span class="ident">SimpleNonCopyable</span><span class="op">&gt;</span>], <span class="ident">to_push</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>) {
     <span class="kw">for</span> <span class="ident">contained</span> <span class="kw">in</span> <span class="ident">list_contained_strings</span> {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">original</span> <span class="op">=</span> <span class="ident">contained</span>.<span class="ident">borrow_mut</span>();
         <span class="ident">original</span>.<span class="ident">contents</span>.<span class="ident">push_str</span>(<span class="ident">to_push</span>);
     }
 }
-
-
 
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">test</span>)]</span>
 <span class="kw">mod</span> <span class="ident">tests</span> {
@@ -472,7 +451,10 @@
         <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">all_wrapped_up</span>.<span class="ident">get</span>(<span class="number">0</span>).<span class="ident">unwrap</span>().<span class="ident">get</span>().<span class="ident">contents</span>, <span class="number">42</span>);
         <span class="comment">// And yet its contents can be changed! The `Cell::set()` method lets us</span>
         <span class="comment">// update the *interior* of the item.</span>
-        <span class="ident">all_wrapped_up</span>.<span class="ident">get</span>(<span class="number">0</span>).<span class="ident">unwrap</span>().<span class="ident">set</span>(<span class="ident">SimpleContainer</span> { <span class="ident">contents</span>: <span class="number">12</span> });
+        <span class="ident">all_wrapped_up</span>
+            .<span class="ident">get</span>(<span class="number">0</span>)
+            .<span class="ident">unwrap</span>()
+            .<span class="ident">set</span>(<span class="ident">SimpleContainer</span> { <span class="ident">contents</span>: <span class="number">12</span> });
         <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">all_wrapped_up</span>.<span class="ident">get</span>(<span class="number">0</span>).<span class="ident">unwrap</span>().<span class="ident">get</span>().<span class="ident">contents</span>, <span class="number">12</span>);
     }
 
@@ -481,8 +463,8 @@
         <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">cell</span>::<span class="ident">Cell</span>;
 
         <span class="kw">let</span> <span class="ident">some_containers</span> <span class="op">=</span> <span class="macro">vec</span><span class="macro">!</span>[
-            <span class="ident">Cell</span>::<span class="ident">new</span>(<span class="ident">SimpleContainer</span>{ <span class="ident">contents</span>: <span class="number">3</span> }),
-            <span class="ident">Cell</span>::<span class="ident">new</span>(<span class="ident">SimpleContainer</span>{ <span class="ident">contents</span>: <span class="number">5</span> })
+            <span class="ident">Cell</span>::<span class="ident">new</span>(<span class="ident">SimpleContainer</span> { <span class="ident">contents</span>: <span class="number">3</span> }),
+            <span class="ident">Cell</span>::<span class="ident">new</span>(<span class="ident">SimpleContainer</span> { <span class="ident">contents</span>: <span class="number">5</span> }),
         ];
 
         <span class="ident">double_cell</span>(<span class="kw-2">&amp;</span><span class="ident">some_containers</span>);
@@ -495,14 +477,24 @@
         <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">cell</span>::<span class="ident">RefCell</span>;
 
         <span class="kw">let</span> <span class="ident">contained_strings</span> <span class="op">=</span> <span class="macro">vec</span><span class="macro">!</span>[
-            <span class="ident">RefCell</span>::<span class="ident">new</span>(<span class="ident">SimpleNonCopyable</span> { <span class="ident">contents</span>: <span class="string">&quot;Boom&quot;</span>.<span class="ident">to_string</span>() }),
-            <span class="ident">RefCell</span>::<span class="ident">new</span>(<span class="ident">SimpleNonCopyable</span> { <span class="ident">contents</span>: <span class="string">&quot;Bang&quot;</span>.<span class="ident">to_string</span>() }),
+            <span class="ident">RefCell</span>::<span class="ident">new</span>(<span class="ident">SimpleNonCopyable</span> {
+                <span class="ident">contents</span>: <span class="string">&quot;Boom&quot;</span>.<span class="ident">to_string</span>(),
+            }),
+            <span class="ident">RefCell</span>::<span class="ident">new</span>(<span class="ident">SimpleNonCopyable</span> {
+                <span class="ident">contents</span>: <span class="string">&quot;Bang&quot;</span>.<span class="ident">to_string</span>(),
+            }),
         ];
 
         <span class="ident">add_to_each_string</span>(<span class="kw-2">&amp;</span><span class="ident">contained_strings</span>, <span class="string">&quot; razzle&quot;</span>);
 
-        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">contained_strings</span>.<span class="ident">get</span>(<span class="number">0</span>).<span class="ident">unwrap</span>().<span class="ident">borrow</span>().<span class="ident">contents</span>, <span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;Boom razzle&quot;</span>));
-        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">contained_strings</span>.<span class="ident">get</span>(<span class="number">1</span>).<span class="ident">unwrap</span>().<span class="ident">borrow</span>().<span class="ident">contents</span>, <span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;Bang razzle&quot;</span>));
+        <span class="macro">assert_eq</span><span class="macro">!</span>(
+            <span class="ident">contained_strings</span>.<span class="ident">get</span>(<span class="number">0</span>).<span class="ident">unwrap</span>().<span class="ident">borrow</span>().<span class="ident">contents</span>,
+            <span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;Boom razzle&quot;</span>)
+        );
+        <span class="macro">assert_eq</span><span class="macro">!</span>(
+            <span class="ident">contained_strings</span>.<span class="ident">get</span>(<span class="number">1</span>).<span class="ident">unwrap</span>().<span class="ident">borrow</span>().<span class="ident">contents</span>,
+            <span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;Bang razzle&quot;</span>)
+        );
     }
 }
 </pre>

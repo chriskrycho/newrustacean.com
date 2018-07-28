@@ -172,35 +172,17 @@
 <span id="172">172</span>
 <span id="173">173</span>
 <span id="174">174</span>
-<span id="175">175</span>
-<span id="176">176</span>
-<span id="177">177</span>
-<span id="178">178</span>
-<span id="179">179</span>
-<span id="180">180</span>
-<span id="181">181</span>
-<span id="182">182</span>
-<span id="183">183</span>
-<span id="184">184</span>
-<span id="185">185</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Point me where I need to go</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** August 5, 2016</span>
 <span class="doccomment">//!   - **Subject:** A deep dive on references and pointers in Rust.</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A]</span>
-<span class="doccomment">//!       + [MP3]</span>
-<span class="doccomment">//!       + [Ogg]</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [M4A]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e017.m4a</span>
-<span class="doccomment">//! [MP3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e017.mp3</span>
-<span class="doccomment">//! [Ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e017.ogg</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e017.mp3</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Point me where I need to go&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e017.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e017.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e017.ogg&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e017.mp3&quot;&gt;</span>
 <span class="doccomment">//! &lt;/audio&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!</span>
@@ -314,10 +296,9 @@
 <span class="doccomment">//!       + GitHub: [chriskrycho](https://github.com/chriskrycho)</span>
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 
-
 <span class="doccomment">/// A dummy container for use with references.</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">DataStore</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> {
-    <span class="kw">pub</span> <span class="ident">contents</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">i32</span>
+    <span class="kw">pub</span> <span class="ident">contents</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">i32</span>,
 }
 
 <span class="kw">impl</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> <span class="ident">DataStore</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> {
@@ -325,7 +306,6 @@
         <span class="ident">DataStore</span> { <span class="ident">contents</span>: <span class="ident">contents</span> }
     }
 }
-
 
 <span class="doccomment">/// Give a basic example of how the reference operator works.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_ref</span>() {
@@ -337,7 +317,6 @@
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{:?}&quot;</span>, <span class="ident">twelve</span>);
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{:?}&quot;</span>, <span class="ident">ref_twelve</span>);
 }
-
 
 <span class="doccomment">/// A simple example of using the dereference operator.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_deref</span>() {
@@ -352,7 +331,6 @@
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{:}&quot;</span>, <span class="kw-2">*</span><span class="ident">some_data</span>.<span class="ident">contents</span>);
 }
 
-
 <span class="doccomment">/// A simple demonstration of matching against a reference type.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_match</span>() {
     <span class="kw">let</span> <span class="ident">four</span> <span class="op">=</span> <span class="number">4</span>;
@@ -360,11 +338,11 @@
 
     <span class="comment">// Here, if we try to reference the contents of `store` directly, we&#39;ll find</span>
     <span class="comment">// that it doesn&#39;t work: we get a type error.</span>
-    <span class="kw">let</span> <span class="ident">store</span> <span class="op">=</span> <span class="ident">DataStore</span>::<span class="ident">new</span>(<span class="ident">ref_to_four</span>);  <span class="comment">// type: DataStore</span>
-    <span class="kw">let</span> <span class="ident">optional_store</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">store</span>);  <span class="comment">// type: Option&lt;DataStore&gt;</span>
+    <span class="kw">let</span> <span class="ident">store</span> <span class="op">=</span> <span class="ident">DataStore</span>::<span class="ident">new</span>(<span class="ident">ref_to_four</span>); <span class="comment">// type: DataStore</span>
+    <span class="kw">let</span> <span class="ident">optional_store</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">store</span>); <span class="comment">// type: Option&lt;DataStore&gt;</span>
     <span class="kw">let</span> <span class="ident">contents</span> <span class="op">=</span> <span class="kw">match</span> <span class="ident">optional_store</span> {
         <span class="prelude-val">Some</span>(<span class="ident">store</span>) <span class="op">=&gt;</span> <span class="kw-2">*</span><span class="ident">store</span>.<span class="ident">contents</span>,
-        <span class="prelude-val">None</span> <span class="op">=&gt;</span> <span class="number">0</span>
+        <span class="prelude-val">None</span> <span class="op">=&gt;</span> <span class="number">0</span>,
     };
 
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{:?}&quot;</span>, <span class="ident">contents</span>);

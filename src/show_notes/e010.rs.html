@@ -225,20 +225,21 @@
 <span id="225">225</span>
 <span id="226">226</span>
 <span id="227">227</span>
+<span id="228">228</span>
+<span id="229">229</span>
+<span id="230">230</span>
+<span id="231">231</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Macros rule!</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** 2016-01-18</span>
 <span class="doccomment">//!   - **Subject:** Using Rust&#39;s macro system, its limitations, and its future.</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a)</span>
-<span class="doccomment">//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e010.mp3)</span>
-<span class="doccomment">//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e010.ogg)</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e010.mp3</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Macros rule!&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e010.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e010.ogg&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e010.mp3&quot;&gt;</span>
 <span class="doccomment">//! &lt;/audio&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!</span>
@@ -338,7 +339,6 @@
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 <span class="doccomment">//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)</span>
 
-
 <span class="doccomment">/// Define a macro like `try!` but which works in the context of `main()`.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// [`try!`][try] takes a `Result&lt;T, E&gt;` and, if it is `Ok&lt;T&gt;`, supplies the `T`</span>
@@ -367,15 +367,16 @@
 <span class="doccomment">/// ```</span>
 <span class="attribute">#[<span class="ident">macro_export</span>]</span>
 <span class="macro">macro_rules</span><span class="macro">!</span> <span class="ident">main_try</span> {
-    (<span class="macro-nonterminal">$</span><span class="macro-nonterminal">e</span>:<span class="ident">expr</span>) <span class="op">=&gt;</span> (<span class="kw">match</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">e</span> {
-        <span class="ident">std</span>::<span class="ident">result</span>::<span class="prelude-ty">Result</span>::<span class="prelude-val">Ok</span>(<span class="ident">val</span>) <span class="op">=&gt;</span> <span class="ident">val</span>,
-        <span class="ident">std</span>::<span class="ident">result</span>::<span class="prelude-ty">Result</span>::<span class="prelude-val">Err</span>(<span class="ident">err</span>) <span class="op">=&gt;</span> {
-            <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{:?}&quot;</span>, <span class="ident">err</span>);
-            <span class="kw">return</span>;
+    (<span class="macro-nonterminal">$</span><span class="macro-nonterminal">e</span>:<span class="ident">expr</span>) <span class="op">=&gt;</span> {
+        <span class="kw">match</span> <span class="macro-nonterminal">$</span><span class="macro-nonterminal">e</span> {
+            <span class="ident">std</span>::<span class="ident">result</span>::<span class="prelude-ty">Result</span>::<span class="prelude-val">Ok</span>(<span class="ident">val</span>) <span class="op">=&gt;</span> <span class="ident">val</span>,
+            <span class="ident">std</span>::<span class="ident">result</span>::<span class="prelude-ty">Result</span>::<span class="prelude-val">Err</span>(<span class="ident">err</span>) <span class="op">=&gt;</span> {
+                <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{:?}&quot;</span>, <span class="ident">err</span>);
+                <span class="kw">return</span>;
+            }
         }
-    })
+    };
 }
-
 
 <span class="doccomment">/// Define an ident macro to show how they can capture different *syntax*.</span>
 <span class="doccomment">///</span>
@@ -410,9 +411,10 @@
 <span class="doccomment">/// macros can use any other language machinery, including other macros.</span>
 <span class="attribute">#[<span class="ident">macro_export</span>]</span>
 <span class="macro">macro_rules</span><span class="macro">!</span> <span class="ident">print_ident_name</span> {
-    (<span class="macro-nonterminal">$</span><span class="macro-nonterminal">id</span>:<span class="ident">ident</span>) <span class="op">=&gt;</span> ( <span class="macro">format</span><span class="macro">!</span>(<span class="string">&quot;The ident&#39;s name was: {}&quot;</span>, <span class="macro">stringify</span><span class="macro">!</span>(<span class="macro-nonterminal">$</span><span class="macro-nonterminal">id</span>)); );
+    (<span class="macro-nonterminal">$</span><span class="macro-nonterminal">id</span>:<span class="ident">ident</span>) <span class="op">=&gt;</span> {
+        <span class="macro">format</span><span class="macro">!</span>(<span class="string">&quot;The ident&#39;s name was: {}&quot;</span>, <span class="macro">stringify</span><span class="macro">!</span>(<span class="macro-nonterminal">$</span><span class="macro-nonterminal">id</span>));
+    };
 }
-
 
 <span class="doccomment">/// Trivial alias for Result for convenience.</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">TryResult</span> <span class="op">=</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">i32</span>, <span class="kw-2">&amp;</span><span class="lifetime">&#39;static</span> <span class="ident">str</span><span class="op">&gt;</span>;
@@ -426,7 +428,6 @@
     <span class="comment">// actually happened.</span>
     <span class="prelude-val">Ok</span>(<span class="ident">val</span> <span class="op">+</span> <span class="number">1</span>)
 }
-
 
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">test</span>)]</span>
 <span class="kw">mod</span> <span class="ident">tests</span> {
@@ -444,13 +445,20 @@
         <span class="kw">let</span> <span class="ident">_x</span> <span class="op">=</span> <span class="number">42</span>;
         <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="macro">print_ident_name</span><span class="macro">!</span>(<span class="ident">_x</span>), <span class="macro">format</span><span class="macro">!</span>(<span class="string">&quot;The ident&#39;s name was: _x&quot;</span>));
         <span class="comment">// Functions:</span>
-        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="macro">print_ident_name</span><span class="macro">!</span>(<span class="ident">demonstrate_try</span>),
-                   <span class="macro">format</span><span class="macro">!</span>(<span class="string">&quot;The ident&#39;s name was: demonstrate_try&quot;</span>));
+        <span class="macro">assert_eq</span><span class="macro">!</span>(
+            <span class="macro">print_ident_name</span><span class="macro">!</span>(<span class="ident">demonstrate_try</span>),
+            <span class="macro">format</span><span class="macro">!</span>(<span class="string">&quot;The ident&#39;s name was: demonstrate_try&quot;</span>)
+        );
         <span class="comment">// Types:</span>
-        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="macro">print_ident_name</span><span class="macro">!</span>(<span class="ident">TryResult</span>), <span class="macro">format</span><span class="macro">!</span>(<span class="string">&quot;The ident&#39;s name was: TryResult&quot;</span>));
+        <span class="macro">assert_eq</span><span class="macro">!</span>(
+            <span class="macro">print_ident_name</span><span class="macro">!</span>(<span class="ident">TryResult</span>),
+            <span class="macro">format</span><span class="macro">!</span>(<span class="string">&quot;The ident&#39;s name was: TryResult&quot;</span>)
+        );
         <span class="comment">// Even macros!</span>
-        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="macro">print_ident_name</span><span class="macro">!</span>(<span class="ident">print_ident_name</span>),
-                   <span class="macro">format</span><span class="macro">!</span>(<span class="string">&quot;The ident&#39;s name was: print_ident_name&quot;</span>));
+        <span class="macro">assert_eq</span><span class="macro">!</span>(
+            <span class="macro">print_ident_name</span><span class="macro">!</span>(<span class="ident">print_ident_name</span>),
+            <span class="macro">format</span><span class="macro">!</span>(<span class="string">&quot;The ident&#39;s name was: print_ident_name&quot;</span>)
+        );
     }
 }
 </pre>

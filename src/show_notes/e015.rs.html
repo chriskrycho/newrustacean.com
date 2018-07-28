@@ -234,35 +234,18 @@
 <span id="234">234</span>
 <span id="235">235</span>
 <span id="236">236</span>
-<span id="237">237</span>
-<span id="238">238</span>
-<span id="239">239</span>
-<span id="240">240</span>
-<span id="241">241</span>
-<span id="242">242</span>
-<span id="243">243</span>
-<span id="244">244</span>
-<span id="245">245</span>
-<span id="246">246</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Not dumb pointers.</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** June 17, 2016</span>
 <span class="doccomment">//!   - **Subject:** `Box`, `String`, `Vec`, `Rc`, and `Arc` have this in</span>
 <span class="doccomment">//!     common: they&#39;re not dumb.</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A]</span>
-<span class="doccomment">//!       + [MP3]</span>
-<span class="doccomment">//!       + [Ogg]</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [M4A]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e015.m4a</span>
-<span class="doccomment">//! [MP3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e015.mp3</span>
-<span class="doccomment">//! [Ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e015.ogg</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e015.mp3</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;e014: Stringing things along&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e015.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e015.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e015.ogg&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e015.mp3&quot;&gt;</span>
 <span class="doccomment">//! &lt;/audio&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!</span>
@@ -407,9 +390,8 @@
 <span class="doccomment">//! materials focus entirely on `Rc` and `Arc`, as those are the most</span>
 <span class="doccomment">//! interesting bits from today&#39;s episode.</span>
 
-<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">rc</span>::{<span class="ident">Rc</span>,<span class="ident">Weak</span>};
+<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">rc</span>::{<span class="ident">Rc</span>, <span class="ident">Weak</span>};
 <span class="comment">// use std::sync::Arc;  // TODO</span>
-
 
 <span class="doccomment">/// A trivial (and frankly rather silly) example for use with `Rc`.</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">FileData</span> {
@@ -418,12 +400,13 @@
 
 <span class="kw">impl</span> <span class="ident">FileData</span> {
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">new</span>(<span class="ident">contents</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>) <span class="op">-&gt;</span> <span class="ident">FileData</span> {
-        <span class="ident">FileData</span> { <span class="ident">contents</span>: <span class="ident">contents</span>.<span class="ident">to_string</span>() }
+        <span class="ident">FileData</span> {
+            <span class="ident">contents</span>: <span class="ident">contents</span>.<span class="ident">to_string</span>(),
+        }
     }
 }
 
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">ASendableType</span> {}
-
 
 <span class="doccomment">/// Note that this function is *generic*: it will work for any type.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">print_rc_count</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span>(<span class="ident">t</span>: <span class="kw-2">&amp;</span><span class="ident">Rc</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span>) {
@@ -435,33 +418,32 @@
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;The contents are: {:}&quot;</span>, <span class="ident">fd</span>.<span class="ident">contents</span>);
 }
 
-
 <span class="doccomment">/// Demonstrate the basics of reference-counted types. (Read the source, Luke!)</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_rc</span>() {
     <span class="comment">// Note that we have valid data here.</span>
     <span class="kw">let</span> <span class="ident">a_ref</span> <span class="op">=</span> <span class="ident">get_wrapped_file_data</span>();
     <span class="ident">print_rc_body</span>(<span class="kw-2">&amp;</span><span class="ident">a_ref</span>);
-    <span class="ident">print_rc_count</span>(<span class="kw-2">&amp;</span><span class="ident">a_ref</span>);  <span class="comment">// Just 1</span>
+    <span class="ident">print_rc_count</span>(<span class="kw-2">&amp;</span><span class="ident">a_ref</span>); <span class="comment">// Just 1</span>
     <span class="kw">let</span> <span class="ident">added_another_ref</span> <span class="op">=</span> <span class="ident">a_ref</span>.<span class="ident">clone</span>();
-    <span class="ident">print_rc_count</span>(<span class="kw-2">&amp;</span><span class="ident">a_ref</span>);  <span class="comment">// 2</span>
+    <span class="ident">print_rc_count</span>(<span class="kw-2">&amp;</span><span class="ident">a_ref</span>); <span class="comment">// 2</span>
 
     <span class="comment">// Create a block to show that we can get another copy.</span>
     {
         <span class="kw">let</span> <span class="ident">yet_another_ref</span> <span class="op">=</span> <span class="ident">a_ref</span>.<span class="ident">clone</span>();
-        <span class="ident">print_rc_count</span>(<span class="kw-2">&amp;</span><span class="ident">yet_another_ref</span>);  <span class="comment">// 3</span>
-        <span class="ident">print_rc_body</span>(<span class="kw-2">&amp;</span><span class="ident">yet_another_ref</span>);  <span class="comment">// we can print the contents here.</span>
-    }  <span class="comment">// we&#39;ve gone out of scope; `yet_another_ref` is deallocated here.</span>
+        <span class="ident">print_rc_count</span>(<span class="kw-2">&amp;</span><span class="ident">yet_another_ref</span>); <span class="comment">// 3</span>
+        <span class="ident">print_rc_body</span>(<span class="kw-2">&amp;</span><span class="ident">yet_another_ref</span>); <span class="comment">// we can print the contents here.</span>
+    } <span class="comment">// we&#39;ve gone out of scope; `yet_another_ref` is deallocated here.</span>
 
-    <span class="ident">print_rc_count</span>(<span class="kw-2">&amp;</span><span class="ident">a_ref</span>);  <span class="comment">// 2 again</span>
-    <span class="ident">drop</span>(<span class="ident">a_ref</span>);  <span class="comment">// Remember, it doesn&#39;t matter which we drop!</span>
-    <span class="ident">print_rc_count</span>(<span class="kw-2">&amp;</span><span class="ident">added_another_ref</span>);  <span class="comment">// 1</span>
-    <span class="ident">print_rc_body</span>(<span class="kw-2">&amp;</span><span class="ident">added_another_ref</span>);  <span class="comment">// valid</span>
+    <span class="ident">print_rc_count</span>(<span class="kw-2">&amp;</span><span class="ident">a_ref</span>); <span class="comment">// 2 again</span>
+    <span class="ident">drop</span>(<span class="ident">a_ref</span>); <span class="comment">// Remember, it doesn&#39;t matter which we drop!</span>
+    <span class="ident">print_rc_count</span>(<span class="kw-2">&amp;</span><span class="ident">added_another_ref</span>); <span class="comment">// 1</span>
+    <span class="ident">print_rc_body</span>(<span class="kw-2">&amp;</span><span class="ident">added_another_ref</span>); <span class="comment">// valid</span>
 
     <span class="comment">// Most explicit form:</span>
     <span class="kw">let</span> <span class="ident">a_weak_ref</span>: <span class="ident">Weak</span><span class="op">&lt;</span><span class="ident">FileData</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Rc</span>::<span class="ident">downgrade</span>(<span class="kw-2">&amp;</span><span class="ident">added_another_ref</span>);
     <span class="comment">// clone the weak ref.</span>
     <span class="kw">let</span> <span class="ident">_another_weak_ref</span> <span class="op">=</span> <span class="ident">a_weak_ref</span>.<span class="ident">clone</span>();
-    <span class="ident">print_rc_count</span>(<span class="kw-2">&amp;</span><span class="ident">added_another_ref</span>);  <span class="comment">// still 1.</span>
+    <span class="ident">print_rc_count</span>(<span class="kw-2">&amp;</span><span class="ident">added_another_ref</span>); <span class="comment">// still 1.</span>
 
     <span class="comment">// Now we *move* the reference into the other function.</span>
     <span class="kw">let</span> <span class="ident">empty_weak</span> <span class="op">=</span> <span class="ident">get_empty_weak</span>(<span class="ident">added_another_ref</span>);
@@ -472,12 +454,10 @@
     }
 }
 
-
 <span class="doccomment">/// Note that this takes ownership of the data.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">get_empty_weak</span>(<span class="ident">fd</span>: <span class="ident">Rc</span><span class="op">&lt;</span><span class="ident">FileData</span><span class="op">&gt;</span>) <span class="op">-&gt;</span> <span class="ident">Weak</span><span class="op">&lt;</span><span class="ident">FileData</span><span class="op">&gt;</span> {
     <span class="ident">Rc</span>::<span class="ident">downgrade</span>(<span class="kw-2">&amp;</span><span class="ident">fd</span>)
 }
-
 
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">get_wrapped_file_data</span>() <span class="op">-&gt;</span> <span class="ident">Rc</span><span class="op">&lt;</span><span class="ident">FileData</span><span class="op">&gt;</span> {
     <span class="kw">let</span> <span class="ident">plain_data</span> <span class="op">=</span> <span class="ident">FileData</span>::<span class="ident">new</span>(<span class="string">&quot;This would really read from a file. And not be terrible.&quot;</span>);

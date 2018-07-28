@@ -184,29 +184,16 @@
 <span id="184">184</span>
 <span id="185">185</span>
 <span id="186">186</span>
-<span id="187">187</span>
-<span id="188">188</span>
-<span id="189">189</span>
-<span id="190">190</span>
-<span id="191">191</span>
-<span id="192">192</span>
-<span id="193">193</span>
-<span id="194">194</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Testify</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** December 13, 2015</span>
 <span class="doccomment">//!   - **Subject:** Testing and benchmarking, and compiler attributes.</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e007.m4a)</span>
-<span class="doccomment">//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e007.mp3)</span>
-<span class="doccomment">//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e007.ogg)</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
+<span class="doccomment">//! </span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e007.mp3</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Testify&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e007.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e007.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e007.ogg&quot;&gt;</span>
-<span class="doccomment">//! &lt;/audio&gt;</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Testify&quot; controls preload=metadata src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e007.mp3&quot; /&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! Notes</span>
 <span class="doccomment">//! -----</span>
@@ -292,7 +279,6 @@
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 <span class="doccomment">//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)</span>
 
-
 <span class="doccomment">/// A trivial function for a trivial test. See the [source](/src/show_notes/e007.rs.html)!</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">add</span>(<span class="ident">a</span>: <span class="ident">f64</span>, <span class="ident">b</span>: <span class="ident">f64</span>) <span class="op">-&gt;</span> <span class="ident">f64</span> {
     <span class="ident">a</span> <span class="op">+</span> <span class="ident">b</span>
@@ -308,7 +294,6 @@
 <span class="kw">fn</span> <span class="ident">test_add</span>() {
     <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">add</span>(<span class="number">2.0</span>, <span class="number">2.0</span>), <span class="number">4.0</span>);
 }
-
 
 <span class="doccomment">/// A test module!</span>
 <span class="doccomment">///</span>
@@ -340,7 +325,6 @@
     <span class="kw">fn</span> <span class="ident">test_add_badly</span>() {
         <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">add</span>(<span class="number">2.0</span>, <span class="number">2.0</span>), <span class="number">5.0</span>);
     }
-
 
     <span class="doccomment">/// A yet more sophisticated example: `#[should_panic]` with `expected`.</span>
     <span class="doccomment">///</span>

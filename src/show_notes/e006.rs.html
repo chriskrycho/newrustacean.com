@@ -204,34 +204,16 @@
 <span id="204">204</span>
 <span id="205">205</span>
 <span id="206">206</span>
-<span id="207">207</span>
-<span id="208">208</span>
-<span id="209">209</span>
-<span id="210">210</span>
-<span id="211">211</span>
-<span id="212">212</span>
-<span id="213">213</span>
-<span id="214">214</span>
-<span id="215">215</span>
-<span id="216">216</span>
-<span id="217">217</span>
-<span id="218">218</span>
-<span id="219">219</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Modularize this!</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** November 16, 2015</span>
 <span class="doccomment">//!   - **Subject:** Designing APIs, and using packages (&quot;crates&quot;) and modules</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e006.m4a)</span>
-<span class="doccomment">//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e006.mp3)</span>
-<span class="doccomment">//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e006.ogg)</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
+<span class="doccomment">//! </span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e006.mp3</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Modularize this!&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e006.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e006.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e006.ogg&quot;&gt;</span>
-<span class="doccomment">//! &lt;/audio&gt;</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Modularize this!&quot; controls preload=metadata src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e006.mp3&quot; /&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! # Notes</span>
 <span class="doccomment">//!</span>
@@ -292,7 +274,6 @@
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 <span class="doccomment">//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)</span>
 
-
 <span class="doccomment">/// This is an internal module. Note that it isn&#39;t public.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// Modules may have any kind of &quot;item&quot; local to them. &quot;Items&quot; in Rust are</span>
@@ -311,7 +292,6 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">a_public_module_fn</span>() {
         <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;At `internal_module::a_public_module_fn()`.&quot;</span>);
         <span class="ident">a_private_module_fn</span>();
-
     }
 
     <span class="doccomment">/// Another module function, demonstrating module-private function status.</span>
@@ -324,7 +304,6 @@
         <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;At `internal_module::a_private_module_fn()`.&quot;</span>);
     }
 }
-
 
 <span class="doccomment">/// This is an internal module which *is* public.</span>
 <span class="doccomment">///</span>
@@ -341,13 +320,11 @@
         <span class="ident">some_private_fn</span>();
     }
 
-
     <span class="doccomment">/// A private function in a public modules.</span>
     <span class="kw">fn</span> <span class="ident">some_private_fn</span>() {
         <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;At `public_internal_module::some_private_fn()`.&quot;</span>);
     }
 }
-
 
 <span class="doccomment">/// Demonstrates the use of modules and namespaces.</span>
 <span class="doccomment">///</span>
@@ -372,7 +349,6 @@
     <span class="comment">// declaration-based, modules.)</span>
     <span class="ident">public_internal_module</span>::<span class="ident">a_public_module_fn</span>();
 }
-
 
 <span class="comment">// What if we wanted to use *any* public function from a given module? We</span>
 <span class="comment">// can simply `use` that module.</span>
@@ -409,7 +385,6 @@
 
 }
 
-
 <span class="doccomment">/// Demonstrates that modules can be `use`d within functions.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_use_inside_function</span>() {
     <span class="kw">use</span> <span class="ident">e006</span>::<span class="ident">demonstrate_namespacing</span> <span class="kw">as</span> <span class="ident">dn</span>;
@@ -417,7 +392,6 @@
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;At `demonstrate_use_inside_function()`.&quot;</span>);
     <span class="ident">dn</span>::<span class="ident">demonstrate_globbed_calls</span>();
 }
-
 
 <span class="doccomment">/// Give an example of nested modules.</span>
 <span class="doccomment">///</span>

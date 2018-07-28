@@ -186,38 +186,18 @@
 <span id="186">186</span>
 <span id="187">187</span>
 <span id="188">188</span>
-<span id="189">189</span>
-<span id="190">190</span>
-<span id="191">191</span>
-<span id="192">192</span>
-<span id="193">193</span>
-<span id="194">194</span>
-<span id="195">195</span>
-<span id="196">196</span>
-<span id="197">197</span>
-<span id="198">198</span>
-<span id="199">199</span>
-<span id="200">200</span>
-<span id="201">201</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Stringing things along</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** April 24, 2016</span>
 <span class="doccomment">//!   - **Subject:** `Strings` `&amp;str`s and `Vec`s and slices (and Unicode) --</span>
 <span class="doccomment">//!     oh, my!</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A][m4a]</span>
-<span class="doccomment">//!       + [MP3][mp3]</span>
-<span class="doccomment">//!       + [Ogg][ogg]</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e014.m4a</span>
-<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e014.mp3</span>
-<span class="doccomment">//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e014.ogg</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e014.mp3</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;e014: Stringing things along&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e014.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e014.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e014.ogg&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e014.mp3&quot;&gt;</span>
 <span class="doccomment">//! &lt;/audio&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!</span>
@@ -310,14 +290,12 @@
 <span class="doccomment">//!       + GitHub: [chriskrycho](https://github.com/chriskrycho)</span>
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 
-
 <span class="doccomment">/// Get a string *slice*. Note the required lifetime specifier on the type!</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// String slices are pointers to a given chunk of data.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">get_a_slice</span>() <span class="op">-&gt;</span> <span class="kw-2">&amp;</span><span class="lifetime">&#39;static</span> <span class="ident">str</span> {
     <span class="string">&quot;this is a statically allocated slice&quot;</span>
 }
-
 
 <span class="doccomment">/// Get a `String` instance. Note there&#39;s no lifetime.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">get_a_string</span>() <span class="op">-&gt;</span> <span class="ident">String</span> {
@@ -326,25 +304,23 @@
     <span class="ident">a_string</span>
 }
 
-
 <span class="doccomment">/// It&#39;s easy enough to get a `String` from a `str`.</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">show_from_behavior</span>() <span class="op">-&gt;</span> <span class="ident">String</span> { <span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;any old slice will do&quot;</span>) }
-
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">show_from_behavior</span>() <span class="op">-&gt;</span> <span class="ident">String</span> {
+    <span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;any old slice will do&quot;</span>)
+}
 
 <span class="doccomment">/// Print a 🚀, just because we can.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_unicode</span>() {
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{}&quot;</span>, <span class="string">&quot;🚀&quot;</span>);
 }
 
-
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">get_back_some_unicode</span>(<span class="ident">desc</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>) <span class="op">-&gt;</span> <span class="ident">String</span> {
     <span class="kw">match</span> <span class="ident">desc</span> {
         <span class="string">&quot;rocket&quot;</span> <span class="op">=&gt;</span> <span class="string">&quot;🚀&quot;</span>.<span class="ident">to_string</span>(),
         <span class="string">&quot;hearts&quot;</span> <span class="op">=&gt;</span> <span class="string">&quot;💕&quot;</span>.<span class="ident">to_string</span>(),
-        <span class="kw">_</span> <span class="op">=&gt;</span> <span class="string">&quot; &quot;</span>.<span class="ident">to_string</span>()
+        <span class="kw">_</span> <span class="op">=&gt;</span> <span class="string">&quot; &quot;</span>.<span class="ident">to_string</span>(),
     }
 }
-
 
 <span class="doccomment">/// Get a `String` with a specified capacity.</span>
 <span class="doccomment">///</span>
@@ -356,7 +332,6 @@
     <span class="ident">string</span> <span class="op">=</span> <span class="ident">string</span> <span class="op">+</span> <span class="string">&quot;few&quot;</span>;
     <span class="ident">string</span>
 }
-
 
 <span class="doccomment">/// Demonstrate dereferencing. (You&#39;ll want to read this example carefully.)</span>
 <span class="doccomment">///</span>
@@ -386,7 +361,6 @@
         }
     }
 }
-
 
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">test</span>)]</span>
 <span class="kw">mod</span> <span class="ident">tests</span> {

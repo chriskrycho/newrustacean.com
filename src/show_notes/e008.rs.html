@@ -245,17 +245,11 @@
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** 2015-12-27</span>
 <span class="doccomment">//!   - **Subject:** Generics, traits, and shared behavior in Rust.</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e008.m4a)</span>
-<span class="doccomment">//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e008.mp3)</span>
-<span class="doccomment">//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e008.ogg)</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Just like something else&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e008.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e008.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e008.ogg&quot;&gt;</span>
-<span class="doccomment">//! &lt;/audio&gt;</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e008.mp3</span>
 <span class="doccomment">//!</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Just like something else&quot; controls preload=metadata src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e008.mp3&quot;&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! Notes</span>
 <span class="doccomment">//! -----</span>
@@ -337,9 +331,7 @@
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 <span class="doccomment">//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)</span>
 
-
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">fmt</span>;
-
 
 <span class="doccomment">/// Demonstrate a function *generic* over any type.</span>
 <span class="doccomment">///</span>
@@ -354,13 +346,11 @@
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;What&#39;s a trait? I&#39;m so glad you asked.&quot;</span>);
 }
 
-
 <span class="doccomment">/// Demonstrate a function with a *trait bound on a generic*.</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">a_generic_printable</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">fmt</span>::<span class="ident">Debug</span><span class="op">&gt;</span> (<span class="ident">t</span>: <span class="ident">T</span>) {
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">a_generic_printable</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">fmt</span>::<span class="ident">Debug</span><span class="op">&gt;</span>(<span class="ident">t</span>: <span class="ident">T</span>) {
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;This function can actually debug-print `t`, whatever it may be.&quot;</span>);
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;So: {:?}&quot;</span>, <span class="ident">t</span>);
 }
-
 
 <span class="doccomment">/// This is `Option&lt;T&gt;`, but using Haskell&#39;s names instead.</span>
 <span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">Maybe</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> {
@@ -368,13 +358,11 @@
     <span class="ident">Just</span>(<span class="ident">T</span>),
 }
 
-
 <span class="doccomment">/// A simple type to illustrate trait implementation.</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">SimpleType</span> {
     <span class="ident">a</span>: <span class="ident">String</span>,
-    <span class="ident">b</span>: <span class="ident">i32</span>
+    <span class="ident">b</span>: <span class="ident">i32</span>,
 }
-
 
 <span class="doccomment">/// Define the display format for the `SimpleType`.</span>
 <span class="doccomment">///</span>
@@ -386,7 +374,6 @@
     }
 }
 
-
 <span class="doccomment">/// This is just a container which can hold any two types.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// These types can even be the same, but they don&#39;t have to be. Moreover, they</span>
@@ -396,7 +383,6 @@
     <span class="kw">pub</span> <span class="ident">t</span>: <span class="ident">T</span>,
     <span class="kw">pub</span> <span class="ident">u</span>: <span class="ident">U</span>,
 }
-
 
 <span class="doccomment">/// Show that the generics work!</span>
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">test</span>)]</span>
@@ -414,9 +400,14 @@
     <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Debug</span>)]</span>
     <span class="kw">enum</span> <span class="ident">TestEnum</span> {
         <span class="ident">Nope</span>,
-        <span class="ident">SomePointTuple</span>(<span class="ident">f32</span>, <span class="ident">i32</span>),  <span class="doccomment">/// Any tuple type</span>
-        <span class="ident">SomeAnonStruct</span> { <span class="ident">x</span>: <span class="ident">f32</span>, <span class="ident">y</span>: <span class="ident">i32</span> },  <span class="doccomment">/// Functionally just like `TestPoint`</span>
-        <span class="ident">SomePointStruct</span>(<span class="ident">TestPoint</span>),   <span class="comment">// Embed an actual `TestPoint`</span>
+        <span class="ident">SomePointTuple</span>(<span class="ident">f32</span>, <span class="ident">i32</span>),
+        <span class="doccomment">/// Any tuple type</span>
+        <span class="ident">SomeAnonStruct</span> {
+            <span class="ident">x</span>: <span class="ident">f32</span>,
+            <span class="ident">y</span>: <span class="ident">i32</span>,
+        },
+        <span class="doccomment">/// Functionally just like `TestPoint`</span>
+        <span class="ident">SomePointStruct</span>(<span class="ident">TestPoint</span>), <span class="comment">// Embed an actual `TestPoint`</span>
     }
 
     <span class="doccomment">/// All of these tests will pass.</span>
@@ -464,22 +455,31 @@
         <span class="kw">let</span> <span class="ident">pattern</span> <span class="op">=</span> <span class="bool-val">false</span>;
         <span class="kw">let</span> <span class="ident">_maybe_vec</span> <span class="op">=</span> <span class="kw">match</span> <span class="ident">pattern</span> {
             <span class="bool-val">false</span> <span class="op">=&gt;</span> <span class="ident">Maybe</span>::<span class="ident">Nothing</span>,
-            <span class="bool-val">true</span> <span class="op">=&gt;</span> <span class="ident">Maybe</span>::<span class="ident">Just</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])
+            <span class="bool-val">true</span> <span class="op">=&gt;</span> <span class="ident">Maybe</span>::<span class="ident">Just</span>(<span class="macro">vec</span><span class="macro">!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]),
         };
     }
 
     <span class="attribute">#[<span class="ident">test</span>]</span>
     <span class="kw">fn</span> <span class="ident">test_generic_struct</span>() {
         <span class="comment">// The generic container can contain &quot;normal&quot; (non-generic) types.</span>
-        <span class="kw">let</span> <span class="ident">_container</span> <span class="op">=</span> <span class="ident">GenericContainer</span> { <span class="ident">t</span>: <span class="number">14.0</span>, <span class="ident">u</span>: <span class="string">&quot;alpha&quot;</span> };
+        <span class="kw">let</span> <span class="ident">_container</span> <span class="op">=</span> <span class="ident">GenericContainer</span> {
+            <span class="ident">t</span>: <span class="number">14.0</span>,
+            <span class="ident">u</span>: <span class="string">&quot;alpha&quot;</span>,
+        };
         <span class="comment">// But it can also contain generic types, like `Vec&lt;T&gt;` or the `Maybe`</span>
         <span class="comment">// type we defined above.</span>
-        <span class="kw">let</span> <span class="ident">_another</span> <span class="op">=</span> <span class="ident">GenericContainer</span> { <span class="ident">t</span>: <span class="macro">vec</span><span class="macro">!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="ident">u</span>: <span class="ident">Maybe</span>::<span class="ident">Just</span>(<span class="string">&quot;a string&quot;</span>) };
+        <span class="kw">let</span> <span class="ident">_another</span> <span class="op">=</span> <span class="ident">GenericContainer</span> {
+            <span class="ident">t</span>: <span class="macro">vec</span><span class="macro">!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],
+            <span class="ident">u</span>: <span class="ident">Maybe</span>::<span class="ident">Just</span>(<span class="string">&quot;a string&quot;</span>),
+        };
     }
 
     <span class="attribute">#[<span class="ident">test</span>]</span>
     <span class="kw">fn</span> <span class="ident">test_impl_display</span>() {
-        <span class="kw">let</span> <span class="ident">simple</span> <span class="op">=</span> <span class="ident">SimpleType</span> { <span class="ident">a</span>: <span class="string">&quot;some string&quot;</span>.<span class="ident">to_string</span>(), <span class="ident">b</span>: <span class="number">4096</span> };
+        <span class="kw">let</span> <span class="ident">simple</span> <span class="op">=</span> <span class="ident">SimpleType</span> {
+            <span class="ident">a</span>: <span class="string">&quot;some string&quot;</span>.<span class="ident">to_string</span>(),
+            <span class="ident">b</span>: <span class="number">4096</span>,
+        };
         <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;simple is {}&quot;</span>, <span class="ident">simple</span>);
     }
 }

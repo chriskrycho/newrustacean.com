@@ -252,25 +252,27 @@
 <span id="252">252</span>
 <span id="253">253</span>
 <span id="254">254</span>
+<span id="255">255</span>
+<span id="256">256</span>
+<span id="257">257</span>
+<span id="258">258</span>
+<span id="259">259</span>
+<span id="260">260</span>
+<span id="261">261</span>
+<span id="262">262</span>
+<span id="263">263</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Once upon a type</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** March 6, 2016</span>
 <span class="doccomment">//!   - **Subject:** Type systems: strong vs. weak, dynamic vs. static, and</span>
 <span class="doccomment">//!     degrees of expressivity.</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A][m4a]</span>
-<span class="doccomment">//!       + [MP3][mp3]</span>
-<span class="doccomment">//!       + [Ogg][ogg]</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e011.m4a</span>
-<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e011.mp3</span>
-<span class="doccomment">//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e011.ogg</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e011.mp3</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;e011: Once Upon a Type&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e011.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e011.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e011.ogg&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e011.mp3&quot;&gt;</span>
 <span class="doccomment">//! &lt;/audio&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!</span>
@@ -354,7 +356,6 @@
 
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">fmt</span>;
 
-
 <span class="doccomment">/// Is the thing &quot;expressive&quot;, whatever that means?</span>
 <span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">Expressive</span> {
     <span class="ident">Ridiculously</span>,
@@ -418,7 +419,6 @@
     }
 }
 
-
 <span class="doccomment">/// Look, we composed those enums into another type. How... droll.</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">TypeSystem</span> {
     <span class="ident">name</span>: <span class="ident">String</span>,
@@ -427,14 +427,13 @@
     <span class="ident">statically_known</span>: <span class="ident">StaticallyKnown</span>,
 }
 
-
 <span class="kw">impl</span> <span class="ident">TypeSystem</span> {
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">builder</span>(<span class="ident">name</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>,
-                   <span class="ident">expressive</span>: <span class="ident">Expressive</span>,
-                   <span class="ident">strong</span>: <span class="ident">Strong</span>,
-                   <span class="ident">statically_known</span>: <span class="ident">StaticallyKnown</span>)
-                   <span class="op">-&gt;</span> <span class="ident">TypeSystem</span> {
-
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">builder</span>(
+        <span class="ident">name</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>,
+        <span class="ident">expressive</span>: <span class="ident">Expressive</span>,
+        <span class="ident">strong</span>: <span class="ident">Strong</span>,
+        <span class="ident">statically_known</span>: <span class="ident">StaticallyKnown</span>,
+    ) <span class="op">-&gt;</span> <span class="ident">TypeSystem</span> {
         <span class="ident">TypeSystem</span> {
             <span class="ident">name</span>: <span class="ident">name</span>.<span class="ident">to_string</span>(),
             <span class="ident">expressive</span>: <span class="ident">expressive</span>,
@@ -444,7 +443,6 @@
     }
 }
 
-
 <span class="doccomment">/// An incredibly contrived function which just shows enums at work.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// I wanted there to be *some* sample code this episode, you know? This one</span>
@@ -453,58 +451,78 @@
 <span class="doccomment">/// on the show---pretty much everything but generics makes an appearance in</span>
 <span class="doccomment">/// some way in this module.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">describe_type_systems</span>() {
-    <span class="kw">let</span> <span class="ident">js</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(<span class="string">&quot;ECMAScript&quot;</span>,
-                                 <span class="ident">Expressive</span>::<span class="ident">Fairly</span>,
-                                 <span class="ident">Strong</span>::<span class="ident">NopeNopeNope</span>,
-                                 <span class="ident">StaticallyKnown</span>::<span class="ident">Nope</span>);
+    <span class="kw">let</span> <span class="ident">js</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(
+        <span class="string">&quot;ECMAScript&quot;</span>,
+        <span class="ident">Expressive</span>::<span class="ident">Fairly</span>,
+        <span class="ident">Strong</span>::<span class="ident">NopeNopeNope</span>,
+        <span class="ident">StaticallyKnown</span>::<span class="ident">Nope</span>,
+    );
 
-    <span class="kw">let</span> <span class="ident">php</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(<span class="string">&quot;PHP&quot;</span>,
-                                  <span class="ident">Expressive</span>::<span class="ident">Barely</span>,
-                                  <span class="ident">Strong</span>::<span class="ident">NopeNopeNope</span>,
-                                  <span class="ident">StaticallyKnown</span>::<span class="ident">Nope</span>);
+    <span class="kw">let</span> <span class="ident">php</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(
+        <span class="string">&quot;PHP&quot;</span>,
+        <span class="ident">Expressive</span>::<span class="ident">Barely</span>,
+        <span class="ident">Strong</span>::<span class="ident">NopeNopeNope</span>,
+        <span class="ident">StaticallyKnown</span>::<span class="ident">Nope</span>,
+    );
 
-    <span class="kw">let</span> <span class="ident">c</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(<span class="string">&quot;C&quot;</span>,
-                                <span class="ident">Expressive</span>::<span class="ident">Barely</span>,
-                                <span class="ident">Strong</span>::<span class="ident">NotEspecially</span>,
-                                <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>);
+    <span class="kw">let</span> <span class="ident">c</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(
+        <span class="string">&quot;C&quot;</span>,
+        <span class="ident">Expressive</span>::<span class="ident">Barely</span>,
+        <span class="ident">Strong</span>::<span class="ident">NotEspecially</span>,
+        <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>,
+    );
 
-    <span class="kw">let</span> <span class="ident">cpp</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(<span class="string">&quot;C++&quot;</span>,
-                                  <span class="ident">Expressive</span>::<span class="ident">SortOf</span>,
-                                  <span class="ident">Strong</span>::<span class="ident">ABit</span>,
-                                  <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>);
+    <span class="kw">let</span> <span class="ident">cpp</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(
+        <span class="string">&quot;C++&quot;</span>,
+        <span class="ident">Expressive</span>::<span class="ident">SortOf</span>,
+        <span class="ident">Strong</span>::<span class="ident">ABit</span>,
+        <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>,
+    );
 
-    <span class="kw">let</span> <span class="ident">java</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(<span class="string">&quot;Java&quot;</span>,
-                                   <span class="ident">Expressive</span>::<span class="ident">SortOf</span>,
-                                   <span class="ident">Strong</span>::<span class="ident">ABit</span>,
-                                   <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>);
+    <span class="kw">let</span> <span class="ident">java</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(
+        <span class="string">&quot;Java&quot;</span>,
+        <span class="ident">Expressive</span>::<span class="ident">SortOf</span>,
+        <span class="ident">Strong</span>::<span class="ident">ABit</span>,
+        <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>,
+    );
 
-    <span class="kw">let</span> <span class="ident">csharp</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(<span class="string">&quot;C♯&quot;</span>,
-                                     <span class="ident">Expressive</span>::<span class="ident">Fairly</span>,
-                                     <span class="ident">Strong</span>::<span class="ident">Indeed</span>,
-                                     <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>);
+    <span class="kw">let</span> <span class="ident">csharp</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(
+        <span class="string">&quot;C♯&quot;</span>,
+        <span class="ident">Expressive</span>::<span class="ident">Fairly</span>,
+        <span class="ident">Strong</span>::<span class="ident">Indeed</span>,
+        <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>,
+    );
 
-    <span class="kw">let</span> <span class="ident">swift</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(<span class="string">&quot;Swift&quot;</span>,
-                                    <span class="ident">Expressive</span>::<span class="ident">PrettyDarn</span>,
-                                    <span class="ident">Strong</span>::<span class="ident">Indeed</span>,
-                                    <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>);
+    <span class="kw">let</span> <span class="ident">swift</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(
+        <span class="string">&quot;Swift&quot;</span>,
+        <span class="ident">Expressive</span>::<span class="ident">PrettyDarn</span>,
+        <span class="ident">Strong</span>::<span class="ident">Indeed</span>,
+        <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>,
+    );
 
-    <span class="kw">let</span> <span class="ident">rust</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(<span class="string">&quot;Rust&quot;</span>,
-                                   <span class="ident">Expressive</span>::<span class="ident">PrettyDarn</span>,
-                                   <span class="ident">Strong</span>::<span class="ident">Indeed</span>,
-                                   <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>);
+    <span class="kw">let</span> <span class="ident">rust</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(
+        <span class="string">&quot;Rust&quot;</span>,
+        <span class="ident">Expressive</span>::<span class="ident">PrettyDarn</span>,
+        <span class="ident">Strong</span>::<span class="ident">Indeed</span>,
+        <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>,
+    );
 
-    <span class="kw">let</span> <span class="ident">haskell</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(<span class="string">&quot;Haskell&quot;</span>,
-                                      <span class="ident">Expressive</span>::<span class="ident">Ridiculously</span>,
-                                      <span class="ident">Strong</span>::<span class="ident">Indeed</span>,
-                                      <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>);
+    <span class="kw">let</span> <span class="ident">haskell</span> <span class="op">=</span> <span class="ident">TypeSystem</span>::<span class="ident">builder</span>(
+        <span class="string">&quot;Haskell&quot;</span>,
+        <span class="ident">Expressive</span>::<span class="ident">Ridiculously</span>,
+        <span class="ident">Strong</span>::<span class="ident">Indeed</span>,
+        <span class="ident">StaticallyKnown</span>::<span class="ident">Yeah</span>,
+    );
 
     <span class="kw">let</span> <span class="ident">langs</span> <span class="op">=</span> <span class="macro">vec</span><span class="macro">!</span>[<span class="ident">js</span>, <span class="ident">php</span>, <span class="ident">c</span>, <span class="ident">cpp</span>, <span class="ident">java</span>, <span class="ident">csharp</span>, <span class="ident">swift</span>, <span class="ident">rust</span>, <span class="ident">haskell</span>];
     <span class="kw">for</span> <span class="ident">lang</span> <span class="kw">in</span> <span class="ident">langs</span> {
-        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{language} is {expressive}, {strong}, and {statically_known}&quot;</span>,
-                 <span class="ident">language</span> <span class="op">=</span> <span class="ident">lang</span>.<span class="ident">name</span>,
-                 <span class="ident">expressive</span> <span class="op">=</span> <span class="ident">lang</span>.<span class="ident">expressive</span>,
-                 <span class="ident">strong</span> <span class="op">=</span> <span class="ident">lang</span>.<span class="ident">strong</span>,
-                 <span class="ident">statically_known</span> <span class="op">=</span> <span class="ident">lang</span>.<span class="ident">statically_known</span>);
+        <span class="macro">println</span><span class="macro">!</span>(
+            <span class="string">&quot;{language} is {expressive}, {strong}, and {statically_known}&quot;</span>,
+            <span class="ident">language</span> <span class="op">=</span> <span class="ident">lang</span>.<span class="ident">name</span>,
+            <span class="ident">expressive</span> <span class="op">=</span> <span class="ident">lang</span>.<span class="ident">expressive</span>,
+            <span class="ident">strong</span> <span class="op">=</span> <span class="ident">lang</span>.<span class="ident">strong</span>,
+            <span class="ident">statically_known</span> <span class="op">=</span> <span class="ident">lang</span>.<span class="ident">statically_known</span>
+        );
     }
 }
 </pre>

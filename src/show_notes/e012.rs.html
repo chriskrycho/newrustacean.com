@@ -190,35 +190,18 @@
 <span id="190">190</span>
 <span id="191">191</span>
 <span id="192">192</span>
-<span id="193">193</span>
-<span id="194">194</span>
-<span id="195">195</span>
-<span id="196">196</span>
-<span id="197">197</span>
-<span id="198">198</span>
-<span id="199">199</span>
-<span id="200">200</span>
-<span id="201">201</span>
-<span id="202">202</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! I&#39;m not familiar with that expression</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** March 21, 2016</span>
 <span class="doccomment">//!   - **Subject:** What it means to be an expression-oriented language, and</span>
 <span class="doccomment">//!     how that works out in Rust.</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A][m4a]</span>
-<span class="doccomment">//!       + [MP3][mp3]</span>
-<span class="doccomment">//!       + [Ogg][ogg]</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e012.m4a</span>
-<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e012.mp3</span>
-<span class="doccomment">//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e012.ogg</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e012.mp3</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;e012: I&#39;m not familiar with that expression&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e012.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e012.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e012.ogg&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e012.mp3&quot;&gt;</span>
 <span class="doccomment">//! &lt;/audio&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!</span>
@@ -324,7 +307,6 @@
     <span class="ident">a</span> <span class="op">+</span> <span class="ident">b</span>
 }
 
-
 <span class="doccomment">/// Like functions, if blocks are expressions.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// This function simple doubly demonstrates this, by showing an assignment from</span>
@@ -357,7 +339,6 @@
     }
 }
 
-
 <span class="attribute">#[<span class="ident">cfg_attr</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;clippy&quot;</span>, <span class="ident">allow</span>(<span class="ident">dead_code</span>))]</span>
 <span class="kw">enum</span> <span class="ident">ThreeTypes</span> {
     <span class="ident">_First</span>,
@@ -382,7 +363,6 @@
         <span class="kw">_</span> <span class="op">=&gt;</span> <span class="string">&quot;Less than 0, or more than 100&quot;</span>.<span class="ident">to_string</span>(),
     }
 }
-
 
 <span class="doccomment">/// Block blocks are also expressions!</span>
 <span class="doccomment">///</span>

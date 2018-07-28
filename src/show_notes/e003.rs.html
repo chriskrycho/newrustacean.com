@@ -284,47 +284,17 @@
 <span id="284">284</span>
 <span id="285">285</span>
 <span id="286">286</span>
-<span id="287">287</span>
-<span id="288">288</span>
-<span id="289">289</span>
-<span id="290">290</span>
-<span id="291">291</span>
-<span id="292">292</span>
-<span id="293">293</span>
-<span id="294">294</span>
-<span id="295">295</span>
-<span id="296">296</span>
-<span id="297">297</span>
-<span id="298">298</span>
-<span id="299">299</span>
-<span id="300">300</span>
-<span id="301">301</span>
-<span id="302">302</span>
-<span id="303">303</span>
-<span id="304">304</span>
-<span id="305">305</span>
-<span id="306">306</span>
-<span id="307">307</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! No. more. nulls.</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** October 21, 2015</span>
 <span class="doccomment">//!   - **Subject:** Enumerated (`enum`) types, pattern matching, and meaningful</span>
 <span class="doccomment">//!     return values.</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A][m4a]</span>
-<span class="doccomment">//!       + [MP3][mp3]</span>
-<span class="doccomment">//!       + [Ogg][ogg]</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a</span>
-<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e003.mp3</span>
-<span class="doccomment">//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e003.ogg</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e003.mp3</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;No. more. nulls.&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e003.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e003.ogg&quot;&gt;</span>
-<span class="doccomment">//! &lt;/audio&gt;</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;No. more. nulls.&quot; controls preload=metadata src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e003.mp3&quot; /&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! # Notes</span>
 <span class="doccomment">//!</span>
@@ -386,14 +356,12 @@
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 <span class="doccomment">//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)</span>
 
-
 <span class="doccomment">/// Just exists to be used as an element in `RelatedishThings`.</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Debug</span>)]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">PreexistingStruct</span> {
     <span class="kw">pub</span> <span class="ident">some_int</span>: <span class="ident">i32</span>,
     <span class="kw">pub</span> <span class="ident">some_string</span>: <span class="ident">String</span>,
 }
-
 
 <span class="doccomment">/// An enumeration can *hold* a variety of types. This one shows you a few.</span>
 <span class="doccomment">///</span>
@@ -431,24 +399,20 @@
     <span class="ident">ReusedStructure</span>(<span class="ident">PreexistingStruct</span>),
 }
 
-
 <span class="doccomment">/// Shows how returning a `RelatedishThings::Unit` instance works.</span>
 <span class="kw">fn</span> <span class="ident">get_unit</span>() <span class="op">-&gt;</span> <span class="ident">RelatedishThings</span> {
     <span class="ident">RelatedishThings</span>::<span class="ident">Unit</span>
 }
-
 
 <span class="doccomment">/// Shows how returning a `RelatedishThings::SomeName` instance works.</span>
 <span class="kw">fn</span> <span class="ident">get_name</span>() <span class="op">-&gt;</span> <span class="ident">RelatedishThings</span> {
     <span class="ident">RelatedishThings</span>::<span class="ident">SomeName</span>(<span class="string">&quot;New Rustacean&quot;</span>.<span class="ident">to_string</span>())
 }
 
-
 <span class="doccomment">/// Shows how returning a `RelatedishThings::SomeValue` instance works.</span>
 <span class="kw">fn</span> <span class="ident">get_value</span>() <span class="op">-&gt;</span> <span class="ident">RelatedishThings</span> {
     <span class="ident">RelatedishThings</span>::<span class="ident">SomeValue</span>(<span class="number">42</span>)
 }
-
 
 <span class="doccomment">/// Shows how returning a `RelatedishThings::ComplexData` instance works.</span>
 <span class="kw">fn</span> <span class="ident">get_complex_data</span>() <span class="op">-&gt;</span> <span class="ident">RelatedishThings</span> {
@@ -457,7 +421,6 @@
         <span class="ident">number</span>: <span class="string">&quot;e003&quot;</span>.<span class="ident">to_string</span>(),
     }
 }
-
 
 <span class="doccomment">/// Shows how returning a `RelatedishThings::ReusedStructure` instance works.</span>
 <span class="kw">fn</span> <span class="ident">get_reused_structure</span>() <span class="op">-&gt;</span> <span class="ident">RelatedishThings</span> {
@@ -471,7 +434,6 @@
     <span class="ident">RelatedishThings</span>::<span class="ident">ReusedStructure</span>(<span class="ident">s</span>)
 }
 
-
 <span class="doccomment">/// Shows how the result of an enum comes back as increasingly complex data.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// Note that while we *could* have a numeric value associated with each</span>
@@ -479,14 +441,15 @@
 <span class="doccomment">/// an enumeration in Rust is *which enumerated value it is*, and nothing more</span>
 <span class="doccomment">/// unless you specify something more.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_basic_enumeration</span>() {
-    <span class="macro">print</span><span class="macro">!</span>(<span class="string">&quot;{:?}\n{:?}\n{:?}\n{:?}\n{:?}\n&quot;</span>,
-           <span class="ident">get_unit</span>(),
-           <span class="ident">get_name</span>(),
-           <span class="ident">get_value</span>(),
-           <span class="ident">get_complex_data</span>(),
-           <span class="ident">get_reused_structure</span>());
+    <span class="macro">print</span><span class="macro">!</span>(
+        <span class="string">&quot;{:?}\n{:?}\n{:?}\n{:?}\n{:?}\n&quot;</span>,
+        <span class="ident">get_unit</span>(),
+        <span class="ident">get_name</span>(),
+        <span class="ident">get_value</span>(),
+        <span class="ident">get_complex_data</span>(),
+        <span class="ident">get_reused_structure</span>()
+    );
 }
-
 
 <span class="doccomment">/// Shows in a bit more detail how `match` works.</span>
 <span class="doccomment">///</span>
@@ -539,7 +502,6 @@
     }
 }
 
-
 <span class="doccomment">/// Shows how this is used in a more meaningful context, with a standard type.</span>
 <span class="attribute">#[<span class="ident">cfg_attr</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;clippy&quot;</span>, <span class="ident">allow</span>(<span class="ident">approx_constant</span>))]</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">get_an_option</span>(<span class="ident">get_it</span>: <span class="ident">bool</span>) <span class="op">-&gt;</span> <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">f64</span><span class="op">&gt;</span> {
@@ -552,7 +514,6 @@
         <span class="prelude-val">None</span>
     }
 }
-
 
 <span class="doccomment">/// Shows how an option type works in practice.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_option</span>() {
@@ -568,7 +529,6 @@
     <span class="kw">let</span> <span class="ident">some_value</span> <span class="op">=</span> <span class="ident">some</span>.<span class="ident">unwrap</span>();
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{:?}&quot;</span>, <span class="ident">some_value</span>);
 }
-
 
 <span class="doccomment">/// Shows how to return either a meaningful result or an error as an enum.</span>
 <span class="doccomment">///</span>
@@ -586,13 +546,11 @@
     }
 }
 
-
 <span class="doccomment">/// Shows how a `Result` type works in practice.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// A `Result` is an `enum` (which can be converted to the `Option` type), which</span>
 <span class="doccomment">/// lets us hand back, and then handle, the results of a given function easily.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_result</span>() {
-
     <span class="comment">// First of all, what is the result of this `match`? What would it be if we</span>
     <span class="comment">// changed the call to `get_a_result(false)` instead?</span>
     <span class="kw">match</span> <span class="ident">get_a_result</span>(<span class="bool-val">true</span>) {

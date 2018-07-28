@@ -244,32 +244,16 @@
 <span id="244">244</span>
 <span id="245">245</span>
 <span id="246">246</span>
-<span id="247">247</span>
-<span id="248">248</span>
-<span id="249">249</span>
-<span id="250">250</span>
-<span id="251">251</span>
-<span id="252">252</span>
-<span id="253">253</span>
-<span id="254">254</span>
-<span id="255">255</span>
-<span id="256">256</span>
-<span id="257">257</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Functionalized</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** October 29, 2015</span>
 <span class="doccomment">//!   - **Subject:** Functions, methods, closures, and function as arguments!</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e004.m4a)</span>
-<span class="doccomment">//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e004.mp3)</span>
-<span class="doccomment">//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e004.ogg)</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
+<span class="doccomment">//! </span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e004.mp3</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Functionalized&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e004.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e004.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e004.ogg&quot;&gt;</span>
-<span class="doccomment">//! &lt;/audio&gt;</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Functionalized&quot; controls preload=metadata src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e004.mp3&quot; /&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! # Notes</span>
 <span class="doccomment">//!</span>
@@ -317,7 +301,6 @@
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 <span class="doccomment">//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)</span>
 
-
 <span class="doccomment">/// Create a module so we can see public/private behavior.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// We will discuss modules in more detail in the future.</span>
@@ -335,7 +318,6 @@
     }
 
     <span class="kw">impl</span> <span class="ident">MethodDemonstrator</span> {
-
         <span class="doccomment">/// A standard constructor pattern.</span>
         <span class="doccomment">///</span>
         <span class="doccomment">/// You&#39;ve seen this before, in the e001 code!</span>
@@ -371,11 +353,10 @@
         <span class="doccomment">/// complex type, you now have a pretty good idea how to write the first</span>
         <span class="doccomment">/// argument to that method...</span>
         <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">method</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-            <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;The values of the object are: {:}, {:}, {:}, {:}&quot;</span>,
-                     <span class="self">self</span>.<span class="ident">an_int</span>,
-                     <span class="self">self</span>.<span class="ident">a_string</span>,
-                     <span class="self">self</span>.<span class="ident">a_tuple</span>.<span class="number">0</span>,
-                     <span class="self">self</span>.<span class="ident">a_tuple</span>.<span class="number">1</span>);
+            <span class="macro">println</span><span class="macro">!</span>(
+                <span class="string">&quot;The values of the object are: {:}, {:}, {:}, {:}&quot;</span>,
+                <span class="self">self</span>.<span class="ident">an_int</span>, <span class="self">self</span>.<span class="ident">a_string</span>, <span class="self">self</span>.<span class="ident">a_tuple</span>.<span class="number">0</span>, <span class="self">self</span>.<span class="ident">a_tuple</span>.<span class="number">1</span>
+            );
         }
 
         <span class="doccomment">/// A getter for data which is not publicly accessible in the type.</span>
@@ -397,7 +378,6 @@
         }
     }
 }
-
 
 <span class="doccomment">/// Shows how to use both struct and instance methods.</span>
 <span class="doccomment">///</span>
@@ -421,20 +401,19 @@
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{:?}&quot;</span>, <span class="ident">a_struct</span>.<span class="ident">get_hidden_data</span>());
 }
 
-
 <span class="doccomment">/// Shows how to take a function as an argument.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// Note that this involves specifying a *generic* (the `&lt;F&gt;` syntax), bounded</span>
 <span class="doccomment">/// by a `trait` (the `where...` syntax), a concept to which we will return in</span>
 <span class="doccomment">/// much more detail in a few episodes.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">apply_function_to_i64</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span>(<span class="ident">a_number_function</span>: <span class="ident">F</span>, <span class="ident">the_number</span>: <span class="ident">i64</span>) <span class="op">-&gt;</span> <span class="ident">i64</span>
-    <span class="kw">where</span> <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="ident">i64</span>) <span class="op">-&gt;</span> <span class="ident">i64</span>
+<span class="kw">where</span>
+    <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="ident">i64</span>) <span class="op">-&gt;</span> <span class="ident">i64</span>,
 {
     <span class="kw">let</span> <span class="ident">result</span> <span class="op">=</span> <span class="ident">a_number_function</span>(<span class="ident">the_number</span>);
     <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{:?}&quot;</span>, <span class="ident">result</span>);
     <span class="ident">result</span>
 }
-
 
 <span class="doccomment">/// Show how to call a function with a function as an argument.</span>
 <span class="doccomment">///</span>
@@ -442,7 +421,6 @@
 <span class="doccomment">/// which accept functions as arguments, as long as their type definition</span>
 <span class="doccomment">/// matches the requirements of the destination function.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_function_arguments</span>() {
-
     <span class="doccomment">/// Implements the signature required for `apply_function_to_i64`.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Note that this is a nested function definition! It is unavailable</span>
@@ -466,7 +444,6 @@
     <span class="comment">// target function, however, so this won&#39;t compile:</span>
 }
 
-
 <span class="doccomment">/// Shows how closures can act on elements within their environment.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// Closures are handy for more than merely a quick and easy way to write a</span>
@@ -474,8 +451,7 @@
 <span class="doccomment">/// implementation details. While that&#39;s not as strictly necessary in Rust as it</span>
 <span class="doccomment">/// is in e.g. JavaScript, it still has a great deal of utility, especially in</span>
 <span class="doccomment">/// more functional programming styles.</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_closure_environment</span>()  {
-
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_closure_environment</span>() {
     <span class="doccomment">/// Returns a closure which has access to the internal contents of this</span>
     <span class="doccomment">/// function even after it goes out of scope.</span>
     <span class="kw">fn</span> <span class="ident">get_a_closure</span>() <span class="op">-&gt;</span> <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">Fn</span>(<span class="ident">f64</span>) <span class="op">-&gt;</span> <span class="ident">f64</span><span class="op">&gt;</span> {
@@ -495,7 +471,10 @@
     <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">the_closure</span>(<span class="number">2.0</span>), <span class="number">28.0</span>);
 
     <span class="doccomment">/// Calls whatever function you hand it with the value 14.0</span>
-    <span class="kw">fn</span> <span class="ident">takes_a_closure_with_14</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span>(<span class="ident">f</span>: <span class="ident">F</span>) <span class="op">-&gt;</span> <span class="ident">f64</span> <span class="kw">where</span> <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="ident">f64</span>) <span class="op">-&gt;</span> <span class="ident">f64</span> {
+    <span class="kw">fn</span> <span class="ident">takes_a_closure_with_14</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span>(<span class="ident">f</span>: <span class="ident">F</span>) <span class="op">-&gt;</span> <span class="ident">f64</span>
+    <span class="kw">where</span>
+        <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="ident">f64</span>) <span class="op">-&gt;</span> <span class="ident">f64</span>,
+    {
         <span class="ident">f</span>(<span class="number">14.0</span>)
     }
 
@@ -505,7 +484,6 @@
     <span class="kw">let</span> <span class="ident">y</span> <span class="op">=</span> <span class="number">3.0</span>;
     <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">takes_a_closure_with_14</span>(<span class="op">|</span><span class="ident">n</span><span class="op">|</span> <span class="ident">n</span> <span class="op">*</span> <span class="ident">y</span>), <span class="number">42.0</span>);
 }
-
 
 <span class="attribute">#[<span class="ident">test</span>]</span>
 <span class="kw">fn</span> <span class="ident">demonstrate</span>() {

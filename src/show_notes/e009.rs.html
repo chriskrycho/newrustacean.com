@@ -228,25 +228,17 @@
 <span id="228">228</span>
 <span id="229">229</span>
 <span id="230">230</span>
-<span id="231">231</span>
-<span id="232">232</span>
-<span id="233">233</span>
-<span id="234">234</span>
-<span id="235">235</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Composing a Rustic tune</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - **Date:** 2016-01-09</span>
 <span class="doccomment">//!   - **Subject:** Getting into the nitty-gritty with Rust&#39;s traits.</span>
-<span class="doccomment">//!   - **Audio:**</span>
-<span class="doccomment">//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e009.m4a)</span>
-<span class="doccomment">//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e009.mp3)</span>
-<span class="doccomment">//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e009.ogg)</span>
+<span class="doccomment">//!   - [**Audio**][mp3]</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e009.mp3</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Composing a Rustic tune&quot; controls preload=metadata&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e009.m4a&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e009.mp3&quot;&gt;</span>
-<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e009.ogg&quot;&gt;</span>
+<span class="doccomment">//!   &lt;source src=&quot;http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e009.mp3&quot;&gt;</span>
 <span class="doccomment">//! &lt;/audio&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!</span>
@@ -343,10 +335,8 @@
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 <span class="doccomment">//!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)</span>
 
-
-<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">ops</span>;
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">fmt</span>;
-
+<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">ops</span>;
 
 <span class="doccomment">/// Define a simple struct on which to implement `Iterator`... and more!</span>
 <span class="doccomment">///</span>
@@ -355,18 +345,18 @@
 <span class="doccomment">/// so items can be compared!</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// Look at all those default implementations we get for free!</span>
-<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clone</span>,<span class="ident">Copy</span>,<span class="ident">Debug</span>,<span class="ident">PartialEq</span>)]</span>
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clone</span>, <span class="ident">Copy</span>, <span class="ident">Debug</span>, <span class="ident">PartialEq</span>)]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">DoubleAndOne</span> {
     <span class="doccomment">/// A value to double and add one to on every `next()` call.</span>
     <span class="kw">pub</span> <span class="ident">value</span>: <span class="ident">i64</span>,
 }
 
-
 <span class="kw">impl</span> <span class="ident">DoubleAndOne</span> {
     <span class="doccomment">/// Start with 0.</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">default</span>() <span class="op">-&gt;</span> <span class="ident">DoubleAndOne</span> { <span class="ident">DoubleAndOne</span> { <span class="ident">value</span>: <span class="number">0</span> } }
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">default</span>() <span class="op">-&gt;</span> <span class="ident">DoubleAndOne</span> {
+        <span class="ident">DoubleAndOne</span> { <span class="ident">value</span>: <span class="number">0</span> }
+    }
 }
-
 
 <span class="doccomment">/// Define a simple trait so we can see how it works.</span>
 <span class="doccomment">///</span>
@@ -384,18 +374,17 @@
     }
 }
 
-
 <span class="kw">impl</span> <span class="ident">ASimpleTrait</span> <span class="kw">for</span> <span class="ident">DoubleAndOne</span> {
-    <span class="kw">fn</span> <span class="ident">get_some_integer</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">i64</span> { <span class="self">self</span>.<span class="ident">value</span> }
+    <span class="kw">fn</span> <span class="ident">get_some_integer</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">i64</span> {
+        <span class="self">self</span>.<span class="ident">value</span>
+    }
 }
-
 
 <span class="kw">impl</span> <span class="ident">fmt</span>::<span class="ident">Display</span> <span class="kw">for</span> <span class="ident">DoubleAndOne</span> {
     <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt</span>::<span class="ident">Formatter</span>) <span class="op">-&gt;</span> <span class="ident">fmt</span>::<span class="prelude-ty">Result</span> {
         <span class="macro">write</span><span class="macro">!</span>(<span class="ident">f</span>, <span class="string">&quot;DoubleAndOne.value = {}&quot;</span>, <span class="self">self</span>.<span class="ident">value</span>)
     }
 }
-
 
 <span class="kw">impl</span> <span class="ident">Iterator</span> <span class="kw">for</span> <span class="ident">DoubleAndOne</span> {
     <span class="doccomment">/// Define the required `Item` as being the the struct itself.</span>
@@ -407,15 +396,15 @@
     }
 }
 
-
 <span class="kw">impl</span> <span class="ident">ops</span>::<span class="ident">Add</span> <span class="kw">for</span> <span class="ident">DoubleAndOne</span> {
     <span class="kw">type</span> <span class="ident">Output</span> <span class="op">=</span> <span class="ident">DoubleAndOne</span>;
 
     <span class="kw">fn</span> <span class="ident">add</span>(<span class="self">self</span>, <span class="ident">rhs</span>: <span class="ident">DoubleAndOne</span>) <span class="op">-&gt;</span> <span class="ident">DoubleAndOne</span> {
-        <span class="ident">DoubleAndOne</span> { <span class="ident">value</span>: <span class="self">self</span>.<span class="ident">value</span> <span class="op">+</span> <span class="ident">rhs</span>.<span class="ident">value</span> }
+        <span class="ident">DoubleAndOne</span> {
+            <span class="ident">value</span>: <span class="self">self</span>.<span class="ident">value</span> <span class="op">+</span> <span class="ident">rhs</span>.<span class="ident">value</span>,
+        }
     }
 }
-
 
 <span class="doccomment">/// Demonstrate using a for loop over an (infinite!) iterator.</span>
 <span class="attribute">#[<span class="ident">cfg_attr</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;clippy&quot;</span>, <span class="ident">allow</span>(<span class="ident">explicit_counter_loop</span>))]</span>
@@ -426,10 +415,11 @@
     <span class="kw">for</span> <span class="ident">item</span> <span class="kw">in</span> <span class="ident">d</span> {
         <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{}&quot;</span>, <span class="ident">item</span>);
         <span class="ident">printed</span> <span class="op">+=</span> <span class="number">1</span>;
-        <span class="kw">if</span> <span class="ident">printed</span> <span class="op">&gt;</span> <span class="ident">max_to_print</span> { <span class="kw">break</span>; }
+        <span class="kw">if</span> <span class="ident">printed</span> <span class="op">&gt;</span> <span class="ident">max_to_print</span> {
+            <span class="kw">break</span>;
+        }
     }
 }
-
 
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">test</span>)]</span>
 <span class="kw">mod</span> <span class="ident">tests</span> {
@@ -447,12 +437,12 @@
     <span class="attribute">#[<span class="ident">test</span>]</span>
     <span class="kw">fn</span> <span class="ident">test_iterator</span>() {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">d</span> <span class="op">=</span> <span class="ident">DoubleAndOne</span>::<span class="ident">default</span>();
-        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">d</span>.<span class="ident">next</span>(), <span class="prelude-val">Some</span>(<span class="ident">DoubleAndOne</span>{ <span class="ident">value</span>: <span class="number">1</span> }));
-        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">d</span>.<span class="ident">next</span>(), <span class="prelude-val">Some</span>(<span class="ident">DoubleAndOne</span>{ <span class="ident">value</span>: <span class="number">3</span> }));
-        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">d</span>.<span class="ident">next</span>(), <span class="prelude-val">Some</span>(<span class="ident">DoubleAndOne</span>{ <span class="ident">value</span>: <span class="number">7</span> }));
-        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">d</span>.<span class="ident">next</span>(), <span class="prelude-val">Some</span>(<span class="ident">DoubleAndOne</span>{ <span class="ident">value</span>: <span class="number">15</span> }));
-        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">d</span>.<span class="ident">next</span>(), <span class="prelude-val">Some</span>(<span class="ident">DoubleAndOne</span>{ <span class="ident">value</span>: <span class="number">31</span> }));
-        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">d</span>.<span class="ident">next</span>(), <span class="prelude-val">Some</span>(<span class="ident">DoubleAndOne</span>{ <span class="ident">value</span>: <span class="number">63</span> }));
+        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">d</span>.<span class="ident">next</span>(), <span class="prelude-val">Some</span>(<span class="ident">DoubleAndOne</span> { <span class="ident">value</span>: <span class="number">1</span> }));
+        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">d</span>.<span class="ident">next</span>(), <span class="prelude-val">Some</span>(<span class="ident">DoubleAndOne</span> { <span class="ident">value</span>: <span class="number">3</span> }));
+        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">d</span>.<span class="ident">next</span>(), <span class="prelude-val">Some</span>(<span class="ident">DoubleAndOne</span> { <span class="ident">value</span>: <span class="number">7</span> }));
+        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">d</span>.<span class="ident">next</span>(), <span class="prelude-val">Some</span>(<span class="ident">DoubleAndOne</span> { <span class="ident">value</span>: <span class="number">15</span> }));
+        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">d</span>.<span class="ident">next</span>(), <span class="prelude-val">Some</span>(<span class="ident">DoubleAndOne</span> { <span class="ident">value</span>: <span class="number">31</span> }));
+        <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">d</span>.<span class="ident">next</span>(), <span class="prelude-val">Some</span>(<span class="ident">DoubleAndOne</span> { <span class="ident">value</span>: <span class="number">63</span> }));
     }
 
     <span class="attribute">#[<span class="ident">test</span>]</span>
