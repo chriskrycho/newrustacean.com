@@ -3,21 +3,16 @@
 //!   - **Date:** April 18, 2017
 //!   - **Subject:** Where the RLS came from, what it can do, and how you can
 //!     start using it today!
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_3.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_3.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_3.ogg)
+//!   - [**Audio**][mp3]
 //!
-//! <audio style="width: 100%" title="Rust language service" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_3.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_3.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_3.ogg">
-//! </audio>
-//! 
-//! 
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk_3.mp3
+//!
+//! <audio style="width: 100%" title="Rust language service" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk_3.mp3" />
+//!
+//!
 //! Notes
 //! -----
-//! 
+//!
 //! One major ergonomic improvement to developing in Rust in 2017 is coming via
 //! the *Rust Language Service*: an initiative that lets us share a common core
 //! of functionality between every editor – from Vim to VS Code and everything
@@ -51,7 +46,7 @@
 //!
 //! Sponsors
 //! --------
-//! 
+//!
 //!   - [Anthony Deschamps]
 //!   - Aleksey Pirogov
 //!   - Andreas Fischer
@@ -132,4 +127,3 @@
 //!   - Chris Krycho
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
-

@@ -1,41 +1,34 @@
 //! Two Milestones
-//! 
+//!
 //!   - **Date:** September 25, 2017
 //!   - **Subject:** Two years and fifty episodes of New Rustacean—time to
 //!     celebrate with stickers and shirts!
-//!   - **Audio:**
-//!       + [mp3]
-//!       + [m4a]
-//!       + [ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/meta/_2.mp3
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/meta/_2.m4a
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/meta/_2.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/meta/2.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Crates You Should Know: Rayon" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/meta/_2.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/meta/_2.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/meta/_2.ogg">
+//! <audio style="width: 100%" title="Crates You Should Know: Rayon" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/meta/2.mp3">
 //! </audio>
 //!
 //!
 //! Links
 //! -----
-//! 
+//!
 //! - [JavaScript to Elm]
 //! - [Idris]
 //! - [Elixir]
-//! 
+//!
 //! [JavaScript to Elm]: http://jstoelm.com
 //! [Idris]: http://www.idris-lang.org
 //! [Elixir]: http://www.elixir-lang.org
-//! 
+//!
 //! ### Shirts
-//! 
+//!
 //! [**Get them here!**][shirts] – available till Oct 9, 2017 at 8:00 PM EDT.
-//! 
+//!
 //! [shirts]: https://cottonbureau.com/products/new-rustacean-2017
-//! 
+//!
 //! <table>
 //!   <thead>
 //!     <tr>
@@ -46,22 +39,22 @@
 //!   </thead>
 //!   <tr style="text-align: center">
 //!     <td>hoodie</td>
-//!     <td colspan="2" ><img style="max-width: 50%" src="http://cdn.newrustacean.com/images/hoodie.jpg"></td>
+//!     <td colspan="2" ><img style="max-width: 50%" src="http://f001.backblazeb2.com/file/newrustacean/images/hoodie.jpg"></td>
 //!   </tr>
 //!   <tr>
 //!     <td>"heavy metal" shirt</td>
-//!     <td><img src="http://cdn.newrustacean.com/images/heavy-metal-women.jpg"></td>
-//!     <td><img src="http://cdn.newrustacean.com/images/heavy-metal-men.jpg"></td>
+//!     <td><img src="http://f001.backblazeb2.com/file/newrustacean/images/heavy-metal-women.jpg"></td>
+//!     <td><img src="http://f001.backblazeb2.com/file/newrustacean/images/heavy-metal-men.jpg"></td>
 //!   </tr>
 //!   <tr>
 //!     <td>"heather white" t-shirt</td>
-//!     <td><img src="http://cdn.newrustacean.com/images/heather-white-women.jpg"></td>
-//!     <td><img src="http://cdn.newrustacean.com/images/heather-white-men.jpg"></td>
+//!     <td><img src="http://f001.backblazeb2.com/file/newrustacean/images/heather-white-women.jpg"></td>
+//!     <td><img src="http://f001.backblazeb2.com/file/newrustacean/images/heather-white-men.jpg"></td>
 //!   </tr>
 //! </table>
-//! 
+//!
 //! ### Stickers
-//! 
+//!
 //! <table>
 //!   <thead>
 //!     <tr>
@@ -70,14 +63,14 @@
 //!     </tr>
 //!   </thead>
 //!   <tr>
-//!     <td><img src="http://cdn.newrustacean.com/images/sticker-die-cut.png"></td>
-//!     <td><img src="http://cdn.newrustacean.com/images/sticker-circular.png"></td>
+//!     <td><img src="http://f001.backblazeb2.com/file/newrustacean/images/sticker-die-cut.png"></td>
+//!     <td><img src="http://f001.backblazeb2.com/file/newrustacean/images/sticker-circular.png"></td>
 //!   </tr>
 //! </table>
-//! 
+//!
 //! Sponsors
 //! --------
-//! 
+//!
 //!   - Aaron Turon
 //!   - Alexander Payne
 //!   - [Anthony Deschamps]

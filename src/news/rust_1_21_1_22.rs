@@ -2,25 +2,18 @@
 //!
 //!   - **Date:** November 24, 2017
 //!   - **Subject:** Quality of life improvements, `Failure`, wasm, and rustdoc fun.
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_21_1_22.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_21_1_22.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_21_1_22.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_21_1_22.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="News: Rust 1.20" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_21_1_22.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_21_1_22.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_21_1_22.ogg">
+//! <audio style="width: 100%" title="News: Rust 1.20" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_21_1_22.mp3">
 //! </audio>
 //!
 //!
 //! Links and Notes
 //! ---------------
-//! 
+//!
 //! - Rust 1.21
 //!     + [blog post][1.21]
 //!     + ["When Will the RLS be Released?"][rls]
@@ -36,7 +29,7 @@
 //! - external Markdown files for docs
 //!     + [the RFC]
 //!     + [the implementation]
-//! 
+//!
 //! [1.21]: https://blog.rust-lang.org/2017/10/12/Rust-1.21.html
 //! [rls]: https://www.ncameron.org/blog/when-will-the-rls-be-released/
 //! [1.22]: https://blog.rust-lang.org/2017/11/22/Rust-1.22.html
@@ -51,7 +44,7 @@
 //! [wasm]: https://github.com/rust-lang/rust/pull/45905
 //! [the RFC]: https://github.com/rust-lang/rfcs/pull/1990
 //! [the implementation]: https://github.com/rust-lang/rust/pull/44781
-//! 
+//!
 //! Sponsors
 //! --------
 //!
@@ -175,7 +168,6 @@
 //!   - Chris Krycho
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
-
 
 #[doc(include = "../docs/news/rust-1-21-1-22.md")]
 pub struct Script;

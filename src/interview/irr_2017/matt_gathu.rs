@@ -2,19 +2,12 @@
 //!
 //!   - **Date:** December 30, 2017
 //!   - **Subject:** Matt's experience porting wget to Rust.
-//!   - **Audio:**
-//!       + [MP3][mp3]
-//!       + [M4A][m4a]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/irr_2017/matt_gathu.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/irr_2017/matt_gathu.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/irr_2017/matt_gathu.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr_2017/matt_gathu.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Jonathan Turner::Part 3" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/irr_2017/matt_gathu.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/irr_2017/matt_gathu.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/irr_2017/matt_gathu.ogg">
+//! <audio style="width: 100%" title="Jonathan Turner::Part 3" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr_2017/matt_gathu.mp3">
 //! </audio>
 //!
 //!

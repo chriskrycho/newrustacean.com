@@ -3,20 +3,11 @@
 //!   - **Date:** October 21, 2015
 //!   - **Subject:** Enumerated (`enum`) types, pattern matching, and meaningful
 //!     return values.
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e003.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e003.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e003.mp3
 //!
-//! <audio style="width: 100%" title="No. more. nulls." controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e003.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e003.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e003.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="No. more. nulls." controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e003.mp3" />
 //!
 //! # Notes
 //!
@@ -78,14 +69,12 @@
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 //!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
-
 /// Just exists to be used as an element in `RelatedishThings`.
 #[derive(Debug)]
 pub struct PreexistingStruct {
     pub some_int: i32,
     pub some_string: String,
 }
-
 
 /// An enumeration can *hold* a variety of types. This one shows you a few.
 ///
@@ -123,24 +112,20 @@ pub enum RelatedishThings {
     ReusedStructure(PreexistingStruct),
 }
 
-
 /// Shows how returning a `RelatedishThings::Unit` instance works.
 fn get_unit() -> RelatedishThings {
     RelatedishThings::Unit
 }
-
 
 /// Shows how returning a `RelatedishThings::SomeName` instance works.
 fn get_name() -> RelatedishThings {
     RelatedishThings::SomeName("New Rustacean".to_string())
 }
 
-
 /// Shows how returning a `RelatedishThings::SomeValue` instance works.
 fn get_value() -> RelatedishThings {
     RelatedishThings::SomeValue(42)
 }
-
 
 /// Shows how returning a `RelatedishThings::ComplexData` instance works.
 fn get_complex_data() -> RelatedishThings {
@@ -149,7 +134,6 @@ fn get_complex_data() -> RelatedishThings {
         number: "e003".to_string(),
     }
 }
-
 
 /// Shows how returning a `RelatedishThings::ReusedStructure` instance works.
 fn get_reused_structure() -> RelatedishThings {
@@ -163,7 +147,6 @@ fn get_reused_structure() -> RelatedishThings {
     RelatedishThings::ReusedStructure(s)
 }
 
-
 /// Shows how the result of an enum comes back as increasingly complex data.
 ///
 /// Note that while we *could* have a numeric value associated with each
@@ -171,14 +154,15 @@ fn get_reused_structure() -> RelatedishThings {
 /// an enumeration in Rust is *which enumerated value it is*, and nothing more
 /// unless you specify something more.
 pub fn demonstrate_basic_enumeration() {
-    print!("{:?}\n{:?}\n{:?}\n{:?}\n{:?}\n",
-           get_unit(),
-           get_name(),
-           get_value(),
-           get_complex_data(),
-           get_reused_structure());
+    print!(
+        "{:?}\n{:?}\n{:?}\n{:?}\n{:?}\n",
+        get_unit(),
+        get_name(),
+        get_value(),
+        get_complex_data(),
+        get_reused_structure()
+    );
 }
-
 
 /// Shows in a bit more detail how `match` works.
 ///
@@ -231,7 +215,6 @@ pub fn demonstrate_match() {
     }
 }
 
-
 /// Shows how this is used in a more meaningful context, with a standard type.
 #[cfg_attr(feature = "clippy", allow(approx_constant))]
 pub fn get_an_option(get_it: bool) -> Option<f64> {
@@ -244,7 +227,6 @@ pub fn get_an_option(get_it: bool) -> Option<f64> {
         None
     }
 }
-
 
 /// Shows how an option type works in practice.
 pub fn demonstrate_option() {
@@ -260,7 +242,6 @@ pub fn demonstrate_option() {
     let some_value = some.unwrap();
     println!("{:?}", some_value);
 }
-
 
 /// Shows how to return either a meaningful result or an error as an enum.
 ///
@@ -278,13 +259,11 @@ pub fn get_a_result(succeeds: bool) -> Result<f64, String> {
     }
 }
 
-
 /// Shows how a `Result` type works in practice.
 ///
 /// A `Result` is an `enum` (which can be converted to the `Option` type), which
 /// lets us hand back, and then handle, the results of a given function easily.
 pub fn demonstrate_result() {
-
     // First of all, what is the result of this `match`? What would it be if we
     // changed the call to `get_a_result(false)` instead?
     match get_a_result(true) {

@@ -2,15 +2,12 @@
 //!
 //!   - **Date:** November 12, 2016
 //!   - **Subject:** Avoiding burnout by taking it a little easier.
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/meta_1.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/meta_1.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/meta_1.ogg)
+//!   - [**Audio**][mp3]
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Slowing down" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/meta_1.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/meta_1.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/meta_1.ogg">
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/meta/1.mp3
+//!
+//! <audio style="width: 100%" title="Slowing down" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/meta/1.mp3">
 //! </audio>
 //!
 //! Sometimes, the way a podcast stays in existence is by coming out less often.

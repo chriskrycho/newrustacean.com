@@ -2,17 +2,11 @@
 //!
 //!   - **Date:** 2015-12-27
 //!   - **Subject:** Generics, traits, and shared behavior in Rust.
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e008.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e008.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e008.ogg)
+//!   - [**Audio**][mp3]
 //!
-//! <audio style="width: 100%" title="Just like something else" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e008.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e008.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e008.ogg">
-//! </audio>
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e008.mp3
 //!
+//! <audio style="width: 100%" title="Just like something else" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e008.mp3">
 //!
 //! Notes
 //! -----
@@ -94,9 +88,7 @@
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 //!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
-
 use std::fmt;
-
 
 /// Demonstrate a function *generic* over any type.
 ///
@@ -111,13 +103,11 @@ pub fn a_generic<T>(_t: T) {
     println!("What's a trait? I'm so glad you asked.");
 }
 
-
 /// Demonstrate a function with a *trait bound on a generic*.
-pub fn a_generic_printable<T: fmt::Debug> (t: T) {
+pub fn a_generic_printable<T: fmt::Debug>(t: T) {
     println!("This function can actually debug-print `t`, whatever it may be.");
     println!("So: {:?}", t);
 }
-
 
 /// This is `Option<T>`, but using Haskell's names instead.
 pub enum Maybe<T> {
@@ -125,13 +115,11 @@ pub enum Maybe<T> {
     Just(T),
 }
 
-
 /// A simple type to illustrate trait implementation.
 pub struct SimpleType {
     a: String,
-    b: i32
+    b: i32,
 }
-
 
 /// Define the display format for the `SimpleType`.
 ///
@@ -143,7 +131,6 @@ impl fmt::Display for SimpleType {
     }
 }
 
-
 /// This is just a container which can hold any two types.
 ///
 /// These types can even be the same, but they don't have to be. Moreover, they
@@ -153,7 +140,6 @@ pub struct GenericContainer<T, U> {
     pub t: T,
     pub u: U,
 }
-
 
 /// Show that the generics work!
 #[cfg(test)]
@@ -171,9 +157,14 @@ mod tests {
     #[derive(Debug)]
     enum TestEnum {
         Nope,
-        SomePointTuple(f32, i32),  /// Any tuple type
-        SomeAnonStruct { x: f32, y: i32 },  /// Functionally just like `TestPoint`
-        SomePointStruct(TestPoint),   // Embed an actual `TestPoint`
+        SomePointTuple(f32, i32),
+        /// Any tuple type
+        SomeAnonStruct {
+            x: f32,
+            y: i32,
+        },
+        /// Functionally just like `TestPoint`
+        SomePointStruct(TestPoint), // Embed an actual `TestPoint`
     }
 
     /// All of these tests will pass.
@@ -221,22 +212,31 @@ mod tests {
         let pattern = false;
         let _maybe_vec = match pattern {
             false => Maybe::Nothing,
-            true => Maybe::Just(vec![1, 2, 3])
+            true => Maybe::Just(vec![1, 2, 3]),
         };
     }
 
     #[test]
     fn test_generic_struct() {
         // The generic container can contain "normal" (non-generic) types.
-        let _container = GenericContainer { t: 14.0, u: "alpha" };
+        let _container = GenericContainer {
+            t: 14.0,
+            u: "alpha",
+        };
         // But it can also contain generic types, like `Vec<T>` or the `Maybe`
         // type we defined above.
-        let _another = GenericContainer { t: vec![1, 2, 3], u: Maybe::Just("a string") };
+        let _another = GenericContainer {
+            t: vec![1, 2, 3],
+            u: Maybe::Just("a string"),
+        };
     }
 
     #[test]
     fn test_impl_display() {
-        let simple = SimpleType { a: "some string".to_string(), b: 4096 };
+        let simple = SimpleType {
+            a: "some string".to_string(),
+            b: 4096,
+        };
         println!("simple is {}", simple);
     }
 }

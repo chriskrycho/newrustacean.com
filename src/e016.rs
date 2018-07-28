@@ -3,19 +3,12 @@
 //!   - **Date:** July 23, 2016
 //!   - **Subject:** Digging deeper on smart pointers and mutability with
 //!     `Cell` and `RefCell`.
-//!   - **Audio:**
-//!       + [M4A]
-//!       + [MP3]
-//!       + [Ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [M4A]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e016.m4a
-//! [MP3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e016.mp3
-//! [Ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e016.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e016.mp3
 //!
 //! <audio style="width: 100%" title="Borrow a Cell or Clone a Cow" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e016.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e016.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e016.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e016.mp3">
 //! </audio>
 //!
 //!
@@ -152,14 +145,12 @@
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-
-use std::cell::{Cell,RefCell};
-
+use std::cell::{Cell, RefCell};
 
 /// A container showing a type where `Cell<T>` works with `Vec<T>`.
-#[derive(Copy,Clone)]
+#[derive(Copy, Clone)]
 pub struct SimpleContainer {
-    contents: i32
+    contents: i32,
 }
 
 /// Demonstrate how you need `Cell<T>` even just with a `Vec<T>`;
@@ -177,7 +168,6 @@ pub fn demonstrate_need_for_cell() -> Vec<Cell<SimpleContainer>> {
     vec![Cell::new(a_simple_container), Cell::new(another_one)]
 }
 
-
 /// Operate mutably on the contenets of an immutable reference to a `Vec`.
 pub fn double_cell(containers: &[Cell<SimpleContainer>]) {
     for container_cell in containers {
@@ -187,25 +177,18 @@ pub fn double_cell(containers: &[Cell<SimpleContainer>]) {
     }
 }
 
-
 /// A container showing where `Cell<T>` doesn't work and `RefCell<T>` does.
 pub struct SimpleNonCopyable {
-    contents: String
+    contents: String,
 }
 
-
 /// Demonstrate interior mutability with `Rc` and `RefCell`.
-pub fn add_to_each_string(
-        list_contained_strings: &[RefCell<SimpleNonCopyable>],
-        to_push: &str) {
-
+pub fn add_to_each_string(list_contained_strings: &[RefCell<SimpleNonCopyable>], to_push: &str) {
     for contained in list_contained_strings {
         let mut original = contained.borrow_mut();
         original.contents.push_str(to_push);
     }
 }
-
-
 
 #[cfg(test)]
 mod tests {
@@ -218,7 +201,10 @@ mod tests {
         assert_eq!(all_wrapped_up.get(0).unwrap().get().contents, 42);
         // And yet its contents can be changed! The `Cell::set()` method lets us
         // update the *interior* of the item.
-        all_wrapped_up.get(0).unwrap().set(SimpleContainer { contents: 12 });
+        all_wrapped_up
+            .get(0)
+            .unwrap()
+            .set(SimpleContainer { contents: 12 });
         assert_eq!(all_wrapped_up.get(0).unwrap().get().contents, 12);
     }
 
@@ -227,8 +213,8 @@ mod tests {
         use std::cell::Cell;
 
         let some_containers = vec![
-            Cell::new(SimpleContainer{ contents: 3 }),
-            Cell::new(SimpleContainer{ contents: 5 })
+            Cell::new(SimpleContainer { contents: 3 }),
+            Cell::new(SimpleContainer { contents: 5 }),
         ];
 
         double_cell(&some_containers);
@@ -241,13 +227,23 @@ mod tests {
         use std::cell::RefCell;
 
         let contained_strings = vec![
-            RefCell::new(SimpleNonCopyable { contents: "Boom".to_string() }),
-            RefCell::new(SimpleNonCopyable { contents: "Bang".to_string() }),
+            RefCell::new(SimpleNonCopyable {
+                contents: "Boom".to_string(),
+            }),
+            RefCell::new(SimpleNonCopyable {
+                contents: "Bang".to_string(),
+            }),
         ];
 
         add_to_each_string(&contained_strings, " razzle");
 
-        assert_eq!(contained_strings.get(0).unwrap().borrow().contents, String::from("Boom razzle"));
-        assert_eq!(contained_strings.get(1).unwrap().borrow().contents, String::from("Bang razzle"));
+        assert_eq!(
+            contained_strings.get(0).unwrap().borrow().contents,
+            String::from("Boom razzle")
+        );
+        assert_eq!(
+            contained_strings.get(1).unwrap().borrow().contents,
+            String::from("Bang razzle")
+        );
     }
 }

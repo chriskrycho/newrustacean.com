@@ -2,20 +2,14 @@
 //!
 //!   - **Date:** July 4, 2018
 //!   - **Subject:** Closure traits, `impl trait`, `dyn trait`, and object safety!
-//!   - **Script:**
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Script**][script]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e025.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e025.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e025.ogg
+//! [script]: https://newrustacean.com/show_notes/e025/struct.script
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e025.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e025.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e025.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e025.ogg">
+//! <audio style="width: 100%" title="" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e025.mp3">
 //! </audio>
 //!
 //!

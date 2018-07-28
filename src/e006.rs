@@ -2,16 +2,11 @@
 //!
 //!   - **Date:** November 16, 2015
 //!   - **Subject:** Designing APIs, and using packages ("crates") and modules
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e006.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e006.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e006.ogg)
+//!   - [**Audio**][mp3]
+//! 
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e006.mp3
 //!
-//! <audio style="width: 100%" title="Modularize this!" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e006.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e006.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e006.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="Modularize this!" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e006.mp3" />
 //!
 //! # Notes
 //!
@@ -72,7 +67,6 @@
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 //!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
-
 /// This is an internal module. Note that it isn't public.
 ///
 /// Modules may have any kind of "item" local to them. "Items" in Rust are
@@ -91,7 +85,6 @@ mod internal_module {
     pub fn a_public_module_fn() {
         println!("At `internal_module::a_public_module_fn()`.");
         a_private_module_fn();
-
     }
 
     /// Another module function, demonstrating module-private function status.
@@ -104,7 +97,6 @@ mod internal_module {
         println!("At `internal_module::a_private_module_fn()`.");
     }
 }
-
 
 /// This is an internal module which *is* public.
 ///
@@ -121,13 +113,11 @@ pub mod public_internal_module {
         some_private_fn();
     }
 
-
     /// A private function in a public modules.
     fn some_private_fn() {
         println!("At `public_internal_module::some_private_fn()`.");
     }
 }
-
 
 /// Demonstrates the use of modules and namespaces.
 ///
@@ -152,7 +142,6 @@ pub fn use_modules_internal() {
     // declaration-based, modules.)
     public_internal_module::a_public_module_fn();
 }
-
 
 // What if we wanted to use *any* public function from a given module? We
 // can simply `use` that module.
@@ -189,7 +178,6 @@ pub mod demonstrate_namespacing {
 
 }
 
-
 /// Demonstrates that modules can be `use`d within functions.
 pub fn demonstrate_use_inside_function() {
     use e006::demonstrate_namespacing as dn;
@@ -197,7 +185,6 @@ pub fn demonstrate_use_inside_function() {
     println!("At `demonstrate_use_inside_function()`.");
     dn::demonstrate_globbed_calls();
 }
-
 
 /// Give an example of nested modules.
 ///

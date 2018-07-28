@@ -3,14 +3,11 @@
 //!   - **Date:** September 10, 2016
 //!   - **Subject:** Building (and celebrating) all the little, not-so-glorious
 //!     pieces of the Rust ecosystem.
-//!   - **Audio:**
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_7.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_7.ogg)
+//!   - [**Audio**][mp3]
+//! 
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/7.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Katas---or: learning by doing" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_7.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_7.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="Katas—or: learning by doing" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/7.mp3">
 //!
 //!
 //! Notes

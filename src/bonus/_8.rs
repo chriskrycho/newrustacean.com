@@ -3,16 +3,11 @@
 //!   - **Date:** March 19, 2017
 //!   - **Subject:** On the responsibilities and opportunities we have to help
 //!     others with our knowledge and abilities.
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_8.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_8.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_8.ogg)
+//!   - [**Audio**][mp3]
+//! 
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/8.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Giving back (by teaching)" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_8.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_8.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_8.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="Giving back (by teaching)" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/8.mp3"/>
 //!
 //!
 //! Notes
@@ -30,14 +25,14 @@
 //! - [Julia Evans][jvns]
 //! - [`keyof` and Mapped Types in TypeScript 2.1][ts-post] -- the blog post I
 //!   mentioned writing a few months ago.
-//! 
+//!
 //! [jvns]: http://jvns.ca
 //! [ts-post]: http://www.chriskrycho.com/2016/keyof-and-mapped-types-in-typescript-21.html
 //!
 //!
 //! Sponsors
 //! --------
-//! 
+//!
 //!
 //!   - Aleksey Pirogov
 //!   - Andreas Fischer
@@ -118,4 +113,3 @@
 //!   - Chris Krycho
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
-

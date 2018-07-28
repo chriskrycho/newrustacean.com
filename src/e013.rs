@@ -3,19 +3,12 @@
 
   - **Date:** April 4, 2016
   - **Subject:** Reasoning about and using lifetimes in Rust (and why we need them)
-  - **Audio:**
-      + [M4A][m4a]
-      + [MP3][mp3]
-      + [Ogg][ogg]
+  - [**Audio**][mp3]
 
-  [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e013.m4a
-  [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e013.mp3
-  [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e013.ogg
+  [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e013.mp3
 
   <audio style="width: 100%" title="e013: Staying alive" controls preload=metadata>
-    <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e013.m4a">
-    <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e013.mp3">
-    <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e013.ogg">
+    <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e013.mp3">
   </audio>
 
 
@@ -114,7 +107,6 @@
   ```
  */
 
-
 /**
   An individual person defined in a way that includes a *reference* type.
 
@@ -132,13 +124,9 @@ pub struct Individual<'a> {
     pub age: i16,
 }
 
-
 // TODO: over the next week, fill this out!
 /// Note that the implementation block *also* has the lifetimes declared.
-impl<'a> Individual<'a> {
-
-}
-
+impl<'a> Individual<'a> {}
 
 /**
   A reference to a number, either integral or floating-point. Goofy, yes.
@@ -152,15 +140,11 @@ impl<'a> Individual<'a> {
  */
 pub enum NumericReference<'a> {
     IntRef(&'a i64),
-    FloatRef(&'a f64)
+    FloatRef(&'a f64),
 }
-
 
 // TODO: over the next week, fill this out!
-impl<'a> NumericReference<'a> {
-
-}
-
+impl<'a> NumericReference<'a> {}
 
 /**
   Get a(n optional) sub-slice of a slice.
@@ -179,7 +163,6 @@ pub fn refs_all_around<'a>(input: &'a [i32]) -> Option<&'a [i32]> {
         None
     }
 }
-
 
 #[cfg(test)]
 mod tests {

@@ -2,20 +2,11 @@
 //!
 //!   - **Date:** March 31, 2018
 //!   - **Subject:** wasm intro, `wasm-bindgen`, and `wasm-pack`
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk/wasm.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk/wasm.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk/wasm.ogg
+//!  [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk/wasm.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Crates You Should Know: The wasm tools" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk/wasm.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk/wasm.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk/wasm.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="Crates You Should Know: The wasm tools" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk/wasm.mp3" />
 //!
 //!
 //! Show Notes

@@ -2,16 +2,11 @@
 //!
 //!   - **Date:** January 31, 2016
 //!   - **Subject:** The value of a good community, and how you can help Rust today.
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_3.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_3.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_3.ogg)
+//!   - [**Audio**][mp3]
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Building as a community" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_3.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_3.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_3.ogg">
-//! </audio>
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/bonus_3.mp3
+//!
+//! <audio style="width: 100%" title="Building as a community" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/bonus_3.mp3" />
 //!
 //!
 //! Notes

@@ -3,19 +3,12 @@
 //!   - **Date:** March 6, 2016
 //!   - **Subject:** Type systems: strong vs. weak, dynamic vs. static, and
 //!     degrees of expressivity.
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e011.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e011.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e011.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e011.mp3
 //!
 //! <audio style="width: 100%" title="e011: Once Upon a Type" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e011.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e011.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e011.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e011.mp3">
 //! </audio>
 //!
 //!
@@ -99,7 +92,6 @@
 
 use std::fmt;
 
-
 /// Is the thing "expressive", whatever that means?
 pub enum Expressive {
     Ridiculously,
@@ -163,7 +155,6 @@ impl fmt::Display for StaticallyKnown {
     }
 }
 
-
 /// Look, we composed those enums into another type. How... droll.
 pub struct TypeSystem {
     name: String,
@@ -172,14 +163,13 @@ pub struct TypeSystem {
     statically_known: StaticallyKnown,
 }
 
-
 impl TypeSystem {
-    pub fn builder(name: &str,
-                   expressive: Expressive,
-                   strong: Strong,
-                   statically_known: StaticallyKnown)
-                   -> TypeSystem {
-
+    pub fn builder(
+        name: &str,
+        expressive: Expressive,
+        strong: Strong,
+        statically_known: StaticallyKnown,
+    ) -> TypeSystem {
         TypeSystem {
             name: name.to_string(),
             expressive: expressive,
@@ -189,7 +179,6 @@ impl TypeSystem {
     }
 }
 
-
 /// An incredibly contrived function which just shows enums at work.
 ///
 /// I wanted there to be *some* sample code this episode, you know? This one
@@ -198,57 +187,77 @@ impl TypeSystem {
 /// on the show---pretty much everything but generics makes an appearance in
 /// some way in this module.
 pub fn describe_type_systems() {
-    let js = TypeSystem::builder("ECMAScript",
-                                 Expressive::Fairly,
-                                 Strong::NopeNopeNope,
-                                 StaticallyKnown::Nope);
+    let js = TypeSystem::builder(
+        "ECMAScript",
+        Expressive::Fairly,
+        Strong::NopeNopeNope,
+        StaticallyKnown::Nope,
+    );
 
-    let php = TypeSystem::builder("PHP",
-                                  Expressive::Barely,
-                                  Strong::NopeNopeNope,
-                                  StaticallyKnown::Nope);
+    let php = TypeSystem::builder(
+        "PHP",
+        Expressive::Barely,
+        Strong::NopeNopeNope,
+        StaticallyKnown::Nope,
+    );
 
-    let c = TypeSystem::builder("C",
-                                Expressive::Barely,
-                                Strong::NotEspecially,
-                                StaticallyKnown::Yeah);
+    let c = TypeSystem::builder(
+        "C",
+        Expressive::Barely,
+        Strong::NotEspecially,
+        StaticallyKnown::Yeah,
+    );
 
-    let cpp = TypeSystem::builder("C++",
-                                  Expressive::SortOf,
-                                  Strong::ABit,
-                                  StaticallyKnown::Yeah);
+    let cpp = TypeSystem::builder(
+        "C++",
+        Expressive::SortOf,
+        Strong::ABit,
+        StaticallyKnown::Yeah,
+    );
 
-    let java = TypeSystem::builder("Java",
-                                   Expressive::SortOf,
-                                   Strong::ABit,
-                                   StaticallyKnown::Yeah);
+    let java = TypeSystem::builder(
+        "Java",
+        Expressive::SortOf,
+        Strong::ABit,
+        StaticallyKnown::Yeah,
+    );
 
-    let csharp = TypeSystem::builder("C♯",
-                                     Expressive::Fairly,
-                                     Strong::Indeed,
-                                     StaticallyKnown::Yeah);
+    let csharp = TypeSystem::builder(
+        "C♯",
+        Expressive::Fairly,
+        Strong::Indeed,
+        StaticallyKnown::Yeah,
+    );
 
-    let swift = TypeSystem::builder("Swift",
-                                    Expressive::PrettyDarn,
-                                    Strong::Indeed,
-                                    StaticallyKnown::Yeah);
+    let swift = TypeSystem::builder(
+        "Swift",
+        Expressive::PrettyDarn,
+        Strong::Indeed,
+        StaticallyKnown::Yeah,
+    );
 
-    let rust = TypeSystem::builder("Rust",
-                                   Expressive::PrettyDarn,
-                                   Strong::Indeed,
-                                   StaticallyKnown::Yeah);
+    let rust = TypeSystem::builder(
+        "Rust",
+        Expressive::PrettyDarn,
+        Strong::Indeed,
+        StaticallyKnown::Yeah,
+    );
 
-    let haskell = TypeSystem::builder("Haskell",
-                                      Expressive::Ridiculously,
-                                      Strong::Indeed,
-                                      StaticallyKnown::Yeah);
+    let haskell = TypeSystem::builder(
+        "Haskell",
+        Expressive::Ridiculously,
+        Strong::Indeed,
+        StaticallyKnown::Yeah,
+    );
 
     let langs = vec![js, php, c, cpp, java, csharp, swift, rust, haskell];
     for lang in langs {
-        println!("{language} is {expressive}, {strong}, and {statically_known}",
-                 language = lang.name,
-                 expressive = lang.expressive,
-                 strong = lang.strong,
-                 statically_known = lang.statically_known);
+        println!(
+            "{language} is {expressive}, {strong}, and {statically_known}",
+            language = lang.name,
+            expressive = lang.expressive,
+            strong = lang.strong,
+            statically_known = lang.statically_known
+        );
     }
 }

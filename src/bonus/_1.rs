@@ -3,16 +3,17 @@
 //!   - **Date:** November 25, 2015
 //!   - **Subject:** The delights and challenges of knowing (or even just
 //!     learning) lots of languages.
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_1.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_1.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_1.ogg)
+//!   - [**Audio**](http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus_1.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Polyglot programming promises and perils" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_1.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_1.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_1.ogg">
-//! </audio>
+//! <audio
+//!     style="width: 100%"
+//!     style="width:
+//!     100%"
+//!     title="Polyglot programming promises and perils"
+//!     controls
+//!     preload=metadata
+//!     src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus_1.mp3"
+//! >
 //!
 //! Sometimes, you're doing a technical interview, and you just cannot figure
 //! out why your JavaScript function isn't behaving like it should... and then,

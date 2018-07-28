@@ -1,36 +1,29 @@
 //! Increasing Rust's Reach
-//! 
+//!
 //!   - **Date:** July 3, 2017
 //!   - **Subject:** Growing Rust's diversity to help Rust grow.
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news_3.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_3.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news_3.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/3.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="News 3: Increasing Rust's Reach" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news_3.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_3.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news_3.ogg">
+//! <audio style="width: 100%" title="News 3: Increasing Rust's Reach" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/3.mp3">
 //! </audio>
 //!
 //!
 //! Links and Notes
 //! ---------------
-//! 
+//!
 //! - [Initiative blog post]
 //! - [Initiative submission form]
-//! 
+//!
 //! [Initiative blog post]: https://blog.rust-lang.org/2017/06/27/Increasing-Rusts-Reach.html
 //! [Initiative submission form]: https://docs.google.com/forms/d/e/1FAIpQLSfbSGuoyZE9dctdEoC_XEZ7j2ox7jQT1zghAOF4iGds2PfBCA/viewform
-//! 
-//! 
+//!
+//!
 //! Sponsors
 //! --------
-//! 
+//!
 //!   - [Anthony Deschamps]
 //!   - Anthony Scotti
 //!   - Aleksey Pirogov

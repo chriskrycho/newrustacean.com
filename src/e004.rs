@@ -2,16 +2,11 @@
 //!
 //!   - **Date:** October 29, 2015
 //!   - **Subject:** Functions, methods, closures, and function as arguments!
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e004.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e004.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e004.ogg)
+//!   - [**Audio**][mp3]
+//! 
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e004.mp3
 //!
-//! <audio style="width: 100%" title="Functionalized" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e004.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e004.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e004.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="Functionalized" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e004.mp3" />
 //!
 //! # Notes
 //!
@@ -59,7 +54,6 @@
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 //!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
-
 /// Create a module so we can see public/private behavior.
 ///
 /// We will discuss modules in more detail in the future.
@@ -77,7 +71,6 @@ mod struct_container {
     }
 
     impl MethodDemonstrator {
-
         /// A standard constructor pattern.
         ///
         /// You've seen this before, in the e001 code!
@@ -113,11 +106,10 @@ mod struct_container {
         /// complex type, you now have a pretty good idea how to write the first
         /// argument to that method...
         pub fn method(&self) {
-            println!("The values of the object are: {:}, {:}, {:}, {:}",
-                     self.an_int,
-                     self.a_string,
-                     self.a_tuple.0,
-                     self.a_tuple.1);
+            println!(
+                "The values of the object are: {:}, {:}, {:}, {:}",
+                self.an_int, self.a_string, self.a_tuple.0, self.a_tuple.1
+            );
         }
 
         /// A getter for data which is not publicly accessible in the type.
@@ -139,7 +131,6 @@ mod struct_container {
         }
     }
 }
-
 
 /// Shows how to use both struct and instance methods.
 ///
@@ -163,20 +154,19 @@ pub fn demonstrate_methods() {
     println!("{:?}", a_struct.get_hidden_data());
 }
 
-
 /// Shows how to take a function as an argument.
 ///
 /// Note that this involves specifying a *generic* (the `<F>` syntax), bounded
 /// by a `trait` (the `where...` syntax), a concept to which we will return in
 /// much more detail in a few episodes.
 pub fn apply_function_to_i64<F>(a_number_function: F, the_number: i64) -> i64
-    where F: Fn(i64) -> i64
+where
+    F: Fn(i64) -> i64,
 {
     let result = a_number_function(the_number);
     println!("{:?}", result);
     result
 }
-
 
 /// Show how to call a function with a function as an argument.
 ///
@@ -184,7 +174,6 @@ pub fn apply_function_to_i64<F>(a_number_function: F, the_number: i64) -> i64
 /// which accept functions as arguments, as long as their type definition
 /// matches the requirements of the destination function.
 pub fn demonstrate_function_arguments() {
-
     /// Implements the signature required for `apply_function_to_i64`.
     ///
     /// Note that this is a nested function definition! It is unavailable
@@ -208,7 +197,6 @@ pub fn demonstrate_function_arguments() {
     // target function, however, so this won't compile:
 }
 
-
 /// Shows how closures can act on elements within their environment.
 ///
 /// Closures are handy for more than merely a quick and easy way to write a
@@ -216,8 +204,7 @@ pub fn demonstrate_function_arguments() {
 /// implementation details. While that's not as strictly necessary in Rust as it
 /// is in e.g. JavaScript, it still has a great deal of utility, especially in
 /// more functional programming styles.
-pub fn demonstrate_closure_environment()  {
-
+pub fn demonstrate_closure_environment() {
     /// Returns a closure which has access to the internal contents of this
     /// function even after it goes out of scope.
     fn get_a_closure() -> Box<Fn(f64) -> f64> {
@@ -237,7 +224,10 @@ pub fn demonstrate_closure_environment()  {
     assert_eq!(the_closure(2.0), 28.0);
 
     /// Calls whatever function you hand it with the value 14.0
-    fn takes_a_closure_with_14<F>(f: F) -> f64 where F: Fn(f64) -> f64 {
+    fn takes_a_closure_with_14<F>(f: F) -> f64
+    where
+        F: Fn(f64) -> f64,
+    {
         f(14.0)
     }
 
@@ -247,7 +237,6 @@ pub fn demonstrate_closure_environment()  {
     let y = 3.0;
     assert_eq!(takes_a_closure_with_14(|n| n * y), 42.0);
 }
-
 
 #[test]
 fn demonstrate() {

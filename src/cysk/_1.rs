@@ -2,16 +2,11 @@
 //!
 //!   - **Date:** January 8, 2017
 //!   - **Subject:** A pull-parser for reading and writing XML.
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/csyk_1.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/csyk_1.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/csyk_1.ogg)
+//!   - [**Audio**][mp3]
+//! 
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/csyk_1.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="quick-xml" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/csyk_1.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/csyk_1.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/csyk_1.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="quick-xml" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/csyk_1.mp3" />
 //!
 //! Links
 //! -----
@@ -20,7 +15,7 @@
 //! - [docs.rs]
 //! - [GitHub]
 //! - [syntax highlighting] -- example from [lightning-rs]
-//! 
+//!
 //! [crates.io]: https://crates.io/crates/quick-xml
 //! [docs.rs]: https://docs.rs/quick-xml/0.4.2/quick_xml/
 //! [GitHub]: https://github.com/tafia/quick-xml
@@ -84,7 +79,7 @@
 //!   - [Flattr](https://flattr.com/profile/chriskrycho)
 //!   - [PayPal.me](https://paypal.me/chriskrycho)
 //!
-//! 
+//!
 //! Contact
 //! -------
 //!

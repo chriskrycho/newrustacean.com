@@ -2,15 +2,12 @@
 //!
 //!   - **Date:** 2016-01-18
 //!   - **Subject:** Using Rust's macro system, its limitations, and its future.
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e010.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e010.ogg)
+//!   - [**Audio**][mp3]
+//!
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e010.mp3
 //!
 //! <audio style="width: 100%" title="Macros rule!" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e010.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e010.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e010.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e010.mp3">
 //! </audio>
 //!
 //!
@@ -110,7 +107,6 @@
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 //!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
-
 /// Define a macro like `try!` but which works in the context of `main()`.
 ///
 /// [`try!`][try] takes a `Result<T, E>` and, if it is `Ok<T>`, supplies the `T`
@@ -139,15 +135,16 @@
 /// ```
 #[macro_export]
 macro_rules! main_try {
-    ($e:expr) => (match $e {
-        std::result::Result::Ok(val) => val,
-        std::result::Result::Err(err) => {
-            println!("{:?}", err);
-            return;
+    ($e:expr) => {
+        match $e {
+            std::result::Result::Ok(val) => val,
+            std::result::Result::Err(err) => {
+                println!("{:?}", err);
+                return;
+            }
         }
-    })
+    };
 }
-
 
 /// Define an ident macro to show how they can capture different *syntax*.
 ///
@@ -182,9 +179,10 @@ macro_rules! main_try {
 /// macros can use any other language machinery, including other macros.
 #[macro_export]
 macro_rules! print_ident_name {
-    ($id:ident) => ( format!("The ident's name was: {}", stringify!($id)); );
+    ($id:ident) => {
+        format!("The ident's name was: {}", stringify!($id));
+    };
 }
-
 
 /// Trivial alias for Result for convenience.
 pub type TryResult = Result<i32, &'static str>;
@@ -198,7 +196,6 @@ pub fn demonstrate_try(tr: TryResult) -> TryResult {
     // actually happened.
     Ok(val + 1)
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -216,12 +213,19 @@ mod tests {
         let _x = 42;
         assert_eq!(print_ident_name!(_x), format!("The ident's name was: _x"));
         // Functions:
-        assert_eq!(print_ident_name!(demonstrate_try),
-                   format!("The ident's name was: demonstrate_try"));
+        assert_eq!(
+            print_ident_name!(demonstrate_try),
+            format!("The ident's name was: demonstrate_try")
+        );
         // Types:
-        assert_eq!(print_ident_name!(TryResult), format!("The ident's name was: TryResult"));
+        assert_eq!(
+            print_ident_name!(TryResult),
+            format!("The ident's name was: TryResult")
+        );
         // Even macros!
-        assert_eq!(print_ident_name!(print_ident_name),
-                   format!("The ident's name was: print_ident_name"));
+        assert_eq!(
+            print_ident_name!(print_ident_name),
+            format!("The ident's name was: print_ident_name")
+        );
     }
 }

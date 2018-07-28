@@ -2,16 +2,11 @@
 //!
 //!   - **Date:** April 19, 2016
 //!   - **Subject:** Just how good Rust is, and how you can learn it even if you're busy
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_4.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_4.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_4.ogg)
+//!   - [**Audio**][mp3]
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Building as a community" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_4.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_4.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_4.ogg">
-//! </audio>
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/4.mp3
+//!
+//! <audio style="width: 100%" title="Building as a community" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/4.mp3" />
 //!
 //!
 //! Notes

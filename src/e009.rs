@@ -2,15 +2,12 @@
 //!
 //!   - **Date:** 2016-01-09
 //!   - **Subject:** Getting into the nitty-gritty with Rust's traits.
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e009.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e009.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e009.ogg)
+//!   - [**Audio**][mp3]
+//!
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e009.mp3
 //!
 //! <audio style="width: 100%" title="Composing a Rustic tune" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e009.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e009.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e009.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e009.mp3">
 //! </audio>
 //!
 //!
@@ -107,10 +104,8 @@
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 //!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
-
-use std::ops;
 use std::fmt;
-
+use std::ops;
 
 /// Define a simple struct on which to implement `Iterator`... and more!
 ///
@@ -119,18 +114,18 @@ use std::fmt;
 /// so items can be compared!
 ///
 /// Look at all those default implementations we get for free!
-#[derive(Clone,Copy,Debug,PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub struct DoubleAndOne {
     /// A value to double and add one to on every `next()` call.
     pub value: i64,
 }
 
-
 impl DoubleAndOne {
     /// Start with 0.
-    pub fn default() -> DoubleAndOne { DoubleAndOne { value: 0 } }
+    pub fn default() -> DoubleAndOne {
+        DoubleAndOne { value: 0 }
+    }
 }
-
 
 /// Define a simple trait so we can see how it works.
 ///
@@ -148,18 +143,17 @@ pub trait ASimpleTrait {
     }
 }
 
-
 impl ASimpleTrait for DoubleAndOne {
-    fn get_some_integer(&self) -> i64 { self.value }
+    fn get_some_integer(&self) -> i64 {
+        self.value
+    }
 }
-
 
 impl fmt::Display for DoubleAndOne {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "DoubleAndOne.value = {}", self.value)
     }
 }
-
 
 impl Iterator for DoubleAndOne {
     /// Define the required `Item` as being the the struct itself.
@@ -171,15 +165,15 @@ impl Iterator for DoubleAndOne {
     }
 }
 
-
 impl ops::Add for DoubleAndOne {
     type Output = DoubleAndOne;
 
     fn add(self, rhs: DoubleAndOne) -> DoubleAndOne {
-        DoubleAndOne { value: self.value + rhs.value }
+        DoubleAndOne {
+            value: self.value + rhs.value,
+        }
     }
 }
-
 
 /// Demonstrate using a for loop over an (infinite!) iterator.
 #[cfg_attr(feature = "clippy", allow(explicit_counter_loop))]
@@ -190,10 +184,11 @@ pub fn demonstrate_for() {
     for item in d {
         println!("{}", item);
         printed += 1;
-        if printed > max_to_print { break; }
+        if printed > max_to_print {
+            break;
+        }
     }
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -211,12 +206,12 @@ mod tests {
     #[test]
     fn test_iterator() {
         let mut d = DoubleAndOne::default();
-        assert_eq!(d.next(), Some(DoubleAndOne{ value: 1 }));
-        assert_eq!(d.next(), Some(DoubleAndOne{ value: 3 }));
-        assert_eq!(d.next(), Some(DoubleAndOne{ value: 7 }));
-        assert_eq!(d.next(), Some(DoubleAndOne{ value: 15 }));
-        assert_eq!(d.next(), Some(DoubleAndOne{ value: 31 }));
-        assert_eq!(d.next(), Some(DoubleAndOne{ value: 63 }));
+        assert_eq!(d.next(), Some(DoubleAndOne { value: 1 }));
+        assert_eq!(d.next(), Some(DoubleAndOne { value: 3 }));
+        assert_eq!(d.next(), Some(DoubleAndOne { value: 7 }));
+        assert_eq!(d.next(), Some(DoubleAndOne { value: 15 }));
+        assert_eq!(d.next(), Some(DoubleAndOne { value: 31 }));
+        assert_eq!(d.next(), Some(DoubleAndOne { value: 63 }));
     }
 
     #[test]

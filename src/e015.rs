@@ -3,19 +3,12 @@
 //!   - **Date:** June 17, 2016
 //!   - **Subject:** `Box`, `String`, `Vec`, `Rc`, and `Arc` have this in
 //!     common: they're not dumb.
-//!   - **Audio:**
-//!       + [M4A]
-//!       + [MP3]
-//!       + [Ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [M4A]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e015.m4a
-//! [MP3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e015.mp3
-//! [Ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e015.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e015.mp3
 //!
 //! <audio style="width: 100%" title="e014: Stringing things along" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e015.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e015.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e015.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e015.mp3">
 //! </audio>
 //!
 //!
@@ -160,9 +153,8 @@
 //! materials focus entirely on `Rc` and `Arc`, as those are the most
 //! interesting bits from today's episode.
 
-use std::rc::{Rc,Weak};
+use std::rc::{Rc, Weak};
 // use std::sync::Arc;  // TODO
-
 
 /// A trivial (and frankly rather silly) example for use with `Rc`.
 pub struct FileData {
@@ -171,12 +163,13 @@ pub struct FileData {
 
 impl FileData {
     pub fn new(contents: &str) -> FileData {
-        FileData { contents: contents.to_string() }
+        FileData {
+            contents: contents.to_string(),
+        }
     }
 }
 
 pub struct ASendableType {}
-
 
 /// Note that this function is *generic*: it will work for any type.
 pub fn print_rc_count<T>(t: &Rc<T>) {
@@ -188,33 +181,32 @@ fn print_rc_body(fd: &Rc<FileData>) {
     println!("The contents are: {:}", fd.contents);
 }
 
-
 /// Demonstrate the basics of reference-counted types. (Read the source, Luke!)
 pub fn demonstrate_rc() {
     // Note that we have valid data here.
     let a_ref = get_wrapped_file_data();
     print_rc_body(&a_ref);
-    print_rc_count(&a_ref);  // Just 1
+    print_rc_count(&a_ref); // Just 1
     let added_another_ref = a_ref.clone();
-    print_rc_count(&a_ref);  // 2
+    print_rc_count(&a_ref); // 2
 
     // Create a block to show that we can get another copy.
     {
         let yet_another_ref = a_ref.clone();
-        print_rc_count(&yet_another_ref);  // 3
-        print_rc_body(&yet_another_ref);  // we can print the contents here.
-    }  // we've gone out of scope; `yet_another_ref` is deallocated here.
+        print_rc_count(&yet_another_ref); // 3
+        print_rc_body(&yet_another_ref); // we can print the contents here.
+    } // we've gone out of scope; `yet_another_ref` is deallocated here.
 
-    print_rc_count(&a_ref);  // 2 again
-    drop(a_ref);  // Remember, it doesn't matter which we drop!
-    print_rc_count(&added_another_ref);  // 1
-    print_rc_body(&added_another_ref);  // valid
+    print_rc_count(&a_ref); // 2 again
+    drop(a_ref); // Remember, it doesn't matter which we drop!
+    print_rc_count(&added_another_ref); // 1
+    print_rc_body(&added_another_ref); // valid
 
     // Most explicit form:
     let a_weak_ref: Weak<FileData> = Rc::downgrade(&added_another_ref);
     // clone the weak ref.
     let _another_weak_ref = a_weak_ref.clone();
-    print_rc_count(&added_another_ref);  // still 1.
+    print_rc_count(&added_another_ref); // still 1.
 
     // Now we *move* the reference into the other function.
     let empty_weak = get_empty_weak(added_another_ref);
@@ -225,12 +217,10 @@ pub fn demonstrate_rc() {
     }
 }
 
-
 /// Note that this takes ownership of the data.
 pub fn get_empty_weak(fd: Rc<FileData>) -> Weak<FileData> {
     Rc::downgrade(&fd)
 }
-
 
 pub fn get_wrapped_file_data() -> Rc<FileData> {
     let plain_data = FileData::new("This would really read from a file. And not be terrible.");

@@ -3,16 +3,11 @@
 //!   - **Date:** November 8, 2015
 //!   - **Subject:** Returning functions from other functions, and thinking
 //!     about the stack, the heap, and reference types.
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e005.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e005.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e005.ogg)
+//!   - [**Audio**][mp3]
+//! 
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e005.mp3
 //!
-//! <audio style="width: 100%" title="Allocate it where?" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e005.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e005.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e005.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="Allocate it where?" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e005.mp3" />
 //!
 //! # Notes
 //!
@@ -86,7 +81,6 @@
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 //!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
-
 /// Creates a function which doubles an integer.
 ///
 /// Note that it doesn't have `Fn(i32) -> i32` as its return type, but rather
@@ -96,10 +90,11 @@
 /// here, or a closure as in `doubler_closure_factory`).
 pub fn doubler_factory() -> Box<Fn(i32) -> i32> {
     /// The doubler function we will return.
-    fn double(n: i32) -> i32 { n * 2 };
+    fn double(n: i32) -> i32 {
+        n * 2
+    };
     Box::new(double)
 }
-
 
 /// Creates a closure which doubles an integer.
 ///
@@ -115,7 +110,6 @@ pub fn doubler_closure_factory() -> Box<Fn(i32) -> i32> {
     let doubler = |n| n * 2;
     Box::new(doubler)
 }
-
 
 /// Uses the `doubler_factory` to get a function which doubles a number.
 ///

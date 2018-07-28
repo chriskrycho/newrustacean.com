@@ -3,19 +3,12 @@
 //!   - **Date:** March 21, 2016
 //!   - **Subject:** What it means to be an expression-oriented language, and
 //!     how that works out in Rust.
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e012.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e012.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e012.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e012.mp3
 //!
 //! <audio style="width: 100%" title="e012: I'm not familiar with that expression" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e012.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e012.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e012.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e012.mp3">
 //! </audio>
 //!
 //!
@@ -121,7 +114,6 @@ pub fn functions_are_expressions() -> i32 {
     a + b
 }
 
-
 /// Like functions, if blocks are expressions.
 ///
 /// This function simple doubly demonstrates this, by showing an assignment from
@@ -154,7 +146,6 @@ pub fn if_blocks_are_expressions() -> f64 {
     }
 }
 
-
 #[cfg_attr(feature = "clippy", allow(dead_code))]
 enum ThreeTypes {
     _First,
@@ -179,7 +170,6 @@ pub fn match_blocks_are_expressions() -> String {
         _ => "Less than 0, or more than 100".to_string(),
     }
 }
-
 
 /// Block blocks are also expressions!
 ///

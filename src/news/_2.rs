@@ -2,15 +2,12 @@
 //!
 //!   - **Date:** December 29, 2016
 //!   - **Subject:** Rust's achievements in 2016 and goals for 2017
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news_2.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_2.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news_2.ogg)
+//!   - [**Audio**][mp3]
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Rust's achievements in 2016 and goals for 2017" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news_2.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news_2.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news_2.ogg">
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/2.mp3
+//!
+//! <audio style="width: 100%" title="Rust's achievements in 2016 and goals for 2017" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/2.mp3">
 //! </audio>
 //!
 //! Links
@@ -79,7 +76,7 @@
 //! [1636-text]: https://github.com/rust-lang/rfcs/blob/master/text/1636-document_all_features.md
 //! [1636-discussion]: https://github.com/rust-lang/rfcs/pull/1636
 //! [1636-tracking]: https://github.com/rust-lang/rust/issues/38643
-//! 
+//!
 //!
 //! Sponsors
 //! --------
@@ -134,7 +131,7 @@
 //!   - [Flattr](https://flattr.com/profile/chriskrycho)
 //!   - [PayPal.me](https://paypal.me/chriskrycho)
 //!
-//! 
+//!
 //! Contact
 //! -------
 //!

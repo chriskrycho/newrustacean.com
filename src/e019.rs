@@ -3,15 +3,12 @@
 //!   - **Date:** February 28, 2017
 //!   - **Subject:** The final pieces of the story for (single-threaded) memory
 //!     management in Rust.
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e019.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e019.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e019.ogg)
+//!   - [**Audio**][mp3]
+//! 
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e019.mp3
 //!
 //! <audio style="width: 100%" title="Let's `Clone` a `Cow`!" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e019.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e019.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e019.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e019.mp3">
 //! </audio>
 //!
 //!
@@ -105,7 +102,7 @@
 //!
 //! Sponsors
 //! --------
-//! 
+//!
 //!
 //!   - Aleksey Pirogov
 //!   - Andreas Fischer
@@ -178,7 +175,6 @@
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-
 /// A non-copyable point type
 ///
 /// # Examples
@@ -214,7 +210,7 @@
 /// // println!("{:?}", a_point);
 /// println!("{:?}", moved_point);  // <- not a problem!
 /// ```
-/// 
+///
 /// [(You can confirm this in the playground.)][playground]
 ///
 /// [playground]: https://is.gd/PZBWw0
@@ -228,10 +224,13 @@ pub struct ANoCopyOrClonePoint {
 impl ANoCopyOrClonePoint {
     /// Generate a point at 0, 0, 0
     pub fn origin() -> ANoCopyOrClonePoint {
-        ANoCopyOrClonePoint { x: 0.0, y: 0.0, z: 0.0 }
+        ANoCopyOrClonePoint {
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+        }
     }
 }
-
 
 /// A struct which implements `Clone` but not `Copy`.
 ///
@@ -271,7 +270,7 @@ impl ANoCopyOrClonePoint {
 /// println!("{:?}", a_point);  // <- not a problem
 /// println!("{:?}", cloned_point);
 /// ```
-#[derive(Clone,Debug)]
+#[derive(Clone, Debug)]
 pub struct BJustClonePoint {
     x: f64,
     y: f64,
@@ -280,10 +279,13 @@ pub struct BJustClonePoint {
 
 impl BJustClonePoint {
     pub fn origin() -> BJustClonePoint {
-        BJustClonePoint { x: 0.0, y: 0.0, z: 0.0 }
+        BJustClonePoint {
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+        }
     }
 }
-
 
 /// A struct with identical behavior to `ANoCopyOrClonePoint`, except with `Copy`.
 ///
@@ -305,7 +307,7 @@ impl BJustClonePoint {
 /// ```
 ///
 /// [`ANoCopyOrClonePoint`]: /show_notes/e019/struct.ANoCopyOrClonePoint.html
-#[derive(Clone,Copy,Debug)]
+#[derive(Clone, Copy, Debug)]
 pub struct CCopyPoint {
     x: f64,
     y: f64,
@@ -315,42 +317,45 @@ pub struct CCopyPoint {
 impl CCopyPoint {
     /// Generate a point at 0, 0, 0
     pub fn origin() -> CCopyPoint {
-        CCopyPoint { x: 0.0, y: 0.0, z: 0.0 }
+        CCopyPoint {
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+        }
     }
 }
 
 /// The `Cow` type can wrap around other types and make them "reusable".
-/// 
+///
 /// Note that the body of this function is identical with that of the body of
 /// the example below.
-/// 
+///
 /// # Examples
-/// 
+///
 /// We'll reuse the `BJustClonePoint` since `Cow::Owned` requires that the
 /// underlying type implement `Clone`.
-/// 
+///
 /// ```rust
 /// # use std::borrow::Cow;
 /// # use show_notes::e019::{BJustClonePoint,demonstrate_cow};
 /// let a_point = Cow::Owned(BJustClonePoint::origin());
 /// demonstrate_cow(&a_point);
 /// ```
-/// 
+///
 /// Note that even though `demonstrate_cow` takes a reference to
 /// `BJustClonePoint`, we can pass it the `Cow` instance; this is where the
 /// `Deref` implementation on `Cow` comes in handy.
 pub fn demonstrate_cow(_point: &BJustClonePoint) {}
 
-
 /// What if we need a mutable reference to the wrapped type?
-/// 
+///
 /// # Examples
-/// 
+///
 /// We can get a mutable reference to the wrapped item, even if the wrapped item
 /// isn't itself mutable, as long as it's `Clone`-able. In this case, we're
 /// making a copy---this is explicit in the `to_mut()` call. If the underlying
 /// item isn't mutably accessible, we'll just get a mutable copy.
-/// 
+///
 /// ```rust
 /// # use std::borrow::Cow;
 /// # use show_notes::e019::{BJustClonePoint,demonstrate_mut_cow};

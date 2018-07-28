@@ -2,16 +2,11 @@
 //!
 //!   - **Date:** Feburary 14, 2017
 //!   - **Subject:** A Command-Line Argument Parser.
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_2.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_2.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_2.ogg)
+//!   - [**Audio**][mp3]
 //!
-//! <audio style="width: 100%" style="width: 100%" title="clap" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_2.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_2.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_2.ogg">
-//! </audio>
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk_2.mp3
+//!
+//! <audio style="width: 100%" title="clap" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk_2.mp3" />
 //!
 //! Links
 //! -----
@@ -28,7 +23,7 @@
 //!     + example from [lightning-rs]:
 //!         * [YAML][lx-yaml]
 //!         * [associated Rust implementation][lx-rs]
-//! 
+//!
 //! [crates.io]: https://crates.io/crates/clap
 //! [docs.rs]: https://docs.rs/clap/2.20.3/clap/
 //! [GitHub]: https://github.com/kbknapp/clap-rs
@@ -103,7 +98,7 @@
 //!   - [Flattr](https://flattr.com/profile/chriskrycho)
 //!   - [PayPal.me](https://paypal.me/chriskrycho)
 //!
-//! 
+//!
 //! Contact
 //! -------
 //!

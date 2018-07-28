@@ -3,19 +3,12 @@
 //!   - **Date:** April 24, 2016
 //!   - **Subject:** `Strings` `&str`s and `Vec`s and slices (and Unicode) --
 //!     oh, my!
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e014.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e014.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e014.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e014.mp3
 //!
 //! <audio style="width: 100%" title="e014: Stringing things along" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e014.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e014.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e014.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e014.mp3">
 //! </audio>
 //!
 //!
@@ -108,14 +101,12 @@
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-
 /// Get a string *slice*. Note the required lifetime specifier on the type!
 ///
 /// String slices are pointers to a given chunk of data.
 pub fn get_a_slice() -> &'static str {
     "this is a statically allocated slice"
 }
-
 
 /// Get a `String` instance. Note there's no lifetime.
 pub fn get_a_string() -> String {
@@ -124,25 +115,23 @@ pub fn get_a_string() -> String {
     a_string
 }
 
-
 /// It's easy enough to get a `String` from a `str`.
-pub fn show_from_behavior() -> String { String::from("any old slice will do") }
-
+pub fn show_from_behavior() -> String {
+    String::from("any old slice will do")
+}
 
 /// Print a 🚀, just because we can.
 pub fn demonstrate_unicode() {
     println!("{}", "🚀");
 }
 
-
 pub fn get_back_some_unicode(desc: &str) -> String {
     match desc {
         "rocket" => "🚀".to_string(),
         "hearts" => "💕".to_string(),
-        _ => " ".to_string()
+        _ => " ".to_string(),
     }
 }
-
 
 /// Get a `String` with a specified capacity.
 ///
@@ -154,7 +143,6 @@ pub fn get_a_string_with_capacity(capacity: usize) -> String {
     string = string + "few";
     string
 }
-
 
 /// Demonstrate dereferencing. (You'll want to read this example carefully.)
 ///
@@ -184,7 +172,6 @@ pub mod demo_deref {
         }
     }
 }
-
 
 #[cfg(test)]
 mod tests {

@@ -4,19 +4,12 @@
 //!   - **Subject:** Getting Diesel to 1.0, writing docs and exposing problems
 //!     with the API, improving Diesel in the future, and thinking about API
 //!     design for open source libraries in general.
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/diesel_1_0/part_2.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/diesel_1_0/part_2.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/diesel_1_0/part_2.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/diesel_1_0/part_2.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Interview: Diesel 1.0, with Sean Griffin, Part 2" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/diesel_1_0/part_2.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/diesel_1_0/part_2.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/diesel_1_0/part_2.ogg">
+//! <audio style="width: 100%" title="Interview: Diesel 1.0, with Sean Griffin, Part 2" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/diesel_1_0/part_2.mp3">
 //! </audio>
 //!
 //!

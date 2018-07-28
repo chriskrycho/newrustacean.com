@@ -1,26 +1,17 @@
 //! Rocket
-//! 
+//!
 //!   - **Date:** June 30, 2017
 //!   - **Subject:** An accessible, well-designed web framework in Rust!
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_rocket.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_rocket.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_rocket.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk_rocket.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Crates You Should Know: Rocket" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk_rocket.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk_rocket.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk_rocket.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="Crates You Should Know: Rocket" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk_rocket.mp3" />
 //!
 //!
 //! Links and Notes
 //! ---------------
-//! 
+//!
 //! - [Rocket]
 //! - [Hyper]
 //! - [Iron]
@@ -35,7 +26,7 @@
 //!         * [implementation tracking issue]
 //! - [metaprogramming]
 //! - [Lisp]
-//! 
+//!
 //! [Rocket]: https://rocket.rs
 //! [Hyper]: https://hyper.rs
 //! [Iron]: http://ironframework.io
@@ -47,11 +38,11 @@
 //! [implementation tracking issue]: https://github.com/rust-lang/rust/issues/38356
 //! [metaprogramming]: https://en.wikipedia.org/wiki/Metaprogramming
 //! [Lisp]: https://en.wikipedia.org/wiki/Lisp_(programming_language)
-//! 
-//! 
+//!
+//!
 //! Sponsors
 //! --------
-//! 
+//!
 //!   - [Anthony Deschamps]
 //!   - Anthony Scotti
 //!   - Aleksey Pirogov

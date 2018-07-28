@@ -1,27 +1,20 @@
 //! Part 2: Making Rust Better
-//! 
+//!
 //!   - **Date:** May 30, 2017
 //!   - **Subject:** Rust as the fusion of systems and high-level programming
 //!     languages, and the RLS.
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_4_part_2.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_4_part_2.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_4_part_2.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/4/part_2.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Jonathan Turner::Part 2" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_4_part_2.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_4_part_2.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_4_part_2.ogg">
+//! <audio style="width: 100%" title="Jonathan Turner::Part 2" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/4/part_2.mp3">
 //! </audio>
 //!
 //!
 //! Show Notes
 //! ----------
-//! 
+//!
 //!   - The [survey]
 //!   - Language adoption:
 //!       + [Guido van Rossum] and [Python]
@@ -34,9 +27,9 @@
 //! [Matz]: https://en.wikipedia.org/wiki/Yukihiro_Matsumoto
 //! [Ruby]: https://www.ruby-lang.org/en/
 //! [Dart]: https://www.dartlang.org
-//! 
+//!
 //! Building the Rust Language Service:
-//! 
+//!
 //!   - [Racer]
 //!   - [rustw]
 //!   - [Language Server Protocol][lsp]
@@ -53,7 +46,7 @@
 //!       + [Improved match ergonomics around references]
 //!       + [const generics]
 //!           * [RFC #1931]
-//! 
+//!
 //! [Racer]: https://github.com/phildawes/racer
 //! [rustw]: https://github.com/nrc/rustw
 //! [lsp]: https://github.com/Microsoft/language-server-protocol
@@ -72,11 +65,11 @@
 //! [Improved match ergonomics around references]: https://github.com/rust-lang/rust-roadmap/issues/24
 //! [const generics]: https://internals.rust-lang.org/t/lang-team-minutes-const-generics/5090
 //! [RFC #1931]: https://github.com/rust-lang/rfcs/pull/1931
-//! 
-//! 
+//!
+//!
 //! Sponsors
 //! --------
-//! 
+//!
 //!   - [Anthony Deschamps]
 //!   - Anthony Scotti
 //!   - Aleksey Pirogov

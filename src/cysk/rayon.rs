@@ -1,28 +1,19 @@
 //! Rayon
-//! 
+//!
 //!   - **Date:** September 16, 2017
 //!   - **Subject:** Safe, threaded, parallel code in Rust!
-//!   - **Audio:**
-//!       + [mp3]
-//!       + [m4a]
-//!       + [ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk/rayon.mp3
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk/rayon.m4a
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk/rayon.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk/rayon.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Crates You Should Know: Rayon" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/cysk/rayon.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/cysk/rayon.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/cysk/rayon.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="Crates You Should Know: Rayon" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk/rayon.mp3" />
 //!
 //!
 //! Links and Notes
 //! ---------------
-//! 
+//!
 //! ### Rayon
-//! 
+//!
 //! - [Source]
 //! - [Crate]
 //! - [Docs]
@@ -34,20 +25,20 @@
 //! [Docs]: https://docs.rs/rayon/
 //! [README]: https://github.com/nikomatsakis/rayon/blob/master/README.md
 //! [blog post]: http://smallcultfollowing.com/babysteps/blog/2015/12/18/rayon-data-parallelism-in-rust/
-//! 
+//!
 //! ### Other things referenced on the show
-//! 
+//!
 //! - [Request for Explanation #10]
 //! - [e016: `RefCell`s and code smells][e016] – on mutability
 //! - ["embarassingly parallel"]
-//! 
+//!
 //! [Request for Explanation #10]: https://request-for-explanation.github.io/podcast/ep10-two-paths-diverged-in-a-yellow-wood/index.html
 //! [e016]: https://www.newrustacean.com/show_notes/e016/index.html
 //! ["embarassingly parallel"]: https://en.wikipedia.org/wiki/Embarrassingly_parallel
-//! 
+//!
 //! Sponsors
 //! --------
-//! 
+//!
 //!   - [Anthony Deschamps]
 //!   - Anthony Scotti
 //!   - Aleksey Pirogov

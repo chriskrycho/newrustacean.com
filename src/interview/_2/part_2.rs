@@ -3,19 +3,12 @@
 //!   - **Date:** July 4, 2016
 //!   - **Subject:** Using Rust for prototyping and exploring computer science
 //!     problems, and places where Rust can improve going forward.
-//!   - **Audio:**
-//!       + [M4A]
-//!       + [MP3]
-//!       + [Ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [M4A]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_2_part_2.m4a
-//! [MP3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_2_part_2.mp3
-//! [Ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_2_part_2.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/2/part_2.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Interview 2::Part 2 – Raph Levien" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_2_part_2.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_2_part_2.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_2_part_2.ogg">
+//! <audio style="width: 100%" title="Interview 2::Part 2 – Raph Levien" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/2/part_2.mp3">
 //! </audio>
 //!
 //!

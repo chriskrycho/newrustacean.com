@@ -3,25 +3,18 @@
 //!   - **Date:** December 20, 2017
 //!   - **Subject:** Anna's experience learning Rust while porting a Raspberry Pi
 //!     Python project as part of the Increasing Rust’s Reach 2017 program.
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/irr_2017/anna_liao.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/irr_2017/anna_liao.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/irr_2017/anna_liao.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr_2017/anna_liao.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Jonathan Turner::Part 3" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview/irr_2017/anna_liao.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview/irr_2017/anna_liao.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview/irr_2017/anna_liao.ogg">
+//! <audio style="width: 100%" title="Jonathan Turner::Part 3" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr_2017/anna_liao.mp3">
 //! </audio>
 //!
 //!
 //! Show Notes
 //! ----------
-//! 
+//!
 //! - [Increasing Rust's Reach]
 //! - [Go]
 //! - [This Week In Rust]
@@ -34,7 +27,7 @@
 //! - [RustBridge]
 //! - [exercism.io]
 //! - [the other Sense HAT Rust conversion]
-//! 
+//!
 //! [Increasing Rust's Reach]: https://blog.rust-lang.org/2017/06/27/Increasing-Rusts-Reach.html
 //! [Go]: https://golang.org
 //! [This Week In Rust]: https://this-week-in-rust.org
@@ -47,7 +40,7 @@
 //! [RustBridge]: https://github.com/rust-community/rustbridge
 //! [exercism.io]: https://exercism.io
 //! [the other Sense HAT Rust conversion]: https://github.com/thejpster/pi-workshop-rs
-//! 
+//!
 //!
 //! Sponsors
 //! --------

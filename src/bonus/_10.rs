@@ -2,25 +2,22 @@
 //!
 //!   - **Date:** March 17, 2018
 //!   - **Subject:** My Rust Belt Rust 2017 talk!
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio:**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus/10.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus/10.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus/10.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/10.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Crates You Should Know: Serde" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus/10.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus/10.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus/10.ogg">
-//! </audio>
+//! <audio
+//!     style="width: 100%"
+//!     title="Crates You Should Know: Serde"
+//!     controls
+//!     preload=metadata
+//!     src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/10.mp3"
+//! >
 //!
 //!
 //! Show Notes
 //! ----------
-//! 
+//!
 //! - [slides]
 //! - [video]
 //! - [script on my website]

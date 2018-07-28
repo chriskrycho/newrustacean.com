@@ -2,20 +2,11 @@
 //!
 //!   - **Date:** January 5, 2018
 //!   - **Subject:** Rustdoc changes, the first `impl` period, Firefox Quantum, and more wasm!
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_23.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_23.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_23.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_23.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="News: Rust 1.20" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_23.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_23.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_23.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="News: Rust 1.20" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_23.mp3" />
 //!
 //!
 //! ## Show notes
@@ -47,7 +38,7 @@
 //! [1.23 release notes]: https://github.com/rust-lang/rust/blob/50989cd98dbef60b0b6f5baa0ce4203ce778adaa/RELEASES.md#version-1230-2018-01-04
 //! [rustdoc tracking issue]: https://github.com/rust-lang/rust/issues/44229
 //! [rustdoc blog post]: https://blog.guillaume-gomez.fr/articles/2017-09-18+New+rustdoc+rendering+common+errors
-//! [not copying function arguments]: https://github.com/rust-lang/rust/pull/45380)
+//! [not copying function arguments]: https://github.com/rust-lang/rust/pull/45380
 //! [the first news episode]: https://www.newrustacean.com/show_notes/news/_1/index.html
 //! [`impl` period announcement]: https://blog.rust-lang.org/2017/09/18/impl-future-for-rust.html
 //! [final newsletter]: https://internals.rust-lang.org/t/the-final-impl-period-newsletter/6408

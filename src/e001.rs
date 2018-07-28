@@ -3,20 +3,11 @@
 //!   - **Date:** October 3, 2015
 //!   - **Subject:** Documentation in general, and `rustdoc` and `cargo doc` in
 //!     particular.
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e001.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e001.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e001.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e001.mp3
 //!
-//! <audio style="width: 100%" title="Document all the things!" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e001.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e001.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e001.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="Document all the things!" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e001.mp3" />
 //!
 //! # Notes
 //! This is a mostly-empty module, and it is intended as such. Why? Well,
@@ -86,7 +77,6 @@
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 //!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
-
 /// This is a sample structure, to demonstrate `rustdoc`/`cargo doc`.
 ///
 /// All of this will be attached to the structure definition when you see it
@@ -125,7 +115,6 @@ impl TVShow {
     }
 }
 
-
 /// This documents a plain-old function.
 ///
 /// The same basic rules apply as with functions bound to structs; the only
@@ -133,8 +122,8 @@ impl TVShow {
 /// but to the module.
 pub fn use_members() {
     let firefly = TVShow::new("You can't take the sky from me!", 2001, "Joss Whedon");
-    println!("Firefly (come on, sing along: \"{:?}\"): {:?}/{:?}",
-             firefly.theme,
-             firefly.year,
-             firefly.director);
+    println!(
+        "Firefly (come on, sing along: \"{:?}\"): {:?}/{:?}",
+        firefly.theme, firefly.year, firefly.director
+    );
 }

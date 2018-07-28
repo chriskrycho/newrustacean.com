@@ -1,28 +1,21 @@
 //! Part 3: Smoothing the Rust dev story
-//! 
+//!
 //!   - **Date:** June 17, 2017
 //!   - **Subject:** Future work on the RLS, in Rust itself, and in Servo.
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_4_part_3.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_4_part_3.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_4_part_3.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/4/part_3.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Jonathan Turner::Part 3" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_4_part_3.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_4_part_3.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_4_part_3.ogg">
+//! <audio style="width: 100%" title="Jonathan Turner::Part 3" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/4/part_3.mp3">
 //! </audio>
 //!
 //!
 //! Show Notes
 //! ----------
-//! 
+//!
 //! Building the Rust Language Service:
-//! 
+//!
 //!   - Language Server Protocol plugins
 //!       + [RLS reference VS Code plugin]
 //!       + Kalita Alexey's [vscode-rust]
@@ -31,7 +24,7 @@
 //!       + [Improved match ergonomics around references]
 //!       + [const generics]
 //!           * [RFC #1931]
-//! 
+//!
 //! [RLS reference VS Code plugin]: https://github.com/jonathandturner/rls_vscode
 //! [vscode-rust]: https://github.com/editor-rs/vscode-rust
 //! [langserver.org]: http://langserver.org
@@ -39,10 +32,10 @@
 //! [Improved match ergonomics around references]: https://github.com/rust-lang/rust-roadmap/issues/24
 //! [const generics]: https://internals.rust-lang.org/t/lang-team-minutes-const-generics/5090
 //! [RFC #1931]: https://github.com/rust-lang/rfcs/pull/1931
-//! 
-//! 
+//!
+//!
 //! Working on Servo:
-//! 
+//!
 //!   - [Servo]
 //!       + [Windows nightlies]
 //!   - [LLVM]
@@ -67,11 +60,11 @@
 //! [WebKit]: https://webkit.org
 //! [KHTML]: https://en.wikipedia.org/wiki/KHTML
 //! [Safari]: https://www.apple.com/safari/
-//! 
-//! 
+//!
+//!
 //! Sponsors
 //! --------
-//! 
+//!
 //!   - [Anthony Deschamps]
 //!   - Anthony Scotti
 //!   - Aleksey Pirogov

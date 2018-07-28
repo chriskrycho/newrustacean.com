@@ -2,19 +2,12 @@
 //!
 //!   - **Date:** August 5, 2016
 //!   - **Subject:** A deep dive on references and pointers in Rust.
-//!   - **Audio:**
-//!       + [M4A]
-//!       + [MP3]
-//!       + [Ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [M4A]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e017.m4a
-//! [MP3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e017.mp3
-//! [Ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e017.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e017.mp3
 //!
 //! <audio style="width: 100%" title="Point me where I need to go" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e017.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e017.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e017.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e017.mp3">
 //! </audio>
 //!
 //!
@@ -128,10 +121,9 @@
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-
 /// A dummy container for use with references.
 pub struct DataStore<'a> {
-    pub contents: &'a i32
+    pub contents: &'a i32,
 }
 
 impl<'a> DataStore<'a> {
@@ -139,7 +131,6 @@ impl<'a> DataStore<'a> {
         DataStore { contents: contents }
     }
 }
-
 
 /// Give a basic example of how the reference operator works.
 pub fn demonstrate_ref() {
@@ -151,7 +142,6 @@ pub fn demonstrate_ref() {
     println!("{:?}", twelve);
     println!("{:?}", ref_twelve);
 }
-
 
 /// A simple example of using the dereference operator.
 pub fn demonstrate_deref() {
@@ -166,7 +156,6 @@ pub fn demonstrate_deref() {
     println!("{:}", *some_data.contents);
 }
 
-
 /// A simple demonstration of matching against a reference type.
 pub fn demonstrate_match() {
     let four = 4;
@@ -174,11 +163,11 @@ pub fn demonstrate_match() {
 
     // Here, if we try to reference the contents of `store` directly, we'll find
     // that it doesn't work: we get a type error.
-    let store = DataStore::new(ref_to_four);  // type: DataStore
-    let optional_store = Some(store);  // type: Option<DataStore>
+    let store = DataStore::new(ref_to_four); // type: DataStore
+    let optional_store = Some(store); // type: Option<DataStore>
     let contents = match optional_store {
         Some(store) => *store.contents,
-        None => 0
+        None => 0,
     };
 
     println!("{:?}", contents);

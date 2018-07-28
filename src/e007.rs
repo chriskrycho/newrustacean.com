@@ -2,16 +2,11 @@
 //!
 //!   - **Date:** December 13, 2015
 //!   - **Subject:** Testing and benchmarking, and compiler attributes.
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e007.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e007.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e007.ogg)
+//!   - [**Audio**][mp3]
+//! 
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e007.mp3
 //!
-//! <audio style="width: 100%" title="Testify" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e007.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e007.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e007.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="Testify" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e007.mp3" />
 //!
 //! Notes
 //! -----
@@ -97,7 +92,6 @@
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 //!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
-
 /// A trivial function for a trivial test. See the [source](/src/show_notes/e007.rs.html)!
 pub fn add(a: f64, b: f64) -> f64 {
     a + b
@@ -113,7 +107,6 @@ pub fn add(a: f64, b: f64) -> f64 {
 fn test_add() {
     assert_eq!(add(2.0, 2.0), 4.0);
 }
-
 
 /// A test module!
 ///
@@ -145,7 +138,6 @@ mod tests {
     fn test_add_badly() {
         assert_eq!(add(2.0, 2.0), 5.0);
     }
-
 
     /// A yet more sophisticated example: `#[should_panic]` with `expected`.
     ///

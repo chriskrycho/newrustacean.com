@@ -1,29 +1,22 @@
 //! Part 1: Getting to Rust
-//! 
+//!
 //!   - **Date:** April 30, 2017
 //!   - **Subject:** Background, TypeScript, coming to Rust, and how helpful the
 //!     Rust community can be.
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_4_part_1.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_4_part_1.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_4_part_1.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/4/part_1.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Jonathan Turner::Part 1" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/interview_4_part_1.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/interview_4_part_1.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/interview_4_part_1.ogg">
+//! <audio style="width: 100%" title="Jonathan Turner::Part 1" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/4/part_1.mp3">
 //! </audio>
 //!
 //!
 //! Show Notes
 //! ----------
-//! 
+//!
 //! On Jonathan's programming backstory:
-//! 
+//!
 //!   - [TI-99/4A]
 //!   - [Commodore 64]
 //!   - [Cray]
@@ -36,7 +29,7 @@
 //!   - [BASIC]
 //!   - [Pascal]
 //!   - [Ultima]
-//! 
+//!
 //! [TI-99/4A]: https://en.wikipedia.org/wiki/Texas_Instruments_TI-99/4A
 //! [Commodore 64]: https://en.wikipedia.org/wiki/Commodore_64
 //! [Cray]: http://www.cray.com
@@ -49,10 +42,10 @@
 //! [BASIC]: https://en.wikipedia.org/wiki/BASIC
 //! [Pascal]: https://en.wikipedia.org/wiki/Pascal_(programming_language)
 //! [Ultima]: https://en.wikipedia.org/wiki/Ultima_%28series%29
-//! 
-//! 
+//!
+//!
 //! After the transition to working on Rust full-time:
-//! 
+//!
 //!   - Improving the error messages—
 //!       + [design issue]
 //!       + Jonathan's personal blog post ["Helping with the Rust Errors"]
@@ -60,17 +53,17 @@
 //!         ["Shape of Errors to Come"]
 //!       + [Elm]
 //!       + [error list issue]
-//! 
+//!
 //! [design issue]: https://github.com/rust-lang/rust/issues/33240
 //! ["Helping with the Rust Errors"]: http://www.jonathanturner.org/2016/08/helping-out-with-rust-errors.html
 //! ["Shape of Errors to Come"]: https://blog.rust-lang.org/2016/08/10/Shape-of-errors-to-come.html
 //! [Elm]: http://elm-lang.org
 //! [error list issue]: https://github.com/rust-lang/rust/issues/35233
-//! 
-//! 
+//!
+//!
 //! Sponsors
 //! --------
-//! 
+//!
 //!   - [Anthony Deschamps]
 //!   - Anthony Scotti
 //!   - Aleksey Pirogov

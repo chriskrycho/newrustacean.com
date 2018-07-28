@@ -3,20 +3,11 @@
 //!   - **Date:** October 12, 2015
 //!   - **Subject:** The `struct` data type constructor, and the basics of
 //!     Rust's "ownership" concept and "borrowing" and "moving".
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e002.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e002.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e002.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e002.mp3
 //!
-//! <audio style="width: 100%" title="Something borrowed, something... moved?" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e002.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e002.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e002.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="Something borrowed, something... moved?" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e002.mp3" />
 //!
 //! # Notes
 //!
@@ -88,8 +79,10 @@ pub fn demonstrate_ownership() {
     // You can borrow a mutable type immutably, *or* mutably.
     borrow(&mutable);
     borrow_mut(&mut mutable);
-    println!("Updated the radius of the mutable reference: {:}",
-             mutable.r);
+    println!(
+        "Updated the radius of the mutable reference: {:}",
+        mutable.r
+    );
 
     // If I move an object, I can no longer access it afterward. If you
     // uncomment the following line, you'll see that the Circle instances are
@@ -102,14 +95,13 @@ pub fn demonstrate_ownership() {
     // println!("Mutable: {:?}", mutable);
 }
 
-
 /// Demonstrates general borrowing of an immutable reference.
 pub fn borrow(ref_to_circle: &Circle) {
     // I can access but not change the values.
-    println!("Immutable reference-- origin: {:},{:} | Radius: {:}",
-             ref_to_circle.x,
-             ref_to_circle.y,
-             ref_to_circle.r);
+    println!(
+        "Immutable reference-- origin: {:},{:} | Radius: {:}",
+        ref_to_circle.x, ref_to_circle.y, ref_to_circle.r
+    );
 
     // You can uncomment this to see the compiler error if you try to *change*
     // the contents.
@@ -119,19 +111,17 @@ pub fn borrow(ref_to_circle: &Circle) {
     // *ref_to_circle = Circle::new()
 }
 
-
 /// Demonstrates general borrowing of a mutable reference.
 pub fn borrow_mut(mutable_ref_to_circle: &mut Circle) {
     // I can still access these values, of course.
-    println!("Mutable reference-- origin: {:},{:} | Radius: {:}",
-             mutable_ref_to_circle.x,
-             mutable_ref_to_circle.y,
-             mutable_ref_to_circle.r);
+    println!(
+        "Mutable reference-- origin: {:},{:} | Radius: {:}",
+        mutable_ref_to_circle.x, mutable_ref_to_circle.y, mutable_ref_to_circle.r
+    );
 
     // But I can also update the values.
     mutable_ref_to_circle.r *= 2.0;
 }
-
 
 /// Demonstrates general moving of an instance.
 pub fn move_circle(moved_circle: Circle) {
@@ -144,7 +134,6 @@ pub fn move_circle(moved_circle: Circle) {
     // name as we like.
     // moved_circle = Circle::new(4.5, 9.0, 18.0);
 }
-
 
 /// Implement some methods on the `Circle`.
 ///
@@ -210,7 +199,6 @@ impl Circle {
     }
 }
 
-
 /// Demonstrates how the same concepts apply when dealing with methods.
 pub fn demonstrate_method_ownership() {
     // There are several ways to construct struct types. The first is a plain
@@ -244,9 +232,10 @@ pub fn demonstrate_method_ownership() {
 
     // Note that both of these struct instances are still available for `main`
     // to use once they return from the method call:
-    println!("immutable's y: {} | mutable's r: {}",
-             immutable.y,
-             mutable.r);
+    println!(
+        "immutable's y: {} | mutable's r: {}",
+        immutable.y, mutable.r
+    );
 
     // A method that takes ownership can still return a value. However, it has
     // a very different behavior in terms of the struct instance, in a way that

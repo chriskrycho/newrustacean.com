@@ -3,20 +3,11 @@
 //!   - **Date:** August 14, 2017
 //!   - **Subject:** My experience with ember-cli-typescript as an example:
 //!     we're all just people muddling along and doing our best.
-//!   - **Audio:**
-//!       + [MP3][mp3]
-//!       + [M4A][m4a]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_9.mp3
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_9.m4a
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_9.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/9.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Bonus 9: Open source is just normal people" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/bonus_9.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/bonus_9.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/bonus_9.ogg">
-//! </audio>
+//! <audio style="width: 100%" title="Bonus 9: Open source is just normal people" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/9.mp3">
 //!
 //!
 //! Links and Notes

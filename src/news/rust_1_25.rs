@@ -3,19 +3,12 @@
 //!   - **Date:** March 31, 2018
 //!   - **Subject:** Paths and matches and SIMD, cargo new changes, and tons of
 //!     community-driven learning materials!
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_25.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_25.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_25.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_25.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="Crates You Should Know: Serde" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_25.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_25.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_25.ogg">
+//! <audio style="width: 100%" title="Crates You Should Know: Serde" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_25.mp3">
 //! </audio>
 //!
 //!
@@ -180,7 +173,10 @@
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
 #[allow(unused_imports)]
-use std::{fs::{File, FileType}, path::Path};
+use std::{
+    fs::{File, FileType},
+    path::Path,
+};
 
 /// An example of the new match style.
 pub fn demo_match(s: &str) {

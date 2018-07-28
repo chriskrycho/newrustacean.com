@@ -3,21 +3,18 @@
 //!   - **Date:** April 1, 2017
 //!   - **Subject:** How do we organize code in Rust? Where do we break it apart
 //!     into modules or crates, and why?
-//!   - **Audio:**
-//!       + [M4A](http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e020.m4a)
-//!       + [MP3](http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e020.mp3)
-//!       + [Ogg](http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e020.ogg)
+//!   - [**Audio**][mp3]
+//!
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e020.mp3
 //!
 //! <audio style="width: 100%" title="Putting code in its place" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/e020.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/e020.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/e020.ogg">
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e020.mp3">
 //! </audio>
-//! 
-//! 
+//!
+//!
 //! Notes
 //! -----
-//! 
+//!
 //! Structuring code in a language like Rust can seem a bit more ambiguous than
 //! doing the same in a language with classes to attach all our functionality
 //! to, but in practice, the concerns are much the same: modules are namespaces,
@@ -39,7 +36,7 @@
 //!
 //! Sponsors
 //! --------
-//! 
+//!
 //!
 //!   - Aleksey Pirogov
 //!   - Andreas Fischer
@@ -120,4 +117,3 @@
 //!   - Chris Krycho
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
-

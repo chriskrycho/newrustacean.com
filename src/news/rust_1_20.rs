@@ -1,26 +1,19 @@
 //! Rust 1.20
-//! 
+//!
 //!   - **Date:** August 31, 2017
 //!   - **Subject:** Associated constants, conference season, meetups, and more!
-//!   - **Audio:**
-//!       + [M4A][m4a]
-//!       + [MP3][mp3]
-//!       + [Ogg][ogg]
+//!   - [**Audio**][mp3]
 //!
-//! [m4a]: http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_20.m4a
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_20.mp3
-//! [ogg]: http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_20.ogg
+//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_20.mp3
 //!
-//! <audio style="width: 100%" style="width: 100%" title="News: Rust 1.20" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.m4a/cdn.newrustacean.com/news/rust_1_20.m4a">
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/news/rust_1_20.mp3">
-//!   <source src="http://www.podtrac.com/pts/redirect.ogg/cdn.newrustacean.com/news/rust_1_20.ogg">
+//! <audio style="width: 100%" title="News: Rust 1.20" controls preload=metadata>
+//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_20.mp3">
 //! </audio>
 //!
 //!
 //! Links and Notes
 //! ---------------
-//! 
+//!
 //! - Rust 1.20
 //!     + [blog post]
 //!     + [changelog]
@@ -32,7 +25,7 @@
 //! - [Rust Belt Rust 2017]
 //!     + [registration][rbr-reg] (and don't forget to use code `newrustacean` for 20% off!)
 //! - [rustrations.club]
-//! 
+//!
 //! [blog post]: https://blog.rust-lang.org/2017/08/31/Rust-1.20.html
 //! [changelog]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1200-2017-08-31
 //! [Associated items RFC]: https://github.com/rust-lang/rfcs/blob/master/text/0195-associated-items.md
@@ -42,10 +35,10 @@
 //! [Rust Belt Rust 2017]: http://www.rust-belt-rust.com
 //! [rbr-reg]: https://www.eventbrite.com/e/rust-belt-rust-conference-2017-registration-36237335847
 //! [rustrations.club]: http://rustrations.club
-//! 
+//!
 //! Sponsors
 //! --------
-//! 
+//!
 //!   - [Anthony Deschamps]
 //!   - Anthony Scotti
 //!   - Aleksey Pirogov
@@ -172,14 +165,14 @@ impl Foo for _Baz {}
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+  use super::*;
 
-    #[test]
-    fn it_works() {
-        // assert_eq!(Foo::FOO, 0);
-        assert_eq!(_Bar::_BAR, 50);
-        assert_eq!(_Bar::FOO, 0);
-        assert_eq!(_Baz::_BAZ, 100);
-        assert_eq!(_Baz::FOO, 0); 
-    }
+  #[test]
+  fn it_works() {
+    // assert_eq!(Foo::FOO, 0);
+    assert_eq!(_Bar::_BAR, 50);
+    assert_eq!(_Bar::FOO, 0);
+    assert_eq!(_Baz::_BAZ, 100);
+    assert_eq!(_Baz::FOO, 0);
+  }
 }
