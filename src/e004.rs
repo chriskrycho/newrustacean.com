@@ -3,10 +3,10 @@
 //!   - **Date:** October 29, 2015
 //!   - **Subject:** Functions, methods, closures, and function as arguments!
 //!   - [**Audio**][mp3]
-//! 
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e004.mp3
 //!
-//! <audio style="width: 100%" title="Functionalized" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e004.mp3" />
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e004.mp3
+//!
+//! <audio style="width: 100%" title="Functionalized" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e004.mp3" />
 //!
 //! # Notes
 //!

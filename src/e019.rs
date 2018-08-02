@@ -4,11 +4,11 @@
 //!   - **Subject:** The final pieces of the story for (single-threaded) memory
 //!     management in Rust.
 //!   - [**Audio**][mp3]
-//! 
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e019.mp3
+//!
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e019.mp3
 //!
 //! <audio style="width: 100%" title="Let's `Clone` a `Cow`!" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e019.mp3">
+//!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e019.mp3">
 //! </audio>
 //!
 //!

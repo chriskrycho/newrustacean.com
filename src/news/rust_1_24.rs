@@ -4,10 +4,10 @@
 //!   - **Subject:** Performance wins, incremental compilation, and the Rust 2018 Roadmap and Epoch.
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_24.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_24.mp3
 //!
 //! <audio style="width: 100%" title="Crates You Should Know: Serde" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_24.mp3">
+//!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_24.mp3">
 //! </audio>
 //!
 //!

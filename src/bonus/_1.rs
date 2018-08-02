@@ -3,7 +3,7 @@
 //!   - **Date:** November 25, 2015
 //!   - **Subject:** The delights and challenges of knowing (or even just
 //!     learning) lots of languages.
-//!   - [**Audio**](http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus_1.mp3
+//!   - [**Audio**](https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/1.mp3
 //!
 //! <audio
 //!     style="width: 100%"
@@ -12,7 +12,7 @@
 //!     title="Polyglot programming promises and perils"
 //!     controls
 //!     preload=metadata
-//!     src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus_1.mp3"
+//!     src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/1.mp3"
 //! >
 //!
 //! Sometimes, you're doing a technical interview, and you just cannot figure

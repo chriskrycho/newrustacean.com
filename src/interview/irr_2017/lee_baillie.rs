@@ -4,10 +4,10 @@
 //!   - **Subject:** Lee's experience designing a new website for Rust.
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr_2017/lee_baillie.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr_2017/lee_baillie.mp3
 //!
 //! <audio style="width: 100%" title="Jonathan Turner::Part 3" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr_2017/lee_baillie.mp3">
+//!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr_2017/lee_baillie.mp3">
 //! </audio>
 //!
 //!

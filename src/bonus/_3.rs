@@ -4,9 +4,9 @@
 //!   - **Subject:** The value of a good community, and how you can help Rust today.
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/bonus_3.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/3.mp3
 //!
-//! <audio style="width: 100%" title="Building as a community" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/bonus_3.mp3" />
+//! <audio style="width: 100%" title="Building as a community" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/3.mp3" />
 //!
 //!
 //! Notes

@@ -5,9 +5,9 @@
 //!     we're all just people muddling along and doing our best.
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/9.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/9.mp3
 //!
-//! <audio style="width: 100%" title="Bonus 9: Open source is just normal people" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/9.mp3">
+//! <audio style="width: 100%" title="Bonus 9: Open source is just normal people" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/9.mp3">
 //!
 //!
 //! Links and Notes

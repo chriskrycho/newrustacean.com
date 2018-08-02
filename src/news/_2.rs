@@ -4,10 +4,10 @@
 //!   - **Subject:** Rust's achievements in 2016 and goals for 2017
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/2.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/2.mp3
 //!
 //! <audio style="width: 100%" title="Rust's achievements in 2016 and goals for 2017" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/2.mp3">
+//!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/2.mp3">
 //! </audio>
 //!
 //! Links

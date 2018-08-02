@@ -3,10 +3,10 @@
 //!   - **Date:** January 8, 2017
 //!   - **Subject:** A pull-parser for reading and writing XML.
 //!   - [**Audio**][mp3]
-//! 
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/csyk_1.mp3
 //!
-//! <audio style="width: 100%" title="quick-xml" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/csyk_1.mp3" />
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/csyk_1.mp3
+//!
+//! <audio style="width: 100%" title="quick-xml" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/csyk_1.mp3" />
 //!
 //! Links
 //! -----

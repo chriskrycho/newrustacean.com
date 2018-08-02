@@ -4,10 +4,10 @@
 //!   - **Subject:** On the responsibilities and opportunities we have to help
 //!     others with our knowledge and abilities.
 //!   - [**Audio**][mp3]
-//! 
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/8.mp3
 //!
-//! <audio style="width: 100%" title="Giving back (by teaching)" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/8.mp3"/>
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/8.mp3
+//!
+//! <audio style="width: 100%" title="Giving back (by teaching)" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/8.mp3"/>
 //!
 //!
 //! Notes

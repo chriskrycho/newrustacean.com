@@ -5,10 +5,10 @@
 //!     celebrate with stickers and shirts!
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/meta/2.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/meta/2.mp3
 //!
 //! <audio style="width: 100%" title="Crates You Should Know: Rayon" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/meta/2.mp3">
+//!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/meta/2.mp3">
 //! </audio>
 //!
 //!

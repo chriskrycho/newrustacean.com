@@ -3,10 +3,10 @@
 //!   - **Date:** November 16, 2015
 //!   - **Subject:** Designing APIs, and using packages ("crates") and modules
 //!   - [**Audio**][mp3]
-//! 
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e006.mp3
 //!
-//! <audio style="width: 100%" title="Modularize this!" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e006.mp3" />
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e006.mp3
+//!
+//! <audio style="width: 100%" title="Modularize this!" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e006.mp3" />
 //!
 //! # Notes
 //!

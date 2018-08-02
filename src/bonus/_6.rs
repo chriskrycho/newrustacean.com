@@ -5,9 +5,9 @@
 //!     pieces of the Rust ecosystem.
 //!   - [**Audio**][mp3]
 //! 
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/6.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/6.mp3
 //!
-//! <audio style="width: 100%" title="It doesn't have to be sexy" controls preload=metadata src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/6.mp3" />
+//! <audio style="width: 100%" title="It doesn't have to be sexy" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/6.mp3" />
 //!
 //!
 //! Notes

@@ -4,10 +4,10 @@
 //!   - **Subject:** Getting into the nitty-gritty with Rust's traits.
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e009.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e009.mp3
 //!
 //! <audio style="width: 100%" title="Composing a Rustic tune" controls preload=metadata>
-//!   <source src="http://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e009.mp3">
+//!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e009.mp3">
 //! </audio>
 //!
 //!
