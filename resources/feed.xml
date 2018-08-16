@@ -4,14 +4,14 @@
         <title>New Rustacean – learning the Rust programming language</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.5.11(3080); Mac OS X Version 10.13.6 (Build 17G65) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.5.12(3118); Mac OS X Version 10.13.6 (Build 17G65) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 28 Jul 2018 14:18:26 -0600</pubDate>
-        <lastBuildDate>Sat, 28 Jul 2018 14:18:26 -0600</lastBuildDate>
+        <pubDate>Thu, 16 Aug 2018 07:25:34 -0600</pubDate>
+        <lastBuildDate>Thu, 16 Aug 2018 07:25:35 -0600</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -40,6 +40,153 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>News: Rust 1.28</title>
+            <link>http://newrustacean.com/show_notes/news/rust_1_28/</link>
+            <description><![CDATA[<p>Stable `#[global_allocator]`, more Rust 2018 Edition schedule news, video learning resources, and a static site genrator!</p>
+<h2 id="show-notes">Show Notes</h2>
+<ul>
+<li>Rust 1.28:
+<ul>
+<li><a href="https://blog.rust-lang.org/2018/08/02/Rust-1.28.html">blog post</a></li>
+<li><a href="https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1280-2018-08-02">release notes</a></li>
+</ul></li>
+<li><code>wee_alloc</code>:
+<ul>
+<li><a href="https://github.com/rustwasm/wee_alloc">repository</a></li>
+<li><a href="http://fitzgeraldnick.com/2018/02/09/wee-alloc.html">blog post</a></li>
+</ul></li>
+<li><a href="https://www.ncameron.org/blog/rustfmt-1-rc/">rustfmt RC</a></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<ul>
+<li>Aaron Turon</li>
+<li>Alexander Payne</li>
+<li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
+<li>Anthony Scotti</li>
+<li>Antonin Carette</li>
+<li>Aleksey Pirogov</li>
+<li>Andreas Fischer</li>
+<li>Andrew Thompson</li>
+<li>Austin LeSure</li>
+<li><a href="https://github.com/behnam">Behnam Esfahbod</a></li>
+<li>Benjamin Wasty</li>
+<li>Brent Vatne</li>
+<li>Brian Casiello</li>
+<li>Chap Lovejoy</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li>Chris Jones</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="http://github.com/anxiousmodernman">Coleman McFarland</a></li>
+<li><a href="https://github.com/damienstanton">Damien Stanton</a></li>
+<li>Dan Abrams</li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://github.com/gisleburt">Daniel Mason</a></li>
+<li><a href="https://6ftdan.com/">Daniel P. Clark</a></li>
+<li><a href="http://GitHub.com/DataRiot">David W. Allen</a></li>
+<li>David Hewson</li>
+<li>Derek Buckley</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Eugene Bulkin</li>
+<li>[Hans Fjällemark]</li>
+<li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
+<li><a href="https://www.ianmjones.com/">Ian Jones</a></li>
+<li><a href="https://github.com/Limeth">Jakub “Limeth” Hlusička</a></li>
+<li>James Cooper</li>
+<li>Jerome Froelich</li>
+<li>Joar Wandborg</li>
+<li><a href="http://www.cindur.com/">John Rudnick</a></li>
+<li>Jon</li>
+<li>Jonathan Turner</li>
+<li>Joseph Hain</li>
+<li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li>
+<li>Justin Ossevoort</li>
+<li><a href="https://github.com/kaedroho/">Karl Hobley</a></li>
+<li>Keith Gray</li>
+<li>Kilian Rault</li>
+<li>Laurie Hedge</li>
+<li>Luca Schmid</li>
+<li><a href="http://luizirber.org/">Luiz Irber</a></li>
+<li>Mark LeMoine</li>
+<li><a href="https://github.com/epsilonhalbe">Martin Heuschober</a>:</li>
+<li>Masashi Fujita</li>
+<li>Matt Rudder</li>
+<li>Matthew Brenner</li>
+<li>Matthias Ruszala</li>
+<li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li>
+<li><a href="https://github.com/messense">Messense Lv</a></li>
+<li>Micael Bergeron</li>
+<li><a href="http://influential.co/">Nathan Sculli</a></li>
+<li><a href="http://github.com/ncoish">Nick Coish</a></li>
+<li><a href="https://github.com/nastevens">Nick Stevens</a></li>
+<li><a href="http://oluseyi.info/">Oluseyi Sonaiya</a></li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
+<li><a href="https://twitter.com/patrickod">Patrick O’Doherty</a></li>
+<li>[Paul Naranja]</li>
+<li>Peter Tillemans</li>
+<li>Ralph Giles (“rillian”)</li>
+<li>Raj Venkalil</li>
+<li><a href="http://www.inosion.com">Ramon Buckley</a></li>
+<li>Randy MacLeod</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Robert Chrzanowski</li>
+<li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
+<li><a href="https://github.com/osialr">Ryan Osial</a></li>
+<li>Sascha Grunert</li>
+<li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
+<li>Shane Utt</li>
+<li><a href="https://www.simonhdickson.com/">Simon Dickson</a></li>
+<li>Simon G.</li>
+<li>Steve Jenson</li>
+<li>Steven Knight</li>
+<li>Steven Murawksi</li>
+<li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
+<li>Tim Brooks</li>
+<li>Timm Preetz</li>
+<li>Tom Prince</li>
+<li>Ty Overby</li>
+<li>Tyler Harper</li>
+<li>Vesa Kaihlavirta</li>
+<li>Victor Kruger</li>
+<li>Will Greenberg</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+<li>Yaacov Finkelman</li>
+<li>Zachary Snyder</li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+
+]]></description>
+            <pubDate>Thu, 16 Aug 2018 17:00:00 -0600</pubDate>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_28.mp3" length="0" type="audio/mpeg"/>
+            <guid isPermaLink="false">E520BED3-72F2-48A0-A4A6-CEC066A465B1</guid>
+            <itunes:summary>Stable `#[global_allocator]`, more Rust 2018 Edition schedule news, video learning resources, and a static site genrator!</itunes:summary>
+            <itunes:episodeType>full</itunes:episodeType>
+        </item>
         <item>
             <title>e026: Functional Programming Ideas</title>
             <link>http://newrustacean.com/show_notes/e026/</link>
