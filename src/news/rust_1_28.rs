@@ -2,7 +2,7 @@
 //!
 //!   - **Date:** August 16, 2018
 //!   - **Subject:** Stable `#[global_allocator]`, more Rust 2018 Edition
-//!     schedule news, video learning resources, and a static site genrator!
+//!     schedule news, video learning resources, and a static site generator!
 //!   - [**Audio**][mp3]
 //!   - [**Script**][script]
 //!
