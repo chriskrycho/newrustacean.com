@@ -24,12 +24,17 @@
 //!     - [repository]
 //!     - [blog post][wee bp]
 //! - [rustfmt RC]
+//! - Community
+//!     - [Nick Cameron’s LinuxConfAu 2018 tutorial]
+//!     - [Gutenberg]
 //!
 //! [blog post]: https://blog.rust-lang.org/2018/08/02/Rust-1.28.html
 //! [release notes]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1280-2018-08-02
 //! [repository]: https://github.com/rustwasm/wee_alloc
 //! [wee bp]: http://fitzgeraldnick.com/2018/02/09/wee-alloc.html
 //! [rustfmt RC]: https://www.ncameron.org/blog/rustfmt-1-rc/
+//! [Nick Cameron’s LinuxConfAu 2018 tutorial]: https://www.youtube.com/watch?v=vqavdUGKeb4
+//! [Gutenberg]: https://getgutenberg.io
 //!
 //! Sponsors
 //! --------
