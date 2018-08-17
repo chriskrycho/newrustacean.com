@@ -43,7 +43,7 @@
         <item>
             <title>News: Rust 1.28</title>
             <link>http://newrustacean.com/show_notes/news/rust_1_28/</link>
-            <description><![CDATA[<p>Stable `#[global_allocator]`, more Rust 2018 Edition schedule news, video learning resources, and a static site genrator!</p>
+            <description><![CDATA[<p>Stable `#[global_allocator]`, more Rust 2018 Edition schedule news, video learning resources, and a static site generator!</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
 <li>Rust 1.28:
@@ -57,6 +57,10 @@
 <li><a href="http://fitzgeraldnick.com/2018/02/09/wee-alloc.html">blog post</a></li>
 </ul></li>
 <li><a href="https://www.ncameron.org/blog/rustfmt-1-rc/">rustfmt RC</a></li>
+<li><ul>
+<li><a href="https://www.youtube.com/watch?v=vqavdUGKeb4">Nick Cameron’s LinuxConfAu 2018 tutorial</a></li>
+<li><a href="https://getgutenberg.io">Gutenberg</a></li>
+</ul></li>
 </ul>
 <h2 id="sponsors">Sponsors</h2>
 <ul>
