@@ -64,7 +64,7 @@
 //! [13]: https://github.com/brson/taskcluster-crater
 //! [14]: http://semver.org
 //! [15]: http://blog.rust-lang.org/2014/10/30/Stability.html
-//! [16]: https://doc.rust-lang.org/book/documentation.html
+//! [16]: https://doc.rust-lang.org/book/second-edition/ch14-02-publishing-to-crates-io.html#making-useful-documentation-comments
 //!
 //! # Follow/Support
 //!
