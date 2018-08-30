@@ -55,7 +55,7 @@
 //! [l2]: https://intermezzos.github.io/
 //! [l3]: https://doc.rust-lang.org/book/macros.html
 //! [l4]: http://rustbyexample.com/macros.html
-//! [l5]: https://doc.rust-lang.org/reference.html#macros
+//! [l5]: https://doc.rust-lang.org/reference/macros.html
 //! [l6]: https://www.cs.indiana.edu/ftp/techreports/TR206.pdf
 //! [l7]: http://www.ncameron.org/blog/macros/
 //! [l8]: http://ncameron.org/blog/macros-in-rust-pt1/
