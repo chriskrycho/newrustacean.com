@@ -2313,7 +2313,7 @@
 </ul>
 ]]></description>
             <pubDate>Sat, 30 Dec 2017 16:00:00 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr_2017/matt_gathu.mp3" length="20399582" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr/matt_gathu.mp3" length="20399582" type="audio/mpeg"/>
             <guid isPermaLink="false">9C7DCF08-7108-41F4-9248-3A7BE4224605</guid>
             <itunes:subtitle>Matt's experience porting wget to Rust.</itunes:subtitle>
             <itunes:summary>Matt's experience porting wget to Rust.</itunes:summary>
@@ -2436,7 +2436,7 @@
 </ul>
 ]]></description>
             <pubDate>Tue, 26 Dec 2017 13:35:16 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr_2017/lee_baillie.mp3" length="23161949" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr/lee_baillie.mp3" length="23161949" type="audio/mpeg"/>
             <guid isPermaLink="false">F7C7DD57-3879-4F0B-84B7-FB048BD27316</guid>
             <itunes:subtitle>Lee’s experience designing a new website for Rust.</itunes:subtitle>
             <itunes:summary>Lee’s experience designing a new website for Rust.</itunes:summary>
@@ -2562,7 +2562,7 @@
 </ul>
 ]]></description>
             <pubDate>Wed, 20 Dec 2017 22:00:00 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr_2017/anna_liao.mp3" length="28317123" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr/anna_liao.mp3" length="28317123" type="audio/mpeg"/>
             <guid isPermaLink="false">D9A7E541-7150-42D4-9C7F-4D888738B29E</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Anna's experience learning Rust while porting a Raspberry Pi Python project as part of the Increasing Rust’s Reach 2017 program.</itunes:summary>
@@ -2574,7 +2574,7 @@
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/katie_nolan/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Fri, 15 Dec 2017 07:46:41 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/katie_nolan.mp3" length="5174412" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/katie_nolan.mp3" length="5174412" type="audio/mpeg"/>
             <guid isPermaLink="false">13D7F9E3-5FF9-46DF-854B-EC6C0071E0C2</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
@@ -2586,7 +2586,7 @@
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/ben_beckwith/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Thu, 14 Dec 2017 18:26:20 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/ben_beckwith.mp3" length="5512125" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/ben_beckwith.mp3" length="5512125" type="audio/mpeg"/>
             <guid isPermaLink="false">DB1645B8-3609-4D0A-9799-5FA13093C42F</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
@@ -2598,7 +2598,7 @@
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/andrew_hobden/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Wed, 13 Dec 2017 16:20:00 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/andrew_hobden.mp3" length="5785896" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/andrew_hobden.mp3" length="5785896" type="audio/mpeg"/>
             <guid isPermaLink="false">38546A70-AF33-4779-8C51-460BBB9639DC</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
@@ -2610,7 +2610,7 @@
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/parry_wilcox/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Tue, 12 Dec 2017 07:05:27 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/parry_wilcox.mp3" length="6265288" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/parry_wilcox.mp3" length="6265288" type="audio/mpeg"/>
             <guid isPermaLink="false">22BFBE09-3535-47CC-9B24-E42F23E939CF</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
@@ -2622,7 +2622,7 @@
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/matthias_endler/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Mon, 11 Dec 2017 17:50:53 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/matthias_endler.mp3" length="6269897" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/matthias_endler.mp3" length="6269897" type="audio/mpeg"/>
             <guid isPermaLink="false">F5350AC4-F5F5-4264-912C-79F4E6FF9365</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
@@ -2634,7 +2634,7 @@
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/ben_striegel/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Sun, 10 Dec 2017 08:15:05 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/ben_striegel.mp3" length="5945558" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/ben_striegel.mp3" length="5945558" type="audio/mpeg"/>
             <guid isPermaLink="false">EF790105-EDD7-4E65-BC67-05354771915D</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
@@ -2646,7 +2646,7 @@
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/holden_marcsisin/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Sat, 09 Dec 2017 09:15:00 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/holden_marcsisin.mp3" length="6867487" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/holden_marcsisin.mp3" length="6867487" type="audio/mpeg"/>
             <guid isPermaLink="false">954E2D5F-0982-4148-B8C3-BFEBA198594B</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
@@ -2658,7 +2658,7 @@
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/esty_thomas/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Thu, 07 Dec 2017 19:15:00 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/esty_thomas.mp3" length="5855598" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/esty_thomas.mp3" length="5855598" type="audio/mpeg"/>
             <guid isPermaLink="false">A663E935-6F40-4085-9B45-8B9D2EF0C585</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.
@@ -2672,7 +2672,7 @@
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/thomas_gideon/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Wed, 06 Dec 2017 16:30:00 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/thomas_gideon.mp3" length="5386652" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/thomas_gideon.mp3" length="5386652" type="audio/mpeg"/>
             <guid isPermaLink="false">539362B6-B68B-428E-A3BE-493B0EBFC784</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.
@@ -2687,7 +2687,7 @@
             <description><![CDATA[<p>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</p>
 ]]></description>
             <pubDate>Sun, 26 Nov 2017 16:14:25 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/tom_kriezkowski.mp3" length="4824919" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/tom_kriezkowski.mp3" length="4824919" type="audio/mpeg"/>
             <guid isPermaLink="false">C59826B3-E6E7-47EE-8077-B14A49FA23DA</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
@@ -2834,7 +2834,7 @@
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/jess_saxeter/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Sun, 19 Nov 2017 13:00:00 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/jess_saxeter.mp3" length="5110379" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/jess_saxeter.mp3" length="5110379" type="audio/mpeg"/>
             <guid isPermaLink="false">E2E9A3A8-7B9F-4379-82DD-B021EC9F5A28</guid>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
             <itunes:duration>5:17</itunes:duration>
@@ -2847,7 +2847,7 @@
             <description><![CDATA[<p>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</p>
 ]]></description>
             <pubDate>Sat, 18 Nov 2017 13:55:02 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/pete_lyons.mp3" length="4965749" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/pete_lyons.mp3" length="4965749" type="audio/mpeg"/>
             <guid isPermaLink="false">E0CDEC86-D180-4AB3-968E-6DB4718D5CA7</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.
@@ -2862,7 +2862,7 @@
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/arun_kulshreshtha/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Tue, 14 Nov 2017 20:02:51 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/arun_kulshreshtha.mp3" length="5261272" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/arun_kulshreshtha.mp3" length="5261272" type="audio/mpeg"/>
             <guid isPermaLink="false">3BCC7FC9-B335-45A3-BE58-1B2DE224958B</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.
@@ -2928,7 +2928,7 @@
 
 <p>**Chris:** Thank you!</p>]]></description>
             <pubDate>Mon, 13 Nov 2017 21:02:36 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/anthony_deschamps.mp3" length="5261272" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/anthony_deschamps.mp3" length="5261272" type="audio/mpeg"/>
             <guid isPermaLink="false">308765C1-9026-4AF4-9C34-36A337DC0BA3</guid>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
             <itunes:duration>5:27</itunes:duration>
@@ -2940,7 +2940,7 @@
             <link>http://newrustacean.com/show_notes/interview/rbr_2017/colin_dean/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Sat, 11 Nov 2017 13:22:48 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr_2017/colin_dean.mp3" length="7000792" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/colin_dean.mp3" length="7000792" type="audio/mpeg"/>
             <guid isPermaLink="false">6FD0CDF5-183D-4D03-A686-C7F4646DBE5C</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</itunes:summary>
