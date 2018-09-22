@@ -1,6 +1,8 @@
 //! Bonus episodes: shorter, and usually more about community or philosophy.
 
 pub mod _1;
+pub mod _10;
+pub mod _11;
 pub mod _2;
 pub mod _3;
 pub mod _4;
@@ -9,4 +11,3 @@ pub mod _6;
 pub mod _7;
 pub mod _8;
 pub mod _9;
-pub mod _10;
