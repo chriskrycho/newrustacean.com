@@ -1,18 +1,25 @@
-//! "Becoming a Contributor"
+//! Burnout
 //!
-//!   - **Date:** March 17, 2018
-//!   - **Subject:** My Rust Belt Rust 2017 talk!
-//!   - [**Audio:**][mp3]
+//!   - **Date:** September 22, 2018
+//!   - **Subject:** What burnout is, the many ways it can happen to us, and
+//!     what we can do about it.
+//!   - [**download mp3**][mp3]
+//!   - [**script**][script]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/11.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/burnout.mp3
+//! [script]: https://newrustacean.com/show_notes/bonus/burnout/struct.script
 //!
-//! <audio
-//!     style="width: 100%"
-//!     title="Crates You Should Know: Serde"
-//!     controls
-//!     preload=metadata
-//!     src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/11.mp3"
-//! >
+//! <audio style="width: 100%" title="Bonus: Burnout" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/burnout.mp3">
+//!
+//! Show Notes
+//! ----------
+//!
+//!   - [My blog posts on burnout][blog] (and [the RSS feed][rss])
+//!   - [Mayo clinic guidelines][mayo]
+//!
+//! [blog]: https://www.chriskrycho.com/burnout
+//! [rss]: http://www.chriskrycho.com/feeds/burnout.xml
+//! [mayo]: https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/burnout/art-20046642
 //!
 //!
 //! Sponsors
@@ -31,28 +38,27 @@
 //!   - Benjamin Wasty
 //!   - Brent Vatne
 //!   - Brian Casiello
+//!   - Brian Manning
 //!   - Chap Lovejoy
 //!   - [Charlie Egan]
 //!   - Chris Jones
 //!   - [Chris Palmer]
-//!   - [Coleman McFarland]
 //!   - [Damien Stanton]
 //!   - Dan Abrams
+//!   - Daniel Bross
 //!   - [Daniel Collin]
 //!   - [Daniel Mason]
 //!   - [Daniel P. Clark]
-//!   - [David W. Allen]
 //!   - David Hewson
-//!   - Derek Buckley
 //!   - [Derek Morr]
 //!   - Eugene Bulkin
+//!   - [Graham Wihlidal]
 //!   - [Hans Fjällemark]
 //!   - [Henri Sivonen]
 //!   - [Ian Jones]
-//!   - [Jakub "Limeth" Hlusička]
 //!   - James Cooper
 //!   - Jerome Froelich
-//!   - Joar Wandborg
+//!   - [Joar Wandborg]
 //!   - [John Rudnick]
 //!   - Jon
 //!   - Jonathan Turner
@@ -64,6 +70,7 @@
 //!   - Kilian Rault
 //!   - Laurie Hedge
 //!   - Luca Schmid
+//!   - Lukas Eller
 //!   - [Luiz Irber]
 //!   - Mark LeMoine
 //!   - [Martin Heuschober]:
@@ -74,14 +81,17 @@
 //!   - [Max Jacobson]
 //!   - [Messense Lv]
 //!   - Micael Bergeron
+//!   - [Michael Mc Connell]
 //!   - [Nathan Sculli]
 //!   - [Nick Coish]
 //!   - [Nick Stevens]
+//!   - [Nicolas Pochet]
 //!   - [Oluseyi Sonaiya]
 //!   - Ovidiu Curcan
 //!   - [Pascal Hertleif]
 //!   - [Patrick O'Doherty]
-//!   - [Paul Naranja]
+//!   - Paul Naranja
+//!   - Paul Osborne
 //!   - Peter Tillemans
 //!   - Ralph Giles ("rillian")
 //!   - Raj Venkalil
@@ -89,10 +99,10 @@
 //!   - Randy MacLeod
 //!   - Raph Levien
 //!   - reddraggone9
+//!   - Richard Dallaway
 //!   - Robert Chrzanowski
 //!   - [Ryan Blecher]
 //!   - [Ryan Osial]
-//!   - Sascha Grunert
 //!   - [Sebastián Ramírez Magrí]
 //!   - Shane Utt
 //!   - [Simon Dickson]
@@ -119,17 +129,17 @@
 //! [Brent Vatne]: https://github.com/brentvatne
 //! [Charlie Egan]: https://charlieegan3.com
 //! [Chris Palmer]: http://home.red-oxide.org/
-//! [Coleman McFarland]: http://github.com/anxiousmodernman
 //! [Damien Stanton]: https://github.com/damienstanton
 //! [Daniel Collin]: https://twitter.com/daniel_collin
 //! [Daniel Mason]: https://github.com/gisleburt
 //! [Daniel P. Clark]: https://6ftdan.com/
 //! [David W. Allen]: http://GitHub.com/DataRiot
 //! [Derek Morr]: https://twitter.com/derekmorr
-//! [Fjällemark]: https://fjallemark.com/
+//! [Graham Wihlidal]: https://wihlidal.com/
+//! [Hans Fjällemark]: https://fjallemark.com/
 //! [Henri Sivonen]: https://hsivonen.fi/
 //! [Ian Jones]: https://www.ianmjones.com/
-//! [Jakub "Limeth" Hlusička]: https://github.com/Limeth
+//! [Joar Wandborg]: Joar Wandborg
 //! [John Rudnick]: http://www.cindur.com/
 //! [Jupp Müller]: https://de.linkedin.com/in/juppm
 //! [Karl Hobley]: https://github.com/kaedroho/
@@ -137,9 +147,11 @@
 //! [Martin Heuschober]: https://github.com/epsilonhalbe
 //! [Max Jacobson]: https://twitter.com/maxjacobson
 //! [Messense Lv]: https://github.com/messense
+//! [Michael Mc Connell]: https://www.linkedin.com/in/michaelmcdonnell/
 //! [Nathan Sculli]: http://influential.co/
 //! [Nick Coish]: http://github.com/ncoish
 //! [Nick Stevens]: https://github.com/nastevens
+//! [Nicolas Pochet]: https://github.com/n-pochet
 //! [Oluseyi Sonaiya]: http://oluseyi.info/
 //! [Pascal Hertleif]: https://pascalhertleif.de/
 //! [Patrick O'Doherty]: https://twitter.com/patrickod
@@ -175,5 +187,5 @@
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-#[doc(include = "../docs/bonus/10-script.md")]
+#[doc(include = "../docs/bonus/burnout-script.md")]
 pub struct Script;
