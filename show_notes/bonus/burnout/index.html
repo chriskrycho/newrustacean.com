@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `burnout` mod in crate `show_notes`."><meta name="keywords" content="rust, rustlang, rust-lang, burnout"><title>show_notes::bonus::burnout - Rust</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css"><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script src="../../../storage.js"></script><link rel="shortcut icon" href="http://newrustacean.com/favicon.ico"></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='logo' width='100'></a><p class='location'>Module burnout</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li></ul></div><p class='location'><a href='../../index.html'>show_notes</a>::<wbr><a href='../index.html'>bonus</a></p><script>window.sidebarCurrent = {name: 'burnout', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../../settings.html"><img src="../../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Module <a href='../../index.html'>show_notes</a>::<wbr><a href='../index.html'>bonus</a>::<wbr><a class="mod" href=''>burnout</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../../src/show_notes/bonus/burnout.rs.html#1-191' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>Burnout</p>
+<ul>
+<li><strong>Date:</strong> September 22, 2018</li>
+<li><strong>Subject:</strong> What burnout is, the many ways it can happen to us, and
+what we can do about it.</li>
+<li><a href="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/burnout.mp3"><strong>download mp3</strong></a></li>
+<li><a href="https://newrustacean.com/show_notes/bonus/burnout/struct.script"><strong>script</strong></a></li>
+</ul>
+<p><audio style="width: 100%" title="Bonus: Burnout" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/burnout.mp3"></p>
+<h2 id="show-notes" class="section-header"><a href="#show-notes">Show Notes</a></h2>
+<ul>
+<li><a href="https://www.chriskrycho.com/burnout">My blog posts on burnout</a> (and <a href="http://www.chriskrycho.com/feeds/burnout.xml">the RSS feed</a>)</li>
+<li><a href="https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/burnout/art-20046642">Mayo clinic guidelines</a></li>
+</ul>
+<h2 id="sponsors" class="section-header"><a href="#sponsors">Sponsors</a></h2>
+<ul>
+<li>Aaron Turon</li>
+<li>Alexander Payne</li>
+<li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
+<li>Anthony Scotti</li>
+<li>Antonin Carette</li>
+<li>Aleksey Pirogov</li>
+<li>Andreas Fischer</li>
+<li>Andrew Thompson</li>
+<li>Austin LeSure</li>
+<li><a href="https://github.com/behnam">Behnam Esfahbod</a></li>
+<li>Benjamin Wasty</li>
+<li>Brent Vatne</li>
+<li>Brian Casiello</li>
+<li>Brian Manning</li>
+<li>Chap Lovejoy</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li>Chris Jones</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li><a href="https://github.com/damienstanton">Damien Stanton</a></li>
+<li>Dan Abrams</li>
+<li>Daniel Bross</li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://github.com/gisleburt">Daniel Mason</a></li>
+<li><a href="https://6ftdan.com/">Daniel P. Clark</a></li>
+<li>David Hewson</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Eugene Bulkin</li>
+<li><a href="https://wihlidal.com/">Graham Wihlidal</a></li>
+<li><a href="https://fjallemark.com/">Hans Fjällemark</a></li>
+<li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
+<li><a href="https://www.ianmjones.com/">Ian Jones</a></li>
+<li>James Cooper</li>
+<li>Jerome Froelich</li>
+<li>[Joar Wandborg]</li>
+<li>[John Rudnick]</li>
+<li>Jon</li>
+<li>Jonathan Turner</li>
+<li>Joseph Hain</li>
+<li>[Jupp Müller]</li>
+<li>Justin Ossevoort</li>
+<li>[Karl Hobley]</li>
+<li>Keith Gray</li>
+<li>Kilian Rault</li>
+<li>Laurie Hedge</li>
+<li>Luca Schmid</li>
+<li>Lukas Eller</li>
+<li>[Luiz Irber]</li>
+<li>Mark LeMoine</li>
+<li>[Martin Heuschober]:</li>
+<li>Masashi Fujita</li>
+<li>Matt Rudder</li>
+<li>Matthew Brenner</li>
+<li>Matthias Ruszala</li>
+<li>[Max Jacobson]</li>
+<li>[Messense Lv]</li>
+<li>Micael Bergeron</li>
+<li>[Michael Mc Connell]</li>
+<li>[Nathan Sculli]</li>
+<li>[Nick Coish]</li>
+<li>[Nick Stevens]</li>
+<li>[Nicolas Pochet]</li>
+<li>[Oluseyi Sonaiya]</li>
+<li>Ovidiu Curcan</li>
+<li>[Pascal Hertleif]</li>
+<li>[Patrick O'Doherty]</li>
+<li>Paul Naranja</li>
+<li>Paul Osborne</li>
+<li>Peter Tillemans</li>
+<li>Ralph Giles (&quot;rillian&quot;)</li>
+<li>Raj Venkalil</li>
+<li>[Ramon Buckley]</li>
+<li>Randy MacLeod</li>
+<li>Raph Levien</li>
+<li>reddraggone9</li>
+<li>Richard Dallaway</li>
+<li>Robert Chrzanowski</li>
+<li>[Ryan Blecher]</li>
+<li>[Ryan Osial]</li>
+<li>[Sebastián Ramírez Magrí]</li>
+<li>Shane Utt</li>
+<li>[Simon Dickson]</li>
+<li>Simon G.</li>
+<li>Steve Jenson</li>
+<li>Steven Knight</li>
+<li>Steven Murawksi</li>
+<li>[Stuart Hinson]</li>
+<li>Tim Brooks</li>
+<li>Timm Preetz</li>
+<li>Tom Prince</li>
+<li>Ty Overby</li>
+<li>Tyler Harper</li>
+<li>Vesa Kaihlavirta</li>
+<li>Victor Kruger</li>
+<li>Will Greenberg</li>
+<li>[William Roe]</li>
+<li>Yaacov Finkelman</li>
+<li>Zachary Snyder</li>
+<li>Zaki</li>
+</ul>
+<p>[Joar Wandborg]: Joar Wandborg
+[John Rudnick]: http://www.cindur.com/
+[Jupp Müller]: https://de.linkedin.com/in/juppm
+[Karl Hobley]: https://github.com/kaedroho/
+[Luiz Irber]: http://luizirber.org/
+[Martin Heuschober]: https://github.com/epsilonhalbe
+[Max Jacobson]: https://twitter.com/maxjacobson
+[Messense Lv]: https://github.com/messense
+[Michael Mc Connell]: https://www.linkedin.com/in/michaelmcdonnell/
+[Nathan Sculli]: http://influential.co/
+[Nick Coish]: http://github.com/ncoish
+[Nick Stevens]: https://github.com/nastevens
+[Nicolas Pochet]: https://github.com/n-pochet
+[Oluseyi Sonaiya]: http://oluseyi.info/
+[Pascal Hertleif]: https://pascalhertleif.de/
+[Patrick O'Doherty]: https://twitter.com/patrickod
+[Philipp Keller]: https://twitter.com/hansapla
+[Ramon Buckley]: http://www.inosion.com
+[Ryan Blecher]: http://notryanb.github.io/
+[Ryan Osial]: https://github.com/osialr
+[Sebastián Ramírez Magrí]: https://www.twitter.com/sebasmagri
+[Simon Dickson]: https://www.simonhdickson.com/
+[Stuart Hinson]: http://stuarth.github.io/
+[William Roe]: http://willroe.me</p>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as
+well. You know who you are!)</p>
+<h3 id="become-a-sponsor" class="section-header"><a href="#become-a-sponsor">Become a sponsor</a></h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact" class="section-header"><a href="#contact">Contact</a></h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul>
+</li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul>
+</li>
+</ul>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Script.html"
+                                  title='struct show_notes::bonus::burnout::Script'>Script</a></td>
+                           <td class='docblock-short'>
+                                <p>Bonus: Burnout</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><link rel="stylesheet" href="/media-playback.css">
+<script type="text/javascript" src="/media-playback.js" defer></script>
+
+
+<script>window.rootPath = "../../../";window.currentCrate = "show_notes";</script><script src="../../../aliases.js"></script><script src="../../../main.js"></script><script defer src="../../../search-index.js"></script></body></html>
