@@ -76,7 +76,7 @@
 //!   - [Sebastián Ramírez Magrí]
 //!   - Shane Utt
 //!   - Simon G.
-//!   - Steven Murawksi
+//!   - Steven Murawski
 //!   - [Stuart Hinson]
 //!   - Tim Brooks
 //!   - Tom Prince

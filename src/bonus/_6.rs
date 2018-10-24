@@ -4,7 +4,7 @@
 //!   - **Subject:** Building (and celebrating) all the little, not-so-glorious
 //!     pieces of the Rust ecosystem.
 //!   - [**Audio**][mp3]
-//! 
+//!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/6.mp3
 //!
 //! <audio style="width: 100%" title="It doesn't have to be sexy" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/6.mp3" />
@@ -71,7 +71,7 @@
 //!   - Raph Levien
 //!   - reddraggone9
 //!   - Ryan Ollos
-//!   - Steven Murawksi
+//!   - Steven Murawski
 //!   - Vesa Kaihlavirta
 //!   - [William Roe]
 //!

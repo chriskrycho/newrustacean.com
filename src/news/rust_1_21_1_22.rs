@@ -109,7 +109,7 @@
 //!   - Sam Whited
 //!   - [Sebastián Ramírez Magrí]
 //!   - Simon G.
-//!   - Steven Murawksi
+//!   - Steven Murawski
 //!   - [Stuart Hinson]
 //!   - Tim Brooks
 //!   - Tom Prince

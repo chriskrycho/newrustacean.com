@@ -71,7 +71,7 @@ For a somewhat more complicated example of using both with an enum and pattern m
 
 And that's it! Once we understand the concepts behind them, the reference and dereference operators themselves are pretty simple. And that gives us the *background* we'll need to tackle the `Borrow` and `AsRef` traits, which will let us generalize these ideas to our smart pointer types---and that in turn will let us look at the `Cow` smart pointer type.
 
-Thanks as always to the sponsors who help make the show possible! This month, the sponsors included Chris Palmer, Daniel Collin, Eric Fulmer, Jared Smith, Raph Levien, Stephen Murawksi, and Vesa Khailavirta for sponsoring the show this month! You can see a full list of sponsors in the show notes, and the top tier of sponsors on a dedicated page on the website as well.
+Thanks as always to the sponsors who help make the show possible! This month, the sponsors included Chris Palmer, Daniel Collin, Eric Fulmer, Jared Smith, Raph Levien, Stephen Murawski, and Vesa Khailavirta for sponsoring the show this month! You can see a full list of sponsors in the show notes, and the top tier of sponsors on a dedicated page on the website as well.
 
 If you're interested in sponsoring the show, you can set up recurring contributions at Patreon.com/newrustacean, or one-off contributions at a variety of other services listed at the show website: newrustacean.com.
 

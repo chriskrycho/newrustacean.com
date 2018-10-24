@@ -108,7 +108,7 @@
 //!   - Ralph Giles ("rillian")
 //!   - Raph Levien
 //!   - reddraggone9
-//!   - Steven Murawksi
+//!   - Steven Murawski
 //!   - [Stuart Hinson]
 //!   - Ty Overby
 //!   - Tyler Harper

@@ -86,7 +86,7 @@
 //!   - Raph Levien
 //!   - reddraggone9
 //!   - Ryan Ollos
-//!   - Steven Murawksi
+//!   - Steven Murawski
 //!   - Vesa Kaihlavirta
 //!   - [William Roe]
 //!

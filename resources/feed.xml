@@ -4,14 +4,14 @@
         <title>New Rustacean – learning the Rust programming language</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.5.12(3118); Mac OS X Version 10.13.6 (Build 17G65) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.5.12(3118); Mac OS X Version 10.14 (Build 18A391) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 22 Sep 2018 21:21:58 -0600</pubDate>
-        <lastBuildDate>Sat, 22 Sep 2018 21:21:59 -0600</lastBuildDate>
+        <pubDate>Tue, 23 Oct 2018 21:29:10 -0600</pubDate>
+        <lastBuildDate>Tue, 23 Oct 2018 21:29:11 -0600</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -40,6 +40,146 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>Bonus 12: Translating Between Languages</title>
+            <link>http://newrustacean.com/show_notes/bonus/translating_between_languages/</link>
+            <description><![CDATA[<p>Musings inspired by a project translating TypeScript to Rust</p>
+<h2 id="sponsors">Sponsors</h2>
+<p>Thanks to Manning for sponsoring the show <em>and</em> giving all of you a 40%-off discount on their whole store (but especially Carol Nichols’ and Jake Goulding’s <em>Rust in Motion</em> video content and the <em>Rust in Action</em> MEAP!) at <a href="http://bit.ly/2OXnlEb">deals.manning.com/new-rustacean</a></p>
+<h3 id="patreon-sponsors">Patreon Sponsors</h3>
+<ul>
+<li>Aaron Turon</li>
+<li>Adam Green</li>
+<li>Aleksey Pirogov</li>
+<li>Alexander Payne</li>
+<li>Alexander Kryvomaz</li>
+<li>Andrew Thompson</li>
+<li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
+<li>Anthony Scotti</li>
+<li><a href="https://github.com/behnam">Behnam Esfahbod</a></li>
+<li>Benjamin Wasty</li>
+<li>Brandon ‘Spanky’ Mills</li>
+<li>Brian Casiello</li>
+<li>Brian Manning</li>
+<li><a href="http://www.stitthappens.com/">Bryan Stitt</a></li>
+<li>Bryce Johnston</li>
+<li>Caryn Finkelman</li>
+<li>Cass Costello</li>
+<li>Chap Lovejoy</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li>Chip</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li>Daniel</li>
+<li>Dan Abrams</li>
+<li>Daniel Bross</li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://github.com/gisleburt">Daniel Mason</a></li>
+<li>David Hewson</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Doug Reeves</li>
+<li>Eugene Bulkin</li>
+<li>Fábio Botelho</li>
+<li><a href="https://twitter.com/gaveen">Gaveen Prabhasara</a></li>
+<li><a href="https://wihlidal.com/">Graham Wihlidal</a></li>
+<li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
+<li><a href="https://www.ianmjones.com/">Ian Jones</a></li>
+<li>“Jake”“ferris”&quot; Taylor&quot;</li>
+<li>James Cooper</li>
+<li>James Hagans II</li>
+<li>Jerome Froelich</li>
+<li><a href="Joar%20Wandborg">Joar Wandborg</a></li>
+<li><a href="http://www.cindur.com/">John Rudnick</a></li>
+<li>Jon</li>
+<li><a href="https://www.coffeeandcode.com/">Jonathan Knapp</a></li>
+<li>Jonathan Turner</li>
+<li>Joseph Hain</li>
+<li>Joseph Marhee</li>
+<li>Justin Ossevoort</li>
+<li>Kai Yao</li>
+<li>Keith Gray</li>
+<li>Kilian Rault</li>
+<li>Lee Jenkins</li>
+<li>Luca Schmid</li>
+<li><a href="http://luizirber.org/">Luiz Irber</a></li>
+<li>Lukas Eller</li>
+<li><a href="https://github.com/epsilonhalbe">Martin Heuschober</a></li>
+<li>Masashi Fujita</li>
+<li>Matt Rudder</li>
+<li>Matthew Brenner</li>
+<li>Matthias Ruszala</li>
+<li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li>
+<li>Max R.R. Collada</li>
+<li><a href="https://github.com/messense">Messense Lv</a></li>
+<li>Micael Bergeron</li>
+<li><a href="https://www.linkedin.com/in/michaelmcdonnell/">Michael Mc Donnell</a></li>
+<li>Michael Sanders</li>
+<li><a href="http://influential.co/">Nathan Sculli</a></li>
+<li><a href="http://github.com/ncoish">Nick Coish</a></li>
+<li><a href="https://github.com/nastevens">Nick Stevens</a></li>
+<li><a href="https://github.com/n-pochet">Nicolas Pochet</a></li>
+<li>Olaf Leidinger</li>
+<li>Oliver Uvman</li>
+<li><a href="http://oluseyi.info/">Oluseyi Sonaiya</a></li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal</a></li>
+<li><a href="https://twitter.com/patrickod">Patrick O’Doherty</a></li>
+<li>Paul Naranja</li>
+<li>Paul Osborne</li>
+<li>Peter Tillemans</li>
+<li>Ralph Giles</li>
+<li><a href="http://www.inosion.com">Ramon Buckland</a></li>
+<li>Randy MacLeod</li>
+<li>Raph Levien</li>
+<li>Richard Dallaway</li>
+<li>Rob Tsuk</li>
+<li>Robert Chrzanowski</li>
+<li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
+<li><a href="https://github.com/osialr">Ryan Osial</a></li>
+<li>Scott Moeller</li>
+<li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
+<li><a href="https://www.simonhdickson.com/">Simon Dickson</a></li>
+<li>Simon G</li>
+<li>Steve Jenson</li>
+<li>Steven Knight</li>
+<li>Steven Murawski</li>
+<li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
+<li>Tim Brooks</li>
+<li>Tim Süberkrüb</li>
+<li>Tom Prince</li>
+<li>Toolmaker’s Guild</li>
+<li>Ty Overby</li>
+<li>Tyler Harper</li>
+<li>Victor Kruger</li>
+<li>Will Greenberg</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+<li>Zak van der Merwe</li>
+<li>Zachary Snyder</li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean: + Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a> + Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+<li>Chris Krycho + GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a> + Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul>
+<p>#[doc(include = “../docs/bonus/translating-between-languages.md”)] pub struct Script;</p>
+]]></description>
+            <pubDate>Tue, 23 Oct 2018 21:30:00 -0600</pubDate>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/translating_between_languages.mp3" length="15199355" type="audio/mpeg"/>
+            <guid isPermaLink="false">2B852FBD-75E5-4A1B-BB33-6934C48DE606</guid>
+            <itunes:summary>Musings inspired by a project translating TypeScript to Rust</itunes:summary>
+            <itunes:duration>15:43</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
+        </item>
         <item>
             <title>Bonus 11: Burnout</title>
             <link>http://newrustacean.com/show_notes/bonus/burnout/</link>
@@ -135,7 +275,7 @@
 <li>Simon G.</li>
 <li>Steve Jenson</li>
 <li>Steven Knight</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Timm Preetz</li>
@@ -286,7 +426,7 @@
 <li>Simon G.</li>
 <li>Steve Jenson</li>
 <li>Steven Knight</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Timm Preetz</li>
@@ -429,7 +569,7 @@
 <li>Simon G.</li>
 <li>Steve Jenson</li>
 <li>Steven Knight</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -589,7 +729,7 @@
 <li>Simon G.</li>
 <li>Steve Jenson</li>
 <li>Steven Knight</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -730,7 +870,7 @@
 <li>Simon G.</li>
 <li>Steve Jenson</li>
 <li>Steven Knight</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Timm Preetz</li>
@@ -864,7 +1004,7 @@
 <li>Simon G.</li>
 <li>Steve Jenson</li>
 <li>Steven Knight</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Timm Preetz</li>
@@ -992,7 +1132,7 @@
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Shane Utt</li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -1136,7 +1276,7 @@
 <li>Simon G.</li>
 <li>Steve Jenson</li>
 <li>Steven Knight</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Timm Preetz</li>
@@ -1275,7 +1415,7 @@
 <li>Simon G.</li>
 <li>Steve Jenson</li>
 <li>Steven Knight</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Timm Preetz</li>
@@ -1407,7 +1547,7 @@
 <li>Simon G.</li>
 <li>Steve Jenson</li>
 <li>Steven Knight</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Timm Preetz</li>
@@ -1525,7 +1665,7 @@
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Shane Utt</li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -1643,7 +1783,7 @@
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Shane Utt</li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -1764,7 +1904,7 @@
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Shane Utt</li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -1878,7 +2018,7 @@
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Shane Utt</li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -2005,7 +2145,7 @@
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Shane Utt</li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -2147,7 +2287,7 @@
 <li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -2289,7 +2429,7 @@
 <li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -2415,7 +2555,7 @@
 <li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -2538,7 +2678,7 @@
 <li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -2664,7 +2804,7 @@
 <li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -2928,7 +3068,7 @@
 <li>Sam Whited</li>
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -3157,7 +3297,7 @@
 <li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -3262,7 +3402,7 @@
 <li>reddraggone9</li>
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
 <li>Simon G.</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -3303,7 +3443,7 @@
             <title>News: Rust 1.20</title>
             <link>http://newrustacean.com/show_notes/news/rust_1_20/</link>
             <description><![CDATA[<p>Associated constants, conference season, meetups, and more!</p>
-<h2 id="links-and-notes">Links and Notes</h2><ul><li>Rust 1.20<ul><li><a href="https://blog.rust-lang.org/2017/08/31/Rust-1.20.html">blog post</a></li><li><a href="https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1200-2017-08-31">changelog</a></li><li><a href="https://github.com/rust-lang/rfcs/blob/master/text/0195-associated-items.md">Associated items RFC</a> – and see the code for today's show for examples of the variants I described on the show!</li></ul></li><li><a href="http://rustconf.com">RustConf 2017</a></li><li><a href="http://zurich.rustfest.eu">RustFest 2017</a><ul><li><a href="https://ti.to/asquera-event-ug/rustfest-zurich/">registration</a></li></ul></li><li><a href="http://www.rust-belt-rust.com">Rust Belt Rust 2017</a><ul><li><a href="https://www.eventbrite.com/e/rust-belt-rust-conference-2017-registration-36237335847">registration</a> (and don't forget to use code <code>newrustacean</code> for 20% off!)</li></ul></li><li><a href="http://rustrations.club">rustrations.club</a></li></ul><h2 id="sponsors">Sponsors</h2><ul><li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li><li>Anthony Scotti</li><li>Aleksey Pirogov</li><li>Andreas Fischer</li><li>Andrew Thompson</li><li>Austin LeSure</li><li><a href="https://github.com/behnam">Behnam Esfahbod</a></li><li>Benjamin Wasty</li><li>Brent Vatne</li><li><a href="https://charlieegan3.com">Charlie Egan</a></li><li>Chris Jones</li><li><a href="http://home.red-oxide.org/">Chris Palmer</a></li><li>Dan Abrams</li><li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li><li>[David W. Allen]</li><li><a href="https://twitter.com/derekmorr">Derek Morr</a></li><li>Eugene Bulkin</li><li><a href="https://hsivonen.fi/">Henri Sivonen</a></li><li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li><li>James Cooper</li><li>Jonathan Turner</li><li>Jordan Henderson</li><li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li><li>Justin Ossevoort</li><li><a href="https://github.com/kaedroho/">Karl Hobley</a></li><li>Keith Gray</li><li>Kilian Rault</li><li>Luca Schmid</li><li>Masashi Fujita</li><li>Matt Rudder</li><li>Matthew Piziak</li><li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li><li><a href="https://github.com/messense">Messense Lv</a></li><li>Micael Bergeron</li><li><a href="http://influential.co/">Nathan Sculli</a></li><li><a href="https://github.com/nastevens">Nick Stevens</a></li><li>Ovidiu Curcan</li><li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li><li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li><li>Peter Tillemans</li><li>Philipp Keller</li><li>Ralph Giles (&quot;rillian&quot;)</li><li>Randy MacLeod</li><li>Raph Levien</li><li>reddraggone9</li><li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li><li>Simon G.</li><li>Steven Murawksi</li><li><a href="http://stuarth.github.io/">Stuart Hinson</a></li><li>Tim Brooks</li><li>Tom Prince</li><li>Ty Overby</li><li>Tyler Harper</li><li>Vesa Kaihlavirta</li><li>Warren Harper</li><li><a href="http://willroe.me">William Roe</a></li><li>Zaki</li></ul><p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p><h3 id="become-a-sponsor">Become a sponsor</h3><ul><li><a href="https://www.patreon.com/newrustacean">Patreon</a></li><li><a href="https://venmo.com/chriskrycho">Venmo</a></li><li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li><li><a href="https://cash.me/$chriskrycho">Cash.me</a></li><li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li><li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li></ul><h2 id="contact">Contact</h2><ul><li>New Rustacean:<ul><li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li><li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li></ul></li><li>Chris Krycho<ul><li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li><li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li></ul></li></ul>
+<h2 id="links-and-notes">Links and Notes</h2><ul><li>Rust 1.20<ul><li><a href="https://blog.rust-lang.org/2017/08/31/Rust-1.20.html">blog post</a></li><li><a href="https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1200-2017-08-31">changelog</a></li><li><a href="https://github.com/rust-lang/rfcs/blob/master/text/0195-associated-items.md">Associated items RFC</a> – and see the code for today's show for examples of the variants I described on the show!</li></ul></li><li><a href="http://rustconf.com">RustConf 2017</a></li><li><a href="http://zurich.rustfest.eu">RustFest 2017</a><ul><li><a href="https://ti.to/asquera-event-ug/rustfest-zurich/">registration</a></li></ul></li><li><a href="http://www.rust-belt-rust.com">Rust Belt Rust 2017</a><ul><li><a href="https://www.eventbrite.com/e/rust-belt-rust-conference-2017-registration-36237335847">registration</a> (and don't forget to use code <code>newrustacean</code> for 20% off!)</li></ul></li><li><a href="http://rustrations.club">rustrations.club</a></li></ul><h2 id="sponsors">Sponsors</h2><ul><li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li><li>Anthony Scotti</li><li>Aleksey Pirogov</li><li>Andreas Fischer</li><li>Andrew Thompson</li><li>Austin LeSure</li><li><a href="https://github.com/behnam">Behnam Esfahbod</a></li><li>Benjamin Wasty</li><li>Brent Vatne</li><li><a href="https://charlieegan3.com">Charlie Egan</a></li><li>Chris Jones</li><li><a href="http://home.red-oxide.org/">Chris Palmer</a></li><li>Dan Abrams</li><li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li><li>[David W. Allen]</li><li><a href="https://twitter.com/derekmorr">Derek Morr</a></li><li>Eugene Bulkin</li><li><a href="https://hsivonen.fi/">Henri Sivonen</a></li><li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li><li>James Cooper</li><li>Jonathan Turner</li><li>Jordan Henderson</li><li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li><li>Justin Ossevoort</li><li><a href="https://github.com/kaedroho/">Karl Hobley</a></li><li>Keith Gray</li><li>Kilian Rault</li><li>Luca Schmid</li><li>Masashi Fujita</li><li>Matt Rudder</li><li>Matthew Piziak</li><li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li><li><a href="https://github.com/messense">Messense Lv</a></li><li>Micael Bergeron</li><li><a href="http://influential.co/">Nathan Sculli</a></li><li><a href="https://github.com/nastevens">Nick Stevens</a></li><li>Ovidiu Curcan</li><li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li><li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li><li>Peter Tillemans</li><li>Philipp Keller</li><li>Ralph Giles (&quot;rillian&quot;)</li><li>Randy MacLeod</li><li>Raph Levien</li><li>reddraggone9</li><li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li><li>Simon G.</li><li>Steven Murawski</li><li><a href="http://stuarth.github.io/">Stuart Hinson</a></li><li>Tim Brooks</li><li>Tom Prince</li><li>Ty Overby</li><li>Tyler Harper</li><li>Vesa Kaihlavirta</li><li>Warren Harper</li><li><a href="http://willroe.me">William Roe</a></li><li>Zaki</li></ul><p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p><h3 id="become-a-sponsor">Become a sponsor</h3><ul><li><a href="https://www.patreon.com/newrustacean">Patreon</a></li><li><a href="https://venmo.com/chriskrycho">Venmo</a></li><li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li><li><a href="https://cash.me/$chriskrycho">Cash.me</a></li><li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li><li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li></ul><h2 id="contact">Contact</h2><ul><li>New Rustacean:<ul><li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li><li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li></ul></li><li>Chris Krycho<ul><li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li><li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li></ul></li></ul>
 ]]></description>
             <pubDate>Thu, 31 Aug 2017 20:30:00 -0600</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_20.mp3" length="12748258" type="audio/mpeg"/>
@@ -3316,7 +3456,7 @@
         <item>
             <title>Bonus 9: Open source is mostly just normal people</title>
             <link>http://newrustacean.com/show_notes/bonus/_9/</link>
-            <description><![CDATA[<p>My experience with ember-cli-typescript as an example: we're all just people muddling along and doing our best.</p><h2 id="links-and-notes">Links and Notes</h2><ul><li><a href="https://github.com/typed-ember/ember-cli-typescript">ember-cli-typescript</a></li><li><a href="http://bikeshed.fm/118">The Bike Shed #118: Nonsense In, Nonsense Out</a></li><li>Sean's appearance on New Rustacean: <a href="https://www.newrustacean.com/show_notes/interview/_1/index.html">Interview 1</a></li></ul><h2 id="sponsors">Sponsors</h2><ul><li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li><li>Anthony Scotti</li><li>Aleksey Pirogov</li><li>Andreas Fischer</li><li>Andrew Thompson</li><li><a href="https://github.com/behnam">Behnam Esfahbod</a></li><li>Benjamin Wasty</li><li>Brent Vatne</li><li><a href="https://charlieegan3.com">Charlie Egan</a></li><li>Chris Jones</li><li><a href="http://home.red-oxide.org/">Chris Palmer</a></li><li><a href="http://blog.cgiffard.com">Christopher Giffard</a></li><li>Dan Abrams</li><li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li><li>[David W. Allen]</li><li><a href="https://twitter.com/derekmorr">Derek Morr</a></li><li>Eugene Bulkin</li><li><a href="https://hsivonen.fi/">Henri Sivonen</a></li><li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li><li>James Cooper</li><li>Jonathan Turner</li><li>Jordan Henderson</li><li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li><li>Justin Ossevoort</li><li><a href="https://github.com/kaedroho/">Karl Hobley</a></li><li>Keith Gray</li><li>Kilian Rault</li><li>Luca Schmid</li><li>Matt Rudder</li><li>Matthew Piziak</li><li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li><li><a href="https://github.com/messense">Messense Lv</a></li><li>Micael Bergeron</li><li>Oliver Uvman - see the <a href="https://www.patreon.com/tomaka/">Tomaka Patreon</a> and <a href="http://arewegameyet.com/">arewegameyet.com</a></li><li>Ovidiu Curcan</li><li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li><li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li><li>Peter Tillemans</li><li>Philipp Keller</li><li>Ralph Giles (&quot;rillian&quot;)</li><li>Randy MacLeod</li><li>Raph Levien</li><li>Raphael</li><li><a href="https://github.com/rtsuk">Rob Tsuk</a></li><li>reddraggone9</li><li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li><li>Steven Murawksi</li><li><a href="http://stuarth.github.io/">Stuart Hinson</a></li><li>Tim Brooks</li><li>Tom Prince</li><li>Ty Overby</li><li>Tyler Harper</li><li>Vesa Kaihlavirta</li><li>Warren Harper</li><li><a href="http://willroe.me">William Roe</a></li><li>Zaki</li></ul><p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p><h3 id="become-a-sponsor">Become a sponsor</h3><ul><li><a href="https://www.patreon.com/newrustacean">Patreon</a></li><li><a href="https://venmo.com/chriskrycho">Venmo</a></li><li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li><li><a href="https://cash.me/$chriskrycho">Cash.me</a></li><li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li><li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li></ul><h2 id="contact">Contact</h2><ul><li>New Rustacean:<ul><li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li><li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li></ul></li><li>Chris Krycho<ul><li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li><li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li></ul></li></ul>]]></description>
+            <description><![CDATA[<p>My experience with ember-cli-typescript as an example: we're all just people muddling along and doing our best.</p><h2 id="links-and-notes">Links and Notes</h2><ul><li><a href="https://github.com/typed-ember/ember-cli-typescript">ember-cli-typescript</a></li><li><a href="http://bikeshed.fm/118">The Bike Shed #118: Nonsense In, Nonsense Out</a></li><li>Sean's appearance on New Rustacean: <a href="https://www.newrustacean.com/show_notes/interview/_1/index.html">Interview 1</a></li></ul><h2 id="sponsors">Sponsors</h2><ul><li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li><li>Anthony Scotti</li><li>Aleksey Pirogov</li><li>Andreas Fischer</li><li>Andrew Thompson</li><li><a href="https://github.com/behnam">Behnam Esfahbod</a></li><li>Benjamin Wasty</li><li>Brent Vatne</li><li><a href="https://charlieegan3.com">Charlie Egan</a></li><li>Chris Jones</li><li><a href="http://home.red-oxide.org/">Chris Palmer</a></li><li><a href="http://blog.cgiffard.com">Christopher Giffard</a></li><li>Dan Abrams</li><li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li><li>[David W. Allen]</li><li><a href="https://twitter.com/derekmorr">Derek Morr</a></li><li>Eugene Bulkin</li><li><a href="https://hsivonen.fi/">Henri Sivonen</a></li><li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li><li>James Cooper</li><li>Jonathan Turner</li><li>Jordan Henderson</li><li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li><li>Justin Ossevoort</li><li><a href="https://github.com/kaedroho/">Karl Hobley</a></li><li>Keith Gray</li><li>Kilian Rault</li><li>Luca Schmid</li><li>Matt Rudder</li><li>Matthew Piziak</li><li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li><li><a href="https://github.com/messense">Messense Lv</a></li><li>Micael Bergeron</li><li>Oliver Uvman - see the <a href="https://www.patreon.com/tomaka/">Tomaka Patreon</a> and <a href="http://arewegameyet.com/">arewegameyet.com</a></li><li>Ovidiu Curcan</li><li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li><li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li><li>Peter Tillemans</li><li>Philipp Keller</li><li>Ralph Giles (&quot;rillian&quot;)</li><li>Randy MacLeod</li><li>Raph Levien</li><li>Raphael</li><li><a href="https://github.com/rtsuk">Rob Tsuk</a></li><li>reddraggone9</li><li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li><li>Steven Murawski</li><li><a href="http://stuarth.github.io/">Stuart Hinson</a></li><li>Tim Brooks</li><li>Tom Prince</li><li>Ty Overby</li><li>Tyler Harper</li><li>Vesa Kaihlavirta</li><li>Warren Harper</li><li><a href="http://willroe.me">William Roe</a></li><li>Zaki</li></ul><p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p><h3 id="become-a-sponsor">Become a sponsor</h3><ul><li><a href="https://www.patreon.com/newrustacean">Patreon</a></li><li><a href="https://venmo.com/chriskrycho">Venmo</a></li><li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li><li><a href="https://cash.me/$chriskrycho">Cash.me</a></li><li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li><li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li></ul><h2 id="contact">Contact</h2><ul><li>New Rustacean:<ul><li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li><li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li></ul></li><li>Chris Krycho<ul><li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li><li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li></ul></li></ul>]]></description>
             <pubDate>Mon, 14 Aug 2017 07:00:00 -0600</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/9.mp3" length="10284163" type="audio/mpeg"/>
             <guid isPermaLink="false">CC87FE1E-0E80-4B8F-B022-892E25C3E260</guid>
@@ -3379,7 +3519,7 @@
 <li>Raph Levien</li>
 <li>reddraggone9</li>
 <li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -3476,7 +3616,7 @@
 <li>reddraggone9</li>
 <li>Sean Jensen-Grey</li>
 <li>Sebastián Ramírez Magrí</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -3592,7 +3732,7 @@
 <li>Randy MacLeod</li>
 <li>Raph Levien</li>
 <li>reddraggone9</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -3726,7 +3866,7 @@
 <li>Randy MacLeod</li>
 <li>Raph Levien</li>
 <li>reddraggone9</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tim Brooks</li>
 <li>Tom Prince</li>
@@ -3848,7 +3988,7 @@
 <li>Ralph Giles (“rillian”)</li>
 <li>Raph Levien</li>
 <li>reddraggone9</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Ty Overby</li>
 <li>Tyler Harper</li>
@@ -3962,7 +4102,7 @@
 <li>Ralph Giles (&quot;rillian&quot;)</li>
 <li>Raph Levien</li>
 <li>reddraggone9</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Ty Overby</li>
 <li>Tyler Harper</li>
@@ -4065,7 +4205,7 @@
 <li>Ralph Giles (&quot;rillian&quot;)</li>
 <li>Raph Levien</li>
 <li>reddraggone9</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tyler Harper</li>
 <li>Vesa Kaihlavirta</li>
@@ -4151,7 +4291,7 @@
 <li>Ralph Giles (&quot;rillian&quot;)</li>
 <li>Raph Levien</li>
 <li>reddraggone9</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
 <li>Tyler Harper</li>
 <li>Vesa Kaihlavirta</li>
@@ -4238,7 +4378,7 @@
 <li>Ralph Giles (&quot;rillian&quot;)</li>
 <li>Raph Levien</li>
 <li>reddraggone9</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li>Stuart Hinson</li>
 <li>Tyler Harper</li>
 <li>Vesa Kaihlavirta</li>
@@ -4370,7 +4510,7 @@
 <li>Ralph Giles (&quot;rillian&quot;)</li>
 <li>Raph Levien</li>
 <li>reddraggone9</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li>Stuart Hinson</li>
 <li>Tyler Harper</li>
 <li>Vesa Kaihlavirta</li>
@@ -4408,7 +4548,7 @@
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e019.mp3" length="15359091" type="audio/mpeg"/>
             <guid isPermaLink="false">A39AA3AC-EF1B-41B4-A0A1-F76676A74B1F</guid>
             <itunes:author>Chris Krycho</itunes:author>
-            <itunes:summary>The final pieces of the story for (single-threaded) memory management in Rust. Notes ----- Sometimes, we actually do need to copy types. Wouldn't it be nice if Rust gave us a convenient way to do that when it's convenient, or when the cost is low enough that the ergonomic tradeoffs are worth it? Well, perhaps unsurprisingly, it does! The Copy and Clone traits, plus the Cow type, give us everything we need! Sponsors -------- - Aleksey Pirogov - Andreas Fischer - Andrew Thompson - Austin LeSure - Ben Whitley - Charlie Egan - Chris Palmer - Christopher Giffard - Daniel Collin - Derek Morr - Jakub "Limeth" Hlusička - Jordan Henderson - Jupp Müller - Keith Gray - Lachlan Collins - Luca Schmid - Matt Rudder - Matthew Piziak - [Max Jacobson] - Micael Bergeron - Ovidiu Curcan - Pascal Hertleif - Peter Tillemans - Philipp Keller - Ralph Giles ("rillian") - Raph Levien - reddraggone9 - Steven Murawksi - Stuart Hinson - Tyler Harper - Vesa Kaihlavirta - Vlad Bezden - William Roe - Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) ### Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla](https://www.dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho - Flattr.com/profile/chriskrycho - PayPal.me/chriskrycho Contact ------- - New Rustacean: + Twitter: @newrustacean + Email: hello@newrustacean.com - Chris Krycho + GitHub: chriskrycho + Twitter: @chriskrycho</itunes:summary>
+            <itunes:summary>The final pieces of the story for (single-threaded) memory management in Rust. Notes ----- Sometimes, we actually do need to copy types. Wouldn't it be nice if Rust gave us a convenient way to do that when it's convenient, or when the cost is low enough that the ergonomic tradeoffs are worth it? Well, perhaps unsurprisingly, it does! The Copy and Clone traits, plus the Cow type, give us everything we need! Sponsors -------- - Aleksey Pirogov - Andreas Fischer - Andrew Thompson - Austin LeSure - Ben Whitley - Charlie Egan - Chris Palmer - Christopher Giffard - Daniel Collin - Derek Morr - Jakub "Limeth" Hlusička - Jordan Henderson - Jupp Müller - Keith Gray - Lachlan Collins - Luca Schmid - Matt Rudder - Matthew Piziak - [Max Jacobson] - Micael Bergeron - Ovidiu Curcan - Pascal Hertleif - Peter Tillemans - Philipp Keller - Ralph Giles ("rillian") - Raph Levien - reddraggone9 - Steven Murawski - Stuart Hinson - Tyler Harper - Vesa Kaihlavirta - Vlad Bezden - William Roe - Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) ### Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla](https://www.dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho - Flattr.com/profile/chriskrycho - PayPal.me/chriskrycho Contact ------- - New Rustacean: + Twitter: @newrustacean + Email: hello@newrustacean.com - Chris Krycho + GitHub: chriskrycho + Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>18:11</itunes:duration>
             <itunes:episodeType>full</itunes:episodeType>
         </item>
@@ -4468,7 +4608,7 @@
 <li>Ralph Giles (&quot;rillian&quot;)</li>
 <li>Raph Levien</li>
 <li>reddraggone9</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li>Stuart Hinson</li>
 <li>Tyler Harper</li>
 <li>Vesa Kaihlavirta</li>
@@ -4504,7 +4644,7 @@
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk/2.mp3" length="9013843" type="audio/mpeg"/>
             <guid isPermaLink="false">3666B4E8-5D29-4253-A56D-4145C7372F95</guid>
             <itunes:author>Chris Krycho</itunes:author>
-            <itunes:summary>A Command-Line Argument Parser. Sponsors -------- - Aleksey Pirogov - Andreas Fischer - Andrew Thompson - Austin LeSure - Ben Whitley - Charlie Egan - Chris Palmer - Christopher Giffard - Daniel Collin - Derek Morr - Jakub "Limeth" Hlusička - Jordan Henderson - Jupp Müller - Keith Gray - Lachlan Collins - Luca Schmid - Matt Rudder - Matthew Piziak - [Max Jacobson] - Micael Bergeron - Ovidiu Curcan - Pascal Hertleif - Peter Tillemans - Philipp Keller - Ralph Giles ("rillian") - Raph Levien - reddraggone9 - Steven Murawksi - Stuart Hinson - Tyler Harper - Vesa Kaihlavirta - Vlad Bezden - William Roe - Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) ### Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla](https://www.dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho - Flattr.com/profile/chriskrycho - PayPal.me/chriskrycho Contact ------- - New Rustacean: + Twitter: @newrustacean + Email: hello@newrustacean.com - Chris Krycho + GitHub: chriskrycho + Twitter: @chriskrycho</itunes:summary>
+            <itunes:summary>A Command-Line Argument Parser. Sponsors -------- - Aleksey Pirogov - Andreas Fischer - Andrew Thompson - Austin LeSure - Ben Whitley - Charlie Egan - Chris Palmer - Christopher Giffard - Daniel Collin - Derek Morr - Jakub "Limeth" Hlusička - Jordan Henderson - Jupp Müller - Keith Gray - Lachlan Collins - Luca Schmid - Matt Rudder - Matthew Piziak - [Max Jacobson] - Micael Bergeron - Ovidiu Curcan - Pascal Hertleif - Peter Tillemans - Philipp Keller - Ralph Giles ("rillian") - Raph Levien - reddraggone9 - Steven Murawski - Stuart Hinson - Tyler Harper - Vesa Kaihlavirta - Vlad Bezden - William Roe - Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) ### Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla](https://www.dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho - Flattr.com/profile/chriskrycho - PayPal.me/chriskrycho Contact ------- - New Rustacean: + Twitter: @newrustacean + Email: hello@newrustacean.com - Chris Krycho + GitHub: chriskrycho + Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>10:42</itunes:duration>
             <itunes:episodeType>full</itunes:episodeType>
         </item>
@@ -4566,7 +4706,7 @@
 <li>Raph Levien</li>
 <li>reddraggone9</li>
 <li>Ryan Ollos</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li>Vesa Kaihlavirta</li>
 <li>Vlad Bezden</li>
 <li><a href="http://willroe.me">William Roe</a></li>
@@ -4603,7 +4743,7 @@
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e018.mp3" length="14709559" type="audio/mpeg"/>
             <guid isPermaLink="false">8E739043-E105-4E84-BA22-3835BBB845FC</guid>
             <itunes:author>Chris Krycho</itunes:author>
-            <itunes:summary>Three traits which are essential for designing good, Rustic APIs. Notes Borrow, AsRef, and Deref are a little complicated, but they're well-worth understanding. Together, they give you tools for dealing with everything from HashMap and friends to conversions involving smart pointer types to easily using String and str or Vec and slice together. Sponsors * Aleksey Pirogov * Andreas Fischer * Ben Whitley * Cameron Mochrie * Chris Palmer * Christopher Giffard * Daniel Collin * Derek Morr * Jakub &amp;quot;Limeth&amp;quot; Hlusička * Jordan Henderson * Jupp Müller * Keith Gray * Lachlan Collins * Luca Schmid * Matt Rudder * Matthew Piziak * Micael Bergeron * Ovidiu Curcan * Pascal Hertleif * Peter Tillemans * Philipp Keller * Ralph Giles (&amp;quot;rillian&amp;quot;) * Raph Levien * reddraggone9 * Ryan Ollos * Steven Murawksi * Vesa Kaihlavirta * Vlad Bezden * William Roe * Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon * Venmo * Dwolla * Cash.me * Flattr * PayPal.me Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
+            <itunes:summary>Three traits which are essential for designing good, Rustic APIs. Notes Borrow, AsRef, and Deref are a little complicated, but they're well-worth understanding. Together, they give you tools for dealing with everything from HashMap and friends to conversions involving smart pointer types to easily using String and str or Vec and slice together. Sponsors * Aleksey Pirogov * Andreas Fischer * Ben Whitley * Cameron Mochrie * Chris Palmer * Christopher Giffard * Daniel Collin * Derek Morr * Jakub &amp;quot;Limeth&amp;quot; Hlusička * Jordan Henderson * Jupp Müller * Keith Gray * Lachlan Collins * Luca Schmid * Matt Rudder * Matthew Piziak * Micael Bergeron * Ovidiu Curcan * Pascal Hertleif * Peter Tillemans * Philipp Keller * Ralph Giles (&amp;quot;rillian&amp;quot;) * Raph Levien * reddraggone9 * Ryan Ollos * Steven Murawski * Vesa Kaihlavirta * Vlad Bezden * William Roe * Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon * Venmo * Dwolla * Cash.me * Flattr * PayPal.me Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>17:25</itunes:duration>
             <itunes:episodeType>full</itunes:episodeType>
         </item>
@@ -4645,7 +4785,7 @@
 <li>Raph Levien</li>
 <li>reddraggone9</li>
 <li>Ryan Ollos</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li>Vesa Kaihlavirta</li>
 <li>Vlad Bezden</li>
 <li><a href="http://willroe.me">William Roe</a></li>
@@ -4686,7 +4826,7 @@
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk/1.mp3" length="7287954" type="audio/mpeg"/>
             <guid isPermaLink="false">1CF4B00D-9AEC-442B-BD06-A986602D2A56</guid>
             <itunes:author>Chris Krycho</itunes:author>
-            <itunes:summary>A pull-parser for reading and writing XML. Sponsors * Aleksey Pirogov * Andreas Fischer * Ben Whitley * Cameron Mochrie * Chris Palmer * Christopher Giffard * Daniel Collin * Derek Morr * Jakub “Limeth” Hlusička * Jupp Müller * Keith Gray * Lachlan Collins * Luca Schmid * Matt Rudder * Matthew Piziak * Micael Bergeron * Ovidiu Curcan * Pascal Hertleif * Peter Tillemans * Philipp Keller * Ralph Giles (“rillian”) * Raph Levien * reddraggone9 * Ryan Ollos * Steven Murawksi * Vesa Kaihlavirta * Vlad Bezden * William Roe * Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho * Flattr.com/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
+            <itunes:summary>A pull-parser for reading and writing XML. Sponsors * Aleksey Pirogov * Andreas Fischer * Ben Whitley * Cameron Mochrie * Chris Palmer * Christopher Giffard * Daniel Collin * Derek Morr * Jakub “Limeth” Hlusička * Jupp Müller * Keith Gray * Lachlan Collins * Luca Schmid * Matt Rudder * Matthew Piziak * Micael Bergeron * Ovidiu Curcan * Pascal Hertleif * Peter Tillemans * Philipp Keller * Ralph Giles (“rillian”) * Raph Levien * reddraggone9 * Ryan Ollos * Steven Murawski * Vesa Kaihlavirta * Vlad Bezden * William Roe * Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho * Flattr.com/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>8:38</itunes:duration>
             <itunes:episodeType>full</itunes:episodeType>
         </item>
@@ -4772,7 +4912,7 @@
 <li>Raph Levien</li>
 <li>reddraggone9</li>
 <li>Ryan Ollos</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li>Vesa Kaihlavirta</li>
 <li>Vlad Bezden</li>
 <li><a href="http://willroe.me">William Roe</a></li>
@@ -4806,7 +4946,7 @@
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/news_2.mp3" length="17777740" type="audio/mpeg"/>
             <guid isPermaLink="false">7AAC0E06-6A11-4707-BD9A-AB5AD95F7CBB</guid>
             <itunes:author>Chris Krycho</itunes:author>
-            <itunes:summary>Rust’s achievements in 2016 and goals for 2017 Sponsors * Aleksey Pirogov * Andreas Fischer * Ben Whitley * Cameron Mochrie * Chris Palmer * Daniel Collin * Derek Morr * Jakub “Limeth” Hlusička * Jupp Müller * Keith Gray * Lachlan Collins * Luca Schmid * Matt Rudder * Matthew Piziak * Micael Bergeron * Ovidiu Curcan * Pascal Hertleif * Peter Tillemans * Philipp Keller * Ralph Giles (“rillian”) * Raph Levien * reddraggone9 * Ryan Ollos * Steven Murawksi * Vesa Kaihlavirta * Vlad Bezden * William Roe * Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/chriskrycho * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho * Flattr.com/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
+            <itunes:summary>Rust’s achievements in 2016 and goals for 2017 Sponsors * Aleksey Pirogov * Andreas Fischer * Ben Whitley * Cameron Mochrie * Chris Palmer * Daniel Collin * Derek Morr * Jakub “Limeth” Hlusička * Jupp Müller * Keith Gray * Lachlan Collins * Luca Schmid * Matt Rudder * Matthew Piziak * Micael Bergeron * Ovidiu Curcan * Pascal Hertleif * Peter Tillemans * Philipp Keller * Ralph Giles (“rillian”) * Raph Levien * reddraggone9 * Ryan Ollos * Steven Murawski * Vesa Kaihlavirta * Vlad Bezden * William Roe * Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/chriskrycho * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho * Flattr.com/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>21:08</itunes:duration>
             <itunes:episodeType>full</itunes:episodeType>
         </item>
@@ -4931,7 +5071,7 @@
 <li>reddraggone9</li>
 <li>Ryan Ollos</li>
 <li>Sean Jensen-Gray</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li>Vesa Kaihlavirta</li>
 <li><a href="http://willroe.me">William Roe</a></li>
 </ul>
@@ -4965,7 +5105,7 @@
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/3.mp3" length="39738296" type="audio/mpeg"/>
             <guid isPermaLink="false">7299496B-086C-450F-94C1-05AB08CDC294</guid>
             <itunes:author>Chris Krycho</itunes:author>
-            <itunes:summary>Carol (Nichols || Goulding) on learning Rust, teaching Rust, and building community Chris talks with Carol (Nichols || Goulding), a Rust community team member, co-author of the first major revision of The Rust Programming Language, and co-founder of the first Rust consultancy. Sponsors * Aleksey Pirogov * Cameron Mochrie * Chris Palmer * Daniel Collin * Derek Morr * Doug Reeves * Hamza Sheikh * Jakub “Limeth” Hlusička * Jupp Müller * Keith Gray * Lachlan Collins * Leif Arne Storset * Luca Schmid * Matthew Piziak * Micael Bergeron * Nils Tekampe * Ovidiu Curcan * Pascal Hertleif * Ralph Giles (“rillian”) * Ralph “FriarTech” Loizzo * Raph Levien * reddraggone9 * Ryan Ollos * Sean Jensen-Gray * Steven Murawksi * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/newrustacean * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho * Flattr.com/profile/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
+            <itunes:summary>Carol (Nichols || Goulding) on learning Rust, teaching Rust, and building community Chris talks with Carol (Nichols || Goulding), a Rust community team member, co-author of the first major revision of The Rust Programming Language, and co-founder of the first Rust consultancy. Sponsors * Aleksey Pirogov * Cameron Mochrie * Chris Palmer * Daniel Collin * Derek Morr * Doug Reeves * Hamza Sheikh * Jakub “Limeth” Hlusička * Jupp Müller * Keith Gray * Lachlan Collins * Leif Arne Storset * Luca Schmid * Matthew Piziak * Micael Bergeron * Nils Tekampe * Ovidiu Curcan * Pascal Hertleif * Ralph Giles (“rillian”) * Ralph “FriarTech” Loizzo * Raph Levien * reddraggone9 * Ryan Ollos * Sean Jensen-Gray * Steven Murawski * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/newrustacean * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho * Flattr.com/profile/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>47:11</itunes:duration>
             <itunes:episodeType>full</itunes:episodeType>
         </item>
@@ -5041,7 +5181,7 @@
 <li>Raph Levien</li>
 <li>reddraggone9</li>
 <li>Ryan Ollos</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li>Vesa Kaihlavirta</li>
 <li><a href="http://willroe.me">William Roe</a></li>
 </ul>
@@ -5073,7 +5213,7 @@
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/7.mp3" length="7533006" type="audio/mpeg"/>
             <guid isPermaLink="false">CEFB964C-E0C9-48FD-9EE6-06A0C1284CC8</guid>
             <itunes:author>Chris Krycho</itunes:author>
-            <itunes:summary>Katas—or: learning by doing One of the best ways to learn is to pick a small problem you have already internalized, and to do it again but in a new language or in a new way in a language you already know. Sponsors * Aleksey Pirogov * Cameron Mochrie * Chris Palmer * Daniel Collin * Derek Morr * Doug Reeves * Hamza Sheikh * Jakub “Limeth” Hlusička * Jupp Müller * Keith Gray * Lachlan Collins * Leif Arne Storset * Luca Schmid * Matthew Piziak * Micael Bergeron * Ovidiu Curcan * Pascal Hertleif * Ralph Giles (“rillian”) * Ralph “FriarTech” Loizzo * Raph Levien * reddraggone9 * Ryan Ollos * Steven Murawksi * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrych * flattr.com/profile/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
+            <itunes:summary>Katas—or: learning by doing One of the best ways to learn is to pick a small problem you have already internalized, and to do it again but in a new language or in a new way in a language you already know. Sponsors * Aleksey Pirogov * Cameron Mochrie * Chris Palmer * Daniel Collin * Derek Morr * Doug Reeves * Hamza Sheikh * Jakub “Limeth” Hlusička * Jupp Müller * Keith Gray * Lachlan Collins * Leif Arne Storset * Luca Schmid * Matthew Piziak * Micael Bergeron * Ovidiu Curcan * Pascal Hertleif * Ralph Giles (“rillian”) * Ralph “FriarTech” Loizzo * Raph Levien * reddraggone9 * Ryan Ollos * Steven Murawski * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrych * flattr.com/profile/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>10:19</itunes:duration>
             <itunes:episodeType>full</itunes:episodeType>
         </item>
@@ -5123,7 +5263,7 @@
 <li>Raph Levien</li>
 <li>reddraggone9</li>
 <li>Ryan Ollos</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li>Vesa Kaihlavirta</li>
 <li><a href="http://willroe.me">William Roe</a></li>
 </ul>
@@ -5155,7 +5295,7 @@
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/6.mp3" length="8275634" type="audio/mpeg"/>
             <guid isPermaLink="false">2B30AB4B-8971-4576-BAD0-953A078B51A3</guid>
             <itunes:author>Chris Krycho</itunes:author>
-            <itunes:summary>Building (and celebrating) all the little, not-so-glorious pieces of the Rust ecosystem. Notes We love the Rust compiler team. But there’s more to the Rust community, and more required for Rust to be as great as it can be, than just the language itself. We need to celebrate other libraries, and even the small ones, just as much (and maybe more) than changes to the language. We need to dig in and work on building the _whole_ ecosystem. (The good news is, we are!) Links - futures-rs - “Zero-cost futures in Rust” - Tokio - “Announcing Tokio” (Carl Lerche on Medium) - “What’s new with ‘The Rust Programming Language’?” - Friends of Rust - ring – Safe, fast, small crypto using Rust - alexa-rs – Rust library for building Alexa skills - gilrs – Game Input Library for Rust Sponsors - Aleksey Pirogov - Cameron Mochrie - Cass Costello - Chris Palmer - Daniel Collin - Derek Morr - Doug Reeves - Eric Fulmer - Hamza Sheikh - Jakub “Limeth” Hlusička - Jared Smith - Keith Gray - Lachlan Collins - Leif Arne Storset - Luca Schmid - Micael Bergeron - Pascal Hertleif - Ralph Giles (“rillian”) - Ralph “FriarTech” Loizzo - Raph Levien - reddraggone9 - Ryan Ollos - Steven Murawksi - Vesa Kaihlavirta - William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho - flattr.com/profile/chriskrycho - PayPal.me/chriskrycho Contact - New Rustacean: - Twitter: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - GitHub: chriskrycho - Twitter: @chriskrycho</itunes:summary>
+            <itunes:summary>Building (and celebrating) all the little, not-so-glorious pieces of the Rust ecosystem. Notes We love the Rust compiler team. But there’s more to the Rust community, and more required for Rust to be as great as it can be, than just the language itself. We need to celebrate other libraries, and even the small ones, just as much (and maybe more) than changes to the language. We need to dig in and work on building the _whole_ ecosystem. (The good news is, we are!) Links - futures-rs - “Zero-cost futures in Rust” - Tokio - “Announcing Tokio” (Carl Lerche on Medium) - “What’s new with ‘The Rust Programming Language’?” - Friends of Rust - ring – Safe, fast, small crypto using Rust - alexa-rs – Rust library for building Alexa skills - gilrs – Game Input Library for Rust Sponsors - Aleksey Pirogov - Cameron Mochrie - Cass Costello - Chris Palmer - Daniel Collin - Derek Morr - Doug Reeves - Eric Fulmer - Hamza Sheikh - Jakub “Limeth” Hlusička - Jared Smith - Keith Gray - Lachlan Collins - Leif Arne Storset - Luca Schmid - Micael Bergeron - Pascal Hertleif - Ralph Giles (“rillian”) - Ralph “FriarTech” Loizzo - Raph Levien - reddraggone9 - Ryan Ollos - Steven Murawski - Vesa Kaihlavirta - William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor - Patreon.com/newrustacean - Venmo.com/chriskrycho - Dwolla.com/hub/chriskrycho - Cash.me/$chriskrycho - flattr.com/profile/chriskrycho - PayPal.me/chriskrycho Contact - New Rustacean: - Twitter: @newrustacean - Email: hello@newrustacean.com - Chris Krycho - GitHub: chriskrycho - Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>11:27</itunes:duration>
             <itunes:episodeType>full</itunes:episodeType>
         </item>
@@ -5223,7 +5363,7 @@
 <li>Raph Levien</li>
 <li>reddraggone9</li>
 <li>Ryan Ollos</li>
-<li>Steven Murawksi</li>
+<li>Steven Murawski</li>
 <li>Vesa Kaihlavirta</li>
 <li><a href="http://willroe.me">William Roe</a></li>
 </ul>
@@ -5255,7 +5395,7 @@
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e017.mp3" length="7768525" type="audio/mpeg"/>
             <guid isPermaLink="false">3FD4B9E5-7496-4FCB-AD95-829A6A295274</guid>
             <itunes:author>Chris Krycho</itunes:author>
-            <itunes:summary>A deep dive on references and pointers in Rust. Notes By listener request, today we look at the syntax and semantics of referencing and dereferencing and the corresponding `&amp;` and `*` operators. As was the case with e016, the code samples have little to say in their documentation; reading the code will be necessary for seeing the ideas. Sponsors * Aleksey Pirogue * Cameron Mochrie * Chris Palmer * Daniel Collin * Derek Morr * Doug Reeves * Eric Fulmer * Hamza Sheikh * Jakub “Limeth” Hlusička * Jared Smith * Keith Gray * Lachlan Collins * Leif Arne Storset * Luca Schmid * Micael Bergeron * Pascal Hertleif * Ralph Giles (“gillian”) * Ralph “FriarTech” Loizzo * Raph Levien * reddraggone9 * Ryan Oleos * Steven Murawksi * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrych * flattr.com/profile/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
+            <itunes:summary>A deep dive on references and pointers in Rust. Notes By listener request, today we look at the syntax and semantics of referencing and dereferencing and the corresponding `&amp;` and `*` operators. As was the case with e016, the code samples have little to say in their documentation; reading the code will be necessary for seeing the ideas. Sponsors * Aleksey Pirogue * Cameron Mochrie * Chris Palmer * Daniel Collin * Derek Morr * Doug Reeves * Eric Fulmer * Hamza Sheikh * Jakub “Limeth” Hlusička * Jared Smith * Keith Gray * Lachlan Collins * Leif Arne Storset * Luca Schmid * Micael Bergeron * Pascal Hertleif * Ralph Giles (“gillian”) * Ralph “FriarTech” Loizzo * Raph Levien * reddraggone9 * Ryan Oleos * Steven Murawski * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrych * flattr.com/profile/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
             <itunes:duration>17:06</itunes:duration>
             <itunes:episodeType>full</itunes:episodeType>
         </item>

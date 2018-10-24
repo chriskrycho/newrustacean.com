@@ -67,7 +67,7 @@
 //!   - Ralph Giles ("rillian")
 //!   - Raph Levien
 //!   - reddraggone9
-//!   - Steven Murawksi
+//!   - Steven Murawski
 //!   - [Stuart Hinson]
 //!   - Tyler Harper
 //!   - Vesa Kaihlavirta

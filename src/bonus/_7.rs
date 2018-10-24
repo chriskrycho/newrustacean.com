@@ -100,7 +100,7 @@
 //!   - reddraggone9
 //!   - Ryan Ollos
 //!   - Sean Jensen-Gray
-//!   - Steven Murawksi
+//!   - Steven Murawski
 //!   - Vesa Kaihlavirta
 //!   - [William Roe]
 //!

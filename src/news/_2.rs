@@ -104,7 +104,7 @@
 //!   - Raph Levien
 //!   - reddraggone9
 //!   - Ryan Ollos
-//!   - Steven Murawksi
+//!   - Steven Murawski
 //!   - Vesa Kaihlavirta
 //!   - Vlad Bezden
 //!   - [William Roe]

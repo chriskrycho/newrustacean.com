@@ -6,7 +6,7 @@ Hello, I'm Chris Krycho, and this is the New Rustacean podcast---a show about le
 
 I hope you enjoyed the interview as much as I did—lots of great thoughts from Carol! You can find links to the various topics we discussed on the episode, as well as all previous episodes, at newrustacean.com.
 
-Thanks again to Chris Palmer, Daniel Collin, Raph Levien, Stephen Murawksi, and Vesa Khailavirta, and all the other sponsors for helping make the show possible! You can see a full list of sponsors in the show notes, and the top tier of sponsors on a dedicated page on the website.
+Thanks again to Chris Palmer, Daniel Collin, Raph Levien, Stephen Murawski, and Vesa Khailavirta, and all the other sponsors for helping make the show possible! You can see a full list of sponsors in the show notes, and the top tier of sponsors on a dedicated page on the website.
 
 If you're interested in sponsoring the show, you can set up recurring contributions at Patreon.com/newrustacean, or one-off contributions at a variety of other services listed at the show website. I'll have more to say on sponsorship specifically in an upcoming podcast *about the podcast* in a week or two!
 

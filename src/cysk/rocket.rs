@@ -84,7 +84,7 @@
 //!   - Randy MacLeod
 //!   - Raph Levien
 //!   - reddraggone9
-//!   - Steven Murawksi
+//!   - Steven Murawski
 //!   - [Stuart Hinson]
 //!   - Tim Brooks
 //!   - Tom Prince

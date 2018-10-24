@@ -63,7 +63,7 @@
 //!   - Sam Whited
 //!   - [Sebastián Ramírez Magrí]
 //!   - Simon G.
-//!   - Steven Murawksi
+//!   - Steven Murawski
 //!   - [Stuart Hinson]
 //!   - Tim Brooks
 //!   - Tom Prince
@@ -122,18 +122,18 @@
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-pub mod colin_dean;
+pub mod andrew_hobden;
 pub mod anthony_deschamps;
 pub mod arun_kulshreshtha;
-pub mod pete_lyons;
-pub mod jess_saxeter;
-pub mod tom_kriezkowski;
-pub mod thomas_gideon;
+pub mod ben_beckwith;
+pub mod ben_striegel;
+pub mod colin_dean;
 pub mod esty_thomas;
 pub mod holden_marcsisin;
-pub mod ben_striegel;
+pub mod jess_saxeter;
+pub mod katie_nolan;
 pub mod matthias_endler;
 pub mod parry_wilcox;
-pub mod andrew_hobden;
-pub mod ben_beckwith;
-pub mod katie_nolan;
+pub mod pete_lyons;
+pub mod thomas_gideon;
+pub mod tom_kriezkowski;

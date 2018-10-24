@@ -70,7 +70,7 @@
 //!   - Raph Levien
 //!   - reddraggone9
 //!   - [Sebastián Ramírez Magrí]
-//!   - Steven Murawksi
+//!   - Steven Murawski
 //!   - [Stuart Hinson]
 //!   - Tim Brooks
 //!   - Tom Prince
