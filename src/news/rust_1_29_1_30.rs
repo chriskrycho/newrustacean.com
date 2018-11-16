@@ -1,29 +1,46 @@
-//! Translating Between Languages
+//! Rust 1.29 and 1.30
 //!
-//! - **Date:** October 23, 2018
-//! - **Subject:** Musings inspired by a project translating TypeScript to Rust
+//! - **Date:** November 17, 2018
+//! - **Subject:** Procedural macros, better paths, and the Rust 2018 beta!
 //! - [**download mp3**][mp3]
 //! - [**script**][script]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/translating_between_languages.mp3
-//! [script]: https://newrustacean.com/show_notes/bonus/translating_between_languages/struct.script
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_29_1_30.mp3
+//! [script]: https://newrustacean.com/show_notes/news/rust_1_29_1_30/struct.script
 //!
-//! <audio style="width: 100%" title="Bonus: Translating Between Languages" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/translating_between_languages.mp3">
+//! <audio style="width: 100%" title="News: Rust 1.29 and 1.30" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_29_1_30.mp3">
 //!
+//! Show Notes
+//! ----------
+//!
+//! Rust 1.29:
+//!
+//! - [blog post][1.29-blog]
+//! - [release notes][1.29-release]
+//!
+//! [1.29-blog]: https://blog.rust-lang.org/2018/09/13/Rust-1.29.html
+//! [1.29-release]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1290-2018-09-13
+//!
+//! Rust 1.30:
+//!
+//! - [blog post][1.30-blog]
+//! - [release notes][1.30-release]
+//! - [RFC: path clarity][rfc]
+//!
+//! [1.30-blog]: https://blog.rust-lang.org/2018/10/25/Rust-1.30.0.html
+//! [1.30-release]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1300-2018-10-25
+//! [rfc]: https://github.com/rust-lang/rfcs/blob/master/text/2126-path-clarity.md
 //!
 //! Sponsors
 //! --------
 //!
-//! Thanks to Manning for sponsoring the show *and* giving all of you a 40%-off
-//! discount on their whole store (but especially Carol Nichols' and Jake
-//! Goulding's _Rust in Motion_ video content and the _Rust in Action_ MEAP!) at
-//! [deals.manning.com/new-rustacean][manning]
+//! Thanks to Parity for sponsoring the show again. Go check out their [***Rust
+//! jobs***][parity]!
 //!
-//! [manning]: http://bit.ly/2OXnlEb
+//! [parity]: https://paritytech.io/jobs/
 //!
 //! ### Patreon Sponsors
 //!
-//! - Aaron Turon
 //! - Adam Green
 //! - Aleksey Pirogov
 //! - Alexander Payne
@@ -59,10 +76,11 @@
 //! - [Henri Sivonen]
 //! - [Ian Jones]
 //! - "Jake ""ferris"" Taylor"
+//! - Jako Danar
 //! - James Cooper
 //! - James Hagans II
 //! - Jerome Froelich
-//! - [Joar Wandborg]
+//! - [Joar Wandborg]: Joar Wandborg
 //! - [John Rudnick]
 //! - Jon
 //! - [Jonathan Knapp]
@@ -90,6 +108,7 @@
 //! - Michael Sanders
 //! - [Nathan Sculli]
 //! - [Nick Coish]
+//! - Nick Gideo
 //! - [Nick Stevens]
 //! - [Nicolas Pochet]
 //! - Olaf Leidinger
@@ -114,6 +133,7 @@
 //! - [Sebastián Ramírez Magrí]
 //! - [Simon Dickson]
 //! - Simon G
+//! - [Steffen Loen Sunde]
 //! - Steve Jenson
 //! - Steven Knight
 //! - Steven Murawski
@@ -167,6 +187,7 @@
 //! [Ryan Osial]: https://github.com/osialr
 //! [Sebastián Ramírez Magrí]: https://www.twitter.com/sebasmagri
 //! [Simon Dickson]: https://www.simonhdickson.com/
+//! [Steffen Loen Sunde]: https://www.ntnu.edu/employees/steffen.sunde
 //! [Stuart Hinson]: http://stuarth.github.io/
 //! [William Roe]: http://willroe.me
 //!
@@ -193,5 +214,5 @@
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-#[doc(include = "../docs/bonus/translating-between-languages-script.md")]
+#[doc(include = "../docs/news/rust_1_29_1_30.md")]
 pub struct Script;

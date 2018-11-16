@@ -69,7 +69,6 @@ Thanks to everyone who sponsors the show! This month’s $10-or-more sponsors in
 - Chris Palmer
 - Anthony Deschamps
 - Nicolas Pochet
-- Messense Lv
 - Bryce Johnston
 - Paul Naranja
 - Ramon Buckland
