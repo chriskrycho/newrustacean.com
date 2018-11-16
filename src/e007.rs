@@ -122,7 +122,7 @@ mod tests {
     use super::*;
 
     // `Bencher` is the `struct` which has the benchmarking functionality.
-    use test::Bencher;
+    use crate::test::Bencher;
 
     // We'll use this for demonstrating benchmarks later.
     use std::thread::sleep;

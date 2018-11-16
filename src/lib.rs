@@ -22,8 +22,6 @@
 
 // This statement gives us access to the `test` crate for benchmarking.
 extern crate test;
-// This one gives us access to regex for a truly absurd example in e023.
-extern crate regex;
 
 // Make the show notes public.
 pub mod e000;
