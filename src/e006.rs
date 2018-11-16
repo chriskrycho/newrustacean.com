@@ -153,14 +153,14 @@ pub fn use_modules_internal() {
 // > declarations declare linkage dependencies.
 pub mod demonstrate_namespacing {
     /// We can `use` other module's contents.
-    use e006::public_internal_module::*;
+    use crate::e006::public_internal_module::*;
 
     /// We can also alias other modules. Note that though we don't use this
     /// until `demonstrate_aliased_calls()`, we have to put any `use` statements
     /// before any other contents of the module (so this can't go between the
     /// `demonstrate_globbed_calls()` and `demonstrate_aliased_calls()` function
     /// definitions).
-    use e006::internal_module as im;
+    use crate::e006::internal_module as im;
 
     /// Demonstrates how glob-imported `use`s works.
     pub fn demonstrate_globbed_calls() {
@@ -180,7 +180,7 @@ pub mod demonstrate_namespacing {
 
 /// Demonstrates that modules can be `use`d within functions.
 pub fn demonstrate_use_inside_function() {
-    use e006::demonstrate_namespacing as dn;
+    use crate::e006::demonstrate_namespacing as dn;
 
     println!("At `demonstrate_use_inside_function()`.");
     dn::demonstrate_globbed_calls();
@@ -202,5 +202,5 @@ pub mod demonstrate_nesting {
     // name, as a public module. When you look at the docs, you'll see this
     // function name within the module, with the docs from the definition of the
     // function in the `internal_module` above!
-    pub use e006::internal_module::a_public_module_fn as now_public_fn;
+    pub use crate::e006::internal_module::a_public_module_fn as now_public_fn;
 }

@@ -190,7 +190,7 @@ pub type TryResult = Result<i32, &'static str>;
 /// Demonstrate how `try!` works in practice.
 pub fn demonstrate_try(tr: TryResult) -> TryResult {
     // If the caller passes in an error, this returns that error.
-    let val = try!(tr);
+    let val = r#try!(tr);
     // Thus, if `tr` was `Err`, we'll never get here. If it's an `Ok`, `val` has
     // the value, so we can return it slightly modified to show that that's what
     // actually happened.
