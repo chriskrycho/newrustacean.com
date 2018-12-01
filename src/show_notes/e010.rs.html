@@ -422,7 +422,7 @@
 <span class="doccomment">/// Demonstrate how `try!` works in practice.</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demonstrate_try</span>(<span class="ident">tr</span>: <span class="ident">TryResult</span>) <span class="op">-&gt;</span> <span class="ident">TryResult</span> {
     <span class="comment">// If the caller passes in an error, this returns that error.</span>
-    <span class="kw">let</span> <span class="ident">val</span> <span class="op">=</span> <span class="macro">try</span><span class="macro">!</span>(<span class="ident">tr</span>);
+    <span class="kw">let</span> <span class="ident">val</span> <span class="op">=</span> <span class="macro">r#try</span><span class="macro">!</span>(<span class="ident">tr</span>);
     <span class="comment">// Thus, if `tr` was `Err`, we&#39;ll never get here. If it&#39;s an `Ok`, `val` has</span>
     <span class="comment">// the value, so we can return it slightly modified to show that that&#39;s what</span>
     <span class="comment">// actually happened.</span>
