@@ -10,9 +10,9 @@
 
 // Set the crate-level HTML rendering rules for the documentation.
 #![doc(
-    html_logo_url = "http://newrustacean.com/podcast.png",
-    html_favicon_url = "http://newrustacean.com/favicon.ico",
-    html_root_url = "http://newrustacean.com/"
+    html_logo_url = "https://newrustacean.com/podcast.png",
+    html_favicon_url = "https://newrustacean.com/favicon.ico",
+    html_root_url = "https://newrustacean.com/"
 )]
 // Enable access to the benchmarking functionality. Note that with this present,
 // we require using nightly Rust (as of 1.5).
