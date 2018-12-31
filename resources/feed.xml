@@ -4,14 +4,14 @@
         <title>New Rustacean – learning the Rust programming language</title>
         <link>http://newrustacean.com</link>
         <description>A podcast about learning the Rust programming language—from scratch!</description>
-        <generator>Feeder 3 3.6.2(3180); Mac OS X Version 10.14.1 (Build 18B75) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.6.2(3180); Mac OS X Version 10.14.2 (Build 18C54) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Fri, 30 Nov 2018 21:47:05 -0700</pubDate>
-        <lastBuildDate>Fri, 30 Nov 2018 21:47:06 -0700</lastBuildDate>
+        <pubDate>Mon, 31 Dec 2018 15:54:46 -0700</pubDate>
+        <lastBuildDate>Mon, 31 Dec 2018 15:54:46 -0700</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -40,6 +40,167 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>Interview: Integer32</title>
+            <link>http://newrustacean.com/show_notes/interview/integer32/</link>
+            <description><![CDATA[<h2 id="show-notes">Show Notes</h2>
+<p>Things we mentioned on the show:</p>
+<ul>
+<li><a href="https://github.com/integer32llc/rust-playground">the playground</a></li>
+<li><a href="https://ferrous-systems.com">Ferrous Systems</a></li>
+<li>Magical JSON: https://quicktype.io</li>
+<li>EddyB’s company: <a href="https://lyken.rs">Lyken Software Solutions</a></li>
+<li>Integer32 blog: <a href="https://integer32.com/2018/11/29/2018-rust-belt-rust-finance-report.html">“Tech Conference Budget Case Study: Rust Belt Rust 2018”</a></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<p>Thanks to Manning for sponsoring this episode; don’t forget to grab some of their content at 40% off using the code <code>podnewrust18</code>!</p>
+<p>Thanks to Parity for sponsoring the show again. Go check out their <a href="https://paritytech.io/jobs/"><strong><em>Rust jobs</em></strong></a>!</p>
+<h3 id="patreon-sponsors">Patreon Sponsors</h3>
+<ul>
+<li>Adam Green</li>
+<li>Aleksey Pirogov</li>
+<li>Alexander Kryvomaz</li>
+<li>Alexander Payne</li>
+<li><a href="https://github.com/bddap">Andrew Dirksen</a></li>
+<li>Andrew Thompson</li>
+<li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
+<li>Anthony Scotti</li>
+<li><a href="https://github.com/beaorn">beaorn</a></li>
+<li><a href="https://github.com/behnam">Behnam Esfahbod</a></li>
+<li>Benjamin Wasty</li>
+<li>Brandon ‘Spanky’ Mills</li>
+<li>Brian Casiello</li>
+<li>Brian Manning</li>
+<li><a href="https://skife.org/">Brian McCallister</a></li>
+<li><a href="http://www.stitthappens.com/">Bryan Stitt</a></li>
+<li>Caryn Finkelman</li>
+<li>Cass Costello</li>
+<li>Chap Lovejoy</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li>Chip</li>
+<li><a href="http://home.red-oxide.org/">Chris Palmer</a></li>
+<li>Dan Abrams</li>
+<li>Daniel</li>
+<li>Daniel Bross</li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://github.com/gisleburt">Daniel Mason</a></li>
+<li>David Hewson</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Doug Reeves</li>
+<li><a href="https://github.com/edvorg">Eduard Knyshov</a></li>
+<li><a href="https://www.embark-studios.com">Embark Studios</a></li>
+<li>Eugene Bulkin</li>
+<li><a href="https://decathorpe.com/">Fabio (decathorpe)</a></li>
+<li>Fábio Botelho</li>
+<li><a href="https://twitter.com/gaveen">Gaveen Prabhasara</a></li>
+<li><a href="https://wihlidal.com/">Graham Wihlidal</a></li>
+<li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
+<li><a href="https://www.ianmjones.com/">Ian Jones</a></li>
+<li>“Jake”“ferris”" Taylor"</li>
+<li>Jako Danar</li>
+<li>James Cooper</li>
+<li>James Hagans II</li>
+<li>Jerome Froelich</li>
+<li><a href="http://github.com/joar">Joar Wandborg</a></li>
+<li><a href="https://www.embark-studios.com">Johan Andersson</a></li>
+<li><a href="http://www.cindur.com/">John Rudnick</a></li>
+<li>Jon</li>
+<li><a href="https://www.coffeeandcode.com/">Jonathan Knapp</a></li>
+<li>Jonathan Turner</li>
+<li>Joseph Hain</li>
+<li>Joseph Marhee</li>
+<li>Justin Ossevoort</li>
+<li>Kai Yao</li>
+<li>Keith Gray</li>
+<li>Kilian Rault</li>
+<li>Lee Jenkins</li>
+<li>Luca Schmid</li>
+<li><a href="http://luizirber.org/">Luiz Irber</a></li>
+<li>Lukas Eller</li>
+<li><a href="https://github.com/epsilonhalbe">Martin Heuschober</a></li>
+<li>Masashi Fujita</li>
+<li>Matt Rudder</li>
+<li>Matthew Brenner</li>
+<li>Matthias Ruszala</li>
+<li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li>
+<li>Max R.R. Collada</li>
+<li><a href="https://github.com/messense">Messense Lv</a></li>
+<li>Micael Bergeron</li>
+<li><a href="https://www.linkedin.com/in/michaelmcdonnell/">Michael Mc Donnell</a></li>
+<li>Michael Melanson</li>
+<li>Michael Sanders</li>
+<li><a href="http://influential.co/">Nathan Sculli</a></li>
+<li><a href="http://github.com/ncoish">Nick Coish</a></li>
+<li>Nick Gideo</li>
+<li><a href="https://github.com/nastevens">Nick Stevens</a></li>
+<li><a href="https://github.com/n-pochet">Nicolas Pochet</a></li>
+<li>Olaf Leidinger<br />
+</li>
+<li>Oliver Uvman</li>
+<li><a href="http://oluseyi.info/">Oluseyi Sonaiya</a></li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal</a></li>
+<li><a href="https://twitter.com/patrickod">Patrick O’Doherty</a></li>
+<li>Paul Naranja</li>
+<li>Paul Osborne</li>
+<li>Peter Scholtens</li>
+<li>Peter Tillemans</li>
+<li>Pierre-Antoine Champin</li>
+<li>Ralph Giles</li>
+<li><a href="http://www.inosion.com">Ramon Buckland</a></li>
+<li>Randy MacLeod</li>
+<li>Raph Levien</li>
+<li>Richard Dallaway</li>
+<li>Rob Tsuk</li>
+<li>Robert Chrzanowski</li>
+<li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
+<li><a href="https://github.com/osialr">Ryan Osial</a></li>
+<li>Scott Moeller</li>
+<li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
+<li><a href="https://www.simonhdickson.com/">Simon Dickson</a></li>
+<li>Simon G</li>
+<li><a href="https://www.ntnu.edu/employees/steffen.sunde">Steffen Loen Sunde</a></li>
+<li>Steve Jenson</li>
+<li>Steven Knight</li>
+<li>Steven Murawski</li>
+<li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
+<li>Tim Brooks</li>
+<li>Tim Süberkrüb</li>
+<li>Tom Prince</li>
+<li>Toolmaker’s Guild</li>
+<li>Ty Overby</li>
+<li>Tyler Harper</li>
+<li>Victor Kruger</li>
+<li>Will Greenberg</li>
+<li><a href="http://willroe.me">William Roe</a></li>
+<li>Zak van der Merwe</li>
+<li>Zachary Snyder</li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean: + Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a> + Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+<li>Chris Krycho + GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a> + Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul>
+]]></description>
+            <pubDate>Mon, 31 Dec 2018 16:00:00 -0700</pubDate>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/integer32.mp3" length="39416067" type="audio/mpeg"/>
+            <guid isPermaLink="false">7645717E-336D-4F21-9B7B-C29167BC0D70</guid>
+            <itunes:subtitle>Carol Nichols || Goulding and Jake Goulding</itunes:subtitle>
+            <itunes:summary>Talking with Carol and Jake about _The Rust Programming Language_, _Rust in Motion_, and Rust Belt Rust. With a bonus discussion about the value of focusing on our kids over just building big businesses.</itunes:summary>
+            <itunes:duration>41:01</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
+        </item>
         <item>
             <title>e027: Trust Me; I Promise!</title>
             <link>http://newrustacean.com/show_notes/e027/</link>
