@@ -1,16 +1,16 @@
-//! Rust 1.31 and the 2018 Edition, Part I
+//! Rust 1.31 and the 2018 Edition, Part II
 //!
-//! - **Date:** January 7, 2019
+//! - **Date:** January 14, 2019
 //! - **Subject:** An overview of the edition, and some of the improvements that
 //!   are available in both the 2015 and 2018 editions: better lifetime elision,
 //!   some Cargo features, and some library stabilizations.
 //! - [**download mp3**][mp3]
 //! - [**script**][script]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_31/part_1.mp3
-//! [script]: https://newrustacean.com/show_notes/news/rust_1_31/part_1/struct.script
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_31/part_2.mp3
+//! [script]: https://newrustacean.com/show_notes/news/rust_1_31/part_2/struct.script
 //!
-//! <audio style="width: 100%" title="News: Rust 1.31, Part I" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_31/part_1.mp3">
+//! <audio style="width: 100%" title="News: Rust 1.31, Part II" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_31/part_2.mp3">
 //!
 //! Show Notes
 //! ----------
@@ -227,5 +227,5 @@
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-#[doc(include = "../docs/news/rust-1-31/part-1.md")]
+#[doc(include = "../docs/news/rust-1-31/part-2.md")]
 pub struct Script;
