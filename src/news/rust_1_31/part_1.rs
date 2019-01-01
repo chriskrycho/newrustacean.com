@@ -132,6 +132,7 @@
 //! - Raph Levien
 //! - Richard Dallaway
 //! - Rob Tsuk
+//! - [Robbie Clarken]
 //! - Robert Chrzanowski
 //! - [Ryan Blecher]
 //! - [Ryan Osial]
@@ -196,6 +197,7 @@
 //! [Patrick O'Doherty]: https://twitter.com/patrickod
 //! [Philipp Keller]: https://twitter.com/hansapla
 //! [Ramon Buckland]: http://www.inosion.com
+//! [Robbie Clarken]: https://github.com/RobbieClarken/
 //! [Ryan Blecher]: http://notryanb.github.io/
 //! [Ryan Osial]: https://github.com/osialr
 //! [Sebastián Ramírez Magrí]: https://www.twitter.com/sebasmagri
