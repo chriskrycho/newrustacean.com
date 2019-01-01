@@ -1,4 +1,5 @@
 //! Integer32: Carol Nichols || Goulding and Jake Goulding
+//!
 //! - **Date:** December 31, 2018
 //! - **Subject:** Talking with Carol and Jake about _The Rust Programming
 //!   Language_, _Rust in Motion_, and Rust Belt Rust. With a bonus discussion
