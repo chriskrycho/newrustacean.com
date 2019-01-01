@@ -23,7 +23,7 @@
 //!     + [News: Rust 1.29 and 1.30]
 //!
 //! [Rust 1.31 Blog Post]: https://blog.rust-lang.org/2018/12/06/Rust-1.31-and-rust-2018.html
-//! [Rust 1.31 Release Notes]:
+//! [Rust 1.31 Release Notes]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1310-2018-12-06
 //! [Rust 2018 Edition Guide]: https://rust-lang-nursery.github.io/edition-guide/rust-2018/index.html
 //! [News: Rust 1.28]: https://newrustacean.com/show_notes/news/rust_1_28/ "News: Rust 1.28"
 //! [News: Rust 1.29 and 1.30]: https://newrustacean.com/show_notes/news/rust_1_29_1_30/ "News: Rust 1.29 and 1.30"
