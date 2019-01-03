@@ -124,7 +124,7 @@
 
 pub mod andrew_hobden;
 pub mod anthony_deschamps;
-pub mod arun_kulshreshtha;
+pub mod arun_kulshreshthra;
 pub mod ben_beckwith;
 pub mod ben_striegel;
 pub mod colin_dean;

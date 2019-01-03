@@ -3635,10 +3635,10 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Arun Kulsheshthra</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/arun_kulshreshtha/</link>
+            <link>http://newrustacean.com/show_notes/interview/rbr_2017/arun_kulshreshthra/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Tue, 14 Nov 2017 20:02:51 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/arun_kulshreshtha.mp3" length="5261272" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/arun_kulshreshthra.mp3" length="5261272" type="audio/mpeg"/>
             <guid isPermaLink="false">3BCC7FC9-B335-45A3-BE58-1B2DE224958B</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.
