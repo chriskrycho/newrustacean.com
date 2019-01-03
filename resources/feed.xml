@@ -4147,7 +4147,7 @@ g = &amp;mut (g + 10);</code></pre>
 </ul>
 ]]></description>
             <pubDate>Tue, 04 Jul 2017 14:00:00 -0600</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/news_3.mp3" length="12550966" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/3.mp3" length="12550966" type="audio/mpeg"/>
             <guid isPermaLink="false">EA9A1109-0E35-42ED-8B96-C91BCD123502</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Growing Rust's diversity to help Rust grow.</itunes:summary>
@@ -5438,7 +5438,7 @@ g = &amp;mut (g + 10);</code></pre>
 </ul>
 ]]></description>
             <pubDate>Thu, 29 Dec 2016 12:00:00 -0700</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/news_2.mp3" length="17777740" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/2.mp3" length="17777740" type="audio/mpeg"/>
             <guid isPermaLink="false">7AAC0E06-6A11-4707-BD9A-AB5AD95F7CBB</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>Rust’s achievements in 2016 and goals for 2017 Sponsors * Aleksey Pirogov * Andreas Fischer * Ben Whitley * Cameron Mochrie * Chris Palmer * Daniel Collin * Derek Morr * Jakub “Limeth” Hlusička * Jupp Müller * Keith Gray * Lachlan Collins * Luca Schmid * Matt Rudder * Matthew Piziak * Micael Bergeron * Ovidiu Curcan * Pascal Hertleif * Peter Tillemans * Philipp Keller * Ralph Giles (“rillian”) * Raph Levien * reddraggone9 * Ryan Ollos * Steven Murawski * Vesa Kaihlavirta * Vlad Bezden * William Roe * Zaki (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/chriskrycho * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho * Flattr.com/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
@@ -6338,7 +6338,7 @@ g = &amp;mut (g + 10);</code></pre>
 </ul>
 ]]></description>
             <pubDate>Tue, 31 May 2016 12:13:25 -0600</pubDate>
-            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news_1.mp3" length="10635794" type="audio/mpeg"/>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/1.mp3" length="10635794" type="audio/mpeg"/>
             <guid isPermaLink="false">A8D6E44A-007D-4D36-9442-AA30722DF454</guid>
             <itunes:author>Chris Krycho</itunes:author>
             <itunes:summary>A year in, Rust is changing fast but still stable. Sponsors * Aleksey Pirogue * Chris Palmer * Daniel Collin * Derek Morr * Hamza Sheikh * Lachlan Collins * Leif Arne Storset * Luca Schmid * Micael Bergeron * Pascal Hertleif * Ralph Giles (“gillian”) * Ralph “FriarTech” Loizzo * reddraggone9 * Ryan Oleos * Vesa Kaihlavirta * William Roe (Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!) Become a sponsor * Patreon.com/newrustacean * Venmo.com/chriskrycho * Dwolla.com/hub/chriskrycho * Cash.me/$chriskrycho * Flattr.com/profile/chriskrycho * PayPal.me/chriskrycho Contact * New Rustacean: * Twitter: @newrustacean * Email: hello@newrustacean.com * Chris Krycho * GitHub: chriskrycho * Twitter: @chriskrycho</itunes:summary>
