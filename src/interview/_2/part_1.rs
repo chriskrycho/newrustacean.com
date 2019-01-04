@@ -25,46 +25,46 @@
 //! -----
 //!
 //!   - Past work:
-//!   
+//!
 //!       + [GIMP]
 //!       + [GTK]
 //!       + [GhostScript]
 //!       + [Google Web Fonts]
 //!       + [font-rs]
-//!       
+//!
 //!   - Current projects:
-//!   
+//!
 //!       + [pulldown-cmark]
 //!       + [Xi Editor]
-//!       
+//!
 //!   - [fuzz testing]
-//!   
+//!
 //!   - [sanitizers]
-//!   
+//!
 //!   - [FreeType]
-//!   
+//!
 //!   - [HarfBuzz]
-//!   
+//!
 //!   - [ICU]
-//!   
+//!
 //!   - Ropes
-//!   
+//!
 //!       + [Wikipedia summary]
 //!       + [original paper]
 //!   - ["log n operation"], or *O(log n)*
-//!   
+//!
 //!       + [Big O notation]
 //!   - Rust:
-//!   
+//!
 //!       + [`Arc`]
 //!       + [`RefCell`]
 //!       + [`Borrow`]
 //!       + [`AsRef`]
 //!   - Rust libraries
-//!   
+//!
 //!       + Crossbeam: [source][Crossbeam source] | [docs][Crossbeam docs]
 //!       + Rayon: [source][Rayon source] | [docs][Rayon docs]
-//!       
+//!
 //!   - [Unix philosophy]
 //!
 //!     > The Unix philosophy emphasizes building simple, short, clear,

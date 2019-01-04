@@ -144,13 +144,13 @@
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
 trait Foo {
-  const FOO: u32 = 0;
+    const FOO: u32 = 0;
 }
 
 struct _Bar {}
 
 impl _Bar {
-  const _BAR: u32 = 50;
+    const _BAR: u32 = 50;
 }
 
 impl Foo for _Bar {}
@@ -158,21 +158,21 @@ impl Foo for _Bar {}
 enum _Baz {}
 
 impl _Baz {
-  const _BAZ: u32 = 100;
+    const _BAZ: u32 = 100;
 }
 
 impl Foo for _Baz {}
 
 #[cfg(test)]
 mod tests {
-  use super::*;
+    use super::*;
 
-  #[test]
-  fn it_works() {
-    // assert_eq!(Foo::FOO, 0);
-    assert_eq!(_Bar::_BAR, 50);
-    assert_eq!(_Bar::FOO, 0);
-    assert_eq!(_Baz::_BAZ, 100);
-    assert_eq!(_Baz::FOO, 0);
-  }
+    #[test]
+    fn it_works() {
+        // assert_eq!(Foo::FOO, 0);
+        assert_eq!(_Bar::_BAR, 50);
+        assert_eq!(_Bar::FOO, 0);
+        assert_eq!(_Baz::_BAZ, 100);
+        assert_eq!(_Baz::FOO, 0);
+    }
 }

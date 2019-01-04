@@ -1,9 +1,9 @@
 //! Rust 1.31 and the 2018 Edition, Part II
 //!
 //! - **Date:** January 14, 2019
-//! - **Subject:** An overview of the edition, and some of the improvements that
-//!   are available in both the 2015 and 2018 editions: better lifetime elision,
-//!   some Cargo features, and some library stabilizations.
+//! - **Subject:** Stabilizing rustfmt, clippy, tool lints, and `const fn` (all
+//!   in both editions!), and the 2018 Edition-specific features: syntax
+//!   changes and non-lexical lifetimes!
 //! - [**download mp3**][mp3]
 //! - [**script**][script]
 //!
@@ -18,15 +18,19 @@
 //! - [Rust 1.31 Blog Post]
 //! - [Rust 1.31 Release Notes]
 //! - [Rust 2018 Edition Guide]
-//! - Previous episodes of direct interest:
-//!     + [News: Rust 1.28]
-//!     + [News: Rust 1.29 and 1.30]
-//!
+//! - [a simple NLL example]
+//! - [`const fn` in the reference] and [“const contexts”]
+//! - [“uniform paths”]
+//! - [the raw string syntax]
+//! 
 //! [Rust 1.31 Blog Post]: https://blog.rust-lang.org/2018/12/06/Rust-1.31-and-rust-2018.html
-//! [Rust 1.31 Release Notes]:
+//! [Rust 1.31 Release Notes]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1310-2018-12-06
 //! [Rust 2018 Edition Guide]: https://rust-lang-nursery.github.io/edition-guide/rust-2018/index.html
-//! [News: Rust 1.28]: https://newrustacean.com/show_notes/news/rust_1_28/ "News: Rust 1.28"
-//! [News: Rust 1.29 and 1.30]: https://newrustacean.com/show_notes/news/rust_1_29_1_30/ "News: Rust 1.29 and 1.30"
+//! [a simple NLL example]: https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=f497716877668a5f0dc904e24ffc207a
+//! [`const fn` in the reference]: https://doc.rust-lang.org/reference/items/functions.html#const-functions
+//! [“uniform paths”]: https://doc.rust-lang.org/edition-guide/rust-2018/module-system/path-clarity.html#uniform-paths
+//! [the raw string syntax]: https://doc.rust-lang.org/stable/reference/tokens.html#string-literals
+//! [“const contexts”]: https://doc.rust-lang.org/reference/const_eval.html#const-context
 //!
 //! Sponsors
 //! --------
@@ -115,7 +119,7 @@
 //! - Nick Gideo
 //! - [Nick Stevens]
 //! - [Nicolas Pochet]
-//! - Olaf Leidinger    
+//! - Olaf Leidinger
 //! - Oliver Uvman
 //! - [Oluseyi Sonaiya]
 //! - Ovidiu Curcan

@@ -20,7 +20,7 @@
 //!       + [Guido van Rossum] and [Python]
 //!       + [Matz (Yukihiro Matsumoto)][Matz] and [Ruby]
 //!       + [Dart]
-//!       
+//!
 //! [survey]: https://blog.rust-lang.org/2016/06/30/State-of-Rust-Survey-2016.html
 //! [Guido van Rossum]: https://en.wikipedia.org/wiki/Guido_van_Rossum
 //! [Python]: https://www.python.org

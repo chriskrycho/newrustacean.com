@@ -48,7 +48,7 @@
 //!   - [WebKit]
 //!       + [KHTML]
 //!       + [Safari]
-//!   
+//!
 //! [Servo]: https://servo.org
 //! [Windows nightlies]: https://blog.servo.org/2017/04/13/windows/
 //! [llvm]: http://llvm.org
