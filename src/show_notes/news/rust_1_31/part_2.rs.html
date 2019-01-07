@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source to the Rust file `src/interview/integer32.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>integer32.rs.html -- source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css"><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script src="../../../storage.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="shortcut icon" href="https://newrustacean.com/favicon.ico"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../../show_notes/index.html'><img src='https://newrustacean.com/podcast.png' alt='logo' width='100'></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><a id="settings-menu" href="../../../settings.html"><img src="../../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><pre class="line-numbers"><span id="1">  1</span>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source to the Rust file `src/news/rust_1_31/part_2.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>part_2.rs.html -- source</title><link rel="stylesheet" type="text/css" href="../../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../../dark.css"><link rel="stylesheet" type="text/css" href="../../../../light.css" id="themeStyle"><script src="../../../../storage.js"></script><noscript><link rel="stylesheet" href="../../../../noscript.css"></noscript><link rel="shortcut icon" href="https://newrustacean.com/favicon.ico"><style type="text/css">#crate-search{background-image:url("../../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../../../show_notes/index.html'><img src='https://newrustacean.com/podcast.png' alt='logo' width='100'></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><a id="settings-menu" href="../../../../settings.html"><img src="../../../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -229,42 +229,41 @@
 <span id="229">229</span>
 <span id="230">230</span>
 <span id="231">231</span>
+<span id="232">232</span>
+<span id="233">233</span>
 </pre><div class="example-wrap"><pre class="rust ">
-<span class="doccomment">//! Integer32: Carol Nichols || Goulding and Jake Goulding</span>
+<span class="doccomment">//! Rust 1.31 and the 2018 Edition, Part II</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! - **Date:** December 31, 2018</span>
-<span class="doccomment">//! - **Subject:** Talking with Carol and Jake about _The Rust Programming</span>
-<span class="doccomment">//!   Language_, _Rust in Motion_, and Rust Belt Rust. With a bonus discussion</span>
-<span class="doccomment">//!   about the value of focusing on our kids over just building big businesses.</span>
+<span class="doccomment">//! - **Date:** January 14, 2019</span>
+<span class="doccomment">//! - **Subject:** An overview of the edition, and some of the improvements that</span>
+<span class="doccomment">//!   are available in both the 2015 and 2018 editions: better lifetime elision,</span>
+<span class="doccomment">//!   some Cargo features, and some library stabilizations.</span>
 <span class="doccomment">//! - [**download mp3**][mp3]</span>
+<span class="doccomment">//! - [**script**][script]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/integer32.mp3</span>
+<span class="doccomment">//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_31/part_2.mp3</span>
+<span class="doccomment">//! [script]: https://newrustacean.com/show_notes/news/rust_1_31/part_2/struct.script</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;News: Rust 1.29 and 1.30&quot; controls preload=metadata src=&quot;https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/integer32.mp3&quot;&gt;</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;News: Rust 1.31, Part II&quot; controls preload=metadata src=&quot;https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_31/part_2.mp3&quot;&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! Show Notes</span>
 <span class="doccomment">//! ----------</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! Things we mentioned on the show:</span>
+<span class="doccomment">//! - [Rust 1.31 Blog Post]</span>
+<span class="doccomment">//! - [Rust 1.31 Release Notes]</span>
+<span class="doccomment">//! - [Rust 2018 Edition Guide]</span>
+<span class="doccomment">//! - Previous episodes of direct interest:</span>
+<span class="doccomment">//!     + [News: Rust 1.28]</span>
+<span class="doccomment">//!     + [News: Rust 1.29 and 1.30]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! - [the playground]</span>
-<span class="doccomment">//! - [Ferrous Systems]</span>
-<span class="doccomment">//! - Magical JSON: [QuickType]</span>
-<span class="doccomment">//! - EddyB’s company: [Lyken Software Solutions]</span>
-<span class="doccomment">//! - Integer32 blog: [“Tech Conference Budget Case Study: Rust Belt Rust 2018”]</span>
-<span class="doccomment">//!</span>
-<span class="doccomment">//! [the playground]: https://github.com/integer32llc/rust-playground</span>
-<span class="doccomment">//! [Ferrous Systems]: https://ferrous-systems.com</span>
-<span class="doccomment">//! [QuickType]: https://quicktype.io</span>
-<span class="doccomment">//! [Lyken Software Solutions]: https://lyken.rs</span>
-<span class="doccomment">//! [“Tech Conference Budget Case Study: Rust Belt Rust 2018”]: https://integer32.com/2018/11/29/2018-rust-belt-rust-finance-report.html</span>
-<span class="doccomment">//!</span>
+<span class="doccomment">//! [Rust 1.31 Blog Post]: https://blog.rust-lang.org/2018/12/06/Rust-1.31-and-rust-2018.html</span>
+<span class="doccomment">//! [Rust 1.31 Release Notes]:</span>
+<span class="doccomment">//! [Rust 2018 Edition Guide]: https://rust-lang-nursery.github.io/edition-guide/rust-2018/index.html</span>
+<span class="doccomment">//! [News: Rust 1.28]: https://newrustacean.com/show_notes/news/rust_1_28/ &quot;News: Rust 1.28&quot;</span>
+<span class="doccomment">//! [News: Rust 1.29 and 1.30]: https://newrustacean.com/show_notes/news/rust_1_29_1_30/ &quot;News: Rust 1.29 and 1.30&quot;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! Sponsors</span>
 <span class="doccomment">//! --------</span>
-<span class="doccomment">//!</span>
-<span class="doccomment">//! Thanks to Manning for sponsoring this episode; don’t forget to grab some of</span>
-<span class="doccomment">//! their content at 40% off using the code `podnewrust18`!</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! Thanks to Parity for sponsoring the show again. Go check out their [***Rust</span>
 <span class="doccomment">//! jobs***][parity]!</span>
@@ -367,6 +366,7 @@
 <span class="doccomment">//! - Raph Levien</span>
 <span class="doccomment">//! - Richard Dallaway</span>
 <span class="doccomment">//! - Rob Tsuk</span>
+<span class="doccomment">//! - [Robbie Clarken]</span>
 <span class="doccomment">//! - Robert Chrzanowski</span>
 <span class="doccomment">//! - [Ryan Blecher]</span>
 <span class="doccomment">//! - [Ryan Osial]</span>
@@ -431,6 +431,7 @@
 <span class="doccomment">//! [Patrick O&#39;Doherty]: https://twitter.com/patrickod</span>
 <span class="doccomment">//! [Philipp Keller]: https://twitter.com/hansapla</span>
 <span class="doccomment">//! [Ramon Buckland]: http://www.inosion.com</span>
+<span class="doccomment">//! [Robbie Clarken]: https://github.com/RobbieClarken/</span>
 <span class="doccomment">//! [Ryan Blecher]: http://notryanb.github.io/</span>
 <span class="doccomment">//! [Ryan Osial]: https://github.com/osialr</span>
 <span class="doccomment">//! [Sebastián Ramírez Magrí]: https://www.twitter.com/sebasmagri</span>
@@ -461,9 +462,12 @@
 <span class="doccomment">//! - Chris Krycho</span>
 <span class="doccomment">//!       + GitHub: [chriskrycho](https://github.com/chriskrycho)</span>
 <span class="doccomment">//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
+
+<span class="attribute">#[<span class="ident">doc</span>(<span class="ident">include</span> <span class="op">=</span> <span class="string">&quot;../docs/news/rust-1-31/part-2.md&quot;</span>)]</span>
+<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Script</span>;
 </pre></div>
 </section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g., <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g., <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g., <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><link rel="stylesheet" href="/media-playback.css">
 <script type="text/javascript" src="/media-playback.js" defer></script>
 
 
-<script>window.rootPath = "../../../";window.currentCrate = "show_notes";</script><script src="../../../aliases.js"></script><script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script><script defer src="../../../search-index.js"></script></body></html>
+<script>window.rootPath = "../../../../";window.currentCrate = "show_notes";</script><script src="../../../../aliases.js"></script><script src="../../../../main.js"></script><script src="../../../../source-script.js"></script><script src="../../../../source-files.js"></script><script defer src="../../../../search-index.js"></script></body></html>
