@@ -1,38 +1,35 @@
-//! Integer32: Carol Nichols || Goulding and Jake Goulding
+//! Rust 1.31 and the 2018 Edition, Part II
 //!
-//! - **Date:** December 31, 2018
-//! - **Subject:** Talking with Carol and Jake about _The Rust Programming
-//!   Language_, _Rust in Motion_, and Rust Belt Rust. With a bonus discussion
-//!   about the value of focusing on our kids over just building big businesses.
+//! - **Date:** January 14, 2019
+//! - **Subject:** An overview of the edition, and some of the improvements that
+//!   are available in both the 2015 and 2018 editions: better lifetime elision,
+//!   some Cargo features, and some library stabilizations.
 //! - [**download mp3**][mp3]
+//! - [**script**][script]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/integer32.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_31/part_2.mp3
+//! [script]: https://newrustacean.com/show_notes/news/rust_1_31/part_2/struct.script
 //!
-//! <audio style="width: 100%" title="News: Rust 1.29 and 1.30" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/integer32.mp3">
+//! <audio style="width: 100%" title="News: Rust 1.31, Part II" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_31/part_2.mp3">
 //!
 //! Show Notes
 //! ----------
 //!
-//! Things we mentioned on the show:
+//! - [Rust 1.31 Blog Post]
+//! - [Rust 1.31 Release Notes]
+//! - [Rust 2018 Edition Guide]
+//! - Previous episodes of direct interest:
+//!     + [News: Rust 1.28]
+//!     + [News: Rust 1.29 and 1.30]
 //!
-//! - [the playground]
-//! - [Ferrous Systems]
-//! - Magical JSON: [QuickType]
-//! - EddyB’s company: [Lyken Software Solutions]
-//! - Integer32 blog: [“Tech Conference Budget Case Study: Rust Belt Rust 2018”]
-//!
-//! [the playground]: https://github.com/integer32llc/rust-playground
-//! [Ferrous Systems]: https://ferrous-systems.com
-//! [QuickType]: https://quicktype.io
-//! [Lyken Software Solutions]: https://lyken.rs
-//! [“Tech Conference Budget Case Study: Rust Belt Rust 2018”]: https://integer32.com/2018/11/29/2018-rust-belt-rust-finance-report.html
-//!
+//! [Rust 1.31 Blog Post]: https://blog.rust-lang.org/2018/12/06/Rust-1.31-and-rust-2018.html
+//! [Rust 1.31 Release Notes]:
+//! [Rust 2018 Edition Guide]: https://rust-lang-nursery.github.io/edition-guide/rust-2018/index.html
+//! [News: Rust 1.28]: https://newrustacean.com/show_notes/news/rust_1_28/ "News: Rust 1.28"
+//! [News: Rust 1.29 and 1.30]: https://newrustacean.com/show_notes/news/rust_1_29_1_30/ "News: Rust 1.29 and 1.30"
 //!
 //! Sponsors
 //! --------
-//!
-//! Thanks to Manning for sponsoring this episode; don’t forget to grab some of
-//! their content at 40% off using the code `podnewrust18`!
 //!
 //! Thanks to Parity for sponsoring the show again. Go check out their [***Rust
 //! jobs***][parity]!
@@ -135,6 +132,7 @@
 //! - Raph Levien
 //! - Richard Dallaway
 //! - Rob Tsuk
+//! - [Robbie Clarken]
 //! - Robert Chrzanowski
 //! - [Ryan Blecher]
 //! - [Ryan Osial]
@@ -199,6 +197,7 @@
 //! [Patrick O'Doherty]: https://twitter.com/patrickod
 //! [Philipp Keller]: https://twitter.com/hansapla
 //! [Ramon Buckland]: http://www.inosion.com
+//! [Robbie Clarken]: https://github.com/RobbieClarken/
 //! [Ryan Blecher]: http://notryanb.github.io/
 //! [Ryan Osial]: https://github.com/osialr
 //! [Sebastián Ramírez Magrí]: https://www.twitter.com/sebasmagri
@@ -229,3 +228,6 @@
 //! - Chris Krycho
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
+
+#[doc(include = "../docs/news/rust-1-31/part-2.md")]
+pub struct Script;
