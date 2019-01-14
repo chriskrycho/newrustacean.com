@@ -231,13 +231,17 @@
 <span id="231">231</span>
 <span id="232">232</span>
 <span id="233">233</span>
+<span id="234">234</span>
+<span id="235">235</span>
+<span id="236">236</span>
+<span id="237">237</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="doccomment">//! Rust 1.31 and the 2018 Edition, Part II</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! - **Date:** January 14, 2019</span>
-<span class="doccomment">//! - **Subject:** An overview of the edition, and some of the improvements that</span>
-<span class="doccomment">//!   are available in both the 2015 and 2018 editions: better lifetime elision,</span>
-<span class="doccomment">//!   some Cargo features, and some library stabilizations.</span>
+<span class="doccomment">//! - **Subject:** Stabilizing rustfmt, clippy, tool lints, and `const fn` (all</span>
+<span class="doccomment">//!   in both editions!), and the 2018 Edition-specific features: syntax</span>
+<span class="doccomment">//!   changes and non-lexical lifetimes!</span>
 <span class="doccomment">//! - [**download mp3**][mp3]</span>
 <span class="doccomment">//! - [**script**][script]</span>
 <span class="doccomment">//!</span>
@@ -252,15 +256,19 @@
 <span class="doccomment">//! - [Rust 1.31 Blog Post]</span>
 <span class="doccomment">//! - [Rust 1.31 Release Notes]</span>
 <span class="doccomment">//! - [Rust 2018 Edition Guide]</span>
-<span class="doccomment">//! - Previous episodes of direct interest:</span>
-<span class="doccomment">//!     + [News: Rust 1.28]</span>
-<span class="doccomment">//!     + [News: Rust 1.29 and 1.30]</span>
-<span class="doccomment">//!</span>
+<span class="doccomment">//! - [a simple NLL example]</span>
+<span class="doccomment">//! - [`const fn` in the reference] and [“const contexts”]</span>
+<span class="doccomment">//! - [“uniform paths”]</span>
+<span class="doccomment">//! - [the raw string syntax]</span>
+<span class="doccomment">//! </span>
 <span class="doccomment">//! [Rust 1.31 Blog Post]: https://blog.rust-lang.org/2018/12/06/Rust-1.31-and-rust-2018.html</span>
-<span class="doccomment">//! [Rust 1.31 Release Notes]:</span>
+<span class="doccomment">//! [Rust 1.31 Release Notes]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1310-2018-12-06</span>
 <span class="doccomment">//! [Rust 2018 Edition Guide]: https://rust-lang-nursery.github.io/edition-guide/rust-2018/index.html</span>
-<span class="doccomment">//! [News: Rust 1.28]: https://newrustacean.com/show_notes/news/rust_1_28/ &quot;News: Rust 1.28&quot;</span>
-<span class="doccomment">//! [News: Rust 1.29 and 1.30]: https://newrustacean.com/show_notes/news/rust_1_29_1_30/ &quot;News: Rust 1.29 and 1.30&quot;</span>
+<span class="doccomment">//! [a simple NLL example]: https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2018&amp;gist=f497716877668a5f0dc904e24ffc207a</span>
+<span class="doccomment">//! [`const fn` in the reference]: https://doc.rust-lang.org/reference/items/functions.html#const-functions</span>
+<span class="doccomment">//! [“uniform paths”]: https://doc.rust-lang.org/edition-guide/rust-2018/module-system/path-clarity.html#uniform-paths</span>
+<span class="doccomment">//! [the raw string syntax]: https://doc.rust-lang.org/stable/reference/tokens.html#string-literals</span>
+<span class="doccomment">//! [“const contexts”]: https://doc.rust-lang.org/reference/const_eval.html#const-context</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! Sponsors</span>
 <span class="doccomment">//! --------</span>
@@ -349,7 +357,7 @@
 <span class="doccomment">//! - Nick Gideo</span>
 <span class="doccomment">//! - [Nick Stevens]</span>
 <span class="doccomment">//! - [Nicolas Pochet]</span>
-<span class="doccomment">//! - Olaf Leidinger    </span>
+<span class="doccomment">//! - Olaf Leidinger</span>
 <span class="doccomment">//! - Oliver Uvman</span>
 <span class="doccomment">//! - [Oluseyi Sonaiya]</span>
 <span class="doccomment">//! - Ovidiu Curcan</span>
