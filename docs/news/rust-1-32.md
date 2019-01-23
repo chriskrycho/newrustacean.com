@@ -66,7 +66,7 @@ The first of those is [Amethyst]: a game engine [written in Rust]. As an aside, 
 [written in Rust]: https://github.com/amethyst/amethyst
 [keynote]: https://m.youtube.com/watch?v=aKLntZcp27M
 [a whole book]: https://www.amethyst.rs/book/latest/
-[examples]: https://github.com/amethyst/amethyst/tree/v0.9.0/examples
+[examples]: https://github.com/amethyst/amethyst/tree/v0.10.0/examples
 [docs]: https://www.amethyst.rs/book/latest/
 
 ### [`insta`][insta]
