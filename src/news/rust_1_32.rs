@@ -28,7 +28,7 @@
 //! [release notes]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1320-2019-01-17
 //! [Twitter]: https://twitter.com/softprops/status/1086723200095059972
 //! [Amethyst]: https://www.amethyst.rs/
-//! [examples]: https://github.com/amethyst/amethyst/tree/v0.9.0/examples
+//! [examples]: https://github.com/amethyst/amethyst/tree/v0.10.0/examples
 //! [docs]: https://www.amethyst.rs/book/latest/
 //! [RustConf 2018 keynote]: https://m.youtube.com/watch?v=aKLntZcp27M
 //! [insta]: https://crates.io/crates/insta
