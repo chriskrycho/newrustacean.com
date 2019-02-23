@@ -2,7 +2,7 @@
 //!
 //! - **Date:** February 21, 2019
 //! - **Subject:** Associated items: functions and methods, constants, types,
-//!   and (very briefly!) items.
+//!   and (very briefly!) GATs.
 //! - [**download mp3**][mp3]
 //! - [**script**][script]
 //!
