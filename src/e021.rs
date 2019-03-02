@@ -85,7 +85,7 @@
 //! [Behnam Esfahbod]: https://github.com/behnam
 //! [Brent Vatne]: https://github.com/brentvatne
 //! [Charlie Egan]: https://charlieegan3.com
-//! [Chris Palmer]: http://home.red-oxide.org/
+//! [Chris Palmer]: http://red-oxide.org/
 //! [Daniel Collin]: https://twitter.com/daniel_collin
 //! [David W. Allen]: http://GitHub.com/DataRiot
 //! [Derek Morr]: https://twitter.com/derekmorr

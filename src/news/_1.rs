@@ -67,7 +67,7 @@
 //!   - Vesa Kaihlavirta
 //!   - [William Roe]
 //!
-//! [Chris Palmer]: http://home.red-oxide.org/
+//! [Chris Palmer]: http://red-oxide.org/
 //! [Daniel Collin]: https://twitter.com/daniel_collin
 //! [Derek Morr]: https://twitter.com/derekmorr
 //! [Pascal Hertleif]: https://pascalhertleif.de/

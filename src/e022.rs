@@ -94,7 +94,7 @@
 //! [Behnam Esfahbod]: https://github.com/behnam
 //! [Brent Vatne]: https://github.com/brentvatne
 //! [Charlie Egan]: https://charlieegan3.com
-//! [Chris Palmer]: http://home.red-oxide.org/
+//! [Chris Palmer]: http://red-oxide.org/
 //! [Coleman McFarland]: http://github.com/anxiousmodernman
 //! [Daniel Collin]: https://twitter.com/daniel_collin
 //! [Daniel P. Clark]: https://6ftdan.com/

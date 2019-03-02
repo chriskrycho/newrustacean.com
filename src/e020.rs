@@ -81,7 +81,7 @@
 //!   - Zaki
 //!
 //! [Charlie Egan]: https://charlieegan3.com
-//! [Chris Palmer]: http://home.red-oxide.org/
+//! [Chris Palmer]: http://red-oxide.org/
 //! [Christopher Giffard]: http://blog.cgiffard.com
 //! [Daniel Collin]: https://twitter.com/daniel_collin
 //! [Derek Morr]: https://twitter.com/derekmorr
