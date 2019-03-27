@@ -4,9 +4,9 @@
 //!   - **Subject:** An accessible, well-designed web framework in Rust!
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk_rocket.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk/rocket.mp3
 //!
-//! <audio style="width: 100%" title="Crates You Should Know: Rocket" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk_rocket.mp3" />
+//! <audio style="width: 100%" title="Crates You Should Know: Rocket" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk/rocket.mp3" />
 //!
 //!
 //! Links and Notes
