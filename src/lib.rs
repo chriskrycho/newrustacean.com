@@ -56,6 +56,7 @@ pub mod e025;
 pub mod e026;
 pub mod e027;
 pub mod e028;
+pub mod e029;
 
 pub mod bonus;
 pub mod cysk;

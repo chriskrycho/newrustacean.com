@@ -7,3 +7,6 @@ authors = ["Chris Krycho <chris@chriskrycho.com>"]
 
 [dependencies]
 regex = "0.2"
+
+[build-dependencies]
+cc = "1.0"
