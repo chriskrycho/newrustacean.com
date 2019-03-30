@@ -58,7 +58,6 @@
 //! - Arlen Haftevani
 //! - [Arlo (Hyena)]
 //! - Arun Kulshreshtha
-//! - [beaorn]
 //! - [Behnam Esfahbod]
 //! - [Benjamin Manns]
 //! - Benjamin Wasty
