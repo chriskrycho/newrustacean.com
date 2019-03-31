@@ -22,7 +22,7 @@
 //! - [`const fn` in the reference] and [“const contexts”]
 //! - [“uniform paths”]
 //! - [the raw string syntax]
-//! 
+//!
 //! [Rust 1.31 Blog Post]: https://blog.rust-lang.org/2018/12/06/Rust-1.31-and-rust-2018.html
 //! [Rust 1.31 Release Notes]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1310-2018-12-06
 //! [Rust 2018 Edition Guide]: https://rust-lang-nursery.github.io/edition-guide/rust-2018/index.html

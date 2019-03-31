@@ -23,7 +23,7 @@
 //!     - [docs]
 //!     - [RustConf 2018 keynote]
 //! - [insta]
-//! 
+//!
 //! [blog post]: https://blog.rust-lang.org/2019/01/17/Rust-1.32.0.html
 //! [release notes]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1320-2019-01-17
 //! [Twitter]: https://twitter.com/softprops/status/1086723200095059972
@@ -124,7 +124,7 @@
 //! - Nick Gideo
 //! - [Nick Stevens]
 //! - [Nicolas Pochet]
-//! - Olaf Leidinger    
+//! - Olaf Leidinger
 //! - Oliver Uvman
 //! - [Oluseyi Sonaiya]
 //! - Ovidiu Curcan

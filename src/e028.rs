@@ -21,7 +21,7 @@
 //! - [The Reference on associated items][reference]
 //! - [Rust 1.20]
 //! - [deals.manning.com/new-rustacean]
-//! 
+//!
 //! [the source]: https://doc.rust-lang.org/1.32.0/src/core/iter/iterator.rs.html&version=1.32.0
 //! [the first Traits deep dive episode]: https://newrustacean.com/show_notes/e023/
 //! [RFC #1598]: https://github.com/rust-lang/rfcs/blob/master/text/1598-generic_associated_types.md
@@ -41,7 +41,7 @@
 //! [manning]: http://bit.ly/2OXnlEb
 //!
 //! ### Patreon Sponsors
-//! 
+//!
 //! - Adam Green
 //! - Aleksey Pirogov
 //! - Alexander Kryvomaz
@@ -135,7 +135,7 @@
 //! - Nick Gideo
 //! - [Nick Stevens]
 //! - [Nicolas Pochet]
-//! - Olaf Leidinger    
+//! - Olaf Leidinger
 //! - Oliver Uvman
 //! - [Oluseyi Sonaiya]
 //! - Ovidiu Curcan

@@ -36,7 +36,7 @@
 //! [parity]: https://www.parity.io/jobs
 //!
 //! ### Patreon Sponsors
-//! 
+//!
 //! - Adam Green
 //! - Aleksey Pirogov
 //! - Alexander Kryvomaz
@@ -129,7 +129,7 @@
 //! - Nick Gideo
 //! - [Nick Stevens]
 //! - [Nicolas Pochet]
-//! - Olaf Leidinger    
+//! - Olaf Leidinger
 //! - Oliver Uvman
 //! - [Oluseyi Sonaiya]
 //! - Ovidiu Curcan
