@@ -5,7 +5,7 @@ LANDING = landing/*.html landing/*.css
 RESOURCES = resources/* resources/.nojekyll
 
 # -- Define build rules -- #
-.PHONY: all clean test modules publish
+.PHONY: all clean test docs publish
 
 default: all
 
@@ -19,10 +19,10 @@ publish: all
 # Generate everything, but just leave it in the build directory.
 all: test docs landing resources
 
-test: $(SRC)
+test:
 	cargo test
 
-docs: $(SRC)
+docs:
 	env RUSTDOCFLAGS="--html-after-content src/includes/media-playback-speed.html --document-private-items" cargo doc --no-deps
 
 # Fancy landing page components.
