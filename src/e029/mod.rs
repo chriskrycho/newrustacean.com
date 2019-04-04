@@ -1,6 +1,6 @@
 //! I’m Out to C
 //!
-//! - **Date:** March 31, 2019
+//! - **Date:** April 3, 2019
 //! - **Subject:** Using Rust’s Foreign Function Interface (FFI) with C!
 //! - [**download mp3**][mp3]
 //! - [**script**][script]
