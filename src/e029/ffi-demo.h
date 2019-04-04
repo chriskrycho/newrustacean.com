@@ -1,3 +1,5 @@
+int add(int a, int b);
+
 typedef struct Point {
     float x;
     float y;

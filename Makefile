@@ -17,13 +17,13 @@ publish: all
 	git push origin gh-pages
 
 # Generate everything, but just leave it in the build directory.
-all: test modules landing resources
+all: test docs landing resources
 
 test: $(SRC)
 	cargo test
 
-modules: $(SRC)
-	env RUSTDOCFLAGS="--html-after-content src/includes/media-playback-speed.html" cargo doc --no-deps
+docs: $(SRC)
+	env RUSTDOCFLAGS="--html-after-content src/includes/media-playback-speed.html --document-private-items" cargo doc --no-deps
 
 # Fancy landing page components.
 landing: $(LANDING) target_dir
