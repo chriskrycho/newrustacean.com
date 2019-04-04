@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["add","A mostly-trivial example: addition in C instead of in Rust. (See the docs for `e029::add` for why it isn't totally trivial.)"],["translate","An example of a C function we can call with an object."]]});

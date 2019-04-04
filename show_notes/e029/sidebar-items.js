@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["add","A safe interface for the unsafe `ffi::add`."],["translate","A safe interface for the unsafe `ffi::translate` function."]],"mod":[["ffi","The module with all the unsafe code in it! You'll want to poke at this!"]],"struct":[["Point","An example of a slightly more complex data structure we can use with FFI."],["Script","e029: I’m Out To C"]]});

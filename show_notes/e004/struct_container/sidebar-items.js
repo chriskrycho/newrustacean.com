@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["MethodDemonstrator","Shows how methods work. Elaborates only a little on the e001 examples."]]});

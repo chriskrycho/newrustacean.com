@@ -1,1 +1,1 @@
-initSidebarItems({});
+initSidebarItems({"enum":[["_Baz",""]],"struct":[["_Bar",""]],"trait":[["Foo",""]]});
