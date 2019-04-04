@@ -190,7 +190,7 @@
 //! - [William Roe]
 //! - Zak van der Merwe
 //! - Zachary Snyder
-//! - Zach Peters
+//! - [Zach Peters]
 //! - Zaki
 //!
 //! [Andrew Dirksen]: https://github.com/bddap
@@ -249,6 +249,7 @@
 //! [Soren Bramer Schmidt]: http://prisma.io/
 //! [Stuart Hinson]: http://stuarth.github.io/
 //! [William Roe]: http://willroe.me
+//! [Zach Peters]: https://github.com/zpeters
 //!
 //! (Thanks to the couple people donating who opted out of the reward tier, as
 //! well. You know who you are!)
