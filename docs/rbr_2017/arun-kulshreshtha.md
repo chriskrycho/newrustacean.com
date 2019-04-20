@@ -1,4 +1,4 @@
-# Arun Kolshreshtha
+# Arun Kulshreshtha
 
 **Chris:** Hi, can you tell us your name and where you work and how you got into Rust?
 
