@@ -16,3 +16,4 @@ pub mod rust_1_28;
 pub mod rust_1_29_1_30;
 pub mod rust_1_31;
 pub mod rust_1_32;
+pub mod rust_1_33_1_34;
