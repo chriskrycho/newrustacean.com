@@ -222,7 +222,7 @@
 //!
 //! ### Become a sponsor
 //!
-//! - [Patreon](https://www.patreon.com/newrustacean)
+//! - <a href="https://www.patreon.com/newrustacean" rel="payment">Patreon</a>
 //! - [Venmo](https://venmo.com/chriskrycho)
 //! - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
 //! - [Cash.me](https://cash.me/$chriskrycho)

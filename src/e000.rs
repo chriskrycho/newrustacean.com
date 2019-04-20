@@ -34,7 +34,7 @@
 //!   - New Rustacean:
 //!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
 //!       + App.net: [@newrustacean](https://alpha.app.net/newrustacean)
-//!       + [Patreon](https://www.patreon.com/newrustacean)
+//!       + <a href="https://www.patreon.com/newrustacean" rel="payment">Patreon</a>
 //!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
 //!   - Chris Krycho
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)

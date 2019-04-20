@@ -243,7 +243,7 @@
 //!
 //! ### Become a sponsor
 //!
-//! - [Patreon](https://www.patreon.com/newrustacean)
+//! - <a href="https://www.patreon.com/newrustacean" rel="payment">Patreon</a>
 //! - [Venmo](https://venmo.com/chriskrycho)
 //! - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
 //! - [Cash.me](https://cash.me/$chriskrycho)
@@ -255,11 +255,11 @@
 //! -------
 //!
 //! - New Rustacean:
-//!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
-//!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
+//!     + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
+//!     + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
 //! - Chris Krycho
-//!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
-//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
+//!     + GitHub: [chriskrycho](https://github.com/chriskrycho)
+//!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
 #[doc(include = "../docs/news/Rust 1.33 and 1.34.md")]
 pub struct Script;
