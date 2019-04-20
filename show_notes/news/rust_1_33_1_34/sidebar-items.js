@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Script","News: Rust 1.33 and 1.34"]]});

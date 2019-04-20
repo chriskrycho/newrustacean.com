@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["Transcript","Arun Kolshreshtha"]]});
+initSidebarItems({"struct":[["Transcript","Arun Kulshreshtha"]]});
