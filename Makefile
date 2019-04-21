@@ -23,7 +23,7 @@ test:
 	cargo test
 
 docs:
-	env RUSTDOCFLAGS="--html-after-content src/includes/media-playback-speed.html --document-private-items" cargo doc --no-deps
+	env RUSTDOCFLAGS="--html-after-content src/includes/media-playback-speed.html" cargo doc --no-deps --document-private-items
 
 # Fancy landing page components.
 landing: $(LANDING) target_dir

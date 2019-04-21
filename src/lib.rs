@@ -19,6 +19,8 @@
 #![feature(test)]
 // Enable `#[doc(include = "<path>")]
 #![feature(external_doc)]
+// *Many* items are unused, because they exist only to be demo'd.
+#![allow(dead_code)]
 
 // This statement gives us access to the `test` crate for benchmarking.
 extern crate test;
@@ -57,6 +59,7 @@ pub mod e026;
 pub mod e027;
 pub mod e028;
 pub mod e029;
+pub mod e030;
 
 pub mod bonus;
 pub mod cysk;

@@ -276,6 +276,9 @@
 
 use std::os::raw::c_float;
 
+#[doc(include = "../docs/e029-script.md")]
+pub struct Script;
+
 /// An example of a slightly more complex data structure we can use with FFI.
 ///
 /// Note the `#[repr(C)]`, which tells Rust to make sure this struct is laid out
@@ -339,9 +342,6 @@ mod ffi {
         pub(super) fn translate(point: *mut Point, by_x: c_float, by_y: c_float);
     }
 }
-
-#[doc(include = "../docs/e029-script.md")]
-pub struct Script;
 
 /// A safe interface for the unsafe `ffi::add`.
 ///

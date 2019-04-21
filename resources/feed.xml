@@ -4,14 +4,14 @@
         <title>New Rustacean</title>
         <link>http://newrustacean.com</link>
         <description>A show about the Rust programming language and the people who use it.</description>
-        <generator>Feeder 3 3.6.4(3196); Mac OS X Version 10.14.4 (Build 18E226) http://reinventedsoftware.com/feeder/</generator>
+        <generator>Feeder 3 3.6.5(3200); Mac OS X Version 10.14.4 (Build 18E226) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
         <copyright>2015–2019 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Sat, 20 Apr 2019 13:19:45 -0600</pubDate>
-        <lastBuildDate>Sat, 20 Apr 2019 13:19:46 -0600</lastBuildDate>
+        <pubDate>Fri, 26 Apr 2019 22:09:04 -0600</pubDate>
+        <lastBuildDate>Fri, 26 Apr 2019 22:09:04 -0600</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -40,6 +40,194 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>e030: Can You See Me Now?</title>
+            <link>http://newrustacean.com/show_notes/e030/</link>
+            <description><![CDATA[<p>Item visibility and <code>pub(&lt;restricted&gt;)</code> as API design tools.</p>
+<h2 id="show-notes">Show Notes</h2>
+<p>The easiest and most effective way to understand the example in this case will simply be to look directly at <a href="/src/show_notes/e030.rs.html">the source code</a>. You <em>can</em> read the docs for each of the nested modules, but you’ll be doing a <em>lot</em> of navigating around for that.</p>
+<p>Also, I am using Cargo’s <code>--document-private-items</code> flag, so that you can see <em>all</em> the items in <em>all</em> the modules, even those which are not public, but note that usually you would not see docs for those!</p>
+<h3 id="links">Links</h3>
+<ul>
+<li><a href="https://doc.rust-lang.org/reference/visibility-and-privacy.html">the reference on visibility</a></li>
+<li><a href="https://github.com/rust-lang/rfcs/blob/master/text/1422-pub-restricted.md">RFC #1422</a></li>
+<li><a href="https://newrustacean.com/src/show_notes/e030.rs.html">episode source code</a></li>
+<li><a href="https://newrustacean.com/show_notes/e020/">e020</a></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<p>Thanks to Manning for sponsoring the show <em>and</em> giving all of you a 40%-off discount on their whole store (but especially their <a href="https://www.manning.com/books/webassembly-in-action"><cite>WebAssembly in Action</cite> MEAP</a>) at <a href="http://bit.ly/2OXnlEb">deals.manning.com/new-rustacean</a>!</p>
+<h3 id="patreon-sponsors">Patreon Sponsors</h3>
+<ul>
+<li>Adam Green</li>
+<li>Aleksey Pirogov</li>
+<li>Alexander Kryvomaz</li>
+<li>Alexander Lozada</li>
+<li>Alexander Payne</li>
+<li><a href="https://github.com/bddap">Andrew Dirksen</a></li>
+<li>Andrew Thompson</li>
+<li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
+<li>Anthony Scotti</li>
+<li>Arlen Haftevani</li>
+<li><a href="https://asonix.dog/@asonix">Arlo (Hyena)</a></li>
+<li>Arun Kulshreshtha</li>
+<li><a href="https://github.com/behnam">Behnam Esfahbod</a></li>
+<li><a href="https://www.benmanns.com/">Benjamin Manns</a></li>
+<li>Benjamin Wasty</li>
+<li>Brandon ‘Spanky’ Mills</li>
+<li>Brian Casiello</li>
+<li>Brian Manning</li>
+<li><a href="https://skife.org/">Brian McCallister</a></li>
+<li><a href="http://www.stitthappens.com/">Bryan Stitt</a></li>
+<li>Caryn Finkelman</li>
+<li>Cass Costello</li>
+<li>Cat Dad</li>
+<li>Chap Lovejoy</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li>Chip</li>
+<li><a href="http://red-oxide.org/">Chris Palmer</a></li>
+<li>Christoffer Ceutz</li>
+<li>Cristian Paul</li>
+<li>Dan Abrams</li>
+<li>Daniel</li>
+<li>Daniel Bross</li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://github.com/gisleburt">Daniel Mason</a></li>
+<li>David Carroll</li>
+<li>David Hewson</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Dominic Cooney</li>
+<li>Doug Reeves</li>
+<li><a href="http://learnrust.io/">Douglas Correa</a></li>
+<li>Edmund Kump</li>
+<li><a href="https://github.com/edvorg">Eduard Knyshov</a></li>
+<li><a href="https://www.embark-studios.com">Embark Studios</a></li>
+<li>Eugene Bulkin</li>
+<li><a href="https://github.com/evanjs">Evan Stoll</a></li>
+<li><a href="https://decathorpe.com/">Fabio (decathorpe)</a></li>
+<li><a href="https://linkedin.com/in/feamcor">Fabio Correa</a></li>
+<li><a href="https://twitter.com/gaveen">Gaveen Prabhasara</a></li>
+<li><a href="https://wihlidal.com/">Graham Wihlidal</a></li>
+<li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
+<li><a href="https://www.ianmjones.com/">Ian Jones</a></li>
+<li>Hoàng Đức Hiếu</li>
+<li><a href="https://www.hugojosefson.com">Hugo Josefson</a></li>
+<li>“Jake”“ferris”" Taylor"</li>
+<li>Jako Danar</li>
+<li>James Cooper</li>
+<li>James Hagans II</li>
+<li><a href="https://twitter.com/jwbowen">Jason Bowen</a></li>
+<li><a href="https://gitlab.com/jeffmay">Jeff May</a></li>
+<li><a href="https://www.jendrikillner.com/">Jendrik Illner</a></li>
+<li>Jerome Froelich</li>
+<li>JockeTF</li>
+<li><a href="http://github.com/joar">Joar Wandborg</a></li>
+<li><a href="https://www.embark-studios.com">Johan Andersson</a></li>
+<li><a href="http://www.cindur.com/">John Rudnick</a></li>
+<li>Jon</li>
+<li>Jonah</li>
+<li><a href="https://www.coffeeandcode.com/">Jonathan Knapp</a></li>
+<li>Jonathan Turner</li>
+<li>Joseph Hain</li>
+<li>Joseph Mou</li>
+<li>Joseph Schrag</li>
+<li><a href="http://joetdc.com/">Joe Percy</a></li>
+<li>Justin Ossevoort</li>
+<li>Kai Yao</li>
+<li>Kazutaka Mise</li>
+<li>Keith Gray</li>
+<li>Kilian Rault</li>
+<li>Lee Jenkins</li>
+<li>Luca Schmid</li>
+<li><a href="http://luizirber.org/">Luiz Irber</a></li>
+<li>Lukas Eller</li>
+<li><a href="https://twitter.com/Malnormalulo">Malnormalulo</a></li>
+<li><a href="https://github.com/epsilonhalbe">Martin Heuschober</a></li>
+<li>Masashi Fujita</li>
+<li>Matt Rudder</li>
+<li>Matthew Brenner</li>
+<li>Matthias Ruszala</li>
+<li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li>
+<li>Max R.R. Collada</li>
+<li><a href="https://github.com/messense">Messense Lv</a></li>
+<li>Micael Bergeron</li>
+<li><a href="https://www.linkedin.com/in/michaelmcdonnell/">Michael Mc Donnell</a></li>
+<li><a href="https://www.michaelmelanson.net">Michael Melanson</a></li>
+<li>Michael Sanders</li>
+<li><a href="http://influential.co/">Nathan Sculli</a></li>
+<li><a href="http://github.com/ncoish">Nick Coish</a></li>
+<li>Nick Gideo</li>
+<li><a href="https://github.com/nastevens">Nick Stevens</a></li>
+<li><a href="https://github.com/n-pochet">Nicolas Pochet</a></li>
+<li>Oladapo Fadeyi</li>
+<li>Olaf Leidinger<br />
+</li>
+<li>Oliver Uvman</li>
+<li><a href="http://oluseyi.info/">Oluseyi Sonaiya</a></li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal</a></li>
+<li><a href="https://twitter.com/patrickod">Patrick O’Doherty</a></li>
+<li>Paul Naranja</li>
+<li>Paul Osborne</li>
+<li>Peter Scholtens</li>
+<li>Peter Tillemans</li>
+<li>Pierre-Antoine Champin</li>
+<li>Ralph Giles</li>
+<li><a href="http://www.inosion.com">Ramon Buckland</a></li>
+<li>Randy MacLeod</li>
+<li>Raph Levien</li>
+<li>Richard Dallaway</li>
+<li>Rob Tsuk</li>
+<li><a href="https://github.com/RobbieClarken/">Robbie Clarken</a></li>
+<li>Robert Chrzanowski</li>
+<li>Romain Chossart</li>
+<li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
+<li><a href="https://github.com/osialr">Ryan Osial</a></li>
+<li>Scott Moeller</li>
+<li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
+<li><a href="https://www.simonhdickson.com/">Simon Dickson</a></li>
+<li>Simon G</li>
+<li><a href="http://prisma.io/">Soren Bramer Schmidt</a></li>
+<li>Steve Jenson</li>
+<li>Steven Knight</li>
+<li>Steven Murawski</li>
+<li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
+<li>Tim Brooks</li>
+<li>Tim Süberkrüb</li>
+<li>Tom Prince</li>
+<li>Toolmaker’s Guild</li>
+<li>Ty Overby</li>
+<li>Tyler Harper</li>
+<li>Victor Kruger</li>
+<li>Will Greenberg</li>
+<li>Zak van der Merwe</li>
+<li>Zachary Snyder</li>
+<li><a href="https://github.com/zpeters">Zach Peters</a></li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean: + Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a> + Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+<li>Chris Krycho + GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a> + Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul>
+]]></description>
+            <pubDate>Fri, 26 Apr 2019 22:00:00 -0600</pubDate>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e030.mp3" length="17959575" type="audio/mpeg"/>
+            <guid isPermaLink="false">EC1C6E98-88CD-46A4-881B-F7F0B998F986</guid>
+            <itunes:subtitle>Item visibility and `pub(&lt;restricted&gt;)` as API design tools.</itunes:subtitle>
+            <itunes:summary>Item visibility and `pub(&lt;restricted&gt;)` as API design tools.</itunes:summary>
+            <itunes:duration>18:37</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
+        </item>
         <item>
             <title>News: Rust 1.33 and 1.34</title>
             <link>http://newrustacean.com/show_notes/news/rust_1_33_1_34/</link>
@@ -6908,7 +7096,7 @@ g = &amp;mut (g + 10);</code></pre>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/meta/1.mp3" length="6494113" type="audio/mpeg"/>
             <guid isPermaLink="false">40FB0537-15C7-475A-94ED-090F9887A358</guid>
             <itunes:author>Chris Krycho</itunes:author>
-            <itunes:summary>Avoiding burnout by taking it a little easier. Sometimes, the way a podcast stays in existence is by coming out less often. That's what's happening here. # Links - [lightning-rs] - [Pelican] - [Hugo] - [Jekyll] - [Static Site Generators]\: The definitive listing of Static Site Generators — all 445 of them! [lightning-rs]: https://github.com/chriskrycho/lightning-rs [Pelican]: http://getpelican.com [Hugo]: https://gohugo.io [Jekyll]: https://jekyllrb.com [Static Site Generators]: https://staticsitegenerators.net # Become a sponsor - <a href="https://www.patreon.com/newrustacean" rel="payment">Patreon</a> - [Venmo](https://venmo.com/chriskrycho) - [Dwolla](https://www.dwolla.com/hub/chriskrycho) - [Cash.me](https://cash.me/$chriskrycho) # Follow - New Rustacean: + Twitter: [@newrustacean](https://www.twitter.com/newrustacean) + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com) - Chris Krycho + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</itunes:summary>
+            <itunes:summary>Avoiding burnout by taking it a little easier. Sometimes, the way a podcast stays in existence is by coming out less often. That's what's happening here. # Links - [lightning-rs] - [Pelican] - [Hugo] - [Jekyll] - [Static Site Generators]\: The definitive listing of Static Site Generators — all 445 of them! [lightning-rs]: https://github.com/chriskrycho/lightning-rs [Pelican]: http://getpelican.com [Hugo]: https://gohugo.io [Jekyll]: https://jekyllrb.com [Static Site Generators]: https://staticsitegenerators.net # Become a sponsor - Patreon - [Venmo](https://venmo.com/chriskrycho) - [Dwolla](https://www.dwolla.com/hub/chriskrycho) - [Cash.me](https://cash.me/$chriskrycho) # Follow - New Rustacean: + Twitter: [@newrustacean](https://www.twitter.com/newrustacean) + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com) - Chris Krycho + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</itunes:summary>
             <itunes:duration>7:42</itunes:duration>
             <itunes:episodeType>full</itunes:episodeType>
         </item>
@@ -8269,7 +8457,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/1/part_2.mp3" length="9750995" type="audio/mpeg"/>
             <guid isPermaLink="false">EF51E282-74DB-4F9F-8952-DBF70B1F8B2E</guid>
             <itunes:author>Chris Krycho</itunes:author>
-            <itunes:summary>Sean Griffin on type systems and hopes for Rust's future Notes ----- Chris chats with Sean Griffin about the tradeoffs between mental overhead and type safety, the expressiveness of different type systems, and some of the places where Rust currently falls down. ### Corrigenda Sean noted he could be wrong about `IEnumerable&lt;T&gt;` not having a `Sum` method in C♯, and post-show research indicated that he was (it's possible it was added after he had stopped doing .NET work, of course). See the [documentation][c1] for details on how `IEnumerable&lt;T&gt;.Sum` it behaves in C♯ if you're curious. As a related note, I (Chris) have done a little bit of digging on C♯ in the interval and it's fair to say that while a lot of the "ceremony" involved in writing C♯ is annoying, it's much more than just a "slightly nicer Java", and indeed is a much nicer language than my previous, limited exposure had led me to believe. It's no Rust or F♯, but its type system is substantially more capable than Java's. [c1]: https://msdn.microsoft.com/library/bb919210(v=vs.90).aspx Links ----- - fmap + [Discussion of `fmap` with `Optional` in Swift][l1] + [In Haskell][l2] - Rust: + [Trait objects][l3] + [Specialization RFC][l4] * [Implementation][l5] - [Diesel][l6] [l1]: https://robots.thoughtbot.com/functional-swift-for-dealing-with-optional-values [l2]: http://learnyouahaskell.com/functors-applicative-functors-and-monoids [l3]: https://doc.rust-lang.org/book/trait-objects.html [l4]: https://github.com/rust-lang/rfcs/pull/1210 [l5]: https://github.com/rust-lang/rust/issues/31844 [l6]: https://github.com/sgrif/diesel Sponsors -------- - Aleksey Pirogov - Chris Palmer - [Derek Morr][s3] - Hamza Sheikh - Leif Arne Storset - Luca Schmid - Micael Bergeron - Ralph Giles ("rillian") - reddraggone9 - Ryan Ollos - [William Roe][s11] [s3]: https://twitter.com/derekmorr [s11]: http://willroe.me ### Become a sponsor - <a href="https://www.patreon.com/newrustacean" rel="payment">Patreon</a> - [Venmo](https://venmo.com/chriskrycho) - [Dwolla](https://www.dwolla.com/hub/chriskrycho) - [Cash.me](https://cash.me/$chriskrycho) Follow ------ - New Rustacean: + Twitter: [@newrustacean](https://www.twitter.com/newrustacean) + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com) - Chris Krycho + GitHub: [chriskrycho](https://github.com/chriskrycho) + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</itunes:summary>
+            <itunes:summary>Sean Griffin on type systems and hopes for Rust's future Notes ----- Chris chats with Sean Griffin about the tradeoffs between mental overhead and type safety, the expressiveness of different type systems, and some of the places where Rust currently falls down. ### Corrigenda Sean noted he could be wrong about `IEnumerable&lt;T&gt;` not having a `Sum` method in C♯, and post-show research indicated that he was (it's possible it was added after he had stopped doing .NET work, of course). See the [documentation][c1] for details on how `IEnumerable&lt;T&gt;.Sum` it behaves in C♯ if you're curious. As a related note, I (Chris) have done a little bit of digging on C♯ in the interval and it's fair to say that while a lot of the "ceremony" involved in writing C♯ is annoying, it's much more than just a "slightly nicer Java", and indeed is a much nicer language than my previous, limited exposure had led me to believe. It's no Rust or F♯, but its type system is substantially more capable than Java's. [c1]: https://msdn.microsoft.com/library/bb919210(v=vs.90).aspx Links ----- - fmap + [Discussion of `fmap` with `Optional` in Swift][l1] + [In Haskell][l2] - Rust: + [Trait objects][l3] + [Specialization RFC][l4] * [Implementation][l5] - [Diesel][l6] [l1]: https://robots.thoughtbot.com/functional-swift-for-dealing-with-optional-values [l2]: http://learnyouahaskell.com/functors-applicative-functors-and-monoids [l3]: https://doc.rust-lang.org/book/trait-objects.html [l4]: https://github.com/rust-lang/rfcs/pull/1210 [l5]: https://github.com/rust-lang/rust/issues/31844 [l6]: https://github.com/sgrif/diesel Sponsors -------- - Aleksey Pirogov - Chris Palmer - [Derek Morr][s3] - Hamza Sheikh - Leif Arne Storset - Luca Schmid - Micael Bergeron - Ralph Giles ("rillian") - reddraggone9 - Ryan Ollos - [William Roe][s11] [s3]: https://twitter.com/derekmorr [s11]: http://willroe.me ### Become a sponsor - Patreon - [Venmo](https://venmo.com/chriskrycho) - [Dwolla](https://www.dwolla.com/hub/chriskrycho) - [Cash.me](https://cash.me/$chriskrycho) Follow ------ - New Rustacean: + Twitter: [@newrustacean](https://www.twitter.com/newrustacean) + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com) - Chris Krycho + GitHub: [chriskrycho](https://github.com/chriskrycho) + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</itunes:summary>
             <itunes:duration>22:14</itunes:duration>
             <itunes:episodeType>full</itunes:episodeType>
         </item>
