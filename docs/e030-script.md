@@ -1,4 +1,4 @@
-Module Visibility
+# e030: Can You See Me Now?
 
 Hello, I’m Chris Krycho and this is New Rustacean: a show about the Rust programming language and the people who use it. This is e030: Can You See Me Now?
 
