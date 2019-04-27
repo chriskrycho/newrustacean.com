@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["demo","This is visible everywhere in the crate that can see `b`. Open the source to see how all the other items it can interact with!"]]});

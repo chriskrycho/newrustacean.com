@@ -675,6 +675,9 @@
 
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">os</span>::<span class="ident">raw</span>::<span class="ident">c_float</span>;
 
+<span class="attribute">#[<span class="ident">doc</span>(<span class="ident">include</span> <span class="op">=</span> <span class="string">&quot;../docs/e029-script.md&quot;</span>)]</span>
+<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Script</span>;
+
 <span class="doccomment">/// An example of a slightly more complex data structure we can use with FFI.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// Note the `#[repr(C)]`, which tells Rust to make sure this struct is laid out</span>
@@ -738,9 +741,6 @@
         <span class="kw">pub</span>(<span class="kw">super</span>) <span class="kw">fn</span> <span class="ident">translate</span>(<span class="ident">point</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">Point</span>, <span class="ident">by_x</span>: <span class="ident">c_float</span>, <span class="ident">by_y</span>: <span class="ident">c_float</span>);
     }
 }
-
-<span class="attribute">#[<span class="ident">doc</span>(<span class="ident">include</span> <span class="op">=</span> <span class="string">&quot;../docs/e029-script.md&quot;</span>)]</span>
-<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Script</span>;
 
 <span class="doccomment">/// A safe interface for the unsafe `ffi::add`.</span>
 <span class="doccomment">///</span>

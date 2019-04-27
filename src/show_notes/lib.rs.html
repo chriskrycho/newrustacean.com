@@ -63,6 +63,9 @@
 <span id="63">63</span>
 <span id="64">64</span>
 <span id="65">65</span>
+<span id="66">66</span>
+<span id="67">67</span>
+<span id="68">68</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="doccomment">//! Show notes</span>
 <span class="doccomment">//!</span>
@@ -85,6 +88,8 @@
 <span class="attribute">#![<span class="ident">feature</span>(<span class="ident">test</span>)]</span>
 <span class="comment">// Enable `#[doc(include = &quot;&lt;path&gt;&quot;)]</span>
 <span class="attribute">#![<span class="ident">feature</span>(<span class="ident">external_doc</span>)]</span>
+<span class="comment">// *Many* items are unused, because they exist only to be demo&#39;d.</span>
+<span class="attribute">#![<span class="ident">allow</span>(<span class="ident">dead_code</span>)]</span>
 
 <span class="comment">// This statement gives us access to the `test` crate for benchmarking.</span>
 <span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">test</span>;
@@ -123,6 +128,7 @@
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">e027</span>;
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">e028</span>;
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">e029</span>;
+<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">e030</span>;
 
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">bonus</span>;
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">cysk</span>;

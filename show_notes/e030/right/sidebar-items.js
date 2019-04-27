@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["q","This is visible within the crate everywhere that can see `right`."],["r","This is visible everywhere in `right`, including in `q`."],["s","This is visible everywhere in the e030 module."]]});

@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["also_only_in_child","`pub fn also_only_in_child` is also hidden to anything outside `child`."],["only_in_child","`fn only_in_child` is not visible to anything outside `child`."]]});
