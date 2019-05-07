@@ -94,7 +94,7 @@ Now, what if we find this “get the distance between two points” function use
 
 ```rust,ignore
 fn distance_between(a: &Point, b: &Point) -> f32 {
-    let change = point - origin;
+    let change = a - b;
     (change.x.powi(2) + change.y.powi(2)).sqrt();
 }
 ```
