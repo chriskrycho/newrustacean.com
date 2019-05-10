@@ -24,3 +24,6 @@ recordings
 
 # Vim nonsense
 *.swp
+
+# Build output
+link-against-Rust
