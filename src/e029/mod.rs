@@ -26,13 +26,13 @@
 //! ### Links
 //!
 //! Other helpful Rust FFI discussions:
-//! 
+//!
 //! - [<cite>The Rust Programming Language</cite>’s materials]
 //! - the [nomicon]
 //! - [Rust FFI Omnibus]
 //! - the [Reference’s] discussion
 //! - the associated Rust [API] docs
-//! 
+//!
 //! [nomicon]: https://doc.rust-lang.org/beta/nomicon/ffi.html
 //! [Rust FFI Omnibus]: http://jakegoulding.com/rust-ffi-omnibus/
 //! [deals.manning.com/new-rustacean]: http://bit.ly/2OXnlEb
@@ -149,7 +149,7 @@
 //! - [Nick Stevens]
 //! - [Nicolas Pochet]
 //! - Oladapo Fadeyi
-//! - Olaf Leidinger    
+//! - Olaf Leidinger
 //! - Oliver Uvman
 //! - [Oluseyi Sonaiya]
 //! - Ovidiu Curcan
