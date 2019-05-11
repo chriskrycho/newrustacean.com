@@ -263,6 +263,10 @@ pub fn add_in_rust(a: c_int, b: c_int) -> c_int {
     a + b
 }
 
+/// Take two strings in and concatentate them without mutating either.
+///
+/// This allocates a new string, which *must* be deallocated by calling the
+/// `free_rust_string` type exposed in this module.
 #[no_mangle]
 pub fn concat_strings(first: *const c_char, second: *const c_char) -> *mut c_char {
     let (first, second) = unsafe {
@@ -284,9 +288,12 @@ pub fn concat_strings(first: *const c_char, second: *const c_char) -> *mut c_cha
         + std::str::from_utf8(first).expect("go boom if not UTF-8")
         + std::str::from_utf8(second).expect("go boom if not UTF-8");
 
-    CString::new(joined).expect("go boom if can't turn String into CString").into_raw()
+    CString::new(joined)
+        .expect("go boom if can't turn String into CString (how would that even work?)")
+        .into_raw()
 }
 
+/// Free any string allocated by Rust.
 #[no_mangle]
 pub fn free_rust_string(to_free: *mut c_char) {
     // If the pointer is already `null`, we're done here. (Don't double `free`!)
