@@ -285,7 +285,7 @@ pub extern "C" fn concat_strings(first: *const c_char, second: *const c_char) ->
         )
     };
 
-    CStr::from_bytes_with_nul(&[first, second].concat())
+    CStr::from_bytes_with_nul(&[&first[0..first.len()], &second[0..second.len()], b"\0"].concat())
         .expect("should be possible to construct a new `CStr` from existing `CStr`s")
         .to_owned()
         .into_raw()
