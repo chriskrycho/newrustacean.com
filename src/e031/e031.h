@@ -13,11 +13,8 @@ typedef struct point {
     float y;
 } point_t;
 
-/// The `point_transpose` function declared by Rust. Mutates `point`!
-void point_transpose(point_t *point, float byX, float byY);
-
-/// The `point_free` function declared by Rust.
-void point_free(point_t *point);
+/// The `point_translate` function declared by Rust. Mutates `point`!
+void point_translate(point_t *point, float byX, float byY);
 
 /// An opaque type: C cannot do anything with the internals, unlike `point_t`.
 typedef struct opaque_point opaque_point_t;
@@ -25,8 +22,8 @@ typedef struct opaque_point opaque_point_t;
 /// The `opaque_point_new` function declared by Rust. Gets us a `point`!
 opaque_point_t *opaque_point_new(float x, float y);
 
-/// The `opaque_point_transpose` function declared by Rust. Mutates `point`!
-void opaque_point_transpose(opaque_point_t *point, float byX, float byY);
+/// The `opaque_point_translate` function declared by Rust. Mutates `point`!
+void opaque_point_translate(opaque_point_t *point, float byX, float byY);
 
 /// The `opaque_point_describe` function declared by Rust. Must free the string
 /// it returns!

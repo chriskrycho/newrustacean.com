@@ -3,18 +3,18 @@
 
 #include "e031.h"
 
-void section(bool first) { printf("\n---\n\n"); }
+void section() { printf("\n---\n\n"); }
 
 int main() {
     // --- Start easy: just numbers. --- //
-    section(true);
+    section();
     int a = 123;
     int b = 456;
     printf("Added `%d` to `%d` in Rust, and got back `%d`.\n", a, b,
            add_in_rust(123, 456));
 
     // --- Strings are a mite more interesting. --- //
-    section(false);
+    section();
 
     // We start by allocating a couple strings on the C side.
     char *greeting = "Hello, ";
@@ -32,16 +32,16 @@ int main() {
     free_rust_string(joined);
 
     // --- What about structs? --- //
-    section(false);
+    section();
 
     // Start by allocating a point.
     point_t point = {.x = 0.4, .y = 05};
     printf("`point` starts at `%.1f, %.1f`.\n", point.x, point.y);
 
-    // Then transpose it, using the Rust function.
+    // Then translate it, using the Rust function.
     float byX = 4.8;
     float byY = 5.9;
-    point_transpose(&point, byX, byY);
+    point_translate(&point, byX, byY);
     printf("After transposing `point.x` by `%.1f` and `point.y` by `%.1f`, "
            "`point` is at `%.1f, %.1f`.\n",
            byX, byY, point.x, point.y);
@@ -55,11 +55,13 @@ int main() {
     printf("...and we just mutated it on the C side to `%.1f, %.1f`.\n",
            point.x, point.y);
 
-    // Again, we leak memory if we don't call the Rust `free`.
-    point_free(&point);
+    // We don't need to call `point_free` here because we allocated it on the C
+    // side, and in fact if we *did*, we could be introducing other oddities. We
+    // only need to do `point_free` if we allocate on the Rust side. For that,
+    // see the *next* section.
 
     // --- Now, for opaque pointers! --- //
-    section(false);
+    section();
 
     // Here, we are getting an `OpaquePoint` from Rust, and the *only* way we
     // can construct such a point is by using the means Rust supplies. This is
@@ -87,11 +89,11 @@ int main() {
 
     // Unlike with `Point`, we *cannot* simply mutate this one on the C side (or
     // in any other language consuming it via C FFI). Instead, we must used the
-    // `opaque_point_transpose` function to do it. This works identically to how
-    // `point_transpose` works; it's just that this is the *only* way to do it.
+    // `opaque_point_translate` function to do it. This works identically to how
+    // `point_translate` works; it's just that this is the *only* way to do it.
     float opaqueByX = 8.8;
     float opaqueByY = -1.0;
-    opaque_point_transpose(opaquePoint, opaqueByX, opaqueByY);
+    opaque_point_translate(opaquePoint, opaqueByX, opaqueByY);
 
     // Once again we're allocating a string on the Rust side we'll need to free.
     description = opaque_point_describe(opaquePoint);

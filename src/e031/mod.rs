@@ -22,22 +22,22 @@
 //!     1. [`concat_strings`][2]
 //!     2. [`free_rust_string`][3]
 //! 3. [`Point`][4]
-//!     1. [`point_transpose`][5]
+//!     1. [`point_translate`][5]
 //! 4. [`union`][6]
 //! 5. [`OpaquePoint`][7]
 //!     1. [`opaque_point_new`][8]
-//!     2. [`opaque_point_transpose`][9]
+//!     2. [`opaque_point_translate`][9]
 //!     3. [`opaque_point_free`][10]
 //!
 //! [1]: https://newrustacean.com/target/doc/show_notes/e031/fn.add_in_rust.html
 //! [2]: https://newrustacean.com/target/doc/show_notes/e031/fn.concat_strings.html
 //! [3]: https://newrustacean.com/target/doc/show_notes/e031/fn.free_rust_string.html
 //! [4]: https://newrustacean.com/target/doc/show_notes/e031/struct.Point.html
-//! [5]: https://newrustacean.com/target/doc/show_notes/e031/fn.point_transpose.html
+//! [5]: https://newrustacean.com/target/doc/show_notes/e031/fn.point_translate.html
 //! [6]: https://newrustacean.com/target/doc/show_notes/e031/unions/index.html
 //! [7]: https://newrustacean.com/target/doc/show_notes/e031/struct.OpaquePoint.html
 //! [8]: https://newrustacean.com/target/doc/show_notes/e031/fn.opaque_point_new.html
-//! [9]: https://newrustacean.com/target/doc/show_notes/e031/fn.opaque_point_transpose.html
+//! [9]: https://newrustacean.com/target/doc/show_notes/e031/fn.opaque_point_translate.html
 //! [10]: https://newrustacean.com/target/doc/show_notes/e031/fn.opaque_point_free.html
 //!
 //! ### Links
@@ -342,7 +342,7 @@ pub struct Point {
 }
 
 impl Point {
-    fn transpose(&mut self, by_x: f32, by_y: f32) {
+    fn translate(&mut self, by_x: f32, by_y: f32) {
         self.x += by_x;
         self.y += by_y;
     }
@@ -350,7 +350,7 @@ impl Point {
 
 /// Expose an interface for C API callers to call the `Point` impl.
 #[no_mangle]
-pub extern "C" fn point_transpose(point: *mut Point, by_x: c_float, by_y: c_float) {
+pub extern "C" fn point_translate(point: *mut Point, by_x: c_float, by_y: c_float) {
     let point = unsafe {
         assert!(!point.is_null());
         &mut *point
@@ -358,16 +358,7 @@ pub extern "C" fn point_transpose(point: *mut Point, by_x: c_float, by_y: c_floa
 
     // Note that if this wasn't safe, because for some reason `c_float` did not
     // match `f32`, the compiler would tell us.
-    point.transpose(by_x, by_y);
-}
-
-/// Safely drops the `Point` instance.
-#[no_mangle]
-pub extern "C" fn point_free(point: *mut Point) {
-    unsafe {
-        assert!(!point.is_null());
-        &mut *point
-    };
+    point.translate(by_x, by_y);
 }
 
 /// A struct identical to `Point`, but which is *not* `#[repr(C)]`!
@@ -380,7 +371,7 @@ pub struct OpaquePoint {
 }
 
 impl OpaquePoint {
-    fn transpose(&mut self, by_x: f32, by_y: f32) {
+    fn translate(&mut self, by_x: f32, by_y: f32) {
         self.x += by_x;
         self.y += by_y;
     }
@@ -398,7 +389,7 @@ impl Display for OpaquePoint {
 /// above. The only difference is that the C side doesn't get access to the
 /// internal structure of the type… which is we want.
 #[no_mangle]
-pub extern "C" fn opaque_point_transpose(point: *mut OpaquePoint, by_x: c_float, by_y: c_float) {
+pub extern "C" fn opaque_point_translate(point: *mut OpaquePoint, by_x: c_float, by_y: c_float) {
     let point = unsafe {
         assert!(!point.is_null());
         &mut *point
@@ -406,7 +397,7 @@ pub extern "C" fn opaque_point_transpose(point: *mut OpaquePoint, by_x: c_float,
 
     // Note that if this wasn't safe, because for some reason `c_float` did not
     // match `f32`, the compiler would tell us.
-    point.transpose(by_x, by_y);
+    point.translate(by_x, by_y);
 }
 
 #[no_mangle]
@@ -433,9 +424,7 @@ pub extern "C" fn opaque_point_free(point: *mut OpaquePoint) {
         return;
     }
 
-    unsafe {
-        Box::from_raw(point)
-    };
+    unsafe { Box::from_raw(point) };
 }
 
 /// Demonstrate unions! Combines an `enum` and a `union` into a `struct` that
