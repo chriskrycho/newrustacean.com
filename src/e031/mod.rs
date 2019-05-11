@@ -309,8 +309,10 @@ pub extern "C" fn free_rust_string(to_free: *mut c_char) {
 /// A simple struct which we can expose to a C API. Note that it is `#[repr(C)]`!
 #[repr(C)]
 pub struct Point {
-    x: f32,
-    y: f32,
+    /// x position -- made `pub` to indicate that we're exposing it to C!
+    pub x: f32,
+    /// y position -- made `pub` to indicate that we're exposing it to C!
+    pub y: f32,
 }
 
 impl Point {
