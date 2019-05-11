@@ -307,3 +307,70 @@ pub fn free_rust_string(to_free: *mut c_char) {
         CString::from_raw(to_free);
     }
 }
+
+/// Demonstrate unions!
+pub mod unions {
+    /// Builds an instance of `Either`, a manually-managed "tagged union" type.
+    ///
+    /// If you read the body, you'll notice that we're not *helped* in any way
+    /// by Rust like we are with normal `enum` types.
+    pub fn demo_union() {
+        // Here, we construct the type correctly.
+        let either = Either::<i32, Wrapped<u32>> {
+            tag: Tag::Left,
+            value: EitherValue { left: 42 },
+        };
+
+        // But notice that the compiler doesn't help us! Comment out the
+        // following lines and see that it still *compiles* just fine... but is
+        // very much *not* correct semantically: we have a `Left` tag with a
+        // `right` value!
+        // let bad_either = Either::<i32, Wrapped<u32>> {
+        //     tag: Tag::Left,
+        //     value: EitherValue { right: Wrapped(42) },
+        // };
+
+        unsafe {
+            match either {
+                Either {
+                    tag: Tag::Left,
+                    value: EitherValue { left },
+                } => {
+                    dbg!(left);
+                }
+                Either {
+                    tag: Tag::Right,
+                    value: EitherValue { right },
+                } => {
+                    dbg!(right);
+                }
+            }
+        }
+    }
+
+    /// For tagging the type in `Either`. See the body of `demo_union`.
+    #[derive(Clone, Copy)]
+    pub enum Tag {
+        Left,
+        Right,
+    }
+
+    /// A simple type designed to demo unions. See the body of `demo_union`.
+    #[derive(Debug, Copy, Clone)]
+    pub struct Wrapped<T: Copy + Clone>(T);
+
+    /// A union, to be used as the inner value for `Either`.
+    pub union EitherValue<L: Copy, R: Copy> {
+        left: L,
+        right: R,
+    }
+
+    /// Uses an `enum` and a `union` to get close to a regular Rust enum.
+    ///
+    /// Roughly, because the compiler won't check you for exhaustiveness, or
+    /// even make sure you're using the tag and value pair the way you should!
+    pub struct Either<L: Copy, R: Copy> {
+        pub tag: Tag,
+        pub value: EitherValue<L, R>,
+    }
+}
