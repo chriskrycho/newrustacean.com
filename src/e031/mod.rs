@@ -426,9 +426,12 @@ pub extern "C" fn opaque_point_describe(point: *mut OpaquePoint) -> *mut c_char 
 /// Safely drops the `OpaquePoint` instance.
 #[no_mangle]
 pub extern "C" fn opaque_point_free(point: *mut OpaquePoint) {
+    if point.is_null() {
+        return;
+    }
+
     unsafe {
-        assert!(!point.is_null());
-        &mut *point
+        Box::from_raw(point)
     };
 }
 
