@@ -13,7 +13,32 @@
 //! Show Notes
 //! ----------
 //!
+//! It's impossible to make the declarations below follow the order I talked
+//! through them on the recording without also making them horrible to read, so
+//! just use this outline instead:
 //!
+//! 1. [`add_in_rust`][1]
+//! 2. Strings
+//!     1. [`concat_strings`][2]
+//!     2. [`free_rust_string`][3]
+//! 3. [`Point`][4]
+//!     1. [`point_transpose`][5]
+//! 4. [`union`][6]
+//! 5. [`OpaquePoint`][7]
+//!     1. [`opaque_point_new`][8]
+//!     2. [`opaque_point_transpose`][9]
+//!     3. [`opaque_point_free`][10]
+//!
+//! [1]: https://newrustacean.com/target/doc/show_notes/e031/fn.add_in_rust.html
+//! [2]: https://newrustacean.com/target/doc/show_notes/e031/fn.concat_strings.html
+//! [3]: https://newrustacean.com/target/doc/show_notes/e031/fn.free_rust_string.html
+//! [4]: https://newrustacean.com/target/doc/show_notes/e031/struct.Point.html
+//! [5]: https://newrustacean.com/target/doc/show_notes/e031/fn.point_transpose.html
+//! [6]: https://newrustacean.com/target/doc/show_notes/e031/unions/index.html
+//! [7]: https://newrustacean.com/target/doc/show_notes/e031/struct.OpaquePoint.html
+//! [8]: https://newrustacean.com/target/doc/show_notes/e031/fn.opaque_point_new.html
+//! [9]: https://newrustacean.com/target/doc/show_notes/e031/fn.opaque_point_transpose.html
+//! [10]: https://newrustacean.com/target/doc/show_notes/e031/fn.opaque_point_free.html
 //!
 //! ### Links
 //!
@@ -407,7 +432,8 @@ pub extern "C" fn opaque_point_free(point: *mut OpaquePoint) {
     };
 }
 
-/// Demonstrate unions!
+/// Demonstrate unions! Combines an `enum` and a `union` into a `struct` that
+/// acts mostly like a regular Rust `enum`.
 pub mod unions {
     /// Builds an instance of `Either`, a manually-managed "tagged union" type.
     ///
