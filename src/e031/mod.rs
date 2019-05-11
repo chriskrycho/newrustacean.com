@@ -256,7 +256,7 @@
 
 use std::ffi::{CStr, CString};
 
-use libc::{c_char, c_int};
+use libc::{c_char, c_float, c_int};
 
 /// The simplest possible example of exposing Rust functions via a C FFI.
 #[no_mangle]
@@ -304,6 +304,105 @@ pub extern "C" fn free_rust_string(to_free: *mut c_char) {
     unsafe {
         CString::from_raw(to_free);
     }
+}
+
+/// A simple struct which we can expose to a C API. Note that it is `#[repr(C)]`!
+#[repr(C)]
+pub struct Point {
+    x: f32,
+    y: f32,
+}
+
+impl Point {
+    fn transpose(&mut self, by_x: f32, by_y: f32) {
+        self.x += by_x;
+        self.y += by_y;
+    }
+}
+
+/// Expose an interface for C API callers to call the `Point` impl.
+#[no_mangle]
+pub extern "C" fn point_transpose(point: *mut Point, by_x: c_float, by_y: c_float) {
+    let point = unsafe {
+        assert!(!point.is_null());
+        &mut *point
+    };
+
+    // Note that if this wasn't safe, because for some reason `c_float` did not
+    // match `f32`, the compiler would tell us.
+    point.transpose(by_x, by_y);
+}
+
+/// Safely drops the `Point` instance.
+#[no_mangle]
+pub extern "C" fn point_free(point: *mut Point) {
+    unsafe {
+        assert!(!point.is_null());
+        &mut *point
+    };
+}
+
+/// A struct identical to `Point`, but which is *not* `#[repr(C)]`!
+///
+/// The layout here is intentionally left in Rust's own representation, and we
+/// do *not* expose the internals in `e031.h`.
+pub struct OpaquePoint {
+    x: f32,
+    y: f32,
+}
+
+impl OpaquePoint {
+    fn transpose(&mut self, by_x: f32, by_y: f32) {
+        self.x += by_x;
+        self.y += by_y;
+    }
+
+    fn describe(&self) -> String {
+        format!("`{}, {}`", self.x, self.y)
+    }
+}
+
+/// Expose an interface for C API callers to call the `OpaquePoint` impl.
+///
+/// This implementation is *identical* to the implementation of the `Point`
+/// above. The only difference is that the C side doesn't get access to the
+/// internal structure of the type… which is we want.
+#[no_mangle]
+pub extern "C" fn opaque_point_transpose(point: *mut OpaquePoint, by_x: c_float, by_y: c_float) {
+    let point = unsafe {
+        assert!(!point.is_null());
+        &mut *point
+    };
+
+    // Note that if this wasn't safe, because for some reason `c_float` did not
+    // match `f32`, the compiler would tell us.
+    point.transpose(by_x, by_y);
+}
+
+#[no_mangle]
+pub extern "C" fn opaque_point_new(x: c_float, y: c_float) -> *mut OpaquePoint {
+    Box::into_raw(Box::new(OpaquePoint { x, y }))
+}
+
+#[no_mangle]
+pub extern "C" fn opaque_point_describe(point: *mut OpaquePoint) -> *mut c_char {
+    let point = unsafe {
+        assert!(!point.is_null());
+        &mut *point
+    };
+
+    CString::new(point.describe())
+        .expect("always safe to get `CString` from `String`")
+        .into_raw()
+}
+
+/// Safely drops the `OpaquePoint` instance.
+#[no_mangle]
+pub extern "C" fn opaque_point_free(point: *mut OpaquePoint) {
+    unsafe {
+        assert!(!point.is_null());
+        &mut *point
+    };
 }
 
 /// Demonstrate unions!
