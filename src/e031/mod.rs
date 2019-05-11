@@ -258,8 +258,9 @@ use std::ffi::{CStr, CString};
 
 use libc::{c_char, c_int};
 
+/// The simplest possible example of exposing Rust functions via a C FFI.
 #[no_mangle]
-pub fn add_in_rust(a: c_int, b: c_int) -> c_int {
+pub extern "C" fn add_in_rust(a: c_int, b: c_int) -> c_int {
     a + b
 }
 
@@ -268,7 +269,7 @@ pub fn add_in_rust(a: c_int, b: c_int) -> c_int {
 /// This allocates a new string, which *must* be deallocated by calling the
 /// `free_rust_string` type exposed in this module.
 #[no_mangle]
-pub fn concat_strings(first: *const c_char, second: *const c_char) -> *mut c_char {
+pub extern "C" fn concat_strings(first: *const c_char, second: *const c_char) -> *mut c_char {
     let (first, second) = unsafe {
         // Start by making sure the two strings are not null pointers (since C
         // APIs don't actually give us any help with this).
@@ -292,7 +293,7 @@ pub fn concat_strings(first: *const c_char, second: *const c_char) -> *mut c_cha
 
 /// Free any string allocated by Rust.
 #[no_mangle]
-pub fn free_rust_string(to_free: *mut c_char) {
+pub extern "C" fn free_rust_string(to_free: *mut c_char) {
     // If the pointer is already `null`, we're done here. (Don't double `free`!)
     if to_free.is_null() {
         return;
