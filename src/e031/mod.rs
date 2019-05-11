@@ -453,6 +453,7 @@ pub mod unions {
         // following lines and see that it still *compiles* just fine... but is
         // very much *not* correct semantically: we have a `Left` tag with a
         // `right` value!
+
         // let bad_either = Either::<i32, Wrapped<u32>> {
         //     tag: Tag::Left,
         //     value: EitherValue { right: Wrapped(42) },
