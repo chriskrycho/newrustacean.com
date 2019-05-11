@@ -254,9 +254,49 @@
 //!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-use std::os::raw::c_int;
+use std::ffi::{CStr, CString};
+
+use libc::{c_char, c_int};
 
 #[no_mangle]
 pub fn add_in_rust(a: c_int, b: c_int) -> c_int {
     a + b
+}
+
+#[no_mangle]
+pub fn concat_strings(first: *const c_char, second: *const c_char) -> *mut c_char {
+    let (first, second) = unsafe {
+        // Start by making sure the two strings are not null pointers (since C
+        // APIs don't actually give us any help with this).
+        assert!(!first.is_null());
+        assert!(!second.is_null());
+
+        // Then use `CString::from_ptr` to let Rust's own built-in smarts about
+        // how to convert from a pointer to a `c_char` do the conversion
+        // correctly. These are *not* the same as Rust `String`s, after all!
+        (
+            CStr::from_ptr(first).to_bytes(),
+            CStr::from_ptr(second).to_bytes(),
+        )
+    };
+
+    let joined = String::with_capacity(first.len() + second.len())
+        + std::str::from_utf8(first).expect("go boom if not UTF-8")
+        + std::str::from_utf8(second).expect("go boom if not UTF-8");
+
+    CString::new(joined).expect("go boom if can't turn String into CString").into_raw()
+}
+
+#[no_mangle]
+pub fn free_rust_string(to_free: *mut c_char) {
+    // If the pointer is already `null`, we're done here. (Don't double `free`!)
+    if to_free.is_null() {
+        return;
+    }
+
+    // If the pointer is not already null, we take ownership of it again with
+    // `from_raw` and then immediately free it by way of the inherent `Drop`.
+    unsafe {
+        CString::from_raw(to_free);
+    }
 }

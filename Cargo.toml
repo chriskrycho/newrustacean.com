@@ -7,6 +7,7 @@ authors = ["Chris Krycho <chris@chriskrycho.com>"]
 
 [dependencies]
 regex = "0.2"
+libc = "0.2.54"
 
 [build-dependencies]
 cc = "1.0"
