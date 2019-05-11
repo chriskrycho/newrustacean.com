@@ -280,6 +280,7 @@
 //!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
 use std::ffi::{CStr, CString};
+use std::fmt::{Display, Error, Formatter};
 
 use libc::{c_char, c_float, c_int};
 
@@ -383,9 +384,11 @@ impl OpaquePoint {
         self.x += by_x;
         self.y += by_y;
     }
+}
 
-    fn describe(&self) -> String {
-        format!("`{}, {}`", self.x, self.y)
+impl Display for OpaquePoint {
+    fn fmt(&self, f: &mut Formatter) -> Result<(), Error> {
+        write!(f, "`{}, {}`", self.x, self.y)
     }
 }
 
@@ -418,7 +421,7 @@ pub extern "C" fn opaque_point_describe(point: *mut OpaquePoint) -> *mut c_char 
         &mut *point
     };
 
-    CString::new(point.describe())
+    CString::new(format!("{}", point))
         .expect("always safe to get `CString` from `String`")
         .into_raw()
 }
