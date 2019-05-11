@@ -284,12 +284,9 @@ pub fn concat_strings(first: *const c_char, second: *const c_char) -> *mut c_cha
         )
     };
 
-    let joined = String::with_capacity(first.len() + second.len())
-        + std::str::from_utf8(first).expect("go boom if not UTF-8")
-        + std::str::from_utf8(second).expect("go boom if not UTF-8");
-
-    CString::new(joined)
-        .expect("go boom if can't turn String into CString (how would that even work?)")
+    CStr::from_bytes_with_nul(&[first, second].concat())
+        .expect("should be possible to construct a new `CStr` from existing `CStr`s")
+        .to_owned()
         .into_raw()
 }
 
