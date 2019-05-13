@@ -45,13 +45,13 @@
 //! # Follow/Support
 //!
 //!   - New Rustacean:
-//!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
+//!     + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
 //!       + App.net: [@newrustacean](https://alpha.app.net/newrustacean)
 //!       + <a href="https://www.patreon.com/newrustacean" rel="payment">Patreon</a>
 //!       + [Dwolla](https://www.dwolla.com/hub/chriskrycho)
-//!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
+//!     + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
 //!   - Chris Krycho
-//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
+//!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 //!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
 /// Create a module so we can see public/private behavior.

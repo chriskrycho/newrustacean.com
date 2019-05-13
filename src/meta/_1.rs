@@ -40,7 +40,7 @@
 //! # Follow
 //!
 //!   - New Rustacean:
-//!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
-//!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
+//!     + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
+//!     + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
 //!   - Chris Krycho
-//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
+//!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)

@@ -95,11 +95,11 @@
 //! -------
 //!
 //!   - New Rustacean:
-//!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
-//!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
+//!     + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
+//!     + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
 //!   - Chris Krycho
-//!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
-//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
+//!     + GitHub: [chriskrycho](https://github.com/chriskrycho)
+//!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
 /// Get a string *slice*. Note the required lifetime specifier on the type!
 ///

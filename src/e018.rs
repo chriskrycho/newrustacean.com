@@ -112,11 +112,11 @@
 //! -------
 //!
 //!   - New Rustacean:
-//!       + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
-//!       + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
+//!     + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
+//!     + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
 //!   - Chris Krycho
-//!       + GitHub: [chriskrycho](https://github.com/chriskrycho)
-//!       + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
+//!     + GitHub: [chriskrycho](https://github.com/chriskrycho)
+//!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
 use std::borrow::Borrow;
 use std::convert::AsRef;
