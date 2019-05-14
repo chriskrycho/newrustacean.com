@@ -42,6 +42,13 @@
 //!
 //! ### Links
 //!
+//! - [Rust FFI Omnibus]
+//! - [the repository for the show]
+//! - [RFC #2195]
+//! 
+//! [Rust FFI Omnibus]: http://jakegoulding.com/rust-ffi-omnibus/
+//! [the repository for the show]: https://github.com/chriskrycho/newrustacean
+//! [RFC #2195]: https://github.com/rust-lang/rfcs/blob/master/text/2195-really-tagged-unions.md
 //!
 //! Sponsors
 //! --------
@@ -283,6 +290,9 @@ use std::ffi::{CStr, CString};
 use std::fmt::{Display, Error, Formatter};
 
 use libc::{c_char, c_float, c_int};
+
+#[doc(include = "../docs/e031-script.md")]
+pub struct Script;
 
 /// The simplest possible example of exposing Rust functions via a C FFI.
 #[no_mangle]
