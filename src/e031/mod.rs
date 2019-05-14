@@ -1,7 +1,7 @@
 //! FFI Deep Dive
 //!
 //! - **Date:** May 11, 2019
-//! - **Subject:** FFI Deep Dive
+//! - **Subject:** Exposing Rust types and functions to C API consumers.
 //! - [**download mp3**][mp3]
 //! - [**script**][script]
 //!
