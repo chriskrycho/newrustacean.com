@@ -10,8 +10,8 @@
         <copyright>2015–2019 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Mon, 13 May 2019 20:39:03 -0600</pubDate>
-        <lastBuildDate>Mon, 13 May 2019 20:39:04 -0600</lastBuildDate>
+        <pubDate>Mon, 13 May 2019 20:42:50 -0600</pubDate>
+        <lastBuildDate>Mon, 13 May 2019 20:42:50 -0600</lastBuildDate>
         <image>
             <url>http://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
@@ -21,7 +21,6 @@
             <description>A show about the Rust programming language and the people who use it.</description>
         </image>
         <atom:link href="http://www.newrustacean.com/feed.xml" rel="self" type="application/rss+xml"/>
-        <atom:link href="https://flattr.com/submit/auto?user_id=chriskrycho&amp;url=https://flattr.com/profile/chriskrycho&amp;title=Podcaster,%20software%20developer,%20writer,%20theologian&amp;description=I%20podcast:%0A%0A-%20%5BWinning%20Slowly%5D(//www.winningslowly.org),%20with%20Stephen%20Carradini,%20on%20technology,%20religion,%20ethics,%20and%20art%0A-%20%5BNew%20Rustacean%5D(//www.newrustacean.com)%20%E2%80%93%20about%20learning%20the%20Rust%20programming%20language%0A-%20%5BSap.py%5D(//www.sap-py.com)%20with%20my%20wife,%20Jaimie%20Krycho%0A-%20%5BRun%20With%20Me%5D(//runwith.chriskrycho.com)%20%E2%80%93%20a%203%E2%80%935%20minute%20%22microcast%22%20about%20running,%20recorded%20while%20running%0A%0AI%20write%20on%20art,%20theology,%20and%20technology%20at%20%5Bchriskrycho.com%5D(//www.chriskrycho.com).&amp;language=en_GB&amp;category=audio" rel="payment" type="text/html"/>
         <itunes:author>Chris Krycho</itunes:author>
         <itunes:subtitle>A show about the Rust programming language and the people who use it.</itunes:subtitle>
         <itunes:summary>Deep dive teaching episodes, news updates, and interviews with people around the Rust community.</itunes:summary>
@@ -244,7 +243,7 @@
 </ul></li>
 </ul>
 ]]></description>
-            <pubDate>Mon, 13 May 2019 20:45:00 -0600</pubDate>
+            <pubDate>Mon, 13 May 2019 20:40:00 -0600</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e031.mp3" length="24377195" type="audio/mpeg"/>
             <guid isPermaLink="false">976CD791-23E6-44D5-86EC-D7C28A6E8D68</guid>
             <itunes:summary>Exposing Rust types and functions to C API consumers.</itunes:summary>
