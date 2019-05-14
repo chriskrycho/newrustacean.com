@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `e031` mod in crate `show_notes`."><meta name="keywords" content="rust, rustlang, rust-lang, e031"><title>show_notes::e031 - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="shortcut icon" href="https://newrustacean.com/favicon.ico"><style type="text/css">#crate-search{background-image:url("../../down-arrow.svg");}</style></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../show_notes/index.html'><img src='https://newrustacean.com/podcast.png' alt='logo' width='100'></a><p class='location'>Module e031</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#modules">Modules</a></li><li><a href="#structs">Structs</a></li><li><a href="#functions">Functions</a></li></ul></div><p class='location'><a href='../index.html'>show_notes</a></p><script>window.sidebarCurrent = {name: 'e031', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/show_notes/e031/mod.rs.html#1-507' title='goto source code'>[src]</a></span><span class='in-band'>Module <a href='../index.html'>show_notes</a>::<wbr><a class="mod" href=''>e031</a></span></h1><div class='docblock'><p>FFI Deep Dive</p>
+<ul>
+<li><strong>Date:</strong> May 11, 2019</li>
+<li><strong>Subject:</strong> Exposing Rust types and functions to C API consumers.</li>
+<li><a href="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e031.mp3"><strong>download mp3</strong></a></li>
+<li><a href="https://newrustacean.com/show_notes/e031/struct.script"><strong>script</strong></a></li>
+</ul>
+<p><audio style="width: 100%" title="e031: FFI Deep Dive" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e031.mp3"></p>
+<h2 id="show-notes" class="section-header"><a href="#show-notes">Show Notes</a></h2>
+<p>It's impossible to make the declarations below follow the order I talked
+through them on the recording without also making them horrible to read, so
+just use this outline instead:</p>
+<ol>
+<li><a href="https://newrustacean.com/target/doc/show_notes/e031/fn.add_in_rust.html"><code>add_in_rust</code></a></li>
+<li>Strings
+<ol>
+<li><a href="https://newrustacean.com/target/doc/show_notes/e031/fn.concat_strings.html"><code>concat_strings</code></a></li>
+<li><a href="https://newrustacean.com/target/doc/show_notes/e031/fn.free_rust_string.html"><code>free_rust_string</code></a></li>
+</ol>
+</li>
+<li><a href="https://newrustacean.com/target/doc/show_notes/e031/struct.Point.html"><code>Point</code></a>
+<ol>
+<li><a href="https://newrustacean.com/target/doc/show_notes/e031/fn.point_translate.html"><code>point_translate</code></a></li>
+</ol>
+</li>
+<li><a href="https://newrustacean.com/target/doc/show_notes/e031/unions/index.html"><code>union</code></a></li>
+<li><a href="https://newrustacean.com/target/doc/show_notes/e031/struct.OpaquePoint.html"><code>OpaquePoint</code></a>
+<ol>
+<li><a href="https://newrustacean.com/target/doc/show_notes/e031/fn.opaque_point_new.html"><code>opaque_point_new</code></a></li>
+<li><a href="https://newrustacean.com/target/doc/show_notes/e031/fn.opaque_point_translate.html"><code>opaque_point_translate</code></a></li>
+<li><a href="https://newrustacean.com/target/doc/show_notes/e031/fn.opaque_point_free.html"><code>opaque_point_free</code></a></li>
+</ol>
+</li>
+</ol>
+<h3 id="links" class="section-header"><a href="#links">Links</a></h3>
+<ul>
+<li><a href="http://jakegoulding.com/rust-ffi-omnibus/">Rust FFI Omnibus</a></li>
+<li><a href="https://github.com/chriskrycho/newrustacean">the repository for the show</a></li>
+<li><a href="https://github.com/rust-lang/rfcs/blob/master/text/2195-really-tagged-unions.md">RFC #2195</a></li>
+</ul>
+<h2 id="sponsors" class="section-header"><a href="#sponsors">Sponsors</a></h2>
+<p>Thanks to Parity for sponsoring the show and hiring Rust developers!</p>
+<h3 id="patreon-sponsors" class="section-header"><a href="#patreon-sponsors">Patreon Sponsors</a></h3>
+<ul>
+<li>Adam Green</li>
+<li>Aleksey Pirogov</li>
+<li>Alexander Kryvomaz</li>
+<li>Alexander Lozada</li>
+<li>Alexander Payne</li>
+<li><a href="https://github.com/bddap">Andrew Dirksen</a></li>
+<li>Andrew Thompson</li>
+<li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
+<li>Anthony Scotti</li>
+<li>Arlen Haftevani</li>
+<li><a href="https://asonix.dog/@asonix">Arlo (Hyena)</a></li>
+<li>Arun Kulshreshtha</li>
+<li><a href="https://github.com/behnam">Behnam Esfahbod</a></li>
+<li><a href="https://www.benmanns.com/">Benjamin Manns</a></li>
+<li>Benjamin Wasty</li>
+<li>Brandon 'Spanky' Mills</li>
+<li>Brian Casiello</li>
+<li>Brian Manning</li>
+<li><a href="https://skife.org/">Brian McCallister</a></li>
+<li><a href="http://www.stitthappens.com/">Bryan Stitt</a></li>
+<li>Caryn Finkelman</li>
+<li>Cass Costello</li>
+<li>Cat Dad</li>
+<li>Chap Lovejoy</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li>Chip</li>
+<li><a href="http://red-oxide.org/">Chris Palmer</a></li>
+<li>Christoffer Ceutz</li>
+<li>Cristian Paul</li>
+<li>Dan Abrams</li>
+<li>Daniel</li>
+<li>Daniel Bross</li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://github.com/gisleburt">Daniel Mason</a></li>
+<li>David Carroll</li>
+<li>David Hewson</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Dominic Cooney</li>
+<li>Doug Reeves</li>
+<li><a href="http://learnrust.io/">Douglas Correa</a></li>
+<li>Edmund Kump</li>
+<li><a href="https://github.com/edvorg">Eduard Knyshov</a></li>
+<li><a href="https://www.embark-studios.com">Embark Studios</a></li>
+<li>Eugene Bulkin</li>
+<li><a href="https://github.com/evanjs">Evan Stoll</a></li>
+<li><a href="https://decathorpe.com/">Fabio (decathorpe)</a></li>
+<li><a href="https://linkedin.com/in/feamcor">Fabio Correa</a></li>
+<li><a href="https://twitter.com/gaveen">Gaveen Prabhasara</a></li>
+<li><a href="https://wihlidal.com/">Graham Wihlidal</a></li>
+<li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
+<li><a href="https://www.ianmjones.com/">Ian Jones</a></li>
+<li>Hoàng Đức Hiếu</li>
+<li><a href="https://www.hugojosefson.com">Hugo Josefson</a></li>
+<li>&quot;Jake &quot;&quot;ferris&quot;&quot; Taylor&quot;</li>
+<li>Jako Danar</li>
+<li>James Cooper</li>
+<li>James Hagans II</li>
+<li><a href="https://twitter.com/jwbowen">Jason Bowen</a></li>
+<li><a href="https://gitlab.com/jeffmay">Jeff May</a></li>
+<li><a href="https://www.jendrikillner.com/">Jendrik Illner</a></li>
+<li>Jerome Froelich</li>
+<li>JockeTF</li>
+<li><a href="http://github.com/joar">Joar Wandborg</a></li>
+<li><a href="https://www.embark-studios.com">Johan Andersson</a></li>
+<li><a href="http://www.cindur.com/">John Rudnick</a></li>
+<li>Jon</li>
+<li>Jonah</li>
+<li><a href="https://www.coffeeandcode.com/">Jonathan Knapp</a></li>
+<li>Jonathan Turner</li>
+<li>Joseph Hain</li>
+<li>Joseph Mou</li>
+<li>Joseph Schrag</li>
+<li><a href="http://joetdc.com/">Joe Percy</a></li>
+<li>Justin Ossevoort</li>
+<li>Kai Yao</li>
+<li>Kazutaka Mise</li>
+<li>Keith Gray</li>
+<li>Kilian Rault</li>
+<li>Lee Jenkins</li>
+<li>Luca Schmid</li>
+<li><a href="http://luizirber.org/">Luiz Irber</a></li>
+<li>Lukas Eller</li>
+<li><a href="https://twitter.com/Malnormalulo">Malnormalulo</a></li>
+<li><a href="https://github.com/epsilonhalbe">Martin Heuschober</a></li>
+<li>Masashi Fujita</li>
+<li>Matt Rudder</li>
+<li>Matthew Brenner</li>
+<li>Matthias Ruszala</li>
+<li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li>
+<li>Max R.R. Collada</li>
+<li><a href="https://github.com/messense">Messense Lv</a></li>
+<li>Micael Bergeron</li>
+<li><a href="https://www.linkedin.com/in/michaelmcdonnell/">Michael Mc Donnell</a></li>
+<li><a href="https://www.michaelmelanson.net">Michael Melanson</a></li>
+<li>Michael Sanders</li>
+<li><a href="http://influential.co/">Nathan Sculli</a></li>
+<li><a href="http://github.com/ncoish">Nick Coish</a></li>
+<li>Nick Gideo</li>
+<li><a href="https://github.com/nastevens">Nick Stevens</a></li>
+<li><a href="https://github.com/n-pochet">Nicolas Pochet</a></li>
+<li>Oladapo Fadeyi</li>
+<li>Olaf Leidinger</li>
+<li>Oliver Uvman</li>
+<li><a href="http://oluseyi.info/">Oluseyi Sonaiya</a></li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal</a></li>
+<li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li>
+<li>Paul Naranja</li>
+<li>Paul Osborne</li>
+<li>Peter Scholtens</li>
+<li>Peter Tillemans</li>
+<li>Pierre-Antoine Champin</li>
+<li>Ralph Giles</li>
+<li><a href="http://www.inosion.com">Ramon Buckland</a></li>
+<li>Randy MacLeod</li>
+<li>Raph Levien</li>
+<li>Richard Dallaway</li>
+<li>Rob Tsuk</li>
+<li><a href="https://github.com/RobbieClarken/">Robbie Clarken</a></li>
+<li>Robert Chrzanowski</li>
+<li>Romain Chossart</li>
+<li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
+<li><a href="https://github.com/osialr">Ryan Osial</a></li>
+<li>Scott Moeller</li>
+<li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
+<li><a href="https://www.simonhdickson.com/">Simon Dickson</a></li>
+<li>Simon G</li>
+<li><a href="http://prisma.io/">Soren Bramer Schmidt</a></li>
+<li>Steve Jenson</li>
+<li>Steven Knight</li>
+<li>Steven Murawski</li>
+<li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
+<li>Tim Brooks</li>
+<li>Tim Süberkrüb</li>
+<li>Tom Prince</li>
+<li>Toolmaker's Guild</li>
+<li>Ty Overby</li>
+<li>Tyler Harper</li>
+<li>Victor Kruger</li>
+<li>Will Greenberg</li>
+<li>Zak van der Merwe</li>
+<li>Zachary Snyder</li>
+<li><a href="https://github.com/zpeters">Zach Peters</a></li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as
+well. You know who you are!)</p>
+<h3 id="become-a-sponsor" class="section-header"><a href="#become-a-sponsor">Become a sponsor</a></h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean" rel="payment">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact" class="section-header"><a href="#contact">Contact</a></h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul>
+</li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul>
+</li>
+</ul>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table><tr class='module-item'><td><a class="mod" href="unions/index.html" title='show_notes::e031::unions mod'>unions</a></td><td class='docblock-short'><p>Demonstrate unions! Combines an <code>enum</code> and a <code>union</code> into a <code>struct</code> that
+acts mostly like a regular Rust <code>enum</code>.</p>
+</td></tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table><tr class='module-item'><td><a class="struct" href="struct.OpaquePoint.html" title='show_notes::e031::OpaquePoint struct'>OpaquePoint</a></td><td class='docblock-short'><p>A struct identical to <code>Point</code>, but which is <em>not</em> <code>#[repr(C)]</code>!</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.Point.html" title='show_notes::e031::Point struct'>Point</a></td><td class='docblock-short'><p>A simple struct which we can expose to a C API. Note that it is <code>#[repr(C)]</code>!</p>
+</td></tr><tr class='module-item'><td><a class="struct" href="struct.Script.html" title='show_notes::e031::Script struct'>Script</a></td><td class='docblock-short'><p>e031: FFI Deep Dive!</p>
+</td></tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table><tr class='module-item'><td><a class="fn" href="fn.add_in_rust.html" title='show_notes::e031::add_in_rust fn'>add_in_rust</a></td><td class='docblock-short'><p>The simplest possible example of exposing Rust functions via a C FFI.</p>
+</td></tr><tr class='module-item'><td><a class="fn" href="fn.concat_strings.html" title='show_notes::e031::concat_strings fn'>concat_strings</a></td><td class='docblock-short'><p>Take two strings in and concatentate them without mutating either.</p>
+</td></tr><tr class='module-item'><td><a class="fn" href="fn.free_rust_string.html" title='show_notes::e031::free_rust_string fn'>free_rust_string</a></td><td class='docblock-short'><p>Free any string allocated by Rust.</p>
+</td></tr><tr class='module-item'><td><a class="fn" href="fn.opaque_point_describe.html" title='show_notes::e031::opaque_point_describe fn'>opaque_point_describe</a></td><td class='docblock-short'></td></tr><tr class='module-item'><td><a class="fn" href="fn.opaque_point_free.html" title='show_notes::e031::opaque_point_free fn'>opaque_point_free</a></td><td class='docblock-short'><p>Safely drops the <code>OpaquePoint</code> instance.</p>
+</td></tr><tr class='module-item'><td><a class="fn" href="fn.opaque_point_new.html" title='show_notes::e031::opaque_point_new fn'>opaque_point_new</a></td><td class='docblock-short'></td></tr><tr class='module-item'><td><a class="fn" href="fn.opaque_point_translate.html" title='show_notes::e031::opaque_point_translate fn'>opaque_point_translate</a></td><td class='docblock-short'><p>Expose an interface for C API callers to call the <code>OpaquePoint</code> impl.</p>
+</td></tr><tr class='module-item'><td><a class="fn" href="fn.point_translate.html" title='show_notes::e031::point_translate fn'>point_translate</a></td><td class='docblock-short'><p>Expose an interface for C API callers to call the <code>Point</code> impl.</p>
+</td></tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g., <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g., <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g., <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><link rel="stylesheet" href="/media-playback.css">
+<script type="text/javascript" src="/media-playback.js" defer></script>
+
+
+<script>window.rootPath = "../../";window.currentCrate = "show_notes";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

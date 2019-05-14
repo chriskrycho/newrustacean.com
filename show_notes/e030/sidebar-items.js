@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["left","One of two internal modules (with `right`) for demonstrating visibility."],["right","One of two internal modules (with `left`) for demonstrating visibility."]],"struct":[["Script","Module Visibility"]]});
+initSidebarItems({"mod":[["left","One of two internal modules (with `right`) for demonstrating visibility."],["right","One of two internal modules (with `left`) for demonstrating visibility."]],"struct":[["Script","e030: Can You See Me Now?"]]});
