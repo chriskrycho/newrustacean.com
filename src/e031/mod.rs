@@ -47,7 +47,7 @@
 //! - [RFC #2195]
 //! 
 //! [Rust FFI Omnibus]: http://jakegoulding.com/rust-ffi-omnibus/
-//! [the repository for the show]: https://github.com/chriskrycho/newrustacean
+//! [the repository for the show]: https://github.com/chriskrycho/newrustacean.com
 //! [RFC #2195]: https://github.com/rust-lang/rfcs/blob/master/text/2195-really-tagged-unions.md
 //!
 //! Sponsors
