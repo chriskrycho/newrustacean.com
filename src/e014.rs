@@ -166,6 +166,7 @@ pub mod demo_deref {
     impl Deref for Origin {
         type Target = DerefTarget;
 
+        #[allow(unconditional_recursion)]
         #[cfg_attr(feature = "clippy", allow(unconditional_recursion))]
         fn deref(&self) -> &DerefTarget {
             self
