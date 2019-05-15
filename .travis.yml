@@ -2,6 +2,7 @@ language: rust
 cache: cargo
 rust:
 - nightly
+- stable
 branches:
   only:
   - master
