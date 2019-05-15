@@ -260,5 +260,6 @@
 //!     + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
+#[rustc::nightly]
 #[doc(include = "../docs/e028-script.md")]
 pub struct Script;

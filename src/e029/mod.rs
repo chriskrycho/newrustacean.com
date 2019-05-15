@@ -276,6 +276,7 @@
 
 use std::os::raw::c_float;
 
+#[rustc::nightly]
 #[doc(include = "../docs/e029-script.md")]
 pub struct Script;
 

@@ -121,9 +121,11 @@ mod tests {
     // access to the functions we want to test.
     use super::*;
 
+    #[rustc::nightly]
     // `Bencher` is the `struct` which has the benchmarking functionality.
     use crate::test::Bencher;
 
+    #[rustc::nightly]
     // We'll use this for demonstrating benchmarks later.
     use std::thread::sleep;
     use std::time::Duration;
@@ -153,6 +155,7 @@ mod tests {
         panic!("Crazed monkeys!");
     }
 
+    #[rustc::nightly]
     /// Benchmark our addition function.
     ///
     /// Note: it's trivial, so it's probably pretty quick (`0 ns/iter (+/- 0)`).
@@ -173,6 +176,7 @@ mod tests {
         Duration::new(0, ns)
     }
 
+    #[rustc::nightly]
     /// Benchmark a function that sleeps for 1ms every time you call it.
     ///
     /// One of the things this highlights: we have a *tiny* duration (10 ns)...

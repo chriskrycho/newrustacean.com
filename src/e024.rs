@@ -175,6 +175,7 @@
 use std::fmt::Display;
 use std::ops::Add;
 
+#[rustc::nightly]
 #[doc(include = "../docs/e024-script.md")]
 pub struct Script;
 

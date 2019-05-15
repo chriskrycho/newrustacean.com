@@ -291,6 +291,7 @@ use std::fmt::{Display, Error, Formatter};
 
 use libc::{c_char, c_float, c_int};
 
+#[rustc::nightly]
 #[doc(include = "../docs/e031-script.md")]
 pub struct Script;
 

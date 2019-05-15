@@ -192,5 +192,6 @@ pub fn demo_match(s: &str) {
     };
 }
 
+#[rustc::nightly]
 #[doc(include = "../docs/news/rust-1-25.md")]
 pub struct Script;

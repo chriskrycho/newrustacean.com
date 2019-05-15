@@ -259,5 +259,6 @@ pub fn distance_from_impl<'a, 'b: 'a>(offset: &'b Point) -> impl FnMut(&'a Point
     }
 }
 
+#[rustc::nightly]
 #[doc(include = "../docs/e025-script.md")]
 pub struct Script;

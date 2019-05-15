@@ -9,5 +9,6 @@
 //!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/holden_marcsisin.mp3">
 //! </audio>
 
+#[rustc::nightly]
 #[doc(include = "../docs/rbr_2017/holden-marcsisin.md")]
 pub struct Transcript;

@@ -180,6 +180,7 @@
 
 use regex::Regex;
 
+#[rustc::nightly]
 #[doc(include = "../docs/e023-script.md")]
 pub struct Script;
 

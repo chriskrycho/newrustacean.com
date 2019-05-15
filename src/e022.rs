@@ -145,6 +145,7 @@
 
 use std::thread;
 
+#[rustc::nightly]
 #[doc(include = "../docs/e022-script.md")]
 pub struct Script;
 

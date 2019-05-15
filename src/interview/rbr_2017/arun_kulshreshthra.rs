@@ -9,5 +9,6 @@
 //!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/arun_kulshreshthra.mp3">
 //! </audio>
 
+#[rustc::nightly]
 #[doc(include = "../docs/rbr_2017/arun-kulshreshtha.md")]
 pub struct Transcript;

@@ -251,5 +251,6 @@
 //!     + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
+#[rustc::nightly]
 #[doc(include = "../docs/bonus/13-silly-mistakes.md")]
 pub struct Script;

@@ -261,5 +261,6 @@
 //!     + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
+#[rustc::nightly]
 #[doc(include = "../docs/news/Rust 1.33 and 1.34.md")]
 pub struct Script;

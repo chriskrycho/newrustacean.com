@@ -14,16 +14,20 @@
     html_favicon_url = "https://newrustacean.com/favicon.ico",
     html_root_url = "https://newrustacean.com/"
 )]
-// Enable access to the benchmarking functionality. Note that with this present,
-// we require using nightly Rust (as of 1.5).
-#![feature(test)]
-// Enable `#[doc(include = "<path>")]
-#![feature(external_doc)]
-// *Many* items are unused, because they exist only to be demo'd.
+
 #![allow(dead_code)]
 
+// Enable `#[doc(include = "<path>")]
+#[rustc::nightly]
+#[feature(external_doc)]
+// *Many* items are unused, because they exist only to be demo'd.
+
+// Enable access to the benchmarking functionality. Note that with this present,
+// we require using nightly Rust (as of 1.5).
+#[feature(test)]
 // This statement gives us access to the `test` crate for benchmarking.
 extern crate test;
+
 
 // Make the show notes public.
 pub mod e000;
