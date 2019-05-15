@@ -29,23 +29,23 @@
 //!     2. [`opaque_point_translate`][9]
 //!     3. [`opaque_point_free`][10]
 //!
-//! [1]: https://newrustacean.com/target/doc/show_notes/e031/fn.add_in_rust.html
-//! [2]: https://newrustacean.com/target/doc/show_notes/e031/fn.concat_strings.html
-//! [3]: https://newrustacean.com/target/doc/show_notes/e031/fn.free_rust_string.html
-//! [4]: https://newrustacean.com/target/doc/show_notes/e031/struct.Point.html
-//! [5]: https://newrustacean.com/target/doc/show_notes/e031/fn.point_translate.html
-//! [6]: https://newrustacean.com/target/doc/show_notes/e031/unions/index.html
-//! [7]: https://newrustacean.com/target/doc/show_notes/e031/struct.OpaquePoint.html
-//! [8]: https://newrustacean.com/target/doc/show_notes/e031/fn.opaque_point_new.html
-//! [9]: https://newrustacean.com/target/doc/show_notes/e031/fn.opaque_point_translate.html
-//! [10]: https://newrustacean.com/target/doc/show_notes/e031/fn.opaque_point_free.html
+//! [1]: https://newrustacean.com/show_notes/e031/fn.add_in_rust.html
+//! [2]: https://newrustacean.com/show_notes/e031/fn.concat_strings.html
+//! [3]: https://newrustacean.com/show_notes/e031/fn.free_rust_string.html
+//! [4]: https://newrustacean.com/show_notes/e031/struct.Point.html
+//! [5]: https://newrustacean.com/show_notes/e031/fn.point_translate.html
+//! [6]: https://newrustacean.com/show_notes/e031/unions/index.html
+//! [7]: https://newrustacean.com/show_notes/e031/struct.OpaquePoint.html
+//! [8]: https://newrustacean.com/show_notes/e031/fn.opaque_point_new.html
+//! [9]: https://newrustacean.com/show_notes/e031/fn.opaque_point_translate.html
+//! [10]: https://newrustacean.com/show_notes/e031/fn.opaque_point_free.html
 //!
 //! ### Links
 //!
 //! - [Rust FFI Omnibus]
 //! - [the repository for the show]
 //! - [RFC #2195]
-//! 
+//!
 //! [Rust FFI Omnibus]: http://jakegoulding.com/rust-ffi-omnibus/
 //! [the repository for the show]: https://github.com/chriskrycho/newrustacean.com
 //! [RFC #2195]: https://github.com/rust-lang/rfcs/blob/master/text/2195-really-tagged-unions.md
