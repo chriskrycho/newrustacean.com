@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source to the Rust file `src/e029/mod.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>mod.rs.html -- source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css"><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script src="../../../storage.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="shortcut icon" href="https://newrustacean.com/favicon.ico"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../../show_notes/index.html'><img src='https://newrustacean.com/podcast.png' alt='logo' width='100'></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><a id="settings-menu" href="../../../settings.html"><img src="../../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><pre class="line-numbers"><span id="1">  1</span>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source to the Rust file `src/cysk/bindgen_cbindgen.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>bindgen_cbindgen.rs.html -- source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css"><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script src="../../../storage.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="shortcut icon" href="https://newrustacean.com/favicon.ico"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../../show_notes/index.html'><img src='https://newrustacean.com/podcast.png' alt='logo' width='100'></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><a id="settings-menu" href="../../../settings.html"><img src="../../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -280,174 +280,52 @@
 <span id="280">280</span>
 <span id="281">281</span>
 <span id="282">282</span>
-<span id="283">283</span>
-<span id="284">284</span>
-<span id="285">285</span>
-<span id="286">286</span>
-<span id="287">287</span>
-<span id="288">288</span>
-<span id="289">289</span>
-<span id="290">290</span>
-<span id="291">291</span>
-<span id="292">292</span>
-<span id="293">293</span>
-<span id="294">294</span>
-<span id="295">295</span>
-<span id="296">296</span>
-<span id="297">297</span>
-<span id="298">298</span>
-<span id="299">299</span>
-<span id="300">300</span>
-<span id="301">301</span>
-<span id="302">302</span>
-<span id="303">303</span>
-<span id="304">304</span>
-<span id="305">305</span>
-<span id="306">306</span>
-<span id="307">307</span>
-<span id="308">308</span>
-<span id="309">309</span>
-<span id="310">310</span>
-<span id="311">311</span>
-<span id="312">312</span>
-<span id="313">313</span>
-<span id="314">314</span>
-<span id="315">315</span>
-<span id="316">316</span>
-<span id="317">317</span>
-<span id="318">318</span>
-<span id="319">319</span>
-<span id="320">320</span>
-<span id="321">321</span>
-<span id="322">322</span>
-<span id="323">323</span>
-<span id="324">324</span>
-<span id="325">325</span>
-<span id="326">326</span>
-<span id="327">327</span>
-<span id="328">328</span>
-<span id="329">329</span>
-<span id="330">330</span>
-<span id="331">331</span>
-<span id="332">332</span>
-<span id="333">333</span>
-<span id="334">334</span>
-<span id="335">335</span>
-<span id="336">336</span>
-<span id="337">337</span>
-<span id="338">338</span>
-<span id="339">339</span>
-<span id="340">340</span>
-<span id="341">341</span>
-<span id="342">342</span>
-<span id="343">343</span>
-<span id="344">344</span>
-<span id="345">345</span>
-<span id="346">346</span>
-<span id="347">347</span>
-<span id="348">348</span>
-<span id="349">349</span>
-<span id="350">350</span>
-<span id="351">351</span>
-<span id="352">352</span>
-<span id="353">353</span>
-<span id="354">354</span>
-<span id="355">355</span>
-<span id="356">356</span>
-<span id="357">357</span>
-<span id="358">358</span>
-<span id="359">359</span>
-<span id="360">360</span>
-<span id="361">361</span>
-<span id="362">362</span>
-<span id="363">363</span>
-<span id="364">364</span>
-<span id="365">365</span>
-<span id="366">366</span>
-<span id="367">367</span>
-<span id="368">368</span>
-<span id="369">369</span>
-<span id="370">370</span>
-<span id="371">371</span>
-<span id="372">372</span>
-<span id="373">373</span>
-<span id="374">374</span>
-<span id="375">375</span>
-<span id="376">376</span>
-<span id="377">377</span>
-<span id="378">378</span>
-<span id="379">379</span>
-<span id="380">380</span>
-<span id="381">381</span>
-<span id="382">382</span>
-<span id="383">383</span>
-<span id="384">384</span>
-<span id="385">385</span>
-<span id="386">386</span>
-<span id="387">387</span>
-<span id="388">388</span>
-<span id="389">389</span>
-<span id="390">390</span>
-<span id="391">391</span>
-<span id="392">392</span>
-<span id="393">393</span>
-<span id="394">394</span>
-<span id="395">395</span>
-<span id="396">396</span>
-<span id="397">397</span>
-<span id="398">398</span>
 </pre><div class="example-wrap"><pre class="rust ">
-<span class="doccomment">//! I’m Out to C</span>
+<span class="doccomment">//! bindgen and cbindgen</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! - **Date:** April 3, 2019</span>
-<span class="doccomment">//! - **Subject:** Using Rust’s Foreign Function Interface (FFI) with C!</span>
+<span class="doccomment">//! - **Date:** May 17, 2019</span>
+<span class="doccomment">//! - **Subject:** Automatic generation of FFI types between Rust and C APIs.</span>
 <span class="doccomment">//! - [**download mp3**][mp3]</span>
 <span class="doccomment">//! - [**script**][script]</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e029.mp3</span>
-<span class="doccomment">//! [script]: https://newrustacean.com/show_notes/e029/struct.script</span>
+<span class="doccomment">//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk/bindgen_cbindgen.mp3</span>
+<span class="doccomment">//! [script]: https://newrustacean.com/show_notes/cysk/bindgen_cbindgen/struct.script</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;e029: I’m Out to C&quot; controls preload=metadata src=&quot;https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e029.mp3&quot;&gt;</span>
+<span class="doccomment">//! &lt;audio style=&quot;width: 100%&quot; title=&quot;CYSK: bindgen and cbindgen&quot; controls preload=metadata src=&quot;https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk/bindgen_cbindgen.mp3&quot;&gt;</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! Show Notes</span>
 <span class="doccomment">//! ----------</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! The code samples here directly match the things I described in the show, so</span>
-<span class="doccomment">//! you will likely want to look at [`add`] and [`ffi::add`], then [`Point`],</span>
-<span class="doccomment">//! [`translate`], and [`ffi::translate`] in that order.</span>
-<span class="doccomment">//!</span>
-<span class="doccomment">//! [`add`]: ./fn.add.html</span>
-<span class="doccomment">//! [`ffi::add`]: ./ffi/fn.add.html</span>
-<span class="doccomment">//! [`Point`]: ./struct.Point.html</span>
-<span class="doccomment">//! [`translate`]: ./fn.translate.html</span>
-<span class="doccomment">//! [`ffi::translate`]: ./ffi/fn.translate.html</span>
-<span class="doccomment">//!</span>
-<span class="doccomment">//! ### Links</span>
-<span class="doccomment">//!</span>
-<span class="doccomment">//! Other helpful Rust FFI discussions:</span>
-<span class="doccomment">//!</span>
-<span class="doccomment">//! - [&lt;cite&gt;The Rust Programming Language&lt;/cite&gt;’s materials]</span>
-<span class="doccomment">//! - the [nomicon]</span>
-<span class="doccomment">//! - [Rust FFI Omnibus]</span>
-<span class="doccomment">//! - the [Reference’s] discussion</span>
-<span class="doccomment">//! - the associated Rust [API] docs</span>
-<span class="doccomment">//!</span>
-<span class="doccomment">//! [nomicon]: https://doc.rust-lang.org/beta/nomicon/ffi.html</span>
-<span class="doccomment">//! [Rust FFI Omnibus]: http://jakegoulding.com/rust-ffi-omnibus/</span>
-<span class="doccomment">//! [deals.manning.com/new-rustacean]: http://bit.ly/2OXnlEb</span>
-<span class="doccomment">//! [&lt;cite&gt;The Rust Programming Language&lt;/cite&gt;’s materials]: https://doc.rust-lang.org/book/ch19-01-unsafe-rust.html#using-extern-functions-to-call-external-code</span>
-<span class="doccomment">//! [Reference’s]: https://doc.rust-lang.org/1.33.0/reference/items/external-blocks.html</span>
-<span class="doccomment">//! [API]: https://doc.rust-lang.org/1.33.0/std/keyword.extern.html</span>
+<span class="doccomment">//! - bindgen</span>
+<span class="doccomment">//!     - [the official guide]</span>
+<span class="doccomment">//!     - [API docs]</span>
+<span class="doccomment">//! - [cbindgen]</span>
+<span class="doccomment">//!     - [a blog post by one of the main authors of the crate]</span>
+<span class="doccomment">//!     - [rust-ffi]</span>
+<span class="doccomment">//! - Binding libraries for scripting languages</span>
+<span class="doccomment">//!     - [PyO3]</span>
+<span class="doccomment">//!     - [Neon]</span>
+<span class="doccomment">//!     - [Rustler]</span>
+<span class="doccomment">//!         - [a great write-up from the folks at Discord]</span>
+<span class="doccomment">//!     - [Helix]</span>
+<span class="doccomment">//! </span>
+<span class="doccomment">//! [a blog post by one of the main authors of the crate]: https://blog.eqrion.net/future-directions-for-cbindgen/</span>
+<span class="doccomment">//! [the official guide]: https://rust-lang.github.io/rust-bindgen/</span>
+<span class="doccomment">//! [API docs]: https://docs.rs/bindgen</span>
+<span class="doccomment">//! [cbindgen]: https://github.com/eqrion/cbindgen/</span>
+<span class="doccomment">//! [rust-ffi]: https://github.com/eqrion/rust-ffi</span>
+<span class="doccomment">//! [PyO3]: https://github.com/PyO3/PyO3</span>
+<span class="doccomment">//! [Rustler]: https://github.com/rusterlium/rustler</span>
+<span class="doccomment">//! [a great write-up from the folks at Discord]: https://blog.discordapp.com/using-rust-to-scale-elixir-for-11-million-concurrent-users-c6f19fc029d3</span>
+<span class="doccomment">//! [Neon]: https://neon-bindings.com</span>
+<span class="doccomment">//! [Helix]: https://github.com/tildeio/helix</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! Sponsors</span>
 <span class="doccomment">//! --------</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! Thanks to Manning for sponsoring the show *and* giving all of you a 40%-off</span>
-<span class="doccomment">//! discount on their whole store (but especially Carol Nichols&#39; and Jake</span>
-<span class="doccomment">//! Goulding&#39;s _Rust in Motion_ video content and the _Rust in Action_ MEAP!) at</span>
-<span class="doccomment">//! [deals.manning.com/new-rustacean][manning]</span>
+<span class="doccomment">//! Thanks to Parity for sponsoring the show and hiring Rust developers!</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [manning]: http://bit.ly/2OXnlEb</span>
+<span class="doccomment">//! [parity]: https://www.parity.io/jobs</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! ### Patreon Sponsors</span>
 <span class="doccomment">//!</span>
@@ -479,6 +357,7 @@
 <span class="doccomment">//! - Chip</span>
 <span class="doccomment">//! - [Chris Palmer]</span>
 <span class="doccomment">//! - Christoffer Ceutz</span>
+<span class="doccomment">//! - Cristian Paul</span>
 <span class="doccomment">//! - Dan Abrams</span>
 <span class="doccomment">//! - Daniel</span>
 <span class="doccomment">//! - Daniel Bross</span>
@@ -487,6 +366,7 @@
 <span class="doccomment">//! - David Carroll</span>
 <span class="doccomment">//! - David Hewson</span>
 <span class="doccomment">//! - [Derek Morr]</span>
+<span class="doccomment">//! - Dominic Cooney</span>
 <span class="doccomment">//! - Doug Reeves</span>
 <span class="doccomment">//! - [Douglas Correa]</span>
 <span class="doccomment">//! - Edmund Kump</span>
@@ -496,19 +376,22 @@
 <span class="doccomment">//! - [Evan Stoll]</span>
 <span class="doccomment">//! - [Fabio (decathorpe)]</span>
 <span class="doccomment">//! - [Fabio Correa]</span>
+<span class="doccomment">//! - Freeman P. Pascal</span>
 <span class="doccomment">//! - [Gaveen Prabhasara]</span>
 <span class="doccomment">//! - [Graham Wihlidal]</span>
 <span class="doccomment">//! - [Henri Sivonen]</span>
 <span class="doccomment">//! - [Ian Jones]</span>
 <span class="doccomment">//! - Hoàng Đức Hiếu</span>
-<span class="doccomment">//! - Hugo Josefson</span>
+<span class="doccomment">//! - [Hugo Josefson]</span>
 <span class="doccomment">//! - &quot;Jake &quot;&quot;ferris&quot;&quot; Taylor&quot;</span>
 <span class="doccomment">//! - Jako Danar</span>
 <span class="doccomment">//! - James Cooper</span>
 <span class="doccomment">//! - James Hagans II</span>
 <span class="doccomment">//! - [Jason Bowen]</span>
+<span class="doccomment">//! - [Jeff May]</span>
 <span class="doccomment">//! - [Jendrik Illner]</span>
 <span class="doccomment">//! - Jerome Froelich</span>
+<span class="doccomment">//! - JockeTF</span>
 <span class="doccomment">//! - [Joar Wandborg]</span>
 <span class="doccomment">//! - [Johan Andersson]</span>
 <span class="doccomment">//! - [John Rudnick]</span>
@@ -525,6 +408,7 @@
 <span class="doccomment">//! - Kazutaka Mise</span>
 <span class="doccomment">//! - Keith Gray</span>
 <span class="doccomment">//! - Kilian Rault</span>
+<span class="doccomment">//! - Kyle</span>
 <span class="doccomment">//! - Lee Jenkins</span>
 <span class="doccomment">//! - Luca Schmid</span>
 <span class="doccomment">//! - [Luiz Irber]</span>
@@ -567,8 +451,10 @@
 <span class="doccomment">//! - Rob Tsuk</span>
 <span class="doccomment">//! - [Robbie Clarken]</span>
 <span class="doccomment">//! - Robert Chrzanowski</span>
+<span class="doccomment">//! - Romain Chossart</span>
 <span class="doccomment">//! - [Ryan Blecher]</span>
 <span class="doccomment">//! - [Ryan Osial]</span>
+<span class="doccomment">//! - Satoshi Yoshikawa</span>
 <span class="doccomment">//! - Scott Moeller</span>
 <span class="doccomment">//! - [Sebastián Ramírez Magrí]</span>
 <span class="doccomment">//! - [Simon Dickson]</span>
@@ -578,7 +464,9 @@
 <span class="doccomment">//! - Steven Knight</span>
 <span class="doccomment">//! - Steven Murawski</span>
 <span class="doccomment">//! - [Stuart Hinson]</span>
+<span class="doccomment">//! - Sven Huster</span>
 <span class="doccomment">//! - Tim Brooks</span>
+<span class="doccomment">//! - Tim Small</span>
 <span class="doccomment">//! - Tim Süberkrüb</span>
 <span class="doccomment">//! - Tom Prince</span>
 <span class="doccomment">//! - Toolmaker&#39;s Guild</span>
@@ -586,7 +474,6 @@
 <span class="doccomment">//! - Tyler Harper</span>
 <span class="doccomment">//! - Victor Kruger</span>
 <span class="doccomment">//! - Will Greenberg</span>
-<span class="doccomment">//! - [William Roe]</span>
 <span class="doccomment">//! - Zak van der Merwe</span>
 <span class="doccomment">//! - Zachary Snyder</span>
 <span class="doccomment">//! - [Zach Peters]</span>
@@ -617,7 +504,9 @@
 <span class="doccomment">//! [Graham Wihlidal]: https://wihlidal.com/</span>
 <span class="doccomment">//! [Henri Sivonen]: https://hsivonen.fi/</span>
 <span class="doccomment">//! [Ian Jones]: https://www.ianmjones.com/</span>
+<span class="doccomment">//! [Hugo Josefson]: https://www.hugojosefson.com</span>
 <span class="doccomment">//! [Jason Bowen]: https://twitter.com/jwbowen</span>
+<span class="doccomment">//! [Jeff May]: https://gitlab.com/jeffmay</span>
 <span class="doccomment">//! [Jendrik Illner]: https://www.jendrikillner.com/</span>
 <span class="doccomment">//! [Joar Wandborg]: http://github.com/joar</span>
 <span class="doccomment">//! [Johan Andersson]: https://www.embark-studios.com</span>
@@ -647,7 +536,6 @@
 <span class="doccomment">//! [Simon Dickson]: https://www.simonhdickson.com/</span>
 <span class="doccomment">//! [Soren Bramer Schmidt]: http://prisma.io/</span>
 <span class="doccomment">//! [Stuart Hinson]: http://stuarth.github.io/</span>
-<span class="doccomment">//! [William Roe]: http://willroe.me</span>
 <span class="doccomment">//! [Zach Peters]: https://github.com/zpeters</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! (Thanks to the couple people donating who opted out of the reward tier, as</span>
@@ -673,128 +561,8 @@
 <span class="doccomment">//!     + GitHub: [chriskrycho](https://github.com/chriskrycho)</span>
 <span class="doccomment">//!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)</span>
 
-<span class="kw">use</span> <span class="ident">std</span>::<span class="ident">os</span>::<span class="ident">raw</span>::<span class="ident">c_float</span>;
-
-<span class="attribute">#[<span class="ident">doc</span>(<span class="ident">include</span> <span class="op">=</span> <span class="string">&quot;../docs/e029-script.md&quot;</span>)]</span>
+<span class="attribute">#[<span class="ident">doc</span>(<span class="ident">include</span> <span class="op">=</span> <span class="string">&quot;../docs/cysk/bindgen-cbindgen-script.md&quot;</span>)]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Script</span>;
-
-<span class="doccomment">/// An example of a slightly more complex data structure we can use with FFI.</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// Note the `#[repr(C)]`, which tells Rust to make sure this struct is laid out</span>
-<span class="doccomment">/// the way that the C ABI expects. That&#39;s *not* the way that Rust&#39;s own ABI</span>
-<span class="doccomment">/// (which is unstable and can change at any time) might lay it out.</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// Note also that `x` and `y` are `c_float`, which is [a type alias][c_float]</span>
-<span class="doccomment">/// for `f32`. We use it here to make explicit the interop, and also because it</span>
-<span class="doccomment">/// is *possible* that it might change on some specific operating system. If we</span>
-<span class="doccomment">/// went to compile for an operating system where C&#39;s `float` type were *not* a</span>
-<span class="doccomment">/// 32-point floating bit number (and the C standard does not require it to be</span>
-<span class="doccomment">/// anything but &quot;a floating point number&quot;), the compiler would let us know.</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// [c_float]: https://doc.rust-lang.org/1.33.0/std/os/raw/type.c_float.html</span>
-<span class="attribute">#[<span class="ident">repr</span>(<span class="ident">C</span>)]</span>
-<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Debug</span>, <span class="ident">PartialEq</span>)]</span>
-<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Point</span> {
-    <span class="kw">pub</span> <span class="ident">x</span>: <span class="ident">c_float</span>,
-    <span class="kw">pub</span> <span class="ident">y</span>: <span class="ident">c_float</span>,
-}
-
-<span class="doccomment">/// The module with all the unsafe code in it! You&#39;ll want to poke at this!</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// (Note that this is private, and we wouldn&#39;t normally make this kind of code</span>
-<span class="doccomment">/// visible in documentation at all. Instead, we would *only* make public the</span>
-<span class="doccomment">/// safe abstraction around it which we&#39;re providing at the root of this module</span>
-<span class="doccomment">/// (see [e027]!). I&#39;ve set a `RUSTDOCFLAGS` value in the `Makefile` at the root</span>
-<span class="doccomment">/// of the repo so you get these docstring notes for it!)</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// [e027]: https://newrustacean.com/show_notes/e027/</span>
-<span class="kw">mod</span> <span class="ident">ffi</span> {
-    <span class="kw">use</span> <span class="kw">super</span>::<span class="ident">Point</span>;
-    <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">os</span>::<span class="ident">raw</span>::{<span class="ident">c_float</span>, <span class="ident">c_int</span>};
-
-    <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> {
-        <span class="doccomment">/// A *mostly*-trivial example: addition in C instead of in Rust. (See</span>
-        <span class="doccomment">/// the docs for `e029::add` for why it *isn&#39;t* totally trivial.)</span>
-        <span class="doccomment">///</span>
-        <span class="doccomment">/// You can use it in an `unsafe` block like so:</span>
-        <span class="doccomment">///</span>
-        <span class="doccomment">/// ```rust,ignore</span>
-        <span class="doccomment">/// unsafe {</span>
-        <span class="doccomment">///     let result = add(1, 2); // 3, of course!</span>
-        <span class="doccomment">/// }</span>
-        <span class="doccomment">/// ```</span>
-        <span class="kw">pub</span>(<span class="kw">super</span>) <span class="kw">fn</span> <span class="ident">add</span>(<span class="ident">a</span>: <span class="ident">c_int</span>, <span class="ident">b</span>: <span class="ident">c_int</span>) <span class="op">-&gt;</span> <span class="ident">c_int</span>;
-
-        <span class="doccomment">/// An example of a C function we can call with an object.</span>
-        <span class="doccomment">///</span>
-        <span class="doccomment">/// You can use it in an `unsafe` block like so:</span>
-        <span class="doccomment">///</span>
-        <span class="doccomment">/// ```rust,ignore</span>
-        <span class="doccomment">/// let mut point = Point { x: 0.0, y: 0.0 };</span>
-        <span class="doccomment">/// unsafe {</span>
-        <span class="doccomment">///     translate(&amp;mut point, 12.3, 14.4);</span>
-        <span class="doccomment">/// }</span>
-        <span class="doccomment">/// assert_eq!(point, Point { x: 12.3, y: 14.4 });</span>
-        <span class="doccomment">/// ```</span>
-        <span class="doccomment">///</span>
-        <span class="doccomment">/// [e027]: https://newrustacean.com/show_notes/e027/</span>
-        <span class="kw">pub</span>(<span class="kw">super</span>) <span class="kw">fn</span> <span class="ident">translate</span>(<span class="ident">point</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">Point</span>, <span class="ident">by_x</span>: <span class="ident">c_float</span>, <span class="ident">by_y</span>: <span class="ident">c_float</span>);
-    }
-}
-
-<span class="doccomment">/// A safe interface for the unsafe `ffi::add`.</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// Note that this particular check is as silly as calling out to C for addition</span>
-<span class="doccomment">/// is, but it shows how you can provide a safe wrapper for a case where C&#39;s</span>
-<span class="doccomment">/// implementation differences *might* actually matter to you.</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// While it might seem that something like addition is trivially safe, it turns</span>
-<span class="doccomment">/// out to be *mostly* safe. The behavior of overflow for signed integers is</span>
-<span class="doccomment">/// *not defined* for C. In Rust, it *is* defined, by [RFC #0560]: in modes</span>
-<span class="doccomment">/// where `debug_assertions` are enabled, an overflow will cause a panic; in</span>
-<span class="doccomment">/// modes where those assertions are not enabled (i.e. release mode), Rust wraps</span>
-<span class="doccomment">/// them by [two&#39;s complement]. The net of that is that even something this</span>
-<span class="doccomment">/// simple can have unexpected results when calling across the FFI boundary.</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// [RFC #0560]: https://github.com/rust-lang/rfcs/blob/master/text/0560-integer-overflow.md</span>
-<span class="doccomment">/// [two&#39;s complement]: https://en.wikipedia.org/wiki/Two&#39;s_complement</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// ```rust</span>
-<span class="doccomment">/// # use show_notes::e029::add;</span>
-<span class="doccomment">/// assert_eq!(add(1, 2), Some(3));</span>
-<span class="doccomment">/// ```</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">add</span>(<span class="ident">a</span>: <span class="ident">i32</span>, <span class="ident">b</span>: <span class="ident">i32</span>) <span class="op">-&gt;</span> <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">i32</span><span class="op">&gt;</span> {
-    <span class="kw">if</span> <span class="ident">i32</span>::<span class="ident">max_value</span>() <span class="op">-</span> <span class="ident">a</span> <span class="op">&gt;=</span> <span class="ident">b</span> {
-        <span class="kw">unsafe</span> { <span class="prelude-val">Some</span>(<span class="ident">ffi</span>::<span class="ident">add</span>(<span class="ident">a</span>, <span class="ident">b</span>)) }
-    } <span class="kw">else</span> {
-        <span class="prelude-val">None</span>
-    }
-}
-
-<span class="doccomment">/// A safe interface for the unsafe `ffi::translate` function.</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// In this case, there are no invariants we need to maintain other than those</span>
-<span class="doccomment">/// which Rust *always* maintains, i.e. that the reference we have with</span>
-<span class="doccomment">/// `&amp;mut Point` is a valid reference (not `null`, actually points to a `Point`,</span>
-<span class="doccomment">/// and so on). Since Rust guarantees this, we can simply *directly* call the</span>
-<span class="doccomment">/// unsafe extern function here.</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// I explicitly included the cast `as *mut Point`, but an `&amp;mut Point` will be</span>
-<span class="doccomment">/// automatically converted to a `*mut Point` when needed, so it is unnecessary</span>
-<span class="doccomment">/// from a compiler perspective. It may, however, be helpful for making your</span>
-<span class="doccomment">/// intent clear to other users!</span>
-<span class="doccomment">///</span>
-<span class="doccomment">/// ```rust</span>
-<span class="doccomment">/// # use show_notes::e029::{translate, Point};</span>
-<span class="doccomment">/// let mut point = Point { x: 0.0, y: 0.0 };</span>
-<span class="doccomment">/// translate(&amp;mut point, 2.4, 4.8);</span>
-<span class="doccomment">/// assert_eq!(point, Point { x: 2.4, y: 4.8 });</span>
-<span class="doccomment">/// ```</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">translate</span>(<span class="ident">point</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">Point</span>, <span class="ident">by_x</span>: <span class="ident">f32</span>, <span class="ident">by_y</span>: <span class="ident">f32</span>) {
-    <span class="kw">unsafe</span> {
-        <span class="ident">ffi</span>::<span class="ident">translate</span>(<span class="ident">point</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">Point</span>, <span class="ident">by_x</span> <span class="kw">as</span> <span class="ident">c_float</span>, <span class="ident">by_y</span> <span class="kw">as</span> <span class="ident">c_float</span>);
-    }
-}
 </pre></div>
 </section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g., <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g., <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g., <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><link rel="stylesheet" href="/media-playback.css">
 <script type="text/javascript" src="/media-playback.js" defer></script>
