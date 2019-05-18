@@ -338,7 +338,7 @@ mod ffi {
         /// assert_eq!(point, Point { x: 12.3, y: 14.4 });
         /// ```
         ///
-        /// [e027]: http://newrustacean.com/show_notes/e027/
+        /// [e027]: https://newrustacean.com/show_notes/e027/
         pub(super) fn translate(point: *mut Point, by_x: c_float, by_y: c_float);
     }
 }

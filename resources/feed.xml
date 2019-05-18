@@ -2,7 +2,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
     <channel>
         <title>New Rustacean</title>
-        <link>http://newrustacean.com</link>
+        <link>https://newrustacean.com</link>
         <description>A show about the Rust programming language and the people who use it.</description>
         <generator>Feeder 3 3.6.6(3202); Mac OS X Version 10.14.4 (Build 18E226) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
@@ -10,12 +10,12 @@
         <copyright>2015–2019 Chris Krycho</copyright>
         <managingEditor>hello@newrustacean.com (Chris Krycho)</managingEditor>
         <webMaster>hello@newrustacean.com (Chris Krycho)</webMaster>
-        <pubDate>Mon, 13 May 2019 20:42:50 -0600</pubDate>
-        <lastBuildDate>Mon, 13 May 2019 20:42:50 -0600</lastBuildDate>
+        <pubDate>Fri, 17 May 2019 20:10:36 -0600</pubDate>
+        <lastBuildDate>Fri, 17 May 2019 20:10:37 -0600</lastBuildDate>
         <image>
-            <url>http://newrustacean.com/podcast.png</url>
+            <url>https://newrustacean.com/podcast.png</url>
             <title>New Rustacean</title>
-            <link>http://newrustacean.com</link>
+            <link>https://newrustacean.com</link>
             <width>144</width>
             <height>144</height>
             <description>A show about the Rust programming language and the people who use it.</description>
@@ -25,7 +25,7 @@
         <itunes:subtitle>A show about the Rust programming language and the people who use it.</itunes:subtitle>
         <itunes:summary>Deep dive teaching episodes, news updates, and interviews with people around the Rust community.</itunes:summary>
         <itunes:keywords>Rust,programming,programming languages,software</itunes:keywords>
-        <itunes:image href="http://newrustacean.com/podcast.png"/>
+        <itunes:image href="https://newrustacean.com/podcast.png"/>
         <itunes:explicit>clean</itunes:explicit>
         <itunes:owner>
             <itunes:name>Chris Krycho</itunes:name>
@@ -39,6 +39,219 @@
             <itunes:category text="Training"/>
         </itunes:category>
         <itunes:type>episodic</itunes:type>
+        <item>
+            <title>CYSK: bindgen and cbindgen</title>
+            <link>https://newrustacean.com/show_notes/cysk/bindgen_cbindgen/</link>
+            <description><![CDATA[<p><i>Automatic generation of FFI types between Rust and C APIs.</i>
+<h2 id="show-notes">Show Notes</h2>
+<ul>
+<li>bindgen
+<ul>
+<li><a href="https://rust-lang.github.io/rust-bindgen/">the official guide</a></li>
+<li><a href="https://docs.rs/bindgen">API docs</a></li>
+</ul></li>
+<li><a href="https://github.com/eqrion/cbindgen/">cbindgen</a>
+<ul>
+<li><a href="https://blog.eqrion.net/future-directions-for-cbindgen/">a blog post by one of the main authors of the crate</a></li>
+<li><a href="https://github.com/eqrion/rust-ffi">rust-ffi</a></li>
+</ul></li>
+<li>Binding libraries for scripting languages
+<ul>
+<li><a href="https://github.com/PyO3/PyO3">PyO3</a></li>
+<li><a href="https://neon-bindings.com">Neon</a></li>
+<li><a href="https://github.com/rusterlium/rustler">Rustler</a>
+<ul>
+<li><a href="https://blog.discordapp.com/using-rust-to-scale-elixir-for-11-million-concurrent-users-c6f19fc029d3">a great write-up from the folks at Discord</a></li>
+</ul></li>
+<li><a href="https://github.com/tildeio/helix">Helix</a></li>
+</ul></li>
+</ul>
+<h2 id="sponsors">Sponsors</h2>
+<p>Thanks to Parity for sponsoring the show and hiring Rust developers!</p>
+<h3 id="patreon-sponsors">Patreon Sponsors</h3>
+<ul>
+<li>Adam Green</li>
+<li>Aleksey Pirogov</li>
+<li>Alexander Kryvomaz</li>
+<li>Alexander Lozada</li>
+<li>Alexander Payne</li>
+<li><a href="https://github.com/bddap">Andrew Dirksen</a></li>
+<li>Andrew Thompson</li>
+<li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li>
+<li>Anthony Scotti</li>
+<li>Arlen Haftevani</li>
+<li><a href="https://asonix.dog/@asonix">Arlo (Hyena)</a></li>
+<li>Arun Kulshreshtha</li>
+<li><a href="https://github.com/behnam">Behnam Esfahbod</a></li>
+<li><a href="https://www.benmanns.com/">Benjamin Manns</a></li>
+<li>Benjamin Wasty</li>
+<li>Brandon ‘Spanky’ Mills</li>
+<li>Brian Casiello</li>
+<li>Brian Manning</li>
+<li><a href="https://skife.org/">Brian McCallister</a></li>
+<li><a href="http://www.stitthappens.com/">Bryan Stitt</a></li>
+<li>Caryn Finkelman</li>
+<li>Cass Costello</li>
+<li>Cat Dad</li>
+<li>Chap Lovejoy</li>
+<li><a href="https://charlieegan3.com">Charlie Egan</a></li>
+<li>Chip</li>
+<li><a href="http://red-oxide.org/">Chris Palmer</a></li>
+<li>Christoffer Ceutz</li>
+<li>Cristian Paul</li>
+<li>Dan Abrams</li>
+<li>Daniel</li>
+<li>Daniel Bross</li>
+<li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li>
+<li><a href="https://github.com/gisleburt">Daniel Mason</a></li>
+<li>David Carroll</li>
+<li>David Hewson</li>
+<li><a href="https://twitter.com/derekmorr">Derek Morr</a></li>
+<li>Dominic Cooney</li>
+<li>Doug Reeves</li>
+<li><a href="http://learnrust.io/">Douglas Correa</a></li>
+<li>Edmund Kump</li>
+<li><a href="https://github.com/edvorg">Eduard Knyshov</a></li>
+<li><a href="https://www.embark-studios.com">Embark Studios</a></li>
+<li>Eugene Bulkin</li>
+<li><a href="https://github.com/evanjs">Evan Stoll</a></li>
+<li><a href="https://decathorpe.com/">Fabio (decathorpe)</a></li>
+<li><a href="https://linkedin.com/in/feamcor">Fabio Correa</a></li>
+<li>Freeman P. Pascal</li>
+<li><a href="https://twitter.com/gaveen">Gaveen Prabhasara</a></li>
+<li><a href="https://wihlidal.com/">Graham Wihlidal</a></li>
+<li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
+<li><a href="https://www.ianmjones.com/">Ian Jones</a></li>
+<li>Hoàng Đức Hiếu</li>
+<li><a href="https://www.hugojosefson.com">Hugo Josefson</a></li>
+<li>“Jake”“ferris”" Taylor"</li>
+<li>Jako Danar</li>
+<li>James Cooper</li>
+<li>James Hagans II</li>
+<li><a href="https://twitter.com/jwbowen">Jason Bowen</a></li>
+<li><a href="https://gitlab.com/jeffmay">Jeff May</a></li>
+<li><a href="https://www.jendrikillner.com/">Jendrik Illner</a></li>
+<li>Jerome Froelich</li>
+<li>JockeTF</li>
+<li><a href="http://github.com/joar">Joar Wandborg</a></li>
+<li><a href="https://www.embark-studios.com">Johan Andersson</a></li>
+<li><a href="http://www.cindur.com/">John Rudnick</a></li>
+<li>Jon</li>
+<li>Jonah</li>
+<li><a href="https://www.coffeeandcode.com/">Jonathan Knapp</a></li>
+<li>Jonathan Turner</li>
+<li>Joseph Hain</li>
+<li>Joseph Mou</li>
+<li>Joseph Schrag</li>
+<li><a href="http://joetdc.com/">Joe Percy</a></li>
+<li>Justin Ossevoort</li>
+<li>Kai Yao</li>
+<li>Kazutaka Mise</li>
+<li>Keith Gray</li>
+<li>Kilian Rault</li>
+<li>Kyle</li>
+<li>Lee Jenkins</li>
+<li>Luca Schmid</li>
+<li><a href="http://luizirber.org/">Luiz Irber</a></li>
+<li>Lukas Eller</li>
+<li><a href="https://twitter.com/Malnormalulo">Malnormalulo</a></li>
+<li><a href="https://github.com/epsilonhalbe">Martin Heuschober</a></li>
+<li>Masashi Fujita</li>
+<li>Matt Rudder</li>
+<li>Matthew Brenner</li>
+<li>Matthias Ruszala</li>
+<li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li>
+<li>Max R.R. Collada</li>
+<li><a href="https://github.com/messense">Messense Lv</a></li>
+<li>Micael Bergeron</li>
+<li><a href="https://www.linkedin.com/in/michaelmcdonnell/">Michael Mc Donnell</a></li>
+<li><a href="https://www.michaelmelanson.net">Michael Melanson</a></li>
+<li>Michael Sanders</li>
+<li><a href="http://influential.co/">Nathan Sculli</a></li>
+<li><a href="http://github.com/ncoish">Nick Coish</a></li>
+<li>Nick Gideo</li>
+<li><a href="https://github.com/nastevens">Nick Stevens</a></li>
+<li><a href="https://github.com/n-pochet">Nicolas Pochet</a></li>
+<li>Oladapo Fadeyi</li>
+<li>Olaf Leidinger</li>
+<li>Oliver Uvman</li>
+<li><a href="http://oluseyi.info/">Oluseyi Sonaiya</a></li>
+<li>Ovidiu Curcan</li>
+<li><a href="https://pascalhertleif.de/">Pascal</a></li>
+<li><a href="https://twitter.com/patrickod">Patrick O’Doherty</a></li>
+<li>Paul Naranja</li>
+<li>Paul Osborne</li>
+<li>Peter Scholtens</li>
+<li>Peter Tillemans</li>
+<li>Pierre-Antoine Champin</li>
+<li>Ralph Giles</li>
+<li><a href="http://www.inosion.com">Ramon Buckland</a></li>
+<li>Randy MacLeod</li>
+<li>Raph Levien</li>
+<li>Richard Dallaway</li>
+<li>Rob Tsuk</li>
+<li><a href="https://github.com/RobbieClarken/">Robbie Clarken</a></li>
+<li>Robert Chrzanowski</li>
+<li>Romain Chossart</li>
+<li><a href="http://notryanb.github.io/">Ryan Blecher</a></li>
+<li><a href="https://github.com/osialr">Ryan Osial</a></li>
+<li>Satoshi Yoshikawa</li>
+<li>Scott Moeller</li>
+<li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li>
+<li><a href="https://www.simonhdickson.com/">Simon Dickson</a></li>
+<li>Simon G</li>
+<li><a href="http://prisma.io/">Soren Bramer Schmidt</a></li>
+<li>Steve Jenson</li>
+<li>Steven Knight</li>
+<li>Steven Murawski</li>
+<li><a href="http://stuarth.github.io/">Stuart Hinson</a></li>
+<li>Sven Huster</li>
+<li>Tim Brooks</li>
+<li>Tim Small</li>
+<li>Tim Süberkrüb</li>
+<li>Tom Prince</li>
+<li>Toolmaker’s Guild</li>
+<li>Ty Overby</li>
+<li>Tyler Harper</li>
+<li>Victor Kruger</li>
+<li>Will Greenberg</li>
+<li>Zak van der Merwe</li>
+<li>Zachary Snyder</li>
+<li><a href="https://github.com/zpeters">Zach Peters</a></li>
+<li>Zaki</li>
+</ul>
+<p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p>
+<h3 id="become-a-sponsor">Become a sponsor</h3>
+<ul>
+<li><a href="https://www.patreon.com/newrustacean" rel="payment">Patreon</a></li>
+<li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
+<li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
+<li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
+<li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
+<li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li>New Rustacean:
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li>
+<li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li>
+</ul></li>
+<li>Chris Krycho
+<ul>
+<li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li>
+<li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li>
+</ul></li>
+</ul>
+]]></description>
+            <pubDate>Fri, 17 May 2019 20:10:00 -0600</pubDate>
+            <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/cysk/bindgen_cbindgen.mp3" length="17473135" type="audio/mpeg"/>
+            <guid isPermaLink="false">35135E76-3E12-437E-AA90-38AB3BC51CD2</guid>
+            <itunes:subtitle>Automatic generation of FFI types between Rust and C APIs.</itunes:subtitle>
+            <itunes:summary>Automatic generation of FFI types between Rust and C APIs.</itunes:summary>
+            <itunes:duration>18:10</itunes:duration>
+            <itunes:episodeType>full</itunes:episodeType>
+        </item>
         <item>
             <title>e031: FFI Deep Dive</title>
             <link>http://Exposing%20Rust%20types%20and%20functions%20to%20C%20API%20consumers.</link>
@@ -252,7 +465,7 @@
         </item>
         <item>
             <title>e030: Can You See Me Now?</title>
-            <link>http://newrustacean.com/show_notes/e030/</link>
+            <link>https://newrustacean.com/show_notes/e030/</link>
             <description><![CDATA[<p>Item visibility and <code>pub(&lt;restricted&gt;)</code> as API design tools.</p>
 <h2 id="show-notes">Show Notes</h2>
 <p>The easiest and most effective way to understand the example in this case will simply be to look directly at <a href="/src/show_notes/e030.rs.html">the source code</a>. You <em>can</em> read the docs for each of the nested modules, but you’ll be doing a <em>lot</em> of navigating around for that.</p>
@@ -440,7 +653,7 @@
         </item>
         <item>
             <title>News: Rust 1.33 and 1.34</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_33_1_34/</link>
+            <link>https://newrustacean.com/show_notes/news/rust_1_33_1_34/</link>
             <description><![CDATA[<p><i>Moar <code>const fn</code>, some <code>Pin</code>, and alternative Cargo registries!</i></p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -627,7 +840,7 @@
         </item>
         <item>
             <title>e029: I’m Out to C</title>
-            <link>http://newrustacean.com/show_notes/e029/</link>
+            <link>https://newrustacean.com/show_notes/e029/</link>
             <description><![CDATA[<p>Using Rust’s Foreign Function Interface (FFI) with C!</p>
 <h2 id="show-notes">Show Notes</h2>
 <p>The code samples here directly match the things I described in the show, so you will likely want to look at <a href="./fn.add.html"><code>add</code></a> and <a href="./ffi/fn.add.html"><code>ffi::add</code></a>, then <a href="./struct.Point.html"><code>Point</code></a>, <a href="./fn.translate.html"><code>translate</code></a>, and <a href="./ffi/fn.translate.html"><code>ffi::translate</code></a> in that order.</p>
@@ -812,7 +1025,7 @@
         </item>
         <item>
             <title>Bonus 14: How the Sausage Gets Made</title>
-            <link>http://newrustacean.com/show_notes/bonus/_14/</link>
+            <link>https://newrustacean.com/show_notes/bonus/_14/</link>
             <description><![CDATA[<p>How I make the show, and why you won’t find it on Google Play, Spotify, or Stitcher.</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -1009,7 +1222,7 @@
         </item>
         <item>
             <title>Bonus 13: I Still Make Silly Mistakes</title>
-            <link>http://newrustacean.com/show_notes/bonus/_13/</link>
+            <link>https://newrustacean.com/show_notes/bonus/_13/</link>
             <description><![CDATA[<p>A story about parsing command-line arguments manually and some thoughts on “rookie mistakes.”</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -1185,7 +1398,7 @@
         </item>
         <item>
             <title>e028: Meet My Associates</title>
-            <link>http://newrustacean.com/show_notes/e028/</link>
+            <link>https://newrustacean.com/show_notes/e028/</link>
             <description><![CDATA[<p>Associated items: functions and methods, constants, types, and (very briefly!) GATs.</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -1364,7 +1577,7 @@
         </item>
         <item>
             <title>News: Rust 1.32</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_32/</link>
+            <link>https://newrustacean.com/show_notes/news/rust_1_32/</link>
             <description><![CDATA[<p><code>dbg!</code>, unified paths, more places you can use <code>Self</code>, and a <em>bunch</em> of <code>const fn</code> stabilizations—plus some neat community highlights!</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -1537,7 +1750,7 @@
         </item>
         <item>
             <title>News: Rust 1.31 and the 2018 Edition, Part II</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_31/part_2/</link>
+            <link>https://newrustacean.com/show_notes/news/rust_1_31/part_2/</link>
             <description><![CDATA[<p>Stabilizing rustfmt, clippy, tool lints, and <code>const fn</code> (all in both editions!), and the 2018 Edition-specific features: syntax changes and non-lexical lifetimes!</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -1699,7 +1912,7 @@
         </item>
         <item>
             <title>News: Rust 1.31 and the 2018 Edition, Part I</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_31/part_1/</link>
+            <link>https://newrustacean.com/show_notes/news/rust_1_31/part_1/</link>
             <description><![CDATA[<p>An overview of the edition, and some of the improvements that are available in both the 2015 and 2018 editions: better lifetime elision, some Cargo features, and some library stabilizations.</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -1863,7 +2076,7 @@
         </item>
         <item>
             <title>Interview: Integer32</title>
-            <link>http://newrustacean.com/show_notes/interview/integer32/</link>
+            <link>https://newrustacean.com/show_notes/interview/integer32/</link>
             <description><![CDATA[<h2 id="show-notes">Show Notes</h2>
 <p>Things we mentioned on the show:</p>
 <ul>
@@ -2024,7 +2237,7 @@
         </item>
         <item>
             <title>e027: Trust Me; I Promise!</title>
-            <link>http://newrustacean.com/show_notes/e027/</link>
+            <link>https://newrustacean.com/show_notes/e027/</link>
             <description><![CDATA[<p>An intro to <code>unsafe</code> Rust and Rust’s idea of safety.</p>
 <h2 id="show-notes">Show Notes</h2>
 <h3 id="errata">Errata</h3>
@@ -2204,7 +2417,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>News: Rust 1.29 and 1.30</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_29_1_30/</link>
+            <link>https://newrustacean.com/show_notes/news/rust_1_29_1_30/</link>
             <description><![CDATA[<p>Procedural macros, better paths, and the Rust 2018 beta!</p>
 <h2 id="show-notes">Show Notes</h2>
 <p>Rust 1.29:</p>
@@ -2358,7 +2571,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Bonus 12: Translating Between Languages</title>
-            <link>http://newrustacean.com/show_notes/bonus/translating_between_languages/</link>
+            <link>https://newrustacean.com/show_notes/bonus/translating_between_languages/</link>
             <description><![CDATA[<p>Musings inspired by a project translating TypeScript to Rust</p>
 <h2 id="sponsors">Sponsors</h2>
 <p>Thanks to Manning for sponsoring the show <em>and</em> giving all of you a 40%-off discount on their whole store (but especially Carol Nichols’ and Jake Goulding’s <em>Rust in Motion</em> video content and the <em>Rust in Action</em> MEAP!) at <a href="http://bit.ly/2OXnlEb">deals.manning.com/new-rustacean</a></p>
@@ -2498,7 +2711,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Bonus 11: Burnout</title>
-            <link>http://newrustacean.com/show_notes/bonus/burnout/</link>
+            <link>https://newrustacean.com/show_notes/bonus/burnout/</link>
             <description><![CDATA[<p>What burnout is, the many ways it can happen to us, and what we can do about it.</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -2639,7 +2852,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>News: Rust 1.28</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_28/</link>
+            <link>https://newrustacean.com/show_notes/news/rust_1_28/</link>
             <description><![CDATA[<p>Stable `#[global_allocator]`, more Rust 2018 Edition schedule news, video learning resources, and a static site generator!</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -2790,7 +3003,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>e026: Functional Programming Ideas</title>
-            <link>http://newrustacean.com/show_notes/e026/</link>
+            <link>https://newrustacean.com/show_notes/e026/</link>
             <description><![CDATA[<p>How Rust both borrows from FP languages and charts its own, very different course.</p>
 <h2 id="show-notes">Show Notes</h2>
 <p>Sponsored by <a href="https://paritytech.io">Parity Technologies</a>! Parity is hiring Rust developers so if you’re interested, you should check out their <a href="https://paritytech.io/jobs/">job listings</a>!</p>
@@ -2933,7 +3146,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>e025: Traits Deep Dive, Part III</title>
-            <link>http://newrustacean.com/show_notes/e025/</link>
+            <link>https://newrustacean.com/show_notes/e025/</link>
             <description><![CDATA[<p>Closure traits, `impl trait`, `dyn trait`, and object safety!</p>
 <h2 id="show-notes">Show Notes</h2>
 <p>Sponsored by <a href="https://paritytech.io">Parity Technologies</a>! Parity is hiring Rust developers so if you’re interested, you should check out their <a href="https://paritytech.io/jobs/">job listings</a>!</p>
@@ -3093,7 +3306,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>News: Rust 1.27</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_27/</link>
+            <link>https://newrustacean.com/show_notes/news/rust_1_27/</link>
             <description><![CDATA[<p>Stable SIMD, `dyn trait`, `rustfix` and the alpha release of the Rust 2018 Edition Preview!</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -3235,7 +3448,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>e024: Traits Deep Dive, Part II</title>
-            <link>http://newrustacean.com/show_notes/e024/</link>
+            <link>https://newrustacean.com/show_notes/e024/</link>
             <description><![CDATA[<p>Operators as sugar for traits, traits as generic constraints, monomorphization, and universal and existential types.</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -3369,7 +3582,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>CYSK: The wasm tools</title>
-            <link>http://newrustacean.com/show_notes/cysk/wasm/</link>
+            <link>https://newrustacean.com/show_notes/cysk/wasm/</link>
             <description><![CDATA[<p>wasm intro, <code>wasm-bindgen</code>, and <code>wasm-pack</code></p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -3496,7 +3709,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>News: Rust 1.26</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_26/</link>
+            <link>https://newrustacean.com/show_notes/news/rust_1_26/</link>
             <description><![CDATA[<p><code>impl trait</code>, <code>match</code> on references, <code>Result</code>s from <code>main</code>, and more. A good way to mark three years since Rust 1.0!</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -3640,7 +3853,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>e023: Traits Deep Dive, Part I</title>
-            <link>http://newrustacean.com/show_notes/e023/</link>
+            <link>https://newrustacean.com/show_notes/e023/</link>
             <description><![CDATA[<p>Defining and using your own traits, using other crates' traits, and the orphan rule.</p>
 
 <h2 id="show-notes">Show Notes</h2>
@@ -3780,7 +3993,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>News: Rust 1.25</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_25/</link>
+            <link>https://newrustacean.com/show_notes/news/rust_1_25/</link>
             <description><![CDATA[<p>Paths and matches and SIMD, cargo new changes, and tons of community-driven learning materials!</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -4028,7 +4241,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>News: Rust 1.24</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_24/</link>
+            <link>https://newrustacean.com/show_notes/news/rust_1_24/</link>
             <description><![CDATA[<p>Performance wins, incremental compilation, and the Rust 2018 Roadmap and Epoch.</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -4146,7 +4359,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>CYSK: Serde</title>
-            <link>http://newrustacean.com/show_notes/cysk/serde/</link>
+            <link>https://newrustacean.com/show_notes/cysk/serde/</link>
             <description><![CDATA[<p>The library for serialization and deserialization in Rust.</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -4268,7 +4481,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>e023: Send and Sync</title>
-            <link>http://newrustacean.com/show_notes/e022/</link>
+            <link>https://newrustacean.com/show_notes/e022/</link>
             <description><![CDATA[<p>The “marker traits” that Rust uses for safe concurrency.</p>
 <h2 id="sponsors">Sponsors</h2>
 <ul>
@@ -4382,7 +4595,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Interview – Diesel 1.0, with Sean Griffin – Part 2</title>
-            <link>http://newrustacean.com/show_notes/interview/diesel_1_0/part_2/</link>
+            <link>https://newrustacean.com/show_notes/interview/diesel_1_0/part_2/</link>
             <description><![CDATA[<p>Getting Diesel to 1.0, writing docs and exposing problems with the API, improving Diesel in the future, and thinking about API design for open source libraries in general.</p>
 <h2 id="show-notes">Show notes</h2>
 <ul>
@@ -4510,7 +4723,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Interview – Diesel 1.0, with Sean Griffin – Part 1</title>
-            <link>http://newrustacean.com/show_notes/interview/diesel_1_0/part_1/</link>
+            <link>https://newrustacean.com/show_notes/interview/diesel_1_0/part_1/</link>
             <description><![CDATA[<p>Growing Diesel's community, self-imposed technical challenges, and some of the ways Diesel has contributed to the Rust ecosystem.</p>
 <h2 id="show-notes">Show notes</h2>
 <ul>
@@ -4650,7 +4863,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>News: Rust 1.23</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_23/</link>
+            <link>https://newrustacean.com/show_notes/news/rust_1_23/</link>
             <description><![CDATA[<h2 id="show-notes">Show notes</h2>
 <ul>
 <li>Rust 1.23
@@ -4792,7 +5005,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Increasing Rust's Reach: Matt Gathu</title>
-            <link>http://newrustacean.com/show_notes/interview/irr_2017/matt_gathu/</link>
+            <link>https://newrustacean.com/show_notes/interview/irr_2017/matt_gathu/</link>
             <description><![CDATA[<p>Matt’s experience porting wget to Rust.</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -5042,7 +5255,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Increasing Rust's Reach: Anna Liao</title>
-            <link>http://newrustacean.com/show_notes/interview/irr_2017/anna_liao/</link>
+            <link>https://newrustacean.com/show_notes/interview/irr_2017/anna_liao/</link>
             <description><![CDATA[<p>Anna's experience learning Rust while porting a Raspberry Pi Python project as part of the Increasing Rust’s Reach 2017 program.</p>
 <h2 id="show-notes">Show Notes</h2>
 <ul>
@@ -5168,7 +5381,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Katie Nolan</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/katie_nolan/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/katie_nolan/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Fri, 15 Dec 2017 07:46:41 -0700</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/katie_nolan.mp3" length="5174412" type="audio/mpeg"/>
@@ -5180,7 +5393,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Ben Beckwith</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/ben_beckwith/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/ben_beckwith/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Thu, 14 Dec 2017 18:26:20 -0700</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/ben_beckwith.mp3" length="5512125" type="audio/mpeg"/>
@@ -5192,7 +5405,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Andrew Hobden</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/andrew_hobden/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/andrew_hobden/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Wed, 13 Dec 2017 16:20:00 -0700</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/andrew_hobden.mp3" length="5785896" type="audio/mpeg"/>
@@ -5204,7 +5417,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Parry Wilcox</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/parry_wilcox/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/parry_wilcox/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Tue, 12 Dec 2017 07:05:27 -0700</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/parry_wilcox.mp3" length="6265288" type="audio/mpeg"/>
@@ -5216,7 +5429,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Matthias Endler</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/matthias_endler/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/matthias_endler/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Mon, 11 Dec 2017 17:50:53 -0700</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/matthias_endler.mp3" length="6269897" type="audio/mpeg"/>
@@ -5228,7 +5441,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Ben Striegel</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/ben_striegel/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/ben_striegel/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Sun, 10 Dec 2017 08:15:05 -0700</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/ben_striegel.mp3" length="5945558" type="audio/mpeg"/>
@@ -5240,7 +5453,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Holden Marcsisin</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/holden_marcsisin/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/holden_marcsisin/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Sat, 09 Dec 2017 09:15:00 -0700</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/holden_marcsisin.mp3" length="6867487" type="audio/mpeg"/>
@@ -5252,7 +5465,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Esty Thomas</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/esty_thomas/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/esty_thomas/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Thu, 07 Dec 2017 19:15:00 -0700</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/esty_thomas.mp3" length="5855598" type="audio/mpeg"/>
@@ -5266,7 +5479,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Thomas Gideon</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/thomas_gideon/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/thomas_gideon/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Wed, 06 Dec 2017 16:30:00 -0700</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/thomas_gideon.mp3" length="5386652" type="audio/mpeg"/>
@@ -5280,7 +5493,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Tom Kriezkowski</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/tom_kriezkowski/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/tom_kriezkowski/</link>
             <description><![CDATA[<p>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</p>
 ]]></description>
             <pubDate>Sun, 26 Nov 2017 16:14:25 -0700</pubDate>
@@ -5293,7 +5506,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>News: Rust 1.21 and 1.22</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_21_1_22/</link>
+            <link>https://newrustacean.com/show_notes/news/rust_1_21_1_22/</link>
             <description><![CDATA[<p>Quality of life improvements, <code>Failure</code>, wasm, and rustdoc fun.</p>
 <h2 id="links-and-notes">Links and Notes</h2>
 <ul>
@@ -5428,7 +5641,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Jess Saxeter</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/jess_saxeter/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/jess_saxeter/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Sun, 19 Nov 2017 13:00:00 -0700</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/jess_saxeter.mp3" length="5110379" type="audio/mpeg"/>
@@ -5440,7 +5653,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Pete Lyons</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/pete_lyons/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/pete_lyons/</link>
             <description><![CDATA[<p>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</p>
 ]]></description>
             <pubDate>Sat, 18 Nov 2017 13:55:02 -0700</pubDate>
@@ -5456,7 +5669,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Arun Kulsheshthra</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/arun_kulshreshthra/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/arun_kulshreshthra/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Tue, 14 Nov 2017 20:02:51 -0700</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/arun_kulshreshthra.mp3" length="5261272" type="audio/mpeg"/>
@@ -5470,7 +5683,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Anthony Deschamps</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/anthony_deschamps/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/anthony_deschamps/</link>
             <description><![CDATA[<p>A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.</p>
 
 <p>## Transcript</p>
@@ -5534,7 +5747,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>RBR 2017: Colin Dean</title>
-            <link>http://newrustacean.com/show_notes/interview/rbr_2017/colin_dean/</link>
+            <link>https://newrustacean.com/show_notes/interview/rbr_2017/colin_dean/</link>
             <description><![CDATA[A micro-interview recorded at Rust Belt Rust 2017, in Columbus, Ohio, October 27–28.]]></description>
             <pubDate>Sat, 11 Nov 2017 13:22:48 -0700</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/rbr/colin_dean.mp3" length="7000792" type="audio/mpeg"/>
@@ -5547,7 +5760,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Meta 2: Two milestones</title>
-            <link>http://newrustacean.com/show_notes/meta/_2/</link>
+            <link>https://newrustacean.com/show_notes/meta/_2/</link>
             <description><![CDATA[<p>Two years and fifty episodes of New Rustacean—time to celebrate with stickers and shirts!</p>
 <h2 id="links">Links</h2>
 <ul>
@@ -5658,7 +5871,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>CYSK: Rayon</title>
-            <link>http://newrustacean.com/show_notes/cysk/rayon/</link>
+            <link>https://newrustacean.com/show_notes/cysk/rayon/</link>
             <description><![CDATA[<p>Safe, threaded, parallel code in Rust!</p><h2 id="links-and-notes">Links and Notes</h2><h3 id="rayon">Rayon</h3><ul>
 <li><a href="https://github.com/nikomatsakis/rayon">Source</a></li>
 <li><a href="https://crates.io/crates/rayon">Crate</a></li>
@@ -5757,7 +5970,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>News: Rust 1.20</title>
-            <link>http://newrustacean.com/show_notes/news/rust_1_20/</link>
+            <link>https://newrustacean.com/show_notes/news/rust_1_20/</link>
             <description><![CDATA[<p>Associated constants, conference season, meetups, and more!</p>
 <h2 id="links-and-notes">Links and Notes</h2><ul><li>Rust 1.20<ul><li><a href="https://blog.rust-lang.org/2017/08/31/Rust-1.20.html">blog post</a></li><li><a href="https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1200-2017-08-31">changelog</a></li><li><a href="https://github.com/rust-lang/rfcs/blob/master/text/0195-associated-items.md">Associated items RFC</a> – and see the code for today's show for examples of the variants I described on the show!</li></ul></li><li><a href="http://rustconf.com">RustConf 2017</a></li><li><a href="http://zurich.rustfest.eu">RustFest 2017</a><ul><li><a href="https://ti.to/asquera-event-ug/rustfest-zurich/">registration</a></li></ul></li><li><a href="http://www.rust-belt-rust.com">Rust Belt Rust 2017</a><ul><li><a href="https://www.eventbrite.com/e/rust-belt-rust-conference-2017-registration-36237335847">registration</a> (and don't forget to use code <code>newrustacean</code> for 20% off!)</li></ul></li><li><a href="http://rustrations.club">rustrations.club</a></li></ul><h2 id="sponsors">Sponsors</h2><ul><li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li><li>Anthony Scotti</li><li>Aleksey Pirogov</li><li>Andreas Fischer</li><li>Andrew Thompson</li><li>Austin LeSure</li><li><a href="https://github.com/behnam">Behnam Esfahbod</a></li><li>Benjamin Wasty</li><li>Brent Vatne</li><li><a href="https://charlieegan3.com">Charlie Egan</a></li><li>Chris Jones</li><li><a href="http://red-oxide.org/">Chris Palmer</a></li><li>Dan Abrams</li><li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li><li>[David W. Allen]</li><li><a href="https://twitter.com/derekmorr">Derek Morr</a></li><li>Eugene Bulkin</li><li><a href="https://hsivonen.fi/">Henri Sivonen</a></li><li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li><li>James Cooper</li><li>Jonathan Turner</li><li>Jordan Henderson</li><li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li><li>Justin Ossevoort</li><li><a href="https://github.com/kaedroho/">Karl Hobley</a></li><li>Keith Gray</li><li>Kilian Rault</li><li>Luca Schmid</li><li>Masashi Fujita</li><li>Matt Rudder</li><li>Matthew Piziak</li><li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li><li><a href="https://github.com/messense">Messense Lv</a></li><li>Micael Bergeron</li><li><a href="http://influential.co/">Nathan Sculli</a></li><li><a href="https://github.com/nastevens">Nick Stevens</a></li><li>Ovidiu Curcan</li><li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li><li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li><li>Peter Tillemans</li><li>Philipp Keller</li><li>Ralph Giles (&quot;rillian&quot;)</li><li>Randy MacLeod</li><li>Raph Levien</li><li>reddraggone9</li><li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li><li>Simon G.</li><li>Steven Murawski</li><li><a href="http://stuarth.github.io/">Stuart Hinson</a></li><li>Tim Brooks</li><li>Tom Prince</li><li>Ty Overby</li><li>Tyler Harper</li><li>Vesa Kaihlavirta</li><li>Warren Harper</li><li><a href="http://willroe.me">William Roe</a></li><li>Zaki</li></ul><p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p><h3 id="become-a-sponsor">Become a sponsor</h3><ul><li><a href="https://www.patreon.com/newrustacean" rel="payment">Patreon</a></li><li><a href="https://venmo.com/chriskrycho">Venmo</a></li><li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li><li><a href="https://cash.me/$chriskrycho">Cash.me</a></li><li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li><li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li></ul><h2 id="contact">Contact</h2><ul><li>New Rustacean:<ul><li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li><li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li></ul></li><li>Chris Krycho<ul><li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li><li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li></ul></li></ul>
 ]]></description>
@@ -5771,7 +5984,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Bonus 9: Open source is mostly just normal people</title>
-            <link>http://newrustacean.com/show_notes/bonus/_9/</link>
+            <link>https://newrustacean.com/show_notes/bonus/_9/</link>
             <description><![CDATA[<p>My experience with ember-cli-typescript as an example: we're all just people muddling along and doing our best.</p><h2 id="links-and-notes">Links and Notes</h2><ul><li><a href="https://github.com/typed-ember/ember-cli-typescript">ember-cli-typescript</a></li><li><a href="http://bikeshed.fm/118">The Bike Shed #118: Nonsense In, Nonsense Out</a></li><li>Sean's appearance on New Rustacean: <a href="https://www.newrustacean.com/show_notes/interview/_1/index.html">Interview 1</a></li></ul><h2 id="sponsors">Sponsors</h2><ul><li><a href="https://github.com/adeschamps">Anthony Deschamps</a></li><li>Anthony Scotti</li><li>Aleksey Pirogov</li><li>Andreas Fischer</li><li>Andrew Thompson</li><li><a href="https://github.com/behnam">Behnam Esfahbod</a></li><li>Benjamin Wasty</li><li>Brent Vatne</li><li><a href="https://charlieegan3.com">Charlie Egan</a></li><li>Chris Jones</li><li><a href="http://red-oxide.org/">Chris Palmer</a></li><li><a href="http://blog.cgiffard.com">Christopher Giffard</a></li><li>Dan Abrams</li><li><a href="https://twitter.com/daniel_collin">Daniel Collin</a></li><li>[David W. Allen]</li><li><a href="https://twitter.com/derekmorr">Derek Morr</a></li><li>Eugene Bulkin</li><li><a href="https://hsivonen.fi/">Henri Sivonen</a></li><li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li><li>James Cooper</li><li>Jonathan Turner</li><li>Jordan Henderson</li><li><a href="https://de.linkedin.com/in/juppm">Jupp Müller</a></li><li>Justin Ossevoort</li><li><a href="https://github.com/kaedroho/">Karl Hobley</a></li><li>Keith Gray</li><li>Kilian Rault</li><li>Luca Schmid</li><li>Matt Rudder</li><li>Matthew Piziak</li><li><a href="https://twitter.com/maxjacobson">Max Jacobson</a></li><li><a href="https://github.com/messense">Messense Lv</a></li><li>Micael Bergeron</li><li>Oliver Uvman - see the <a href="https://www.patreon.com/tomaka/">Tomaka Patreon</a> and <a href="http://arewegameyet.com/">arewegameyet.com</a></li><li>Ovidiu Curcan</li><li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li><li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li><li>Peter Tillemans</li><li>Philipp Keller</li><li>Ralph Giles (&quot;rillian&quot;)</li><li>Randy MacLeod</li><li>Raph Levien</li><li>Raphael</li><li><a href="https://github.com/rtsuk">Rob Tsuk</a></li><li>reddraggone9</li><li><a href="https://www.twitter.com/sebasmagri">Sebastián Ramírez Magrí</a></li><li>Steven Murawski</li><li><a href="http://stuarth.github.io/">Stuart Hinson</a></li><li>Tim Brooks</li><li>Tom Prince</li><li>Ty Overby</li><li>Tyler Harper</li><li>Vesa Kaihlavirta</li><li>Warren Harper</li><li><a href="http://willroe.me">William Roe</a></li><li>Zaki</li></ul><p>(Thanks to the couple people donating who opted out of the reward tier, as well. You know who you are!)</p><h3 id="become-a-sponsor">Become a sponsor</h3><ul><li><a href="https://www.patreon.com/newrustacean" rel="payment">Patreon</a></li><li><a href="https://venmo.com/chriskrycho">Venmo</a></li><li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li><li><a href="https://cash.me/$chriskrycho">Cash.me</a></li><li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li><li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li></ul><h2 id="contact">Contact</h2><ul><li>New Rustacean:<ul><li>Twitter: <a href="https://www.twitter.com/newrustacean">@newrustacean</a></li><li>Email: <a href="mailto:hello@newrustacean.com">hello@newrustacean.com</a></li></ul></li><li>Chris Krycho<ul><li>GitHub: <a href="https://github.com/chriskrycho">chriskrycho</a></li><li>Twitter: <a href="https://www.twitter.com/chriskrycho">@chriskrycho</a></li></ul></li></ul>]]></description>
             <pubDate>Mon, 14 Aug 2017 07:00:00 -0600</pubDate>
             <enclosure url="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/9.mp3" length="10284163" type="audio/mpeg"/>
@@ -5782,7 +5995,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>e021: Keeping your types under cover</title>
-            <link>http://newrustacean.com/show_notes/e021/</link>
+            <link>https://newrustacean.com/show_notes/e021/</link>
             <description><![CDATA[<p>Using type aliases and creating custom type wrappers for more expressive and safer code.</p>
 <h2 id="links-and-notes">Links and Notes</h2>
 <ul>
@@ -5880,7 +6093,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>News 3: Increasing Rust's Reach</title>
-            <link>http://newrustacean.com/show_notes/news/_3/</link>
+            <link>https://newrustacean.com/show_notes/news/_3/</link>
             <description><![CDATA[<p>Growing Rust's diversity to help Rust grow.</p>
 <h2 id="links-and-notes">Links and Notes</h2>
 <ul>
@@ -5977,7 +6190,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>CYSK: Rocket</title>
-            <link>http://newrustacean.com/show_notes/cysk/rocket/</link>
+            <link>https://newrustacean.com/show_notes/cysk/rocket/</link>
             <description><![CDATA[<p>An accessible, well-designed web framework in Rust!</p>
 <h2 id="links-and-notes">Links and Notes</h2>
 <ul>
@@ -6095,7 +6308,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Interview 4 – Jonathan Turner: Part 3</title>
-            <link>http://newrustacean.com/show_notes/interview/_4/part_3/</link>
+            <link>https://newrustacean.com/show_notes/interview/_4/part_3/</link>
             <description><![CDATA[<h1 id="smoothing-the-rust-dev-story">Smoothing the Rust dev story</h1>
 <p>Future work on the RLS, in Rust itself, and in Servo.</p>
 <h2 id="show-notes">Show Notes</h2>
@@ -6227,7 +6440,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Interview 4 – Jonathan Turner: Part 2</title>
-            <link>http://newrustacean.com/show_notes/interview/_4/part_2/</link>
+            <link>https://newrustacean.com/show_notes/interview/_4/part_2/</link>
             <description><![CDATA[<h1 id="making-rust-better">Making Rust Better</h1>
 <p>Rust as the fusion of systems and high-level programming languages, and the RLS.</p>
 <h2 id="show-notes">Show Notes</h2>
@@ -6346,7 +6559,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Interview 4 – Jonathan Turner: Part 1</title>
-            <link>http://newrustacean.com/show_notes/interview/_4/part_1/</link>
+            <link>https://newrustacean.com/show_notes/interview/_4/part_1/</link>
             <description><![CDATA[<h1>Getting to Rust</h1>
 <p>Background, TypeScript, coming to Rust, and how helpful the Rust community can be.</p>
 <h2 id="show-notes">Show Notes</h2>
@@ -6461,7 +6674,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>CYSK: RLS</title>
-            <link>http://newrustacean.com/show_notes/cysk/_3/</link>
+            <link>https://newrustacean.com/show_notes/cysk/_3/</link>
             <description><![CDATA[<p>Where the RLS came from, what it can do, and how you can start using it today!</p>
 <h2 id="notes">Notes</h2>
 <p>One major ergonomic improvement to developing in Rust in 2017 is coming via the <em>Rust Language Service</em>: an initiative that lets us share a common core of functionality between every editor – from Vim to VS Code and everything in between. In today's episode, I give some background on it and talk about how you can start using it today!</p>
@@ -6563,7 +6776,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>e020: Putting code in its place</title>
-            <link>http://newrustacean.com/show_notes/e020/</link>
+            <link>https://newrustacean.com/show_notes/e020/</link>
             <description><![CDATA[<p>How do we organize code in Rust? Where do we break it apart into modules or crates, and why?</p>
 <h2 id="notes">Notes</h2>
 <p>Structuring code in a language like Rust can seem a bit more ambiguous than doing the same in a language with classes to attach all our functionality to, but in practice, the concerns are much the same: modules are namespaces, and we group by <em>responsibility</em>. In today's episode, I talk through that philosophy (and give some comparisons to other languages), and then look at what it looks like in practice!</p>
@@ -6650,7 +6863,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Bonus 8: Giving back (by teaching)</title>
-            <link>http://newrustacean.com/show_notes/bonus/_8/</link>
+            <link>https://newrustacean.com/show_notes/bonus/_8/</link>
             <description><![CDATA[<p>On the responsibilities and opportunities we have to help others with our knowledge and abilities.</p>
 <h2 id="notes">Notes</h2>
 <p>Many of us have been very blessed with opportunities and support as we learn software. We should go out of our way to share with others in kind. Today, my focus is on teaching, but there are lots of ways to &quot;give back.&quot; And I'd love to hear <em>your</em> thoughts and things <em>you're</em> doing in that vein!</p>
@@ -6737,7 +6950,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>e019: Let's `Clone` a `Cow`</title>
-            <link>http://newrustacean.com/show_notes/e019/</link>
+            <link>https://newrustacean.com/show_notes/e019/</link>
             <description><![CDATA[<!DOCTYPE html>
 <html>
 <head>
@@ -6870,7 +7083,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>CYSK: clap</title>
-            <link>http://newrustacean.com/show_notes/cysk/_2/</link>
+            <link>https://newrustacean.com/show_notes/cysk/_2/</link>
             <description><![CDATA[<p>A Command-Line Argument Parser.</p>
 <h2 id="links">Links</h2>
 <ul>
@@ -6966,7 +7179,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>e018: `Borrow`, `AsRef`, `Deref`: my head hurts now</title>
-            <link>http://newrustacean.com/show_notes/e018/</link>
+            <link>https://newrustacean.com/show_notes/e018/</link>
             <description><![CDATA[Three traits which are essential for designing good, Rustic APIs.
 <br />
 <h2 id="notes">Notes</h2>
@@ -7065,7 +7278,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>CYSK: quick-xml</title>
-            <link>http://newrustacean.com/show_notes/cysk/_1/</link>
+            <link>https://newrustacean.com/show_notes/cysk/_1/</link>
             <description><![CDATA[A pull-parser for reading and writing XML.
 <br />
 <h2 id="links">Links</h2>
@@ -7148,7 +7361,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>News 2: Let's talk roadmap!</title>
-            <link>http://newrustacean.com/show_notes/news/_2/</link>
+            <link>https://newrustacean.com/show_notes/news/_2/</link>
             <description><![CDATA[<p>Rust’s achievements in 2016 and goals for 2017</p>
 <h2 id="links">Links</h2>
 <ul>
@@ -7268,7 +7481,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Meta 1 – Slowing Down</title>
-            <link>http://newrustacean.com/show_notes/meta/_1/</link>
+            <link>https://newrustacean.com/show_notes/meta/_1/</link>
             <description><![CDATA[<p>Avoiding burnout by taking it a little easier.</p>
 <p>Sometimes, the way a podcast stays in existence is by coming out less often. That’s what’s happening here.</p>
 <h1 id="links">Links</h1>
@@ -7312,7 +7525,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Interview 3 – Carol (Nichols || Goulding)</title>
-            <link>http://newrustacean.com/show_notes/interview/_3/</link>
+            <link>https://newrustacean.com/show_notes/interview/_3/</link>
             <description><![CDATA[Carol (Nichols || Goulding) on learning Rust, teaching Rust, and building community
 <br />
 <h2 id="notes">Notes</h2>Chris talks with Carol (Nichols || Goulding), a Rust community team member, co-author of the first major revision of <em>The Rust Programming Language</em>, and co-founder of the first Rust consultancy.
@@ -7427,7 +7640,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Bonus 7: Katas—or: learning by doing</title>
-            <link>http://newrustacean.com/show_notes/bonus/_7/</link>
+            <link>https://newrustacean.com/show_notes/bonus/_7/</link>
             <description><![CDATA[<p>Katas—or: learning by doing</p>
 <h2 id="notes">Notes</h2>
 <p>One of the best ways to learn is to pick a small problem you have already internalized, and to do it again but in a new language or in a new way in a language you already know.</p>
@@ -7535,7 +7748,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Bonus 6: It doesn‘t have to be sexy</title>
-            <link>http://newrustacean.com/show_notes/bonus/_6/</link>
+            <link>https://newrustacean.com/show_notes/bonus/_6/</link>
             <description><![CDATA[<p>Building (and celebrating) all the little, not-so-glorious pieces of the Rust ecosystem.</p>
 <h2 id="notes">Notes</h2>
 <p>We love the Rust compiler team. But there’s more to the Rust community, and more required for Rust to be as great as it can be, than just the language itself. We need to celebrate other libraries, and even the small ones, just as much (and maybe more) than changes to the language. We need to dig in and work on building the <em>whole</em> ecosystem. (The good news is, we are!)</p>
@@ -7617,7 +7830,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>e017: Point me where I need to go</title>
-            <link>http://newrustacean.com/show_notes/e017/</link>
+            <link>https://newrustacean.com/show_notes/e017/</link>
             <description><![CDATA[<p>A deep dive on references and pointers in Rust.</p>
 <h2 id="notes">Notes</h2>
 <p>By listener request, today we look at the syntax and semantics of referencing and dereferencing and the corresponding <code>&amp;</code> and <code>*</code> operators.</p>
@@ -7717,7 +7930,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>e016: RefCells and code smells</title>
-            <link>http://newrustacean.com/show_notes/e016/</link>
+            <link>https://newrustacean.com/show_notes/e016/</link>
             <description><![CDATA[<p>Digging deeper on smart pointers and mutability with <code>Cell</code> and <code>RefCell</code>.
 <h2 id="notes">Notes</h2>
 <p>What are the <code>Cell</code> and <code>RefCell</code> types, and when should we use them?</p>
@@ -7815,7 +8028,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Interview 2::Part 2 – Raph Levien</title>
-            <link>http://newrustacean.com/show_notes/interview/_2/part_2/</link>
+            <link>https://newrustacean.com/show_notes/interview/_2/part_2/</link>
             <description><![CDATA[<p>Raph Levien on Rust’s current strengths and places it can improve</p>
 <h2 id="notes">Notes</h2>
 <p>Chris chats with Raph Levien about what inspired him to build a text editor, as well as about where the rough edges in the Rust development story are today, and how we might improve them going forward.</p>
@@ -7895,7 +8108,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Interview 2::Part 1 – Raph Levien</title>
-            <link>http://newrustacean.com/show_notes/interview/_2/part_1/</link>
+            <link>https://newrustacean.com/show_notes/interview/_2/part_1/</link>
             <description><![CDATA[<p>Raph Levien on using Rust to build the Xi editor</p>
 <h2 id="notes">Notes</h2>
 <p>Chris chats with Raph Levien about his background in software development, what attracted him to Rust, and how he’s using Rust to build the Xi Editor, a project which aims to be the fastest text editor out there, with native user interfaces and a Rust text engine.</p>
@@ -8000,7 +8213,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>e015: Not dumb pointers</title>
-            <link>http://newrustacean.com/show_notes/e015/</link>
+            <link>https://newrustacean.com/show_notes/e015/</link>
             <description><![CDATA[<p><code>Box</code>, <code>String</code>, <code>Vec</code>, <code>Rc</code>, and <code>Arc</code> have this in common: they’re not dumb.</p>
 <p>This episode, we take a close look at smart pointer types—from a few we’ve already talked about, like <code>Box</code>, <code>Vec</code>, and <code>String</code>, to some new ones, like <code>Rc</code> and <code>Arc</code>.</p>
 <ul>
@@ -8080,7 +8293,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>News 1: One year and counting</title>
-            <link>http://newrustacean.com/show_notes/news/_1/</link>
+            <link>https://newrustacean.com/show_notes/news/_1/</link>
             <description><![CDATA[<p>A year in, Rust is changing fast but still stable.</p>
 <h2 id="links">Links</h2>
 <ul>
@@ -8168,7 +8381,7 @@ g = &amp;mut (g + 10);</code></pre>
         </item>
         <item>
             <title>Bonus 5: Better than open-source contributions</title>
-            <link>http://newrustacean.com/show_notes/bonus/_5/</link>
+            <link>https://newrustacean.com/show_notes/bonus/_5/</link>
             <description><![CDATA[<p>Some things matter more than contributing to open-source software in your free time. A <em>lot</em> more.</p>
 
 It’s trendy to ask for open-source work as evidence of your interest in tech and commitment to software development. Trendy and <em>completely wrong</em>. Companies should not demand open-source contributions from their employees, and beyond that, should learn to recognize that <em>profit</em> is not the most valuable thing in the world. People are.
@@ -8240,7 +8453,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>e014: Stringing things along</title>
-            <link>http://newrustacean.com/show_notes/e014/</link>
+            <link>https://newrustacean.com/show_notes/e014/</link>
             <description><![CDATA[<p><code>Strings</code> <code>&amp;str</code>s and <code>Vec</code>s and slices (and Unicode) – oh, my!</p>
 <h2 id="notes">Notes</h2>
 <p>This episode, I take a deep dive on strings in Rust, looking at the differences between <code>String</code> and <code>&amp;str</code>, discussing Unicode a bit, and then expanding the discussion to think about how these types relate to the types they’re built on (like <code>Vec</code>).</p>
@@ -8317,7 +8530,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>Bonus 4: We can have nice things</title>
-            <link>http://newrustacean.com/show_notes/bonus/_4/</link>
+            <link>https://newrustacean.com/show_notes/bonus/_4/</link>
             <description><![CDATA[<p>Just how good Rust is, and how you can learn it even if you’re busy.</p>
 <h2 id="notes">Notes</h2>
 <p>Sometimes life goes crazy and I don’t have time to do all the technical writing required for a full episode, but I can’t get Rust off my mind, so I record an episode like this one. Where I talk a bit about how versatile Rust is and suggest some surprising ways you might be able to use it.</p>
@@ -8381,7 +8594,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>e013: Staying alive</title>
-            <link>http://newrustacean.com/show_notes/e013/</link>
+            <link>https://newrustacean.com/show_notes/e013/</link>
             <description><![CDATA[<p>Reasoning about and using lifetimes in Rust (and why we need them)</p>
 
 <h2>Notes</h2>
@@ -8463,7 +8676,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>e012: I'm not familiar with that expression</title>
-            <link>http://newrustacean.com/show_notes/e012/</link>
+            <link>https://newrustacean.com/show_notes/e012/</link>
             <description><![CDATA[<p>What it means to be an expression-oriented language, and how that works out in Rust.</p>
 <h2 id="notes">Notes</h2>
 <p>Rust is an <em>expression-oriented</em> language. What does that mean, and how does it play out in Rust? We look at <code>if</code> and <code>match</code> blocks, discuss looping constructs, and examine functions, and then widen out to discuss how having an expression-oriented language can change the way we think about programming.</p>
@@ -8529,7 +8742,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>e011: Once Upon a Type</title>
-            <link>http://newrustacean.com/show_notes/e011/</link>
+            <link>https://newrustacean.com/show_notes/e011/</link>
             <description><![CDATA[<p>Type systems: strong vs. weak, dynamic vs. static, and degrees of expressivity.</p>
 <h2 id="notes">Notes</h2>
 <p>Talking about type systems! A broad and wide-ranging discussion about type systems in general, with specific examples from languages like PHP, JavaScript, Python, C, C++, Java, C♯, Haskell, and Rust!</p>
@@ -8599,7 +8812,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>Interview 1::Part 2 – Sean Griffin</title>
-            <link>http://newrustacean.com/show_notes/interview/_1/part_2/</link>
+            <link>https://newrustacean.com/show_notes/interview/_1/part_2/</link>
             <description><![CDATA[<p>Sean Griffin on type systems and hopes for Rust's future</p>
 <h2>Notes</h2>
 <p>Chris chats with Sean Griffin about the tradeoffs between mental overhead and type safety, the expressiveness of different type systems, and some of the places where Rust currently falls down.</p>
@@ -8673,7 +8886,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>Interview 1::Part 1 – Sean Griffin</title>
-            <link>http://newrustacean.com/show_notes/interview/_1/part_1/</link>
+            <link>https://newrustacean.com/show_notes/interview/_1/part_1/</link>
             <description><![CDATA[<p>Sean Griffin on Rust, ORMs, and Web Frameworks</p>
 
 <h2>Notes</h2>
@@ -8754,7 +8967,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>Bonus 3: Building as a community</title>
-            <link>http://newrustacean.com/show_notes/bonus/_3/</link>
+            <link>https://newrustacean.com/show_notes/bonus/_3/</link>
             <description><![CDATA[<p>Community is one of the most important parts of a programming language community, or indeed <em>any</em> technical community. In this episode, I talk a bit about what happens when you don't have a good community, how Rust's community has done well so far, and then how to keep building a good community and how to build good things <em>as</em> a community.</p>
 <h2 id="sponsors">Sponsors</h2>
 <ul>
@@ -8801,7 +9014,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>e010: Macros rule!</title>
-            <link>http://newrustacean.com/show_notes/e010/</link>
+            <link>https://newrustacean.com/show_notes/e010/</link>
             <description><![CDATA[<p>Macros rule!</p>
 
 <h2 id="notes">Notes</h2>Because of the way macros are exported—before name resolution on crates occurs—the documentation for the macros defined in the source for this episode occurs in the <a href="https://www.newrustacean.com/show_notes/#macros"><strong>Macros</strong> section of the <code>show_notes</code> crate</a> documentation, rather than within the documentation for this module. (See the Rust Book discussion of <a href="http://doc.rust-lang.org/stable/book/documentation.html#documenting-macros">documenting macros</a> for details.) Even so, the <a href="https://www.newrustacean.com/src/show_notes/e009.rs.html">source</a> is still in this module; see the <a href="https://www.newrustacean.com/src/show_notes/e010.rs.html#101">implementations</a> for details.
@@ -8880,7 +9093,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>e009: Composing a Rustic tune</title>
-            <link>http://newrustacean.com/show_notes/e009/</link>
+            <link>https://newrustacean.com/show_notes/e009/</link>
             <description><![CDATA[<h2 id="notes">Notes</h2>
 <p>Last time, we looked at generics and traits at a high level. This time, we dig deeper on traits, looking specifically at <code>std::iter::Iterator</code> as an example of a powerful trait that can be composed across types, and then at how we might compose multiple traits on a single type.</p>
 <p>We also talk about the syntax for traits, the use of marker traits, some of the things you <em>can’t</em> presently do with traits, and even just a smidge about the <em>future</em> of traits in Rust. All that in less than 20 minutes!</p>
@@ -8958,7 +9171,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>e008: Just like something else</title>
-            <link>http://newrustacean.com/show_notes/e008/</link>
+            <link>https://newrustacean.com/show_notes/e008/</link>
             <description><![CDATA[<h2 id="notes">Notes</h2>
 <p>In this episode we cover—at a <em>very</em> high level—two more fundamental concepts in Rust programming: generics and traits.</p>
 <p>Generics gives us the abilitty to write types and functions which can be used with more than one type. Traits give us the ability to specify behavior which can be implemented for more than one type. The combination gives us powerful tools for higher-level programming constructs in Rust.</p>
@@ -9023,7 +9236,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>e007: Testify</title>
-            <link>http://newrustacean.com/show_notes/e007/</link>
+            <link>https://newrustacean.com/show_notes/e007/</link>
             <description><![CDATA[<h2 id="notes">Notes</h2>
 <p>All about testing in Rust! In order, we take a look at:</p>
 <ul>
@@ -9093,7 +9306,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>Bonus 2: Legacy Code</title>
-            <link>http://newrustacean.com/show_notes/bonus/_2/</link>
+            <link>https://newrustacean.com/show_notes/bonus/_2/</link>
             <description><![CDATA[<p>Legacy Code</p>
 <p>Software developers spend a large part of our careers dealing with legacy code. But what is the <em>best</em> way to deal with legacy code? When should you rip out the old and rewrite it, and when should you opt for smaller clean-up jobs because, however ugly, what is already present <em>works</em>?</p>
 <h1 id="sponsors">Sponsors</h1>
@@ -9138,7 +9351,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>Bonus 1: Polyglot Programming Promises and Perils</title>
-            <link>http://newrustacean.com/show_notes/bonus/_1/</link>
+            <link>https://newrustacean.com/show_notes/bonus/_1/</link>
             <description><![CDATA[<p>Polyglot Programming Promises and Perils</p>
 <p>Sometimes, you’re doing a technical interview, and you just cannot figure out why your JavaScript function isn’t behaving like it should… and then, prompted by the interviewer, you realize that you’re not returning anything. Polyglot programming is beautiful, and wonderful, and sometimes it bites you when you aren’t looking.</p>
 <h1 id="links">Links</h1>
@@ -9184,7 +9397,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>e006: Modularize this!</title>
-            <link>http://newrustacean.com/show_notes/e006/</link>
+            <link>https://newrustacean.com/show_notes/e006/</link>
             <description><![CDATA[<h1 id="notes">Notes</h1>
 <p>Today, we are talking about modules, packages, and APIs in Rust. Taking a bit of a breather after some pretty hard material the last few weeks.</p>
 <p>For reference, the <a href="http://doc.rust-lang.org/book/">Rust book</a> section on <a href="http://doc.rust-lang.org/book/crates-and-modules.html">Crates and Modules</a> will be very helpful.</p>
@@ -9237,7 +9450,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>e005: Allocate it where?</title>
-            <link>http://newrustacean.com/show_notes/e005/</link>
+            <link>https://newrustacean.com/show_notes/e005/</link>
             <description><![CDATA[<p>Allocate it where?</p>
 <p><strong>Subject:</strong> Returning functions from other functions, and thinking about the stack, the heap, and reference types.</p>
 <li><a href="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e005.mp3">MP3</a></li>
@@ -9291,7 +9504,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>e004: Functionalized</title>
-            <link>http://newrustacean.com/show_notes/e004/</link>
+            <link>https://newrustacean.com/show_notes/e004/</link>
             <description><![CDATA[<li><strong>Date:</strong> October 29, 2015</li>
 <p><strong>Subject:</strong> Functions, methods, closures, and function as arguments!</p>
 <h1 id="notes">Notes</h1>
@@ -9338,7 +9551,7 @@ It’s trendy to ask for open-source work as evidence of your interest in tech a
         </item>
         <item>
             <title>e003: No. more. nulls.</title>
-            <link>http://newrustacean.com/show_notes/e003/</link>
+            <link>https://newrustacean.com/show_notes/e003/</link>
             <description><![CDATA[<p>No More Nulls</p>
 <p><strong>Subject:</strong> Enumerated (<code>enum</code>) types, pattern matching, and meaningful return types.</p>
 <h1 id="notes">Notes</h1>
@@ -9401,7 +9614,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
         </item>
         <item>
             <title>e002: Something borrowed, something… moved?</title>
-            <link>http://newrustacean.com/show_notes/e002/</link>
+            <link>https://newrustacean.com/show_notes/e002/</link>
             <description><![CDATA[<p>Something borrowed, something… moved?</p>
 <p><strong>Subject:</strong> The <code>struct</code> data type constructor, and the basics of Rust’s “ownership” concept and “borrowing” and “moving”.</p>
 <h1 id="followsupport">Follow/Support</h1>
@@ -9449,7 +9662,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
         </item>
         <item>
             <title>e001: Document All the Things</title>
-            <link>http://newrustacean.com/show_notes/e001/</link>
+            <link>https://newrustacean.com/show_notes/e001/</link>
             <description><![CDATA[<h1 id="document-all-the-things">Document all the things!</h1>
 <p><strong>Subject:</strong> Documentation in general, and <code>rustdoc</code> and <code>cargo doc</code> in particular.</p>
 <h1 id="followsupport">Follow/Support</h1>
@@ -9511,7 +9724,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
         </item>
         <item>
             <title>e000: Hello, world!</title>
-            <link>http://newrustacean.com/show_notes/e000/</link>
+            <link>https://newrustacean.com/show_notes/e000/</link>
             <description><![CDATA[<h1 id="hello-world">Hello, World!</h1>
 <p>Subject: The host, the language, and the show!</p>
 <p>Today’s show is pretty meta. You can skip it if you just want to start with something more technical, but I thought listeners might want to know a little about the origins of the show and my own background, so that’s what you get today. Next time, we’ll be tackling the <code>rustdoc</code> command in some detail.</p>

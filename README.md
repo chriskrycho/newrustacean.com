@@ -11,7 +11,7 @@ site source publicly available so that others can follow along and learn from
 my successes, failures, and various misadventures along the way. Feel free to
 submit pull requests if you find typos or the like!
 
-[New Rustacean]: http://newrustacean.com
+[New Rustacean]: https://newrustacean.com
 
 I hope to evolve the structure here based on what will hopefully *become* the
 structure for sites generated with `cargo doc` in the future, with

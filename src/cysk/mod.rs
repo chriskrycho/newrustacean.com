@@ -7,3 +7,4 @@ pub mod rayon;
 pub mod rocket;
 pub mod serde;
 pub mod wasm;
+pub mod bindgen_cbindgen;
