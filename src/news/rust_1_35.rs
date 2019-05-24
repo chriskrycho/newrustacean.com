@@ -1,7 +1,7 @@
 //! Rust 1.35
 //!
 //! - **Date:** May 23, 2019
-//! - **Subject:** Automatic generation of FFI types between Rust and C APIs.
+//! - **Subject:** WASI, `Option::copied`, and the future of async/await syntax!
 //! - [**download mp3**][mp3]
 //! - [**script**][script]
 //!
