@@ -23,7 +23,7 @@
 //!
 //! [WebAssembly]: https://webassembly.org
 //! [asm.js]: http://asmjs.org
-//! [wasm-bindgen]: https://github.com/alexcrichton/wasm-bindgen
+//! [wasm-bindgen]: https://github.com/rustwasm/wasm-bindgen
 //! [wasm-pack]: https://github.com/ashleygwilliams/wasm-pack
 //! [GitHub org]: https://github.com/rust-lang-nursery/rust-wasm
 //! [Twitter]: https://twitter.com/rustwasm
