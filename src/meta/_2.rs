@@ -5,10 +5,10 @@
 //!     celebrate with stickers and shirts!
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/meta/2.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/meta/2.mp3
 //!
 //! <audio style="width: 100%" title="Crates You Should Know: Rayon" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/meta/2.mp3">
+//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/meta/2.mp3">
 //! </audio>
 //!
 //!
@@ -39,17 +39,17 @@
 //!   </thead>
 //!   <tr style="text-align: center">
 //!     <td>hoodie</td>
-//!     <td colspan="2" ><img style="max-width: 50%" src="http://f001.backblazeb2.com/file/newrustacean/images/hoodie.jpg"></td>
+//!     <td colspan="2" ><img style="max-width: 50%" src="http://cdn.newrustacean.com/file/newrustacean/images/hoodie.jpg"></td>
 //!   </tr>
 //!   <tr>
 //!     <td>"heavy metal" shirt</td>
-//!     <td><img src="http://f001.backblazeb2.com/file/newrustacean/images/heavy-metal-women.jpg"></td>
-//!     <td><img src="http://f001.backblazeb2.com/file/newrustacean/images/heavy-metal-men.jpg"></td>
+//!     <td><img src="http://cdn.newrustacean.com/file/newrustacean/images/heavy-metal-women.jpg"></td>
+//!     <td><img src="http://cdn.newrustacean.com/file/newrustacean/images/heavy-metal-men.jpg"></td>
 //!   </tr>
 //!   <tr>
 //!     <td>"heather white" t-shirt</td>
-//!     <td><img src="http://f001.backblazeb2.com/file/newrustacean/images/heather-white-women.jpg"></td>
-//!     <td><img src="http://f001.backblazeb2.com/file/newrustacean/images/heather-white-men.jpg"></td>
+//!     <td><img src="http://cdn.newrustacean.com/file/newrustacean/images/heather-white-women.jpg"></td>
+//!     <td><img src="http://cdn.newrustacean.com/file/newrustacean/images/heather-white-men.jpg"></td>
 //!   </tr>
 //! </table>
 //!
@@ -63,8 +63,8 @@
 //!     </tr>
 //!   </thead>
 //!   <tr>
-//!     <td><img src="http://f001.backblazeb2.com/file/newrustacean/images/sticker-die-cut.png"></td>
-//!     <td><img src="http://f001.backblazeb2.com/file/newrustacean/images/sticker-circular.png"></td>
+//!     <td><img src="http://cdn.newrustacean.com/file/newrustacean/images/sticker-die-cut.png"></td>
+//!     <td><img src="http://cdn.newrustacean.com/file/newrustacean/images/sticker-circular.png"></td>
 //!   </tr>
 //! </table>
 //!

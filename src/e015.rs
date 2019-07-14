@@ -5,10 +5,10 @@
 //!     common: they're not dumb.
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e015.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e015.mp3
 //!
 //! <audio style="width: 100%" title="e014: Stringing things along" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e015.mp3">
+//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e015.mp3">
 //! </audio>
 //!
 //!

@@ -4,10 +4,10 @@
 //!   - **Subject:** Avoiding burnout by taking it a little easier.
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/meta/1.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/meta/1.mp3
 //!
 //! <audio style="width: 100%" title="Slowing down" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/meta/1.mp3">
+//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/meta/1.mp3">
 //! </audio>
 //!
 //! Sometimes, the way a podcast stays in existence is by coming out less often.

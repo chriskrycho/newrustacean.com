@@ -4,10 +4,10 @@
 //!   - **Subject:** Learning Rust, teaching Rust, and building community
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/3.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/3.mp3
 //!
 //! <audio style="width: 100%" title="Interview 3 – Carol (Nichols || Goulding)" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/3.mp3">
+//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/3.mp3">
 //! </audio>
 //!
 //!

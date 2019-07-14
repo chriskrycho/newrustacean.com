@@ -4,10 +4,10 @@
 //!   - **Subject:** Defining and using your own traits, using other crates' traits, and the orphan rule.
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e023.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e023.mp3
 //!
 //! <audio style="width: 100%" title="" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e023.mp3">
+//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e023.mp3">
 //! </audio>
 //!
 //!

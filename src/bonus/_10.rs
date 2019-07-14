@@ -4,14 +4,14 @@
 //!   - **Subject:** My Rust Belt Rust 2017 talk!
 //!   - [**Audio:**][mp3]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/10.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/10.mp3
 //!
 //! <audio
 //!     style="width: 100%"
 //!     title="Crates You Should Know: Serde"
 //!     controls
 //!     preload=metadata
-//!     src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/10.mp3"
+//!     src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/10.mp3"
 //! >
 //!
 //!

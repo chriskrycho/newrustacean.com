@@ -4,9 +4,9 @@
 //!   - **Subject:** Just how good Rust is, and how you can learn it even if you're busy
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/4.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/4.mp3
 //!
-//! <audio style="width: 100%" title="Building as a community" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/4.mp3" />
+//! <audio style="width: 100%" title="Building as a community" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/4.mp3" />
 //!
 //!
 //! Notes

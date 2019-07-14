@@ -5,10 +5,10 @@
 //! - [**download mp3**][mp3]
 //! - [**script**][script]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_35.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_35.mp3
 //! [script]: https://newrustacean.com/show_notes/news/rust_1_35/struct.script
 //!
-//! <audio style="width: 100%" title="News: Rust 1.35" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_35.mp3">
+//! <audio style="width: 100%" title="News: Rust 1.35" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_35.mp3">
 //!
 //! Show Notes
 //! ----------

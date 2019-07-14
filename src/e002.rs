@@ -5,9 +5,9 @@
 //!     Rust's "ownership" concept and "borrowing" and "moving".
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e002.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e002.mp3
 //!
-//! <audio style="width: 100%" title="Something borrowed, something... moved?" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e002.mp3" />
+//! <audio style="width: 100%" title="Something borrowed, something... moved?" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e002.mp3" />
 //!
 //! # Notes
 //!

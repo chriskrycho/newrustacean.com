@@ -4,9 +4,9 @@
 //!   - **Subject:** Rustdoc changes, the first `impl` period, Firefox Quantum, and more wasm!
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_23.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_23.mp3
 //!
-//! <audio style="width: 100%" title="News: Rust 1.20" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/news/rust_1_23.mp3" />
+//! <audio style="width: 100%" title="News: Rust 1.20" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_23.mp3" />
 //!
 //!
 //! ## Show notes

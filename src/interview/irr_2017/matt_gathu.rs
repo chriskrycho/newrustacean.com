@@ -4,10 +4,10 @@
 //!   - **Subject:** Matt's experience porting wget to Rust.
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr/matt_gathu.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/irr/matt_gathu.mp3
 //!
 //! <audio style="width: 100%" title="Jonathan Turner::Part 3" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/irr/matt_gathu.mp3">
+//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/irr/matt_gathu.mp3">
 //! </audio>
 //!
 //!

@@ -5,10 +5,10 @@
 //! - [**download mp3**][mp3]
 //! - [**script**][script]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e030.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e030.mp3
 //! [script]: https://newrustacean.com/show_notes/e030/struct.script
 //!
-//! <audio style="width: 100%" title="e030: Can You See Me Now?" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/e030.mp3">
+//! <audio style="width: 100%" title="e030: Can You See Me Now?" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e030.mp3">
 //!
 //! Show Notes
 //! ----------

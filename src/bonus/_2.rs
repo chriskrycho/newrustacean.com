@@ -4,9 +4,9 @@
 //!   - **Subject:** Paying off technical debt, refactoring, and cleaning up old code.
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/2.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/2.mp3
 //!
-//! <audio style="width: 100%" title="Legacy code" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/bonus/2.mp3" />
+//! <audio style="width: 100%" title="Legacy code" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/2.mp3" />
 //!
 //! Software developers spend a large part of our careers dealing with legacy
 //! code. But what is the *best* way to deal with legacy code? When should you

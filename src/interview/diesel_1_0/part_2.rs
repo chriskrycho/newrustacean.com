@@ -6,10 +6,10 @@
 //!     design for open source libraries in general.
 //!   - [**Audio**][mp3]
 //!
-//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/diesel_1_0/part_2.mp3
+//! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/diesel_1_0/part_2.mp3
 //!
 //! <audio style="width: 100%" title="Interview: Diesel 1.0, with Sean Griffin, Part 2" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/f001.backblazeb2.com/file/newrustacean/interview/diesel_1_0/part_2.mp3">
+//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/diesel_1_0/part_2.mp3">
 //! </audio>
 //!
 //!
