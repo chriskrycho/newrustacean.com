@@ -2,8 +2,8 @@
 
 [![Build Status][status-img]][status]
 
-[status]: https://travis-ci.org/chriskrycho/newrustacean.com
-[status-img]: https://travis-ci.org/chriskrycho/newrustacean.com.svg
+[status]: https://travis-ci.com/chriskrycho/newrustacean.com
+[status-img]: https://travis-ci.com/chriskrycho/newrustacean.com.svg
 
 This is a *slightly crazy* approach to building a podcast hosting setup using
 Rust's documentation tools, for the [New Rustacean] podcast. I'm making the
