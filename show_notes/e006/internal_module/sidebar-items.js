@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["a_private_module_fn","Another module function, demonstrating module-private function status."],["a_public_module_fn","A module function, demonstrating module-public function status."]]});
+window.SIDEBAR_ITEMS = {"fn":["a_private_module_fn","a_public_module_fn"]};

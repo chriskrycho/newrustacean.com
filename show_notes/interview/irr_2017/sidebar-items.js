@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["anna_liao","Anna Liao"],["lee_baillie","Lee Baillie"],["matt_gathu","Matt Gathu"]]});
+window.SIDEBAR_ITEMS = {"mod":["anna_liao","lee_baillie","matt_gathu"]};

@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["DerefTarget","A no-content struct to serve as the target to dereference to."],["Origin","A no-content struct to serve as the type to dereference from."]]});
+window.SIDEBAR_ITEMS = {"struct":["DerefTarget","Origin"]};

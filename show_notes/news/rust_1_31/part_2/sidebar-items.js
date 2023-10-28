@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["Script","News: Rust 1.31 – The 2018 Edition, Part II"]]});
+window.SIDEBAR_ITEMS = {"struct":["Script"]};

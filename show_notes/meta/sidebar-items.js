@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["_1","Slowing Down"],["_2","Two Milestones"],["_3","Happy Coding!"]]});
+window.SIDEBAR_ITEMS = {"mod":["_1","_2","_3"]};

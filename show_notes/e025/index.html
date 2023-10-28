@@ -1,48 +1,45 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `e025` mod in crate `show_notes`."><meta name="keywords" content="rust, rustlang, rust-lang, e025"><title>show_notes::e025 - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="shortcut icon" href="https://newrustacean.com/favicon.ico"><style type="text/css">#crate-search{background-image:url("../../down-arrow.svg");}</style></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../show_notes/index.html'><div class='logo-container'><img src='https://newrustacean.com/podcast.png' alt='logo'></div></a><p class='location'>Module e025</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#functions">Functions</a></li><li><a href="#types">Type Definitions</a></li></ul></div><p class='location'><a href='../index.html'>show_notes</a></p><script>window.sidebarCurrent = {name: 'e025', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/show_notes/e025.rs.html#1-263' title='goto source code'>[src]</a></span><span class='in-band'>Module <a href='../index.html'>show_notes</a>::<wbr><a class="mod" href=''>e025</a></span></h1><div class='docblock'><p>Traits Deep Dive, Part 3</p>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Traits Deep Dive, Part 3"><title>show_notes::e025 - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../sidebar-items.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc mod"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt=""></a></nav><nav class="sidebar"><div class="sidebar-crate"><a class="logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="logo"></a><h2><a href="../../show_notes/index.html">show_notes</a><span class="version">0.3.1</span></h2></div><h2 class="location"><a href="#">Module e025</a></h2><div class="sidebar-elems"><section><ul class="block"><li><a href="#structs">Structs</a></li><li><a href="#functions">Functions</a></li><li><a href="#types">Type Aliases</a></li></ul></section><h2><a href="../index.html">In crate show_notes</a></h2></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1>Module <a href="../index.html">show_notes</a>::<wbr><a class="mod" href="#">e025</a><button id="copy-path" title="Copy item path to clipboard"><img src="../../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="src" href="../../src/show_notes/e025.rs.html#1-261">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Traits Deep Dive, Part 3</p>
 <ul>
 <li><strong>Date:</strong> July 4, 2018</li>
 <li><strong>Subject:</strong> Closure traits, <code>impl trait</code>, <code>dyn trait</code>, and object safety!</li>
 <li><a href="https://newrustacean.com/show_notes/e025/struct.script"><strong>Script</strong></a></li>
 <li><a href="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e025.mp3"><strong>Audio</strong></a></li>
 </ul>
-<p><audio style="width: 100%" title="" controls preload=metadata></p>
-<source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e025.mp3">
-</audio>
-<h2 id="show-notes" class="section-header"><a href="#show-notes">Show Notes</a></h2>
+<p><audio style="width: 100%" title="" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e025.mp3"></audio></p>
+<h3 id="show-notes"><a href="#show-notes">Show Notes</a></h3>
 <p>Sponsored by <a href="https://paritytech.io">Parity Technologies</a>! Parity is hiring Rust developers
-so if you're interested, you should check out their <a href="https://paritytech.io/jobs/">job listings</a>!</p>
-<h3 id="links" class="section-header"><a href="#links">Links</a></h3>
+so if you’re interested, you should check out their <a href="https://paritytech.io/jobs/">job listings</a>!</p>
+<h4 id="links"><a href="#links">Links</a></h4>
 <ul>
 <li><a href="https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md">RFC #1733: Trait Aliases</a></li>
 <li><a href="https://github.com/rust-lang/rfcs/blob/master/text/0255-object-safety.md">RFC #255: Object Safety</a></li>
 <li><a href="https://doc.rust-lang.org/book/second-edition/ch17-02-trait-objects.html">Ch. 17 in the Second Edition of <em>The Rust Programming Language</em></a></li>
-<li><a href="https://huonw.github.io/blog/2015/05/where-self-meets-sized-revisiting-object-safety/" title="Where Self Meets Sized: Revisiting Object Safety">Huon Wilson's post</a></li>
+<li><a href="https://huonw.github.io/blog/2015/05/where-self-meets-sized-revisiting-object-safety/" title="Where Self Meets Sized: Revisiting Object Safety">Huon Wilson’s post</a></li>
 </ul>
-<h3 id="example" class="section-header"><a href="#example">Example</a></h3>
+<h4 id="example"><a href="#example">Example</a></h4>
 <p>You can see all of the pieces of the final example described in the show
 here (and the module has the required definitions for <code>Point</code>).</p>
 
-<div class="example-wrap"><pre class="rust rust-example-rendered">
-<span class="kw">let</span> <span class="ident">points</span> <span class="op">=</span> <span class="macro">vec</span><span class="macro">!</span>[
-    <span class="ident">Point</span> { <span class="ident">x</span>: <span class="number">1.0</span>, <span class="ident">y</span>: <span class="number">2.0</span> },
-    <span class="ident">Point</span> { <span class="ident">x</span>: <span class="number">12.0</span>, <span class="ident">y</span>: <span class="number">4.3</span> },
-    <span class="ident">Point</span> { <span class="ident">x</span>: <span class="op">-</span><span class="number">5.4</span>, <span class="ident">y</span>: <span class="number">18.7</span> },
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">let </span>points = <span class="macro">vec!</span>[
+    Point { x: <span class="number">1.0</span>, y: <span class="number">2.0 </span>},
+    Point { x: <span class="number">12.0</span>, y: <span class="number">4.3 </span>},
+    Point { x: -<span class="number">5.4</span>, y: <span class="number">18.7 </span>},
 ];
 
-<span class="kw">let</span> <span class="ident">origin</span> <span class="op">=</span> <span class="ident">Point</span>::<span class="ident">default</span>();
+<span class="kw">let </span>origin = Point::default();
 
-<span class="comment">// This is the version we start with. It works fine, but it&#39;s not elegant.</span>
-<span class="kw">let</span> <span class="ident">distances_inline</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">f32</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">points</span>
-    .<span class="ident">iter</span>()
-    .<span class="ident">map</span>(<span class="op">|</span><span class="ident">point</span><span class="op">|</span> {
-        <span class="kw">let</span> <span class="ident">change</span> <span class="op">=</span> <span class="ident">point</span> <span class="op">-</span> <span class="kw-2">&amp;</span><span class="ident">origin</span>;
-        (<span class="ident">change</span>.<span class="ident">x</span>.<span class="ident">powi</span>(<span class="number">2</span>) <span class="op">+</span> <span class="ident">change</span>.<span class="ident">y</span>.<span class="ident">powi</span>(<span class="number">2</span>)).<span class="ident">sqrt</span>()
+<span class="comment">// This is the version we start with. It works fine, but it&#39;s not elegant.
+</span><span class="kw">let </span>distances_inline: Vec&lt;f32&gt; = points
+    .iter()
+    .map(|point| {
+        <span class="kw">let </span>change = point - <span class="kw-2">&amp;</span>origin;
+        (change.x.powi(<span class="number">2</span>) + change.y.powi(<span class="number">2</span>)).sqrt()
     })
-    .<span class="ident">collect</span>();
+    .collect();
 
-<span class="comment">// This version is *much* cleaner!</span>
-<span class="kw">let</span> <span class="ident">distances_impl</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">f32</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">points</span>.<span class="ident">iter</span>().<span class="ident">map</span>(<span class="ident">distance_from_impl</span>(<span class="kw-2">&amp;</span><span class="ident">origin</span>)).<span class="ident">collect</span>();</pre></div>
-<h2 id="sponsors" class="section-header"><a href="#sponsors">Sponsors</a></h2>
+<span class="comment">// This version is *much* cleaner!
+</span><span class="kw">let </span>distances_impl: Vec&lt;f32&gt; = points.iter().map(distance_from_impl(<span class="kw-2">&amp;</span>origin)).collect();</code></pre></div>
+<h3 id="sponsors"><a href="#sponsors">Sponsors</a></h3>
 <ul>
 <li>Aaron Turon</li>
 <li>Alexander Kryvomaz</li>
@@ -76,7 +73,7 @@ here (and the module has the required definitions for <code>Point</code>).</p>
 <li>[Hans Fjällemark]</li>
 <li><a href="https://hsivonen.fi/">Henri Sivonen</a></li>
 <li><a href="https://www.ianmjones.com/">Ian Jones</a></li>
-<li><a href="https://github.com/Limeth">Jakub &quot;Limeth&quot; Hlusička</a></li>
+<li><a href="https://github.com/Limeth">Jakub “Limeth” Hlusička</a></li>
 <li>James Cooper</li>
 <li>Jerome Froelich</li>
 <li><a href="http://www.cindur.com/">John Rudnick</a></li>
@@ -106,10 +103,10 @@ here (and the module has the required definitions for <code>Point</code>).</p>
 <li><a href="http://oluseyi.info/">Oluseyi Sonaiya</a></li>
 <li>Ovidiu Curcan</li>
 <li><a href="https://pascalhertleif.de/">Pascal Hertleif</a></li>
-<li><a href="https://twitter.com/patrickod">Patrick O'Doherty</a></li>
+<li><a href="https://twitter.com/patrickod">Patrick O’Doherty</a></li>
 <li>[Paul Naranja]</li>
 <li>Peter Tillemans</li>
-<li>Ralph Giles (&quot;rillian&quot;)</li>
+<li>Ralph Giles (“rillian”)</li>
 <li>Raj Venkalil</li>
 <li><a href="http://www.inosion.com">Ramon Buckland</a></li>
 <li>Randy MacLeod</li>
@@ -139,7 +136,7 @@ here (and the module has the required definitions for <code>Point</code>).</p>
 </ul>
 <p>(Thanks to the couple people donating who opted out of the reward tier, as
 well. You know who you are!)</p>
-<h3 id="become-a-sponsor" class="section-header"><a href="#become-a-sponsor">Become a sponsor</a></h3>
+<h4 id="become-a-sponsor"><a href="#become-a-sponsor">Become a sponsor</a></h4>
 <ul>
 <li><a href="https://www.patreon.com/newrustacean" rel="payment">Patreon</a></li>
 <li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
@@ -148,7 +145,7 @@ well. You know who you are!)</p>
 <li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
 <li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
 </ul>
-<h2 id="contact" class="section-header"><a href="#contact">Contact</a></h2>
+<h3 id="contact"><a href="#contact">Contact</a></h3>
 <ul>
 <li>New Rustacean:
 <ul>
@@ -163,12 +160,8 @@ well. You know who you are!)</p>
 </ul>
 </li>
 </ul>
-</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
-<table><tr class='module-item'><td><a class="struct" href="struct.Point.html" title='show_notes::e025::Point struct'>Point</a></td><td class='docblock-short'></td></tr><tr class='module-item'><td><a class="struct" href="struct.Script.html" title='show_notes::e025::Script struct'>Script</a></td><td class='docblock-short'><p>e025: Traits Deep Dive, Part III</p>
-</td></tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
-<table><tr class='module-item'><td><a class="fn" href="fn.distance_from_alias.html" title='show_notes::e025::distance_from_alias fn'>distance_from_alias</a></td><td class='docblock-short'></td></tr><tr class='module-item'><td><a class="fn" href="fn.distance_from_boxed.html" title='show_notes::e025::distance_from_boxed fn'>distance_from_boxed</a></td><td class='docblock-short'></td></tr><tr class='module-item'><td><a class="fn" href="fn.distance_from_impl.html" title='show_notes::e025::distance_from_impl fn'>distance_from_impl</a></td><td class='docblock-short'></td></tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
-<table><tr class='module-item'><td><a class="type" href="type.DistanceFrom.html" title='show_notes::e025::DistanceFrom type'>DistanceFrom</a></td><td class='docblock-short'></td></tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g., <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g., <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g., <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><link rel="stylesheet" href="/media-playback.css">
+</div></details><h2 id="structs" class="small-section-header"><a href="#structs">Structs</a></h2><ul class="item-table"><li><div class="item-name"><a class="struct" href="struct.Point.html" title="struct show_notes::e025::Point">Point</a></div></li><li><div class="item-name"><a class="struct" href="struct.Script.html" title="struct show_notes::e025::Script">Script</a></div><div class="desc docblock-short">e025: Traits Deep Dive, Part III</div></li></ul><h2 id="functions" class="small-section-header"><a href="#functions">Functions</a></h2><ul class="item-table"><li><div class="item-name"><a class="fn" href="fn.distance_from_alias.html" title="fn show_notes::e025::distance_from_alias">distance_from_alias</a></div></li><li><div class="item-name"><a class="fn" href="fn.distance_from_boxed.html" title="fn show_notes::e025::distance_from_boxed">distance_from_boxed</a></div></li><li><div class="item-name"><a class="fn" href="fn.distance_from_impl.html" title="fn show_notes::e025::distance_from_impl">distance_from_impl</a></div></li></ul><h2 id="types" class="small-section-header"><a href="#types">Type Aliases</a></h2><ul class="item-table"><li><div class="item-name"><a class="type" href="type.DistanceFrom.html" title="type show_notes::e025::DistanceFrom">DistanceFrom</a></div></li></ul></section></div></main><link rel="stylesheet" href="/media-playback.css">
 <script type="text/javascript" src="/media-playback.js" defer></script>
 
 
-<script>window.rootPath = "../../";window.currentCrate = "show_notes";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>
+</body></html>

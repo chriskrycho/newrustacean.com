@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["Script","Transcript – coming at some point!"]]});
+window.SIDEBAR_ITEMS = {"struct":["Script"]};

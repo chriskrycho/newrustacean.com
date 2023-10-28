@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["demonstrate_aliased_calls","Demonstrates how aliased namespaces work."],["demonstrate_globbed_calls","Demonstrates how glob-imported `use`s works."]]});
+window.SIDEBAR_ITEMS = {"fn":["demonstrate_aliased_calls","demonstrate_globbed_calls"]};

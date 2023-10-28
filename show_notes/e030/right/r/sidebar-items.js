@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["demo","This is visible everywhere in the crate that can see `s`. Open the source to see how all the other items it can interact with!"]]});
+window.SIDEBAR_ITEMS = {"fn":["demo"]};

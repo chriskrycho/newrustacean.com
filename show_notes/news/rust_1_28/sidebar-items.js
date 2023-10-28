@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["Script","Rust 1.28"]]});
+window.SIDEBAR_ITEMS = {"struct":["Script"]};

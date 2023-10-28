@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["hello_world","Prints \"Hello, world!\" if you import it somewhere and run it."]]});
+window.SIDEBAR_ITEMS = {"fn":["hello_world"]};

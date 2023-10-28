@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["Script","CYSK: `bindgen` and `cbindgen`"]]});
+window.SIDEBAR_ITEMS = {"struct":["Script"]};

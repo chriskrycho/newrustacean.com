@@ -1,26 +1,24 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `e009` mod in crate `show_notes`."><meta name="keywords" content="rust, rustlang, rust-lang, e009"><title>show_notes::e009 - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="shortcut icon" href="https://newrustacean.com/favicon.ico"><style type="text/css">#crate-search{background-image:url("../../down-arrow.svg");}</style></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../show_notes/index.html'><div class='logo-container'><img src='https://newrustacean.com/podcast.png' alt='logo'></div></a><p class='location'>Module e009</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#traits">Traits</a></li><li><a href="#functions">Functions</a></li></ul></div><p class='location'><a href='../index.html'>show_notes</a></p><script>window.sidebarCurrent = {name: 'e009', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/show_notes/e009.rs.html#1-230' title='goto source code'>[src]</a></span><span class='in-band'>Module <a href='../index.html'>show_notes</a>::<wbr><a class="mod" href=''>e009</a></span></h1><div class='docblock'><p>Composing a Rustic tune</p>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Composing a Rustic tune"><title>show_notes::e009 - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../sidebar-items.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc mod"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt=""></a></nav><nav class="sidebar"><div class="sidebar-crate"><a class="logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="logo"></a><h2><a href="../../show_notes/index.html">show_notes</a><span class="version">0.3.1</span></h2></div><h2 class="location"><a href="#">Module e009</a></h2><div class="sidebar-elems"><section><ul class="block"><li><a href="#structs">Structs</a></li><li><a href="#traits">Traits</a></li><li><a href="#functions">Functions</a></li></ul></section><h2><a href="../index.html">In crate show_notes</a></h2></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1>Module <a href="../index.html">show_notes</a>::<wbr><a class="mod" href="#">e009</a><button id="copy-path" title="Copy item path to clipboard"><img src="../../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="src" href="../../src/show_notes/e009.rs.html#1-228">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Composing a Rustic tune</p>
 <ul>
 <li><strong>Date:</strong> 2016-01-09</li>
-<li><strong>Subject:</strong> Getting into the nitty-gritty with Rust's traits.</li>
+<li><strong>Subject:</strong> Getting into the nitty-gritty with Rust’s traits.</li>
 <li><a href="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e009.mp3"><strong>Audio</strong></a></li>
 </ul>
-<p><audio style="width: 100%" title="Composing a Rustic tune" controls preload=metadata></p>
-<source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e009.mp3">
-</audio>
-<h2 id="notes" class="section-header"><a href="#notes">Notes</a></h2>
+<p><audio style="width: 100%" title="Composing a Rustic tune" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e009.mp3"></audio></p>
+<h3 id="notes"><a href="#notes">Notes</a></h3>
 <p>Last time, we looked at generics and traits at a high level. This time, we
 dig deeper on traits, looking specifically at <code>std::iter::Iterator</code> as an
 example of a powerful trait that can be composed across types, and then at
 how we might compose multiple traits on a single type.</p>
 <p>We also talk about the syntax for traits, the use of marker traits, some of
-the things you <em>can't</em> presently do with traits, and even just a smidge
+the things you <em>can’t</em> presently do with traits, and even just a smidge
 about the <em>future</em> of traits in Rust. All that in less than 20 minutes!</p>
-<p>You'll find today's <a href="/src/show_notes/e009.rs.html">source example</a> fairly interesting, I think: it's
+<p>You’ll find today’s <a href="/src/show_notes/e009.rs.html">source example</a> fairly interesting, I think: it’s
 just one type, but it uses almost every concept discussed on the show today!</p>
-<h2 id="links" class="section-header"><a href="#links">Links</a></h2>
+<h3 id="links"><a href="#links">Links</a></h3>
 <ul>
-<li>Nick Cameron: <a href="http://www.ncameron.org/blog/my-thoughts-on-rust-in-2016/">&quot;Thoughts on Rust in 2016&quot;</a></li>
-<li><a href="https://users.rust-lang.org/t/upcoming-breakage-starting-in-rust-1-7-from-rfcs-1214-and-136/4207">&quot;Upcoming breakage starting in Rust 1.7, from RFCs 1214 and 136&quot;</a>
+<li>Nick Cameron: <a href="http://www.ncameron.org/blog/my-thoughts-on-rust-in-2016/">“Thoughts on Rust in 2016”</a></li>
+<li><a href="https://users.rust-lang.org/t/upcoming-breakage-starting-in-rust-1-7-from-rfcs-1214-and-136/4207">“Upcoming breakage starting in Rust 1.7, from RFCs 1214 and 136”</a>
 <ul>
 <li><a href="https://github.com/rust-lang/rfcs/blob/master/text/1214-projections-lifetimes-and-wf.md">RFC 1214: Clarify (and improve) rules for projections and well-formedness</a></li>
 <li><a href="https://github.com/rust-lang/rfcs/blob/master/text/0136-no-privates-in-public.md">RFC 136: Ban private items in public APIs</a></li>
@@ -45,11 +43,11 @@ just one type, but it uses almost every concept discussed on the show today!</p>
 </li>
 <li><a href="https://github.com/rust-lang/rfcs/pull/1210">RFC: impl specialization</a>
 <ul>
-<li>Aaron Turon: <a href="https://aturon.github.io/blog/2015/09/18/reuse/">&quot;Specialize to reuse&quot;</a></li>
+<li>Aaron Turon: <a href="https://aturon.github.io/blog/2015/09/18/reuse/">“Specialize to reuse”</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="sponsors" class="section-header"><a href="#sponsors">Sponsors</a></h2>
+<h3 id="sponsors"><a href="#sponsors">Sponsors</a></h3>
 <ul>
 <li>Aleksey Pirogov</li>
 <li>Chris Palmer</li>
@@ -57,18 +55,18 @@ just one type, but it uses almost every concept discussed on the show today!</p>
 <li>Hamza Sheikh</li>
 <li>Luca Schmid</li>
 <li>Micael Bergeron</li>
-<li>Ralph Giles (&quot;rillian&quot;)</li>
+<li>Ralph Giles (“rillian”)</li>
 <li>reddraggone9</li>
 <li><a href="http://willroe.me">William Roe</a></li>
 </ul>
-<h3 id="become-a-sponsor" class="section-header"><a href="#become-a-sponsor">Become a sponsor</a></h3>
+<h4 id="become-a-sponsor"><a href="#become-a-sponsor">Become a sponsor</a></h4>
 <ul>
 <li><a href="https://www.patreon.com/newrustacean" rel="payment">Patreon</a></li>
 <li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
 <li><a href="https://www.dwolla.com/hub/chriskrycho">Dwolla</a></li>
 <li><a href="https://cash.me/$chriskrycho">Cash.me</a></li>
 </ul>
-<h2 id="follow" class="section-header"><a href="#follow">Follow</a></h2>
+<h3 id="follow"><a href="#follow">Follow</a></h3>
 <ul>
 <li>New Rustacean:
 <ul>
@@ -90,14 +88,8 @@ just one type, but it uses almost every concept discussed on the show today!</p>
 </ul>
 </li>
 </ul>
-</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
-<table><tr class='module-item'><td><a class="struct" href="struct.DoubleAndOne.html" title='show_notes::e009::DoubleAndOne struct'>DoubleAndOne</a></td><td class='docblock-short'><p>Define a simple struct on which to implement <code>Iterator</code>... and more!</p>
-</td></tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
-<table><tr class='module-item'><td><a class="trait" href="trait.ASimpleTrait.html" title='show_notes::e009::ASimpleTrait trait'>ASimpleTrait</a></td><td class='docblock-short'><p>Define a simple trait so we can see how it works.</p>
-</td></tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
-<table><tr class='module-item'><td><a class="fn" href="fn.demonstrate_for.html" title='show_notes::e009::demonstrate_for fn'>demonstrate_for</a></td><td class='docblock-short'><p>Demonstrate using a for loop over an (infinite!) iterator.</p>
-</td></tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g., <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g., <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g., <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><link rel="stylesheet" href="/media-playback.css">
+</div></details><h2 id="structs" class="small-section-header"><a href="#structs">Structs</a></h2><ul class="item-table"><li><div class="item-name"><a class="struct" href="struct.DoubleAndOne.html" title="struct show_notes::e009::DoubleAndOne">DoubleAndOne</a></div><div class="desc docblock-short">Define a simple struct on which to implement <code>Iterator</code>… and more!</div></li></ul><h2 id="traits" class="small-section-header"><a href="#traits">Traits</a></h2><ul class="item-table"><li><div class="item-name"><a class="trait" href="trait.ASimpleTrait.html" title="trait show_notes::e009::ASimpleTrait">ASimpleTrait</a></div><div class="desc docblock-short">Define a simple trait so we can see how it works.</div></li></ul><h2 id="functions" class="small-section-header"><a href="#functions">Functions</a></h2><ul class="item-table"><li><div class="item-name"><a class="fn" href="fn.demonstrate_for.html" title="fn show_notes::e009::demonstrate_for">demonstrate_for</a></div><div class="desc docblock-short">Demonstrate using a for loop over an (infinite!) iterator.</div></li></ul></section></div></main><link rel="stylesheet" href="/media-playback.css">
 <script type="text/javascript" src="/media-playback.js" defer></script>
 
 
-<script>window.rootPath = "../../";window.currentCrate = "show_notes";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>
+</body></html>

@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["demonstrate_try","Demonstrate how `try!` works in practice."]],"type":[["TryResult","Trivial alias for Result for convenience."]]});
+window.SIDEBAR_ITEMS = {"fn":["demonstrate_try"],"type":["TryResult"]};

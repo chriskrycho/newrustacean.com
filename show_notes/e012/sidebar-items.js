@@ -1,1 +1,1 @@
-initSidebarItems({"enum":[["ThreeTypes",""]],"fn":[["functions_are_expressions","Functions are expressions, and so are their contents."],["if_blocks_are_expressions","Like functions, if blocks are expressions."],["match_blocks_are_expressions","Match blocks are also expressions."],["ordinary_blocks_are_expressions","Block blocks are also expressions!"]]});
+window.SIDEBAR_ITEMS = {"enum":["ThreeTypes"],"fn":["functions_are_expressions","if_blocks_are_expressions","match_blocks_are_expressions","ordinary_blocks_are_expressions"]};

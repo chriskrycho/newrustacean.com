@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["add","A trivial function for a trivial test. See the source!"]]});
+window.SIDEBAR_ITEMS = {"fn":["add"]};

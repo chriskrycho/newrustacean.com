@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["part_1","Rust 1.31 and the 2018 Edition, Part I"],["part_2","Rust 1.31 and the 2018 Edition, Part II"]]});
+window.SIDEBAR_ITEMS = {"mod":["part_1","part_2"]};

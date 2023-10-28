@@ -1,27 +1,25 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `demo_send_and_sync` fn in crate `show_notes`."><meta name="keywords" content="rust, rustlang, rust-lang, demo_send_and_sync"><title>show_notes::e022::demo_send_and_sync - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="shortcut icon" href="https://newrustacean.com/favicon.ico"><style type="text/css">#crate-search{background-image:url("../../down-arrow.svg");}</style></head><body class="rustdoc fn"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../show_notes/index.html'><div class='logo-container'><img src='https://newrustacean.com/podcast.png' alt='logo'></div></a><div class="sidebar-elems"><p class='location'><a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e022</a></p><script>window.sidebarCurrent = {name: 'demo_send_and_sync', ty: 'fn', relpath: ''};</script><script defer src="sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/show_notes/e022.rs.html#215-220' title='goto source code'>[src]</a></span><span class='in-band'>Function <a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e022</a>::<wbr><a class="fn" href=''>demo_send_and_sync</a></span></h1><pre class='rust fn'>pub fn demo_send_and_sync()</pre><div class='docblock'><p>How <code>Send</code> and <code>Sync</code> work</p>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="How `Send` and `Sync` work"><title>demo_send_and_sync in show_notes::e022 - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="sidebar-items.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc fn"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt=""></a></nav><nav class="sidebar"><div class="sidebar-crate"><a class="logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="logo"></a><h2><a href="../../show_notes/index.html">show_notes</a><span class="version">0.3.1</span></h2></div><div class="sidebar-elems"><h2><a href="index.html">In show_notes::e022</a></h2></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1>Function <a href="../index.html">show_notes</a>::<wbr><a href="index.html">e022</a>::<wbr><a class="fn" href="#">demo_send_and_sync</a><button id="copy-path" title="Copy item path to clipboard"><img src="../../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="src" href="../../src/show_notes/e022.rs.html#213-218">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><pre class="rust item-decl"><code>pub fn demo_send_and_sync()</code></pre><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>How <code>Send</code> and <code>Sync</code> work</p>
 <p>Here we have a function which spawns a thread to run <code>println!()</code>. This is
 silly, of course, but it works because (and only because!) <code>String</code>
 implements the <code>Send</code> trait.</p>
 
-<div class="example-wrap"><pre class="rust rust-example-rendered">
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">demo_send</span>() {
-    <span class="kw">let</span> <span class="ident">foo</span> <span class="op">=</span> <span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;Hallo!&quot;</span>);
-    <span class="ident">thread</span>::<span class="ident">spawn</span>(<span class="kw">move</span> <span class="op">||</span> {
-        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{}&quot;</span>, <span class="ident">foo</span>);
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">pub fn </span>demo_send() {
+    <span class="kw">let </span>foo = String::from(<span class="string">&quot;Hallo!&quot;</span>);
+    thread::spawn(<span class="kw">move </span>|| {
+        <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, foo);
     });
-}</pre></div>
+}</code></pre></div>
 <p>If we had a *non-<code>Send</code> type here – e.g. an <code>Rc&lt;String&gt;</code> instead of just a
 <code>String</code> – we would get a compiler error:</p>
 
-<div class='information'><div class='tooltip compile_fail'>ⓘ<span class='tooltiptext'>This example deliberately fails to compile</span></div></div><div class="example-wrap"><pre class="rust rust-example-rendered compile_fail">
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">will_fail</span>() {
-    <span class="kw">let</span> <span class="ident">foo</span> <span class="op">=</span> <span class="ident">Rc</span>::<span class="ident">new</span>(<span class="ident">String</span>::<span class="ident">from</span>(<span class="string">&quot;Hallo!&quot;</span>));
-    <span class="ident">thread</span>::<span class="ident">spawn</span>(<span class="op">||</span> {
-        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{:?}&quot;</span>, <span class="ident">foo</span>);
+<div class="example-wrap compile_fail"><a href="#" class="tooltip" title="This example deliberately fails to compile">ⓘ</a><pre class="rust rust-example-rendered"><code><span class="kw">pub fn </span>will_fail() {
+    <span class="kw">let </span>foo = Rc::new(String::from(<span class="string">&quot;Hallo!&quot;</span>));
+    thread::spawn(|| {
+        <span class="macro">println!</span>(<span class="string">&quot;{:?}&quot;</span>, foo);
     });
-}</pre></div>
-<p>Instead, you'll get a compiler error:</p>
-<pre><code class="language-plain">error[E0277]: the trait bound `std::rc::Rc&lt;std::string::String&gt;: std::marker::Sync` is not satisfied
+}</code></pre></div>
+<p>Instead, you’ll get a compiler error:</p>
+<div class="example-wrap"><pre class="language-plain"><code>error[E0277]: the trait bound `std::rc::Rc&lt;std::string::String&gt;: std::marker::Sync` is not satisfied
    --&gt; src/e022.rs:214:5    |
 214 |     thread::spawn(|| {
     |     ^^^^^^^^^^^^^ `std::rc::Rc&lt;std::string::String&gt;` cannot be shared between threads safely
@@ -30,25 +28,25 @@ implements the <code>Send</code> trait.</p>
     = note: required because of the requirements on the impl of `std::marker::Send` for `&amp;std::rc::Rc&lt;std::string::String&gt;`
     = note: required because it appears within the type `[closure@src/e022.rs:214:19: 216:6 foo:&amp;std::rc::Rc&lt;std::string::String&gt;]`
     = note: required by `std::thread::spawn`
-</code></pre>
-<p>Notice that it's common to see those errors together, and notice moreover
+</code></pre></div>
+<p>Notice that it’s common to see those errors together, and notice moreover
 that the error here includes <em>both</em> <code>Send</code> and <code>Sync</code>. The compiler tries to
 see if <code>foo</code> can be taken via reference, but the <code>Rc</code> type is not <code>Sync</code>,
-i.e. you cannot share references to it across threads, and that's so because
+i.e. you cannot share references to it across threads, and that’s so because
 it is not <code>Send</code>. (Strictly speaking, all <code>Sync</code> types are <code>Send</code>, but not
-all <code>Send</code> types must be <code>Sync</code>, though off the top of my head I can't think
+all <code>Send</code> types must be <code>Sync</code>, though off the top of my head I can’t think
 of a scenario where a type <em>would</em> be <code>Send</code> but <em>not</em> also <code>Sync</code>.)</p>
-<p>What's somewhat curious is that there really isn't a lot more than this to
+<p>What’s somewhat curious is that there really isn’t a lot more than this to
 demo here! To get into anything more interesting in terms of
-<em>implementation</em> related to these traits, we'd have to be off in <code>unsafe</code>
-land, and we haven't talked about <code>unsafe</code> at <em>all</em> yet, so we're not going
+<em>implementation</em> related to these traits, we’d have to be off in <code>unsafe</code>
+land, and we haven’t talked about <code>unsafe</code> at <em>all</em> yet, so we’re not going
 to do that today. However, if you want to see a good example of what makes
 for code that <em>can</em> be safely shared across threads, take a look at the
-implementation of <a href="https://github.com/rust-lang/rust/blob/master/src/liballoc/vec.rs"><code>Vec</code></a> and the <a href="https://github.com/rust-lang/rust/blob/master/src/liballoc/raw_vec.rs"><code>RawVec</code></a> type it's built on! Reading the
-standard library is a really good way to learn things about Rust, and it's
+implementation of <a href="https://github.com/rust-lang/rust/blob/master/src/liballoc/vec.rs"><code>Vec</code></a> and the <a href="https://github.com/rust-lang/rust/blob/master/src/liballoc/raw_vec.rs"><code>RawVec</code></a> type it’s built on! Reading the
+standard library is a really good way to learn things about Rust, and it’s
 surprisingly straightforward most of the time.</p>
-</div></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g., <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g., <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g., <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><link rel="stylesheet" href="/media-playback.css">
+</div></details></section></div></main><link rel="stylesheet" href="/media-playback.css">
 <script type="text/javascript" src="/media-playback.js" defer></script>
 
 
-<script>window.rootPath = "../../";window.currentCrate = "show_notes";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>
+</body></html>

@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["left","One of two internal modules (with `right`) for demonstrating visibility."],["right","One of two internal modules (with `left`) for demonstrating visibility."]],"struct":[["Script","e030: Can You See Me Now?"]]});
+window.SIDEBAR_ITEMS = {"mod":["left","right"],"struct":["Script"]};

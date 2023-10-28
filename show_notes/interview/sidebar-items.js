@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["_1","Sean Griffin"],["_2","Raph Levien"],["_3","Carol (Nichols || Goulding)"],["_4","Jonathan Turner"],["diesel_1_0","Diesel 1.0, with Sean Griffin"],["integer32","Integer32: Carol Nichols || Goulding and Jake Goulding"],["irr_2017","Increasing Rust's Reach 2017"],["rbr_2017","Micro-interviews from Rust Belt Rust 2017"]]});
+window.SIDEBAR_ITEMS = {"mod":["_1","_2","_3","_4","diesel_1_0","integer32","irr_2017","rbr_2017"]};

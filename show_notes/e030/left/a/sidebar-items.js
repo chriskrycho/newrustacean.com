@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["demo","This is visible everywhere in the crate that can see `a`. Open the source to see all the other items it can interact with!"],["sibling","`fn sibling` is visible only to other items within `a`."]],"mod":[["private_child","`mod child` here is visible to `a`, but not outside `a` -- including even is siblings."]]});
+window.SIDEBAR_ITEMS = {"fn":["demo","sibling"],"mod":["private_child"]};
