@@ -121,10 +121,10 @@ pub fn functions_are_expressions() -> i32 {
 pub fn if_blocks_are_expressions() -> f64 {
     // note the terminal boolean expressions, unterminated!
     let a_bool = if "quuxy".len() > 3 {
-        print!("{:}", "Totally a long word");
+        print!("Totally a long word");
         true
     } else {
-        print!("{:}", "Not at all long");
+        print!("Not at all long");
         false
     };
 
@@ -166,7 +166,7 @@ pub fn match_blocks_are_expressions() -> String {
     };
 
     match x {
-        0...100 => "Less than 100".to_string(),
+        0..=100 => "Less than 100".to_string(),
         _ => "Less than 0, or more than 100".to_string(),
     }
 }

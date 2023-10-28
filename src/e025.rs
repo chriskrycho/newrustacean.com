@@ -236,14 +236,14 @@ impl<'p> Sub for &'p Point {
     }
 }
 
-pub fn distance_from_boxed<'a, 'b: 'a>(offset: &'b Point) -> Box<FnMut(&'a Point) -> f32 + 'a> {
+pub fn distance_from_boxed<'a, 'b: 'a>(offset: &'b Point) -> Box<dyn FnMut(&'a Point) -> f32 + 'a> {
     Box::new(move |point| {
         let change = point - offset;
         (change.x.powi(2) + change.y.powi(2)).sqrt()
     })
 }
 
-pub type DistanceFrom<'a> = Box<FnMut(&'a Point) -> f32 + 'a>;
+pub type DistanceFrom<'a> = Box<dyn FnMut(&'a Point) -> f32 + 'a>;
 
 pub fn distance_from_alias<'a, 'b: 'a>(offset: &'b Point) -> DistanceFrom<'a> {
     Box::new(move |point| {
@@ -259,5 +259,5 @@ pub fn distance_from_impl<'a, 'b: 'a>(offset: &'b Point) -> impl FnMut(&'a Point
     }
 }
 
-#[doc(include = "../docs/e025-script.md")]
+#[doc = include_str!("../docs/e025-script.md")]
 pub struct Script;

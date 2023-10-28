@@ -291,7 +291,7 @@ use std::fmt::{Display, Error, Formatter};
 
 use libc::{c_char, c_float, c_int};
 
-#[doc(include = "../docs/e031-script.md")]
+#[doc = include_str!("../../docs/e031-script.md")]
 pub struct Script;
 
 /// The simplest possible example of exposing Rust functions via a C FFI.
@@ -304,8 +304,17 @@ pub extern "C" fn add_in_rust(a: c_int, b: c_int) -> c_int {
 ///
 /// This allocates a new string, which *must* be deallocated by calling the
 /// `free_rust_string` type exposed in this module.
+///
+/// # Safety
+///
+/// This is *only* valid when the first and second pointers are not null (which
+/// is checked) and when the char strings pointed to by the two pointers do not
+/// overlap!
 #[no_mangle]
-pub extern "C" fn concat_strings(first: *const c_char, second: *const c_char) -> *mut c_char {
+pub unsafe extern "C" fn concat_strings(
+    first: *const c_char,
+    second: *const c_char,
+) -> *mut c_char {
     let (first, second) = unsafe {
         // Start by making sure the two strings are not null pointers (since C
         // APIs don't actually give us any help with this).
@@ -328,8 +337,13 @@ pub extern "C" fn concat_strings(first: *const c_char, second: *const c_char) ->
 }
 
 /// Free any string allocated by Rust.
+///
+/// # Safety
+///
+/// This shows how you *could* allow an outside caller to free a Rust string. It
+/// is only safe to do if you guarantee there are no other references to it!
 #[no_mangle]
-pub extern "C" fn free_rust_string(to_free: *mut c_char) {
+pub unsafe extern "C" fn free_rust_string(to_free: *mut c_char) {
     // If the pointer is already `null`, we're done here. (Don't double `free`!)
     if to_free.is_null() {
         return;
@@ -338,7 +352,8 @@ pub extern "C" fn free_rust_string(to_free: *mut c_char) {
     // If the pointer is not already null, we take ownership of it again with
     // `from_raw` and then immediately free it by way of the inherent `Drop`.
     unsafe {
-        CString::from_raw(to_free);
+        let ptr = CString::from_raw(to_free);
+        drop(ptr);
     }
 }
 
@@ -359,8 +374,12 @@ impl Point {
 }
 
 /// Expose an interface for C API callers to call the `Point` impl.
+///
+/// # Safety
+///
+/// This is only safe if there are no references to `point`!
 #[no_mangle]
-pub extern "C" fn point_translate(point: *mut Point, by_x: c_float, by_y: c_float) {
+pub unsafe extern "C" fn point_translate(point: *mut Point, by_x: c_float, by_y: c_float) {
     let point = unsafe {
         assert!(!point.is_null());
         &mut *point
@@ -398,8 +417,16 @@ impl Display for OpaquePoint {
 /// This implementation is *identical* to the implementation of the `Point`
 /// above. The only difference is that the C side doesn't get access to the
 /// internal structure of the type… which is we want.
+///
+/// # Safety
+///
+/// This is only safe if there are no references to `point`!
 #[no_mangle]
-pub extern "C" fn opaque_point_translate(point: *mut OpaquePoint, by_x: c_float, by_y: c_float) {
+pub unsafe extern "C" fn opaque_point_translate(
+    point: *mut OpaquePoint,
+    by_x: c_float,
+    by_y: c_float,
+) {
     let point = unsafe {
         assert!(!point.is_null());
         &mut *point
@@ -415,8 +442,11 @@ pub extern "C" fn opaque_point_new(x: c_float, y: c_float) -> *mut OpaquePoint {
     Box::into_raw(Box::new(OpaquePoint { x, y }))
 }
 
+/// # Safety
+///
+/// This is only safe if there are no references to `point`!
 #[no_mangle]
-pub extern "C" fn opaque_point_describe(point: *mut OpaquePoint) -> *mut c_char {
+pub unsafe extern "C" fn opaque_point_describe(point: *mut OpaquePoint) -> *mut c_char {
     let point = unsafe {
         assert!(!point.is_null());
         &mut *point
@@ -428,13 +458,19 @@ pub extern "C" fn opaque_point_describe(point: *mut OpaquePoint) -> *mut c_char 
 }
 
 /// Safely drops the `OpaquePoint` instance.
+///
+/// # Safety
+///
+/// This is only safe if there are no references to `point`!
 #[no_mangle]
-pub extern "C" fn opaque_point_free(point: *mut OpaquePoint) {
+pub unsafe extern "C" fn opaque_point_free(point: *mut OpaquePoint) {
     if point.is_null() {
         return;
     }
 
-    unsafe { Box::from_raw(point) };
+    unsafe {
+        drop(Box::from_raw(point));
+    };
 }
 
 /// Demonstrate unions! Combines an `enum` and a `union` into a `struct` that

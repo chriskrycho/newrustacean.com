@@ -122,7 +122,7 @@ pub struct DoubleAndOne {
 
 impl DoubleAndOne {
     /// Start with 0.
-    pub fn default() -> DoubleAndOne {
+    pub fn the_usual() -> DoubleAndOne {
         DoubleAndOne { value: 0 }
     }
 }
@@ -180,7 +180,7 @@ impl ops::Add for DoubleAndOne {
 pub fn demonstrate_for() {
     let mut printed = 0;
     let max_to_print = 10;
-    let d = DoubleAndOne::default();
+    let d = DoubleAndOne::the_usual();
     for item in d {
         println!("{}", item);
         printed += 1;
@@ -205,7 +205,7 @@ mod tests {
 
     #[test]
     fn test_iterator() {
-        let mut d = DoubleAndOne::default();
+        let mut d = DoubleAndOne::the_usual();
         assert_eq!(d.next(), Some(DoubleAndOne { value: 1 }));
         assert_eq!(d.next(), Some(DoubleAndOne { value: 3 }));
         assert_eq!(d.next(), Some(DoubleAndOne { value: 7 }));

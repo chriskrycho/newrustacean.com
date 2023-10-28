@@ -222,7 +222,7 @@ impl Deref for EmailEnum {
 
     fn deref(&self) -> &String {
         match *self {
-            EmailEnum::Address(ref string) => &string,
+            EmailEnum::Address(ref string) => string,
         }
     }
 }

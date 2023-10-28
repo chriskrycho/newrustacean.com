@@ -130,7 +130,7 @@ pub struct NoImplsAtAll {
 impl NoImplsAtAll {
     pub fn new(contents: &[u8; 8]) -> NoImplsAtAll {
         NoImplsAtAll {
-            _contents: contents.clone(),
+            _contents: *contents,
         }
     }
 }
@@ -148,7 +148,7 @@ pub struct HasAllTheImpls {
 impl HasAllTheImpls {
     pub fn new(contents: &[u8; 8]) -> HasAllTheImpls {
         HasAllTheImpls {
-            contents: contents.clone(),
+            contents: *contents,
         }
     }
 }
@@ -174,6 +174,7 @@ impl Deref for HasAllTheImpls {
 }
 
 /// Take it implementing `Borrow<[u8]>`.
+#[cfg_attr(feature = "cargo-clippy", allow(clippy::result_unit_err))]
 pub fn takes_a_borrowable<B: Borrow<[u8]>>(b: B) -> Result<(), ()> {
     for el in b.borrow() {
         println!("el is {}", el);
@@ -183,6 +184,8 @@ pub fn takes_a_borrowable<B: Borrow<[u8]>>(b: B) -> Result<(), ()> {
 }
 
 /// Take it implementing `AsRef<[u8]>`. Note similarity to `takes_a_borrowable`.
+// The point is to illustrate
+#[cfg_attr(feature = "cargo-clippy", allow(clippy::result_unit_err))]
 pub fn takes_a_reference<A: AsRef<[u8]>>(a: A) -> Result<(), ()> {
     for el in a.as_ref() {
         println!("look ma, a reference! {}", el);
@@ -192,6 +195,7 @@ pub fn takes_a_reference<A: AsRef<[u8]>>(a: A) -> Result<(), ()> {
 }
 
 /// Take the same type by `Deref` coercion at the call site.
+#[cfg_attr(feature = "cargo-clippy", allow(clippy::result_unit_err))]
 pub fn coerces_via_deref(coerced: &[u8]) -> Result<(), ()> {
     for el in coerced {
         println!("we borrowed it as a straight-up reference: {}", el);

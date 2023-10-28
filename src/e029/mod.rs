@@ -276,7 +276,7 @@
 
 use std::os::raw::c_float;
 
-#[doc(include = "../docs/e029-script.md")]
+#[doc = include_str!("../../docs/e029-script.md")]
 pub struct Script;
 
 /// An example of a slightly more complex data structure we can use with FFI.

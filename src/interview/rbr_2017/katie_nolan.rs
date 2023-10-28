@@ -9,6 +9,6 @@
 //!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/rbr/katie_nolan.mp3">
 //! </audio>
 
-// #[doc(include = "../docs/rbr_2017/katie-nolan.md")]
+// #[doc = include_str!("../../docs/rbr_2017/katie-nolan.md")]
 /// Transcript coming soon!
 pub struct Transcript;

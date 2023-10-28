@@ -145,7 +145,7 @@
 
 use std::thread;
 
-#[doc(include = "../docs/e022-script.md")]
+#[doc = include_str!("../docs/e022-script.md")]
 pub struct Script;
 
 /// How `Send` and `Sync` work
@@ -213,8 +213,8 @@ pub struct Script;
 /// [`Vec`]: https://github.com/rust-lang/rust/blob/master/src/liballoc/vec.rs
 /// [`RawVec`]: https://github.com/rust-lang/rust/blob/master/src/liballoc/raw_vec.rs
 pub fn demo_send_and_sync() {
-    let foo = 12;
+    let some_value = 12;
     thread::spawn(move || {
-        println!("{}", foo);
+        println!("{}", some_value);
     });
 }

@@ -275,7 +275,7 @@
 //!     + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-#[doc(include = "../docs/e030-script.md")]
+#[doc = include_str!("../docs/e030-script.md")]
 pub struct Script;
 
 /// One of two internal modules (with `right`) for demonstrating visibility.

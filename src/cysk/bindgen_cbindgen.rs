@@ -278,5 +278,5 @@
 //!     + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-#[doc(include = "../docs/cysk/bindgen-cbindgen-script.md")]
+#[doc = include_str!("../../docs/cysk/bindgen-cbindgen-script.md")]
 pub struct Script;

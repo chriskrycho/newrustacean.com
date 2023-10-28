@@ -251,5 +251,5 @@
 //!     + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-#[doc(include = "../docs/meta-3.md")]
+#[doc = include_str!("../../docs/meta-3.md")]
 pub struct Script;

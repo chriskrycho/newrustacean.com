@@ -180,7 +180,7 @@ macro_rules! main_try {
 #[macro_export]
 macro_rules! print_ident_name {
     ($id:ident) => {
-        format!("The ident's name was: {}", stringify!($id));
+        format!("The ident's name was: {}", stringify!($id))
     };
 }
 
@@ -188,6 +188,9 @@ macro_rules! print_ident_name {
 pub type TryResult = Result<i32, &'static str>;
 
 /// Demonstrate how `try!` works in practice.
+// Note: allows deprecated because the point here was to show the old `try!`
+// macros from *before* we had `?`.
+#[cfg_attr(feature = "cargo-clippy", allow(deprecated))]
 pub fn demonstrate_try(tr: TryResult) -> TryResult {
     // If the caller passes in an error, this returns that error.
     let val = r#try!(tr);

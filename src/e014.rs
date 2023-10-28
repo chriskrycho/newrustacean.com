@@ -111,7 +111,7 @@ pub fn get_a_slice() -> &'static str {
 /// Get a `String` instance. Note there's no lifetime.
 pub fn get_a_string() -> String {
     let mut a_string = String::new();
-    a_string = a_string + "this is a heap-allocated String";
+    a_string += "this is a heap-allocated String";
     a_string
 }
 
@@ -122,7 +122,7 @@ pub fn show_from_behavior() -> String {
 
 /// Print a 🚀, just because we can.
 pub fn demonstrate_unicode() {
-    println!("{}", "🚀");
+    println!("🚀");
 }
 
 pub fn get_back_some_unicode(desc: &str) -> String {
@@ -140,7 +140,7 @@ pub fn get_back_some_unicode(desc: &str) -> String {
 /// to expand later *if necessary*.
 pub fn get_a_string_with_capacity(capacity: usize) -> String {
     let mut string = String::with_capacity(capacity);
-    string = string + "few";
+    string += "few";
     string
 }
 
@@ -166,7 +166,7 @@ pub mod demo_deref {
     impl Deref for Origin {
         type Target = DerefTarget;
 
-        #[cfg_attr(feature = "clippy", allow(unconditional_recursion))]
+        #[cfg_attr(feature = "cargo-clippy", allow(unconditional_recursion))]
         fn deref(&self) -> &DerefTarget {
             self
         }
@@ -182,7 +182,7 @@ mod tests {
         let capacity: usize = 4;
         let mut the_str = get_a_string_with_capacity(capacity);
         assert_eq!(the_str.capacity(), capacity);
-        the_str = the_str + "this is more than 4";
+        the_str += "this is more than 4";
         assert!(the_str.capacity() > capacity);
     }
 }

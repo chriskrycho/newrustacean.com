@@ -181,7 +181,7 @@ pub fn demonstrate_match() {
     let question = match answer {
         // That includes individual numbers or ranges.
         0 => "What do you get when you divide by this? PROBLEMS.",
-        1...41 => "This is all pretty normal, right?",
+        1..=41 => "This is all pretty normal, right?",
         42 => "Life, the universe, and everything, eh? (Canadian version)",
         // What about catching *everything else*? Use `_`.
         _ => "I've got nothing useful to say here.",
@@ -192,9 +192,9 @@ pub fn demonstrate_match() {
     // or letters...
     let character = 'C';
     match character {
-        'A'...'B' => println!("Nope, not those letters."),
+        'A'..='B' => println!("Nope, not those letters."),
         'C' => println!("Why, yes, my name *does* start with a 'C'"),
-        'D'...'z' => println!("None of those either."),
+        'D'..='z' => println!("None of those either."),
         _ => println!("That's not even a letter!"),
     }
 
@@ -220,7 +220,7 @@ pub fn demonstrate_match() {
 pub fn get_an_option(get_it: bool) -> Option<f64> {
     if get_it {
         // Returns an `Option` enum in the `Some` type.
-        Some(3.141)
+        Some(std::f64::consts::PI)
     } else {
         // Returns an `Option` enum in the `None` type. This might look like the
         // `null` type you'd see elsewhere; it isn't. See below.
@@ -250,7 +250,7 @@ pub fn demonstrate_option() {
 /// in/out arguments so that you can get a normal/error-indicating return code.
 /// Instead, you just return a `Result`, and then `match` on that value to
 /// handle it.
-#[cfg_attr(feature = "clippy", allow(approx_constant))]
+#[cfg_attr(feature = "cargo-clippy", allow(clippy::approx_constant))]
 pub fn get_a_result(succeeds: bool) -> Result<f64, String> {
     if succeeds {
         Ok(2.718_281_828)

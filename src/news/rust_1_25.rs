@@ -192,5 +192,5 @@ pub fn demo_match(s: &str) {
     };
 }
 
-#[doc(include = "../docs/news/rust-1-25.md")]
+#[doc = include_str!("../../docs/news/rust-1-25.md")]
 pub struct Script;

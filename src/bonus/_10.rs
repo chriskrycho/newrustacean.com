@@ -156,5 +156,5 @@
 //!     + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-#[doc(include = "../docs/bonus/10-script.md")]
+#[doc = include_str!("../../docs/bonus/10-script.md")]
 pub struct Script;

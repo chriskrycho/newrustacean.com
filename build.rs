@@ -8,7 +8,7 @@ fn main() {
 
     // Build a C file which links *against* Rust code.
     Command::new("clang")
-        .args(&[
+        .args([
             "src/e031/e031.c",
             "-Ltarget/debug",
             "-lshow_notes",

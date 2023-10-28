@@ -154,10 +154,14 @@ pub struct SimpleContainer {
 }
 
 /// Demonstrate how you need `Cell<T>` even just with a `Vec<T>`;
+// The point is to illustrate vector behavior!
+#[cfg_attr(feature = "cargo-clippy", allow(clippy::useless_vec))]
 pub fn demonstrate_need_for_cell() -> Vec<Cell<SimpleContainer>> {
     let a_simple_container = SimpleContainer { contents: 42 };
     let another_one = SimpleContainer { contents: 84 };
+
     let _a_vec = vec![a_simple_container, another_one];
+
     // So far so good, but say we want to change the contents of one of the
     // struct types here. Uncomment the following line; it will fail to compile.
     //
@@ -198,14 +202,14 @@ mod tests {
     fn need_for_cell() {
         // Here we have an immutable `Vec<Cell<SimpleContainer>>`
         let all_wrapped_up = demonstrate_need_for_cell();
-        assert_eq!(all_wrapped_up.get(0).unwrap().get().contents, 42);
+        assert_eq!(all_wrapped_up.first().unwrap().get().contents, 42);
         // And yet its contents can be changed! The `Cell::set()` method lets us
         // update the *interior* of the item.
         all_wrapped_up
-            .get(0)
+            .first()
             .unwrap()
             .set(SimpleContainer { contents: 12 });
-        assert_eq!(all_wrapped_up.get(0).unwrap().get().contents, 12);
+        assert_eq!(all_wrapped_up.first().unwrap().get().contents, 12);
     }
 
     #[test]
@@ -218,7 +222,7 @@ mod tests {
         ];
 
         double_cell(&some_containers);
-        assert_eq!(some_containers.get(0).unwrap().get().contents, 6);
+        assert_eq!(some_containers.first().unwrap().get().contents, 6);
         assert_eq!(some_containers.get(1).unwrap().get().contents, 10);
     }
 
@@ -238,7 +242,7 @@ mod tests {
         add_to_each_string(&contained_strings, " razzle");
 
         assert_eq!(
-            contained_strings.get(0).unwrap().borrow().contents,
+            contained_strings.first().unwrap().borrow().contents,
             String::from("Boom razzle")
         );
         assert_eq!(

@@ -109,7 +109,7 @@ impl TVShow {
     pub fn new(theme: &str, year: i32, director: &str) -> TVShow {
         TVShow {
             theme: theme.to_string(),
-            year: year,
+            year,
             director: director.to_string(),
         }
     }

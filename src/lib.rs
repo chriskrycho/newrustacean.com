@@ -17,8 +17,6 @@
 // Enable access to the benchmarking functionality. Note that with this present,
 // we require using nightly Rust (as of 1.5).
 #![feature(test)]
-// Enable `#[doc(include = "<path>")]
-#![feature(external_doc)]
 // *Many* items are unused, because they exist only to be demo'd.
 #![allow(dead_code)]
 

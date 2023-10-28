@@ -207,7 +207,7 @@ pub fn demonstrate_function_arguments() {
 pub fn demonstrate_closure_environment() {
     /// Returns a closure which has access to the internal contents of this
     /// function even after it goes out of scope.
-    fn get_a_closure() -> Box<Fn(f64) -> f64> {
+    fn get_a_closure() -> Box<dyn Fn(f64) -> f64> {
         let x = 14.0;
 
         // Now we define a closure. I'll explain the bits with `move` and

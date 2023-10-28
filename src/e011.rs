@@ -172,9 +172,9 @@ impl TypeSystem {
     ) -> TypeSystem {
         TypeSystem {
             name: name.to_string(),
-            expressive: expressive,
-            strong: strong,
-            statically_known: statically_known,
+            expressive,
+            strong,
+            statically_known,
         }
     }
 }

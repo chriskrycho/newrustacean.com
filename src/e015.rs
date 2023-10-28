@@ -173,7 +173,7 @@ pub struct ASendableType {}
 
 /// Note that this function is *generic*: it will work for any type.
 pub fn print_rc_count<T>(t: &Rc<T>) {
-    println!("Reference count: {:}", Rc::strong_count(&t));
+    println!("Reference count: {:}", Rc::strong_count(t));
 }
 
 /// Note that this function is not generic because it assumes `FileData`.

@@ -251,5 +251,5 @@
 //!     + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-#[doc(include = "../docs/bonus/13-silly-mistakes.md")]
+#[doc = include_str!("../../docs/bonus/13-silly-mistakes.md")]
 pub struct Script;

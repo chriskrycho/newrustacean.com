@@ -9,5 +9,5 @@
 //!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/rbr/colin_dean.mp3">
 //! </audio>
 
-#[doc(include = "../docs/rbr_2017/colin-dean.md")]
+#[doc = include_str!("../../../docs/rbr_2017/colin-dean.md")]
 pub struct Transcript;

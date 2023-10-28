@@ -180,7 +180,7 @@
 
 use regex::Regex;
 
-#[doc(include = "../docs/e023-script.md")]
+#[doc = include_str!("../docs/e023-script.md")]
 pub struct Script;
 
 /// A trait, to be implemented by types like `Breakfast`.

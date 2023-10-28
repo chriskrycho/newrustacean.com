@@ -142,16 +142,12 @@ pub fn move_circle(moved_circle: Circle) {
 impl Circle {
     /// Creates a `Circle` instance centered on the "origin" (x = 0, y = 0).
     fn origin(r: f64) -> Circle {
-        Circle {
-            x: 0.0,
-            y: 0.0,
-            r: r,
-        }
+        Circle { x: 0.0, y: 0.0, r }
     }
 
     /// Creates a `Circle` instance centered on specified x, y values.
     pub fn new(x: f64, y: f64, r: f64) -> Circle {
-        Circle { x: x, y: y, r: r }
+        Circle { x, y, r }
     }
 
     /// Returns the value of `Circle.x`, borrowing an immutable reference to
@@ -175,7 +171,7 @@ impl Circle {
     /// would want to use a mutable rather than immutable reference).
     pub fn x_by_mut_ref(&mut self) -> f64 {
         println!("Taking a mutable reference.");
-        self.x = self.x + 1.0;
+        self.x += 1.0;
         self.x
     }
 

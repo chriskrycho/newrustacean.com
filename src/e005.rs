@@ -88,11 +88,11 @@
 /// heap-allocated. If we tried to return just a `Fn` type, we'd end up in a
 /// tangled mess of lifetime and ownership (whether with a regular function, as
 /// here, or a closure as in `doubler_closure_factory`).
-pub fn doubler_factory() -> Box<Fn(i32) -> i32> {
+pub fn doubler_factory() -> Box<dyn Fn(i32) -> i32> {
     /// The doubler function we will return.
     fn double(n: i32) -> i32 {
         n * 2
-    };
+    }
     Box::new(double)
 }
 
@@ -105,7 +105,7 @@ pub fn doubler_factory() -> Box<Fn(i32) -> i32> {
 /// the discussion in [e004][e004] for details
 ///
 /// [e004]: /show_notes/e004/
-pub fn doubler_closure_factory() -> Box<Fn(i32) -> i32> {
+pub fn doubler_closure_factory() -> Box<dyn Fn(i32) -> i32> {
     // We could also write this as `Box::new(|n| n * 2)`, of course.
     let doubler = |n| n * 2;
     Box::new(doubler)

@@ -214,5 +214,5 @@
 //!     + GitHub: [chriskrycho](https://github.com/chriskrycho)
 //!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 
-#[doc(include = "../docs/news/rust_1_29_1_30.md")]
+#[doc = include_str!("../../docs/news/rust_1_29_1_30.md")]
 pub struct Script;

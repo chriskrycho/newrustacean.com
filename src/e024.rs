@@ -175,7 +175,7 @@
 use std::fmt::Display;
 use std::ops::Add;
 
-#[doc(include = "../docs/e024-script.md")]
+#[doc = include_str!("../docs/e024-script.md")]
 pub struct Script;
 
 /// A data structure which will implement `std::ops::Add`.

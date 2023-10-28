@@ -128,7 +128,7 @@ pub struct DataStore<'a> {
 
 impl<'a> DataStore<'a> {
     pub fn new(contents: &'a i32) -> DataStore {
-        DataStore { contents: contents }
+        DataStore { contents }
     }
 }
 

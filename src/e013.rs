@@ -150,12 +150,14 @@ impl<'a> NumericReference<'a> {}
  Get a(n optional) sub-slice of a slice.
 
  Note that here we have a reference coming both directions, and therefore
- lifetimes on both the input and the output.
+ lifetimes on both the input and the output. These can be elided, but are left
+ here for illustrative purposes!
 
  What we're doing here is returning a *reference* to everything but the "head"
  of the slice. Since the slice might be empty, or might have only one element,
  we treat this as an optional.
 */
+#[cfg_attr(feature = "cargo-clippy", allow(clippy::needless_lifetimes))]
 pub fn refs_all_around<'a>(input: &'a [i32]) -> Option<&'a [i32]> {
     if input.len() > 2 {
         Some(&input[1..])
