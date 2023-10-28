@@ -7,9 +7,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e020.mp3
 //!
-//! <audio style="width: 100%" title="Putting code in its place" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e020.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="e020: Putting code in its place" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e020.mp3"></audio>
 //!
 //!
 //! Notes

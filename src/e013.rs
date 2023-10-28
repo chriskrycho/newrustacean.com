@@ -7,9 +7,7 @@
 
  [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e013.mp3
 
- <audio style="width: 100%" title="e013: Staying alive" controls preload=metadata>
-   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e013.mp3">
- </audio>
+ <audio style="width: 100%" title="e013: Staying alive" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e013.mp3"></audio>
 
 
  Notes

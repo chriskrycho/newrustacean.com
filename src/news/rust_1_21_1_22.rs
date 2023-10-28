@@ -6,9 +6,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_21_1_22.mp3
 //!
-//! <audio style="width: 100%" title="News: Rust 1.20" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_21_1_22.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="News: Rust 1.21 and 1.22" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_21_1_22.mp3"></audio>
 //!
 //!
 //! Links and Notes

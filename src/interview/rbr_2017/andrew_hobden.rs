@@ -5,10 +5,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/rbr/andrew_hobden.mp3
 //!
-//! <audio style="width: 100%" title="Rust Belt Rust 2017: Colin Dean" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/rbr/andrew_hobden.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="Rust Belt Rust 2017: Andre Hobden" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/rbr/andrew_hobden.mp3"></audio>
 
-// #[doc = include_str!("../../docs/rbr_2017/andrew-hobden.md")]
-/// Transcript coming soon!
+#[doc = include_str!("../../../docs/rbr_2017/andrew-hobden.md")]
 pub struct Transcript;

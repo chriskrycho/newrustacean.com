@@ -5,9 +5,4 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/rbr/esty_thomas.mp3
 //!
-//! <audio style="width: 100%" title="Rust Belt Rust 2017: Colin Dean" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/rbr/esty_thomas.mp3">
-//! </audio>
-
-/// Transcript coming soon!
-pub struct Transcript;
+//! <audio style="width: 100%" title="Rust Belt Rust 2017: Esty Thomas" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/rbr/esty_thomas.mp3"></audio>

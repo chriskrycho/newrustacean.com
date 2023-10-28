@@ -6,9 +6,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e009.mp3
 //!
-//! <audio style="width: 100%" title="Composing a Rustic tune" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e009.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="Composing a Rustic tune" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e009.mp3"></audio>
 //!
 //!
 //! Notes

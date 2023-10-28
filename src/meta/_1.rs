@@ -6,9 +6,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/meta/1.mp3
 //!
-//! <audio style="width: 100%" title="Slowing down" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/meta/1.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="Meta 1: Slowing Down" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/meta/1.mp3"></audio>
 //!
 //! Sometimes, the way a podcast stays in existence is by coming out less often.
 //! That's what's happening here.

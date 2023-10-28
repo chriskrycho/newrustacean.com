@@ -5,10 +5,4 @@
 //!
 //! [mp3]:  https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/rbr/katie_nolan.mp3
 //!
-//! <audio style="width: 100%" title="Rust Belt Rust 2017: Colin Dean" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/rbr/katie_nolan.mp3">
-//! </audio>
-
-// #[doc = include_str!("../../docs/rbr_2017/katie-nolan.md")]
-/// Transcript coming soon!
-pub struct Transcript;
+//! <audio style="width: 100%" title="Rust Belt Rust 2017: Katie Nolan" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/rbr/katie_nolan.mp3"></audio>

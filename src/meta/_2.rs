@@ -7,9 +7,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/meta/2.mp3
 //!
-//! <audio style="width: 100%" title="Crates You Should Know: Rayon" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/meta/2.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="Meta 2: Two Milestones" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/meta/2.mp3"></audio>
 //!
 //!
 //! Links

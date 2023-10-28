@@ -6,9 +6,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/2.mp3
 //!
-//! <audio style="width: 100%" title="Rust's achievements in 2016 and goals for 2017" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/2.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="News 2: Rust's achievements in 2016 and goals for 2017" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/2.mp3"></audio>
 //!
 //! Links
 //! -----

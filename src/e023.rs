@@ -6,9 +6,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e023.mp3
 //!
-//! <audio style="width: 100%" title="" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e023.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="e023: Traits Deep Dive, Part 1" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e023.mp3"></audio>
 //!
 //!
 //! Show Notes

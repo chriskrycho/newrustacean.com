@@ -7,9 +7,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e014.mp3
 //!
-//! <audio style="width: 100%" title="e014: Stringing things along" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e014.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="e014: Stringing things along" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e014.mp3"></audio>
 //!
 //!
 //! Notes

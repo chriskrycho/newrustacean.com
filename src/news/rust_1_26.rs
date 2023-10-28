@@ -7,9 +7,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_26.mp3
 //!
-//! <audio style="width: 100%" title="Crates You Should Know: Serde" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_26.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="News: Rust 1.26" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_26.mp3"></audio>
 //!
 //!
 //! Show Notes

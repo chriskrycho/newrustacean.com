@@ -7,9 +7,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/1/part_2.mp3
 //!
-//! <audio style="width: 100%" title="Interview 1::Part 1" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/1/part_2.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="Interview 1, Part 2" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/1/part_2.mp3"></audio>
 //!
 //!
 //! Notes

@@ -9,9 +9,7 @@
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_28.mp3
 //! [script]: https://newrustacean.com/show_notes/news/rust_1_28/struct.script
 //!
-//! <audio style="width: 100%" title="News – Rust 1.28" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_28.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="News – Rust 1.28" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_28.mp3"></audio>
 //!
 //!
 //! Show Notes

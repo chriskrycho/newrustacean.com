@@ -7,9 +7,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/2/part_1.mp3
 //!
-//! <audio style="width: 100%" title="Interview 2::Part 1 – Raph Levien" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/2/part_1.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="Interview 2: Raph Levien, Part 1" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/interview/2/part_1.mp3"></audio>
 //!
 //!
 //! Notes

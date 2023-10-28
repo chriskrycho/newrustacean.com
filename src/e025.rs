@@ -8,9 +8,7 @@
 //! [script]: https://newrustacean.com/show_notes/e025/struct.script
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e025.mp3
 //!
-//! <audio style="width: 100%" title="" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e025.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e025.mp3"></audio>
 //!
 //!
 //! Show Notes

@@ -6,9 +6,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e022.mp3
 //!
-//! <audio style="width: 100%" title="e022: Send and Sync" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e022.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="e022: Send and Sync" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e022.mp3"></audio>
 //!
 //!
 //! Sponsors

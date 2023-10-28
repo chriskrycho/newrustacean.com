@@ -6,9 +6,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/1.mp3
 //!
-//! <audio style="width: 100%" title="Polyglot programming promises and perils" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/1.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="News: One year and counting" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/1.mp3"></audio>
 //!
 //! Links
 //! -----

@@ -6,9 +6,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/3.mp3
 //!
-//! <audio style="width: 100%" title="News 3: Increasing Rust's Reach" controls preload=metadata>
-//!   <source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/3.mp3">
-//! </audio>
+//! <audio style="width: 100%" title="News 3: Increasing Rust's Reach" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/3.mp3"></audio>
 //!
 //!
 //! Links and Notes
