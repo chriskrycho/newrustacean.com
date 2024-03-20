@@ -1,11 +1,6 @@
 # New Rustacean
 
-[![Build Status][status-img]][status]
-
-[status]: https://travis-ci.com/chriskrycho/newrustacean.com
-[status-img]: https://travis-ci.com/chriskrycho/newrustacean.com.svg
-
-This is a *slightly crazy* approach to building a podcast hosting setup using
+This is a *slightly ridiculous* approach to building a podcast hosting setup using
 Rust's documentation tools, for the [New Rustacean] podcast. I'm making the
 site source publicly available so that others can follow along and learn from
 my successes, failures, and various misadventures along the way. Feel free to
