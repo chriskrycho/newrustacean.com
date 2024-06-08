@@ -9,7 +9,7 @@
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/meta/3.mp3
 //! [script]: https://newrustacean.com/show_notes/meta/_3/struct.script
 //!
-//! <audio style="width: 100%" title="CYSK: bindgen and cbindgen" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/meta/3.mp3">
+//! <audio style="width: 100%" title="CYSK: bindgen and cbindgen" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/meta/3.mp3"></audio>
 //!
 //! Show Notes
 //! ----------
@@ -19,13 +19,13 @@
 //! - [Mass Affection]
 //! - [buttondown.email/rewrite]
 //! - [patreon.com/chriskrycho]
-//! 
+//!
 //! [Rust by Example]: https://doc.rust-lang.org/stable/rust-by-example/
 //! [Winning Slowly]: https://winningslowly.org
 //! [Mass Affection]: https://massaffection.com
 //! [patreon.com/chriskrycho]: https://patreon.com/chriskrycho
 //! [buttondown.email/rewrite]: https://buttondown.email/rewrite
-//! 
+//!
 //! Sponsors
 //! --------
 //!

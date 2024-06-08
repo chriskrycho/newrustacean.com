@@ -8,7 +8,7 @@
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_35.mp3
 //! [script]: https://newrustacean.com/show_notes/news/rust_1_35/struct.script
 //!
-//! <audio style="width: 100%" title="News: Rust 1.35" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_35.mp3">
+//! <audio style="width: 100%" title="News: Rust 1.35" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/news/rust_1_35.mp3"></audio>
 //!
 //! Show Notes
 //! ----------
@@ -29,7 +29,7 @@
 //! - Async/await
 //!     - [`std::futures` API docs]
 //!     - [internal thread on syntax for `.await`]
-//! 
+//!
 //! [1.34.1 release notes]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1341-2019-04-25
 //! [1.34.1 blog post]: https://blog.rust-lang.org/2019/04/25/Rust-1.34.1.html
 //! [1.34.2 release notes]: https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1342-2019-05-14

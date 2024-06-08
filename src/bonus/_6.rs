@@ -7,7 +7,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/6.mp3
 //!
-//! <audio style="width: 100%" title="It doesn't have to be sexy" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/6.mp3" />
+//! <audio style="width: 100%" title="It doesn't have to be sexy" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/6.mp3"></audio>
 //!
 //!
 //! Notes

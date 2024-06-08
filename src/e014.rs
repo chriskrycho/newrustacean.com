@@ -164,7 +164,8 @@ pub mod demo_deref {
     impl Deref for Origin {
         type Target = DerefTarget;
 
-        #[cfg_attr(feature = "cargo-clippy", allow(unconditional_recursion))]
+        // This is broken: that is the *point*.
+        #[allow(unconditional_recursion)]
         fn deref(&self) -> &DerefTarget {
             self
         }

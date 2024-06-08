@@ -7,7 +7,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e005.mp3
 //!
-//! <audio style="width: 100%" title="Allocate it where?" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e005.mp3" />
+//! <audio style="width: 100%" title="Allocate it where?" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e005.mp3"></audio>
 //!
 //! # Notes
 //!

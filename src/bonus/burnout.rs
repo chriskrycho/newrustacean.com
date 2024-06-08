@@ -9,7 +9,7 @@
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/burnout.mp3
 //! [script]: https://newrustacean.com/show_notes/bonus/burnout/struct.script
 //!
-//! <audio style="width: 100%" title="Bonus: Burnout" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/burnout.mp3">
+//! <audio style="width: 100%" title="Bonus: Burnout" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/burnout.mp3"></audio>
 //!
 //! Show Notes
 //! ----------
@@ -139,7 +139,7 @@
 //! [Hans Fjällemark]: https://fjallemark.com/
 //! [Henri Sivonen]: https://hsivonen.fi/
 //! [Ian Jones]: https://www.ianmjones.com/
-//! [Joar Wandborg]: Joar Wandborg
+//! [Joar Wandborg]: http://github.com/joar
 //! [John Rudnick]: http://www.cindur.com/
 //! [Jupp Müller]: https://de.linkedin.com/in/juppm
 //! [Karl Hobley]: https://github.com/kaedroho/

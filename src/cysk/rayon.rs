@@ -6,7 +6,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/cysk/rayon.mp3
 //!
-//! <audio style="width: 100%" title="Crates You Should Know: Rayon" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/cysk/rayon.mp3" />
+//! <audio style="width: 100%" title="Crates You Should Know: Rayon" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/cysk/rayon.mp3"></audio>
 //!
 //!
 //! Links and Notes

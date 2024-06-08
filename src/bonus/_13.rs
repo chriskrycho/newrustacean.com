@@ -9,7 +9,7 @@
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/13.mp3
 //! [script]: https://newrustacean.com/show_notes/bonus/_13/struct.script
 //!
-//! <audio style="width: 100%" title="Bonus 13: I Still Make Silly Mistakes" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/13.mp3">
+//! <audio style="width: 100%" title="Bonus 13: I Still Make Silly Mistakes" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/bonus/13.mp3"></audio>
 //!
 //! Show Notes
 //! ----------

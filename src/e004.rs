@@ -6,7 +6,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e004.mp3
 //!
-//! <audio style="width: 100%" title="Functionalized" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e004.mp3" />
+//! <audio style="width: 100%" title="Functionalized" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e004.mp3"></audio>
 //!
 //! # Notes
 //!

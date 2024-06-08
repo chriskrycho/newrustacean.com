@@ -8,7 +8,7 @@
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/cysk/bindgen_cbindgen.mp3
 //! [script]: https://newrustacean.com/show_notes/cysk/bindgen_cbindgen/struct.script
 //!
-//! <audio style="width: 100%" title="CYSK: bindgen and cbindgen" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/cysk/bindgen_cbindgen.mp3">
+//! <audio style="width: 100%" title="CYSK: bindgen and cbindgen" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/cysk/bindgen_cbindgen.mp3"></audio>
 //!
 //! Show Notes
 //! ----------
@@ -25,7 +25,7 @@
 //!     - [Rustler]
 //!         - [a great write-up from the folks at Discord]
 //!     - [Helix]
-//! 
+//!
 //! [a blog post by one of the main authors of the crate]: https://blog.eqrion.net/future-directions-for-cbindgen/
 //! [the official guide]: https://rust-lang.github.io/rust-bindgen/
 //! [API docs]: https://docs.rs/bindgen

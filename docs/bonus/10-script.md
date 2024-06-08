@@ -24,7 +24,7 @@ The second idea I hope you take away is **just *how many* ways there are to con
 ### Introduction: Why?
 
 
-Honestly, some of both – but serving people most of all. 
+Honestly, some of both – but serving people most of all.
 
 Note: There are a lot of things to be passionate about in the world of software development. But at the end of the day, I care about software because I care about _people_. To borrow a label from Scott Wlaschin – a developer I admire enormously, mostly working over in the F# community – I am a _humanist_, not a _technologist_. The technologies are interesting in themselves to a degree; but I mostly care about the ways that technologies can help us serve people more effectively. As software developers, that takes a lot of shapes. But today I want to zoom in on just these two ideas about open-source software:
 
@@ -40,12 +40,12 @@ Note: So: why these two ideas? For one thing, because I think they are among the
 ### Introduction: Outline
 
 1. Introduction
-2. Why bother contributing? 
-3. Who is a contributor? 
-4. What is a contribution? How can you contribute? 
-   * ...so many things they won't fit on this slide. 
-5. When and where to contribute? 
-6. Conclusion 
+2. Why bother contributing?
+3. Who is a contributor?
+4. What is a contribution? How can you contribute?
+   * ...so many things they won't fit on this slide.
+5. When and where to contribute?
+6. Conclusion
 
 Note: We're going to take this on in the good old grammar-school fashion: _who_, _what_, _when_, _where_, _why_, and _how_. We're not going to take them in that order though, and we might smash a few of them together.
 
@@ -53,9 +53,9 @@ Note: We're going to take this on in the good old grammar-school fashion: _who_,
 
 ## Why bother contributing?
 
-There is more work to be done than hands to do it. 
+There is more work to be done than hands to do it.
 
-Always. 
+Always.
 
 Note: The first question we might be asking is: _why contribute at all_? Why should you be interested in becoming a contributor? And the best answer I can offer is: because there is more work than hands to do it. Always. Every open-source maintainer can tell you the truth of this.
 
@@ -73,17 +73,17 @@ Note: People define this differently, but I have a very simple definition: **A c
 
 For example:
 
-* submit a patch to fix a typo 
-* add a small correction for a code sample in a project 
-* file an issue instead of just suffering through a problem in silence 
-* everything else we're going to talk about today 
+* submit a patch to fix a typo
+* add a small correction for a code sample in a project
+* file an issue instead of just suffering through a problem in silence
+* everything else we're going to talk about today
 
 ---
 
 ### Who is a contributor? Me!
 
 
-How I got here: 
+How I got here:
 
 ![my first Rust commit](http://cdn.chriskrycho.com/images/talks/rbr_2017/first-commit.png)
 
@@ -104,9 +104,9 @@ Note: I don't imagine the story is all that different for _most_ people who are 
 ## Who is a contributor?
 
 
-That's it. Really! 
+That's it. Really!
 
-No quibbling! 
+No quibbling!
 
 And no magic!
 
@@ -478,7 +478,7 @@ Note: And that's a good place to wrap things up! I hope you're feeling like _you
 
 ## More info
 
-* https://www.rust-lang.org/en-US/contribute.html
-* https://blog.rust-lang.org/2017/09/18-impl-future-for-rust.html
-* https://internals.rust-lang.org/
+* <https://www.rust-lang.org/en-US/contribute.html>
+* <https://blog.rust-lang.org/2017/09/18-impl-future-for-rust.html>
+* <https://internals.rust-lang.org/>
 * `#rust`, `#rust-community`, `#rust-internals`, etc. on irc.mozilla.org

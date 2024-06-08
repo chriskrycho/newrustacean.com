@@ -7,7 +7,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e001.mp3
 //!
-//! <audio style="width: 100%" title="Document all the things!" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e001.mp3" />
+//! <audio style="width: 100%" title="Document all the things!" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e001.mp3"></audio>
 //!
 //! # Notes
 //! This is a mostly-empty module, and it is intended as such. Why? Well,

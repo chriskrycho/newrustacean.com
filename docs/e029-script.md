@@ -184,7 +184,10 @@ pub fn translate(point: &mut Point, by_x: f32, by_y: f32) {
 
 The `add` definition here tries to do something *somewhat* reasonable when dealing with the possibility of overflow—not a *great* solution (and not even a *complete* solution, since you could underflow, too!), but we need *something* here. The reason is that as silly as this kind of check might seem—about as calling out to C for addition is!—even something like addition which might seem to be trivially safe… isn’t.
 
-While it might seem that something like addition is trivially safe, it turns out to be *mostly* safe. The behavior of overflow for signed integers is*not defined* for C. In Rust, it *is* defined, by [RFC #0560]: in modes where `debug_assertions` are enabled, an overflow will cause a panic; in modes where those assertions are not enabled (i.e. release mode), Rust wraps them by [two's complement]. The net of that is that even something this simple can have unexpected results when calling across the FFI boundary.
+While it might seem that something like addition is trivially safe, it turns out to be *mostly* safe. The behavior of overflow for signed integers is*not defined* for C. In Rust, it *is* defined, by [RFC #0560][RFC-0560]: in modes where `debug_assertions` are enabled, an overflow will cause a panic; in modes where those assertions are not enabled (i.e. release mode), Rust wraps them by [two's complement][tc]. The net of that is that even something this simple can have unexpected results when calling across the FFI boundary.
+
+[RFC-0560]: https://rust-lang.github.io/rfcs/0560-integer-overflow.html
+[tc]: https://en.wikipedia.org/wiki/Two%27s_complement
 
 This is a silly example, of course, but it shows how you can provide a safe wrapper for a case where C's implementation differences *might* actually matter to you… and it also serves as a reminder that C’s implementation differences are likely to matter in more places than you might initially think.
 

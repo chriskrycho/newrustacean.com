@@ -6,7 +6,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/cysk_2.mp3
 //!
-//! <audio style="width: 100%" title="clap" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/cysk_2.mp3" />
+//! <audio style="width: 100%" title="clap" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/cysk_2.mp3"></audio>
 //!
 //! Links
 //! -----
