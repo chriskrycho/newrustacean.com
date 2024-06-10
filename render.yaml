@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: newrustacean.com
+    runtime: static
+    buildCommand: 'make publish'
+    pullRequestPreviewsEnabled: true
+    staticPublishPath: 'target/docs'
+    domain: newrustacean.com

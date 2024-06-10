@@ -12,10 +12,6 @@ default: all
 clean:
 	rm -rf $(BUILD_DIR)
 
-publish: all
-	ghp-import -n $(BUILD_DIR) -m "Update with latest changes from master."
-	git push origin gh-pages
-
 # Generate everything, but just leave it in the build directory.
 all: test docs landing resources
 

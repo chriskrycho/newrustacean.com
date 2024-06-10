@@ -174,7 +174,6 @@ pub fn demonstrate_basic_enumeration() {
 ///     sole component of the match arm.
 ///   - You can destructure complex types into their components. You can ignore
 ///     components of complex types with `_` as well.
-#[cfg_attr(feature = "clippy", allow(approx_constant))]
 pub fn demonstrate_match() {
     // You can match on numbers...
     let answer = 42;
@@ -216,7 +215,6 @@ pub fn demonstrate_match() {
 }
 
 /// Shows how this is used in a more meaningful context, with a standard type.
-#[cfg_attr(feature = "clippy", allow(approx_constant))]
 pub fn get_an_option(get_it: bool) -> Option<f64> {
     if get_it {
         // Returns an `Option` enum in the `Some` type.
@@ -250,9 +248,9 @@ pub fn demonstrate_option() {
 /// in/out arguments so that you can get a normal/error-indicating return code.
 /// Instead, you just return a `Result`, and then `match` on that value to
 /// handle it.
-#[cfg_attr(feature = "cargo-clippy", allow(clippy::approx_constant))]
 pub fn get_a_result(succeeds: bool) -> Result<f64, String> {
     if succeeds {
+        #[allow(clippy::approx_constant)]
         Ok(2.718_281_828)
     } else {
         Err("Huh. This didn't go as planned.".to_string())

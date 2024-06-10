@@ -152,12 +152,12 @@ pub struct SimpleContainer {
 }
 
 /// Demonstrate how you need `Cell<T>` even just with a `Vec<T>`;
-// The point is to illustrate vector behavior!
-#[cfg_attr(feature = "cargo-clippy", allow(clippy::useless_vec))]
 pub fn demonstrate_need_for_cell() -> Vec<Cell<SimpleContainer>> {
     let a_simple_container = SimpleContainer { contents: 42 };
     let another_one = SimpleContainer { contents: 84 };
 
+    // The point is to illustrate vector behavior!
+    #[allow(clippy::useless_vec)]
     let _a_vec = vec![a_simple_container, another_one];
 
     // So far so good, but say we want to change the contents of one of the
