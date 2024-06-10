@@ -172,34 +172,24 @@ impl Deref for HasAllTheImpls {
 }
 
 /// Take it implementing `Borrow<[u8]>`.
-#[cfg_attr(feature = "cargo-clippy", allow(clippy::result_unit_err))]
-pub fn takes_a_borrowable<B: Borrow<[u8]>>(b: B) -> Result<(), ()> {
+pub fn takes_a_borrowable<B: Borrow<[u8]>>(b: B) {
     for el in b.borrow() {
         println!("el is {}", el);
     }
-
-    Ok(())
 }
 
 /// Take it implementing `AsRef<[u8]>`. Note similarity to `takes_a_borrowable`.
-// The point is to illustrate
-#[cfg_attr(feature = "cargo-clippy", allow(clippy::result_unit_err))]
-pub fn takes_a_reference<A: AsRef<[u8]>>(a: A) -> Result<(), ()> {
+pub fn takes_a_reference<A: AsRef<[u8]>>(a: A) {
     for el in a.as_ref() {
         println!("look ma, a reference! {}", el);
     }
-
-    Ok(())
 }
 
 /// Take the same type by `Deref` coercion at the call site.
-#[cfg_attr(feature = "cargo-clippy", allow(clippy::result_unit_err))]
-pub fn coerces_via_deref(coerced: &[u8]) -> Result<(), ()> {
+pub fn coerces_via_deref(coerced: &[u8]) {
     for el in coerced {
         println!("we borrowed it as a straight-up reference: {}", el);
     }
-
-    Ok(())
 }
 
 #[cfg(test)]
@@ -209,11 +199,11 @@ mod tests {
     #[test]
     fn e018_demonstrate_borrow() {
         let to_borrow: [u8; 8] = [1, 2, 3, 4, 5, 6, 7, 8];
-        assert_eq!(Ok(()), takes_a_borrowable(to_borrow));
-        assert_eq!(Ok(()), takes_a_borrowable(to_borrow.to_vec()));
+        takes_a_borrowable(to_borrow);
+        takes_a_borrowable(to_borrow.to_vec());
 
         let borrow_this_too: [u8; 8] = [0, 1, 2, 3, 4, 5, 6, 7];
-        assert_eq!(Ok(()), takes_a_borrowable(borrow_this_too));
+        takes_a_borrowable(borrow_this_too);
 
         let _contents_not_borrowable = NoImplsAtAll::new(&to_borrow);
 
@@ -221,7 +211,7 @@ mod tests {
         // takes_a_borrowable(&_contents_not_borrowable);
 
         let contents_borrowable = HasAllTheImpls::new(&to_borrow);
-        assert_eq!(Ok(()), takes_a_borrowable(contents_borrowable));
+        takes_a_borrowable(contents_borrowable);
     }
 
     #[test]
@@ -230,9 +220,9 @@ mod tests {
     #[test]
     fn e018_demonstrate_deref() {
         let basic: [u8; 8] = [1, 2, 3, 4, 5, 6, 7, 8];
-        assert_eq!(Ok(()), coerces_via_deref(&basic));
+        coerces_via_deref(&basic);
 
         let to_coerce = HasAllTheImpls::new(&basic);
-        assert_eq!(Ok(()), coerces_via_deref(&to_coerce));
+        coerces_via_deref(&to_coerce);
     }
 }

@@ -144,7 +144,6 @@ pub fn if_blocks_are_expressions() -> f64 {
     }
 }
 
-#[cfg_attr(feature = "clippy", allow(dead_code))]
 enum ThreeTypes {
     _First,
     Second,

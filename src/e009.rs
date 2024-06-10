@@ -174,7 +174,6 @@ impl ops::Add for DoubleAndOne {
 }
 
 /// Demonstrate using a for loop over an (infinite!) iterator.
-#[cfg_attr(feature = "clippy", allow(explicit_counter_loop))]
 pub fn demonstrate_for() {
     let mut printed = 0;
     let max_to_print = 10;
