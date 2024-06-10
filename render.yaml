@@ -3,6 +3,9 @@ services:
     name: newrustacean.com
     runtime: static
     buildCommand: 'make all'
+    envVars:
+    - key: RUSTUP_HOME
+      value: '/tmp'
     pullRequestPreviewsEnabled: true
     staticPublishPath: 'target/doc'
     domain: newrustacean.com
