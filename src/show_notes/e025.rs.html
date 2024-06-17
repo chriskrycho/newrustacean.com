@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e025.rs`."><title>e025.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="show_notes"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e025.rs`."><title>e025.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -269,14 +269,14 @@
 //! [script]: https://newrustacean.com/show_notes/e025/struct.script
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e025.mp3
 //!
-//! &lt;audio style=&quot;width: 100%&quot; title=&quot;&quot; controls preload=metadata&gt;&lt;source src=&quot;https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e025.mp3&quot;&gt;&lt;/audio&gt;
+//! &lt;audio style="width: 100%" title="" controls preload=metadata&gt;&lt;source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e025.mp3"&gt;&lt;/audio&gt;
 //!
 //!
 //! Show Notes
 //! ----------
 //!
 //! Sponsored by [Parity Technologies][parity]! Parity is hiring Rust developers
-//! so if you&#39;re interested, you should check out their [job listings][jobs]!
+//! so if you're interested, you should check out their [job listings][jobs]!
 //!
 //! [parity]: https://paritytech.io
 //! [jobs]: https://paritytech.io/jobs/
@@ -286,12 +286,12 @@
 //! - [RFC #1733: Trait Aliases][1733]
 //! - [RFC #255: Object Safety][255]
 //! - [Ch. 17 in the Second Edition of *The Rust Programming Language*][trpl]
-//! - [Huon Wilson&#39;s post][huon]
+//! - [Huon Wilson's post][huon]
 //!
 //! [1733]: https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md
 //! [255]: https://github.com/rust-lang/rfcs/blob/master/text/0255-object-safety.md
 //! [trpl]: https://doc.rust-lang.org/book/second-edition/ch17-02-trait-objects.html
-//! [huon]: https://huonw.github.io/blog/2015/05/where-self-meets-sized-revisiting-object-safety/ &quot;Where Self Meets Sized: Revisiting Object Safety&quot;
+//! [huon]: https://huonw.github.io/blog/2015/05/where-self-meets-sized-revisiting-object-safety/ "Where Self Meets Sized: Revisiting Object Safety"
 //!
 //! ### Example
 //!
@@ -309,7 +309,7 @@
 //!
 //! let origin = Point::default();
 //!
-//! // This is the version we start with. It works fine, but it&#39;s not elegant.
+//! // This is the version we start with. It works fine, but it's not elegant.
 //! let distances_inline: Vec&lt;f32&gt; = points
 //!     .iter()
 //!     .map(|point| {
@@ -358,7 +358,7 @@
 //!   - [Hans Fjällemark]
 //!   - [Henri Sivonen]
 //!   - [Ian Jones]
-//!   - [Jakub &quot;Limeth&quot; Hlusička]
+//!   - [Jakub "Limeth" Hlusička]
 //!   - James Cooper
 //!   - Jerome Froelich
 //!   - [John Rudnick]
@@ -388,10 +388,10 @@
 //!   - [Oluseyi Sonaiya]
 //!   - Ovidiu Curcan
 //!   - [Pascal Hertleif]
-//!   - [Patrick O&#39;Doherty]
+//!   - [Patrick O'Doherty]
 //!   - [Paul Naranja]
 //!   - Peter Tillemans
-//!   - Ralph Giles (&quot;rillian&quot;)
+//!   - Ralph Giles ("rillian")
 //!   - Raj Venkalil
 //!   - [Ramon Buckland]
 //!   - Randy MacLeod
@@ -432,7 +432,7 @@
 //! [Fjällemark]: https://fjallemark.com/
 //! [Henri Sivonen]: https://hsivonen.fi/
 //! [Ian Jones]: https://www.ianmjones.com/
-//! [Jakub &quot;Limeth&quot; Hlusička]: https://github.com/Limeth
+//! [Jakub "Limeth" Hlusička]: https://github.com/Limeth
 //! [John Rudnick]: http://www.cindur.com/
 //! [Jupp Müller]: https://de.linkedin.com/in/juppm
 //! [Karl Hobley]: https://github.com/kaedroho/
@@ -444,7 +444,7 @@
 //! [Nick Stevens]: https://github.com/nastevens
 //! [Oluseyi Sonaiya]: http://oluseyi.info/
 //! [Pascal Hertleif]: https://pascalhertleif.de/
-//! [Patrick O&#39;Doherty]: https://twitter.com/patrickod
+//! [Patrick O'Doherty]: https://twitter.com/patrickod
 //! [Philipp Keller]: https://twitter.com/hansapla
 //! [Ramon Buckland]: http://www.inosion.com
 //! [Robert Chrzanowski]: https://github.com/zirman
@@ -458,7 +458,7 @@
 //!
 //! ### Become a sponsor
 //!
-//!   - &lt;a href=&quot;https://www.patreon.com/newrustacean&quot; rel=&quot;payment&quot;&gt;Patreon&lt;/a&gt;
+//!   - &lt;a href="https://www.patreon.com/newrustacean" rel="payment"&gt;Patreon&lt;/a&gt;
 //!   - [Venmo](https://venmo.com/chriskrycho)
 //!   - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
 //!   - [Cash.me](https://cash.me/$chriskrycho)
@@ -484,7 +484,7 @@
     <span class="kw">pub </span>y: f32,
 }
 
-<span class="kw">impl</span>&lt;<span class="lifetime">&#39;p</span>&gt; Sub <span class="kw">for </span><span class="kw-2">&amp;</span><span class="lifetime">&#39;p </span>Point {
+<span class="kw">impl</span>&lt;<span class="lifetime">'p</span>&gt; Sub <span class="kw">for </span><span class="kw-2">&amp;</span><span class="lifetime">'p </span>Point {
     <span class="kw">type </span>Output = Point;
 
     <span class="kw">fn </span>sub(<span class="self">self</span>, other: <span class="kw-2">&amp;</span>Point) -&gt; Point {
@@ -495,30 +495,30 @@
     }
 }
 
-<span class="kw">pub fn </span>distance_from_boxed&lt;<span class="lifetime">&#39;a</span>, <span class="lifetime">&#39;b</span>: <span class="lifetime">&#39;a</span>&gt;(offset: <span class="kw-2">&amp;</span><span class="lifetime">&#39;b </span>Point) -&gt; Box&lt;<span class="kw">dyn </span>FnMut(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>Point) -&gt; f32 + <span class="lifetime">&#39;a</span>&gt; {
+<span class="kw">pub fn </span>distance_from_boxed&lt;<span class="lifetime">'a</span>, <span class="lifetime">'b</span>: <span class="lifetime">'a</span>&gt;(offset: <span class="kw-2">&amp;</span><span class="lifetime">'b </span>Point) -&gt; Box&lt;<span class="kw">dyn </span>FnMut(<span class="kw-2">&amp;</span><span class="lifetime">'a </span>Point) -&gt; f32 + <span class="lifetime">'a</span>&gt; {
     Box::new(<span class="kw">move </span>|point| {
         <span class="kw">let </span>change = point - offset;
         (change.x.powi(<span class="number">2</span>) + change.y.powi(<span class="number">2</span>)).sqrt()
     })
 }
 
-<span class="kw">pub type </span>DistanceFrom&lt;<span class="lifetime">&#39;a</span>&gt; = Box&lt;<span class="kw">dyn </span>FnMut(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>Point) -&gt; f32 + <span class="lifetime">&#39;a</span>&gt;;
+<span class="kw">pub type </span>DistanceFrom&lt;<span class="lifetime">'a</span>&gt; = Box&lt;<span class="kw">dyn </span>FnMut(<span class="kw-2">&amp;</span><span class="lifetime">'a </span>Point) -&gt; f32 + <span class="lifetime">'a</span>&gt;;
 
-<span class="kw">pub fn </span>distance_from_alias&lt;<span class="lifetime">&#39;a</span>, <span class="lifetime">&#39;b</span>: <span class="lifetime">&#39;a</span>&gt;(offset: <span class="kw-2">&amp;</span><span class="lifetime">&#39;b </span>Point) -&gt; DistanceFrom&lt;<span class="lifetime">&#39;a</span>&gt; {
+<span class="kw">pub fn </span>distance_from_alias&lt;<span class="lifetime">'a</span>, <span class="lifetime">'b</span>: <span class="lifetime">'a</span>&gt;(offset: <span class="kw-2">&amp;</span><span class="lifetime">'b </span>Point) -&gt; DistanceFrom&lt;<span class="lifetime">'a</span>&gt; {
     Box::new(<span class="kw">move </span>|point| {
         <span class="kw">let </span>change = point - offset;
         (change.x.powi(<span class="number">2</span>) + change.y.powi(<span class="number">2</span>)).sqrt()
     })
 }
 
-<span class="kw">pub fn </span>distance_from_impl&lt;<span class="lifetime">&#39;a</span>, <span class="lifetime">&#39;b</span>: <span class="lifetime">&#39;a</span>&gt;(offset: <span class="kw-2">&amp;</span><span class="lifetime">&#39;b </span>Point) -&gt; <span class="kw">impl </span>FnMut(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>Point) -&gt; f32 {
+<span class="kw">pub fn </span>distance_from_impl&lt;<span class="lifetime">'a</span>, <span class="lifetime">'b</span>: <span class="lifetime">'a</span>&gt;(offset: <span class="kw-2">&amp;</span><span class="lifetime">'b </span>Point) -&gt; <span class="kw">impl </span>FnMut(<span class="kw-2">&amp;</span><span class="lifetime">'a </span>Point) -&gt; f32 {
     <span class="kw">move </span>|point| {
         <span class="kw">let </span>change = point - offset;
         (change.x.powi(<span class="number">2</span>) + change.y.powi(<span class="number">2</span>)).sqrt()
     }
 }
 
-<span class="attr">#[doc = <span class="macro">include_str!</span>(<span class="string">&quot;../docs/e025-script.md&quot;</span>)]
+<span class="attr">#[doc = <span class="macro">include_str!</span>(<span class="string">"../docs/e025-script.md"</span>)]
 </span><span class="kw">pub struct </span>Script;
 </code></pre></div></section></main><link rel="stylesheet" href="/media-playback.css">
 <script type="text/javascript" src="/media-playback.js" defer></script>

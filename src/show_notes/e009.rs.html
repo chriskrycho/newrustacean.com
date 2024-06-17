@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e009.rs`."><title>e009.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="show_notes"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e009.rs`."><title>e009.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -225,16 +225,15 @@
 <a href="#225" id="225">225</a>
 <a href="#226" id="226">226</a>
 <a href="#227" id="227">227</a>
-<a href="#228" id="228">228</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! Composing a Rustic tune
 //!
 //!   - **Date:** 2016-01-09
-//!   - **Subject:** Getting into the nitty-gritty with Rust&#39;s traits.
+//!   - **Subject:** Getting into the nitty-gritty with Rust's traits.
 //!   - [**Audio**][mp3]
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e009.mp3
 //!
-//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Composing a Rustic tune&quot; controls preload=metadata&gt;&lt;source src=&quot;https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e009.mp3&quot;&gt;&lt;/audio&gt;
+//! &lt;audio style="width: 100%" title="Composing a Rustic tune" controls preload=metadata&gt;&lt;source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e009.mp3"&gt;&lt;/audio&gt;
 //!
 //!
 //! Notes
@@ -245,10 +244,10 @@
 //! how we might compose multiple traits on a single type.
 //!
 //! We also talk about the syntax for traits, the use of marker traits, some of
-//! the things you *can&#39;t* presently do with traits, and even just a smidge
+//! the things you *can't* presently do with traits, and even just a smidge
 //! about the *future* of traits in Rust. All that in less than 20 minutes!
 //!
-//! You&#39;ll find today&#39;s [source example][src] fairly interesting, I think: it&#39;s
+//! You'll find today's [source example][src] fairly interesting, I think: it's
 //! just one type, but it uses almost every concept discussed on the show today!
 //!
 //! [src]: /src/show_notes/e009.rs.html
@@ -257,8 +256,8 @@
 //! Links
 //! -----
 //!
-//!   - Nick Cameron: [&quot;Thoughts on Rust in 2016&quot;][l1]
-//!   - [&quot;Upcoming breakage starting in Rust 1.7, from RFCs 1214 and 136&quot;][l2]
+//!   - Nick Cameron: ["Thoughts on Rust in 2016"][l1]
+//!   - ["Upcoming breakage starting in Rust 1.7, from RFCs 1214 and 136"][l2]
 //!       + [RFC 1214: Clarify (and improve) rules for projections and well-formedness][l3]
 //!       + [RFC 136: Ban private items in public APIs][l4]
 //!   - The Rust Book:
@@ -273,7 +272,7 @@
 //!       + [Special traits][l5]
 //!       + [Trait objects][l16]
 //!   - [RFC: impl specialization][l17]
-//!       + Aaron Turon: [&quot;Specialize to reuse&quot;][l18]
+//!       + Aaron Turon: ["Specialize to reuse"][l18]
 //!
 //! [l1]: http://www.ncameron.org/blog/my-thoughts-on-rust-in-2016/
 //! [l2]: https://users.rust-lang.org/t/upcoming-breakage-starting-in-rust-1-7-from-rfcs-1214-and-136/4207
@@ -304,7 +303,7 @@
 //!   - Hamza Sheikh
 //!   - Luca Schmid
 //!   - Micael Bergeron
-//!   - Ralph Giles (&quot;rillian&quot;)
+//!   - Ralph Giles ("rillian")
 //!   - reddraggone9
 //!   - [William Roe][s9]
 //!
@@ -313,7 +312,7 @@
 //!
 //! ### Become a sponsor
 //!
-//!   - &lt;a href=&quot;https://www.patreon.com/newrustacean&quot; rel=&quot;payment&quot;&gt;Patreon&lt;/a&gt;
+//!   - &lt;a href="https://www.patreon.com/newrustacean" rel="payment"&gt;Patreon&lt;/a&gt;
 //!   - [Venmo](https://venmo.com/chriskrycho)
 //!   - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
 //!   - [Cash.me](https://cash.me/$chriskrycho)
@@ -363,8 +362,8 @@
 
     <span class="doccomment">/// Have the item print and then return some string.
     </span><span class="kw">fn </span>a_default_print(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>str {
-        <span class="kw">let </span>msg = <span class="string">&quot;This is implemented already!&quot;</span>;
-        <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, msg);
+        <span class="kw">let </span>msg = <span class="string">"This is implemented already!"</span>;
+        <span class="macro">println!</span>(<span class="string">"{}"</span>, msg);
         msg
     }
 }
@@ -377,7 +376,7 @@
 
 <span class="kw">impl </span>fmt::Display <span class="kw">for </span>DoubleAndOne {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span>fmt::Formatter) -&gt; fmt::Result {
-        <span class="macro">write!</span>(f, <span class="string">&quot;DoubleAndOne.value = {}&quot;</span>, <span class="self">self</span>.value)
+        <span class="macro">write!</span>(f, <span class="string">"DoubleAndOne.value = {}"</span>, <span class="self">self</span>.value)
     }
 }
 
@@ -402,13 +401,12 @@
 }
 
 <span class="doccomment">/// Demonstrate using a for loop over an (infinite!) iterator.
-</span><span class="attr">#[cfg_attr(feature = <span class="string">&quot;clippy&quot;</span>, allow(explicit_counter_loop))]
 </span><span class="kw">pub fn </span>demonstrate_for() {
     <span class="kw">let </span><span class="kw-2">mut </span>printed = <span class="number">0</span>;
     <span class="kw">let </span>max_to_print = <span class="number">10</span>;
     <span class="kw">let </span>d = DoubleAndOne::the_usual();
     <span class="kw">for </span>item <span class="kw">in </span>d {
-        <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, item);
+        <span class="macro">println!</span>(<span class="string">"{}"</span>, item);
         printed += <span class="number">1</span>;
         <span class="kw">if </span>printed &gt; max_to_print {
             <span class="kw">break</span>;
@@ -425,8 +423,8 @@
         <span class="kw">let </span>d = DoubleAndOne { value: <span class="number">24 </span>};
         <span class="comment">// We have the trait function we implemented.
         </span><span class="macro">assert_eq!</span>(d.get_some_integer(), <span class="number">24</span>);
-        <span class="comment">// We also have the trait function we *didn&#39;t* implement.
-        </span><span class="macro">assert_eq!</span>(d.a_default_print(), <span class="string">&quot;This is implemented already!&quot;</span>);
+        <span class="comment">// We also have the trait function we *didn't* implement.
+        </span><span class="macro">assert_eq!</span>(d.a_default_print(), <span class="string">"This is implemented already!"</span>);
     }
 
     <span class="attr">#[test]

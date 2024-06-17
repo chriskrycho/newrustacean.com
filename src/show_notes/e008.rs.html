@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e008.rs`."><title>e008.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="show_notes"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e008.rs`."><title>e008.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -248,7 +248,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e008.mp3
 //!
-//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Just like something else&quot; controls preload=metadata src=&quot;https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e008.mp3&quot;&gt;
+//! &lt;audio style="width: 100%" title="Just like something else" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e008.mp3"&gt;&lt;/audio&gt;
 //!
 //! Notes
 //! -----
@@ -262,11 +262,11 @@
 //!
 //! ### Comments on source code
 //!
-//! Now that we have a handle on [how tests work][e007], we&#39;ll use them to
+//! Now that we have a handle on [how tests work][e007], we'll use them to
 //! validate the behavior of our code going forward. This is great: we can show
 //! that the tests do what we think.
 //!
-//! To today&#39;s point, though: we actually know even apart from whether the tests
+//! To today's point, though: we actually know even apart from whether the tests
 //! *run* successfully that these generic functions and the associated traits
 //! are behaving as we want. Failure with generics is a *compile*-time error,
 //! not a runtime error.
@@ -304,7 +304,7 @@
 //!   - [Derek Morr][sponsors-2]
 //!   - Luca Schmid
 //!   - Micael Bergeron
-//!   - Ralph Giles (&quot;rillian&quot;)
+//!   - Ralph Giles ("rillian")
 //!   - reddraggone9
 //!   - [William Roe][sponsors-7]
 //!
@@ -313,7 +313,7 @@
 //!
 //! ### Become a sponsor
 //!
-//!   - &lt;a href=&quot;https://www.patreon.com/newrustacean&quot; rel=&quot;payment&quot;&gt;Patreon&lt;/a&gt;
+//!   - &lt;a href="https://www.patreon.com/newrustacean" rel="payment"&gt;Patreon&lt;/a&gt;
 //!   - [Venmo](https://venmo.com/chriskrycho)
 //!   - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
 //!   - [Cash.me](https://cash.me/$chriskrycho)
@@ -335,23 +335,23 @@
 <span class="doccomment">/// Demonstrate a function *generic* over any type.
 ///
 /// This uses a cross-language convention for generics, where `T` represents the
-/// generic *type*. If we have more than one generic type, it&#39;s traditional to
+/// generic *type*. If we have more than one generic type, it's traditional to
 /// represent it with following letters, after `T`: `U`, `V`, `W`, etc. (If you
-/// have four *different* generic parameters, I&#39;m probably going to look askance
+/// have four *different* generic parameters, I'm probably going to look askance
 /// at your API design, though, to be honest.)
 </span><span class="kw">pub fn </span>a_generic&lt;T&gt;(_t: T) {
-    <span class="macro">println!</span>(<span class="string">&quot;The function works, but I can&#39;t actually do anything with the `_t`.&quot;</span>);
-    <span class="macro">println!</span>(<span class="string">&quot;Why? Well, because it might not have the `Display` or `Debug` traits implemented.&quot;</span>);
-    <span class="macro">println!</span>(<span class="string">&quot;What&#39;s a trait? I&#39;m so glad you asked.&quot;</span>);
+    <span class="macro">println!</span>(<span class="string">"The function works, but I can't actually do anything with the `_t`."</span>);
+    <span class="macro">println!</span>(<span class="string">"Why? Well, because it might not have the `Display` or `Debug` traits implemented."</span>);
+    <span class="macro">println!</span>(<span class="string">"What's a trait? I'm so glad you asked."</span>);
 }
 
 <span class="doccomment">/// Demonstrate a function with a *trait bound on a generic*.
 </span><span class="kw">pub fn </span>a_generic_printable&lt;T: fmt::Debug&gt;(t: T) {
-    <span class="macro">println!</span>(<span class="string">&quot;This function can actually debug-print `t`, whatever it may be.&quot;</span>);
-    <span class="macro">println!</span>(<span class="string">&quot;So: {:?}&quot;</span>, t);
+    <span class="macro">println!</span>(<span class="string">"This function can actually debug-print `t`, whatever it may be."</span>);
+    <span class="macro">println!</span>(<span class="string">"So: {:?}"</span>, t);
 }
 
-<span class="doccomment">/// This is `Option&lt;T&gt;`, but using Haskell&#39;s names instead.
+<span class="doccomment">/// This is `Option&lt;T&gt;`, but using Haskell's names instead.
 </span><span class="kw">pub enum </span>Maybe&lt;T&gt; {
     Nothing,
     Just(T),
@@ -369,13 +369,13 @@
 /// types implemented themselves!
 </span><span class="kw">impl </span>fmt::Display <span class="kw">for </span>SimpleType {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span>fmt::Formatter) -&gt; fmt::Result {
-        <span class="macro">write!</span>(f, <span class="string">&quot;string: {} | integer: {}&quot;</span>, <span class="self">self</span>.a, <span class="self">self</span>.b)
+        <span class="macro">write!</span>(f, <span class="string">"string: {} | integer: {}"</span>, <span class="self">self</span>.a, <span class="self">self</span>.b)
     }
 }
 
 <span class="doccomment">/// This is just a container which can hold any two types.
 ///
-/// These types can even be the same, but they don&#39;t have to be. Moreover, they
+/// These types can even be the same, but they don't have to be. Moreover, they
 /// can be generic types themselves; as you can see in the tests below, you can
 /// use built-in or user-created generic types within this generic type.
 </span><span class="kw">pub struct </span>GenericContainer&lt;T, U&gt; {
@@ -437,19 +437,19 @@
 
     <span class="attr">#[test]
     </span><span class="kw">fn </span>test_generic_enum() {
-        <span class="comment">// `_nothing` must have its type specified because it can&#39;t be inferred
+        <span class="comment">// `_nothing` must have its type specified because it can't be inferred
         // from the context. Generics can be type-inferred (see below), but as
-        // with all types in Rust, when they can&#39;t be, you specify them.
+        // with all types in Rust, when they can't be, you specify them.
         </span><span class="kw">let </span>_nothing: Maybe&lt;i32&gt; = Maybe::Nothing;
         <span class="kw">let </span>_just_25 = Maybe::Just(<span class="number">25</span>);
-        <span class="kw">let </span>_just_str = Maybe::Just(<span class="string">&quot;whoa&quot;</span>);
+        <span class="kw">let </span>_just_str = Maybe::Just(<span class="string">"whoa"</span>);
         <span class="kw">let </span>_just_slice = Maybe::Just([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);
         <span class="comment">// Here we have a generic enum, wrapping a generic container, `Vec&lt;T&gt;`!
         </span><span class="kw">let </span>_just_vec = Maybe::Just(<span class="macro">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);
         <span class="comment">// Things could get complicated if we need to define a `Maybe::Nothing`
         // for a `Vec`: we need to specify the `Vec` type as well:
         </span><span class="kw">let </span>_no_vec: Maybe&lt;Vec&lt;i32&gt;&gt; = Maybe::Nothing;
-        <span class="comment">// Normally that woudn&#39;t be a problem, because it would be inferred by
+        <span class="comment">// Normally that woudn't be a problem, because it would be inferred by
         // the context, with a pattern match:
         </span><span class="kw">let </span>pattern = <span class="bool-val">false</span>;
         <span class="kw">let </span>_maybe_vec = <span class="kw">match </span>pattern {
@@ -460,26 +460,26 @@
 
     <span class="attr">#[test]
     </span><span class="kw">fn </span>test_generic_struct() {
-        <span class="comment">// The generic container can contain &quot;normal&quot; (non-generic) types.
+        <span class="comment">// The generic container can contain "normal" (non-generic) types.
         </span><span class="kw">let </span>_container = GenericContainer {
             t: <span class="number">14.0</span>,
-            u: <span class="string">&quot;alpha&quot;</span>,
+            u: <span class="string">"alpha"</span>,
         };
         <span class="comment">// But it can also contain generic types, like `Vec&lt;T&gt;` or the `Maybe`
         // type we defined above.
         </span><span class="kw">let </span>_another = GenericContainer {
             t: <span class="macro">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],
-            u: Maybe::Just(<span class="string">&quot;a string&quot;</span>),
+            u: Maybe::Just(<span class="string">"a string"</span>),
         };
     }
 
     <span class="attr">#[test]
     </span><span class="kw">fn </span>test_impl_display() {
         <span class="kw">let </span>simple = SimpleType {
-            a: <span class="string">&quot;some string&quot;</span>.to_string(),
+            a: <span class="string">"some string"</span>.to_string(),
             b: <span class="number">4096</span>,
         };
-        <span class="macro">println!</span>(<span class="string">&quot;simple is {}&quot;</span>, simple);
+        <span class="macro">println!</span>(<span class="string">"simple is {}"</span>, simple);
     }
 }
 </code></pre></div></section></main><link rel="stylesheet" href="/media-playback.css">

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e015.rs`."><title>e015.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="show_notes"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e015.rs`."><title>e015.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -236,28 +236,28 @@
 //!
 //!   - **Date:** June 17, 2016
 //!   - **Subject:** `Box`, `String`, `Vec`, `Rc`, and `Arc` have this in
-//!     common: they&#39;re not dumb.
+//!     common: they're not dumb.
 //!   - [**Audio**][mp3]
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e015.mp3
 //!
-//! &lt;audio style=&quot;width: 100%&quot; title=&quot;e015: Not dumb pointers&quot; controls preload=metadata&gt;&lt;source src=&quot;https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e015.mp3&quot;&gt;&lt;/audio&gt;
+//! &lt;audio style="width: 100%" title="e015: Not dumb pointers" controls preload=metadata&gt;&lt;source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e015.mp3"&gt;&lt;/audio&gt;
 //!
 //!
 //! Notes
 //! -----
 //!
-//! This episode, we take a close look at smart pointer types---from a few we&#39;ve
+//! This episode, we take a close look at smart pointer types---from a few we've
 //! already talked about, like `Box`, `Vec`, and `String`, to some new ones,
 //! like `Rc` and `Arc`.
 //!
-//!   - What smart pointers are, and what makes them &#39;smart&#39;.
+//!   - What smart pointers are, and what makes them 'smart'.
 //!   - Why we want or need smart pointers.
 //!   - A bit about `Box`.
 //!   - A lot more about `Rc` and `Arc`.
 //!
 //! ***Note:*** The examples below are in-progress: the `Rc` example is complete
-//! but not fully documented, and there&#39;s no examples yet for `Arc`---but there
+//! but not fully documented, and there's no examples yet for `Arc`---but there
 //! will be! I expect to finish them over the course of this weekend, but I
 //! wanted to go ahead and get the episode out!
 //!
@@ -284,8 +284,8 @@
 //!   - [Rust Exercism track]
 //!       + [All exercism language tracks]
 //!   - [RFC 1636: Require documentation for all new features.][RFC1636] (Note:
-//!     I misspoke on the episode and said this was at rust-lang.org; it&#39;s not!
-//!     It&#39;s on GitHub, wtih the rest of the RFCs, of course.)
+//!     I misspoke on the episode and said this was at rust-lang.org; it's not!
+//!     It's on GitHub, wtih the rest of the RFCs, of course.)
 //!
 //! [RustConf]: http://rustconf.com
 //! [Rust Belt Rust Conference]: http://www.rust-belt-rust.com
@@ -317,8 +317,8 @@
 //!   - Luca Schmid
 //!   - Micael Bergeron
 //!   - [Pascal Hertleif]
-//!   - Ralph Giles (&quot;rillian&quot;)
-//!   - Ralph &quot;FriarTech&quot; Loizzo
+//!   - Ralph Giles ("rillian")
+//!   - Ralph "FriarTech" Loizzo
 //!   - Raph Levien
 //!   - reddraggone9
 //!   - Ryan Ollos
@@ -336,7 +336,7 @@
 //!
 //! ### Become a sponsor
 //!
-//!   - &lt;a href=&quot;https://www.patreon.com/newrustacean&quot; rel=&quot;payment&quot;&gt;Patreon&lt;/a&gt;
+//!   - &lt;a href="https://www.patreon.com/newrustacean" rel="payment"&gt;Patreon&lt;/a&gt;
 //!   - [Venmo](https://venmo.com/chriskrycho)
 //!   - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
 //!   - [Cash.me](https://cash.me/$chriskrycho)
@@ -359,19 +359,19 @@
 //! --------
 //!
 //! The most basic examples of smart pointers involve the `Box` type, which
-//! we&#39;ve talked about before. Assume we had a type `Foo` which took a string in
+//! we've talked about before. Assume we had a type `Foo` which took a string in
 //! its constructor, and that we wanted to box it up. We would just write:
 //!
 //! ```rust,ignore
-//! let someFoo = Box::new(Foo::new(&quot;bar&quot;));
+//! let someFoo = Box::new(Foo::new("bar"));
 //! ```
 //!
-//! It&#39;s also worth comparing the Rust code above with similar code in C++.
+//! It's also worth comparing the Rust code above with similar code in C++.
 //! Assume we have a `class` with the same name; using a smart pointer (in this
 //! case, `unique_ptr`, returned from `make_unique`) would give us this code:
 //!
 //! ```cpp
-//! const auto someFoo = std::make_unique&lt;const Foo&gt;(&quot;bar&quot;);
+//! const auto someFoo = std::make_unique&lt;const Foo&gt;("bar");
 //! ```
 //!
 //! Both examples declare a smart pointer named `someFoo` that points to an
@@ -380,10 +380,10 @@
 //! substantially clearer than the corresponding C++ code to express the same
 //! semantic content.
 //!
-//! I&#39;m not including further comments on `Box` here in the docs, because we&#39;ve
-//! covered it before and it&#39;s fairly straightforward. The rest of these
+//! I'm not including further comments on `Box` here in the docs, because we've
+//! covered it before and it's fairly straightforward. The rest of these
 //! materials focus entirely on `Rc` and `Arc`, as those are the most
-//! interesting bits from today&#39;s episode.
+//! interesting bits from today's episode.
 
 </span><span class="kw">use </span>std::rc::{Rc, Weak};
 <span class="comment">// use std::sync::Arc;  // TODO
@@ -405,12 +405,12 @@
 
 <span class="doccomment">/// Note that this function is *generic*: it will work for any type.
 </span><span class="kw">pub fn </span>print_rc_count&lt;T&gt;(t: <span class="kw-2">&amp;</span>Rc&lt;T&gt;) {
-    <span class="macro">println!</span>(<span class="string">&quot;Reference count: {:}&quot;</span>, Rc::strong_count(t));
+    <span class="macro">println!</span>(<span class="string">"Reference count: {:}"</span>, Rc::strong_count(t));
 }
 
 <span class="doccomment">/// Note that this function is not generic because it assumes `FileData`.
 </span><span class="kw">fn </span>print_rc_body(fd: <span class="kw-2">&amp;</span>Rc&lt;FileData&gt;) {
-    <span class="macro">println!</span>(<span class="string">&quot;The contents are: {:}&quot;</span>, fd.contents);
+    <span class="macro">println!</span>(<span class="string">"The contents are: {:}"</span>, fd.contents);
 }
 
 <span class="doccomment">/// Demonstrate the basics of reference-counted types. (Read the source, Luke!)
@@ -427,10 +427,10 @@
         <span class="kw">let </span>yet_another_ref = a_ref.clone();
         print_rc_count(<span class="kw-2">&amp;</span>yet_another_ref); <span class="comment">// 3
         </span>print_rc_body(<span class="kw-2">&amp;</span>yet_another_ref); <span class="comment">// we can print the contents here.
-    </span>} <span class="comment">// we&#39;ve gone out of scope; `yet_another_ref` is deallocated here.
+    </span>} <span class="comment">// we've gone out of scope; `yet_another_ref` is deallocated here.
 
     </span>print_rc_count(<span class="kw-2">&amp;</span>a_ref); <span class="comment">// 2 again
-    </span>drop(a_ref); <span class="comment">// Remember, it doesn&#39;t matter which we drop!
+    </span>drop(a_ref); <span class="comment">// Remember, it doesn't matter which we drop!
     </span>print_rc_count(<span class="kw-2">&amp;</span>added_another_ref); <span class="comment">// 1
     </span>print_rc_body(<span class="kw-2">&amp;</span>added_another_ref); <span class="comment">// valid
 
@@ -444,8 +444,8 @@
     </span><span class="kw">let </span>empty_weak = get_empty_weak(added_another_ref);
 
     <span class="kw">match </span>empty_weak.upgrade() {
-        <span class="prelude-val">Some</span>(fd) =&gt; <span class="macro">println!</span>(<span class="string">&quot;{:}&quot;</span>, fd.contents),
-        <span class="prelude-val">None </span>=&gt; <span class="macro">println!</span>(<span class="string">&quot;Nothing to see here. We&#39;re done.&quot;</span>),
+        <span class="prelude-val">Some</span>(fd) =&gt; <span class="macro">println!</span>(<span class="string">"{:}"</span>, fd.contents),
+        <span class="prelude-val">None </span>=&gt; <span class="macro">println!</span>(<span class="string">"Nothing to see here. We're done."</span>),
     }
 }
 
@@ -455,8 +455,8 @@
 }
 
 <span class="kw">pub fn </span>get_wrapped_file_data() -&gt; Rc&lt;FileData&gt; {
-    <span class="kw">let </span>plain_data = FileData::new(<span class="string">&quot;This would really read from a file. And not be terrible.&quot;</span>);
-    <span class="comment">// Both of these now have &quot;strong&quot; references to the type. Neither &quot;trumps&quot;
+    <span class="kw">let </span>plain_data = FileData::new(<span class="string">"This would really read from a file. And not be terrible."</span>);
+    <span class="comment">// Both of these now have "strong" references to the type. Neither "trumps"
     // the other; whichever goes out of scope first will be deallocated, but
     // *without* affecting the other.
     </span><span class="kw">let </span>wrapped = Rc::new(plain_data);

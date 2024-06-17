@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e001.rs`."><title>e001.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="show_notes"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e001.rs`."><title>e001.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -136,13 +136,13 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e001.mp3
 //!
-//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Document all the things!&quot; controls preload=metadata src=&quot;https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e001.mp3&quot; /&gt;
+//! &lt;audio style="width: 100%" title="Document all the things!" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e001.mp3"&gt;&lt;/audio&gt;
 //!
 //! # Notes
 //! This is a mostly-empty module, and it is intended as such. Why? Well,
 //! because *almost* all the sample code exists in these comments, which serve
 //! as the show notes. If you listen to the episode or take a look at the
-//! [source files][src], you&#39;ll see how it works!
+//! [source files][src], you'll see how it works!
 //!
 //! [src]: /src/show_notes/e001.rs.html
 //!
@@ -154,8 +154,8 @@
 //! Note that this module-level docstring uses `//!` rather than `///`-style
 //! comments. This is because this docstring is documenting the item which
 //! contains it, rather than the following item. Per [Rust RFC 505][1], the
-//! preferred approach is always to use the &quot;following&quot; form (`///`) rather than
-//! the &quot;containing&quot; form (`//!`), except for module-level docs like these.
+//! preferred approach is always to use the "following" form (`///`) rather than
+//! the "containing" form (`//!`), except for module-level docs like these.
 //! (I will be following RFC 505 throughout.)
 //!
 //! [1]: https://github.com/rust-lang/rfcs/blob/master/text/0505-api-comment-conventions.md
@@ -164,7 +164,7 @@
 //!   - [Rust and MSVC tracking issue][2]
 //!   - Other documentation tools:
 //!       + Predecessors:
-//!           * [Python&#39;s Sphinx tool]
+//!           * [Python's Sphinx tool]
 //!           * [Doxygen]
 //!           * [`JSDoc`]
 //!           * [`JavaDoc`]
@@ -172,15 +172,15 @@
 //!           * [Julia][7] has a [built-in documentation system][8]
 //!           * [Elixir][9] has [`ex_doc`][10]
 //!   - [Rust 1.3 release announcement][11]
-//!   - Rust&#39;s package hosting: [crates.io][12]
+//!   - Rust's package hosting: [crates.io][12]
 //!       + [Crater][13] for testing for backwards compatibility
 //!   - [Semantic versioning][14]
-//!       + [&quot;Stability as a Deliverable&quot;][15]: Rust official blog post on
+//!       + ["Stability as a Deliverable"][15]: Rust official blog post on
 //!         version stability, backwards compatibility, and release channels.
 //!   - [The Rust book chapter on `rustdoc`][16]
 //!
 //! [2]: https://github.com/rust-lang/rfcs/issues/1061
-//! [Python&#39;s Sphinx tool]: http://sphinx-doc.org
+//! [Python's Sphinx tool]: http://sphinx-doc.org
 //! [Doxygen]: http://www.stack.nl/~dimitri/doxygen/
 //! [`JSDoc`]: http://usejsdoc.org
 //! [`JavaDoc`]: http://www.oracle.com/technetwork/articles/java/index-jsp-135444.html
@@ -200,7 +200,7 @@
 //!   - New Rustacean:
 //!     + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
 //!       + App.net: [@newrustacean](https://alpha.app.net/newrustacean)
-//!       + &lt;a href=&quot;https://www.patreon.com/newrustacean&quot; rel=&quot;payment&quot;&gt;Patreon&lt;/a&gt;
+//!       + &lt;a href="https://www.patreon.com/newrustacean" rel="payment"&gt;Patreon&lt;/a&gt;
 //!     + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
 //!   - Chris Krycho
 //!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
@@ -211,7 +211,7 @@
 /// All of this will be attached to the structure definition when you see it
 /// live on the site. If you need to document members, you can do it inline!
 ///
-/// It&#39;s worth taking a look at the [source] for this: you can see how private
+/// It's worth taking a look at the [source] for this: you can see how private
 /// and public fields are handled differently in the documentation.
 ///
 /// [source]: /src/show_notes/e001.rs.html
@@ -220,7 +220,7 @@
     </span><span class="kw">pub </span>theme: String,
     <span class="doccomment">/// Here is the year the show premiered.
     </span><span class="kw">pub </span>year: i32,
-    <span class="doccomment">/// Here is the director---but (s)he&#39;s rather shy and private.
+    <span class="doccomment">/// Here is the director---but (s)he's rather shy and private.
     </span>director: String,
 }
 
@@ -233,7 +233,7 @@
     <span class="doccomment">/// This documents a fairly ho-hum structure constructor.
     ///
     /// ```ignore
-    /// let a_struct = TVShow::new(&quot;The Answer&quot;, 42, &quot;Joss Whedon&quot;);
+    /// let a_struct = TVShow::new("The Answer", 42, "Joss Whedon");
     /// ```
     </span><span class="kw">pub fn </span>new(theme: <span class="kw-2">&amp;</span>str, year: i32, director: <span class="kw-2">&amp;</span>str) -&gt; TVShow {
         TVShow {
@@ -247,12 +247,12 @@
 <span class="doccomment">/// This documents a plain-old function.
 ///
 /// The same basic rules apply as with functions bound to structs; the only
-/// real difference is that the docs for this won&#39;t be attached to a `struct`
+/// real difference is that the docs for this won't be attached to a `struct`
 /// but to the module.
 </span><span class="kw">pub fn </span>use_members() {
-    <span class="kw">let </span>firefly = TVShow::new(<span class="string">&quot;You can&#39;t take the sky from me!&quot;</span>, <span class="number">2001</span>, <span class="string">&quot;Joss Whedon&quot;</span>);
+    <span class="kw">let </span>firefly = TVShow::new(<span class="string">"You can't take the sky from me!"</span>, <span class="number">2001</span>, <span class="string">"Joss Whedon"</span>);
     <span class="macro">println!</span>(
-        <span class="string">&quot;Firefly (come on, sing along: \&quot;{:?}\&quot;): {:?}/{:?}&quot;</span>,
+        <span class="string">"Firefly (come on, sing along: \"{:?}\"): {:?}/{:?}"</span>,
         firefly.theme, firefly.year, firefly.director
     );
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e006.rs`."><title>e006.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="show_notes"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e006.rs`."><title>e006.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -207,12 +207,12 @@
 </pre></div><pre class="rust"><code><span class="doccomment">//! Modularize this!
 //!
 //!   - **Date:** November 16, 2015
-//!   - **Subject:** Designing APIs, and using packages (&quot;crates&quot;) and modules
+//!   - **Subject:** Designing APIs, and using packages ("crates") and modules
 //!   - [**Audio**][mp3]
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e006.mp3
 //!
-//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Modularize this!&quot; controls preload=metadata src=&quot;https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e006.mp3&quot; /&gt;
+//! &lt;audio style="width: 100%" title="Modularize this!" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e006.mp3"&gt;&lt;/audio&gt;
 //!
 //! # Notes
 //!
@@ -230,7 +230,7 @@
 //! I accidentally called this episode 5, instead of episode 6. *Whoops.*
 //!
 //! Just before the 15:00 mark, while discussing libraries, I referred to
-//! &quot;e006.md&quot; when I meant to say &quot;e006.rs&quot;. Slips of the tongue inspired by the
+//! "e006.md" when I meant to say "e006.rs". Slips of the tongue inspired by the
 //! fact that Rust (delightfully) uses Markdown for its documentation.
 //!
 //! # Links
@@ -243,10 +243,10 @@
 //!
 //! # Module Docs!
 //!
-//! As you&#39;ve no doubt noted if you&#39;ve actually looked at the show notes along
-//! the way, these are in fact module docs! Because we&#39;re inside a module marked
+//! As you've no doubt noted if you've actually looked at the show notes along
+//! the way, these are in fact module docs! Because we're inside a module marked
 //! off by being a file, we *have* to use the `//!` style of documentation
-//! comments to mark them off. However, as you&#39;ll see below, if we structure or
+//! comments to mark them off. However, as you'll see below, if we structure or
 //! declare modules in other ways, we will not have the same restriction.
 //!
 //! # Sponsors
@@ -258,7 +258,7 @@
 //!
 //! ## Become a sponsor
 //!
-//!   - &lt;a href=&quot;https://www.patreon.com/newrustacean&quot; rel=&quot;payment&quot;&gt;Patreon&lt;/a&gt;
+//!   - &lt;a href="https://www.patreon.com/newrustacean" rel="payment"&gt;Patreon&lt;/a&gt;
 //!   - [Venmo](https://venmo.com/chriskrycho)
 //!   - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
 //!   - [Cash.me](https://cash.me/$chriskrycho)
@@ -273,9 +273,9 @@
 //!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
 //!       + App.net: [@chriskrycho](https://alpha.app.net/chriskrycho)
 
-/// This is an internal module. Note that it isn&#39;t public.
+/// This is an internal module. Note that it isn't public.
 ///
-/// Modules may have any kind of &quot;item&quot; local to them. &quot;Items&quot; in Rust are
+/// Modules may have any kind of "item" local to them. "Items" in Rust are
 /// things like functions, structs, enums, traits, type definitions, and other
 /// modules.
 ///
@@ -285,11 +285,11 @@
     <span class="doccomment">/// A module function, demonstrating module-public function status.
     ///
     /// This function is public to the `internal_module`, but because the module
-    /// itself isn&#39;t public, neither is the function. It is available to
+    /// itself isn't public, neither is the function. It is available to
     /// anything which uses `internal_module`, however, as it is public at the
     /// function level.
     </span><span class="kw">pub fn </span>a_public_module_fn() {
-        <span class="macro">println!</span>(<span class="string">&quot;At `internal_module::a_public_module_fn()`.&quot;</span>);
+        <span class="macro">println!</span>(<span class="string">"At `internal_module::a_public_module_fn()`."</span>);
         a_private_module_fn();
     }
 
@@ -300,7 +300,7 @@
     /// accessible as normal to other functions within its own module, and thus
     /// can be called by `a_public_module_fn()`.
     </span><span class="kw">fn </span>a_private_module_fn() {
-        <span class="macro">println!</span>(<span class="string">&quot;At `internal_module::a_private_module_fn()`.&quot;</span>);
+        <span class="macro">println!</span>(<span class="string">"At `internal_module::a_private_module_fn()`."</span>);
     }
 }
 
@@ -315,13 +315,13 @@
     /// Note that the name of this function is the *same* as the public function
     /// in `internal_module` above! This is one of the values of namespacing.
     </span><span class="kw">pub fn </span>a_public_module_fn() {
-        <span class="macro">println!</span>(<span class="string">&quot;At `public_internal_module::a_public_module_fn()`.&quot;</span>);
+        <span class="macro">println!</span>(<span class="string">"At `public_internal_module::a_public_module_fn()`."</span>);
         some_private_fn();
     }
 
     <span class="doccomment">/// A private function in a public modules.
     </span><span class="kw">fn </span>some_private_fn() {
-        <span class="macro">println!</span>(<span class="string">&quot;At `public_internal_module::some_private_fn()`.&quot;</span>);
+        <span class="macro">println!</span>(<span class="string">"At `public_internal_module::some_private_fn()`."</span>);
     }
 }
 
@@ -329,14 +329,14 @@
 ///
 /// Modules can access other modules which are contained in the same parent
 /// module as them regardless of the privacy settings. However, they cannot
-/// access non-public modules which don&#39;t have the same immediate parent.
+/// access non-public modules which don't have the same immediate parent.
 </span><span class="kw">pub fn </span>use_modules_internal() {
-    <span class="macro">println!</span>(<span class="string">&quot;At `use_modules_internal()`.&quot;</span>);
+    <span class="macro">println!</span>(<span class="string">"At `use_modules_internal()`."</span>);
 
-    <span class="comment">// Calling another module&#39;s function is quite straightforward.
+    <span class="comment">// Calling another module's function is quite straightforward.
     </span>internal_module::a_public_module_fn();
 
-    <span class="comment">// Note that we cannot access the internal module&#39;s private function. If you
+    <span class="comment">// Note that we cannot access the internal module's private function. If you
     // uncomment the following line, you will see a compile error indicating
     // that the function is private.
     //
@@ -358,19 +358,19 @@
 // &gt; declare linkage dependency with external crates. Rather, `extern crate`
 // &gt; declarations declare linkage dependencies.
 </span><span class="kw">pub mod </span>demonstrate_namespacing {
-    <span class="doccomment">/// We can `use` other module&#39;s contents.
+    <span class="doccomment">/// We can `use` other module's contents.
     </span><span class="kw">use </span><span class="kw">crate</span>::e006::public_internal_module::<span class="kw-2">*</span>;
 
-    <span class="doccomment">/// We can also alias other modules. Note that though we don&#39;t use this
+    <span class="doccomment">/// We can also alias other modules. Note that though we don't use this
     /// until `demonstrate_aliased_calls()`, we have to put any `use` statements
-    /// before any other contents of the module (so this can&#39;t go between the
+    /// before any other contents of the module (so this can't go between the
     /// `demonstrate_globbed_calls()` and `demonstrate_aliased_calls()` function
     /// definitions).
     </span><span class="kw">use </span><span class="kw">crate</span>::e006::internal_module <span class="kw">as </span>im;
 
     <span class="doccomment">/// Demonstrates how glob-imported `use`s works.
     </span><span class="kw">pub fn </span>demonstrate_globbed_calls() {
-        <span class="macro">println!</span>(<span class="string">&quot;At `demonstrate_namespacing::demonstrate_globbed_calls()`.&quot;</span>);
+        <span class="macro">println!</span>(<span class="string">"At `demonstrate_namespacing::demonstrate_globbed_calls()`."</span>);
         <span class="comment">// Having imported *everything* from `public_internal_module`, we can call
         // its public functions directly.
         </span>a_public_module_fn();
@@ -378,7 +378,7 @@
 
     <span class="doccomment">/// Demonstrates how aliased namespaces work.
     </span><span class="kw">pub fn </span>demonstrate_aliased_calls() {
-        <span class="macro">println!</span>(<span class="string">&quot;At `demonstrate_namespacing::demonstrate_aliased_calls`.&quot;</span>);
+        <span class="macro">println!</span>(<span class="string">"At `demonstrate_namespacing::demonstrate_aliased_calls`."</span>);
         im::a_public_module_fn();
     }
 
@@ -388,7 +388,7 @@
 </span><span class="kw">pub fn </span>demonstrate_use_inside_function() {
     <span class="kw">use </span><span class="kw">crate</span>::e006::demonstrate_namespacing <span class="kw">as </span>dn;
 
-    <span class="macro">println!</span>(<span class="string">&quot;At `demonstrate_use_inside_function()`.&quot;</span>);
+    <span class="macro">println!</span>(<span class="string">"At `demonstrate_use_inside_function()`."</span>);
     dn::demonstrate_globbed_calls();
 }
 
@@ -400,12 +400,12 @@
     <span class="doccomment">/// This is just a nested module.
     </span><span class="kw">pub mod </span>a_nested_module {}
 
-    <span class="comment">// An example of re-exporting another module&#39;s contents publicly.
+    <span class="comment">// An example of re-exporting another module's contents publicly.
     //
     // Remember, this module was initially part of a private module (but one
     // within the `e006` parent module, and therefore accessible to us.)
     // We are re-exporting its `a_nested_module` contents, with a different
-    // name, as a public module. When you look at the docs, you&#39;ll see this
+    // name, as a public module. When you look at the docs, you'll see this
     // function name within the module, with the docs from the definition of the
     // function in the `internal_module` above!
     </span><span class="kw">pub use </span><span class="kw">crate</span>::e006::internal_module::a_public_module_fn <span class="kw">as </span>now_public_fn;

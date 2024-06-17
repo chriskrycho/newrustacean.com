@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e003.rs`."><title>e003.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="show_notes"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e003.rs`."><title>e003.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -282,8 +282,6 @@
 <a href="#282" id="282">282</a>
 <a href="#283" id="283">283</a>
 <a href="#284" id="284">284</a>
-<a href="#285" id="285">285</a>
-<a href="#286" id="286">286</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! No. more. nulls.
 //!
 //!   - **Date:** October 21, 2015
@@ -293,11 +291,11 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e003.mp3
 //!
-//! &lt;audio style=&quot;width: 100%&quot; title=&quot;No. more. nulls.&quot; controls preload=metadata src=&quot;https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e003.mp3&quot; /&gt;
+//! &lt;audio style="width: 100%" title="No. more. nulls." controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e003.mp3"&gt;&lt;/audio&gt;
 //!
 //! # Notes
 //!
-//! Today&#39;s episode discusses, in order:
+//! Today's episode discusses, in order:
 //!
 //!   - Enumerated types, with an eye to the difference between structs and
 //!     enums, and to the differences between `enum`s in C and in Rust.
@@ -349,7 +347,7 @@
 //!   - New Rustacean:
 //!     + Twitter: [@newrustacean](https://www.twitter.com/newrustacean)
 //!       + App.net: [@newrustacean](https://alpha.app.net/newrustacean)
-//!       + &lt;a href=&quot;https://www.patreon.com/newrustacean&quot; rel=&quot;payment&quot;&gt;Patreon&lt;/a&gt;
+//!       + &lt;a href="https://www.patreon.com/newrustacean" rel="payment"&gt;Patreon&lt;/a&gt;
 //!     + Email: [hello@newrustacean.com](mailto:hello@newrustacean.com)
 //!   - Chris Krycho
 //!     + Twitter: [@chriskrycho](https://www.twitter.com/chriskrycho)
@@ -365,15 +363,15 @@
 <span class="doccomment">/// An enumeration can *hold* a variety of types. This one shows you a few.
 ///
 /// Note: using an `enum` this way is actually crazy. The types should usually
-/// have some relationship to each other. Here, they don&#39;t. The *only* reason I
-/// have them together like this is to show you that these aren&#39;t just integers.
+/// have some relationship to each other. Here, they don't. The *only* reason I
+/// have them together like this is to show you that these aren't just integers.
 /// Enums in Rust can have members of any other type.
 ///
 /// As [Rust by Example][1] [puts it][2]:
 ///
 /// &gt; Any variant which is valid as a `struct` is also valid as an `enum`.
 ///
-/// What&#39;s the difference between an `enum` and `struct`? An `enum` is only ever
+/// What's the difference between an `enum` and `struct`? An `enum` is only ever
 /// *one* of the options which comprise it, whereas a `struct` is always *all*
 /// the elements which comprise it.
 ///
@@ -384,7 +382,7 @@
 /// [2]: http://rustbyexample.com/custom_types/enum.html
 </span><span class="attr">#[derive(Debug)]
 </span><span class="kw">pub enum </span>RelatedishThings {
-    <span class="doccomment">/// This doesn&#39;t have a value other than being RelatedishThings::Unit.
+    <span class="doccomment">/// This doesn't have a value other than being RelatedishThings::Unit.
     </span>Unit,
     <span class="doccomment">/// It could be a tuple struct, with basically any value type embedded.
     </span>SomeName(String),
@@ -405,7 +403,7 @@
 
 <span class="doccomment">/// Shows how returning a `RelatedishThings::SomeName` instance works.
 </span><span class="kw">fn </span>get_name() -&gt; RelatedishThings {
-    RelatedishThings::SomeName(<span class="string">&quot;New Rustacean&quot;</span>.to_string())
+    RelatedishThings::SomeName(<span class="string">"New Rustacean"</span>.to_string())
 }
 
 <span class="doccomment">/// Shows how returning a `RelatedishThings::SomeValue` instance works.
@@ -416,8 +414,8 @@
 <span class="doccomment">/// Shows how returning a `RelatedishThings::ComplexData` instance works.
 </span><span class="kw">fn </span>get_complex_data() -&gt; RelatedishThings {
     RelatedishThings::ComplexData {
-        description: <span class="string">&quot;A fun podcast!&quot;</span>.to_string(),
-        number: <span class="string">&quot;e003&quot;</span>.to_string(),
+        description: <span class="string">"A fun podcast!"</span>.to_string(),
+        number: <span class="string">"e003"</span>.to_string(),
     }
 }
 
@@ -426,7 +424,7 @@
     <span class="comment">// First create a struct from our (silly) PreexistingStruct type.
     </span><span class="kw">let </span>s = PreexistingStruct {
         some_int: <span class="number">42</span>,
-        some_string: <span class="string">&quot;Hey&quot;</span>.to_string(),
+        some_string: <span class="string">"Hey"</span>.to_string(),
     };
 
     <span class="comment">// Then bundle that value into the returned enum type.
@@ -436,12 +434,12 @@
 <span class="doccomment">/// Shows how the result of an enum comes back as increasingly complex data.
 ///
 /// Note that while we *could* have a numeric value associated with each
-/// enumerated value (as in a C/C++ `enum`), we don&#39;t *have* to. The value of
+/// enumerated value (as in a C/C++ `enum`), we don't *have* to. The value of
 /// an enumeration in Rust is *which enumerated value it is*, and nothing more
 /// unless you specify something more.
 </span><span class="kw">pub fn </span>demonstrate_basic_enumeration() {
     <span class="macro">print!</span>(
-        <span class="string">&quot;{:?}\n{:?}\n{:?}\n{:?}\n{:?}\n&quot;</span>,
+        <span class="string">"{:?}\n{:?}\n{:?}\n{:?}\n{:?}\n"</span>,
         get_unit(),
         get_name(),
         get_value(),
@@ -456,32 +454,31 @@
 /// and more. Big takeaways:
 ///
 ///   - You can match against all sorts of types.
-///   - You have to match exhaustively. Handle &quot;everything else&quot; with `_` as the
+///   - You have to match exhaustively. Handle "everything else" with `_` as the
 ///     sole component of the match arm.
 ///   - You can destructure complex types into their components. You can ignore
 ///     components of complex types with `_` as well.
-</span><span class="attr">#[cfg_attr(feature = <span class="string">&quot;clippy&quot;</span>, allow(approx_constant))]
 </span><span class="kw">pub fn </span>demonstrate_match() {
     <span class="comment">// You can match on numbers...
     </span><span class="kw">let </span>answer = <span class="number">42</span>;
     <span class="kw">let </span>question = <span class="kw">match </span>answer {
         <span class="comment">// That includes individual numbers or ranges.
-        </span><span class="number">0 </span>=&gt; <span class="string">&quot;What do you get when you divide by this? PROBLEMS.&quot;</span>,
-        <span class="number">1</span>..=<span class="number">41 </span>=&gt; <span class="string">&quot;This is all pretty normal, right?&quot;</span>,
-        <span class="number">42 </span>=&gt; <span class="string">&quot;Life, the universe, and everything, eh? (Canadian version)&quot;</span>,
+        </span><span class="number">0 </span>=&gt; <span class="string">"What do you get when you divide by this? PROBLEMS."</span>,
+        <span class="number">1</span>..=<span class="number">41 </span>=&gt; <span class="string">"This is all pretty normal, right?"</span>,
+        <span class="number">42 </span>=&gt; <span class="string">"Life, the universe, and everything, eh? (Canadian version)"</span>,
         <span class="comment">// What about catching *everything else*? Use `_`.
-        </span><span class="kw">_ </span>=&gt; <span class="string">&quot;I&#39;ve got nothing useful to say here.&quot;</span>,
+        </span><span class="kw">_ </span>=&gt; <span class="string">"I've got nothing useful to say here."</span>,
     };
 
-    <span class="macro">println!</span>(<span class="string">&quot;I asked: &#39;{:}&#39;; the answer was: {:}&quot;</span>, question, answer);
+    <span class="macro">println!</span>(<span class="string">"I asked: '{:}'; the answer was: {:}"</span>, question, answer);
 
     <span class="comment">// or letters...
-    </span><span class="kw">let </span>character = <span class="string">&#39;C&#39;</span>;
+    </span><span class="kw">let </span>character = <span class="string">'C'</span>;
     <span class="kw">match </span>character {
-        <span class="string">&#39;A&#39;</span>..=<span class="string">&#39;B&#39; </span>=&gt; <span class="macro">println!</span>(<span class="string">&quot;Nope, not those letters.&quot;</span>),
-        <span class="string">&#39;C&#39; </span>=&gt; <span class="macro">println!</span>(<span class="string">&quot;Why, yes, my name *does* start with a &#39;C&#39;&quot;</span>),
-        <span class="string">&#39;D&#39;</span>..=<span class="string">&#39;z&#39; </span>=&gt; <span class="macro">println!</span>(<span class="string">&quot;None of those either.&quot;</span>),
-        <span class="kw">_ </span>=&gt; <span class="macro">println!</span>(<span class="string">&quot;That&#39;s not even a letter!&quot;</span>),
+        <span class="string">'A'</span>..=<span class="string">'B' </span>=&gt; <span class="macro">println!</span>(<span class="string">"Nope, not those letters."</span>),
+        <span class="string">'C' </span>=&gt; <span class="macro">println!</span>(<span class="string">"Why, yes, my name *does* start with a 'C'"</span>),
+        <span class="string">'D'</span>..=<span class="string">'z' </span>=&gt; <span class="macro">println!</span>(<span class="string">"None of those either."</span>),
+        <span class="kw">_ </span>=&gt; <span class="macro">println!</span>(<span class="string">"That's not even a letter!"</span>),
     }
 
     <span class="comment">// or more complex types...
@@ -490,26 +487,25 @@
     <span class="kw">let </span>some_tuple = (THREE, TWO);
     <span class="kw">match </span>some_tuple {
         <span class="comment">// You can match on the full tuple with specific values.
-        </span>(THREE, TWO) =&gt; <span class="macro">println!</span>(<span class="string">&quot;Got both!&quot;</span>),
+        </span>(THREE, TWO) =&gt; <span class="macro">println!</span>(<span class="string">"Got both!"</span>),
         <span class="comment">// You can match on only part of it; note that these match the cases where both are *not*
         // filled with the value specified in the first arm.
-        </span>(THREE, <span class="kw">_</span>) =&gt; <span class="macro">println!</span>(<span class="string">&quot;Got three only.&quot;</span>),
-        (<span class="kw">_</span>, TWO) =&gt; <span class="macro">println!</span>(<span class="string">&quot;Got two only.&quot;</span>),
+        </span>(THREE, <span class="kw">_</span>) =&gt; <span class="macro">println!</span>(<span class="string">"Got three only."</span>),
+        (<span class="kw">_</span>, TWO) =&gt; <span class="macro">println!</span>(<span class="string">"Got two only."</span>),
         <span class="comment">// You can also destructure the elements of the tuple into values to be
         // used in the body of the expression, not just ignore them with `_`.
-        </span>(a, b) =&gt; <span class="macro">println!</span>(<span class="string">&quot;Got weird other stuff: {:}, {:}&quot;</span>, a, b),
+        </span>(a, b) =&gt; <span class="macro">println!</span>(<span class="string">"Got weird other stuff: {:}, {:}"</span>, a, b),
     }
 }
 
 <span class="doccomment">/// Shows how this is used in a more meaningful context, with a standard type.
-</span><span class="attr">#[cfg_attr(feature = <span class="string">&quot;clippy&quot;</span>, allow(approx_constant))]
 </span><span class="kw">pub fn </span>get_an_option(get_it: bool) -&gt; <span class="prelude-ty">Option</span>&lt;f64&gt; {
     <span class="kw">if </span>get_it {
         <span class="comment">// Returns an `Option` enum in the `Some` type.
         </span><span class="prelude-val">Some</span>(std::f64::consts::PI)
     } <span class="kw">else </span>{
         <span class="comment">// Returns an `Option` enum in the `None` type. This might look like the
-        // `null` type you&#39;d see elsewhere; it isn&#39;t. See below.
+        // `null` type you'd see elsewhere; it isn't. See below.
         </span><span class="prelude-val">None
     </span>}
 }
@@ -519,14 +515,14 @@
     <span class="comment">// Just demonstrate how it gets printed.
     </span><span class="kw">let </span>some = get_an_option(<span class="bool-val">true</span>);
     <span class="kw">let </span>none = get_an_option(<span class="bool-val">false</span>);
-    <span class="macro">print!</span>(<span class="string">&quot;{:?}\n{:?}\n&quot;</span>, some, none);
+    <span class="macro">print!</span>(<span class="string">"{:?}\n{:?}\n"</span>, some, none);
 
     <span class="comment">// You can see, from printing the values above, that the `some` is (as you
     // would expect from seeing how enums work in general) not a plain value;
-    // it&#39;s wrapped in `Some`! However, we can unwrap it to get at the actual
+    // it's wrapped in `Some`! However, we can unwrap it to get at the actual
     // value:
     </span><span class="kw">let </span>some_value = some.unwrap();
-    <span class="macro">println!</span>(<span class="string">&quot;{:?}&quot;</span>, some_value);
+    <span class="macro">println!</span>(<span class="string">"{:?}"</span>, some_value);
 }
 
 <span class="doccomment">/// Shows how to return either a meaningful result or an error as an enum.
@@ -536,12 +532,12 @@
 /// in/out arguments so that you can get a normal/error-indicating return code.
 /// Instead, you just return a `Result`, and then `match` on that value to
 /// handle it.
-</span><span class="attr">#[cfg_attr(feature = <span class="string">&quot;cargo-clippy&quot;</span>, allow(clippy::approx_constant))]
 </span><span class="kw">pub fn </span>get_a_result(succeeds: bool) -&gt; <span class="prelude-ty">Result</span>&lt;f64, String&gt; {
     <span class="kw">if </span>succeeds {
-        <span class="prelude-val">Ok</span>(<span class="number">2.718_281_828</span>)
+        <span class="attr">#[allow(clippy::approx_constant)]
+        </span><span class="prelude-val">Ok</span>(<span class="number">2.718_281_828</span>)
     } <span class="kw">else </span>{
-        <span class="prelude-val">Err</span>(<span class="string">&quot;Huh. This didn&#39;t go as planned.&quot;</span>.to_string())
+        <span class="prelude-val">Err</span>(<span class="string">"Huh. This didn't go as planned."</span>.to_string())
     }
 }
 
@@ -553,22 +549,22 @@
     <span class="comment">// First of all, what is the result of this `match`? What would it be if we
     // changed the call to `get_a_result(false)` instead?
     </span><span class="kw">match </span>get_a_result(<span class="bool-val">true</span>) {
-        <span class="prelude-val">Ok</span>(value) =&gt; <span class="macro">println!</span>(<span class="string">&quot;The value was: {:}&quot;</span>, value),
-        <span class="prelude-val">Err</span>(message) =&gt; <span class="macro">println!</span>(<span class="string">&quot;ERROR: {:}&quot;</span>, message),
+        <span class="prelude-val">Ok</span>(value) =&gt; <span class="macro">println!</span>(<span class="string">"The value was: {:}"</span>, value),
+        <span class="prelude-val">Err</span>(message) =&gt; <span class="macro">println!</span>(<span class="string">"ERROR: {:}"</span>, message),
     }
 
     <span class="comment">// Note that you can readily convert the `Ok` and `Err` terms in a `Result`
     // to `Option`s!
     </span><span class="kw">let </span>an_ok = get_a_result(<span class="bool-val">true</span>);
     <span class="kw">let </span>an_err = get_a_result(<span class="bool-val">false</span>);
-    <span class="macro">print!</span>(<span class="string">&quot;{:?}\n{:?}\n&quot;</span>, an_ok.ok(), an_err.err());
+    <span class="macro">print!</span>(<span class="string">"{:?}\n{:?}\n"</span>, an_ok.ok(), an_err.err());
 
-    <span class="comment">// Let&#39;s demonstrate the flip-side (i.e. the `None` and `Some` bits). Note
+    <span class="comment">// Let's demonstrate the flip-side (i.e. the `None` and `Some` bits). Note
     // how the methods behave: `Result::ok()` -&gt; `Some` for the `Ok` enum and
     // `None` for the `Err` enum; and `Result::err()` does the inverse..
     </span><span class="kw">let </span>another_ok = get_a_result(<span class="bool-val">true</span>);
     <span class="kw">let </span>another_err = get_a_result(<span class="bool-val">false</span>);
-    <span class="macro">print!</span>(<span class="string">&quot;{:?}\n{:?}\n&quot;</span>, another_ok.err(), another_err.ok());
+    <span class="macro">print!</span>(<span class="string">"{:?}\n{:?}\n"</span>, another_ok.err(), another_err.ok());
 }
 </code></pre></div></section></main><link rel="stylesheet" href="/media-playback.css">
 <script type="text/javascript" src="/media-playback.js" defer></script>

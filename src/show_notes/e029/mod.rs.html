@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e029/mod.rs`."><title>mod.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="show_notes"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e029/mod.rs`."><title>mod.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -406,7 +406,7 @@
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e029.mp3
 //! [script]: https://newrustacean.com/show_notes/e029/struct.script
 //!
-//! &lt;audio style=&quot;width: 100%&quot; title=&quot;e029: I’m Out to C&quot; controls preload=metadata src=&quot;https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e029.mp3&quot;&gt;
+//! &lt;audio style="width: 100%" title="e029: I’m Out to C" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e029.mp3"&gt;&lt;/audio&gt;
 //!
 //! Show Notes
 //! ----------
@@ -442,8 +442,8 @@
 //! --------
 //!
 //! Thanks to Manning for sponsoring the show *and* giving all of you a 40%-off
-//! discount on their whole store (but especially Carol Nichols&#39; and Jake
-//! Goulding&#39;s _Rust in Motion_ video content and the _Rust in Action_ MEAP!) at
+//! discount on their whole store (but especially Carol Nichols' and Jake
+//! Goulding's _Rust in Motion_ video content and the _Rust in Action_ MEAP!) at
 //! [deals.manning.com/new-rustacean][manning]
 //!
 //! [manning]: http://bit.ly/2OXnlEb
@@ -465,7 +465,7 @@
 //! - [Behnam Esfahbod]
 //! - [Benjamin Manns]
 //! - Benjamin Wasty
-//! - Brandon &#39;Spanky&#39; Mills
+//! - Brandon 'Spanky' Mills
 //! - Brian Casiello
 //! - Brian Manning
 //! - [Brian McCallister]
@@ -501,7 +501,7 @@
 //! - [Ian Jones]
 //! - Hoàng Đức Hiếu
 //! - Hugo Josefson
-//! - &quot;Jake &quot;&quot;ferris&quot;&quot; Taylor&quot;
+//! - "Jake ""ferris"" Taylor"
 //! - Jako Danar
 //! - James Cooper
 //! - James Hagans II
@@ -552,7 +552,7 @@
 //! - [Oluseyi Sonaiya]
 //! - Ovidiu Curcan
 //! - [Pascal]
-//! - [Patrick O&#39;Doherty]
+//! - [Patrick O'Doherty]
 //! - Paul Naranja
 //! - Paul Osborne
 //! - Peter Scholtens
@@ -580,7 +580,7 @@
 //! - Tim Brooks
 //! - Tim Süberkrüb
 //! - Tom Prince
-//! - Toolmaker&#39;s Guild
+//! - Toolmaker's Guild
 //! - Ty Overby
 //! - Tyler Harper
 //! - Victor Kruger
@@ -636,7 +636,7 @@
 //! [Nicolas Pochet]: https://github.com/n-pochet
 //! [Oluseyi Sonaiya]: http://oluseyi.info/
 //! [Pascal]: https://pascalhertleif.de/
-//! [Patrick O&#39;Doherty]: https://twitter.com/patrickod
+//! [Patrick O'Doherty]: https://twitter.com/patrickod
 //! [Philipp Keller]: https://twitter.com/hansapla
 //! [Ramon Buckland]: http://www.inosion.com
 //! [Robbie Clarken]: https://github.com/RobbieClarken/
@@ -654,7 +654,7 @@
 //!
 //! ### Become a sponsor
 //!
-//! - &lt;a href=&quot;https://www.patreon.com/newrustacean&quot; rel=&quot;payment&quot;&gt;Patreon&lt;/a&gt;
+//! - &lt;a href="https://www.patreon.com/newrustacean" rel="payment"&gt;Patreon&lt;/a&gt;
 //! - [Venmo](https://venmo.com/chriskrycho)
 //! - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
 //! - [Cash.me](https://cash.me/$chriskrycho)
@@ -674,21 +674,21 @@
 
 </span><span class="kw">use </span>std::os::raw::c_float;
 
-<span class="attr">#[doc = <span class="macro">include_str!</span>(<span class="string">&quot;../../docs/e029-script.md&quot;</span>)]
+<span class="attr">#[doc = <span class="macro">include_str!</span>(<span class="string">"../../docs/e029-script.md"</span>)]
 </span><span class="kw">pub struct </span>Script;
 
 <span class="doccomment">/// An example of a slightly more complex data structure we can use with FFI.
 ///
 /// Note the `#[repr(C)]`, which tells Rust to make sure this struct is laid out
-/// the way that the C ABI expects. That&#39;s *not* the way that Rust&#39;s own ABI
+/// the way that the C ABI expects. That's *not* the way that Rust's own ABI
 /// (which is unstable and can change at any time) might lay it out.
 ///
 /// Note also that `x` and `y` are `c_float`, which is [a type alias][c_float]
 /// for `f32`. We use it here to make explicit the interop, and also because it
 /// is *possible* that it might change on some specific operating system. If we
-/// went to compile for an operating system where C&#39;s `float` type were *not* a
+/// went to compile for an operating system where C's `float` type were *not* a
 /// 32-point floating bit number (and the C standard does not require it to be
-/// anything but &quot;a floating point number&quot;), the compiler would let us know.
+/// anything but "a floating point number"), the compiler would let us know.
 ///
 /// [c_float]: https://doc.rust-lang.org/1.33.0/std/os/raw/type.c_float.html
 </span><span class="attr">#[repr(C)]
@@ -698,12 +698,12 @@
     <span class="kw">pub </span>y: c_float,
 }
 
-<span class="doccomment">/// The module with all the unsafe code in it! You&#39;ll want to poke at this!
+<span class="doccomment">/// The module with all the unsafe code in it! You'll want to poke at this!
 ///
-/// (Note that this is private, and we wouldn&#39;t normally make this kind of code
+/// (Note that this is private, and we wouldn't normally make this kind of code
 /// visible in documentation at all. Instead, we would *only* make public the
-/// safe abstraction around it which we&#39;re providing at the root of this module
-/// (see [e027]!). I&#39;ve set a `RUSTDOCFLAGS` value in the `Makefile` at the root
+/// safe abstraction around it which we're providing at the root of this module
+/// (see [e027]!). I've set a `RUSTDOCFLAGS` value in the `Makefile` at the root
 /// of the repo so you get these docstring notes for it!)
 ///
 /// [e027]: https://newrustacean.com/show_notes/e027/
@@ -711,9 +711,9 @@
     <span class="kw">use </span><span class="kw">super</span>::Point;
     <span class="kw">use </span>std::os::raw::{c_float, c_int};
 
-    <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+    <span class="kw">extern </span><span class="string">"C" </span>{
         <span class="doccomment">/// A *mostly*-trivial example: addition in C instead of in Rust. (See
-        /// the docs for `e029::add` for why it *isn&#39;t* totally trivial.)
+        /// the docs for `e029::add` for why it *isn't* totally trivial.)
         ///
         /// You can use it in an `unsafe` block like so:
         ///
@@ -744,7 +744,7 @@
 <span class="doccomment">/// A safe interface for the unsafe `ffi::add`.
 ///
 /// Note that this particular check is as silly as calling out to C for addition
-/// is, but it shows how you can provide a safe wrapper for a case where C&#39;s
+/// is, but it shows how you can provide a safe wrapper for a case where C's
 /// implementation differences *might* actually matter to you.
 ///
 /// While it might seem that something like addition is trivially safe, it turns
@@ -752,11 +752,11 @@
 /// *not defined* for C. In Rust, it *is* defined, by [RFC #0560]: in modes
 /// where `debug_assertions` are enabled, an overflow will cause a panic; in
 /// modes where those assertions are not enabled (i.e. release mode), Rust wraps
-/// them by [two&#39;s complement]. The net of that is that even something this
+/// them by [two's complement]. The net of that is that even something this
 /// simple can have unexpected results when calling across the FFI boundary.
 ///
 /// [RFC #0560]: https://github.com/rust-lang/rfcs/blob/master/text/0560-integer-overflow.md
-/// [two&#39;s complement]: https://en.wikipedia.org/wiki/Two&#39;s_complement
+/// [two's complement]: https://en.wikipedia.org/wiki/Two's_complement
 ///
 /// ```rust
 /// # use show_notes::e029::add;

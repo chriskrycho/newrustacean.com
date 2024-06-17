@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e007.rs`."><title>e007.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="show_notes"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e007.rs`."><title>e007.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -192,7 +192,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e007.mp3
 //!
-//! &lt;audio style=&quot;width: 100%&quot; title=&quot;Testify&quot; controls preload=metadata src=&quot;https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e007.mp3&quot; /&gt;
+//! &lt;audio style="width: 100%" title="Testify" controls preload=metadata src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e007.mp3"&gt;&lt;/audio&gt;
 //!
 //! Notes
 //! -----
@@ -208,17 +208,17 @@
 //! The detailed code samples for this episode are heavy on showing; because of
 //! the nature of test functions, you will be best off just [reading the source]
 //! rather than leaning heavily on the descriptions generated by **rustdoc**.
-//! (The descriptions are still *there*, but they&#39;re much less useful than they
+//! (The descriptions are still *there*, but they're much less useful than they
 //! have been in previous episodes.) In particular, the `test` module here is
 //! excluded because of the use of the `#[cfg(test)]` attribute marker on it.
 //!
 //! [reading the source]: /src/show_notes/e007.rs.html
 //!
 //! Because we are using the feature-gated benchmarking functionality, the
-//! show notes &quot;library&quot; can now only be compiled with the Rust nightly (as of
+//! show notes "library" can now only be compiled with the Rust nightly (as of
 //! 1.5, the version current as this episode is produced).
 //!
-//! One thing that isn&#39;t necessarily obvious from reading the test documentation
+//! One thing that isn't necessarily obvious from reading the test documentation
 //! in the Rust book and Rust reference: the `extern crate test` statement needs
 //! to be not in this module, but at the module (`lib.rs`) which defines the
 //! library/crate; in this case, `show_notes/lib.rs`.
@@ -252,7 +252,7 @@
 //!   - [Derek Morr][sponsors-2]
 //!   - Luca Schmid
 //!   - Micael Bergeron
-//!   - Ralph Giles (&quot;rillian&quot;)
+//!   - Ralph Giles ("rillian")
 //!   - reddraggone9
 //!   - [William Roe][sponsors-7]
 //!
@@ -261,7 +261,7 @@
 //!
 //! ### Become a sponsor
 //!
-//!   - &lt;a href=&quot;https://www.patreon.com/newrustacean&quot; rel=&quot;payment&quot;&gt;Patreon&lt;/a&gt;
+//!   - &lt;a href="https://www.patreon.com/newrustacean" rel="payment"&gt;Patreon&lt;/a&gt;
 //!   - [Venmo](https://venmo.com/chriskrycho)
 //!   - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
 //!   - [Cash.me](https://cash.me/$chriskrycho)
@@ -303,14 +303,14 @@
 </span><span class="attr">#[cfg(test)]
 </span><span class="kw">mod </span>tests {
     <span class="comment">// This statement gives us access to everything in the parent module, so we
-    // don&#39;t have to use the full namespace (`show_notes::e007::add`) to get
+    // don't have to use the full namespace (`show_notes::e007::add`) to get
     // access to the functions we want to test.
     </span><span class="kw">use super</span>::<span class="kw-2">*</span>;
 
     <span class="comment">// `Bencher` is the `struct` which has the benchmarking functionality.
     </span><span class="kw">use </span><span class="kw">crate</span>::test::Bencher;
 
-    <span class="comment">// We&#39;ll use this for demonstrating benchmarks later.
+    <span class="comment">// We'll use this for demonstrating benchmarks later.
     </span><span class="kw">use </span>std::thread::sleep;
     <span class="kw">use </span>std::time::Duration;
 
@@ -318,7 +318,7 @@
     ///
     /// In a more meaningful scenario, we might use the `#[should_panic]` attribute
     /// to verify that a given function call triggers an error under conditions
-    /// where it should, e.g. if we tried to `.unwrap` a value which didn&#39;t exist.
+    /// where it should, e.g. if we tried to `.unwrap` a value which didn't exist.
     </span><span class="attr">#[test]
     #[should_panic]
     </span><span class="kw">fn </span>test_add_badly() {
@@ -329,19 +329,19 @@
     ///
     /// As the Rust book comments:
     ///
-    /// &gt; ...it&#39;s hard to guarantee that the test didn&#39;t fail for an unexpected
+    /// &gt; ...it's hard to guarantee that the test didn't fail for an unexpected
     /// &gt; reason...
     ///
     /// The `#[should_panic]` annotation has an `expected` attribute.
     </span><span class="attr">#[test]
-    #[should_panic(expected = <span class="string">&quot;Crazed monkeys!&quot;</span>)]
+    #[should_panic(expected = <span class="string">"Crazed monkeys!"</span>)]
     </span><span class="kw">fn </span>test_will_panic() {
-        <span class="macro">panic!</span>(<span class="string">&quot;Crazed monkeys!&quot;</span>);
+        <span class="macro">panic!</span>(<span class="string">"Crazed monkeys!"</span>);
     }
 
     <span class="doccomment">/// Benchmark our addition function.
     ///
-    /// Note: it&#39;s trivial, so it&#39;s probably pretty quick (`0 ns/iter (+/- 0)`).
+    /// Note: it's trivial, so it's probably pretty quick (`0 ns/iter (+/- 0)`).
     /// The point is simply that it does what it says on the tin.
     </span><span class="attr">#[bench]
     </span><span class="kw">fn </span>demonstrate_benchmarking(bencher: <span class="kw-2">&amp;mut </span>Bencher) {
@@ -352,7 +352,7 @@
     ///
     /// This particular function is *stupid*; the way to do this, of course, is
     /// just to get the Duration directly. The only reason to have it here is to
-    /// show that (1) `support_function()` doesn&#39;t end up in the compiled
+    /// show that (1) `support_function()` doesn't end up in the compiled
     /// library, which you can check by inspecting the binary; and (2) that it
     /// is available for use with the benchmarker below.
     </span><span class="kw">fn </span>support_function(ns: u32) -&gt; Duration {
@@ -362,8 +362,8 @@
     <span class="doccomment">/// Benchmark a function that sleeps for 1ms every time you call it.
     ///
     /// One of the things this highlights: we have a *tiny* duration (10 ns)...
-    /// and the test takes much, *much* longer. (I&#39;m going to discuss this with
-    /// the Rust community, because I don&#39;t actually understand it yet!)
+    /// and the test takes much, *much* longer. (I'm going to discuss this with
+    /// the Rust community, because I don't actually understand it yet!)
     </span><span class="attr">#[bench]
     </span><span class="kw">fn </span>demonstrate_benchmarking_with_sleep(bencher: <span class="kw-2">&amp;mut </span>Bencher) {
         <span class="kw">let </span>duration = support_function(<span class="number">10</span>);

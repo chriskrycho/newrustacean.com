@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e013.rs`."><title>e013.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="show_notes"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e013.rs`."><title>e013.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -184,16 +184,16 @@
 
  [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e013.mp3
 
- &lt;audio style=&quot;width: 100%&quot; title=&quot;e013: Staying alive&quot; controls preload=metadata&gt;&lt;source src=&quot;https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e013.mp3&quot;&gt;&lt;/audio&gt;
+ &lt;audio style="width: 100%" title="e013: Staying alive" controls preload=metadata&gt;&lt;source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e013.mp3"&gt;&lt;/audio&gt;
 
 
  Notes
  -----
 
  Lifetimes are our way of reasoning about how long a given piece of data is
- available and safe to use in Rust. The reason we don&#39;t have the dangling
- pointer problem is that we *do* have lifetimes instead. They&#39;re not magic,
- they&#39;re just a bit of semantics and syntax that let us specify the rules for
+ available and safe to use in Rust. The reason we don't have the dangling
+ pointer problem is that we *do* have lifetimes instead. They're not magic,
+ they're just a bit of semantics and syntax that let us specify the rules for
  how long any given item lives, and how long references to data must be valid.
 
 
@@ -227,8 +227,8 @@
    - Luca Schmid
    - Micael Bergeron
    - [Pascal Hertleif]
-   - Ralph Giles (&quot;rillian&quot;)
-   - Ralph &quot;FriarTech&quot; Loizzo
+   - Ralph Giles ("rillian")
+   - Ralph "FriarTech" Loizzo
    - reddraggone9
    - Ryan Ollos
    - Vesa Kaihlavirta
@@ -244,7 +244,7 @@
 
  ### Become a sponsor
 
-   - &lt;a href=&quot;https://www.patreon.com/newrustacean&quot; rel=&quot;payment&quot;&gt;Patreon&lt;/a&gt;
+   - &lt;a href="https://www.patreon.com/newrustacean" rel="payment"&gt;Patreon&lt;/a&gt;
    - [Venmo](https://venmo.com/chriskrycho)
    - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
    - [Cash.me](https://cash.me/$chriskrycho)
@@ -264,18 +264,18 @@
  Examples
  --------
 
- Here&#39;s an example of a function which won&#39;t actually compile. The reason is:
- the item we&#39;re trying to return a reference to (`cast`) is created inside the
+ Here's an example of a function which won't actually compile. The reason is:
+ the item we're trying to return a reference to (`cast`) is created inside the
  block and therefore goes out of scope at the end of the block. Putting a
  lifetime declaration on it is irrelevant!
 
  ```rust,ignore
- fn bad_ref_in_ref_out&lt;&#39;a&gt;(num_ref: &amp;&#39;a i64) -&gt; &amp;&#39;a f64 {
+ fn bad_ref_in_ref_out&lt;'a&gt;(num_ref: &amp;'a i64) -&gt; &amp;'a f64 {
      // We can create a local binding using the input.
      let cast = *num_ref as f64;
      // We can even create a reference to it.
-     let cast_ref: &amp;&#39;a f64 = &amp;cast;
-     // What we can&#39;t do is return the reference, because `cast` itself will go
+     let cast_ref: &amp;'a f64 = &amp;cast;
+     // What we can't do is return the reference, because `cast` itself will go
      // out of scope on the next line and be cleaned up.
      cast_ref
  }
@@ -286,40 +286,40 @@
  An individual person defined in a way that includes a *reference* type.
 
  The lifetime of the reference member, `name`, needs to match the lifetime of
- the `Person` itself. We&#39;d end up with a pretty weird scenario otherwise!
+ the `Person` itself. We'd end up with a pretty weird scenario otherwise!
 
  Note that the lifetimes of the members match the lifetime declared for the
  type itself, so the references must live *at least as long* as the instance of
- the type to which they&#39;re attached.
+ the type to which they're attached.
 */
-</span><span class="kw">pub struct </span>Individual&lt;<span class="lifetime">&#39;a</span>&gt; {
-    <span class="doccomment">/// The person&#39;s name, as a string *reference*.
-    </span><span class="kw">pub </span>name: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>str,
-    <span class="doccomment">/// Just in case we&#39;re talking about a character from Genesis
+</span><span class="kw">pub struct </span>Individual&lt;<span class="lifetime">'a</span>&gt; {
+    <span class="doccomment">/// The person's name, as a string *reference*.
+    </span><span class="kw">pub </span>name: <span class="kw-2">&amp;</span><span class="lifetime">'a </span>str,
+    <span class="doccomment">/// Just in case we're talking about a character from Genesis
     </span><span class="kw">pub </span>age: i16,
 }
 
 <span class="comment">// TODO: over the next week, fill this out!
 </span><span class="doccomment">/// Note that the implementation block *also* has the lifetimes declared.
-</span><span class="kw">impl</span>&lt;<span class="lifetime">&#39;a</span>&gt; Individual&lt;<span class="lifetime">&#39;a</span>&gt; {}
+</span><span class="kw">impl</span>&lt;<span class="lifetime">'a</span>&gt; Individual&lt;<span class="lifetime">'a</span>&gt; {}
 
 <span class="doccomment">/**
  A reference to a number, either integral or floating-point. Goofy, yes.
 
  The same basic rules apply to enumerated types as to struct types. If you
- don&#39;t include the lifetime on the type itself, the compiler won&#39;t let it pass
+ don't include the lifetime on the type itself, the compiler won't let it pass
  when you try to use the enum.
 
  As in the `struct` example, the lifetimes of both items match the lifetime
  declared on the type itself.
 */
-</span><span class="kw">pub enum </span>NumericReference&lt;<span class="lifetime">&#39;a</span>&gt; {
-    IntRef(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>i64),
-    FloatRef(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>f64),
+</span><span class="kw">pub enum </span>NumericReference&lt;<span class="lifetime">'a</span>&gt; {
+    IntRef(<span class="kw-2">&amp;</span><span class="lifetime">'a </span>i64),
+    FloatRef(<span class="kw-2">&amp;</span><span class="lifetime">'a </span>f64),
 }
 
 <span class="comment">// TODO: over the next week, fill this out!
-</span><span class="kw">impl</span>&lt;<span class="lifetime">&#39;a</span>&gt; NumericReference&lt;<span class="lifetime">&#39;a</span>&gt; {}
+</span><span class="kw">impl</span>&lt;<span class="lifetime">'a</span>&gt; NumericReference&lt;<span class="lifetime">'a</span>&gt; {}
 
 <span class="doccomment">/**
  Get a(n optional) sub-slice of a slice.
@@ -328,12 +328,12 @@
  lifetimes on both the input and the output. These can be elided, but are left
  here for illustrative purposes!
 
- What we&#39;re doing here is returning a *reference* to everything but the &quot;head&quot;
+ What we're doing here is returning a *reference* to everything but the "head"
  of the slice. Since the slice might be empty, or might have only one element,
  we treat this as an optional.
 */
-</span><span class="attr">#[cfg_attr(feature = <span class="string">&quot;cargo-clippy&quot;</span>, allow(clippy::needless_lifetimes))]
-</span><span class="kw">pub fn </span>refs_all_around&lt;<span class="lifetime">&#39;a</span>&gt;(input: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>[i32]) -&gt; <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">&#39;a </span>[i32]&gt; {
+</span><span class="attr">#[allow(clippy::needless_lifetimes)]
+</span><span class="kw">pub fn </span>refs_all_around&lt;<span class="lifetime">'a</span>&gt;(input: <span class="kw-2">&amp;</span><span class="lifetime">'a </span>[i32]) -&gt; <span class="prelude-ty">Option</span>&lt;<span class="kw-2">&amp;</span><span class="lifetime">'a </span>[i32]&gt; {
     <span class="kw">if </span>input.len() &gt; <span class="number">2 </span>{
         <span class="prelude-val">Some</span>(<span class="kw-2">&amp;</span>input[<span class="number">1</span>..])
     } <span class="kw">else </span>{

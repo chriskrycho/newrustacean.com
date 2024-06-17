@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e018.rs`."><title>e018.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="show_notes"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e018.rs`."><title>e018.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -226,16 +226,6 @@
 <a href="#226" id="226">226</a>
 <a href="#227" id="227">227</a>
 <a href="#228" id="228">228</a>
-<a href="#229" id="229">229</a>
-<a href="#230" id="230">230</a>
-<a href="#231" id="231">231</a>
-<a href="#232" id="232">232</a>
-<a href="#233" id="233">233</a>
-<a href="#234" id="234">234</a>
-<a href="#235" id="235">235</a>
-<a href="#236" id="236">236</a>
-<a href="#237" id="237">237</a>
-<a href="#238" id="238">238</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! `Borrow`, `AsRef`, `Deref`: my head hurts now
 //!
 //!   - **Date:** January 31, 2017
@@ -244,13 +234,13 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e018.mp3
 //!
-//! &lt;audio style=&quot;width: 100%&quot; title=&quot;`Borrow`, `AsRef`, `Deref`: my head hurts now&quot; controls preload=metadata&gt;&lt;source src=&quot;https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e018.mp3&quot;&gt;&lt;/audio&gt;
+//! &lt;audio style="width: 100%" title="`Borrow`, `AsRef`, `Deref`: my head hurts now" controls preload=metadata&gt;&lt;source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e018.mp3"&gt;&lt;/audio&gt;
 //!
 //!
 //! Notes
 //! -----
 //!
-//! `Borrow`, `AsRef`, and `Deref` are a little complicated, but they&#39;re
+//! `Borrow`, `AsRef`, and `Deref` are a little complicated, but they're
 //! well-worth understanding. Together, they give you tools for dealing with
 //! everything from `HashMap` and friends to conversions involving smart pointer
 //! types to easily using `String` and `str` or `Vec` and slice together.
@@ -265,7 +255,7 @@
 //!       + [`std::convert::AsRef`][asref]
 //!       + [`std::ops::Deref`][deref]
 //!   - [persistent data structures][pds]
-//!   - [&quot;Rust and Rest&quot;] – Arnin Roacher
+//!   - ["Rust and Rest"] – Arnin Roacher
 //!   - [sentry-cli]
 //!   - Particularly relevant previous episodes:
 //!       + [e008: Just like something else][e008]
@@ -278,7 +268,7 @@
 //! [asref]: https://doc.rust-lang.org/stable/std/convert/trait.AsRef.html
 //! [deref]: https://doc.rust-lang.org/stable/std/ops/trait.Deref.html
 //! [pds]: https://en.wikipedia.org/wiki/Persistent_data_structure
-//! [&quot;Rust and Rest&quot;]: http://lucumr.pocoo.org/2016/7/10/rust-rest/
+//! ["Rust and Rest"]: http://lucumr.pocoo.org/2016/7/10/rust-rest/
 //! [sentry-cli]: https://github.com/getsentry/sentry-cli/
 //! [e008]: https://www.newrustacean.com/show_notes/e008/
 //! [e009]: https://www.newrustacean.com/show_notes/e009/
@@ -298,7 +288,7 @@
 //!   - [Christopher Giffard]
 //!   - [Daniel Collin]
 //!   - [Derek Morr]
-//!   - [Jakub &quot;Limeth&quot; Hlusička]
+//!   - [Jakub "Limeth" Hlusička]
 //!   - Jordan Henderson
 //!   - [Jupp Müller]
 //!   - Keith Gray
@@ -311,7 +301,7 @@
 //!   - [Pascal Hertleif]
 //!   - Peter Tillemans
 //!   - Philipp Keller
-//!   - Ralph Giles (&quot;rillian&quot;)
+//!   - Ralph Giles ("rillian")
 //!   - Raph Levien
 //!   - reddraggone9
 //!   - Ryan Ollos
@@ -325,7 +315,7 @@
 //! [Christopher Giffard]: http://blog.cgiffard.com
 //! [Daniel Collin]: https://twitter.com/daniel_collin
 //! [Derek Morr]: https://twitter.com/derekmorr
-//! [Jakub &quot;Limeth&quot; Hlusička]: https://github.com/Limeth
+//! [Jakub "Limeth" Hlusička]: https://github.com/Limeth
 //! [Jupp Müller]: https://de.linkedin.com/in/juppm
 //! [Pascal Hertleif]: https://pascalhertleif.de/
 //! [Philipp Keller]: https://twitter.com/hansapla
@@ -336,7 +326,7 @@
 //!
 //! ### Become a sponsor
 //!
-//!   - &lt;a href=&quot;https://www.patreon.com/newrustacean&quot; rel=&quot;payment&quot;&gt;Patreon&lt;/a&gt;
+//!   - &lt;a href="https://www.patreon.com/newrustacean" rel="payment"&gt;Patreon&lt;/a&gt;
 //!   - [Venmo](https://venmo.com/chriskrycho)
 //!   - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
 //!   - [Cash.me](https://cash.me/$chriskrycho)
@@ -373,7 +363,7 @@
 
 <span class="doccomment">/// Demonstrate borrowing the internal contents of the item.
 ///
-/// Note that, because of the specifics of what we&#39;re doing here, the
+/// Note that, because of the specifics of what we're doing here, the
 /// implementations of `Borrow`, `AsRef`, and `Deref` here are identical. This
 /// will often, but not always, be the case, depending on the types and
 /// conversions in question.
@@ -410,34 +400,24 @@
 }
 
 <span class="doccomment">/// Take it implementing `Borrow&lt;[u8]&gt;`.
-</span><span class="attr">#[cfg_attr(feature = <span class="string">&quot;cargo-clippy&quot;</span>, allow(clippy::result_unit_err))]
-</span><span class="kw">pub fn </span>takes_a_borrowable&lt;B: Borrow&lt;[u8]&gt;&gt;(b: B) -&gt; <span class="prelude-ty">Result</span>&lt;(), ()&gt; {
+</span><span class="kw">pub fn </span>takes_a_borrowable&lt;B: Borrow&lt;[u8]&gt;&gt;(b: B) {
     <span class="kw">for </span>el <span class="kw">in </span>b.borrow() {
-        <span class="macro">println!</span>(<span class="string">&quot;el is {}&quot;</span>, el);
+        <span class="macro">println!</span>(<span class="string">"el is {}"</span>, el);
     }
-
-    <span class="prelude-val">Ok</span>(())
 }
 
 <span class="doccomment">/// Take it implementing `AsRef&lt;[u8]&gt;`. Note similarity to `takes_a_borrowable`.
-</span><span class="comment">// The point is to illustrate
-</span><span class="attr">#[cfg_attr(feature = <span class="string">&quot;cargo-clippy&quot;</span>, allow(clippy::result_unit_err))]
-</span><span class="kw">pub fn </span>takes_a_reference&lt;A: AsRef&lt;[u8]&gt;&gt;(a: A) -&gt; <span class="prelude-ty">Result</span>&lt;(), ()&gt; {
+</span><span class="kw">pub fn </span>takes_a_reference&lt;A: AsRef&lt;[u8]&gt;&gt;(a: A) {
     <span class="kw">for </span>el <span class="kw">in </span>a.as_ref() {
-        <span class="macro">println!</span>(<span class="string">&quot;look ma, a reference! {}&quot;</span>, el);
+        <span class="macro">println!</span>(<span class="string">"look ma, a reference! {}"</span>, el);
     }
-
-    <span class="prelude-val">Ok</span>(())
 }
 
 <span class="doccomment">/// Take the same type by `Deref` coercion at the call site.
-</span><span class="attr">#[cfg_attr(feature = <span class="string">&quot;cargo-clippy&quot;</span>, allow(clippy::result_unit_err))]
-</span><span class="kw">pub fn </span>coerces_via_deref(coerced: <span class="kw-2">&amp;</span>[u8]) -&gt; <span class="prelude-ty">Result</span>&lt;(), ()&gt; {
+</span><span class="kw">pub fn </span>coerces_via_deref(coerced: <span class="kw-2">&amp;</span>[u8]) {
     <span class="kw">for </span>el <span class="kw">in </span>coerced {
-        <span class="macro">println!</span>(<span class="string">&quot;we borrowed it as a straight-up reference: {}&quot;</span>, el);
+        <span class="macro">println!</span>(<span class="string">"we borrowed it as a straight-up reference: {}"</span>, el);
     }
-
-    <span class="prelude-val">Ok</span>(())
 }
 
 <span class="attr">#[cfg(test)]
@@ -447,11 +427,11 @@
     <span class="attr">#[test]
     </span><span class="kw">fn </span>e018_demonstrate_borrow() {
         <span class="kw">let </span>to_borrow: [u8; <span class="number">8</span>] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>];
-        <span class="macro">assert_eq!</span>(<span class="prelude-val">Ok</span>(()), takes_a_borrowable(to_borrow));
-        <span class="macro">assert_eq!</span>(<span class="prelude-val">Ok</span>(()), takes_a_borrowable(to_borrow.to_vec()));
+        takes_a_borrowable(to_borrow);
+        takes_a_borrowable(to_borrow.to_vec());
 
         <span class="kw">let </span>borrow_this_too: [u8; <span class="number">8</span>] = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>];
-        <span class="macro">assert_eq!</span>(<span class="prelude-val">Ok</span>(()), takes_a_borrowable(borrow_this_too));
+        takes_a_borrowable(borrow_this_too);
 
         <span class="kw">let </span>_contents_not_borrowable = NoImplsAtAll::new(<span class="kw-2">&amp;</span>to_borrow);
 
@@ -459,7 +439,7 @@
         // takes_a_borrowable(&amp;_contents_not_borrowable);
 
         </span><span class="kw">let </span>contents_borrowable = HasAllTheImpls::new(<span class="kw-2">&amp;</span>to_borrow);
-        <span class="macro">assert_eq!</span>(<span class="prelude-val">Ok</span>(()), takes_a_borrowable(contents_borrowable));
+        takes_a_borrowable(contents_borrowable);
     }
 
     <span class="attr">#[test]
@@ -468,10 +448,10 @@
     <span class="attr">#[test]
     </span><span class="kw">fn </span>e018_demonstrate_deref() {
         <span class="kw">let </span>basic: [u8; <span class="number">8</span>] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>];
-        <span class="macro">assert_eq!</span>(<span class="prelude-val">Ok</span>(()), coerces_via_deref(<span class="kw-2">&amp;</span>basic));
+        coerces_via_deref(<span class="kw-2">&amp;</span>basic);
 
         <span class="kw">let </span>to_coerce = HasAllTheImpls::new(<span class="kw-2">&amp;</span>basic);
-        <span class="macro">assert_eq!</span>(<span class="prelude-val">Ok</span>(()), coerces_via_deref(<span class="kw-2">&amp;</span>to_coerce));
+        coerces_via_deref(<span class="kw-2">&amp;</span>to_coerce);
     }
 }
 </code></pre></div></section></main><link rel="stylesheet" href="/media-playback.css">

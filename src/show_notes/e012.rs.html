@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e012.rs`."><title>e012.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="show_notes"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e012.rs`."><title>e012.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -187,8 +187,7 @@
 <a href="#187" id="187">187</a>
 <a href="#188" id="188">188</a>
 <a href="#189" id="189">189</a>
-<a href="#190" id="190">190</a>
-</pre></div><pre class="rust"><code><span class="doccomment">//! I&#39;m not familiar with that expression
+</pre></div><pre class="rust"><code><span class="doccomment">//! I'm not familiar with that expression
 //!
 //!   - **Date:** March 21, 2016
 //!   - **Subject:** What it means to be an expression-oriented language, and
@@ -197,7 +196,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e012.mp3
 //!
-//! &lt;audio style=&quot;width: 100%&quot; title=&quot;e012: I&#39;m not familiar with that expression&quot; controls preload=metadata&gt;&lt;source src=&quot;https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e012.mp3&quot;&gt;&lt;/audio&gt;
+//! &lt;audio style="width: 100%" title="e012: I'm not familiar with that expression" controls preload=metadata&gt;&lt;source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e012.mp3"&gt;&lt;/audio&gt;
 //!
 //!
 //! Notes
@@ -246,8 +245,8 @@
 //!   - Luca Schmid
 //!   - Micael Bergeron
 //!   - Pascal
-//!   - Ralph Giles (&quot;rillian&quot;)
-//!   - Ralph &quot;FriarTech&quot; Loizzo
+//!   - Ralph Giles ("rillian")
+//!   - Ralph "FriarTech" Loizzo
 //!   - reddraggone9
 //!   - Ryan Ollos
 //!   - [William Roe][s11]
@@ -257,7 +256,7 @@
 //!
 //! ### Become a sponsor
 //!
-//!   - &lt;a href=&quot;https://www.patreon.com/newrustacean&quot; rel=&quot;payment&quot;&gt;Patreon&lt;/a&gt;
+//!   - &lt;a href="https://www.patreon.com/newrustacean" rel="payment"&gt;Patreon&lt;/a&gt;
 //!   - [Venmo](https://venmo.com/chriskrycho)
 //!   - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
 //!   - [Cash.me](https://cash.me/$chriskrycho)
@@ -278,7 +277,7 @@
 <span class="doccomment">/// Functions are expressions, and so are their contents.
 ///
 /// This is the foundation of the other items in this modules, because it is in
-/// using functions as expressions that we&#39;ll be able to demonstrate clearly
+/// using functions as expressions that we'll be able to demonstrate clearly
 /// that if blocks and match blocks are *also* expressions.
 ///
 /// Note that we can see several things going on in the body of this function:
@@ -292,11 +291,11 @@
 </span><span class="kw">pub fn </span>functions_are_expressions() -&gt; i32 {
     <span class="comment">// We can do as many things inside as statements as we like. Note that these
     // statements are actually still expressions, whose value is the empty tuple
-    // `()`, sometimes called the &quot;unit type&quot;.
+    // `()`, sometimes called the "unit type".
     </span><span class="kw">let </span>a = <span class="number">14</span>;
     <span class="kw">let </span>b = <span class="number">12</span>;
 
-    <span class="comment">// Now that we&#39;re done, we can just return the desired value by making the
+    <span class="comment">// Now that we're done, we can just return the desired value by making the
     // final line of the function *just* an expression, not a statement, so that
     // the evaluated value is not `()` but that of the expression (so: 26)!
     </span>a + b
@@ -308,20 +307,20 @@
 /// one evaluated expression, and by returning the result of another directly.
 </span><span class="kw">pub fn </span>if_blocks_are_expressions() -&gt; f64 {
     <span class="comment">// note the terminal boolean expressions, unterminated!
-    </span><span class="kw">let </span>a_bool = <span class="kw">if </span><span class="string">&quot;quuxy&quot;</span>.len() &gt; <span class="number">3 </span>{
-        <span class="macro">print!</span>(<span class="string">&quot;Totally a long word&quot;</span>);
+    </span><span class="kw">let </span>a_bool = <span class="kw">if </span><span class="string">"quuxy"</span>.len() &gt; <span class="number">3 </span>{
+        <span class="macro">print!</span>(<span class="string">"Totally a long word"</span>);
         <span class="bool-val">true
     </span>} <span class="kw">else </span>{
-        <span class="macro">print!</span>(<span class="string">&quot;Not at all long&quot;</span>);
+        <span class="macro">print!</span>(<span class="string">"Not at all long"</span>);
         <span class="bool-val">false
     </span>};
 
-    <span class="comment">// This wouldn&#39;t work: the compiler would report mismatched types as the
+    <span class="comment">// This wouldn't work: the compiler would report mismatched types as the
     // values of the `if` and `else` expressions.
     // let mismatched_types = if true {
     //     42
     // } else {
-    //     &quot;quuxy&quot;
+    //     "quuxy"
     // };
 
     // Here, we are returning the result of this expression, not only from the
@@ -334,8 +333,7 @@
     }
 }
 
-<span class="attr">#[cfg_attr(feature = <span class="string">&quot;clippy&quot;</span>, allow(dead_code))]
-</span><span class="kw">enum </span>ThreeTypes {
+<span class="kw">enum </span>ThreeTypes {
     _First,
     Second,
     _Third,
@@ -344,7 +342,7 @@
 <span class="doccomment">/// Match blocks are also expressions.
 ///
 /// This particular example demonstrates both local binding and returning a
-/// match expression&#39;s value as the return value from the entire function.
+/// match expression's value as the return value from the entire function.
 </span><span class="kw">pub fn </span>match_blocks_are_expressions() -&gt; String {
     <span class="kw">let </span>a_three_type = ThreeTypes::Second;
     <span class="kw">let </span>x = <span class="kw">match </span>a_three_type {
@@ -354,26 +352,26 @@
     };
 
     <span class="kw">match </span>x {
-        <span class="number">0</span>..=<span class="number">100 </span>=&gt; <span class="string">&quot;Less than 100&quot;</span>.to_string(),
-        <span class="kw">_ </span>=&gt; <span class="string">&quot;Less than 0, or more than 100&quot;</span>.to_string(),
+        <span class="number">0</span>..=<span class="number">100 </span>=&gt; <span class="string">"Less than 100"</span>.to_string(),
+        <span class="kw">_ </span>=&gt; <span class="string">"Less than 0, or more than 100"</span>.to_string(),
     }
 }
 
 <span class="doccomment">/// Block blocks are also expressions!
 ///
-/// In the trivial example below, we have a situation that doesn&#39;t come up
-/// especially often (and certainly wouldn&#39;t in this trivial way), but is a real
+/// In the trivial example below, we have a situation that doesn't come up
+/// especially often (and certainly wouldn't in this trivial way), but is a real
 /// option and is handy when you need it. You can create arbitrary blocks
 </span><span class="kw">pub fn </span>ordinary_blocks_are_expressions() -&gt; i32 {
     <span class="kw">let </span>a_block_result = {
-        <span class="macro">println!</span>(<span class="string">&quot;You can evaluate *any* block, see?&quot;</span>);
-        <span class="macro">println!</span>(<span class="string">&quot;And the final expression is still returned.&quot;</span>);
+        <span class="macro">println!</span>(<span class="string">"You can evaluate *any* block, see?"</span>);
+        <span class="macro">println!</span>(<span class="string">"And the final expression is still returned."</span>);
         <span class="comment">// a_block_result will be 14
         </span><span class="number">14
     </span>};
 
-    <span class="comment">// And that&#39;s what we&#39;ll return from the function, from this utterly
-    // pointless block! (These kinds of things aren&#39;t always pointless, though.)
+    <span class="comment">// And that's what we'll return from the function, from this utterly
+    // pointless block! (These kinds of things aren't always pointless, though.)
     </span>{
         a_block_result
     }

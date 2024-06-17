@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Not dumb pointers."><title>show_notes::e015 - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../sidebar-items.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc mod"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt=""></a></nav><nav class="sidebar"><div class="sidebar-crate"><a class="logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="logo"></a><h2><a href="../../show_notes/index.html">show_notes</a><span class="version">0.3.1</span></h2></div><h2 class="location"><a href="#">Module e015</a></h2><div class="sidebar-elems"><section><ul class="block"><li><a href="#structs">Structs</a></li><li><a href="#functions">Functions</a></li></ul></section><h2><a href="../index.html">In crate show_notes</a></h2></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1>Module <a href="../index.html">show_notes</a>::<wbr><a class="mod" href="#">e015</a><button id="copy-path" title="Copy item path to clipboard"><img src="../../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="src" href="../../src/show_notes/e015.rs.html#1-234">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Not dumb pointers.</p>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Not dumb pointers."><title>show_notes::e015 - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../sidebar-items.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc mod"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button><a class="logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt=""></a></nav><nav class="sidebar"><div class="sidebar-crate"><a class="logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="logo"></a><h2><a href="../../show_notes/index.html">show_notes</a><span class="version">0.3.1</span></h2></div><h2 class="location"><a href="#">Module e015</a></h2><div class="sidebar-elems"><section><ul class="block"><li><a href="#structs">Structs</a></li><li><a href="#functions">Functions</a></li></ul></section><h2><a href="../index.html">In crate show_notes</a></h2></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Module <a href="../index.html">show_notes</a>::<wbr><a class="mod" href="#">e015</a><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><span class="out-of-band"><a class="src" href="../../src/show_notes/e015.rs.html#1-234">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Not dumb pointers.</p>
 <ul>
 <li><strong>Date:</strong> June 17, 2016</li>
 <li><strong>Subject:</strong> <code>Box</code>, <code>String</code>, <code>Vec</code>, <code>Rc</code>, and <code>Arc</code> have this in
@@ -6,7 +6,7 @@ common: they’re not dumb.</li>
 <li><a href="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e015.mp3"><strong>Audio</strong></a></li>
 </ul>
 <p><audio style="width: 100%" title="e015: Not dumb pointers" controls preload=metadata><source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e015.mp3"></audio></p>
-<h3 id="notes"><a href="#notes">Notes</a></h3>
+<h3 id="notes"><a class="doc-anchor" href="#notes">§</a>Notes</h3>
 <p>This episode, we take a close look at smart pointer types—from a few we’ve
 already talked about, like <code>Box</code>, <code>Vec</code>, and <code>String</code>, to some new ones,
 like <code>Rc</code> and <code>Arc</code>.</p>
@@ -20,7 +20,7 @@ like <code>Rc</code> and <code>Arc</code>.</p>
 but not fully documented, and there’s no examples yet for <code>Arc</code>—but there
 will be! I expect to finish them over the course of this weekend, but I
 wanted to go ahead and get the episode out!</p>
-<h4 id="further-reading"><a href="#further-reading">Further reading</a></h4>
+<h4 id="further-reading"><a class="doc-anchor" href="#further-reading">§</a>Further reading</h4>
 <ul>
 <li><em>The Rust Programming Language</em>:
 <ul>
@@ -38,7 +38,7 @@ wanted to go ahead and get the episode out!</p>
 </ul>
 </li>
 </ul>
-<h3 id="links"><a href="#links">Links</a></h3>
+<h3 id="links"><a class="doc-anchor" href="#links">§</a>Links</h3>
 <ul>
 <li><a href="http://rustconf.com">RustConf</a></li>
 <li><a href="http://www.rust-belt-rust.com">Rust Belt Rust Conference</a>
@@ -60,7 +60,7 @@ wanted to go ahead and get the episode out!</p>
 I misspoke on the episode and said this was at rust-lang.org; it’s not!
 It’s on GitHub, wtih the rest of the RFCs, of course.)</li>
 </ul>
-<h3 id="sponsors"><a href="#sponsors">Sponsors</a></h3>
+<h3 id="sponsors"><a class="doc-anchor" href="#sponsors">§</a>Sponsors</h3>
 <ul>
 <li>Aleksey Pirogov</li>
 <li><a href="http://red-oxide.org/">Chris Palmer</a></li>
@@ -83,7 +83,7 @@ It’s on GitHub, wtih the rest of the RFCs, of course.)</li>
 </ul>
 <p>(Thanks to the couple people donating who opted out of the reward tier, as
 well. You know who you are!)</p>
-<h4 id="become-a-sponsor"><a href="#become-a-sponsor">Become a sponsor</a></h4>
+<h4 id="become-a-sponsor"><a class="doc-anchor" href="#become-a-sponsor">§</a>Become a sponsor</h4>
 <ul>
 <li><a href="https://www.patreon.com/newrustacean" rel="payment">Patreon</a></li>
 <li><a href="https://venmo.com/chriskrycho">Venmo</a></li>
@@ -92,7 +92,7 @@ well. You know who you are!)</p>
 <li><a href="https://flattr.com/profile/chriskrycho">Flattr</a></li>
 <li><a href="https://paypal.me/chriskrycho">PayPal.me</a></li>
 </ul>
-<h3 id="contact"><a href="#contact">Contact</a></h3>
+<h3 id="contact"><a class="doc-anchor" href="#contact">§</a>Contact</h3>
 <ul>
 <li>New Rustacean:
 <ul>
@@ -107,12 +107,12 @@ well. You know who you are!)</p>
 </ul>
 </li>
 </ul>
-<h3 id="examples"><a href="#examples">Examples</a></h3>
+<h3 id="examples"><a class="doc-anchor" href="#examples">§</a>Examples</h3>
 <p>The most basic examples of smart pointers involve the <code>Box</code> type, which
 we’ve talked about before. Assume we had a type <code>Foo</code> which took a string in
 its constructor, and that we wanted to box it up. We would just write:</p>
 
-<div class="example-wrap ignore"><a href="#" class="tooltip" title="This example is not tested">ⓘ</a><pre class="rust rust-example-rendered"><code><span class="kw">let </span>someFoo = Box::new(Foo::new(<span class="string">&quot;bar&quot;</span>));</code></pre></div>
+<div class="example-wrap ignore"><a href="#" class="tooltip" title="This example is not tested">ⓘ</a><pre class="rust rust-example-rendered"><code><span class="kw">let </span>someFoo = Box::new(Foo::new(<span class="string">"bar"</span>));</code></pre></div>
 <p>It’s also worth comparing the Rust code above with similar code in C++.
 Assume we have a <code>class</code> with the same name; using a smart pointer (in this
 case, <code>unique_ptr</code>, returned from <code>make_unique</code>) would give us this code:</p>
@@ -127,7 +127,7 @@ semantic content.</p>
 covered it before and it’s fairly straightforward. The rest of these
 materials focus entirely on <code>Rc</code> and <code>Arc</code>, as those are the most
 interesting bits from today’s episode.</p>
-</div></details><h2 id="structs" class="small-section-header"><a href="#structs">Structs</a></h2><ul class="item-table"><li><div class="item-name"><a class="struct" href="struct.ASendableType.html" title="struct show_notes::e015::ASendableType">ASendableType</a></div></li><li><div class="item-name"><a class="struct" href="struct.FileData.html" title="struct show_notes::e015::FileData">FileData</a></div><div class="desc docblock-short">A trivial (and frankly rather silly) example for use with <code>Rc</code>.</div></li></ul><h2 id="functions" class="small-section-header"><a href="#functions">Functions</a></h2><ul class="item-table"><li><div class="item-name"><a class="fn" href="fn.demonstrate_rc.html" title="fn show_notes::e015::demonstrate_rc">demonstrate_rc</a></div><div class="desc docblock-short">Demonstrate the basics of reference-counted types. (Read the source, Luke!)</div></li><li><div class="item-name"><a class="fn" href="fn.get_empty_weak.html" title="fn show_notes::e015::get_empty_weak">get_empty_weak</a></div><div class="desc docblock-short">Note that this takes ownership of the data.</div></li><li><div class="item-name"><a class="fn" href="fn.get_wrapped_file_data.html" title="fn show_notes::e015::get_wrapped_file_data">get_wrapped_file_data</a></div></li><li><div class="item-name"><a class="fn" href="fn.print_rc_body.html" title="fn show_notes::e015::print_rc_body">print_rc_body</a><span title="Restricted Visibility">&nbsp;🔒</span> </div><div class="desc docblock-short">Note that this function is not generic because it assumes <code>FileData</code>.</div></li><li><div class="item-name"><a class="fn" href="fn.print_rc_count.html" title="fn show_notes::e015::print_rc_count">print_rc_count</a></div><div class="desc docblock-short">Note that this function is <em>generic</em>: it will work for any type.</div></li></ul></section></div></main><link rel="stylesheet" href="/media-playback.css">
+</div></details><h2 id="structs" class="section-header">Structs<a href="#structs" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="struct" href="struct.ASendableType.html" title="struct show_notes::e015::ASendableType">ASendableType</a></div></li><li><div class="item-name"><a class="struct" href="struct.FileData.html" title="struct show_notes::e015::FileData">FileData</a></div><div class="desc docblock-short">A trivial (and frankly rather silly) example for use with <code>Rc</code>.</div></li></ul><h2 id="functions" class="section-header">Functions<a href="#functions" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="fn" href="fn.demonstrate_rc.html" title="fn show_notes::e015::demonstrate_rc">demonstrate_rc</a></div><div class="desc docblock-short">Demonstrate the basics of reference-counted types. (Read the source, Luke!)</div></li><li><div class="item-name"><a class="fn" href="fn.get_empty_weak.html" title="fn show_notes::e015::get_empty_weak">get_empty_weak</a></div><div class="desc docblock-short">Note that this takes ownership of the data.</div></li><li><div class="item-name"><a class="fn" href="fn.get_wrapped_file_data.html" title="fn show_notes::e015::get_wrapped_file_data">get_wrapped_file_data</a></div></li><li><div class="item-name"><a class="fn" href="fn.print_rc_body.html" title="fn show_notes::e015::print_rc_body">print_rc_body</a><span title="Restricted Visibility">&nbsp;🔒</span> </div><div class="desc docblock-short">Note that this function is not generic because it assumes <code>FileData</code>.</div></li><li><div class="item-name"><a class="fn" href="fn.print_rc_count.html" title="fn show_notes::e015::print_rc_count">print_rc_count</a></div><div class="desc docblock-short">Note that this function is <em>generic</em>: it will work for any type.</div></li></ul></section></div></main><link rel="stylesheet" href="/media-playback.css">
 <script type="text/javascript" src="/media-playback.js" defer></script>
 
 

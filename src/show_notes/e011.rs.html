@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e011.rs`."><title>e011.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0-nightly (aa1a71e9e 2023-10-26)" data-channel="nightly" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f34af1a0ee6bacd.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../show_notes/index.html"><img src="https://newrustacean.com/podcast.png" alt="show_notes"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/e011.rs`."><title>e011.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="show_notes" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0-nightly (f8e566053 2024-06-14)" data-channel="nightly" data-search-js="search-0fe7219eb170c82e.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="icon" href="https://newrustacean.com/favicon.ico"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -268,7 +268,7 @@
 //!
 //! [mp3]: https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e011.mp3
 //!
-//! &lt;audio style=&quot;width: 100%&quot; title=&quot;e011: Once Upon a Type&quot; controls preload=metadata&gt;&lt;source src=&quot;https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e011.mp3&quot;&gt;&lt;/audio&gt;
+//! &lt;audio style="width: 100%" title="e011: Once Upon a Type" controls preload=metadata&gt;&lt;source src="https://www.podtrac.com/pts/redirect.mp3/cdn.newrustacean.com/file/newrustacean/e011.mp3"&gt;&lt;/audio&gt;
 //!
 //!
 //! Notes
@@ -281,17 +281,17 @@
 //!   - What is a type system?
 //!   - What are the kinds of things we get out of type systems?
 //!   - What are the tradeoffs with different type systems?
-//!   - What is Rust&#39;s type system like?
-//!   - What is especially attractive about Rust&#39;s type system?
+//!   - What is Rust's type system like?
+//!   - What is especially attractive about Rust's type system?
 //!
-//! A comment on the C integer/character string addition example: what&#39;s
-//! actually happening there is that the character string is an array &quot;under the
-//! covers,&quot; and as such has an address. C silently switches to using the memory
+//! A comment on the C integer/character string addition example: what's
+//! actually happening there is that the character string is an array "under the
+//! covers," and as such has an address. C silently switches to using the memory
 //! address, which is of course just an integer, when you try to add the two
-//! together. As I said on the show: the result is nonsense (unless you&#39;re using
-//! this as a way of operating on memory addresses), but it&#39;s compileable
+//! together. As I said on the show: the result is nonsense (unless you're using
+//! this as a way of operating on memory addresses), but it's compileable
 //! nonsense. In a stricter and stronger type system, memory addresses and
-//! normal numbers shouldn&#39;t be addable!
+//! normal numbers shouldn't be addable!
 //!
 //!
 //! Links
@@ -300,7 +300,7 @@
 //!   - [Rust 1.7 released][l1]
 //!       + [`HashMap` changes][l2]
 //!   - [Introduction to Type Theory][l3]
-//!   - [Visualizing Rust&#39;s type-system][l4]
+//!   - [Visualizing Rust's type-system][l4]
 //!   - [The Many Kinds of Code Reuse in Rust][l5]
 //!
 //! [l1]: http://blog.rust-lang.org/2016/03/02/Rust-1.7.html
@@ -322,8 +322,8 @@
 //!   - Luca Schmid
 //!   - Micael Bergeron
 //!   - Pascal
-//!   - Ralph Giles (&quot;rillian&quot;)
-//!   - Ralph &quot;FriarTech&quot; Loizzo
+//!   - Ralph Giles ("rillian")
+//!   - Ralph "FriarTech" Loizzo
 //!   - reddraggone9
 //!   - Ryan Ollos
 //!   - [William Roe][s11]
@@ -333,7 +333,7 @@
 //!
 //! ### Become a sponsor
 //!
-//!   - &lt;a href=&quot;https://www.patreon.com/newrustacean&quot; rel=&quot;payment&quot;&gt;Patreon&lt;/a&gt;
+//!   - &lt;a href="https://www.patreon.com/newrustacean" rel="payment"&gt;Patreon&lt;/a&gt;
 //!   - [Venmo](https://venmo.com/chriskrycho)
 //!   - [Dwolla](https://www.dwolla.com/hub/chriskrycho)
 //!   - [Cash.me](https://cash.me/$chriskrycho)
@@ -351,7 +351,7 @@
 
 </span><span class="kw">use </span>std::fmt;
 
-<span class="doccomment">/// Is the thing &quot;expressive&quot;, whatever that means?
+<span class="doccomment">/// Is the thing "expressive", whatever that means?
 </span><span class="kw">pub enum </span>Expressive {
     Ridiculously,
     PrettyDarn,
@@ -364,15 +364,15 @@
 <span class="kw">impl </span>fmt::Display <span class="kw">for </span>Expressive {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span>fmt::Formatter) -&gt; fmt::Result {
         <span class="kw">let </span>description = <span class="kw">match </span><span class="kw-2">*</span><span class="self">self </span>{
-            Expressive::Ridiculously =&gt; <span class="string">&quot;ridiculously&quot;</span>,
-            Expressive::PrettyDarn =&gt; <span class="string">&quot;pretty darn&quot;</span>,
-            Expressive::Fairly =&gt; <span class="string">&quot;fairly&quot;</span>,
-            Expressive::SortOf =&gt; <span class="string">&quot;sort of&quot;</span>,
-            Expressive::Barely =&gt; <span class="string">&quot;barely&quot;</span>,
-            Expressive::NotEvenALittle =&gt; <span class="string">&quot;not even a little&quot;</span>,
+            Expressive::Ridiculously =&gt; <span class="string">"ridiculously"</span>,
+            Expressive::PrettyDarn =&gt; <span class="string">"pretty darn"</span>,
+            Expressive::Fairly =&gt; <span class="string">"fairly"</span>,
+            Expressive::SortOf =&gt; <span class="string">"sort of"</span>,
+            Expressive::Barely =&gt; <span class="string">"barely"</span>,
+            Expressive::NotEvenALittle =&gt; <span class="string">"not even a little"</span>,
         };
 
-        <span class="macro">write!</span>(f, <span class="string">&quot;{} expressive&quot;</span>, description)
+        <span class="macro">write!</span>(f, <span class="string">"{} expressive"</span>, description)
     }
 }
 
@@ -387,13 +387,13 @@
 <span class="kw">impl </span>fmt::Display <span class="kw">for </span>Strong {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span>fmt::Formatter) -&gt; fmt::Result {
         <span class="kw">let </span>description = <span class="kw">match </span><span class="kw-2">*</span><span class="self">self </span>{
-            Strong::Indeed =&gt; <span class="string">&quot;strong indeed&quot;</span>,
-            Strong::ABit =&gt; <span class="string">&quot;a bit strong&quot;</span>,
-            Strong::NotEspecially =&gt; <span class="string">&quot;not especially strong&quot;</span>,
-            Strong::NopeNopeNope =&gt; <span class="string">&quot;strong? NOPE NOPE NOPE&quot;</span>,
+            Strong::Indeed =&gt; <span class="string">"strong indeed"</span>,
+            Strong::ABit =&gt; <span class="string">"a bit strong"</span>,
+            Strong::NotEspecially =&gt; <span class="string">"not especially strong"</span>,
+            Strong::NopeNopeNope =&gt; <span class="string">"strong? NOPE NOPE NOPE"</span>,
         };
 
-        <span class="macro">write!</span>(f, <span class="string">&quot;{}&quot;</span>, description)
+        <span class="macro">write!</span>(f, <span class="string">"{}"</span>, description)
     }
 }
 
@@ -406,11 +406,11 @@
 <span class="kw">impl </span>fmt::Display <span class="kw">for </span>StaticallyKnown {
     <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span>fmt::Formatter) -&gt; fmt::Result {
         <span class="kw">let </span>description = <span class="kw">match </span><span class="kw-2">*</span><span class="self">self </span>{
-            StaticallyKnown::Yeah =&gt; <span class="string">&quot;it&#39;s totally known at compile time&quot;</span>,
-            StaticallyKnown::Nope =&gt; <span class="string">&quot;we don&#39;t know anything about it until run time&quot;</span>,
+            StaticallyKnown::Yeah =&gt; <span class="string">"it's totally known at compile time"</span>,
+            StaticallyKnown::Nope =&gt; <span class="string">"we don't know anything about it until run time"</span>,
         };
 
-        <span class="macro">write!</span>(f, <span class="string">&quot;{}&quot;</span>, description)
+        <span class="macro">write!</span>(f, <span class="string">"{}"</span>, description)
     }
 }
 
@@ -442,68 +442,68 @@
 ///
 /// I wanted there to be *some* sample code this episode, you know? This one
 /// just assembles the types into a vector and prints them all. It does,
-/// however, let us refresh ourselves on a bunch of other concepts we&#39;ve covered
+/// however, let us refresh ourselves on a bunch of other concepts we've covered
 /// on the show---pretty much everything but generics makes an appearance in
 /// some way in this module.
 </span><span class="kw">pub fn </span>describe_type_systems() {
     <span class="kw">let </span>js = TypeSystem::builder(
-        <span class="string">&quot;ECMAScript&quot;</span>,
+        <span class="string">"ECMAScript"</span>,
         Expressive::Fairly,
         Strong::NopeNopeNope,
         StaticallyKnown::Nope,
     );
 
     <span class="kw">let </span>php = TypeSystem::builder(
-        <span class="string">&quot;PHP&quot;</span>,
+        <span class="string">"PHP"</span>,
         Expressive::Barely,
         Strong::NopeNopeNope,
         StaticallyKnown::Nope,
     );
 
     <span class="kw">let </span>c = TypeSystem::builder(
-        <span class="string">&quot;C&quot;</span>,
+        <span class="string">"C"</span>,
         Expressive::Barely,
         Strong::NotEspecially,
         StaticallyKnown::Yeah,
     );
 
     <span class="kw">let </span>cpp = TypeSystem::builder(
-        <span class="string">&quot;C++&quot;</span>,
+        <span class="string">"C++"</span>,
         Expressive::SortOf,
         Strong::ABit,
         StaticallyKnown::Yeah,
     );
 
     <span class="kw">let </span>java = TypeSystem::builder(
-        <span class="string">&quot;Java&quot;</span>,
+        <span class="string">"Java"</span>,
         Expressive::SortOf,
         Strong::ABit,
         StaticallyKnown::Yeah,
     );
 
     <span class="kw">let </span>csharp = TypeSystem::builder(
-        <span class="string">&quot;C♯&quot;</span>,
+        <span class="string">"C♯"</span>,
         Expressive::Fairly,
         Strong::Indeed,
         StaticallyKnown::Yeah,
     );
 
     <span class="kw">let </span>swift = TypeSystem::builder(
-        <span class="string">&quot;Swift&quot;</span>,
+        <span class="string">"Swift"</span>,
         Expressive::PrettyDarn,
         Strong::Indeed,
         StaticallyKnown::Yeah,
     );
 
     <span class="kw">let </span>rust = TypeSystem::builder(
-        <span class="string">&quot;Rust&quot;</span>,
+        <span class="string">"Rust"</span>,
         Expressive::PrettyDarn,
         Strong::Indeed,
         StaticallyKnown::Yeah,
     );
 
     <span class="kw">let </span>haskell = TypeSystem::builder(
-        <span class="string">&quot;Haskell&quot;</span>,
+        <span class="string">"Haskell"</span>,
         Expressive::Ridiculously,
         Strong::Indeed,
         StaticallyKnown::Yeah,
@@ -512,7 +512,7 @@
     <span class="kw">let </span>langs = <span class="macro">vec!</span>[js, php, c, cpp, java, csharp, swift, rust, haskell];
     <span class="kw">for </span>lang <span class="kw">in </span>langs {
         <span class="macro">println!</span>(
-            <span class="string">&quot;{language} is {expressive}, {strong}, and {statically_known}&quot;</span>,
+            <span class="string">"{language} is {expressive}, {strong}, and {statically_known}"</span>,
             language = lang.name,
             expressive = lang.expressive,
             strong = lang.strong,
