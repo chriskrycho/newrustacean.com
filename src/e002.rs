@@ -137,7 +137,7 @@ pub fn move_circle(moved_circle: Circle) {
 
 /// Implement some methods on the `Circle`.
 ///
-/// This lets use demonstrate both how methods work in general and specifically
+/// This lets us demonstrate both how methods work in general and specifically
 /// how they interact with the idea of ownership.
 impl Circle {
     /// Creates a `Circle` instance centered on the "origin" (x = 0, y = 0).
